@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<?php if (isset($extraMeta)) print $extraMeta ?>
+<title><?php print $title ?> - Prêt à Styler – Your Online Stylist and Personal Shopper</title>
+<link href="/css/vendors.css" rel="stylesheet">
+<link href="/css/default.css" rel="stylesheet">
+<link href="/css/mozilla.css" rel="stylesheet">
+<?php if (isset($extraCSS)) print $extraCSS; ?>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/actual_product.js"></script>
+<script src="/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/js/modernizr.custom.86254.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/jquery.mousewheel.min.js"></script>
+<script src="/js/jquery.touchSwipe.min.js"></script>
+<script src="/js/jquery.ba-throttle-debounce.min.js"></script>
+<script src="/js/jquery.transit.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="/js/selectivizr-min.js"></script>
+<script src="/js/html5.js"></script>
+<![endif]-->
+<script src="/js/jquery.focuspoint.min.js"></script>
+<script src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="/js/jquery.fancybox.pack.js"></script>
+<script src="/js/accordion.js"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/jquery.liblink.js"></script>
+<script src="/js/jquery.nouislider.all.min.js"></script>
+<script src="/js/jquery.jscrollpane.min.js"></script>
+<script src="/js/jquery.elevateZoom-3.0.8.min.js"></script>
+<script src="/js/functions.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/tabs.js"></script>
+<script src="/js/menu-mall.js"></script>
+<?php if (isset($extraJS)) print $extraJS ?>
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=109455,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51485487-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="//s.skimresources.com/js/66930X1514478.skimlinks.js"></script>
+<body>
+
+	<?php if (isset($extraDiv)) print $extraDiv ?>
+	<div id="wrap">
+		<?php /* if (!isset($no_background_image)) { ?>
+		<div class="bgHeader"><img src="/images/topbanner/<?php echo rand(1, 7) ?>.jpg" alt=""></div>
+		<?php } */ ?>
+		<header>
+			<ul class="userMenu">
+			    <li><a href="/mall.html" title="My personally curated fashion feed.">MALL</a></li>
+			    <!-- <li><a href="/about-us.html">ABOUT US</a></li> -->
+			    <?php if (!$this->flexi_auth->is_logged_in()){ ?><li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li> <?php } ?>
+			    <li><a href="/faq.html" title="How things work">HELP</a></li>
+			    <li><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">BLOG</a></li>
+			    <?php if ($this->flexi_auth->is_logged_in()){ ?>
+				<li><a href="/user.html" title="Your account details and profile"><i class="icon-user"></i>Welcome <span class="myuserName"><?php print $first_name ?></span></a></li>
+				<li><a href="/user/logout.html"><i class="icon-lock"></i>Log Out</a></li>
+				<?php } else { ?>
+				<li><a href="javascript:void(0)" onclick="register_click(this);" data-user='normal'><i class="icon-user"></i>SIGN-UP</a></li>
+				<li><a href="javascript:void(0)" onclick="login_click('/<?php $return_url = uri_string(); if (!empty($return_url)){print $return_url.'.html';} else{print 'mall.html';}?>');"><i class="icon-lock"></i>LOGIN</a></li>
+				<?php } ?>
+			</ul>
+			<!-- <a href="#" id="menuButton" class="sqBtn light"><i class="icon-menu"></i></a> -->
+			
+			<?php if (!isset($no_sqBtn)) { ?>
+			<a href="#" class="sqBtn" id="trigger"><img src="/images/pinkbutton.png" width="46px"></a>
+			<?php } ?>
+			<a href="/" class="logo"><img src="/images/newlogo.png" width="193" alt=""></a>
+			<?php /* ?><!-- <nav>
+				<ul>
+					<?php if ($this->flexi_auth->is_logged_in()){ ?>
+					<li><a href="/user.html"><span>Welcome <?php print $first_name ?></span></a><a href="/user/logout.html"><span>Log Out</span></a></li>
+					<?php } else { ?>
+					<li><a href="javascript:void(0)" onclick="register_click();"><span>Join Us</span></a><a href="javascript:void(0)" onclick="login_click();"><span>Log In</span></a></li>
+					<?php } ?>
+					<li><a href="/our-story.html">OUR STORY</a></li>
+					<li><a href="/how-it-works.html">HOW IT WORKS ?</a></li>
+					<li><a href="/">STYLE FEED</a></li>
+					<li><a href="http://pretastyler.com/blog">BLOG</a></li>
+				</ul>
+			</nav>
+			 --><?php */ ?>
+		</header>
+		
+		<?php if (isset($content_class)) { ?>
+		<div class="<?php print $content_class ?>">
+		<?php } else { ?>
+		<div class="content <?php if (isset($product_page)) echo $product_page; ?>">
+		<?php } ?>
+			<div class="container">
+    			<?php if( !empty( $breadcrumb[0] ) ) { ?>
+    			<div class="breadcrumb">
+                    <ul>
+                        <li class="bread_sub_one"><a href="/" title="Home"><img alt="Home" src="/images/homebutton.png" width="20"> HOME</a></li>
+                            <li class="bread_sub_two"> > <?php echo $breadcrumb[0]; ?></li>
+                            <?php if( !empty( $breadcrumb[1] ) ) { ?>
+                                <li class="bread_sub_three"> > <?php echo $breadcrumb[1]; ?></li>
+                            <?php echo ( !empty($breadcrumb[2]) ? "<li> > ".$breadcrumb[2]."</li>" : "" ) ?>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <?php } ?>
+               
+                <div class="innerWrap"> 
