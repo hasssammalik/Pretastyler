@@ -18,7 +18,7 @@
 					</div>
 					
 				</div>
-				<?php if(isset($getBook)){ ?>
+				
 					<div id="popup-scroll">
 <div class="email-subscriber">
 
