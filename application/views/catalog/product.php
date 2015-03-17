@@ -1,6 +1,6 @@
 <div class="mainContent ">
 	<div class="productDisplay">
-	<div class="cross"><div class="cross-image"><img src="/images/cross.png" alt /></div></div>
+	<div class="cross"><div class="cross-image"><img src="/images/pink_button-05.png" alt /></div></div>
 	<div id="product" class="productWrap <?php if ($this->flexi_auth->is_logged_in() && $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'))) { ?> loggedInSmallDetails <?php } ?>">
 
 	<?php if ($this->flexi_auth->is_logged_in() && $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'))) { ?>
@@ -305,7 +305,7 @@
 		<?php } else { ?>
 		  <div class="panel2 newpanelDesign forceDivTwoColumn" id="ourAdvice">
 		  <div class="panelheaderheightfixer">
-				<div class="panelNewHeader bkgrey signup-title" style="margin-bottom:0px;">Never Buy a <strong>'DUD'</strong> again </div>
+				<div class="panelNewHeader bkgrey signup-title" style="margin-bottom:0px;line-height:44px;">Never Buy a <strong>'DUD'</strong> again </div>
 				<div style="background:url('/images/bodyback.png');background-position: 96% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 			</div>
 			
