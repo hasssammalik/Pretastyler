@@ -109,7 +109,7 @@
 					var size = [ "Allegra", "Natalie", "Halle", "Drew", "America", "Kim", "Queen", "Ophra" ];
 					var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "75 >" ];
 					var bodyshape = [ "Hour glass", "Inverted triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
-					var bodyratio = [ "long legged short torso", "balanced body", "short legged long torso" ];
+					var bodyratio = [ "long legged short torso", "balanced body", "short legged &#xa; long torso" ];
 					var bust = [ "aa", "a", "b", "c", "d", "dd", "e", "ee >" ];
 					var build = [ "Small", "Medium", "Large" ];
 					
@@ -416,7 +416,7 @@
 				<div class="mall-link1">
 					<p class="homeprofile-bodytext">I'm on a roll show me </p>
 					<a class="bkpinkycolor home-vistmallbtn container noneLiner" href="/your-mall.html">
-						MORE QUESTION <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
+						MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 					</a>
 				</div>
 				<div class="mall-link2">
@@ -526,7 +526,7 @@
 		a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
 	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
-<div id="popup-scroll">
+<!-- <div id="popup-scroll">
 	<div class="email-subscriber">
 		
 		<div class="bottom-div">
@@ -551,17 +551,17 @@
 						<div class="input-fields">
 							<div style="width:100%">
 								<div class="infusion-field" style="float:left; "> 
-									<!-- <label for="inf_field_FirstName">First Name: </label> -->
+									
 									<input class="infusion-field-input-container" id="inf_field_FirstName" name="inf_field_FirstName" type="text" placeholder="First Name" style="width:105px;" required/>
 								</div>
 								
 								<div class="infusion-field" style="float:left;margin-left:5px;">
-									<!-- <label for="inf_field_LastName">Last Name *</label> -->
+									
 									<input class="infusion-field-input-container" id="inf_field_LastName" name="inf_field_LastName" placeholder="Last Name" type="text" style="width:105px;" required/>
 								</div>
 							</div>
 							<div class="infusion-field">
-								<!-- <label for="inf_field_Email">Email: </label> -->
+								
 								<input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email"  placeholder="Email Address" type="email" required style="width:215px;background: #E5e5e5;"/>
 							</div>
 						</div>
@@ -578,7 +578,7 @@
 		</div>
 	</div>
 </div>
-</div>
+</div> -->
 <div class="modal"></div>
 <div class="popup_modal"></div>
 <?php 
