@@ -98,7 +98,11 @@
 					top:-135px;
 					
 					}
-					
+					.slider-item img {
+					  width: 200px;
+					  float: left;
+					  margin: 20px;
+					}
 				</style>
 				<script type="text/javascript">
 					
@@ -405,8 +409,9 @@
 					<div class="slider-item"><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"><img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name']?>"></a></div>
 					<?php }
 				}?>
+				<div class="clear"></div>
 			</div>
-			
+			<div class="clear"></div>
 			<div class="homeprofile-head">
 				<!-- <p class="homeprofile-bodytext">Here's just a few <strong>garments we've found for you</strong></p> -->
 				<p class="homeprofile-bodytext"><strong><br/>What next?</strong></p>
