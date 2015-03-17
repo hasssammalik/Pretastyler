@@ -377,7 +377,7 @@
 		<br>
 	</section>
 	
-	<section class="wid100 bkYellowGrey home-product-list-custom-profile">
+	<section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
 		
 		<div class="homeprofile-head">
 			<img src="/images/newhomedown.png" class="noneArea noneLiner">
@@ -402,8 +402,8 @@
 							<?php }
 						}?>
 					</ul>
-					<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
-					<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a>
+					<!-- <a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
+					<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a> -->
 				</div>
 			</div>
 		</div>
@@ -593,8 +593,8 @@
 		})();
 	</script>
 <?php } ?>
-<script>
-	$('#similarItems').initSimilarCarousel();
-</script>
+// <script>
+// 	$('#similarItems').initSimilarCarousel();
+// </script>
 </body>
 </html>
