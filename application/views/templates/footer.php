@@ -14,71 +14,10 @@
 							</footer>
 							
 						</div>
-						
 					</div>
-					
 				</div>
 				
-					<div id="popup-scroll">
-<div class="email-subscriber">
-
-<div class="bottom-div">
-<div style="width:1018px;margin: 0 auto;height:100%;">
-<img class="brand-image-subscriber" src='/images/email-subscriber.png'/>
-<div style="margin-left:307px;">
-<div class="text-subscribe">
-<b>Timeless Style</b><br>
-50 image essentials every <br>
-woman should know button: <br>
-GET YOUR FREE COPY NOW!
-</div>
-<div class="arrow">
-<img src='/images/arrow.png'/>
-</div>
-<div class="subscriber-form">
-<?php echo form_open('/thankyou'); ?> 
-    <input name="inf_form_xid" type="hidden" value="01ae3785a5fde11d3e8a29fd1f6e9400" />
-    <input name="inf_form_name" type="hidden" value="Indicate interest" />
-    <input name="infusionsoft_version" type="hidden" value="1.37.0.46" />
-	<input name="test-form" type="hidden" value="01ae3785a5fde11d3e8a29fd1f6e9400">
-    <div class="input-fields">
-	<div style="width:100%">
-	<div class="infusion-field" style="float:left; "> 
-       <!-- <label for="inf_field_FirstName">First Name: </label> -->
-        <input class="infusion-field-input-container" id="inf_field_FirstName" name="inf_field_FirstName" required type="text" placeholder="First Name" style="width:105px;"/>
-    </div>
-	
-    <div class="infusion-field" style="float:left;margin-left:5px;">
-        <!-- <label for="inf_field_LastName">Last Name *</label> -->
-        <input class="infusion-field-input-container" id="inf_field_LastName" name="inf_field_LastName" required placeholder="Last Name" type="text" style="width:105px;"/>
-    </div>
-	</div>
-    <div class="infusion-field">
-        <!-- <label for="inf_field_Email">Email: </label> -->
-        <input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email" type="email" placeholder="Email Address"  style="width:215px;background: #E5e5e5;"/>
-    </div>
-	</div>
-    <div class="infusion-submit">
-       <button style=""><b style="color:white; font-family: 'Open Sans', sans-serif;font-size:16px;">GET YOUR'S</b> <br><span style="color:white;font-size:16px;"> TODAY!</span></button>
-    </div>
-<?php form_close() ?>
-<script type="text/javascript" src="https://om185.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=7cdbebcae7b8c4b1866b9ff08971aec0"></script>
-</div>
-<div class="cross-sign">
-<img class="close mousehand" src="/images/cross.png">
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-
-
-
-
-</div>
-				<?php } ?>
+					
 				
 				
 			</div>
