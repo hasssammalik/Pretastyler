@@ -585,8 +585,8 @@
 		})();
 	</script>
 <?php } ?>
-// <script>
-// 	$('#similarItems').initSimilarCarousel();
-// </script>
+<script>
+ 	$('#similarItems').initSimilarCarousel();
+</script>
 </body>
 </html>
