@@ -383,15 +383,7 @@
 			<img src="/images/newhomedown.png" class="noneArea noneLiner">
 			<p class="i profile-big-title">Here's just a few <strong>garments we've found for you</strong></p>
 		</div>
-		
-		<!--	<div class="homeprofile-garments container wid70">
-			<div class="garments othergrey turnOffPlaceHolderGarment">
-			</div>
-			<div class="clear"></div>
-		</div> -->
-		
 		<div class="panel2" id="similarItems">
-			<!-- <div class="panelHeader">Similar Items that suit you</div> -->
 			<div class="panelContent" style="background-color: #F0F0F0;">
 				<div class="sliderWrap">
 					<ul class="items">
