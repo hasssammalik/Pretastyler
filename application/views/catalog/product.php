@@ -24,17 +24,19 @@
 	<div class="panel2 newpanelDesign" id="ourAdviceLog">
 		
 		<div class="panelheaderheightfixer">
-			<div class="panelNewHeader bkgrey" style="margin-bottom:0px;">WHY IT WORKS FOR YOU</div>
+			<div class="panelNewHeader bkgrey" style="margin-bottom:0px;line-height: 45px;">WHY IT WORKS FOR YOU</div>
 			<div style="background:url('/images/bodyback.png');background-position: 4% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 		</div>
 		<div class="panelContent panelcontentFirst">
 			<div class="section">
-				<div class="title">
+				<div class="title title-nopadding">
 					<table>
 						<tr>
-							<th>Area</th>
-							<th>Style Item</th>
-							<th>Result</th>
+							<th class="th1">Area</th>
+							<th class="th2" style="
+    padding-right: 40px;
+">Style</th>
+							<th class="th3">Result</th>
 						</tr>
 					</table>
 				</div>
@@ -42,9 +44,9 @@
 					<table>
 						<?php foreach ($advise as $row){ ?>
 						<tr>
-							<td><strong><?php print $row['area']?></strong></td>
-							<td><?php print $row['style_item']?></td>
-							<td><span class="starsWrap rating star<?php print $row['result']?>Rate" style="background:initial;"><?php print $row['result'] ?><i class="icon-star"></i><?php
+							<td class="th1"><strong><?php print $row['area']?></strong></td>
+							<td class="th2"><?php print $row['style_item']?></td>
+							<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate" style="background:initial;"><?php print $row['result'] ?><i class="icon-star"></i><?php
 								if ($this->flexi_auth->in_group('Administrators')){
 									print '('.$row['score'].')';
 								}
@@ -104,22 +106,22 @@
 			<div class="panelNewHeader bkpinkycolor" style="margin-bottom:0px;">
 				<?php if( !empty($score)){?>
 				<?php if( $score == 5 ){?>
-					<span>BOOM, YOU HAVE A WINNER</span>
+					<span class="pinkyheading">BOOM, YOU HAVE A WINNER</span>
 					<span class="panelSmalldesc">YOU'RE GOING TO HEADS AND BREAK HEARTS IN THIS LITTLE NUMBER</span>
 				<?php } else if( $score == 4 ) { ?>
-					<span>LOOKING GOOD, GORGEOUS</span>
+					<span class="pinkyheading">LOOKING GOOD, GORGEOUS</span>
 					<span class="panelSmalldesc">FIGURE FLATTERING AND FABULOUS ALL AT THE SAME TIME</span>
 				<?php } else if( $score == 3 ) { ?>
-					<span>THIS ONE COULD GO EITHER WAY</span>
+					<span class="pinkyheading">THIS ONE COULD GO EITHER WAY</span>
 					<span class="panelSmalldesc">ITS'S UP TO YOU, DO YOU LOVE IT ENOUGH TO TAKE THE CHANCE?</span>
 				<?php } else if( $score == 2 ) { ?>
-					<span>MMM, BIT OF A RISKY PURCHASE</span>
+					<span class="pinkyheading">MMM, BIT OF A RISKY PURCHASE</span>
 					<span class="panelSmalldesc">WHY TAKE THE RISK ON THIS ONE WHEN YOU CAN FIND SOMETHING BETTER</span>
 				<?php } else if( $score == 1 ) { ?>
-					<span>DERP, YOU DESERVE BETTER THAN THIS</span>
+					<span class="pinkyheading">DERP, YOU DESERVE BETTER THAN THIS</span>
 					<span class="panelSmalldesc">YOU CAN LOOK SO MUCH BETTER. GIVE THIS ONE A MISS</span>
 				<?php } } else { ?>
-					<span>SURE, IT'S NICE, BUT WILL IT SUIT YOU?</span>
+					<span class="pinkyheading">SURE, IT'S NICE, BUT WILL IT SUIT YOU?</span>
 					<span class="panelSmalldesc">WHAT IF WE COULD SHOW YOU A WAY TO MAKE SURE IT DOES?</span>
 				<?php } ?>
 			</div>
@@ -228,7 +230,7 @@
 									<?php if (!empty($garment['description'])) { ?>
 									<p class="bkwhite descriptionProduct"><?php print nl2br($garment['description'])?></p>
 									<?php } else {?>
-									<p class="bkwhite descriptionProduct"><?php print $garment['name']?> Description</p>
+									<p class="bkwhite descriptionProduct"><?php print $garment['name']?></p>
 									<?php }  ?>
 								
 								<dt>Price:</dt>
@@ -284,7 +286,7 @@
 		 <div class="panel2 newpanelDesign" id="styingRecon">
 		 
 			<div class="panelheaderheightfixer">
-				<div class="panelNewHeader bkgrey" style="margin-bottom:0px;">HOW TO LOOK YOUR BEST</div>
+				<div class="panelNewHeader bkgrey" style="margin-bottom:0px;  line-height: 45px;">HOW TO LOOK YOUR BEST</div>
 				<div style="background:url('/images/bodyback.png');background-position: 94% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 			</div>
 			<div class="panelContent panelcontentThird">
@@ -305,7 +307,7 @@
 		<?php } else { ?>
 		  <div class="panel2 newpanelDesign forceDivTwoColumn" id="ourAdvice">
 		  <div class="panelheaderheightfixer">
-				<div class="panelNewHeader bkgrey signup-title" style="margin-bottom:0px;line-height:44px;">Never Buy a <strong>'DUD'</strong> again </div>
+				<div class="panelNewHeader bkgrey signup-title" style="margin-bottom:0px;line-height:44px; font-weight:500; font-size:28px;">Never Buy a <strong>'DUD'</strong> again </div>
 				<div style="background:url('/images/bodyback.png');background-position: 96% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 			</div>
 			

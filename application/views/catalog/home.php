@@ -113,7 +113,7 @@
 						var size = [ "Allegra", "Natalie", "Halle", "Drew", "America", "Kim", "Queen", "Ophra" ];
 						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "75 >" ];
 						var bodyshape = [ "Hour glass", "Inverted triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
-						var bodyratio = [ "long legged short torso", "balanced body", "short legged &#xa; long torso" ];
+						var bodyratio = [ "long legged&#xa; short torso", "balanced body", "short legged \n long torso" ];
 						var bust = [ "aa", "a", "b", "c", "d", "dd", "e", "ee >" ];
 						var build = [ "Small", "Medium", "Large" ];
 						
