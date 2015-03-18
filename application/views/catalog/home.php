@@ -4,7 +4,7 @@
 		<div class="homepage-header">
 			<div class="header-bg__container">
 				
-				<div class="header-bg__container-content role-element leadstyle-container center" style=" background-color: rgba(0,0,0,0.5); padding: 20px;">
+				<div class="header-bg__container-content role-element leadstyle-container center" style=" background-color: rgba(0,0,0,0.5); padding: 208px 0px;">
 					<p style="font-size:28px; font-weight: bold;">SHOPPING ONLINE JUST GOT PERSONAL</p>
 					<p style="font-size:20px;">
 						Cut Through the Clutter of Fashion<br>

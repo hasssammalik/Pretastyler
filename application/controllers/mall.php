@@ -391,9 +391,9 @@ class Mall extends CI_Controller {
 	public function targetsearch() {
 		
 		$data = $this->data;
-		$data['title'] = "Target Search";
+		$data['title'] = "Detailed Search";
 		$data['extraJS'] = '<script src="/js/mall-target.js"></script>';
-		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>','Target Search');
+		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>','Detailed Search');
 		$data['getBook'] = true;
 		$data['deep_category'] = $this->deep_search_model->get_available_categories();
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. Your 24/7 online stylist. Sing up today!">

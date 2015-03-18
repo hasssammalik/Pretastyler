@@ -4,7 +4,7 @@
 	<div class="target-search-page accordion topAccordionMenu " style="position:relative;" >
 		<div class="panel targetcustomslides" style="display:block;">
 		<div id="category-panel">
-			<div class="sliderWrap ">
+			<div class="sliderWrap" style="max-width:1010px;">
 				<ul class="items">
 					<?php foreach ( $deep_category as $category ) { ?>
 					<li>
