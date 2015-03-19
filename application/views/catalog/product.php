@@ -296,7 +296,14 @@
 												<strong><?php print $row['area'] ?>:</strong>
 												<!-- <span class="commentSpliter"></span> -->
 												<!-- <span class="bold-dash">-&nbsp;</span>  -->
-													<?php print implode('<span class="commentSpliter"></span><span class="bold-dash" style="float:left;">-&nbsp;</span> ', $row['comment']) ?>
+												<!-- <?php print implode('<span class="commentSpliter"></span><span class="bold-dash" style="float:left;">-&nbsp;</span> ', $row['comment']) ?> -->
+												<?php foreach($row[comment] as $com){ ?>
+												<span class="commentSpliter"></span>
+												<span>
+													<span class="bold-dash" style="float:left;">-&nbsp;</span>
+													<span style="float:left;width:80%;"><?php echo $com; ?> </span>
+												</span>
+												 <?php } ?>
 												
 										</p>
 										<?php }}?>
