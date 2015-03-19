@@ -291,16 +291,14 @@
 									</div>
 									<div class="panelContent panelcontentThird">
 										
-										<?php foreach ($advise as $row){ 
-											if ($row['comment']){
-												?>	<p class="left recommendCommenDes">
+										<?php foreach ($advise as $row){ if ($row['comment']){ ?>
+												<p class="left recommendCommenDes">
 												<strong><?php print $row['area'] ?>:</strong>
 												<span class="commentSpliter"></span>
 												<span> 
-												<span class="bold-dash" style="float:left;">-&nbsp;</span> 
-												<span style="float:left;width:80%;">	<?php print implode('<span class="commentSpliter"></span><span class="bold-dash" style="float:left;">-&nbsp;</span> ', $row['comment']) ?>
+												<span class="bold-dash">-&nbsp;</span> 
+													<?php print implode('<span class="commentSpliter"></span><span class="bold-dash" style="float:left;">-&nbsp;</span> ', $row['comment']) ?>
 												</span>
-											</span>
 										</p>
 										<?php }}?>
 										
