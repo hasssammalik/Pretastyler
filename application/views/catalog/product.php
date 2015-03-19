@@ -294,11 +294,10 @@
 										<?php foreach ($advise as $row){ if ($row['comment']){ ?>
 												<p class="left recommendCommenDes">
 												<strong><?php print $row['area'] ?>:</strong>
-												<span class="commentSpliter"></span>
-												<span> 
-												<span class="bold-dash">-&nbsp;</span> 
+												<!-- <span class="commentSpliter"></span> -->
+												<!-- <span class="bold-dash">-&nbsp;</span>  -->
 													<?php print implode('<span class="commentSpliter"></span><span class="bold-dash" style="float:left;">-&nbsp;</span> ', $row['comment']) ?>
-												</span>
+												
 										</p>
 										<?php }}?>
 										
