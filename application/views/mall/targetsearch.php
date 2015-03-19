@@ -1,6 +1,8 @@
 <div class="mainContent">
 	<?php // echo form_open(); echo form_close();?>
-	
+	<style type="text/css">
+		.target-search-page .itemsWrap ul.items li { width: 292px; }
+	</style>
 	<div class="target-search-page accordion topAccordionMenu " style="position:relative;" >
 		<div class="panel targetcustomslides" style="display:block;">
 		<div id="category-panel">
@@ -40,7 +42,8 @@
 	</div>
 	</div>
 	
-	
+	<br>
+	<br>
 	<div class="garments">
 	</div>
 	
@@ -85,3 +88,12 @@
 	
 	
 </div>
+<?php 
+	
+	$content = "some text here";
+$fp = fopen("myText.txt","wb");
+fwrite($fp,$content);
+fclose($fp);
+	
+	
+	?>

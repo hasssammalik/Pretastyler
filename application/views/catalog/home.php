@@ -71,7 +71,7 @@
 					font-size: 0.9em;
 					margin-left: -1em;
 					text-align: left;
-					width: 8em;
+					width: 7em;
 					}
 					.ui-slider-tip img{
 					width: 70px;
@@ -99,10 +99,56 @@
 					
 					}
 					.slider-item img {
-					  width: 200px;
-					  float: left;
-					  margin: 20px;
+					width: 200px;
+					float: left;
+					margin: 20px;
 					}
+					#talkbubble .slider-image{
+					top:-295px;
+					right:5%;
+					position: absolute;
+					width: 150px;
+					}
+					#talkbubble .slider-image img{
+					width:80%;
+					}
+					
+					#talkbubble {
+					top:195px;
+					right:96%;
+					width: 150px;
+					height: 50px;
+					background: #949494;
+					margin: 0px auto;
+					position: relative;
+					z-index:3;
+					
+					}
+					#talkbubble:before {
+					content:"";
+					position: absolute;
+					right: 50%;
+					top: -11px;
+					width: 0;
+					height: 0;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-bottom: 12px solid #949494;
+					
+					}
+					.home-profile-bodyratio #talkbubble{
+					top:205px;
+					}
+					.home-profile-bodyratio #talkbubble .slider-image{
+					top:-305px;
+					}
+					#talkbubble.doubleline{
+					top:205px;
+					}
+					#talkbubble.doubleline .slider-image{
+					top:-305px;
+					}
+					
 				</style>
 				<script type="text/javascript">
 					
@@ -112,23 +158,69 @@
 						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
 						var size = [ "Allegra", "Natalie", "Halle", "Drew", "America", "Kim", "Queen", "Ophra" ];
 						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "75 >" ];
-						var bodyshape = [ "Hour glass", "Inverted triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
-						var bodyratio = [ "long legged&#xa; short torso", "balanced body", "short legged \n long torso" ];
-						var bust = [ "aa", "a", "b", "c", "d", "dd", "e", "ee >" ];
+						var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
+						var bodyratio = [ "Long Legged Short Torso", "Balanced Body", "Short Legged Long Torso" ];
+						var bust = [ "AA", "A", "B", "C", "D", "DD", "E", "EE >" ];
 						var build = [ "Small", "Medium", "Large" ];
 						
-						var heightimage = [ 
-						'<label class="data-tooltip-hover" data-tooltip="Your neck is short.&#xa; When carrying extra weight you may have double chins.&#xa;You look best with hair that is at or above your jawline.&#xa;Necklines with some length such as V and scoop look best on you.High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless."><div class="img"><div><img src="/images/profileSetup/neckThickness/very-thin.jpg"></div></div></label>','<img src=/images/profileSetup/neckThickness/average.jpg">','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">','','' ];
-						var sizeimage = [ '<img src="/images/profileSetup/neckThickness/very-thin.jpg">','<img src="/images/profileSetup/neckThickness/average.jpg">','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">', '', '', '', '', '' ];
-						var ageimage = [ '<label class="data-tooltip-hover" data-tooltip="Your neck is short.&#xa;'+
-						'When carrying extra weight you may have double chins.&#xa;You look best with hair that is at or above your'+
-						'jawline.&#xa;Necklines with some length such as V and scoop look best on you.High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless."><div class="img"><div><img src="/images/profileSetup/neckThickness/average.jpg"></div></div></label>','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">', '', '' ];
-						var bodyshapeimage = [ '<img src="/images/profileSetup/horizdontalBodyShape/hourGlass.jpg">','<img src="/images/profileSetup/horizontalBodyShape/invertedTriangle.jpg">','<img src="/images/profileSetup/horizontalBodyShape/triangle.jpg">','<img src="/images/profileSetup/horizontalBodyShape/rectangle.jpg">','<img src="/images/profileSetup/horizontalBodyShape/oval.jpg">','<img src="/images/profileSetup/horizontalBodyShape/diamond.jpg">' ];
-						var bodyratioimage = [ '<label class="data-tooltip-hover" data-tooltip="Your neck is short.&#xa; When carrying extra weight you may have double chins.&#xa;You look best with hair that is at or above your jawline.&#xa;Necklines with some length such as V and scoop look best on you.&#xa;High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless."><div class="img"><div><img src="/images/bodysize1.png"></div></div></label>',
-						'<label class="data-tooltip-hover" data-tooltip="Your neck is short.&#xa; When carrying extra weight you may have double chins.&#xa;You look best with hair that is at or above your jawline.&#xa;Necklines with some length such as V and scoop look best on you.&#xa;High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless."><div class="img"><div><img src="/images/bodysize1.png"></div></div></label>',
-						'<label class="data-tooltip-hover" data-tooltip="Your neck is short.&#xa; When carrying extra weight you may have double chins.&#xa;You look best with hair that is at or above your jawline.&#xa;Necklines with some length such as V and scoop look best on you.&#xa;High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless."><div class="img"><div><img src="/images/bodysize1.png"></div></div></label>' ];
-						var bustimage = [ '<img src="/images/profileSetup/neckThickness/very-thin.jpg">','<img src="/images/profileSetup/neckThickness/average.jpg">','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">', '', '', '', '', '' ];
-						var buildimage = [ '<img src="/images/profileSetup/boneStructure/small.jpg">','<img src="/images/profileSetup/boneStructure/medium.jpg">','<img src="/images/profileSetup/boneStructure/large.jpg">' ];
+						var heightimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
+						var sizeimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-38.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-39.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-40.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-41.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-42.png" /></div></div>', 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-43.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-44.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-45.png" /></div></div>'
+						];
+						var ageimage = 
+						[
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
+						var bodyshapeimage = 
+						[
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-10.png" /></div></div>',
+						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-11.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-12.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-13.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-14.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-15.png" /></div></div>' 
+						];
+						var bodyratioimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-09.png" /></div></div>',
+						];
+						var bustimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>', 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>'
+						];
+						var buildimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-17.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-18.png" /></div></div>' 
+						];
 						
 						$(".newprofile-height")
 						.slider({
@@ -428,84 +520,84 @@
 							LET ME IN <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</button>
 						
-						</div>
-						</div>
-						<div class="clear"></div>
 					</div>
-					
-				</section>
-				
-				
-				<div style="display:none;">
-					
-					<form method="post" name="yourmallsection">
-						
-						<input type="hidden" name="height_select_id" id="height_select_id">
-						<input type="hidden" name="weight_select_id" id="weight_select_id">
-						<input type="hidden" name="age_select_id" id="age_select_id">
-						<input type="hidden" name="horizontal_select_id" id="horizontal_select_id">
-						<input type="hidden" name="vertical_select_id" id="vertical_select_id">
-						<input type="hidden" name="bra_select_id" id="bra_select_id">
-						<input type="hidden" name="wrist_size" id="wrist_size">
-						
-					</form>
-					
 				</div>
-				
-				
-				
+				<div class="clear"></div>
 			</div>
-			<section class="brand role-element leadstyle-container" id="brands" style="background-color:white;">
+			
+		</section>
+		
+		
+		<div style="display:none;">
+			
+			<form method="post" name="yourmallsection">
 				
+				<input type="hidden" name="height_select_id" id="height_select_id">
+				<input type="hidden" name="weight_select_id" id="weight_select_id">
+				<input type="hidden" name="age_select_id" id="age_select_id">
+				<input type="hidden" name="horizontal_select_id" id="horizontal_select_id">
+				<input type="hidden" name="vertical_select_id" id="vertical_select_id">
+				<input type="hidden" name="bra_select_id" id="bra_select_id">
+				<input type="hidden" name="wrist_size" id="wrist_size">
 				
-				<div class="brand__container float-left-images">
-					
-					<h3 class="brand__container-title role-element leadstyle-text">Some of the brands that can be in your mall</h3>
-					
-					<img src="/images/ann_taylor.jpg">
-					<img src="/images/asos.jpg">
-					<img src="/images/avenue.jpg">
-					<img src="/images/gorman.jpg">
-					<img src="/images/missguided.jpg">
-					
-				</div>
-				<div style="clear:both;"></div>
-				
-			</section>
-			<div class="popup-box">
-				<div class="cross"><div class="cross-image-homepage"><img src="/images/cross.png" alt=""></div></div>
-				<h1 style="padding: 5px;">One Last Thing</h1><hr width="95%" size="2" />
-				<form action="/mall-by-profile.html" method="post">
-					<div><input type="text" placeholder="First Name" name="fname"/><input type="text" placeholder="Last Name" name="lname"/></div>
-					<div><input type="email" placeholder="Email" name="email" required/></div>
-					<div><input type="password" placeholder="Password" name="password"/><input type="password" placeholder="Confirm Password" name="cpass"/></div>
-					<div style="text-align:center"><button>Start my Trial</button></div>
-					
-				</form>
-				<div style="text-align:center">Trial Expires in 30 days.</div>
-			</div>
-			<div class="modalOverlay"></div>
-			<footer>
-				<ul>
-					<li><a href="#">BROWSER EXTENSION</a>|</li>
-					<li><a href="/terms.html">TERMS</a>|</li>
-					<li><a href="/our-story.html">OUR STORY</a>|</li>
-					<li><a href="/contact-us.html">CONTACT</a>|</li>
-					<li><a href="/retailer.html">RETAILERS</a></li>
-				</ul>
-				<ul class="social">
-					<li><a href="https://www.facebook.com/PrestaStyle" class="fb" target="_blank"><i class="icon-facebook"></i></a></li>
-					<li><a href="https://twitter.com/YourUniqueStyle" class="tw" target="_blank"><i class="icon-twitter"></i></a></li>
-					<li><a href="https://www.pinterest.com/areinten/" class="pin" target="_blank"><i class="icon-pinterest"></i></a></li>
-					<li><a href="https://plus.google.com/+Pretastyler" rel="publisher">Google+</a></li>
-					
-				</ul>
-				
-			</footer>
+			</form>
+			
 		</div>
 		
+		
+		
 	</div>
-	
+	<section class="brand role-element leadstyle-container" id="brands" style="background-color:white;">
+		
+		
+		<div class="brand__container float-left-images">
+			
+			<h3 class="brand__container-title role-element leadstyle-text">Some of the brands that can be in your mall</h3>
+			
+			<img src="/images/ann_taylor.jpg">
+			<img src="/images/asos.jpg">
+			<img src="/images/avenue.jpg">
+			<img src="/images/gorman.jpg">
+			<img src="/images/missguided.jpg">
+			
+		</div>
+		<div style="clear:both;"></div>
+		
+	</section>
+	<div class="popup-box">
+		<div class="cross"><div class="cross-image-homepage"><img src="/images/cross.png" alt=""></div></div>
+		<h1 style="padding: 5px;">One Last Thing</h1><hr width="95%" size="2" />
+		<form action="/mall-by-profile.html" method="post">
+			<div><input type="text" placeholder="First Name" name="fname"/><input type="text" placeholder="Last Name" name="lname"/></div>
+			<div><input type="email" placeholder="Email" name="email" required/></div>
+			<div><input type="password" placeholder="Password" name="password"/><input type="password" placeholder="Confirm Password" name="cpass"/></div>
+			<div style="text-align:center"><button>Start my Trial</button></div>
+			
+		</form>
+		<div style="text-align:center">Trial Expires in 30 days.</div>
+	</div>
+	<div class="modalOverlay"></div>
+	<footer>
+		<ul>
+			<li><a href="#">BROWSER EXTENSION</a>|</li>
+			<li><a href="/terms.html">TERMS</a>|</li>
+			<li><a href="/our-story.html">OUR STORY</a>|</li>
+			<li><a href="/contact-us.html">CONTACT</a>|</li>
+			<li><a href="/retailer.html">RETAILERS</a></li>
+		</ul>
+		<ul class="social">
+			<li><a href="https://www.facebook.com/PrestaStyle" class="fb" target="_blank"><i class="icon-facebook"></i></a></li>
+			<li><a href="https://twitter.com/YourUniqueStyle" class="tw" target="_blank"><i class="icon-twitter"></i></a></li>
+			<li><a href="https://www.pinterest.com/areinten/" class="pin" target="_blank"><i class="icon-pinterest"></i></a></li>
+			<li><a href="https://plus.google.com/+Pretastyler" rel="publisher">Google+</a></li>
+			
+		</ul>
+		
+	</footer>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -597,8 +689,6 @@
 		})();
 	</script>
 <?php } ?>
-<script>
- 	$('#similarItems').initSimilarCarousel();
-</script>
+
 </body>
 </html>

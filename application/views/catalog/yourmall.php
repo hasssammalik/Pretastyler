@@ -52,7 +52,7 @@
 					font-size: 0.9em;
 					margin-left: -1em;
 					text-align: left;
-					width: 8em;
+					width: 7em;
 					}
 					.ui-slider-tip img{
 					width: 70px;
@@ -74,6 +74,45 @@
 					}
 					.ui-slider-pips .ui-slider-pip {
 						  top: 14px;
+					}
+					#talkbubble .slider-image{
+					top:-295px;
+					right:5%;
+					position: absolute;
+					width: 150px;
+					}
+					#talkbubble .slider-image img{
+					width:80%;
+					}
+					
+					#talkbubble {
+					top:85px;
+					right:96%;
+					width: 150px;
+					height: 50px;
+					background: #949494;
+					margin: 0px auto;
+					position: relative;
+					z-index:3;
+					
+					}
+					#talkbubble:before {
+					content:"";
+					position: absolute;
+					right: 50%;
+					top: -11px;
+					width: 0;
+					height: 0;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-bottom: 12px solid #949494;
+					
+					}
+					 #talkbubble.doubleline{
+					top:100px;
+					}
+					#talkbubble.doubleline .slider-image{
+					top:-305px;
 					}
 				</style>
 				<script type="text/javascript">
@@ -110,35 +149,104 @@
 						var feet = [ "Too large", "Too small", "Too narrow", "Too board" ];
 						
 						
-						var necklengthimage = [ '<img src="/images/profileSetup/neckThickness/very-thin.jpg">','<img src="/images/profileSetup/neckThickness/average.jpg">','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">', '', '' ];
+						var necklengthimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div></div>' 
+						];
 						
-						var necktypeimage = [ '<img src="/images/profileSetup/neckThickness/very-thin.jpg">','<img src="/images/profileSetup/neckThickness/average.jpg">','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">', '', '' ];
+						var necktypeimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var shouldersimage = [ '', '<img src="/images/profileSetup/shoulders/tapered.jpg">','<img src="/images/profileSetup/shoulders/square.jpg">' ];
+						var shouldersimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div></div>' 
+						];
 						
-						var faceshapeimage = [ '<img src="/images/profileSetup/neckThickness/very-thin.jpg">','<img src="/images/profileSetup/neckThickness/average.jpg">','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">', '', '', '', '', '', '', '' ];
+						var faceshapeimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-28.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-29.png" /></div></div>',
+			'<divid="talkbubble"class="doubleline"><divclass="slider-image"><imgsrc="/images/profileSetup/faceshape/features_-30.png"/></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-31.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-32.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-33.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-34.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-35.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-36.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-37.png" /></div></div>' 
+						];
 						
 						
 						
-						var neckimage = [ '<img src="/images/profileSetup/neckThickness/very-thin.jpg">','<img src="/images/profileSetup/neckThickness/average.jpg">','<img src="/images/profileSetup/neckThickness/thick-chin.jpg">', '' ];
+						var neckimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var upperbackimage = [ '<img src="/images/profileSetup/horizontalBodyShape/hourGlass.jpg">' ];
+						var upperbackimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var upperarmsimage = [ '<img src="/images/profileSetup/faceShape/oblong.jpg">','<img src="/images/profileSetup/faceShape/rectangle.jpg">','<img src="/images/profileSetup/faceShape/round.jpg">' ];
+						var upperarmsimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var bustotherimage = [ '<img src="/images/profileSetup/neckLength/short.jpg">','<img src="/images/profileSetup/neckLength/med-short.jpg">','<img src="/images/profileSetup/neckLength/medium.jpg">' ];
+						var bustotherimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var midriffimage = [ '<img src="/images/profileSetup/neckLength/short.jpg">','<img src="/images/profileSetup/neckLength/med-short.jpg">','<img src="/images/profileSetup/neckLength/medium.jpg">' ];
+						var midriffimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var stomachimage = [ '<img src="/images/profileSetup/neckLength/short.jpg">','<img src="/images/profileSetup/neckLength/med-short.jpg">','<img src="/images/profileSetup/neckLength/medium.jpg">', '<img src="/images/profileSetup/neckLength/long.jpg">' ];
+						var stomachimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var bottomimage = [ '<img src="/images/profileSetup/neckLength/short.jpg">','<img src="/images/profileSetup/neckLength/med-short.jpg">','<img src="/images/profileSetup/neckLength/medium.jpg">' ];
+						var bottomimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var thighsimage = [ '<img src="/images/profileSetup/neckLength/short.jpg">','<img src="/images/profileSetup/neckLength/med-short.jpg">','<img src="/images/profileSetup/neckLength/medium.jpg">' ];
+						var thighsimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var lowerlegsimage = [ '<img src="/images/profileSetup/neckLength/short.jpg">','<img src="/images/profileSetup/neckLength/med-short.jpg">','<img src="/images/profileSetup/neckLength/medium.jpg">','<img src="/images/profileSetup/neckLength/med-long.jpg">' ];
+						var lowerlegsimage = [ '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
-						var feetimage = [ '<img src="/images/profileSetup/neckLength/short.jpg">','<img src="/images/profileSetup/neckLength/med-short.jpg">','<img src="/images/profileSetup/neckLength/medium.jpg">','<img src="/images/profileSetup/neckLength/med-long.jpg">' ];
+						var feetimage = [ '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
 						
 						
 						
@@ -510,7 +618,7 @@
 							</fieldset>
 						</div> -->
 						<div class="clear"></div>
-						<br><br>
+						<br><br><br><br><br><br><br><br>
 						<p class="i profile-big-title" style="text-align:left;"><!--Here are some of the feature to get you an <strong>accurate result:</strong> -->You're almost done</p>
 					</div>
 				</div>
