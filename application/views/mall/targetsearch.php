@@ -1,12 +1,26 @@
 <div class="mainContent">
 	<?php // echo form_open(); echo form_close();?>
 	<style type="text/css">
-		.target-search-page .itemsWrap ul.items li { width: 292px; }
+		.target-search-page .itemsWrap ul.items li { width: 292px; float: none; }
+
+		.sliderWrap {
+		  position: relative;
+		  max-height: 355px;
+		  margin-bottom: 20px;
+		  overflow: hidden;
+		  overflow-x: auto;
+		  white-space: nowrap;
+		  width: 89%;
+		}
+		ul.items {
+			width: 100%;
+		}
+
 	</style>
 	<div class="target-search-page accordion topAccordionMenu " style="position:relative;" >
 		<div class="panel targetcustomslides" style="display:block;">
 		<div id="category-panel">
-			<div class="sliderWrap" style="max-width:1010px;">
+			<div class="sliderWrap getCurrentWindowwidminus350 " style="max-width:1010px;">
 				<ul class="items">
 					<?php foreach ( $deep_category as $category ) { ?>
 					<li>
