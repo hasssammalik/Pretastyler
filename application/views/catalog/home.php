@@ -105,7 +105,7 @@
 					}
 					#talkbubble .slider-image{
 					top:-295px;
-					right:5%;
+					left:8.5%;
 					position: absolute;
 					width: 150px;
 					}
@@ -114,20 +114,24 @@
 					}
 					
 					#talkbubble {
-					top:195px;
-					right:96%;
-					width: 150px;
-					height: 50px;
+					top: 195px;
+					left: -68px;
+					width: 500px;
+					height: 60px;
 					background: #949494;
 					margin: 0px auto;
 					position: relative;
-					z-index:3;
-					color:white;
+					z-index: 3;
+					font-style: italic;
+					font-weight: 200;
+					text-align: left;
+					color: white;
+					font-size:11px;
 					}
 					#talkbubble:before {
 					content:"";
 					position: absolute;
-					right: 50%;
+					left:19%;
 					top: -11px;
 					width: 0;
 					height: 0;
@@ -217,8 +221,7 @@
 						];
 						var buildimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the opposite
-hand as if they were a bracelet.&#xa;Select large if there is a gap between your thumb and middle finger (they don't touch).</div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div><p style="padding:5px;">Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the oppositehand as if they were a bracelet.<br/>Select large if there is a gap between your thumb and middle finger (they don\'t touch).</p></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-17.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-18.png" /></div></div>' 
 						];
