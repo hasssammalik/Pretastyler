@@ -24,7 +24,7 @@
 				<div class="panel2 newpanelDesign" id="ourAdviceLog">
 					
 					<div class="panelheaderheightfixer">
-						<div class="panelNewHeader bkgrey" style="margin-bottom:0px;line-height: 45px;">WHY IT WORKS FOR YOU</div>
+						<div class="panelNewHeader bkgrey" style="margin-bottom:0px;line-height: 47px;">WHY IT WORKS FOR YOU</div>
 						<div style="background:url('/images/bodyback.png');background-position: 4% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 					</div>
 					<div class="panelContent panelcontentFirst">
