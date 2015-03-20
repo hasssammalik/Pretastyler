@@ -122,7 +122,7 @@
 					margin: 0px auto;
 					position: relative;
 					z-index:3;
-					
+					color:white;
 					}
 					#talkbubble:before {
 					content:"";
@@ -209,15 +209,16 @@
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>', 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>'
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>', 
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>'
 						];
 						var buildimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the opposite
+hand as if they were a bracelet.&#xa;Select large if there is a gap between your thumb and middle finger (they don't touch).</div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-17.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-18.png" /></div></div>' 
 						];
