@@ -2,9 +2,9 @@
 	
 	<div class="frontWrap">
 		<div class="homepage-header">
-			<div class="header-bg__container">
+			<div class="headerBackground">
 				
-				<div class="header-bg__container-content role-element leadstyle-container center" style=" background-color: rgba(0,0,0,0.5); padding: 208px 0px;">
+				<div class="headerBackground-content role-element leadstyle-container center">
 					<p style="font-size:28px; font-weight: bold;">SHOPPING ONLINE JUST GOT PERSONAL</p>
 					<p style="font-size:20px;">
 						Cut Through the Clutter of Fashion<br>
@@ -457,28 +457,30 @@
 
 </div>
 
-<!--Start of Zopim Live Chat Script-->
-<script type="text/javascript">
-	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-		$.src='//v2.zopim.com/?2DZTXFz3pU0P9dFbK9NzPb2IBE2aAE8b';z.t=+new Date;$.
-	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-</script>
-<!--End of Zopim Live Chat Script-->
-
-<script type="text/javascript">
-	setTimeout(function(){var a=document.createElement("script");
-		var b=document.getElementsByTagName("script")[0];
-		a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
-	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>
 
 <div class="modal"></div>
 <div class="popup_modal"></div>
 <?php 
 	if( ENVIRONMENT == 'production') {
 	?>
+
+	<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+			var b=document.getElementsByTagName("script")[0];
+			a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+
+	<!--Start of Zopim Live Chat Script-->
+	<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+			_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+			$.src='//v2.zopim.com/?2DZTXFz3pU0P9dFbK9NzPb2IBE2aAE8b';z.t=+new Date;$.
+		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+	</script>
+	<!--End of Zopim Live Chat Script-->
+
 	<script type='text/javascript'>
 		
 		window.__wtw_lucky_site_id = 33872;
@@ -488,6 +490,7 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
 		})();
 	</script>
+
 <?php } ?>
 
 </body>
