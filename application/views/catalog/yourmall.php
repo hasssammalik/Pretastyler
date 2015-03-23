@@ -149,7 +149,7 @@
 						var feet = [ "Too large", "Too small", "Too narrow", "Too board" ];
 						
 						
-						var necklengthimage = 
+						/*var necklengthimage = 
 						[ 
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /></div></div>',
@@ -247,7 +247,7 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
 						];
-						
+						*/
 						
 						
 						$(".newprofile-necklength")
