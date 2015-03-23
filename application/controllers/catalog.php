@@ -70,6 +70,10 @@ class Catalog extends CI_Controller {
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 		';
+		$data['extraCSS'] = '
+							<link rel="stylesheet" href="/css/jquery-ui.css">
+							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		';
 		$data['extraJS'] = '
 							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 							<script src="/js/jquery-ui-slider-pips.js"></script>

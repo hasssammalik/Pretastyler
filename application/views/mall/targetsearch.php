@@ -3,7 +3,7 @@
 	<style type="text/css">
 		.target-search-page .itemsWrap ul.items li { width: 292px; float: none; }
 
-		.sliderWrap {
+		.sliderWrap.getCurrentWindowwidminus350 {
 		  position: relative;
 		  max-height: 355px;
 		  margin-bottom: 20px;
@@ -12,15 +12,15 @@
 		  white-space: nowrap;
 		  width: 89%;
 		}
-		ul.items {
+		.getCurrentWindowwidminus350 ul.items {
 			width: 100%;
 		}
 
 	</style>
-	<div class="target-search-page accordion topAccordionMenu " style="position:relative;" >
+	<div class="target-search-page accordion topAccordionMenu usefixheightfortargetsearch" style="position:relative;" >
 		<div class="panel targetcustomslides" style="display:block;">
 		<div id="category-panel">
-			<div class="sliderWrap getCurrentWindowwidminus350 " style="max-width:1010px;">
+			<div class="sliderWrap" style="max-width:1010px;">
 				<ul class="items">
 					<?php foreach ( $deep_category as $category ) { ?>
 					<li>
@@ -44,7 +44,7 @@
 			<div class="options accordion">
 			</div>
 			<div class="itemsWrap">
-				<div class="sliderWrap">
+				<div class="sliderWrap getCurrentWindowwidminus350">
 					<ul class="items">
 					</ul>
 					<div class="pager"></div>
@@ -100,14 +100,4 @@
 	<div>
 	
 	
-	
 </div>
-<?php 
-	
-	$content = "some text here";
-$fp = fopen("myText.txt","wb");
-fwrite($fp,$content);
-fclose($fp);
-	
-	
-	?>

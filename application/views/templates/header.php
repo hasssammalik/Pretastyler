@@ -9,6 +9,9 @@
 <link href="/css/default.css" rel="stylesheet">
 <link href="/css/mozilla.css" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
+<!--- - - - - - CSS overwriter   - - - - -->
+<link href="/css/style.css" rel="stylesheet">
+<!--- - - - - - CSS overwriter   - - - - -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <script src="/js/jquery-1.11.1.min.js"></script>
 <script src="/js/actual_product.js"></script>
