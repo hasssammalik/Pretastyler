@@ -444,7 +444,7 @@
 			<li><a href="https://plus.google.com/+Pretastyler" rel="publisher">Google+</a></li>
 			
 		</ul>
-		
+		<?php echo form_open(); echo form_close();?>
 	</footer>
 </div>
 
@@ -490,7 +490,7 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
 		})();
 	</script>
-
+	
 <?php } ?>
 
 </body>
