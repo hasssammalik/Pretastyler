@@ -71,7 +71,7 @@ class Extension extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/not_found', $data);
 	}
 	/**

@@ -31,7 +31,7 @@
 			
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
+			//$this->load->view('templates/menu_mall', $data);
 			$this->load->view('boards/index', $data);
 		}
 
@@ -72,7 +72,7 @@
 			
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
+			//$this->load->view('templates/menu_mall', $data);
 			$this->load->view('boards/create', $data);
 			$this->load->view('templates/footer', $data);
 		}
@@ -84,7 +84,7 @@
 			
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
+			//$this->load->view('templates/menu_mall', $data);
 			$this->load->view('errors/coming_soon', $data);
 		}
 
@@ -95,7 +95,7 @@
 			
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
+			//$this->load->view('templates/menu_mall', $data);
 			$this->load->view('errors/coming_soon', $data);
 		}
 	}

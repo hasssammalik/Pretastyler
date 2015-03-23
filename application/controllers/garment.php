@@ -93,7 +93,7 @@ class Garment extends CI_Controller {
 			$data['categories'] = $this->category_model->get_available_categories();
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
+			//$this->load->view('templates/menu_mall', $data);
 			$this->load->view('garment/import_extension', $data);
 			$this->load->view('templates/footer', $data);
 		}
@@ -128,7 +128,7 @@ class Garment extends CI_Controller {
 			$data['categories'] = $this->category_model->get_available_categories();
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
+			//$this->load->view('templates/menu_mall', $data);
 			$this->load->view('garment/import', $data);
 			$this->load->view('templates/footer', $data);
 		}
@@ -166,7 +166,7 @@ class Garment extends CI_Controller {
 		$data['occasions'] = $this->occasion_model->get_garment_occasions($garment_id);
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('garment/edit_general', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -311,7 +311,7 @@ class Garment extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('garment/assess', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -345,7 +345,7 @@ class Garment extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('garment/edit', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -583,7 +583,7 @@ class Garment extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/not_found', $data);
 	}
 	/**
@@ -598,7 +598,7 @@ class Garment extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/general_error', $data);
 	}
 	/**
