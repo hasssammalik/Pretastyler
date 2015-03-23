@@ -27,7 +27,7 @@
 					
 					$(function(){
 						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
-						var size = [ "Allegra", "Natalie", "Halle", "Drew", "America", "Kim", "Queen", "Ophra" ];
+						var size = [ "Allegra", "Natalie", "Halle", "Drew", "Kim", "Queen", "Amber", "Rebel" ];
 						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "75 >" ];
 						var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
 						var bodyratio = [ "Long Legged Short Torso", "Balanced Body", "Short Legged Long Torso" ];
