@@ -16,144 +16,11 @@
 			</div>
 			
 		</div>
-		<!--	<section class="tutorial role-element leadstyle-container" id="free-tutorial">
-			
-			<p class="tutorial__headline role-element leadstyle-text">The Future of Fashion Has Arrived </p>
-			
-			<ul class="tutorial__list role-element leadstyle-text"><li>Ever asked yourself:&nbsp;<br>What suits me? What fits me? Where can I buy it? How should I style
-			it?<br><span style="font-size: 1rem;">PrêtàStyler provides all these answers and fills your private
-			fashion mall
-			with garments and accessories perfect for your height, shape and age,
-			using the very latest technology and intelligent algorithms
-			available.<br> You'll be spoilt for choice no matter what you're after.  </span></li></ul>
-			
-			</section>
-		-->
 		
 		<section class="role-element container wid60 preta-tooltip" id="the-product">
 			
 			<div class="wid100">
 				
-				<style type="text/css">
-					.ui-slider-float .ui-slider-tip,
-					.ui-slider-float .ui-slider-tip-label {
-					border: solid 0 #ffffff;
-					margin-left: -34px;
-					}
-					.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
-					color: #666;
-					}
-					.ui-slider-pips .ui-slider-pip-selected, .ui-slider-pips .ui-slider-pip-selected-first, .ui-slider-pips .ui-slider-pip-selected-second,
-					.ui-slider-pips .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
-					.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
-					.ui-slider-pips .ui-slider-pip-selected-initial
-					{
-					color: #e72775;
-					}
-					.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-					background: none;
-					background: #e72775;
-					top: -11px;
-					height: 20px;
-					width: 20px;
-					border-radius: 14px;
-					}
-					.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
-					background: none;
-					background: #e72775;
-					border-color: none;
-					}
-					.ui-slider-horizontal {
-					height: 0;
-					border: 3px solid #dddddd;
-					}
-					.ui-slider-pip .ui-slider-label {
-					font-size: 0.9em;
-					margin-left: -1em;
-					text-align: left;
-					width: 7em;
-					}
-					.ui-slider-tip img{
-					width: 70px;
-					cursor: pointer;
-					}
-					.ui-slider-float .ui-slider-tip:before, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:before, .ui-slider-float .ui-slider-tip:after, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
-					display: none;
-					}
-					.ui-slider-pips, .ui-slider-float {
-					cursor: pointer;
-					}
-					.ui-slider.ui-slider-horizontal {
-					margin-left: 50px;
-					margin-top: 21px;
-					}
-					.ui-slider-horizontal {
-					height: 0;
-					border: 3px solid #E4E4E4;
-					}
-					.ui-slider-pips .ui-slider-pip {
-					top: 14px;
-					}
-					.ui-slider-float .ui-slider-handle:hover .ui-slider-tip, .ui-slider-float .ui-slider-handle:focus .ui-slider-tip, .ui-slider-float .ui-slider-pip:hover .ui-slider-tip-label {
-					top:-135px;
-					
-					}
-					.homepage-slider img {
-					width: 200px;
-					float: left;
-					margin: 20px;
-					}
-					#talkbubble .slider-image{
-					top:-295px;
-					left:8.5%;
-					position: absolute;
-					width: 150px;
-					}
-					#talkbubble .slider-image img{
-					width:80%;
-					}
-					
-					#talkbubble {
-					top: 195px;
-					left: -68px;
-					width: 500px;
-					height: 60px;
-					background: #949494;
-					margin: 0px auto;
-					position: relative;
-					z-index: 3;
-					font-style: italic;
-					font-weight: 200;
-					text-align: left;
-					color: white;
-					font-size:11px;
-					}
-					#talkbubble:before {
-					content:"";
-					position: absolute;
-					left:19%;
-					top: -11px;
-					width: 0;
-					height: 0;
-					border-left: 8px solid transparent;
-					border-right: 8px solid transparent;
-					border-bottom: 12px solid #949494;
-					
-					}
-					.home-profile-bodyratio #talkbubble{
-					top:205px;
-					}
-					.home-profile-bodyratio #talkbubble .slider-image{
-					top:-305px;
-					}
-					#talkbubble.doubleline{
-					top:205px;
-					}
-					#talkbubble.doubleline .slider-image{
-					top:-305px;
-					}
-					
-				</style>
 				<script type="text/javascript">
 					
 					var default_values = [3,4,2,4,2,5,2];
@@ -501,7 +368,7 @@
 			</div> -->
 			<div id="homepage-slider">
 				<div class="garments"></div>
-				
+
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
