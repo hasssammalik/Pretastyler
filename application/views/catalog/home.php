@@ -98,7 +98,7 @@
 					top:-135px;
 					
 					}
-					.slider-item img {
+					.homepage-slider img {
 					width: 200px;
 					float: left;
 					margin: 20px;
@@ -500,11 +500,8 @@
 				</div>
 			</div> -->
 			<div id="homepage-slider">
-				<?php if ($similar_garments) {
-					foreach ($similar_garments as $row) {?>
-					<div class="slider-item"><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"><img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name']?>"></a></div>
-					<?php }
-				}?>
+				<div class="garments"></div>
+				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
