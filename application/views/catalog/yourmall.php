@@ -175,7 +175,7 @@
 						var faceshapeimage = [ 
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-28.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-29.png" /></div></div>',
-						'<divid="talkbubble"class="doubleline"><divclass="slider-image"><imgsrc="/images/profileSetup/faceshape/features_-30.png"/></div></div>',
+						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-30.png"/></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-31.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-32.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-33.png" /></div></div>',
@@ -204,46 +204,32 @@
 						];
 						
 						var bustotherimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'','',''
 						];
 						
 						var midriffimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'','',''
 						];
 						
 						var stomachimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'',
+						'','',''
 						];
 						
 						var bottomimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'','',''
 						];
 						
 						var thighsimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'','',''
 						];
 						
-						var lowerlegsimage = [ '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						var lowerlegsimage = [ 
+						'','','',''
 						];
 						
-						var feetimage = [ '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						var feetimage = [ '',
+						'','',''
 						];
 						
 						
