@@ -52,6 +52,7 @@
 					font-size: 0.9em;
 					margin-left: -1em;
 					text-align: left;
+					color: #434443 !important;
 					width: 7em;
 					}
 					.ui-slider-tip img{
@@ -737,7 +738,7 @@
 					
 					<div class="home-profile profile-your-mall-hidden-4 home-profile-midriff" id="you_mall_midriff" style="display:none;">
 						<div class="slider-name left">
-							<p>midriff</p>
+							<p>MIDRIFF</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-midriff">
