@@ -1,7 +1,7 @@
 <div class="mainContent">
 	
 	<div class="frontWrap">
-		<div class="homepage-header">
+		<div class="homepage-header homeBannerHeight">
 			<div class="headerBackground">
 				
 				<div class="headerBackground-content role-element leadstyle-container center">
