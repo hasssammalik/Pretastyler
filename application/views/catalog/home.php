@@ -350,22 +350,6 @@
 				<img src="/images/newhomedown.png" class="noneArea noneLiner">
 				<p class="i profile-big-title">Here's just a few <strong>garments we've found for you</strong></p>
 			</div>
-			<!-- <div class="panel2" id="similarItems">
-				<div class="panelContent" style="background-color: #F0F0F0;">
-				<div class="sliderWrap">
-				<ul class="items">
-				<?php if ($similar_garments) {
-					foreach ($similar_garments as $row) {?>
-					<li><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"><img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name']?>"></a>
-					</li>
-					<?php }
-				}?>
-				</ul>
-				<!-- <a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
-				<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a> 
-				</div>
-				</div>
-			</div> -->
 			<div id="homepage-slider">
 				<div class="garments"></div>
 
@@ -489,59 +473,7 @@
 		a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
 	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
-<!-- <div id="popup-scroll">
-	<div class="email-subscriber">
-	
-	<div class="bottom-div">
-	<div style="width:1018px;margin: 0 auto;height:100%;">
-	<img class="brand-image-subscriber" src='/images/email-subscriber.png' alt="personal shopping blog online"/>
-	<div style="margin-left:307px;">
-	<div class="text-subscribe">
-	<b>Timeless Style</b><br>
-	50 image essentials every <br>
-	woman should know button: <br>
-	GET YOUR FREE COPY NOW!
-	</div>
-	<div class="arrow">
-	<img src='/images/arrow.png'/>
-	</div>
-	<div class="subscriber-form">
-	<?php echo form_open('/thankyou'); ?> 
-	<input name="inf_form_xid" type="hidden" value="01ae3785a5fde11d3e8a29fd1f6e9400" />
-	<input name="inf_form_name" type="hidden" value="Indicate interest" />
-	<input name="test-form" type="hidden" value="01ae3785a5fde11d3e8a29fd1f6e9400">
-	<input name="infusionsoft_version" type="hidden" value="1.37.0.46" />
-	<div class="input-fields">
-	<div style="width:100%">
-	<div class="infusion-field" style="float:left; "> 
-	
-	<input class="infusion-field-input-container" id="inf_field_FirstName" name="inf_field_FirstName" type="text" placeholder="First Name" style="width:105px;" required/>
-	</div>
-	
-	<div class="infusion-field" style="float:left;margin-left:5px;">
-	
-	<input class="infusion-field-input-container" id="inf_field_LastName" name="inf_field_LastName" placeholder="Last Name" type="text" style="width:105px;" required/>
-	</div>
-	</div>
-	<div class="infusion-field">
-	
-	<input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email"  placeholder="Email Address" type="email" required style="width:215px;background: #E5e5e5;"/>
-	</div>
-	</div>
-	<div class="infusion-submit">
-	<button style="" onClick="ga('send', 'event', 'Form-bot', 'Click', 'form bottom completed');"><b style="color:white; font-family: 'Open Sans', sans-serif;font-size:16px;">GET YOUR'S</b> <br><span style="color:white;font-size:16px;"> TODAY!</span></button>
-	</div> 
-	</form>
-	<script type="text/javascript" src="https://om185.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=7cdbebcae7b8c4b1866b9ff08971aec0"></script>
-	</div>
-	<div class="cross-sign">
-	<img class="close mousehand" src="/images/cross.png">
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-</div> -->
+
 <div class="modal"></div>
 <div class="popup_modal"></div>
 <?php 
