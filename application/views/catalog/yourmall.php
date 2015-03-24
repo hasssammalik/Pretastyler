@@ -616,7 +616,7 @@
 							<p>NECK LENGTH</p>
 						</div>
 						<div class="homepageslider left sliderwrap-necklength">
-							<div class="newprofile-necklength"></div>
+							<div class="newprofile-necklength" id=""></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -698,7 +698,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-neck">
-							<div class="newprofile-neck"></div>
+							<div class="newprofile-neck" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -709,7 +709,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-upperback">
-							<div class="newprofile-upperback"></div>
+							<div class="newprofile-upperback" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -720,7 +720,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-upperarms">
-							<div class="newprofile-upperarms"></div>
+							<div class="newprofile-upperarms" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -731,18 +731,18 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bustother">
-							<div class="newprofile-bustother"></div>
+							<div class="newprofile-bustother" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					<div class="home-profile profile-your-mall-hidden-4 home-profile-midriff" id="you_mall_midriff" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>MIDRIFF</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-midriff">
-							<div class="newprofile-midriff"></div>
+							<div class="newprofile-midriff" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -753,7 +753,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-stomach">
-							<div class="newprofile-stomach"></div>
+							<div class="newprofile-stomach" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -764,41 +764,41 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bottom">
-							<div class="newprofile-bottom"></div>
+							<div class="newprofile-bottom" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					<div class="home-profile profile-your-mall-hidden-7 home-profile-thighs" id="you_mall_thighs" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>THIGHS</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-thighs">
-							<div class="newprofile-thighs"></div>
+							<div class="newprofile-thighs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					
 					<div class="home-profile profile-your-mall-hidden-8 home-profile-lowerlegs" id="you_mall_lowerlegs" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>LOWER LEGS</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-lowerlegs">
-							<div class="newprofile-lowerlegs"></div>
+							<div class="newprofile-lowerlegs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					<div class="home-profile profile-your-mall-hidden-9 home-profile-feet" id="you_mall_feet" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>FEET</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-feet">
-							<div class="newprofile-feet"></div>
+							<div class="newprofile-feet" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
