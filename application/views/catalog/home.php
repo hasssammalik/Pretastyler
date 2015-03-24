@@ -45,7 +45,7 @@
     #circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-line {
       display: none; }*/
                     
-			    #circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
+			   /* #circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
 			    #circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label {
 			      margin: 0; }
 			                    
@@ -183,7 +183,7 @@
           }
           #talkbubble.doubleline .slider-image{
           top:-305px;
-          }
+          }*/
           
         </style>
         <script type="text/javascript">
