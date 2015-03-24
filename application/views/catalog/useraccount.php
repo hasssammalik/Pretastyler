@@ -1,7 +1,7 @@
 <div class="mainContent">
 	
 	<div class="frontWrap">
-		<div class="homepage-header homeBannerHeight">
+		<div class="homepage-header useraccountBannerHeight">
 			<div class="headerBackground">
 				
 				<div class="headerBackground-content role-element leadstyle-container center">
@@ -16,8 +16,8 @@
 							<div class="group">
 								<div class="col" style="position:relative;">
 								<?php if ( uri_string() == '' ) { $link_url_to = "index"; } else {  $link_url_to = uri_string(); } ?>
-									<div id="login-form" return_url="<?php print $link_url_to ?>.html">
-										<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('menu_mall_login', $attlog); ?>
+									<div id="login-form" return_url="/<?php print $link_url_to ?>.html">
+										<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('/index.html', $attlog); ?>
 										
 											<fieldset>
 												<div class="row">
@@ -46,7 +46,7 @@
 									</div>
 
 									<div id="forgot-form" style="display:none;">
-										<?php  $attreg = array('name' => 'menu_mall_forgot', 'id' => 'menu_mall_forgot');echo form_open('menu_mall_forgot', $attreg); ?>
+										<?php  $attreg = array('name' => 'menu_mall_forgot', 'id' => 'menu_mall_forgot');echo form_open('/index.html', $attreg); ?>
 										<p>Enter your PrêtàStyler registered email and we will email your a link to create a new password.</p>
 											<fieldset>
 												<div class="row">
