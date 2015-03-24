@@ -16,6 +16,15 @@
 			<div class="wid100">
 				<?php echo form_open();  echo form_close();  ?>
 				<style type="text/css">
+				#circles-slider .ui-slider-pip .ui-slider-line {
+		      width: 8px;
+				  top: -18px;
+				  height: 8px;
+				  border-radius: 4px;
+				  margin-left: -5px;
+				  background: #e72775;
+ 				 }
+  
 					.ui-slider-float .ui-slider-tip,
 					.ui-slider-float .ui-slider-tip-label {
 					border: solid 0 #ffffff;
