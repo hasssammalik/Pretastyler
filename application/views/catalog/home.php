@@ -30,11 +30,11 @@
   top: 3px; }
                     
   #circles-slider .ui-slider-pip .ui-slider-line {
-      width: 10px;
-  top: -8px;
-  height: 10px;
-  border-radius: 4px;
-  margin-left: -5px;
+      width: 20px;
+  top: -13px;
+  height: 20px;
+  border-radius: 14px;
+  margin-left: -3px;
   background: #999;
   }
                     
@@ -169,6 +169,8 @@
           border-bottom: 12px solid #949494;
           
           }
+          .home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2;}
+          .ui-state-hover{z-index:3;}
           .home-profile-bodyratio #talkbubble{
           top:205px;
           }
