@@ -188,8 +188,7 @@
 											</li>
 										<?php } ?>
 									</ul>
-									<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
-									<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a>
+									
 								</div>
 							</div>
 							
