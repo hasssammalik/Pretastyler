@@ -85,21 +85,7 @@
 						</div>
 					<?php } ?>
 					
-					<style type="text/css">
-						.loggedInSmallDetails .galleryAreaWrap {
-						width: 45%;
-						}
-						.mainContent .loggedInSmallDetails .galleryAreaWrap.newpanelDesign .galleryArea .productSecondColumn  {
-						width: 53%;
-						}
-						.mainContent .loggedInSmallDetails .galleryAreaWrap.newpanelDesign .galleryArea .productThirdColumn  {
-						width: 26%;
-						}
-						.loggedInSmallDetails #styingRecon {
-						width: 24%;
-						}
-					</style>
-					
+									
 					<div class="galleryAreaWrap notLoggedIn newpanelDesign">
 						
 						<div class="panelheaderheightfixer">
