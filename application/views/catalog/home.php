@@ -350,6 +350,9 @@
 				<img src="/images/newhomedown.png" class="noneArea noneLiner">
 				<p class="i profile-big-title">Here's just a few <strong>garments we've found for you</strong></p>
 			</div>
+			<style type="text/css">
+			.garments:after { display: none;}
+			</style>
 			<div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
 
@@ -444,7 +447,7 @@
 			<li><a href="https://plus.google.com/+Pretastyler" rel="publisher">Google+</a></li>
 			
 		</ul>
-		<?php echo form_open(); echo form_close();?>
+		
 	</footer>
 </div>
 

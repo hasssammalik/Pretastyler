@@ -57,7 +57,7 @@ class Mall extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/index', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -78,7 +78,7 @@ class Mall extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/mallclone', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -222,7 +222,7 @@ class Mall extends CI_Controller {
 							'<div id="hiddenPriceRange" style="display:none">'.$price_range.'</div>';
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/index', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -249,7 +249,7 @@ class Mall extends CI_Controller {
 		$data['getBook']= true;
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/similar', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -262,7 +262,7 @@ class Mall extends CI_Controller {
 		$data['getBook']= true;
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/occasion', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -283,7 +283,7 @@ class Mall extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/brand', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -300,7 +300,7 @@ class Mall extends CI_Controller {
 		$data['getBook']= true;
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/body', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -402,7 +402,7 @@ class Mall extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/targetsearch', $data);
 		$this->load->view('templates/footer', $data);
 		
