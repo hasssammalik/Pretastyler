@@ -34,8 +34,8 @@
   top: -13px;
   height: 20px;
   border-radius: 14px;
-  margin-left: -3px;
-  background: #999;
+  margin-left: -10px;
+  background: #eaeaea;
   }
                     
  
