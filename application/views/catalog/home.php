@@ -44,30 +44,30 @@
     #circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-line {
       display: none; }*/
                     
-    #circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
-    #circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label {
-      margin: 0; }
-                    
+			    #circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
+			    #circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label {
+			      margin: 0; }
+			                    
 
-                    
-  #circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label {
-    left: 2em;
-    text-align: left; 
-    }
-                    
-  #circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
-    font-weight: normal; }
-                    
-     #circles-slider .ui-slider-pip.ui-slider-pip-selected {
-    font-weight: bold; }
-                    
-    #circles-slider .ui-slider-pip.ui-slider-pip-selected,
-    #circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
-    color: #434d5a; }
+			                    
+			  	#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label {
+				    left: 2em;
+				    text-align: left; 
+			    }
+			                    
+			  	#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+			    	font-weight: normal; }
+			                    
+			     #circles-slider .ui-slider-pip.ui-slider-pip-selected {
+			    font-weight: bold; }
+			                    
+			    #circles-slider .ui-slider-pip.ui-slider-pip-selected,
+			    #circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+			    	color: #434d5a; }
           .ui-slider-float .ui-slider-tip,
           .ui-slider-float .ui-slider-tip-label {
-          border: solid 0 #ffffff;
-          margin-left: -34px;
+	          border: solid 0 #ffffff;
+	          margin-left: -34px;
           }
           .ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
           color: #666;
@@ -98,9 +98,9 @@
           }
           .ui-slider-pip .ui-slider-label {
           font-size: 0.9em;
-  margin-left: -1.5em;
-  text-align: left;
-  width: 7em;top:25px;
+ 					margin-left: -1.5em;
+				  text-align: left;
+				  width: 7em;top:25px;
           }
           .ui-slider-tip img{
           width: 70px;
