@@ -417,8 +417,8 @@
 						<img src="/images/newhomedown.png" class="noneArea noneLiner ">
 						
 						<p class="i profile-big-title">Let's start by selecting your <strong>body features</strong></p>
-						<p style="padding-left: 100px;font-size: 0.9em;">Pop your details below and your personal fashion mall will automatically 
-						overflow with clothing and accessories tailor made for your style, shape and age.</p>
+						<!-- <p style="padding-left: 100px;font-size: 0.9em;">Pop your details below and your personal fashion mall will automatically 
+						overflow with clothing and accessories tailor made for your style, shape and age.</p> -->
 					</div>
 					
 				</div>
