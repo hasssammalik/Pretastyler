@@ -14,9 +14,11 @@
 	</script>
 
 </section>
+<?php
+echo form_open(); echo form_close();
 
-<?php if( !empty( $breadcrumb[0] ) ) { ?>
-	<div style="margin-left: 20px;">
+ if( !empty( $breadcrumb[0] ) ) { ?>
+	<div>
 		<div class="headPageTitle">
 		   <?php echo strtoupper($title) ?>
 		</div>

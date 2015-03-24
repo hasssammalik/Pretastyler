@@ -78,22 +78,29 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			<ul class="userMenu">
 			    <li><a href="/mall.html" title="My personally curated fashion feed.">MALL</a></li>
 			    <!-- <li><a href="/about-us.html">ABOUT US</a></li> -->
-			    <?php if (!$this->flexi_auth->is_logged_in()){ ?><li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li> <?php } ?>
-			    <li><a href="/faq.html" title="How things work">HELP</a></li>
-			    <li><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">BLOG</a></li>
+			    <?php if (!$this->flexi_auth->is_logged_in()){ ?>
+			    	<li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
+			    <?php } ?>
+				
+				<li><a href="/faq.html" title="How things work">HELP</a></li>
+				<li><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">BLOG</a></li>
+			    
 			    <?php if ($this->flexi_auth->is_logged_in()){ ?>
-				<li><a href="/user.html" title="Your account details and profile"><i class="icon-user"></i>Welcome <span class="myuserName"><?php print $first_name ?></span></a></li>
-				<li><a href="/user/logout.html"><i class="icon-lock"></i>Log Out</a></li>
+					<li><a href="/user.html" title="Your account details and profile"><i class="icon-user"></i>Welcome <span class="myuserName"><?php print $first_name ?></span></a></li>
+					<li><a href="/user/logout.html"><i class="icon-lock"></i>Log Out</a></li>
 				<?php } else { ?>
-				<li><a href="javascript:void(0)" onclick="register_click();" data-user='normal'><i class="icon-user"></i>SIGN-UP</a></li>
-				<li><a href="javascript:void(0)" onclick="login_click('/<?php $return_url = uri_string(); if (!empty($return_url)){print $return_url.'.html';} else{print 'mall.html';}?>');"><i class="icon-lock"></i>LOGIN</a></li>
+				
+					<li><a href="/index.html#profile"><i class="icon-user"></i>SIGN-UP</a></li>
+					<li><a href="/useraccount/login.html"><i class="icon-lock"></i>LOGIN</a></li>
+
 				<?php } ?>
+
 			</ul>
 			<!-- <a href="#" id="menuButton" class="sqBtn light"><i class="icon-menu"></i></a> -->
 			
-			<?php if (!isset($no_sqBtn)) { ?>
+			<?php /* if (!isset($no_sqBtn)) { ?>
 			<a href="#" class="sqBtn" id="trigger"><img src="/images/pinkbutton.png" width="46px"></a>
-			<?php } ?>
+			<?php } */?>
 			<a href="/" class="logo"><img src="/images/newlogo.png" width="193" alt=""></a>
 			<?php /* ?><!-- <nav>
 				<ul>

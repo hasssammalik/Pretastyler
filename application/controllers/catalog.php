@@ -486,7 +486,27 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	/**
 	* User login and signup 
 	*/
-	public function useraccount(){
+	public function useraccount($slug = FALSE){
+		
+		if (!$this->flexi_auth->is_logged_in()){
+
+			$data = $this->data;
+			$data['title'] = "Customer Login";
+			$data['no_background_image'] = TRUE;
+			$data['content_class'] = "full_width_page";
+			$data['extraFooter'] = TRUE;
+			
+			$data['extraMeta'] = '<meta name="keyword" content="Login to PRÊT À STYLER. PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+								  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+			';
+			
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/menu_mall', $data);
+			$this->load->view('catalog/useraccount', $data);
+
+		} else {
+			redirect("/index");
+		}
 
 	}
 	/**
