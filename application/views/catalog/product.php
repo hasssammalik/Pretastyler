@@ -223,7 +223,12 @@
 											</a>
 										</dd>
 										<dt>Store:</dt>
-										<dd><a href="<?php print $garment['url']?>" target="_blank"><?php print $garment['store']?></a></dd>
+										<dd><a href="<?php 
+								if (strpos($garment['url'],'theiconic.com.au') !== false) {
+									print 'https://www.tagserve.com.au/clickServlet?AID=264&MID=36&PID=47&SID=297&CID=52&SUBID=&TARGETURL=';
+								}
+								print $garment['url']; 
+							?>" target="_blank"><?php print $garment['store']?></a></dd>
 										
 										<dt>Description:</dt>
 										
@@ -268,7 +273,12 @@
 								
 								<div class="actionButtons">
 									<ul>
-										<li class=""><a href="<?php print $garment['url']?>" class="button buy" target="_blank">BUY / LEARN MORE</a></li>
+										<li class=""><a href="<?php 
+								if (strpos($garment['url'],'theiconic.com.au') !== false) {
+									print 'https://www.tagserve.com.au/clickServlet?AID=264&MID=36&PID=47&SID=297&CID=52&SUBID=&TARGETURL=';
+								}
+								print $garment['url']; 
+							?>" class="button buy" target="_blank">BUY / LEARN MORE</a></li>
 										<li class=""><a href="/mall/similar/<?php print $garment['garment_id'] . '-'. $garment['name'] ?>" class="button other" target="_blank">SIMILAR GARMENTS</a></li>
 										<li class=""><a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>favorite-click <?php } else{ ?> login_alert_user<?php } ?>" target="_blank">ADD TO WISHLIST</a></li>
 										<li class=""><a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>wardrobe-click<?php } else{ ?> login_alert_user<?php } ?>" target="_blank">ADD TO WARDROBE</a></li>
