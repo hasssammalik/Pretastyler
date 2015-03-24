@@ -423,8 +423,8 @@
 			<div><input type="text" placeholder="First Name" name="fname"/><input type="text" placeholder="Last Name" name="lname"/></div>
 			<div><input type="email" placeholder="Email" name="email" required/></div>
 			<div><input type="password" placeholder="Password" name="password"/><input type="password" placeholder="Confirm Password" name="cpass"/></div>
-			<div style="text-align:center"><button>Start my Trial</button></div>
-			
+			<div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" ></div>
+			<!-- onclick="parent.location='http://m1.pretastyler.com/mall/mall-by-profile.html'" -->
 		</form>
 		<div style="text-align:center">Trial Expires in 30 days.</div>
 	</div>

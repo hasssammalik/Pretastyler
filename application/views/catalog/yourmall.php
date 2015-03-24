@@ -837,7 +837,7 @@
 					<input type="password" placeholder="Password*" name="password"/>
 					<input type="password" placeholder="Confirm Password*" name="cpass"/>
 				</div>
-				<div style="text-align:center"><input type="button" name="starttrial" value="Start my Trial" onClick="parent.location='http://m1.pretastyler.com/mall/mall-by-profile.html'"></div>
+				<div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial"></div>
 				
 			</form>
 			<div style="text-align:center">No c/c required. Trial Expires in 14 days.</div>
