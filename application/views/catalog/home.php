@@ -241,7 +241,6 @@
 							"wrist_size" : default_values[6]
 						};
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 12, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-							stackCall = 10;
 							$( ".garments" ).html( data );
 						});
 					}
@@ -352,7 +351,7 @@
 				<p class="i profile-big-title">Here's just a few <strong>garments we've found for you</strong></p>
 			</div>
 			<div id="homepage-slider">
-				<div class="garments"></div>
+				<div class="garments turnOffPlaceHolderGarment"></div>
 
 				<div class="clear"></div>
 			</div>
