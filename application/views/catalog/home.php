@@ -6,7 +6,7 @@
 				
 				<div class="headerBackground-content role-element leadstyle-container center">
 					<p style="font-size:28px; font-weight: bold;">SHOPPING ONLINE JUST GOT PERSONAL</p>
-					<p> <img src="/images/play.png" > </p>
+					<p> <img width="70" src="/images/play.png" > </p>
 					<p style="font-size:20px;">
 						Cut Through the Clutter of Fashion<br>
 						Find everything that suits you in one perfect place<br>
