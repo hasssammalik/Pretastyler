@@ -267,7 +267,7 @@
 							<p>HEIGHT</p>
 						</div>
 						<div class="homepageslider left sliderwrap-height">
-							<div class="newprofile-height"></div>
+							<div class="newprofile-height" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -277,7 +277,7 @@
 							<p>SIZE</p>
 						</div>
 						<div class="homepageslider left sliderwrap-size">
-							<div class="newprofile-size"></div>
+							<div class="newprofile-size" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -287,7 +287,7 @@
 							<p>AGE</p>
 						</div>
 						<div class="homepageslider left sliderwrap-age">
-							<div class="newprofile-age"></div>
+							<div class="newprofile-age" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -298,7 +298,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bodyshape">
-							<div class="newprofile-bodyshape"></div>
+							<div class="newprofile-bodyshape" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -309,7 +309,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bodyratio ">
-							<div class="newprofile-bodyratio"></div>
+							<div class="newprofile-bodyratio" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -320,7 +320,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bust ">
-							<div class="newprofile-bust"></div>
+							<div class="newprofile-bust" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -331,7 +331,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-build">
-							<div class="newprofile-build"></div>
+							<div class="newprofile-build" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
