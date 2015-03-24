@@ -5,7 +5,7 @@
 			<div class="headerBackground">
 				
 				<div class="headerBackground-content role-element leadstyle-container center">
-					<div class="newLoginPops" style="display: none;">
+					<div class="newLoginPops">
 
 						<div class="handle ">
 							<h3 class="authtab-login">LOGIN</h3>
