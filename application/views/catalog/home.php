@@ -14,7 +14,7 @@
 
 					<p>
 						<br>
-						<a href="/index.html#profile">Learn more</a>
+						<a href="#profile">Learn more</a>
 					</p>
 				</div>
 				

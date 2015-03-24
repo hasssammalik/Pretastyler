@@ -32,7 +32,7 @@
 													<div class="icon-lock"><input id="menu_mall_login_password" type="password" required="required"></div>
 												</div>
 												<div class="row">
-													<label class=""><input type="checkbox" id="menu_mall_login_remember_me"><span> Remember me</span></label>
+													<label class="remember-label"><input type="checkbox" id="menu_mall_login_remember_me"><span> Remember me</span></label>
 												</div>
 												<div class="row">
 													<input type="submit" onclick="" value="Log in" id="login-submit">
