@@ -16,7 +16,7 @@
 </section>
 
 <?php if( !empty( $breadcrumb[0] ) ) { ?>
-	<div style="margin-left: 20px;">
+	<div>
 		<div class="headPageTitle">
 		   <?php echo strtoupper($title) ?>
 		</div>
