@@ -16,6 +16,15 @@
 			<div class="wid100">
 				<?php echo form_open();  echo form_close();  ?>
 				<style type="text/css">
+				#circles-slider .ui-slider-pip .ui-slider-line {
+		      width: 8px;
+				  top: -18px;
+				  height: 8px;
+				  border-radius: 4px;
+				  margin-left: -5px;
+				  background: #e72775;
+ 				 }
+  
 					.ui-slider-float .ui-slider-tip,
 					.ui-slider-float .ui-slider-tip-label {
 					border: solid 0 #ffffff;
@@ -616,7 +625,7 @@
 							<p>NECK LENGTH</p>
 						</div>
 						<div class="homepageslider left sliderwrap-necklength">
-							<div class="newprofile-necklength"></div>
+							<div class="newprofile-necklength"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -626,7 +635,7 @@
 							<p>NECK TYPE</p>
 						</div>
 						<div class="homepageslider left sliderwrap-necktype">
-							<div class="newprofile-necktype"></div>
+							<div class="newprofile-necktype"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -636,7 +645,7 @@
 							<p>SHOULDERS</p>
 						</div>
 						<div class="homepageslider left sliderwrap-shoulders">
-							<div class="newprofile-shoulders"></div>
+							<div class="newprofile-shoulders"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -647,7 +656,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-faceshape">
-							<div class="newprofile-faceshape"></div>
+							<div class="newprofile-faceshape"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -698,7 +707,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-neck">
-							<div class="newprofile-neck"></div>
+							<div class="newprofile-neck" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -709,7 +718,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-upperback">
-							<div class="newprofile-upperback"></div>
+							<div class="newprofile-upperback" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -720,7 +729,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-upperarms">
-							<div class="newprofile-upperarms"></div>
+							<div class="newprofile-upperarms" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -731,18 +740,18 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bustother">
-							<div class="newprofile-bustother"></div>
+							<div class="newprofile-bustother" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					<div class="home-profile profile-your-mall-hidden-4 home-profile-midriff" id="you_mall_midriff" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>MIDRIFF</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-midriff">
-							<div class="newprofile-midriff"></div>
+							<div class="newprofile-midriff" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -753,7 +762,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-stomach">
-							<div class="newprofile-stomach"></div>
+							<div class="newprofile-stomach" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -764,41 +773,41 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bottom">
-							<div class="newprofile-bottom"></div>
+							<div class="newprofile-bottom" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					<div class="home-profile profile-your-mall-hidden-7 home-profile-thighs" id="you_mall_thighs" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>THIGHS</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-thighs">
-							<div class="newprofile-thighs"></div>
+							<div class="newprofile-thighs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					
 					<div class="home-profile profile-your-mall-hidden-8 home-profile-lowerlegs" id="you_mall_lowerlegs" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>LOWER LEGS</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-lowerlegs">
-							<div class="newprofile-lowerlegs"></div>
+							<div class="newprofile-lowerlegs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					<div class="home-profile profile-your-mall-hidden-9 home-profile-feet" id="you_mall_feet" style="display:none;">
-						<div class="slider-name left">
+						<div class="slider-name left" >
 							<p>FEET</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-feet">
-							<div class="newprofile-feet"></div>
+							<div class="newprofile-feet" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -824,24 +833,5 @@
 		<br><br>
 		<br>
 		<div class="garments container wid70"></div>
-		<div class="popup-box">
-			<div class="cross"><div class="cross-image-homepage"><img src="/images/cross.png" alt=""></div></div>
-			<h1 style="padding: 5px; text-transform:uppercase;text-align:center;">One Last Thing</h1><hr width="95%" size="2" />
-			<?php echo form_open('http://m1.pretastyler.com/mall/mall-by-profile.html'); ?>
-				<div>
-					<input type="text" placeholder="First Name*" name="fname"/>
-					<input type="text" placeholder="Last Name*" name="lname"/>
-				</div>
-				<div><input type="email" placeholder="Email*" name="email" required/></div>
-				<div>
-					<input type="password" placeholder="Password*" name="password"/>
-					<input type="password" placeholder="Confirm Password*" name="cpass"/>
-				</div>
-				<div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial"></div>
-				
-			</form>
-			<div style="text-align:center">No c/c required. Trial Expires in 14 days.</div>
-		</div>
-		<div class="modalOverlay"></div>
 	</div>
 </div>
