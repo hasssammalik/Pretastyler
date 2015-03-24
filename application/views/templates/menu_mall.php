@@ -1,6 +1,3 @@
-<?php if ( uri_string() == '' ) { $link_url_to = "index"; } else {  $link_url_to = uri_string(); } ?>
-
-
 
 <section style="display:none;">
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="payforpremiumuser">

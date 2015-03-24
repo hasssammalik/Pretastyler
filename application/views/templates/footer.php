@@ -39,6 +39,7 @@
 	<div class="panel loginPanel">
 		<div class="group">
 			<div class="col span_10" style="position:relative;">
+			<?php if ( uri_string() == '' ) { $link_url_to = "index"; } else {  $link_url_to = uri_string(); } ?>
 				<div id="login-form" return_url="<?php print $link_url_to ?>.html">
 					<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('menu_mall_login', $attlog); ?>
 					
