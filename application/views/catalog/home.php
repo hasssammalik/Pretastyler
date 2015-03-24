@@ -525,16 +525,16 @@
 			<div class="clear"></div>
 			<div class="homeprofile-head">
 				<!-- <p class="homeprofile-bodytext">Here's just a few <strong>garments we've found for you</strong></p> -->
-				<p class="homeprofile-bodytext"><strong><br/>What next?</strong></p>
+				<p class="homeprofile-bodytext"><strong style="  font-size: 22px;"><br/>What next?</strong></p>
 				<div class="mall-links">	
 					<div class="mall-link1">
-						<p class="homeprofile-bodytext">I'm on a roll show me </p>
+						<p class="homeprofile-bodytext" style="text-style:italics;font-weight:bold;">I'm on a roll show me </p>
 						<a class="bkpinkycolor home-vistmallbtn container noneLiner" href="/your-mall.html">
 							MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</a>
 					</div>
 					<div class="mall-link2">
-						<p class="homeprofile-bodytext">I'm too excited to wait </p>
+						<p class="homeprofile-bodytext" text-style:italics;font-weight:bold;">I'm too excited to wait </p>
 						<button class="bkpinkycolor home-vistmallbtn container noneLiner"  id="signup-popup">
 							LET ME IN <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</button>
