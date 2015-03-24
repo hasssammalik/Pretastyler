@@ -98,9 +98,9 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			</ul>
 			<!-- <a href="#" id="menuButton" class="sqBtn light"><i class="icon-menu"></i></a> -->
 			
-			<?php if (!isset($no_sqBtn)) { ?>
+			<?php /* if (!isset($no_sqBtn)) { ?>
 			<a href="#" class="sqBtn" id="trigger"><img src="/images/pinkbutton.png" width="46px"></a>
-			<?php } ?>
+			<?php } */?>
 			<a href="/" class="logo"><img src="/images/newlogo.png" width="193" alt=""></a>
 			<?php /* ?><!-- <nav>
 				<ul>

@@ -18,8 +18,6 @@
 					</div>
 				</div>
 				
-					
-				
 				
 			</div>
 		<?php if(!isset($extraFooter)) { ?>

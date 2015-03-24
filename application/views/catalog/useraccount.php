@@ -5,12 +5,73 @@
 			<div class="headerBackground">
 				
 				<div class="headerBackground-content role-element leadstyle-container center">
-					<p style="font-size:28px; font-weight: bold;">SHOPPING ONLINE JUST GOT PERSONAL</p>
-					<p style="font-size:20px;">
-						Cut Through the Clutter of Fashion<br>
-						Find everything that suits you in one perfect place<br>
-						'Your Exclusive Fashion Mall'
-					</p>
+					<div class="newLoginPops" style="display: none;">
+
+						<div class="handle ">
+							<h3 class="authtab-login">LOGIN</h3>
+							<h3 class="authtab-forgot" style="display:none;">FORGOT PASSWORD</h3>
+						</div>
+
+						<div class=" loginPanel">
+							<div class="group">
+								<div class="col" style="position:relative;">
+								<?php if ( uri_string() == '' ) { $link_url_to = "index"; } else {  $link_url_to = uri_string(); } ?>
+									<div id="login-form" return_url="<?php print $link_url_to ?>.html">
+										<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('menu_mall_login', $attlog); ?>
+										
+											<fieldset>
+												<div class="row">
+													<label id="error-login"></label>
+												</div>
+												<div class="row">
+													<label>Email Address:</label>
+													<div class="icon-user"><input id="menu_mall_login_email" type="email" required="required"></div>
+												</div>
+												<div class="row">
+													<label>Password:</label>
+													<div class="icon-lock"><input id="menu_mall_login_password" type="password" required="required"></div>
+												</div>
+												<div class="row">
+													<label class=""><input type="checkbox" id="menu_mall_login_remember_me"><span> Remember me</span></label>
+												</div>
+												<div class="row">
+													<input type="submit" onclick="" value="Log in" id="login-submit">
+												</div>
+												<div class="row">
+													<a href="#" class="forgot-link-tab">Forgot your password?</a><br>
+													<a href="/index.html#profile">Don't have an account? <span class="b underlinebugbold">SIGN UP NOW</span></a>
+												</div>
+											</fieldset>
+										<?php echo form_close() ?>
+									</div>
+
+									<div id="forgot-form" style="display:none;">
+										<?php  $attreg = array('name' => 'menu_mall_forgot', 'id' => 'menu_mall_forgot');echo form_open('menu_mall_forgot', $attreg); ?>
+										<p>Enter your PrêtàStyler registered email and we will email your a link to create a new password.</p>
+											<fieldset>
+												<div class="row">
+													<label id="error-forgot"></label>
+												</div>
+												
+												<div class="row">
+													<label>Email Address:</label>
+													<div class="icon-user"><input type="email" id="menu_mall_forgot_email" name="email" required="required"></div>
+												</div>
+												<div class="row margintop10">
+													<input type="submit" value="SEND" id="forgot-submit">
+												</div>
+												<div class="row">
+													<a href="#" class="login-link-tab">Already have an account? <span class="b underlinebugbold">LOGIN NOW</span></a>
+												</div>
+											</fieldset>
+										<?php echo form_close() ?>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+
 				</div>
 				
 			</div>
@@ -22,72 +83,6 @@
 </div>
 <div class="modal"></div>
 <div class="popup_modal"></div>
-<div class="newLoginPops" style="display: none;">
-
-	<div class="handle ">
-		<h3 class="authtab-login">LOGIN</h3>
-		<h3 class="authtab-forgot" style="display:none;">FORGOT PASSWORD</h3>
-	</div>
-
-	<div class=" loginPanel">
-		<div class="group">
-			<div class="col" style="position:relative;">
-			<?php if ( uri_string() == '' ) { $link_url_to = "index"; } else {  $link_url_to = uri_string(); } ?>
-				<div id="login-form" return_url="<?php print $link_url_to ?>.html">
-					<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('menu_mall_login', $attlog); ?>
-					
-						<fieldset>
-							<div class="row">
-								<label id="error-login"></label>
-							</div>
-							<div class="row">
-								<label>Email Address:</label>
-								<div class="icon-user"><input id="menu_mall_login_email" type="email" required="required"></div>
-							</div>
-							<div class="row">
-								<label>Password:</label>
-								<div class="icon-lock"><input id="menu_mall_login_password" type="password" required="required"></div>
-							</div>
-							<div class="row">
-								<label class=""><input type="checkbox" id="menu_mall_login_remember_me"><span> Remember me</span></label>
-							</div>
-							<div class="row">
-								<input type="submit" onclick="" value="Log in" id="login-submit">
-							</div>
-							<div class="row">
-								<a href="#" class="forgot-link-tab">Forgot your password?</a><br>
-								<a href="/index.html#profile">Don't have an account? <span class="b underlinebugbold">SIGN UP NOW</span></a>
-							</div>
-						</fieldset>
-					<?php echo form_close() ?>
-				</div>
-
-				<div id="forgot-form" style="display:none;">
-					<?php  $attreg = array('name' => 'menu_mall_forgot', 'id' => 'menu_mall_forgot');echo form_open('menu_mall_forgot', $attreg); ?>
-					<p>Enter your PrêtàStyler registered email and we will email your a link to create a new password.</p>
-						<fieldset>
-							<div class="row">
-								<label id="error-forgot"></label>
-							</div>
-							
-							<div class="row">
-								<label>Email Address:</label>
-								<div class="icon-user"><input type="email" id="menu_mall_forgot_email" name="email" required="required"></div>
-							</div>
-							<div class="row margintop10">
-								<input type="submit" value="SEND" id="forgot-submit">
-							</div>
-							<div class="row">
-								<a href="#" class="login-link-tab">Already have an account? <span class="b underlinebugbold">LOGIN NOW</span></a>
-							</div>
-						</fieldset>
-					<?php echo form_close() ?>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</div>
 
 <footer>
 		<ul>
