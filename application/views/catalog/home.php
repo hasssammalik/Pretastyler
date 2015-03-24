@@ -267,7 +267,7 @@
 							<p>HEIGHT</p>
 						</div>
 						<div class="homepageslider left sliderwrap-height">
-							<div class="newprofile-height"></div>
+							<div class="newprofile-height" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -277,7 +277,7 @@
 							<p>SIZE</p>
 						</div>
 						<div class="homepageslider left sliderwrap-size">
-							<div class="newprofile-size"></div>
+							<div class="newprofile-size" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -287,7 +287,7 @@
 							<p>AGE</p>
 						</div>
 						<div class="homepageslider left sliderwrap-age">
-							<div class="newprofile-age"></div>
+							<div class="newprofile-age" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -298,7 +298,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bodyshape">
-							<div class="newprofile-bodyshape"></div>
+							<div class="newprofile-bodyshape" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -309,7 +309,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bodyratio ">
-							<div class="newprofile-bodyratio"></div>
+							<div class="newprofile-bodyratio" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -320,7 +320,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-bust ">
-							<div class="newprofile-bust"></div>
+							<div class="newprofile-bust" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -331,7 +331,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-build">
-							<div class="newprofile-build"></div>
+							<div class="newprofile-build" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -423,9 +423,9 @@
 		<div class="cross"><div class="cross-image-homepage"><img src="/images/cross.png" alt=""></div></div>
 		<h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1><hr width="95%" size="2" />
 		<form action="/mall-by-profile.html" method="post">
-			<div><input type="text" placeholder="First Name" name="fname" required/><input type="text"  required placeholder="Last Name" name="lname"/></div>
-			<div><input type="email" placeholder="Email" name="email" required/></div>
-			<div><input type="password" id="password" placeholder="Password" required name="password"/><input type="password" required placeholder="Confirm Password" name="cpass" oninput="check(this)"/></div>
+			<div><input type="text" placeholder="First Name*" name="fname" required/><input type="text"  required placeholder="Last Name*" name="lname"/></div>
+			<div><input type="email" placeholder="Email*" name="email" required/></div>
+			<div><input type="password" id="password" placeholder="Password*" required name="password"/><input type="password" required placeholder="Confirm Password*" name="cpass" oninput="check(this)"/></div>
 			<script language='javascript' type='text/javascript'>
 			function check(input) {
     	if (input.value != document.getElementById('password').value) {
