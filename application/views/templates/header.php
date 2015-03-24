@@ -90,9 +90,9 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 					<li><a href="/user/logout.html"><i class="icon-lock"></i>Log Out</a></li>
 				<?php } else { ?>
 				
-					<li><a href="/useraccount/login.html"><i class="icon-user"></i>SIGN-UP</a></li>
-					<li><a href="/useraccount/signup.html"><i class="icon-lock"></i>LOGIN</a></li>
-					
+					<li><a href="/index.html#profile"><i class="icon-user"></i>SIGN-UP</a></li>
+					<li><a href="/useraccount/login.html"><i class="icon-lock"></i>LOGIN</a></li>
+
 				<?php } ?>
 
 			</ul>
