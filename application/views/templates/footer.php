@@ -11,7 +11,7 @@
 									<li><a href="https://twitter.com/YourUniqueStyle" class="tw"><i class="icon-twitter"></i></a></li>
 									<li><a href="http://www.pinterest.com/areinten/" class="pin"><i class="icon-pinterest"></i></a></li>
 								</ul>
-								<?php echo form_open(); echo form_close();?>
+								
 							</footer>
 							
 						</div>

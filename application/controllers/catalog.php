@@ -56,7 +56,7 @@ class Catalog extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/slider_index', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/index', $data);
 	}
 	public function index()
@@ -77,12 +77,10 @@ class Catalog extends CI_Controller {
 		$data['extraJS'] = '
 							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 							<script src="/js/jquery-ui-slider-pips.js"></script>
-							<link rel="stylesheet" href="/css/jquery-ui.css">
-							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
 		';
 		
 		$this->load->view('templates/header', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/home', $data);
 	}
 	
@@ -105,6 +103,7 @@ class Catalog extends CI_Controller {
 		
 
 		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/yourmall', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -200,7 +199,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/product', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -218,7 +217,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/how_it_works', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -237,7 +236,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/our_story', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -255,7 +254,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/faq', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -316,7 +315,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/packages', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -339,7 +338,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/coming_soon', $data);
 	}
 	/**
@@ -355,7 +354,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/not_found', $data);
 	}
 	/**
@@ -373,7 +372,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		////$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/about_us', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -388,7 +387,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/termandcondition', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -408,7 +407,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/contact_us', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -427,7 +426,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/retailer', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -465,15 +464,16 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/success', $data);
 	}
 	public function thankyou(){
+		
 		if($this->input->post('test-form')=='01ae3785a5fde11d3e8a29fd1f6e9400'){
 		$data['title'] = "Thank You for signing up";
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('thankyou');
 		}
 		else{
@@ -483,7 +483,12 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 
 	}
-	
+	/**
+	* User login and signup 
+	*/
+	public function useraccount(){
+
+	}
 	/**
 	 * Test pages
 	 */

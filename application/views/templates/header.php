@@ -53,18 +53,20 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 </script>
 <!-- End Visual Website Optimizer Asynchronous Code -->
 
+<?php if( ENVIRONMENT == 'production') { ?>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-51485487-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<script type="text/javascript" src="//s.skimresources.com/js/66930X1514478.skimlinks.js"></script>
+<?php } ?>
 </head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-51485487-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<script type="text/javascript" src="//s.skimresources.com/js/66930X1514478.skimlinks.js"></script>
 <body>
 
 	<?php if (isset($extraDiv)) print $extraDiv ?>
@@ -83,7 +85,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 				<li><a href="/user.html" title="Your account details and profile"><i class="icon-user"></i>Welcome <span class="myuserName"><?php print $first_name ?></span></a></li>
 				<li><a href="/user/logout.html"><i class="icon-lock"></i>Log Out</a></li>
 				<?php } else { ?>
-				<li><a href="javascript:void(0)" onclick="register_click(this);" data-user='normal'><i class="icon-user"></i>SIGN-UP</a></li>
+				<li><a href="javascript:void(0)" onclick="register_click();" data-user='normal'><i class="icon-user"></i>SIGN-UP</a></li>
 				<li><a href="javascript:void(0)" onclick="login_click('/<?php $return_url = uri_string(); if (!empty($return_url)){print $return_url.'.html';} else{print 'mall.html';}?>');"><i class="icon-lock"></i>LOGIN</a></li>
 				<?php } ?>
 			</ul>
