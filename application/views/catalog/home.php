@@ -418,7 +418,7 @@
 	</section>
 	<div class="popup-box">
 		<div class="cross"><div class="cross-image-homepage"><img src="/images/cross.png" alt=""></div></div>
-		<h1 style="padding: 5px;">One Last Thing</h1><hr width="95%" size="2" />
+		<h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1><hr width="95%" size="2" />
 		<form action="/mall-by-profile.html" method="post">
 			<div><input type="text" placeholder="First Name" name="fname"/><input type="text" placeholder="Last Name" name="lname"/></div>
 			<div><input type="email" placeholder="Email" name="email" required/></div>
