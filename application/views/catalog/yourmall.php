@@ -625,7 +625,7 @@
 							<p>NECK LENGTH</p>
 						</div>
 						<div class="homepageslider left sliderwrap-necklength">
-							<div class="newprofile-necklength" id=""></div>
+							<div class="newprofile-necklength"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -635,7 +635,7 @@
 							<p>NECK TYPE</p>
 						</div>
 						<div class="homepageslider left sliderwrap-necktype">
-							<div class="newprofile-necktype"></div>
+							<div class="newprofile-necktype"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -645,7 +645,7 @@
 							<p>SHOULDERS</p>
 						</div>
 						<div class="homepageslider left sliderwrap-shoulders">
-							<div class="newprofile-shoulders"></div>
+							<div class="newprofile-shoulders"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -656,7 +656,7 @@
 						</div>
 						
 						<div class="homepageslider left sliderwrap-faceshape">
-							<div class="newprofile-faceshape"></div>
+							<div class="newprofile-faceshape"  id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
