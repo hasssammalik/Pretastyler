@@ -56,7 +56,7 @@ class Catalog extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/slider_index', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/index', $data);
 	}
 	public function index()
@@ -66,7 +66,7 @@ class Catalog extends CI_Controller {
 		$data['no_background_image'] = TRUE;
 		$data['content_class'] = "full_width_page";
 		$data['extraFooter'] = TRUE;
-		$data['similar_garments'] = $this->garment_model->get_similar_products();
+		
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 		';
@@ -82,8 +82,7 @@ class Catalog extends CI_Controller {
 		';
 		
 		$this->load->view('templates/header', $data);
-		//$this->load->view('templates/slider_index', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/home', $data);
 	}
 	
@@ -106,7 +105,6 @@ class Catalog extends CI_Controller {
 		
 
 		$this->load->view('templates/header', $data);
-		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/yourmall', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -161,7 +159,6 @@ class Catalog extends CI_Controller {
 						<meta property="og:image:height"     content="700">
 						';
 		$data['extraDiv'] = '
-		
 		<script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -203,7 +200,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/product', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -221,7 +218,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/how_it_works', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -240,7 +237,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/our_story', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -258,7 +255,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/faq', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -319,7 +316,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/packages', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -342,7 +339,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/coming_soon', $data);
 	}
 	/**
@@ -358,7 +355,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/not_found', $data);
 	}
 	/**
@@ -376,7 +373,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		////$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/about_us', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -391,7 +388,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/termandcondition', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -411,7 +408,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/contact_us', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -430,7 +427,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/retailer', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -468,7 +465,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/success', $data);
 	}
 	public function thankyou(){
@@ -476,7 +473,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['title'] = "Thank You for signing up";
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('thankyou');
 		}
 		else{

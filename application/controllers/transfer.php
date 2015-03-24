@@ -50,7 +50,7 @@ class Transfer extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('testing/home_slider', $data);
 		
 	}

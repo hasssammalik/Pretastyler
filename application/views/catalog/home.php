@@ -240,7 +240,7 @@
 							"bra_select_id" : default_values[5],
 							"wrist_size" : default_values[6]
 						};
-						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 12, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 							$( ".garments" ).html( data );
 						});
 					}
@@ -351,7 +351,7 @@
 				<p class="i profile-big-title">Here's just a few <strong>garments we've found for you</strong></p>
 			</div>
 			<div id="homepage-slider">
-				<div class="garments"></div>
+				<div class="garments turnOffPlaceHolderGarment"></div>
 
 				<div class="clear"></div>
 			</div>
@@ -444,7 +444,7 @@
 			<li><a href="https://plus.google.com/+Pretastyler" rel="publisher">Google+</a></li>
 			
 		</ul>
-		
+		<?php echo form_open(); echo form_close();?>
 	</footer>
 </div>
 
@@ -490,7 +490,7 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
 		})();
 	</script>
-
+	
 <?php } ?>
 
 </body>

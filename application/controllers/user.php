@@ -74,7 +74,7 @@ class User extends CI_Controller {
 		$data['size_info'] = $this->user_model->get_user_size_region_list($user_id);
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('user/index', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -93,7 +93,7 @@ class User extends CI_Controller {
 		$data['categories'] = $this->deep_search_model->get_available_categories();
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('user/preferences', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -116,7 +116,7 @@ class User extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('user/my_finds', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -138,7 +138,7 @@ class User extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('user/my_wishlists', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -176,7 +176,7 @@ class User extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('user/my_wardrobe', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -214,7 +214,7 @@ class User extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('user/my_dressing_room', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -504,7 +504,7 @@ class User extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('user/forget_password', $data);
 		$this->load->view('templates/footer', $data);
 	}
@@ -566,7 +566,7 @@ class User extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/not_found', $data);
 	}
 	/**
@@ -581,7 +581,7 @@ class User extends CI_Controller {
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		//$this->load->view('templates/menu_mall', $data);
 		$this->load->view('errors/general_error', $data);
 	}
 	/**
