@@ -16,14 +16,45 @@
 			<div class="wid100">
 				<?php echo form_open();  echo form_close();  ?>
 				<style type="text/css">
-				#circles-slider .ui-slider-pip .ui-slider-line {
-		      width: 8px;
-				  top: -18px;
-				  height: 8px;
-				  border-radius: 4px;
-				  margin-left: -5px;
-				  background: #e72775;
- 				 }
+					#circles-slider .ui-slider-pip
+					{
+					top: 3px;
+					}
+					
+					#circles-slider .ui-slider-pip .ui-slider-line 
+					{
+					width: 20px;
+					top: -13px;
+					height: 20px;
+					border-radius: 14px;
+					margin-left: -10px;
+					background: #eaeaea;
+					}
+					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
+					#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label 
+					{
+					margin: 0; 
+					}
+					
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label 
+					{
+					left: 2em;
+					text-align: left; 
+					}
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+					font-weight: normal;
+					}
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected {
+					font-weight: bold;
+					}
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected,
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+					color: #434d5a; 
+					}
   
 					.ui-slider-float .ui-slider-tip,
 					.ui-slider-float .ui-slider-tip-label {
