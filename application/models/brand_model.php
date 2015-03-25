@@ -24,7 +24,7 @@ class Brand_model extends CI_Model{
 		return $query->result_array();
 	}
 	
-	}
+	
 }
 /* End of file brand_model.php */
 /* Location: ./application/models/brand_model.php */
