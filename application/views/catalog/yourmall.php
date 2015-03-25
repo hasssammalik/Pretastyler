@@ -15,154 +15,6 @@
 			
 			<div class="wid100">
 				<?php echo form_open();  echo form_close();  ?>
-				<style type="text/css">
-
-				.home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2!important;}
-				.ui-state-hover{z-index:3!important;}
-					/*#circles-slider .ui-slider-pip
-					{
-					top: 3px;
-					}
-					
-					#circles-slider .ui-slider-pip .ui-slider-line 
-					{
-					width: 20px;
-					top: -13px;
-					height: 20px;
-					border-radius: 14px;
-					margin-left: -10px;
-					background: #eaeaea;
-					}
-					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
-					#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label 
-					{
-
-					margin: 0; 
-					}
-					
-					
-					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label 
-					{
-					left: 2em;
-					text-align: left; 
-					}
-					
-					#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
-					font-weight: normal;
-					}
-					
-					#circles-slider .ui-slider-pip.ui-slider-pip-selected {
-					font-weight: bold;
-					}
-					
-					#circles-slider .ui-slider-pip.ui-slider-pip-selected,
-					#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
-					color: #434d5a; 
-					}
-  
-					.ui-slider-float .ui-slider-tip,
-					.ui-slider-float .ui-slider-tip-label {
-					border: solid 0 #ffffff;
-					margin-left: -34px;
-					}
-					.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
-					color: #666;
-					}
-					.ui-slider-pips .ui-slider-pip-selected, .ui-slider-pips .ui-slider-pip-selected-first, .ui-slider-pips .ui-slider-pip-selected-second,
-					.ui-slider-pips .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
-					.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
-					.ui-slider-pips .ui-slider-pip-selected-initial
-					{
-					color: #e72775;
-					}
-					.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-					background: none;
-					background: #e72775;
-					top: -11px;
-					height: 20px;
-					width: 20px;
-					border-radius: 14px;
-					}
-					.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
-					background: none;
-					background: #e72775;
-					border-color: none;
-					}
-					.ui-slider-horizontal {
-					height: 0;
-					border: 3px solid #dddddd;
-					}
-					.ui-slider-pip .ui-slider-label {
-					top:15px;
-					font-size: 0.9em;
-					margin-left: -1em;
-					text-align: left;
-					color: #434443 !important;
-					width: 7em;
-					}
-					.ui-slider-tip img{
-					width: 70px;
-					cursor: pointer;
-					}
-					.ui-slider-float .ui-slider-tip:before, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:before, .ui-slider-float .ui-slider-tip:after, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
-					display: none;
-					}
-					.ui-slider-pips, .ui-slider-float {
-					cursor: pointer;
-					}
-					.ui-slider.ui-slider-horizontal {
-					margin-left: 50px;
-					margin-top: 21px;
-					}
-					.ui-slider-horizontal {
-					height: 0;
-					border: 3px solid #E4E4E4;
-					}
-					.ui-slider-pips .ui-slider-pip {
-						  top: 14px;
-					}
-					#talkbubble .slider-image{
-					top:-295px;
-					right:5%;
-					position: absolute;
-					width: 150px;
-					}
-					#talkbubble .slider-image img{
-					width:80%;
-					}
-					
-					#talkbubble {
-					top:85px;
-					right:96%;
-					width: 150px;
-					height: 50px;
-					background: #949494;
-					margin: 0px auto;
-					position: relative;
-					z-index:3;
-					
-					}
-					#talkbubble:before {
-					content:"";
-					position: absolute;
-					right: 50%;
-					top: -11px;
-					width: 0;
-					height: 0;
-					border-left: 8px solid transparent;
-					border-right: 8px solid transparent;
-					border-bottom: 12px solid #949494;
-					
-					}
-					 #talkbubble.doubleline{
-					top:100px;
-					}
-					#talkbubble.doubleline .slider-image{
-					top:-305px;
-					}
-					
-					*/
-				</style>
 				<script type="text/javascript">
 					
 					var default_values = [ 4,2,2,8,    2,2,2,2,2,  2,2,2,2,2 ];
@@ -199,38 +51,38 @@
 						
 						var necklengthimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div><span>Your neck is short.<br>When carrying extra weight you may have double chins.<br>You look best with hair that is at or above your jawline.<br>Necklines with some length such as V and scoop look best on you.<br>High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /></div><span>Your neck is on the short side of average.<br>High necklines such as turtlenecks and long drop earrings can be difficult to wear.<br>Necklines with some length such as V\'s and scoop look best on you.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /></div><span>Your neck is just like that of most people you meet.<br>You have had no reason to question if it is shorter or longer than average.</span></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div><span>Your neck is on the long side of average.<br>Wearing long drop earrings and high neck shirts and sweaters is no problem for you.<br>Plunging and very deep necklines do not look as good on you as those which are medium depth.</div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div><span>You are aware that you have a long neck.<br>If you are underweight your neck may appear very thin.<br>You look best with long hair i.e. shoulder length or longer.<br>Your neck length allows you to wear extra-long earrings without them dangling on your shoulders.<br>Plunging necklines look good only when your hair is worn down (shoulder length and longer).<br>Necklines that sit at the base of your neck can also be unflattering.</span></div>' 
 						];
 						
 						var necktypeimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div><span></span></div>' 
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span>Your shoulders have a slight slope.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div><span>Your shoulders are broad and square with almost no slope</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div>Your shoulders are broad and square with almost no slope<span></span></div>' 
 						];
 						
 						var faceshapeimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-28.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-29.png" /></div></div>',
-						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-30.png"/></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-31.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-32.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-33.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-34.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-35.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-36.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-37.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-28.png" /></div><span>Your face is definitely longer than it is wide.<br>Your cheekbones and jaw line are as wide as each other<br>Your jawline and chin is slightly rounded</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-29.png" /></div><span>Your face is definitely longer than it is wide<br>Your cheekbones and jaw line are as wide as each other<br>The sides of your face from eyeline to jaw bone are straight<br>Your jawline is square<br>Your chin is shallow and flat</div>',
+						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-30.png"/></div><span></span>Your face is almost as wide as it is long<br>Your chin and cheeks are round and full<br>Your cheekbones are widest part of your face<br>Your forehead is close to, or as wide as your jawline<br>If you lose weight your face shape may look more Square than Round</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-31.png" /></div><span>Your face is almost as wide as it is long<br>The sides of your face from eyeline to jawline are straight<br>Your forehead is close to, or as wide as your jawline<br>If you gain weight your face shape may become Round</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-32.png" /></div><span>Above your cheekbones is the widest part of your face<br>Your have jawline is narrower than your forehead<br>You have a pointed to gently rounded chin</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-33.png" /></div><span>Your forehead is the widest part of your face<br>Your have jawline is narrower than your forehead<br>You have a pointed to gently rounded chin<br>You have a widow\'s peak (pointed hairline at centre of forehead).</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-34.png" /></div><span>Your chin is narrow and pointed.<br>Your cheekbones are high and prominent.<br>Your face is widest at the cheekbones.<br>Your hairline and/or forehead angles inward.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-35.png" /></div><span>Your jawline is the widest part of your face<br>You have full, round cheeks<br>Your forehead is the narrowest part of your face</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-36.png" /></div><span>Your face is a little longer than it is wide<br>Your forehead is the narrowest part of your face<br>Your have jawline is the widest region of your face<br>You have a broad square jawline<br>Your chin is shallow and flat</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-37.png" /></div><span>Your face is an inverted egg or oval shape<br>You have a gently rounded chin.<br>Your face is slightly longer than it is wide<br>Your face is equal in length from hairline to browline, browline to nose tip, nose tip to chin tip<br>Your eye, nose and mouth are all well scaled to the size of your face i.e. no feature is extra large or small<br>Your eye, nose and mouth are all well-spaced within your face i.e. your eyes are not close or wide set</span></div>' 
 						];
 						
 						
