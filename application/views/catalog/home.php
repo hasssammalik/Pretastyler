@@ -83,8 +83,8 @@
 												];
 						var bustimage = 
 						[ 
+						'<div id="talkbubble"><span>Select this size if you have had a bilateral mastectomy and do not wear a prosthesis</span></div>',
 						/*'<div id="talkbubble"></div>',
-						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>', 
