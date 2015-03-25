@@ -155,6 +155,8 @@
 					#talkbubble.doubleline .slider-image{
 					top:-305px;
 					}
+					.home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2;}
+					.ui-state-hover{z-index:3;}
 				</style>
 				<script type="text/javascript">
 					
