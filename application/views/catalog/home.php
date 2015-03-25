@@ -12,7 +12,7 @@
 						Find everything that suits you in one perfect place<br>
 						'Your Exclusive Fashion Mall'
 					</p>
-
+					
 					<p>
 						<br>
 						<a href="#profile">Learn more</a>
@@ -27,391 +27,392 @@
 			
 			<div class="wid100">
 				<style>
-				#circles-slider .ui-slider-pip {
-  top: 3px; }
-                    
-  #circles-slider .ui-slider-pip .ui-slider-line {
-      width: 20px;
-  top: -13px;
-  height: 20px;
-  border-radius: 14px;
-  margin-left: -10px;
-  background: #eaeaea;
-  }
-                    
- 
-                    
-    /*#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-line,
-    #circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-line {
-      display: none; }*/
-                    
-			   /* #circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
-			    #circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label {
-			      margin: 0; }
-			                    
-
-			                    
-			  	#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label {
-				    left: 2em;
-				    text-align: left; 
-			    }
-			                    
-			  	#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
-			    	font-weight: normal; }
-			                    
-			     #circles-slider .ui-slider-pip.ui-slider-pip-selected {
-			    font-weight: bold; }
-			                    
-			    #circles-slider .ui-slider-pip.ui-slider-pip-selected,
-			    #circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
-			    	color: #434d5a; }
-          .ui-slider-float .ui-slider-tip,
-          .ui-slider-float .ui-slider-tip-label {
-	          border: solid 0 #ffffff;
-	          margin-left: -34px;
-          }
-          .ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
-          color: #666;
-          }
-          .ui-slider-pips .ui-slider-pip-selected, .ui-slider-pips .ui-slider-pip-selected-first, .ui-slider-pips .ui-slider-pip-selected-second,
-          .ui-slider-pips .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
-          .ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
-          .ui-slider-pips .ui-slider-pip-selected-initial
-          {
-          color: #e72775;
-          }
-          .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-          background: none;
-          background: #e72775;
-          top: -11px;
-          height: 20px;
-          width: 20px;
-          border-radius: 14px;
-          }
-          .ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
-          background: none;
-          background: #e72775;
-          border-color: none;
-          }
-          .ui-slider-horizontal {
-          height: 0;
-          border: 3px solid #dddddd;
-          }
-          .ui-slider-pip .ui-slider-label {
-          font-size: 0.9em;
- 					margin-left: -1.5em;
-				  text-align: left;
-				  width: 7em;top:25px;
-          }
-          .ui-slider-tip img{
-          width: 70px;
-          cursor: pointer;
-          }
-          .ui-slider-float .ui-slider-tip:before, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:before, .ui-slider-float .ui-slider-tip:after, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
-          display: none;
-          }
-          .ui-slider-pips, .ui-slider-float {
-          cursor: pointer;
-          }
-          .ui-slider.ui-slider-horizontal {
-          margin-left: 50px;
-          margin-top: 21px;
-          }
-          .ui-slider-horizontal {
-          height: 0;
-          border: 3px solid #E4E4E4;
-          }
-          .ui-slider-pips .ui-slider-pip {
-          top: 14px;
-          }
-          .ui-slider-float .ui-slider-handle:hover .ui-slider-tip, .ui-slider-float .ui-slider-handle:focus .ui-slider-tip, .ui-slider-float .ui-slider-pip:hover .ui-slider-tip-label {
-          top:-135px;
-          
-          }
-          .slider-item img {
-          width: 200px;
-          float: left;
-          margin: 20px;
-          }
-          #talkbubble .slider-image{
-          top:-295px;
-          left:8.5%;
-          position: absolute;
-          width: 150px;
-          }
-          #talkbubble .slider-image img{
-          width:80%;
-          }
-          
-          #talkbubble {
-          top: 195px;
-          left: -68px;
-          width: 500px;
-          height: 60px;
-          background: #949494;
-          margin: 0px auto;
-          position: relative;
-          z-index: 3;
-          font-style: italic;
-          font-weight: 200;
-          text-align: left;
-          color: white;
-          font-size:11px;
-          }
-          #talkbubble:before {
-          content:"";
-          position: absolute;
-          left:19%;
-          top: -11px;
-          width: 0;
-          height: 0;
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
-          border-bottom: 12px solid #949494;
-          
-          }
-          .home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2;}
-          .ui-state-hover{z-index:3;}
-          .home-profile-bodyratio #talkbubble{
-          top:205px;
-          }
-          .home-profile-bodyratio #talkbubble .slider-image{
-          top:-305px;
-          }
-          #talkbubble.doubleline{
-          top:205px;
-          }
-          #talkbubble.doubleline .slider-image{
-          top:-305px;
-          }*/
-          
-        </style>
-        <script type="text/javascript">
-          
-          var default_values = [3,4,2,4,2,5,2];
-          
-          $(function(){
-            var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
-            var size = [ "Allegra", "Natalie", "Halle", "Drew", "America", "Kim", "Queen", "Ophra" ];
-            var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "75 >" ];
-            var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
-            var bodyratio = [ "Long Legged Short Torso", "Balanced Body", "Short Legged Long Torso" ];
-            var bust = [ "AA", "A", "B", "C", "D", "DD", "E", "EE >" ];
-            var build = [ "Small", "Medium", "Large" ];
-            
-            var heightimage = 
-            [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
-            ];
-            var sizeimage = 
-            [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-38.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-39.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-40.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-41.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-42.png" /></div></div>', 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-43.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-44.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-45.png" /></div></div>'
-            ];
-            var ageimage = 
-            [
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
-            ];
-            var bodyshapeimage = 
-            [
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-10.png" /></div></div>',
-            '<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-11.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-12.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-13.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-14.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-15.png" /></div></div>' 
-            ];
-            var bodyratioimage = [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-07.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-08.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-09.png" /></div></div>',
-            ];
-            var bustimage = 
-            [ 
-            '<div id="talkbubble"></div>',
-            '<div id="talkbubble"></div>',
-            '<div id="talkbubble"></div>',
-            '<div id="talkbubble"></div>',
-            '<div id="talkbubble"></div>', 
-            '<div id="talkbubble"></div>',
-            '<div id="talkbubble"></div>',
-            '<div id="talkbubble"></div>'
-            ];
-            var buildimage = 
-            [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div><p style="padding:5px;">Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the oppositehand as if they were a bracelet.<br/>Select large if there is a gap between your thumb and middle finger (they don\'t touch).</p></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-17.png" /></div></div>',
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-18.png" /></div></div>' 
-            ];
-            
-            $(".newprofile-height")
-            .slider({
-              min: 0, 
-              max: height.length-1, 
-              value: default_values[0]-1
-            })
-            .slider("pips", {
-              labels: height
-            })
-            .slider("float", {
-              rest: "label",
-              labels: heightimage
-            })
-            .on("slidechange", function(e,ui) {
-              //$(".val1").text( "You selected " + heightimage[ui.value] + " (" + ui.value + ")");
-              default_values[0] = (+ui.value+1);
-              pull_profile_garment();
-            });
-            
-            $(".newprofile-size")
-            .slider({
-              min: 0, 
-              max: size.length-1, 
-              value: default_values[1]-1
-            })
-            .slider("pips", {
-              labels: size
-            })
-            .slider("float", {
-              rest: "label",
-              labels: sizeimage
-            })
-            .on("slidechange", function(e,ui) {
-              default_values[1] = (+ui.value+1);
-              console.log(default_values);
-              pull_profile_garment();
-            });
-            
-            
-            $(".newprofile-age")
-            .slider({
-              min: 0, 
-              max: age.length-1, 
-              value: default_values[2]-1
-            })
-            .slider("pips", {
-              labels: age
-            })
-            .slider("float", {
-              rest: "label",
-              labels: ageimage
-            })
-            .on("slidechange", function(e,ui) {
-              default_values[2] = (+ui.value+1);
-              pull_profile_garment();
-            });
-            
-            
-            $(".newprofile-bodyshape")
-            .slider({
-              min: 0, 
-              max: bodyshape.length-1, 
-              value: default_values[3]-1
-            })
-            .slider("pips", {
-              labels: bodyshape
-            })
-            .slider("float", {
-              rest: "label",
-              labels: bodyshapeimage
-            })
-            .on("slidechange", function(e,ui) {
-              default_values[3] = (+ui.value+1);
-              pull_profile_garment();
-            });
-            
-            
-            $(".newprofile-bodyratio")
-            .slider({
-              min: 0, 
-              max: bodyratio.length-1, 
-              value: default_values[4]-1
-            })
-            .slider("pips", {
-              labels: bodyratio
-            })
-            .slider("float", {
-              rest: "label",
-              labels: bodyratioimage
-            })
-            .on("slidechange", function(e,ui) {
-              default_values[4] = (+ui.value+1);
-              pull_profile_garment();
-            });
-            
-            
-            $(".newprofile-bust")
-            .slider({
-              min: 0, 
-              max: bust.length-1, 
-              value: default_values[5]-1
-            })
-            .slider("pips", {
-              labels: bust
-            })
-            .slider("float", {
-              rest: "label",
-              labels: bustimage
-            })
-            .on("slidechange", function(e,ui) {
-              default_values[5] = (+ui.value+1);
-              pull_profile_garment();
-            });
-            
-            
-            $(".newprofile-build")
-            .slider({
-              min: 0, 
-              max: build.length-1, 
-              value: default_values[6]-1
-            })
-            .slider("pips", {
-              labels: build
-            })
-            .slider("float", {
-              rest: "label",
-              labels: buildimage
-            })
-            .on("slidechange", function(e,ui) {
-              default_values[6] = (+ui.value+1);
-              pull_profile_garment();
-            });
-            
-            pull_profile_garment( );
-            
-          });
-          
-          function pull_profile_garment( ) {
-            //console.log(default_values);
-            var requestvalues = { "height_select_id" : default_values[0],
-              "weight_select_id" : default_values[1],
-              "age_select_id" : default_values[2],
-              "horizontal_select_id" : default_values[3],
-              "vertical_select_id" : default_values[4],
-              "bra_select_id" : default_values[5],
-              "wrist_size" : default_values[6]
-            };
-            $.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-              $( ".garments" ).html( data );
-            });
-          }
-          
-        </script>
-        
+					#circles-slider .ui-slider-pip
+					{
+					top: 3px;
+					}
+					
+					#circles-slider .ui-slider-pip .ui-slider-line 
+					{
+					width: 20px;
+					top: -13px;
+					height: 20px;
+					border-radius: 14px;
+					margin-left: -10px;
+					background: #eaeaea;
+					}
+					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
+					#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label 
+					{
+					margin: 0; 
+					}
+					
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label 
+					{
+					left: 2em;
+					text-align: left; 
+					}
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+					font-weight: normal;
+					}
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected {
+					font-weight: bold;
+					}
+					
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected,
+					#circles-slider .ui-slider-pip.ui-slider-pip-selected-initial {
+					color: #434d5a; 
+					}
+					.ui-slider-float .ui-slider-tip,
+					.ui-slider-float .ui-slider-tip-label {
+					border: solid 0 #ffffff;
+					margin-left: -34px;
+					}
+					.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
+					color: #666;
+					}
+					.ui-slider-pips .ui-slider-pip-selected, .ui-slider-pips .ui-slider-pip-selected-first, .ui-slider-pips .ui-slider-pip-selected-second,
+					.ui-slider-pips .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
+					.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip.ui-slider-pip-selected .ui-slider-label,
+					.ui-slider-pips .ui-slider-pip-selected-initial
+					{
+					color: #e72775;
+					}
+					.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+					background: none;
+					background: #e72775;
+					top: -11px;
+					height: 20px;
+					width: 20px;
+					border-radius: 14px;
+					}
+					.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+					background: none;
+					background: #e72775;
+					border-color: none;
+					}
+					.ui-slider-horizontal {
+					height: 0;
+					border: 3px solid #dddddd;
+					}
+					.ui-slider-pip .ui-slider-label {
+					font-size: 0.9em;
+					margin-left: -1.5em;
+					text-align: left;
+					width: 7em;top:25px;
+					}
+					.ui-slider-tip img{
+					width: 70px;
+					cursor: pointer;
+					}
+					.ui-slider-float .ui-slider-tip:before, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:before, .ui-slider-float .ui-slider-tip:after, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
+					display: none;
+					}
+					.ui-slider-pips, .ui-slider-float {
+					cursor: pointer;
+					}
+					.ui-slider.ui-slider-horizontal {
+					margin-left: 50px;
+					margin-top: 21px;
+					}
+					.ui-slider-horizontal {
+					height: 0;
+					border: 3px solid #E4E4E4;
+					}
+					.ui-slider-pips .ui-slider-pip {
+					top: 14px;
+					}
+					.ui-slider-float .ui-slider-handle:hover .ui-slider-tip, .ui-slider-float .ui-slider-handle:focus .ui-slider-tip, .ui-slider-float .ui-slider-pip:hover .ui-slider-tip-label {
+					top:-135px;
+					
+					}
+					.slider-item img {
+					width: 200px;
+					float: left;
+					margin: 20px;
+					}
+					#talkbubble .slider-image{
+					top:-295px;
+					left:8.5%;
+					position: absolute;
+					width: 150px;
+					}
+					#talkbubble .slider-image img{
+					width:80%;
+					}
+					
+					#talkbubble {
+					top: 195px;
+					left: -68px;
+					width: 500px;
+					height: 60px;
+					background: #949494;
+					margin: 0px auto;
+					position: relative;
+					z-index: 3;
+					font-style: italic;
+					font-weight: 200;
+					text-align: left;
+					color: white;
+					font-size:11px;
+					}
+					#talkbubble:before {
+					content:"";
+					position: absolute;
+					left:19%;
+					top: -11px;
+					width: 0;
+					height: 0;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-bottom: 12px solid #949494;
+					
+					}
+					.home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2;}
+					.ui-state-hover{z-index:3;}
+					.home-profile-bodyratio #talkbubble{
+					top:205px;
+					}
+					.home-profile-bodyratio #talkbubble .slider-image{
+					top:-305px;
+					}
+					#talkbubble.doubleline{
+					top:205px;
+					}
+					#talkbubble.doubleline .slider-image{
+					top:-305px;
+					}
+					
+				</style>
+				<script type="text/javascript">
+					
+					var default_values = [3,4,2,4,2,5,2];
+					
+					$(function(){
+						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
+						var size = [ "Allegra", "Natalie", "Halle", "Drew", "America", "Kim", "Queen", "Ophra" ];
+						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "75 >" ];
+						var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
+						var bodyratio = [ "Long Legged Short Torso", "Balanced Body", "Short Legged Long Torso" ];
+						var bust = [ "AA", "A", "B", "C", "D", "DD", "E", "EE >" ];
+						var build = [ "Small", "Medium", "Large" ];
+						
+						var heightimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
+						var sizeimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-38.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-39.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-40.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-41.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-42.png" /></div></div>', 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-43.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-44.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-45.png" /></div></div>'
+						];
+						var ageimage = 
+						[
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						];
+						var bodyshapeimage = 
+						[
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-10.png" /></div></div>',
+						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-11.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-12.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-13.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-14.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-15.png" /></div></div>' 
+						];
+						var bodyratioimage = [ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-07.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-08.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-09.png" /></div></div>',
+						];
+						var bustimage = 
+						[ 
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>', 
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>',
+						'<div id="talkbubble"></div>'
+						];
+						var buildimage = 
+						[ 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div><p style="padding:5px;">Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the oppositehand as if they were a bracelet.<br/>Select large if there is a gap between your thumb and middle finger (they don\'t touch).</p></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-17.png" /></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-18.png" /></div></div>' 
+						];
+						
+						$(".newprofile-height")
+						.slider({
+							min: 0, 
+							max: height.length-1, 
+							value: default_values[0]-1
+						})
+						.slider("pips", {
+							labels: height
+						})
+						.slider("float", {
+							rest: "label",
+							labels: heightimage
+						})
+						.on("slidechange", function(e,ui) {
+							//$(".val1").text( "You selected " + heightimage[ui.value] + " (" + ui.value + ")");
+							default_values[0] = (+ui.value+1);
+							pull_profile_garment();
+						});
+						
+						$(".newprofile-size")
+						.slider({
+							min: 0, 
+							max: size.length-1, 
+							value: default_values[1]-1
+						})
+						.slider("pips", {
+							labels: size
+						})
+						.slider("float", {
+							rest: "label",
+							labels: sizeimage
+						})
+						.on("slidechange", function(e,ui) {
+							default_values[1] = (+ui.value+1);
+							console.log(default_values);
+							pull_profile_garment();
+						});
+						
+						
+						$(".newprofile-age")
+						.slider({
+							min: 0, 
+							max: age.length-1, 
+							value: default_values[2]-1
+						})
+						.slider("pips", {
+							labels: age
+						})
+						.slider("float", {
+							rest: "label",
+							labels: ageimage
+						})
+						.on("slidechange", function(e,ui) {
+							default_values[2] = (+ui.value+1);
+							pull_profile_garment();
+						});
+						
+						
+						$(".newprofile-bodyshape")
+						.slider({
+							min: 0, 
+							max: bodyshape.length-1, 
+							value: default_values[3]-1
+						})
+						.slider("pips", {
+							labels: bodyshape
+						})
+						.slider("float", {
+							rest: "label",
+							labels: bodyshapeimage
+						})
+						.on("slidechange", function(e,ui) {
+							default_values[3] = (+ui.value+1);
+							pull_profile_garment();
+						});
+						
+						
+						$(".newprofile-bodyratio")
+						.slider({
+							min: 0, 
+							max: bodyratio.length-1, 
+							value: default_values[4]-1
+						})
+						.slider("pips", {
+							labels: bodyratio
+						})
+						.slider("float", {
+							rest: "label",
+							labels: bodyratioimage
+						})
+						.on("slidechange", function(e,ui) {
+							default_values[4] = (+ui.value+1);
+							pull_profile_garment();
+						});
+						
+						
+						$(".newprofile-bust")
+						.slider({
+							min: 0, 
+							max: bust.length-1, 
+							value: default_values[5]-1
+						})
+						.slider("pips", {
+							labels: bust
+						})
+						.slider("float", {
+							rest: "label",
+							labels: bustimage
+						})
+						.on("slidechange", function(e,ui) {
+							default_values[5] = (+ui.value+1);
+							pull_profile_garment();
+						});
+						
+						
+						$(".newprofile-build")
+						.slider({
+							min: 0, 
+							max: build.length-1, 
+							value: default_values[6]-1
+						})
+						.slider("pips", {
+							labels: build
+						})
+						.slider("float", {
+							rest: "label",
+							labels: buildimage
+						})
+						.on("slidechange", function(e,ui) {
+							default_values[6] = (+ui.value+1);
+							pull_profile_garment();
+						});
+						
+						pull_profile_garment( );
+						
+					});
+					
+					function pull_profile_garment( ) {
+						//console.log(default_values);
+						var requestvalues = { "height_select_id" : default_values[0],
+							"weight_select_id" : default_values[1],
+							"age_select_id" : default_values[2],
+							"horizontal_select_id" : default_values[3],
+							"vertical_select_id" : default_values[4],
+							"bra_select_id" : default_values[5],
+							"wrist_size" : default_values[6]
+						};
+						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+							$( ".garments" ).html( data );
+						});
+					}
+					
+				</script>
+				
 				<div class="container">
 					
 					<div class="homeprofile-head" id="profile">
@@ -516,11 +517,11 @@
 				<p class="i profile-big-title">Here's just a few <strong>garments we've found for you</strong></p>
 			</div>
 			<style type="text/css">
-			.garments:after { display: none;}
+				.garments:after { display: none;}
 			</style>
 			<div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
-
+				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -592,15 +593,15 @@
 			<div><input type="email" placeholder="Email*" name="email" required/></div>
 			<div><input type="password" id="password" placeholder="Password*" required name="password"/><input type="password" required placeholder="Confirm Password*" name="cpass" oninput="check(this)"/></div>
 			<script language='javascript' type='text/javascript'>
-			function check(input) {
-    	if (input.value != document.getElementById('password').value) {
-        input.setCustomValidity('The two passwords must match.');
-    	} else {
-        // input is valid -- reset the error message
-        input.setCustomValidity('');
-   }
-}
-</script>
+				function check(input) {
+					if (input.value != document.getElementById('password').value) {
+						input.setCustomValidity('The two passwords must match.');
+						} else {
+						// input is valid -- reset the error message
+						input.setCustomValidity('');
+					}
+				}
+			</script>
 			<div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" ></div>
 			<!-- onclick="parent.location='http://m1.pretastyler.com/mall/mall-by-profile.html'" -->
 		</form>
@@ -642,14 +643,14 @@
 <?php 
 	if( ENVIRONMENT == 'production') {
 	?>
-
+	
 	<script type="text/javascript">
 		setTimeout(function(){var a=document.createElement("script");
 			var b=document.getElementsByTagName("script")[0];
 			a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
 		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	</script>
-
+	
 	<!--Start of Zopim Live Chat Script-->
 	<script type="text/javascript">
 		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
@@ -659,7 +660,7 @@
 		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	</script>
 	<!--End of Zopim Live Chat Script-->
-
+	
 	<script type='text/javascript'>
 		
 		window.__wtw_lucky_site_id = 33872;
