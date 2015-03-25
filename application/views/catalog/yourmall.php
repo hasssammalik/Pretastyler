@@ -51,11 +51,11 @@
 						
 						var necklengthimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div><span>Your neck is short.&#xa;When carrying extra weight you may have double chins.&#xa;You look best with hair that is at or above your jawline.&#xa;Necklines with some length such as V and scoop look best on you.&#xa;High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /><span>Your neck is on the short side of average.&#xa;High necklines such as turtlenecks and long drop earrings can be difficult to wear.&#xa;Necklines with some length such as V\'s and scoop look best on you.</span></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /><span>Your neck is just like that of most people you meet.&#xa;You have had no reason to question if it is shorter or longer than average.</span></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div><span>Your neck is on the long side of average.&#xa;Wearing long drop earrings and high neck shirts and sweaters is no problem for you.&#xa;Plunging and very deep necklines do not look as good on you as those which are medium depth.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div><span>You are aware that you have a long neck.&#xa;If you are underweight your neck may appear very thin.&#xa;You look best with long hair i.e. shoulder length or longer.&#xa;Your neck length allows you to wear extra-long earrings without them dangling on your shoulders.&#xa;Plunging necklines look good only when your hair is worn down (shoulder length and longer).&#xa;Necklines that sit at the base of your neck can also be unflattering.</span></div>' 
 						];
 						
 						var necktypeimage = [ 
