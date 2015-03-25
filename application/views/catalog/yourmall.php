@@ -17,9 +17,8 @@
 				<?php echo form_open();  echo form_close();  ?>
 				<style type="text/css">
 
-				.home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2!important;}
-				.ui-state-hover{z-index:3!important;}
-					/*#circles-slider .ui-slider-pip
+				
+					#circles-slider .ui-slider-pip
 					{
 					top: 3px;
 					}
@@ -160,8 +159,11 @@
 					#talkbubble.doubleline .slider-image{
 					top:-305px;
 					}
+
 					
-					*/
+					
+				.home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2!important;}
+				.ui-state-hover{z-index:3!important;}
 				</style>
 				<script type="text/javascript">
 					
