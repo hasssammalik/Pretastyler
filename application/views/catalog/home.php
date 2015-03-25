@@ -94,11 +94,9 @@
 						];
 						var buildimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div><span>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the oppositehand as if they were a bracelet.<br/>Select large if there is a gap between your thumb and middle finger (they don\'t touch).</span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-17.png" /></div><span>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the opposite
-hand as if they were a bracelet.<br>;Select medium if you thumb and middle finger just touch each other.</span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-18.png" /></div><span>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the opposite
-hand as if they were a bracelet.<br>;Select large if there is a gap between your thumb and middle finger (they don\'t touch).</span></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-16.png" /></div><span>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the opposite hand as if they were a bracelet.<br/>Select large if there is a gap between your thumb and middle finger (they don\'t touch).</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-17.png" /></div><span>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the opposite hand as if they were a bracelet.<br>;Select medium if you thumb and middle finger just touch each other.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/build/features_-18.png" /></div><span>Gently encircle your dominant wrist (your writing hand) with thumb and middle finger of the opposite hand as if they were a bracelet.<br>;Select large if there is a gap between your thumb and middle finger (they don\'t touch).</span></div>' 
 						];
 						
 						$(".newprofile-height")
