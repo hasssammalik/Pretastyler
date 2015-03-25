@@ -62,7 +62,7 @@ class Catalog extends CI_Controller {
 	public function index()
 	{
 	    if ($this->flexi_auth->is_logged_in()){
-	        //redirect('/mall', 'refresh');
+	        redirect('/mall', 'refresh');
 	    }
 	    
 		$data = $this->data;
@@ -91,7 +91,7 @@ class Catalog extends CI_Controller {
 	public function your_mall()
 	{
 	    if ($this->flexi_auth->is_logged_in()){
-	        //redirect('/mall', 'refresh');
+	        redirect('/mall', 'refresh');
 	    }
 	    
 		$data = $this->data;
