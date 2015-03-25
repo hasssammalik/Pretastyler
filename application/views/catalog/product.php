@@ -295,10 +295,10 @@
 												<!-- <?php print implode('<span class="commentSpliter"></span><span class="bold-dash" style="float:left;">-&nbsp;</span> ', $row['comment']) ?> -->
 												<?php foreach($row['comment'] as $com){ ?>
 												
-												<span>
-													<span class="bold-dash" style="float:left;">-&nbsp;</span>
-													<span style="float:left;width:95%;padding-bottom: 5px;"><?php echo $com; ?> </span>
-												</span>
+												<div>
+													<span class="bold-dash" style="float:left;width:9%;font-size:37px; line-height:16px;">&bull; &nbsp; &nbsp; &nbsp;</span>
+													<span style="float:left;width:91%;padding-bottom: 5px;"><?php echo $com; ?> </span>
+												</div>
 												
 												 <?php } ?>
 												
@@ -342,7 +342,7 @@
 															<div class="form-input" style="margin-left:5px;"><input type="text" placeholder="Password" style="width:100%;" required></div>
 														</div>
 													</div>
-													<div style="float:left;width:20%;"><button><strong>SIGN UP</strong><BR>NOW</div>
+													<div style="float:left;width:20%;"><button><strong>SIGN UP</strong><BR>NOW</button></div>
 													</form>
 												</div>
 												
