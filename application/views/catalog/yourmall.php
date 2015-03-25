@@ -33,6 +33,7 @@
 					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label,
 					#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label 
 					{
+
 					margin: 0; 
 					}
 					
@@ -89,6 +90,7 @@
 					border: 3px solid #dddddd;
 					}
 					.ui-slider-pip .ui-slider-label {
+					top:15px;
 					font-size: 0.9em;
 					margin-left: -1em;
 					text-align: left;
