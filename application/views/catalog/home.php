@@ -69,18 +69,18 @@
 						];
 						var bodyshapeimage = 
 						[
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-10.png" /></div></div>',
-						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-11.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-12.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-13.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-14.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-15.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-10.png" /></div><span>You appear to be the same width across your bustline as you are across the widest part of your hipline<br>Your waist is well defined and your narrowest area<br>NOTE: You can be any weight and be an hourglass figure.</span></div>',
+						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-11.png" /></div><spanYou are larger above the waist than below<br>You are widest across your bustline<br>Your armpits are wider than the widest part of your hipline (when viewed from the front).<br>You are smaller below waist than below</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-12.png" /></div><span>You are larger below the waist than above<br>You have a well-defined waist<br>You have a narrow lower rib cage<br>Your armpits are narrower than the widest part of your hipline (when viewed from the front).</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-13.png" /></div><span>Your bust, waist and hipline are close to or the same in width<br>Your waist is undefined<br>Your have a wide rib cage</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-14.png" /></div><span>You consider yourself to be in the substantially overweight range<br>Your widest area is between your bust and hipline<br>You have a full stomach that sits low around the hips</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-15.png" /></div><span>You consider yourself to be in the substantially overweight range<br>Your widest area is between your bust and hipline<br>You have a full, high stomach that starts just under your bustline.<br>Sometimes others may mistake you for being pregnant.</span></div>' 
 						];
 						var bodyratioimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-09.png" /></div></div>',
-						];
+            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-09.png" /></div><span>You have a long body and short legs.<br>Weight gain is first experienced at your bottom, hips and thighs.<br>You have a low waistline.<br>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.<br>Use the vertical calculator if you are unsure.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-07.png" /></div><span>Your torso is equal in length to your legs.<br>The fullest part of your bottom protrudes at approximately half your height.<br>Weight gain is first experienced between your bust and hipline.<br>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.<br>Use the vertical calculator if you are unsure.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-08.png" /></div><span>Your legs are longer than your body.<br>Your torso is short and your waistline feels/is high.<br>Weight gain is first experienced at your midriff, stomach and high on the back of your hips.<br>Bend your elbow 90% to the floor: you are a Long Legged and Short Bodied if your waist is above your bent elbow.<br>Use the vertical calculator if you are unsure.</span></div>',
+												];
 						var bustimage = 
 						[ 
 						'<div id="talkbubble"></div>',
