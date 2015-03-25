@@ -51,38 +51,38 @@
 						
 						var necklengthimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div><span>Your neck is short.&#xa;When carrying extra weight you may have double chins.&#xa;You look best with hair that is at or above your jawline.&#xa;Necklines with some length such as V and scoop look best on you.&#xa;High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless.</span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /><span>Your neck is on the short side of average.&#xa;High necklines such as turtlenecks and long drop earrings can be difficult to wear.&#xa;Necklines with some length such as V\'s and scoop look best on you.</span></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /><span>Your neck is just like that of most people you meet.&#xa;You have had no reason to question if it is shorter or longer than average.</span></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div><span>Your neck is on the long side of average.&#xa;Wearing long drop earrings and high neck shirts and sweaters is no problem for you.&#xa;Plunging and very deep necklines do not look as good on you as those which are medium depth.</span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div><span>You are aware that you have a long neck.&#xa;If you are underweight your neck may appear very thin.&#xa;You look best with long hair i.e. shoulder length or longer.&#xa;Your neck length allows you to wear extra-long earrings without them dangling on your shoulders.&#xa;Plunging necklines look good only when your hair is worn down (shoulder length and longer).&#xa;Necklines that sit at the base of your neck can also be unflattering.</span></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-19.png" /></div><span>Your neck is short.<br>When carrying extra weight you may have double chins.<br>You look best with hair that is at or above your jawline.<br>Necklines with some length such as V and scoop look best on you.<br>High necklines such as turtleneck sweaters and shirts with a collar stand can make you appear neckless.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-20.png" /></div><span>Your neck is on the short side of average.<br>High necklines such as turtlenecks and long drop earrings can be difficult to wear.<br>Necklines with some length such as V\'s and scoop look best on you.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /></div><span>Your neck is just like that of most people you meet.<br>You have had no reason to question if it is shorter or longer than average.</span></div></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div><span>Your neck is on the long side of average.<br>Wearing long drop earrings and high neck shirts and sweaters is no problem for you.<br>Plunging and very deep necklines do not look as good on you as those which are medium depth.</div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div><span>You are aware that you have a long neck.<br>If you are underweight your neck may appear very thin.<br>You look best with long hair i.e. shoulder length or longer.<br>Your neck length allows you to wear extra-long earrings without them dangling on your shoulders.<br>Plunging necklines look good only when your hair is worn down (shoulder length and longer).<br>Necklines that sit at the base of your neck can also be unflattering.</span></div>' 
 						];
 						
 						var necktypeimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div><span></span></div>' 
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span>Your shoulders have a slight slope.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div><span>Your shoulders are broad and square with almost no slope</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div>Your shoulders are broad and square with almost no slope<span></span></div>' 
 						];
 						
 						var faceshapeimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-28.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-29.png" /></div></div>',
-						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-30.png"/></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-31.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-32.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-33.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-34.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-35.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-36.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-37.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-28.png" /></div><span>Your face is definitely longer than it is wide.<br>Your cheekbones and jaw line are as wide as each other<br>Your jawline and chin is slightly rounded</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-29.png" /></div><span>Your face is definitely longer than it is wide<br>Your cheekbones and jaw line are as wide as each other<br>The sides of your face from eyeline to jaw bone are straight<br>;Your jawline is square<br>;Your chin is shallow and flat</div>',
+						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-30.png"/></div><span></span>Your face is almost as wide as it is long<br>Your chin and cheeks are round and full<br>Your cheekbones are widest part of your face<br>;Your forehead is close to, or as wide as your jawline<br>If you lose weight your face shape may look more Square than Round</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-31.png" /></div><span>Your face is almost as wide as it is long<br>The sides of your face from eyeline to jawline are straight<br>Your forehead is close to, or as wide as your jawline<br>;If you gain weight your face shape may become Round</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-32.png" /></div><span>Above your cheekbones is the widest part of your face<br>Your have jawline is narrower than your forehead<br>You have a pointed to gently rounded chin</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-33.png" /></div><span>Your forehead is the widest part of your face<br>;Your have jawline is narrower than your forehead<br>You have a pointed to gently rounded chin<br>;You have a widow\'s peak (pointed hairline at centre of forehead).</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-34.png" /></div><span>Your chin is narrow and pointed.<br>;Your cheekbones are high and prominent.<br>;Your face is widest at the cheekbones.<br>Your hairline and/or forehead angles inward.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-35.png" /></div><span>Your jawline is the widest part of your face<br>You have full, round cheeks<br>;Your forehead is the narrowest part of your face</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-36.png" /></div><span>Your face is a little longer than it is wide<br>Your forehead is the narrowest part of your face<br>Your have jawline is the widest region of your face<br>;You have a broad square jawline<br>Your chin is shallow and flat</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-37.png" /></div><span>Your face is an inverted egg or oval shape<br>You have a gently rounded chin.<br>Your face is slightly longer than it is wide<br>Your face is equal in length from hairline to browline, browline to nose tip, nose tip to chin tip<br>Your eye, nose and mouth are all well scaled to the size of your face i.e. no feature is extra large or small<br>Your eye, nose and mouth are all well-spaced within your face i.e. your eyes are not close or wide set</span></div>' 
 						];
 						
 						
