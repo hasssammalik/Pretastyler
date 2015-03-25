@@ -521,7 +521,6 @@
 			</style>
 			<div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
-				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
