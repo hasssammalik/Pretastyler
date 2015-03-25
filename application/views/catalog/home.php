@@ -27,7 +27,9 @@
 			
 			<div class="wid100">
 				<style>
-					#circles-slider .ui-slider-pip
+        .home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2!important;}
+        .ui-state-hover{z-index:3!important;}
+					/*#circles-slider .ui-slider-pip
 					{
 					top: 3px;
 					}
@@ -184,7 +186,7 @@
 					}
 					#talkbubble.doubleline .slider-image{
 					top:-305px;
-					}
+					}*/
 					
 				</style>
 				<script type="text/javascript">
@@ -521,7 +523,6 @@
 			</style>
 			<div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
-				
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>

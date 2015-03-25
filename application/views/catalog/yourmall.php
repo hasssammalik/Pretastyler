@@ -16,7 +16,10 @@
 			<div class="wid100">
 				<?php echo form_open();  echo form_close();  ?>
 				<style type="text/css">
-					#circles-slider .ui-slider-pip
+
+				.home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2!important;}
+				.ui-state-hover{z-index:3!important;}
+					/*#circles-slider .ui-slider-pip
 					{
 					top: 3px;
 					}
@@ -157,16 +160,8 @@
 					#talkbubble.doubleline .slider-image{
 					top:-305px;
 					}
-					.home-profile .ui-state-default, .home-profile .ui-widget-content .ui-state-default, .home-profile .ui-widget-header .ui-state-default{z-index: 2;}
-					.ui-state-hover{z-index:3;}
-					#circles-slider .ui-slider-pip.ui-slider-pip-first .ui-slider-label {
-					  text-align: left;
-					  margin-left: -1em;
-					}
-					#circles-slider .ui-slider-pip.ui-slider-pip-last .ui-slider-label {
-				  left: -2.5em;
-				  text-align: center;
-					}
+					
+					*/
 				</style>
 				<script type="text/javascript">
 					
