@@ -61,11 +61,11 @@
 						];
 						var ageimage = 
 						[
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
+						/*'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' */
 						];
 						var bodyshapeimage = 
 						[
@@ -83,14 +83,14 @@
 												];
 						var bustimage = 
 						[ 
-						'<div id="talkbubble"></div>',
+						/*'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>', 
 						'<div id="talkbubble"></div>',
 						'<div id="talkbubble"></div>',
-						'<div id="talkbubble"></div>'
+						'<div id="talkbubble"></div>'*/
 						];
 						var buildimage = 
 						[ 
