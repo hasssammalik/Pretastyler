@@ -61,6 +61,10 @@ class Catalog extends CI_Controller {
 	}
 	public function index()
 	{
+	    if ($this->flexi_auth->is_logged_in()){
+	        redirect('/mall', 'refresh');
+	    }
+	    
 		$data = $this->data;
 		$data['title'] = "PretaStyler Where style and fashion Unite";
 		$data['no_background_image'] = TRUE;
@@ -86,6 +90,10 @@ class Catalog extends CI_Controller {
 	
 	public function your_mall()
 	{
+	    if ($this->flexi_auth->is_logged_in()){
+	        redirect('/mall', 'refresh');
+	    }
+	    
 		$data = $this->data;
 		$data['title'] = "Your Mall";
 		$data['content_class'] = "full_width_page";
@@ -478,7 +486,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		}
 		else{
 			redirect("/index");
-
 		}
 
 
@@ -505,7 +512,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 			$this->load->view('catalog/useraccount', $data);
 
 		} else {
-			redirect("/index");
+			redirect("/mall", "refresh");
 		}
 
 	}
