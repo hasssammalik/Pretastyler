@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'https://pretastyler.com/';
+$config['base_url']	= 'http://m1.pretastyler.com/';
 
 /*
 |--------------------------------------------------------------------------
