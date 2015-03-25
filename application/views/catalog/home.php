@@ -27,7 +27,7 @@
 			
 			<div class="wid100">
 				<style>
-					#circles-slider .ui-slider-pip
+					/*#circles-slider .ui-slider-pip
 					{
 					top: 3px;
 					}
@@ -184,7 +184,7 @@
 					}
 					#talkbubble.doubleline .slider-image{
 					top:-305px;
-					}
+					}*/
 					
 				</style>
 				<script type="text/javascript">
