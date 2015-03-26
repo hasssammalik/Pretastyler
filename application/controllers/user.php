@@ -87,7 +87,7 @@ class User extends CI_Controller {
 										$data['user_info']["stomach_select_id" ],
 										$data['user_info']["bottom_select_id" ],
 										$data['user_info']["inner_thighs_select_id" ],
-										$data['user_info']["outer_thighs_select_id" ,
+										$data['user_info']["outer_thighs_select_id"] ,
 										$data['user_info']["lower_legs_select_id" ]
 										
 								));
