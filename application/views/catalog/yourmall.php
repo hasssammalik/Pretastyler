@@ -414,6 +414,7 @@
 					function toggle_div_class(class_num){
 						if (false == $(".profile-your-mall-hidden-"+class_num).is(':visible')) {
 							$(".profile-your-mall-hidden-"+class_num).show();
+							pull_profile_garment();
 
 						}
 						else {

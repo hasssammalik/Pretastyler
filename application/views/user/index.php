@@ -781,6 +781,15 @@
 							"lower_legs_select_id" : default_values[19]
 							
 						};
+
+						// neck default_values[11];
+						var hiddenVar = 0;
+						for (var i = 11; i < 20; i++) {
+							if( default_values[i] > 0 ){
+								toggle_div_class(hiddenVar);
+							}
+							hiddenVar++;
+						};
 						
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 							//$( ".garments" ).html( data );
@@ -909,16 +918,6 @@
 					<div class="clear"></div>
 					<br>
 
-
-					<div class="home-profile home-profile-necktype">
-						<div class="slider-name left">
-							<p>NECK TYPE</p>
-						</div>
-						<div class="homepageslider left sliderwrap-necktype">
-							<div class="newprofile-necktype"  id="circles-slider"></div>
-						</div>
-						<div class="clear"></div>
-					</div>
 
 					<div class="clear"></div>
 
