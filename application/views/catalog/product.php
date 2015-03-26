@@ -31,16 +31,18 @@
 						<div class="section">
 							<div class="title title-nopadding">
 								<table>
+									<?php if( !empty($advise) && is_array($advise) ) {  ?>
 									<tr>
 										<th class="th1">Area</th>
 										<th class="th2" style="padding-right: 40px;">Style</th>
 										<th class="th3">Result</th>
 									</tr>
+									<?php } ?>
 								</table>
 							</div>
 							<div class="scrollable">
 								<table>
-									<?php foreach ($advise as $row){ ?>
+									<?php if( !empty($advise) && is_array($advise) ) { foreach ($advise as $row){ ?>
 										<tr>
 											<td class="th1"><strong><?php print $row['area']?></strong></td>
 											<td class="th2"><?php print $row['style_item']?></td>
@@ -74,14 +76,20 @@
 												<div>maybe > 3</div>
 												<div>avoid <= 3</div>
 												</td>
-												</tr>
-											<?php }?>
-										</table>
-									</div>
+										</tr>
+									<?php } } else { ?>
+											<tr>
+											<td colspan="3">
+												<div>Please complete your profile to see the result.</div>
+											</td>
+											</tr>
+									<?php  } ?>
+									</table>
 								</div>
 							</div>
 						</div>
-					<?php } ?>
+					</div>
+				<?php } ?>
 					
 									
 					<div class="galleryAreaWrap notLoggedIn newpanelDesign">
@@ -120,7 +128,7 @@
 									
 									<?php if ($this->flexi_auth->is_logged_in() && $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'))) { ?>
 										<div class="productRate">
-											<?php echo $score; ?>
+											<?php echo ( empty($score) ? 0 : $score ) ; ?>
 											<i class="icon-star"></i>
 										</div>
 										<?php } else { ?>
@@ -252,7 +260,6 @@
 							?>" class="button buy" target="_blank">BUY / LEARN MORE</a></li>
 										<li class=""><a href="/mall/similar/<?php print $garment['garment_id'] . '-'. $garment['name'] ?>" class="button other" target="_blank">SIMILAR GARMENTS</a></li>
 										<li class=""><a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>favorite-click <?php } else{ ?> login_alert_user<?php } ?>" target="_blank">ADD TO WISHLIST</a></li>
-										<li class=""><a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>wardrobe-click<?php } else{ ?> login_alert_user<?php } ?>" target="_blank">ADD TO WARDROBE</a></li>
 										<ul>
 										</div>
 										<ul class="bottomOptions">
@@ -285,7 +292,7 @@
 									</div>
 									<div class="panelContent panelcontentThird">
 										
-										<?php foreach ($advise as $row){ if ($row['comment']){ ?>
+										<?php if( !empty($advise) && is_array($advise) ) {  foreach ($advise as $row){ if ($row['comment']){ ?>
 												<p class="left recommendCommenDes">
 												<strong><?php print $row['area'] ?>:</strong>
 												<span class="commentSpliter"></span>
@@ -302,8 +309,11 @@
 												 <?php } ?>
 												
 										</p>
-										<?php }}?>
-										
+										<?php }} } else { ?>
+												
+												<div>Please complete your profile to see the result.</div>
+												
+										<?php } ?>
 								</div>
 							</div>
 							<?php } else { ?>

@@ -25,7 +25,6 @@ foreach ($garments as $row) { ?>
 				<li><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank" class="<?php if($user_profile_done == false){ echo "no_user_profile_complete"; } ?>" title="Garments insights"><i class="icon-scales"></i></a></li>
 				<?php if ($this->flexi_auth->is_logged_in()) { ?>
 				<li><a class="favorite-click<?php if( isset($row['favorite'])) { print ($row['favorite'] == 1)?' actived':''; }?>" href="#" title="Add to My Wishlist/Favorites"><i class="icon-heart"></i></a></li>
-				<li><a class="wardrobe-click<?php if( isset($row['wardrobe'])) {  print ($row['wardrobe'] == 1)?' actived':''; }?>" href="#" title="Add to My Wardrobe (Item owned/purchased)"><i class="icon-hanger"></i></a></li>
 				<!--<li><a href="#" title="Share item on social media" class="socialShare"><i class="icon-share"></i></a></li>-->
 				<li><a href="/styling-board.html" target="_blank" title="Create an Inspiration board using this item"><i class="icon-plus"></i></a></li>
 				<li><a href="/styling-board.html" target="_blank" title="See inspiration boards with this item"><i class="icon-board"></i></a></li>
