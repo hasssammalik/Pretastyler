@@ -204,6 +204,11 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[5] = (+ui.value+1);
+							if( ui.value > 3 ){
+								$(".minBust-check").show();
+							} else {
+								$(".minBust-check").hide();
+							}
 							pull_profile_garment();
 						});
 						
@@ -232,19 +237,27 @@
 					
 					function pull_profile_garment( ) {
 						//console.log(default_values);
+
+						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
+
 						var requestvalues = { "height_select_id" : default_values[0],
 							"weight_select_id" : default_values[1],
 							"age_select_id" : default_values[2],
 							"horizontal_select_id" : default_values[3],
 							"vertical_select_id" : default_values[4],
 							"bra_select_id" : default_values[5],
-							"wrist_size" : default_values[6]
+							"wrist_size" : default_values[6],
+							"minBust" : input_minBust
 						};
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 							$( ".garments" ).html( data );
 						});
 					}
 					
+					$(".profileWrap").on("change", ".minBust-check", function(){
+						pull_profile_garment();
+					});
+
 				</script>
 				
 				<div class="container">
@@ -322,9 +335,15 @@
 						<div class="homepageslider left sliderwrap-bust ">
 							<div class="newprofile-bust" id="circles-slider"></div>
 						</div>
+						<div class="bustCheck" style="float: right; font-size: 12px;">
+							<p>
+								<input type="checkbox" name="agree" class="minBust-check">
+								 Check if you DO NOT want styles selected that will minimise your bust size. (You've got it and you want to flaunt it!)
+							</p>
+						</div>
 						<div class="clear"></div>
 					</div>
-					
+					<br>
 					<div class="home-profile home-profile-build">
 						<div class="slider-name left">
 							<p>BUILD</p>
