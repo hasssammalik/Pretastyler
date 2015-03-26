@@ -33,9 +33,7 @@
 								<table>
 									<tr>
 										<th class="th1">Area</th>
-										<th class="th2" style="
-										padding-right: 40px;
-										">Style</th>
+										<th class="th2" style="padding-right: 40px;">Style</th>
 										<th class="th3">Result</th>
 									</tr>
 								</table>
@@ -149,19 +147,7 @@
 									</div>
 								<?php } ?>
 								
-								<ul class="bottomOptions">
-									
-									<li>
-										<a href="https://www.facebook.com/sharer.php?u=<?php print current_url() ?>" onClick="return fbs_click(500,400)" target="_blank" class="fb"><i class="icon-facebook"></i></a>
-									</li>
-									
-									<li><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" target="_blank" class="pi"><i class="icon-pinterest"></i></a></li>
-									
-									<li><a href="<?php print current_url() ?>" class="tweet" target="_blank" ><i class="icon-twitter"></i></a></li>
-									
-									<li><a href="<?php print current_url() ?>" class="gplus" target="_blank" ><i class="icon-googleplus"></i></a></li>
-									
-								</ul>
+								
 								
 							</div>
 							<div class="productSecondColumn product-inside-columns">
@@ -269,6 +255,19 @@
 										<li class=""><a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>wardrobe-click<?php } else{ ?> login_alert_user<?php } ?>" target="_blank">ADD TO WARDROBE</a></li>
 										<ul>
 										</div>
+										<ul class="bottomOptions">
+									
+									<li>
+										<a href="https://www.facebook.com/sharer.php?u=<?php print current_url() ?>" onClick="return fbs_click(500,400)" target="_blank" class="fb"><i class="icon-facebook"></i></a>
+									</li>
+									
+									<li><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" target="_blank" class="pi"><i class="icon-pinterest"></i></a></li>
+									
+									<li><a href="<?php print current_url() ?>" class="tweet" target="_blank" ><i class="icon-twitter"></i></a></li>
+									
+									<li><a href="<?php print current_url() ?>" class="gplus" target="_blank" ><i class="icon-googleplus"></i></a></li>
+									
+								</ul>
 										
 									</div>
 									<div class="clear"></div>
