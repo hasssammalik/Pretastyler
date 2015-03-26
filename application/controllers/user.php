@@ -65,17 +65,33 @@ class User extends CI_Controller {
 		$data['countries'] = $this->user_model->get_countries($user_id);
 		$data['user_info'] = $this->user_model->get_user_info($user_id);
 		$data['user_email'] = $this->flexi_auth->get_user_identity();
-		$data['user_selection'] = implode(',',array($data['user_info']['neck_length_select_id'],
-										$data['user_info']['neck_thickness_select_id'],
-										$data['user_info']['bone_select_id'],
-										$data['user_info']['horizontal_select_id'],
-										$data['user_info']['vertical_select_id'],
-										$data['user_info']['shoulders_select_id'],
-										$data['user_info']['face_select_id'],
-										$data['user_info']['prominent_arms_select_id'],
-										$data['user_info']['prominent_back_select_id'],
-										$data['user_info']['prominent_legs_select_id'],
-										$data['user_info']['prominent_stomach_select_id']));
+		$data['user_selection'] = implode(',',array(
+										$data['user_info']["height_select_id"],
+										$data['user_info']["weight_select_id" ],
+										$data['user_info']["age_select_id" ],
+										$data['user_info']["body_shape_select_id" ],
+										$data['user_info']["body_ratio_select_id"] ,	
+										$data['user_info']["bra_select_id" ],
+										$data['user_info']["build_select_id" ],
+										$data['user_info']["minBust"] ,
+
+										$data['user_info']["neck_length_select_id"] ,
+										$data['user_info']["shoulders_select_id"] ,
+										$data['user_info']["face_shape_select_id"] ,	
+										
+										$data['user_info']["neck_select_id"] ,
+										$data['user_info']["back_select_id"] ,
+										$data['user_info']["upper_arms_select_id"] ,
+										$data['user_info']["midriff_select_id"] ,
+										
+										$data['user_info']["stomach_select_id" ],
+										$data['user_info']["bottom_select_id" ],
+										$data['user_info']["inner_thighs_select_id" ],
+										$data['user_info']["outer_thighs_select_id" ,
+										$data['user_info']["lower_legs_select_id" ]
+										
+								));
+
 		$value_array = array('height', 'weight', 'age', 'bra');
 		foreach ($value_array as $value_value){
 			$data['value_data'][$value_value] = $this->user_model->get_user_values($user_id, $value_value);
