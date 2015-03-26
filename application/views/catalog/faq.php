@@ -50,18 +50,22 @@
 					A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
 				</div>
 				<div class="faq-body">
-					Registration is through this [page] and costs $9 per month.
-					Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
-					1. Click <a href="">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
-					2. Enter you Name and Email
-					3. Chosse a Password (must be alphanumberic - letters and numbers only)
-					4. Confirm the same Password
+					<p>Registration is through this [page] and costs $9 per month.</p>
+				<p>	Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
+					<p>1. Click <a href="">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
+				</p><p>	2. Enter you Name and Email
+				</p><p>	3. Chosse a Password (must be alphanumberic - letters and numbers only)
+			</p><p>		4. Confirm the same Password</p>
 				</div>
 
 			</div>
 		</div>
 		<div class="half">
-			<div class="questions">
+			
+		</div>
+	</div>
+</article>
+<!-- <div class="questions">
 				<div class="group">
 					<div class="col span_8">
 						<div class="panel2">
@@ -87,7 +91,4 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</article>
+			</div> -->
