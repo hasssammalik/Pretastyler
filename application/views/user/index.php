@@ -182,8 +182,11 @@
 			
 				<script type="text/javascript">
 					
-					var default_values = [3,5,2,4,1,4,2  , 4,2,2,8,3,2,2,2,2,2,2,2,2 ];
+					//var default_values = [3,5,2,4,1,4,2  , 4,2,2,8,3,2,2,2,2,2,2,2,2 ];
 					
+					var default_values = [<?php echo $user_selection; ?>];
+					
+
 					$(function(){
 						
 						var height 			= [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
