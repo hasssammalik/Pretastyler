@@ -367,17 +367,7 @@
 						//"legs" : default_values[13], =====> Feets in not in database.
 						
 						//neck_thickness_select_id ==== neck_select_id
-						
-						var input_minBust = ($('#mall-neck').attr('checked') == "checked")?1:0
-						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
-						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
-						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
-						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
-						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
-						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
-						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
-
-
+					
 
 						var requestvalues = { 
 							

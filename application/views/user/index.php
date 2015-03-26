@@ -734,7 +734,7 @@
 							});
 						
 
-						for (var i = 11; i < 20; i++) {
+						for (var i = 11; i < 19; i++) {
 							if( default_values[i] > 0 ){
 								$('.your-mall-checkbox > label').eq(i-11).find('input').prop('checked', true);
 								toggle_div_class(i-11);
@@ -769,16 +769,16 @@
 							"shoulders_select_id" : default_values[8],
 							"face_shape_select_id" : default_values[9],
 							
-							"neck_select_id" : default_values[11],
-							"back_select_id" : default_values[12],
-							"upper_arms_select_id" : default_values[13],
-							"midriff_select_id" : default_values[14],
+							"neck_select_id" : default_values[10],
+							"back_select_id" : default_values[11],
+							"upper_arms_select_id" : default_values[12],
+							"midriff_select_id" : default_values[13],
 							
-							"stomach_select_id" : default_values[15],
-							"bottom_select_id" : default_values[16],
-							"inner_thighs_select_id" : default_values[17],
-							"outer_thighs_select_id" : default_values[18],
-							"lower_legs_select_id" : default_values[19]
+							"stomach_select_id" : default_values[14],
+							"bottom_select_id" : default_values[15],
+							"inner_thighs_select_id" : default_values[16],
+							"outer_thighs_select_id" : default_values[17],
+							"lower_legs_select_id" : default_values[18]
 							
 						};
 
