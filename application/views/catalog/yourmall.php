@@ -67,7 +67,7 @@
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span>Your shoulders have a slight slope.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span style="padding:5px;">Your shoulders have a slight slope.</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div><span>Your shoulders are broad and square with almost no slope</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div>Your shoulders are broad and square with almost no slope<span></span></div>' 
 						];
@@ -88,7 +88,7 @@
 						
 						
 						var neckimage = [ 
-						'',
+						'<div class="hide"></div>',
 						'',
 						'',
 						'' 

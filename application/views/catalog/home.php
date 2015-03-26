@@ -29,7 +29,7 @@
 			
 				<script type="text/javascript">
 					
-					var default_values = [3,5,2,4,1,5,2];
+					var default_values = [3,5,2,4,1,4,2];
 					
 					$(function(){
 						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
@@ -37,7 +37,7 @@
 						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "66 - 75","76 >" ];
 						var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
 						var bodyratio = [ "Balanced Body","Long Legged Short Torso", "Short Legged Long Torso" ];
-						var bust = [ "AA", "A", "B", "C", "D", "DD", "E", "EE >" ];
+						var bust = [ "< A", "B", "C", "D", "DD", "E >" ];
 						var build = [ "Small", "Medium", "Large" ];
 						
 						var heightimage = 
