@@ -17,7 +17,7 @@
 				<?php echo form_open();  echo form_close();  ?>
 				<script type="text/javascript">
 					
-					var default_values = [ 4,2,2,8,    2,2,2,2,2,  2,2,2,2,2 ];
+					var default_values = [ 4,2,2,8,3,2,2,2,2,2,2,2,2];
 					
 					$(function(){
 						
@@ -36,17 +36,18 @@
 						var shoulders = [ "Sloping", "Tapered", "Square" ];
 						var faceshape = [ "Oval", "Heart", "Inverted triangle", "Diamond", "Triangle", "Pear", "Rectangle", "Oblong", "Round", "Square" ];
 						
-						var neck = [ "Too thin", "Too board", "Double chin", "No definition" ];
-						var upperback = [ "Dowagers hump" ];
-						var upperarms = [ "Too thin", "Too heavy", "Too muscular" ];
-						var bustother = [ "Too small", "Too large", "Mastectomy" ];
-						var midriff = [ "Small roll", "Moderate roll", "Large roll" ];
+						var neck = [ "Thin", "Average", "Wide", "Double Chin", "No Definition" ];
+						var upperback = [ "Dowagers Hump","Sway Back"];
+						var upperarms = [ "Too thin", "Too heavy", "Aged/Untoned" ];
 						
-						var stomach = [ "Post baby", "Moderate tummy", "Too soft", "Large tummy" ];
-						var bottom = [ "Too large", "Too small", "Flat" ];
-						var thighs = [ "Rub together", "Too protruding", "Saddlebags" ];
-						var lowerlegs = [ "Muscular/heavy calves", "Shapeless calves", "Shapeless ankles", "Thin ankles" ];
-						var feet = [ "Too large", "Too small", "Too narrow", "Too board" ];
+						var midriff = ["Moderate Roll", "Large roll" ];
+						
+						var stomach = [ "Post Baby", "Moderate Tummy", "Too Soft", "Large Tummy" ];
+						var bottom = [ "Too Large", "Too Flat" ];
+						var thighs = [ "Rub Together", "Bowed Legs"];
+						var feet=["Too Protruding","Saddlebags"]
+						var lowerlegs = [ "Shapeless Calves","Shapeless Ankles", "Muscular/Heavy calves", "Thin Ankles" ];
+						
 						
 						
 						var necklengthimage = 
@@ -67,7 +68,7 @@
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span>Your shoulders have a slight slope.</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span style="padding:5px;">Your shoulders have a slight slope.</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div><span>Your shoulders are broad and square with almost no slope</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div>Your shoulders are broad and square with almost no slope<span></span></div>' 
 						];
@@ -87,50 +88,59 @@
 						
 						
 						
-						var neckimage = [ 
-						'',
-						'',
-						'',
-						'' 
+						var neckimage = [
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>' 
 						];
 						
 						var upperbackimage = [ 
-						'',
-						'' 
+						'<div class="hide">test</div>',
+						'<div class="hide">test</div>' 
 						];
 						
 						var upperarmsimage = [ 
-						'','',''
+						'<div class="hide">test</div>',
+						'<div class="hide">test</div>',
+						'<div class="hide">test</div>'
 						];
 						
-						var bustotherimage = [ 
-						'','',''
-						];
+						
 						
 						var midriffimage = [ 
-						'','',''
+						'<div class="hide">test</div>',
+						'<div class="hide">test</div>'
 						];
 						
 						var stomachimage = [ 
-						'',
-						'','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						
 						var bottomimage = [ 
-						'','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						
 						var thighsimage = [ 
-						'','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
+						var feetimage=['<div class="hide"></div>',
+						'<div class="hide"></div>'];
 						
 						var lowerlegsimage = [ 
-						'','','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						
-						var feetimage = [ '',
-						'','',''
-						];
+						
 						
 						
 						
@@ -266,23 +276,23 @@
 							});
 						
 						
-						$(".newprofile-bustother")
-							.slider({
-								min: 0, 
-								max: bustother.length-1, 
-								value: default_values[7]-1
-							})
-							.slider("pips", {
-								labels: bustother
-							})
-							.slider("float", {
-								rest: "label",
-								labels: bustotherimage
-							})
-							.on("slidechange", function(e,ui) {
-								default_values[7] = (+ui.value+1);
-								pull_profile_garment();
-							});
+						// $(".newprofile-bustother")
+						// 	.slider({
+						// 		min: 0, 
+						// 		max: bustother.length-1, 
+						// 		value: default_values[7]-1
+						// 	})
+						// 	.slider("pips", {
+						// 		labels: bustother
+						// 	})
+						// 	.slider("float", {
+						// 		rest: "label",
+						// 		labels: bustotherimage
+						// 	})
+						// 	.on("slidechange", function(e,ui) {
+						// 		default_values[7] = (+ui.value+1);
+						// 		pull_profile_garment();
+						// 	});
 						
 						
 						
@@ -576,13 +586,14 @@
 								<label><input type="checkbox" class="additional-profile" id="mall-neck" onclick='toggle_div_class("0")'> Neck</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-upperback" onclick='toggle_div_class("1")'> Upper Back</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-upperarms" onclick='toggle_div_class("2")'> Upper Arms</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-bust" onclick='toggle_div_class("3")'> Bust</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("4")'> Midriff</label><br>
-								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("5")'> Stomach</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-bottom" onclick='toggle_div_class("6")'> Bottom</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-thighs" onclick='toggle_div_class("7")'> Thighs</label>
+								<!-- <label><input type="checkbox" class="additional-profile" id="mall-bust" onclick='toggle_div_class("3")'> Bust</label> -->
+								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("3")'> Midriff</label><br>
+								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("4")'> Stomach</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-bottom" onclick='toggle_div_class("5")'> Bottom</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-thighs" onclick='toggle_div_class("6")'> Inner Thighs</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-feet" onclick='toggle_div_class("7")'> Outer Thighs</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-lowerlegs" onclick='toggle_div_class("8")'> Lower Legs</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-feet" onclick='toggle_div_class("9")'> Feet</label>
+								
 								<!--<label><input type="checkbox" class="additional-profile" id="mall-none"> None</label>-->
 								
 							</div>
@@ -604,7 +615,7 @@
 					
 					<div class="home-profile profile-your-mall-hidden-1 home-profile-upperback" id="you_mall_upperback" style="display:none;">
 						<div class="slider-name left">
-							<p>UPPER BACK</p>
+							<p>BACK</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-upperback">
@@ -624,7 +635,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-3 home-profile-bustother" id="you_mall_bustother" style="display:none;">
+					<!-- <div class="home-profile profile-your-mall-hidden-3 home-profile-bustother" id="you_mall_bustother" style="display:none;">
 						<div class="slider-name left">
 							<p>BUST</p>
 						</div>
@@ -633,9 +644,9 @@
 							<div class="newprofile-bustother" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
-					</div>
+					</div> -->
 					
-					<div class="home-profile profile-your-mall-hidden-4 home-profile-midriff" id="you_mall_midriff" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-3 home-profile-midriff" id="you_mall_midriff" style="display:none;">
 						<div class="slider-name left" >
 							<p>MIDRIFF</p>
 						</div>
@@ -646,7 +657,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-5 home-profile-stomach" id="you_mall_stomach" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-4 home-profile-stomach" id="you_mall_stomach" style="display:none;">
 						<div class="slider-name left">
 							<p>STOMACH</p>
 						</div>
@@ -657,7 +668,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-6 home-profile-bottom" id="you_mall_bottom" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-5 home-profile-bottom" id="you_mall_bottom" style="display:none;">
 						<div class="slider-name left">
 							<p>BOTTOM</p>
 						</div>
@@ -668,13 +679,24 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-7 home-profile-thighs" id="you_mall_thighs" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-6 home-profile-thighs" id="you_mall_thighs" style="display:none;">
 						<div class="slider-name left" >
-							<p>THIGHS</p>
+							<p>INNER THIGHS</p>
 						</div>
 						
 						<div class="homepageslider left sliderwrap-thighs">
 							<div class="newprofile-thighs" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="home-profile profile-your-mall-hidden-7 home-profile-feet" id="you_mall_feet" style="display:none;">
+						<div class="slider-name left" >
+							<p>OUTER THIGHS</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-feet">
+							<div class="newprofile-feet" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -691,16 +713,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-9 home-profile-feet" id="you_mall_feet" style="display:none;">
-						<div class="slider-name left" >
-							<p>FEET</p>
-						</div>
-						
-						<div class="homepageslider left sliderwrap-feet">
-							<div class="newprofile-feet" id="circles-slider"></div>
-						</div>
-						<div class="clear"></div>
-					</div>
+					
 					
 				</div>
 				

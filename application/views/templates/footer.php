@@ -1,4 +1,5 @@
 							<footer>
+								
 								<ul>
 									<li><a href="#">BROWSER EXTENSION</a>|</li>
 									<li><a href="/terms.html">TERMS</a>|</li>

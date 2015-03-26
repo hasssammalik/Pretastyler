@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'stylefin_m1';
-$db['default']['password'] = '5iSJuin2_gN+';
-$db['default']['database'] = 'stylefin_m1';
+$db['default']['username'] = 'm1pretas_pas';
+$db['default']['password'] = 'crxMBN[3p%kK';
+$db['default']['database'] = 'm1pretas_pas';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'pas_';
 $db['default']['pconnect'] = TRUE;
