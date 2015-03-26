@@ -276,23 +276,23 @@
 							});
 						
 						
-						$(".newprofile-bustother")
-							.slider({
-								min: 0, 
-								max: bustother.length-1, 
-								value: default_values[7]-1
-							})
-							.slider("pips", {
-								labels: bustother
-							})
-							.slider("float", {
-								rest: "label",
-								labels: bustotherimage
-							})
-							.on("slidechange", function(e,ui) {
-								default_values[7] = (+ui.value+1);
-								pull_profile_garment();
-							});
+						// $(".newprofile-bustother")
+						// 	.slider({
+						// 		min: 0, 
+						// 		max: bustother.length-1, 
+						// 		value: default_values[7]-1
+						// 	})
+						// 	.slider("pips", {
+						// 		labels: bustother
+						// 	})
+						// 	.slider("float", {
+						// 		rest: "label",
+						// 		labels: bustotherimage
+						// 	})
+						// 	.on("slidechange", function(e,ui) {
+						// 		default_values[7] = (+ui.value+1);
+						// 		pull_profile_garment();
+						// 	});
 						
 						
 						
@@ -646,7 +646,7 @@
 						<div class="clear"></div>
 					</div> -->
 					
-					<div class="home-profile profile-your-mall-hidden-4 home-profile-midriff" id="you_mall_midriff" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-3 home-profile-midriff" id="you_mall_midriff" style="display:none;">
 						<div class="slider-name left" >
 							<p>MIDRIFF</p>
 						</div>
@@ -657,7 +657,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-5 home-profile-stomach" id="you_mall_stomach" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-4 home-profile-stomach" id="you_mall_stomach" style="display:none;">
 						<div class="slider-name left">
 							<p>STOMACH</p>
 						</div>
@@ -668,7 +668,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-6 home-profile-bottom" id="you_mall_bottom" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-5 home-profile-bottom" id="you_mall_bottom" style="display:none;">
 						<div class="slider-name left">
 							<p>BOTTOM</p>
 						</div>
@@ -679,7 +679,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-7 home-profile-thighs" id="you_mall_thighs" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-6 home-profile-thighs" id="you_mall_thighs" style="display:none;">
 						<div class="slider-name left" >
 							<p>INNER THIGHS</p>
 						</div>
@@ -690,7 +690,7 @@
 						<div class="clear"></div>
 					</div>
 
-					<div class="home-profile profile-your-mall-hidden-9 home-profile-feet" id="you_mall_feet" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-7 home-profile-feet" id="you_mall_feet" style="display:none;">
 						<div class="slider-name left" >
 							<p>OUTER THIGHS</p>
 						</div>
