@@ -168,7 +168,7 @@
 	<br>
 	<fieldset id="profilePanel" class="fixedOptions" style="z-index:4;background:white;padding-top:45px">
 		<div class="sectionHeader">
-			<div><h2>My Body <strong>Features</strong></h2><div class="body editSection right i u b mousehand" id="bodyFeatures" data-action="edit">EDIT</div></div>
+			<div><h2>My Body <strong>Features</strong></h2><div class="bodyEditSection right i" id="bodyFeatures" data-action="edit">....</div></div>
 		</div>
 		
 
@@ -734,7 +734,15 @@
 							});
 						
 
-
+						// neck default_values[11];
+						var hiddenVar = 0;
+						for (var i = 11; i < 20; i++) {
+							if( default_values[i] > 0 ){
+								toggle_div_class(hiddenVar);
+							}
+							hiddenVar++;
+						};
+						
 
 						$(document).on("change", ".minBust-check", function(){
 							pull_profile_garment();
@@ -742,7 +750,7 @@
 						
 					});
 					
-					function pull_profile_garment( ) {
+					function pull_profile_garment() {
 						//console.log(default_values);
 
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
@@ -782,17 +790,9 @@
 							
 						};
 
-						// neck default_values[11];
-						var hiddenVar = 0;
-						for (var i = 11; i < 20; i++) {
-							if( default_values[i] > 0 ){
-								toggle_div_class(hiddenVar);
-							}
-							hiddenVar++;
-						};
 						
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-							//$( ".garments" ).html( data );
+							$( ".bodyEditSection" ).text( "Your Profile Saved." );
 						});
 					}
 					
