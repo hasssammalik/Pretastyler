@@ -37,11 +37,11 @@
 						
 						var heightimage = 
 						[ 
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'<div id="talkbubble"><span>CM: 180 and taller <br>IN: 5\'11" and taller</span></div>',
+						'<div id="talkbubble"><span>CM: 174.6 - 179.95 <br>IN: 5\'8" - 5\'10 3/4</span></div>',
+						'<div id="talkbubble"><span>CM: 167.1 - 174.5 <br>IN: 5\'5" - 5\'8" 3/4</span></div>',
+						'<div id="talkbubble"><span>CM: 162.5 - 167 <br>IN: 5\'4" - 5\'5" 3/4</span></div>',
+						'<div id="talkbubble"><span>CM: 162.4 and under <br>IN: 5\'3" 3/4 and under</span></div>' 
 						];
 						var sizeimage = 
 						[ 
