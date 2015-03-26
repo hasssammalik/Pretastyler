@@ -89,10 +89,11 @@
 						
 						
 						var neckimage = [
-						'<div class="hide">test</div>',
-						'<div class="hide">test</div>',
-						'<div class="hide">test</div>',
-						'<div class="hide">test</div>' 
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>' 
 						];
 						
 						var upperbackimage = [ 
@@ -101,32 +102,44 @@
 						];
 						
 						var upperarmsimage = [ 
-						'<div class="hide">test</div>','<div class="hide">test</div>','<div class="hide">test</div>'
+						'<div class="hide">test</div>',
+						'<div class="hide">test</div>',
+						'<div class="hide">test</div>'
 						];
 						
 						
 						
 						var midriffimage = [ 
-						'<div class="hide">test</div>','<div class="hide">test</div>','<div class="hide">test</div>'
+						'<div class="hide">test</div>',
+						'<div class="hide">test</div>'
 						];
 						
 						var stomachimage = [ 
-						'',
-						'','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						
 						var bottomimage = [ 
-						'','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						
 						var thighsimage = [ 
-						'','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
+						var feetimage=['<div class="hide"></div>',
+						'<div class="hide"></div>'];
 						
 						var lowerlegsimage = [ 
-						'','','',''
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
-						var feetimage=['','',''];
+						
 						
 						
 						
@@ -574,11 +587,11 @@
 								<label><input type="checkbox" class="additional-profile" id="mall-upperback" onclick='toggle_div_class("1")'> Upper Back</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-upperarms" onclick='toggle_div_class("2")'> Upper Arms</label>
 								<!-- <label><input type="checkbox" class="additional-profile" id="mall-bust" onclick='toggle_div_class("3")'> Bust</label> -->
-								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("4")'> Midriff</label><br>
-								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("5")'> Stomach</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-bottom" onclick='toggle_div_class("6")'> Bottom</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-thighs" onclick='toggle_div_class("7")'> Inner Thighs</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-feet" onclick='toggle_div_class("9")'> Outer Thighs</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("3")'> Midriff</label><br>
+								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("4")'> Stomach</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-bottom" onclick='toggle_div_class("5")'> Bottom</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-thighs" onclick='toggle_div_class("6")'> Inner Thighs</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-feet" onclick='toggle_div_class("7")'> Outer Thighs</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-lowerlegs" onclick='toggle_div_class("8")'> Lower Legs</label>
 								
 								<!--<label><input type="checkbox" class="additional-profile" id="mall-none"> None</label>-->
