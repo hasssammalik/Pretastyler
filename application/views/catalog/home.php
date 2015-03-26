@@ -205,9 +205,9 @@
 						.on("slidechange", function(e,ui) {
 							default_values[5] = (+ui.value+1);
 							if( ui.value > 3 ){
-								$(".minBust-check").show();
+								$(".bustCheck").show();
 							} else {
-								$(".minBust-check").hide();
+								$(".bustCheck").hide();
 							}
 							pull_profile_garment();
 						});
@@ -232,6 +232,10 @@
 						});
 						
 						pull_profile_garment( );
+
+						$(document).on("change", ".minBust-check", function(){
+							pull_profile_garment();
+						});
 						
 					});
 					
@@ -254,9 +258,7 @@
 						});
 					}
 					
-					$(".profileWrap").on("change", ".minBust-check", function(){
-						pull_profile_garment();
-					});
+					
 
 				</script>
 				
@@ -335,7 +337,7 @@
 						<div class="homepageslider left sliderwrap-bust ">
 							<div class="newprofile-bust" id="circles-slider"></div>
 						</div>
-						<div class="bustCheck" style="float: right; font-size: 12px;">
+						<div class="bustCheck" style="display:none; float: right; font-size: 12px;">
 							<p>
 								<input type="checkbox" name="agree" class="minBust-check">
 								 Check if you DO NOT want styles selected that will minimise your bust size. (You've got it and you want to flaunt it!)
