@@ -80,45 +80,49 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    <!-- <li><a href="/about-us.html">ABOUT US</a></li> -->
 			    <?php if ($this->flexi_auth->is_logged_in()){ ?>
 			    	
-			    	<li class="userSub relative">
+			    	<li class="userSub relative menuBorder">
 			    		<span>ABOUT</span>
 			    		<ul class="userSubMenu">
+			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">How It Works</a></li>
 			    			<!-- <li><a href="/how-it-works.html">Take Tour</a></li> -->
 			    			<li><a href="/our-story.html" title="Know our story">Our Story</a></li>
 			    		</ul>
 			    	</li>
-			    	<li class=" relative"><a href="/faq.html" title="How things work">HELP</a></li>
-			    	<li class="userSub relative">
+			    	<li class="relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
+			    	<li class="userSub relative menuBorder">
 			    		<span>DRESSING ROOM</span>
 			    		<ul class="userSubMenu">
+			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/user/my-dressing-room.html">Wishlist</a></li>
 			    			<li><a href="/user/my-dressing-room.html">Assessed Items</a></li>
 			    			<li><a href="/user/my-dressing-room.html">Items Pending Assessment</a></li>
 			    		</ul>
 			    	</li>
-			    	<li class="userSub relative">
+			    	<!-- <li class="userSub relative menuBorder">
 			    		<span>STYLE BOARDS</span>
 			    		<ul class="userSubMenu">
-			    			<li><a href="/user/my-dressing-room.html">Create</a></li>
-			    			<li><a href="/user/my-dressing-room.html">Search</a></li>
-			    			<li><a href="/user/my-dressing-room.html">etc</a></li>
+			    			<li style="background-color: #555655;height: 6px;"> &nbsp; </li>
+			    			<li><a href="/boards/create.html">Create</a></li>
+			    			<li><a href="/boards/my.html">Search</a></li>
+			    			<li><a href="/user/loved.html">etc</a></li>
 			    		</ul>
-			    	</li>
-			    	<li class="userSub relative">
+			    	</li> -->
+			    	<li class="userSub relative menuBorder">
 			    		<span><?php print strtoupper($first_name) ?>'S ACCOUNT</span>
 			    		<ul class="userSubMenu">
+			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/user.html">Edit Profile</a></li>
 			    			<li><a href="/user/logout.html">Log Out</a></li>
 			    		</ul>
 			    	</li>
 					
 			    <?php } else { ?>
-					<li class=" relative"><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
-					<li class=" relative"><a href="/faq.html" title="How things work">HELP</a></li>
-					<li class=" relative"><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
-					<li class=" relative"><a href="/index.html#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
-					<li class=" relative"><a href="/useraccount/login.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
+					<li class=" relative menuBorder"><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
+					<li class=" relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
+					<li class=" relative menuBorder"><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
+					<li class=" relative menuBorder"><a href="/index.html#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
+					<li class=" relative menuBorder"><a href="/useraccount/login.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
 				<?php } ?>
 				
 				
