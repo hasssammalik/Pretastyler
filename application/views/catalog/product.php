@@ -316,41 +316,8 @@
 								
 								<div class="panelContent">
 									<div class="loginBox">
-										
-										<!-- <div class="product-signup">
-											<div class="signup-body">
-												<img src="/images/signup.png" width="58%" style="padding-top:5px;">
-												<div class="right" style="width:42%;margin-top:15px;">
-													<strong><i style="text-align:right;">We are PretaStyler and we are leading a shopping revolution.</i></strong>
-													<p>
-														Like fingerprints you have your very own unique set of body characteristics and personal style perferences that impact what garments suit you. </p>
-														<p>With Pretastyler's advanced technology you can have a fashion mall created exclusively for you, filled with clothes and accessories that are perfectly matched to flatter your shape. </p>
-														<p>To complete your look and ensure you look and feel amazing every time you walk out the door each garment also comes with expert style advice on how to wear the garment to perfection.</p>
-													</div>
-													<div class="clear"></div>
-
-												</div>
-												<div class="signup-form">
-													<form action="/" method="post" class="inputFieldPlaceholder">
-														<div style="float:left; width:70%;padding-left:10%;padding-top:15px" class="form-style">
-															<div style="width:100%;height:45px;">
-																<div class="form-input"><input type="text" placeholder="First Name" style="width:100%;" required></div>
-																<div class="form-input" style="margin-left:5px;"><input type="text" placeholder="Last Name" style="width:100%;" required></div>
-															</div>
-															<div style="width:100%;height:45px;">
-																<div class="form-input"><input type="text" placeholder="Email" style="width:100%;" required></div>
-																<div class="form-input" style="margin-left:5px;"><input type="text" placeholder="Password" style="width:100%;" required></div>
-															</div>
-														</div>
-														<div style="float:left;width:20%;">
-															<button><strong>SIGN UP</strong><BR>NOW</button>
-														</div>
-													</form>
-												</div>
-											</div> -->
 											<div class="homepage-header">
 												<div class="headerBackground">
-
 													<div class="headerBackground-content role-element leadstyle-container center">
 														<p style="font-size:36px; font-weight: bold;word-spacing:5px;letter-spacing:2px;">SHOPPING ONLINE<br>JUST GOT PERSONAL</p>
 														<p> <img width="70" src="/images/play.png" > </p>
@@ -366,6 +333,7 @@
 											</div>
 										</div>
 									</div>
+									<div class="clear"></div>
 								</div>
 								<?php } ?>
 							
