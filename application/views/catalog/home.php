@@ -232,6 +232,10 @@
 						});
 						
 						pull_profile_garment( );
+
+						$(document).on("change", ".minBust-check", function(){
+							pull_profile_garment();
+						});
 						
 					});
 					
@@ -254,9 +258,7 @@
 						});
 					}
 					
-					$(".profileWrap").on("change", ".minBust-check", function(){
-						pull_profile_garment();
-					});
+					
 
 				</script>
 				
