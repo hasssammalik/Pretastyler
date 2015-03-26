@@ -186,32 +186,30 @@
 					
 					$(function(){
 						
-						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
-						var size = [ "Allegra", "Natalie", "Halle","Kim", "Queen", "Amber","Rebel"];
-						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "66 - 75","76 >" ];
-						var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
-						var bodyratio = [ "Balanced Body","Long Legged Short Torso", "Short Legged Long Torso" ];
-						var bust = [ "< A", "B", "C", "D", "DD", "E >" ];
-						var build = [ "Small", "Medium", "Large" ];
+						var height 			= [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
+						var size 			= [ "Allegra", "Natalie", "Halle","Kim", "Queen", "Amber","Rebel"];
+						var age 			= [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "66 - 75","76 >" ];
+						var bodyshape 		= [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
+						var bodyratio 		= [ "Balanced Body","Long Legged Short Torso", "Short Legged Long Torso" ];
+						var bust 			= [ "< A", "B", "C", "D", "DD", "E >" ];
+						var build 			= [ "Small", "Medium", "Large" ];
 						
 
-						var necklength = [ "Short", "Med-short", "Medium", "Med-long", "Long" ];
-						var necktype = [ "Thin", "Average", "Wide", "Double chin", "No definition" ];
-						var shoulders = [ "Sloping", "Tapered", "Square" ];
-						var faceshape = [ "Oval", "Heart", "Inverted triangle", "Diamond", "Triangle", "Pear", "Rectangle", "Oblong", "Round", "Square" ];
+						var necklength 		= [ "Short", "Med-short", "Medium", "Med-long", "Long" ];
+						var shoulders 		= [ "Sloping", "Tapered", "Square" ];
+						var faceshape 		= [ "Oval", "Heart", "Inverted triangle", "Diamond", "Triangle", "Pear", "Rectangle", "Oblong", "Round", "Square" ];
 						
-						var neck = [ "Thin", "Average", "Wide", "Double Chin", "No Definition" ];
-						var upperback = [ "Dowagers Hump","Sway Back"];
-						var upperarms = [ "Too thin", "Too heavy", "Aged/Untoned" ];
+						var neck 			= [ "Thin", "Average", "Wide", "Double Chin", "No Definition" ];
+						var upperback 		= [ "Dowagers Hump","Sway Back"];
+						var upperarms 		= [ "Too thin", "Too heavy", "Aged/Untoned" ];
 						
-						var midriff = ["Moderate Roll", "Large roll" ];
+						var midriff 		= [ "Moderate Roll", "Large roll" ];
 						
-						var stomach = [ "Post Baby", "Moderate Tummy", "Too Soft", "Large Tummy" ];
-						var bottom = [ "Too Large", "Too Flat" ];
-						var thighs = [ "Rub Together", "Bowed Legs"];
-						var feet=["Too Protruding","Saddlebags"]
-						var lowerlegs = [ "Shapeless Calves","Shapeless Ankles", "Muscular/Heavy calves", "Thin Ankles" ];
-						
+						var stomach 		= [ "Post Baby", "Moderate Tummy", "Too Soft", "Large Tummy" ];
+						var bottom 			= [ "Too Large", "Too Flat" ];
+						var innerthighs 	= [ "Rub Together", "Bowed Legs" ];
+						var outerthighs 	= [ "Too  Protruding", "Saddlebags" ]
+						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Heavy calves", "Thin Ankles" ];
 						
 
 
@@ -251,7 +249,7 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features_-15.png" /></div><span>You consider yourself to be in the substantially overweight range<br>Your widest area is between your bust and hipline<br>You have a full, high stomach that starts just under your bustline.<br>Sometimes others may mistake you for being pregnant.</span></div>' 
 						];
 						var bodyratioimage = [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-09.png" /></div><span>You have a long body and short legs.<br>Weight gain is first experienced at your bottom, hips and thighs.<br>You have a low waistline.<br>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.<br>Use the vertical calculator if you are unsure.</span></div>',
+            			'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-09.png" /></div><span>You have a long body and short legs.<br>Weight gain is first experienced at your bottom, hips and thighs.<br>You have a low waistline.<br>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.<br>Use the vertical calculator if you are unsure.</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-07.png" /></div><span>Your torso is equal in length to your legs.<br>The fullest part of your bottom protrudes at approximately half your height.<br>Weight gain is first experienced between your bust and hipline.<br>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.<br>Use the vertical calculator if you are unsure.</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/features_-08.png" /></div><span>Your legs are longer than your body.<br>Your torso is short and your waistline feels/is high.<br>Weight gain is first experienced at your midriff, stomach and high on the back of your hips.<br>Bend your elbow 90% to the floor: you are a Long Legged and Short Bodied if your waist is above your bent elbow.<br>Use the vertical calculator if you are unsure.</span></div>',
 												];
@@ -285,14 +283,6 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-21.png" /></div><span>Your neck is just like that of most people you meet.<br>You have had no reason to question if it is shorter or longer than average.</span></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-22.png" /></div><span>Your neck is on the long side of average.<br>Wearing long drop earrings and high neck shirts and sweaters is no problem for you.<br>Plunging and very deep necklines do not look as good on you as those which are medium depth.</div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/neck length/features_-23.png" /></div><span>You are aware that you have a long neck.<br>If you are underweight your neck may appear very thin.<br>You look best with long hair i.e. shoulder length or longer.<br>Your neck length allows you to wear extra-long earrings without them dangling on your shoulders.<br>Plunging necklines look good only when your hair is worn down (shoulder length and longer).<br>Necklines that sit at the base of your neck can also be unflattering.</span></div>' 
-						];
-						
-						var necktypeimage = [ 
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-07.png" /></div><span></span></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-08.png" /></div><span></span></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
-						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-10.png" /></div><span></span></div>' 
 						];
 						
 						var shouldersimage = [ 
@@ -351,12 +341,12 @@
 						'<div class="hide"></div>'
 						];
 						
-						var thighsimage = [ 
+						var innerthighsimage = [ 
 						'<div class="hide"></div>',
 						'<div class="hide"></div>'
 						];
 
-						var feetimage=[
+						var outerthighsimage=[
 						'<div class="hide"></div>',
 						'<div class="hide"></div>'
 						];
@@ -367,7 +357,6 @@
 						'<div class="hide"></div>',
 						'<div class="hide"></div>'
 						];
-						
 						
 						
 
@@ -514,8 +503,8 @@
 
 
 
-
-
+						
+						
 						$(".newprofile-necklength")
 							.slider({
 								min: 0, 
@@ -531,24 +520,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[0] = (+ui.value+1);
-								pull_profile_garment();
-							});
-						
-						$(".newprofile-necktype")
-							.slider({
-								min: 0, 
-								max: necktype.length-1, 
-								value: default_values[1]-1
-							})
-							.slider("pips", {
-								labels: necktype
-							})
-							.slider("float", {
-								rest: "label",
-								labels: necktypeimage
-							})
-							.on("slidechange", function(e,ui) {
-								default_values[1] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -648,26 +619,6 @@
 							});
 						
 						
-						// $(".newprofile-bustother")
-						// 	.slider({
-						// 		min: 0, 
-						// 		max: bustother.length-1, 
-						// 		value: default_values[7]-1
-						// 	})
-						// 	.slider("pips", {
-						// 		labels: bustother
-						// 	})
-						// 	.slider("float", {
-						// 		rest: "label",
-						// 		labels: bustotherimage
-						// 	})
-						// 	.on("slidechange", function(e,ui) {
-						// 		default_values[7] = (+ui.value+1);
-						// 		pull_profile_garment();
-						// 	});
-						
-						
-						
 						$(".newprofile-midriff")
 							.slider({
 								min: 0, 
@@ -725,30 +676,47 @@
 							});
 						
 						
-						$(".newprofile-thighs")
+						$(".newprofile-innerthighs")
 							.slider({
 								min: 0, 
-								max: thighs.length-1, 
+								max: innerthighs.length-1, 
 								value: default_values[11]-1
 							})
 							.slider("pips", {
-								labels: thighs
+								labels: innerthighs
 							})
 							.slider("float", {
 								rest: "label",
-								labels: thighsimage
+								labels: innerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[11] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
+						$(".newprofile-outerthighs")
+							.slider({
+								min: 0, 
+								max: outerthighs.length-1, 
+								value: default_values[13]-1
+							})
+							.slider("pips", {
+								labels: outerthighs
+							})
+							.slider("float", {
+								rest: "label",
+								labels: outerthighsimage
+							})
+							.on("slidechange", function(e,ui) {
+								default_values[13] = (+ui.value+1);
+								pull_profile_garment();
+							});
 						
 						$(".newprofile-lowerlegs")
 							.slider({
 								min: 0, 
 								max: lowerlegs.length-1, 
-								value: default_values[12]-1
+								value: default_values[13]-1
 							})
 							.slider("pips", {
 								labels: lowerlegs
@@ -758,28 +726,10 @@
 								labels: lowerlegsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[12] = (+ui.value+1);
-								pull_profile_garment();
-							});
-						
-						
-						$(".newprofile-feet")
-							.slider({
-								min: 0, 
-								max: feet.length-1, 
-								value: default_values[13]-1
-							})
-							.slider("pips", {
-								labels: feet
-							})
-							.slider("float", {
-								rest: "label",
-								labels: feetimage
-							})
-							.on("slidechange", function(e,ui) {
 								default_values[13] = (+ui.value+1);
 								pull_profile_garment();
 							});
+						
 
 
 
@@ -801,29 +751,31 @@
 						}
 
 
-						var requestvalues = {   
-							
-							"height_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['height_select_id']; ?>,
-							"weight_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['weight_select_id']; ?>,
-							"age_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['age_select_id']; ?>,
-							"horizontal_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['horizontal_select_id']; ?>,
-							"vertical_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['vertical_select_id']; ?>,
-							"bra_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['bra_select_id']; ?>,
-							"minBust" : <?php echo  $this->session->userdata['initial_user_profile']['minBust']; ?>,
+						var requestvalues = { 
 
-							"neck_length_select_id" : default_values[0],
+							"height_select_id" : default_values[0],
+							"weight_select_id" : default_values[1],
+							"age_select_id" : default_values[2],
+							"body_shape_select_id" : default_values[3],
+							"body_ratio_select_id" : default_values[4],
+							"bra_select_id" : default_values[5],
+							"build_select_id" : default_values[6],
+							"minBust" : input_minBust
+
+							"neck_length_select_id" : default_values[7],
+							"shoulders_select_id" : default_values[8],
+							"face_shape_select_id" : default_values[9],
 							
-							"shoulders_select_id" : default_values[2],
-							"face_select_id" : default_values[3],
+							"neck_select_id" : default_values[11],
+							"back_select_id" : default_values[12],
+							"upper_arms_select_id" : default_values[13],
+							"midriff_select_id" : default_values[14],
 							
-							"neck_thickness_select_id" : default_values[4],
-							"prominent_back_select_id" : default_values[5],
-							"prominent_arms_select_id" : default_values[6],
-							
-							"prominent_stomach_select_id" : default_values[9],
-							
-							"prominent_legs_select_id" : default_values[12],
-							
+							"stomach_select_id" : default_values[15],
+							"bottom_select_id" : default_values[16],
+							"inner_thighs_select_id" : default_values[17],
+							"outer_thighs_select_id" : default_values[18],
+							"lower_legs_select_id" : default_values[19]
 							
 						};
 						
@@ -1009,8 +961,7 @@
 								<label><input type="checkbox" class="additional-profile" id="mall-feet" onclick='toggle_div_class("7")'> Outer Thighs</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-lowerlegs" onclick='toggle_div_class("8")'> Lower Legs</label>
 								
-								<!--<label><input type="checkbox" class="additional-profile" id="mall-none"> None</label>-->
-								
+
 							</div>
 						</div>
 						<div class="clear"></div>
