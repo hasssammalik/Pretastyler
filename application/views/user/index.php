@@ -936,6 +936,10 @@
 					<br>
 
 
+
+
+
+
 					<div class="home-profile home-profile-necklength">
 						
 						<div class="slider-name left">
@@ -946,7 +950,11 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					
+
+					<div class="clear"></div>
+					<br>
+
+
 					<div class="home-profile home-profile-necktype">
 						<div class="slider-name left">
 							<p>NECK TYPE</p>
@@ -956,7 +964,10 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					
+
+					<div class="clear"></div>
+
+
 					<div class="home-profile home-profile-shoulders">
 						<div class="slider-name left">
 							<p>SHOULDERS</p>
