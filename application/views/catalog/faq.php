@@ -41,7 +41,7 @@
 				<div class="faq-body">
 					A fashion retail platform which revolutionizes the way women shop online by creating individually stocked malls filled with items specifically selected to flatter your their shape, age and style preferences.   
 					Like your fingerprints, you own a unique set of body characteristics and personal style preferences that impact which types of garments and accessories suit you.
-					With PrêtàStyler’s advanced technology you can have a fashion mall created exclusively for you, filled with clothes and accessories that are perfectly matched to flatter your shape.
+					<br><br>With PrêtàStyler’s advanced technology you can have a fashion mall created exclusively for you, filled with clothes and accessories that are perfectly matched to flatter your shape.
 					To complete your look and ensure you look and feel amazing every time you walk out the door each garment also comes with expert style advice on how to wear the garment to perfection.
 				</div>
 			</div>
@@ -50,16 +50,12 @@
 					A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
 				</div>
 				<div class="faq-body">
-					a. Getting Started
-					Hey there, we’re glad you’re considering PrêtàStyler.  We have so many cool things in development for PrêtàStyler and we’d love to share them with you.
-					You can sign up from our [home page] or via the [Sign up page].
-					From the home page the first step is to fill in your profile (body features) and create a password. From that point you will be given a 14 day free trial period to check us out.  Upon completion ofAfter completing your profile your personalized mall will be stocked and the fun begins!
-					After the trial period there is a $9 membership fee per month.   
-					b. What’s in the sneaky fine print, where’s the catch?
-					It’s so cool to see someone concerned enough to ask! We care about protecting our member’s interests’ too. That being said we have nothing to hide, and we welcome you to view our Terms of Use below: Paste terms and conditions here
-					c. Free Trial Period
-					Membership comes with a 14 day free trial the period.  A counter on the menu bar of each page will show the days you have left.
-					Over the your next first week you will be sent introductory emails that explain how to get the most benefit from PrêtàStyler.
+					Registration is through this [page] and costs $9 per month.
+					Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
+					1. Click <a href="">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
+					2. Enter you Name and Email
+					3. Chosse a Password (must be alphanumberic - letters and numbers only)
+					4. Confirm the same Password
 				</div>
 
 			</div>
