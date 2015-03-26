@@ -83,7 +83,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    	<li class="userSub relative menuBorder">
 			    		<span>ABOUT</span>
 			    		<ul class="userSubMenu">
-			    			<li style="background-color: #555655;height: 6px;"> &nbsp; </li>
+			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">How It Works</a></li>
 			    			<!-- <li><a href="/how-it-works.html">Take Tour</a></li> -->
 			    			<li><a href="/our-story.html" title="Know our story">Our Story</a></li>
@@ -93,13 +93,13 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    	<li class="userSub relative menuBorder">
 			    		<span>DRESSING ROOM</span>
 			    		<ul class="userSubMenu">
-			    			<li style="background-color: #555655;height: 6px;"> &nbsp; </li>
+			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/user/my-dressing-room.html">Wishlist</a></li>
 			    			<li><a href="/user/my-dressing-room.html">Assessed Items</a></li>
 			    			<li><a href="/user/my-dressing-room.html">Items Pending Assessment</a></li>
 			    		</ul>
 			    	</li>
-			    	<li class="userSub relative menuBorder">
+			    	<!-- <li class="userSub relative menuBorder">
 			    		<span>STYLE BOARDS</span>
 			    		<ul class="userSubMenu">
 			    			<li style="background-color: #555655;height: 6px;"> &nbsp; </li>
@@ -107,11 +107,11 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    			<li><a href="/boards/my.html">Search</a></li>
 			    			<li><a href="/user/loved.html">etc</a></li>
 			    		</ul>
-			    	</li>
+			    	</li> -->
 			    	<li class="userSub relative menuBorder">
 			    		<span><?php print strtoupper($first_name) ?>'S ACCOUNT</span>
 			    		<ul class="userSubMenu">
-			    			<li style="background-color: #555655;height: 6px;"> &nbsp; </li>
+			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/user.html">Edit Profile</a></li>
 			    			<li><a href="/user/logout.html">Log Out</a></li>
 			    		</ul>
