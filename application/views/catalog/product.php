@@ -316,7 +316,7 @@
 								
 								<div class="panelContent">
 									<div class="loginBox">
-										
+
 											<div class="homepage-header">
 												<div class="headerBackground">
 													<div class="headerBackground-content role-element leadstyle-container center">
@@ -339,8 +339,6 @@
 									
 								</div>
 								<?php } ?>
-							
-							
 							<div class="panel2 newpanelDesign" id="similarItems">
 								<div class="panelHeader">Similar Items that suit you</div>
 								<div class="panelContent">
