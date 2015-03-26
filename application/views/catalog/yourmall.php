@@ -11,7 +11,7 @@
 		-->
 		
 		
-		<section class="role-element container wid60" id="the-product">
+		<section class="role-element container wid60 preta-tooltip" id="the-product">
 			
 			<div class="wid100">
 				<?php echo form_open();  echo form_close();  ?>
@@ -21,15 +21,6 @@
 					
 					$(function(){
 						
-						/*
-							var height = [ "short", "med-short", "medium", "med-tall", "tall" ];
-							var size = [ "allegra", "natalie", "halle", "drew", "america", "kim", "queen", "ophra" ];
-							var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "", "75 >" ];
-							var bodyshape = [ "hour glass", "inverted triangle", "rectangle", "triangle", "oval", "diamond"];
-							var bodyratio = [ "long legged short torso", "balanced body", "short legged long torso" ];
-							var bust = [ "aa", "a", "b", "c", "d", "dd", "e", "ee>" ];
-							var build = [ "small", "medium", "large" ];
-						*/
 						
 						var necklength = [ "Short", "Med-short", "Medium", "Med-long", "Long" ];
 						var necktype = [ "Thin", "Average", "Wide", "Double chin", "No definition" ];
@@ -60,15 +51,15 @@
 						];
 						
 						var necktypeimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div><span></span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div><span></span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div><span></span></div>' 
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-07.png" /></div><span></span></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-08.png" /></div><span></span></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-09.png" /></div><span></span></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/features_-10.png" /></div><span></span></div>' 
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span style="padding:5px;">Your shoulders have a definite slope from<br> the base of your neck to the tip of your shoulder.<br> Shoulder straps will tend to slip off your shoulders..</span></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-24.png" /></div><span style="padding:5px;">Your shoulders have a definite slope from the base of your neck to<br> the tip of your shoulder. Shoulder straps will tend to slip off your shoulders..</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-25.png" /></div><span>Your shoulders have a slight slope.</span></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/features_-26.png" /></div>Your shoulders are broad and square with almost no slope<span></span></div>' 
 						];
@@ -97,21 +88,20 @@
 						];
 						
 						var upperbackimage = [ 
-						'<div class="hide">test</div>',
-						'<div class="hide">test</div>' 
+						'<div class="hide"></div>',
+						'<div class="hide"></div>' 
 						];
 						
 						var upperarmsimage = [ 
-						'<div class="hide">test</div>',
-						'<div class="hide">test</div>',
-						'<div class="hide">test</div>'
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						
 						
-						
 						var midriffimage = [ 
-						'<div class="hide">test</div>',
-						'<div class="hide">test</div>'
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						
 						var stomachimage = [ 
@@ -130,8 +120,11 @@
 						'<div class="hide"></div>',
 						'<div class="hide"></div>'
 						];
-						var feetimage=['<div class="hide"></div>',
-						'<div class="hide"></div>'];
+
+						var feetimage=[
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
+						];
 						
 						var lowerlegsimage = [ 
 						'<div class="hide"></div>',
@@ -437,6 +430,7 @@
 							"horizontal_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['horizontal_select_id']; ?>,
 							"vertical_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['vertical_select_id']; ?>,
 							"bra_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['bra_select_id']; ?>,
+							"minBust" : <?php echo  $this->session->userdata['initial_user_profile']['minBust']; ?>,
 							
 							"neck_length_select_id" : default_values[0],
 							
