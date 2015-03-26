@@ -172,7 +172,12 @@
 		</div>
 		
 
-
+		<style type="text/css">
+		 .profileWrap p {
+	    		font-size: 14px;
+	    		font-size: 0.875rem;
+	    	}
+		</style>
 
 
 
