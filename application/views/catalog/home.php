@@ -12,11 +12,6 @@
 						Find everything that suits you in one perfect place<br>
 						'Your Exclusive Fashion Mall'
 					</p>
-					
-					<p>
-						<br>
-						<a href="#profile">Learn more</a>
-					</p>
 				</div>
 				
 			</div>
@@ -83,13 +78,13 @@
 						var bustimage = 
 						[ 
 						'<div id="talkbubble"><span>Select this size if you have had a bilateral mastectomy and do not wear a prosthesis</span></div>',
-						/*'<div id="talkbubble"></div>',
-						'<div id="talkbubble"></div>',
-						'<div id="talkbubble"></div>',
-						'<div id="talkbubble"></div>', 
-						'<div id="talkbubble"></div>',
-						'<div id="talkbubble"></div>',
-						'<div id="talkbubble"></div>'*/
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>', 
+						'<div class="hide"></div>',
+						'<div class="hide"></div>',
+						'<div class="hide"></div>'
 						];
 						var buildimage = 
 						[ 
