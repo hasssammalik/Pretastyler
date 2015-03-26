@@ -734,14 +734,11 @@
 							});
 						
 
-						// neck default_values[11];
-						var hiddenVar = 0;
 						for (var i = 11; i < 20; i++) {
 							if( default_values[i] > 0 ){
-								toggle_div_class(hiddenVar);
-								$( ".profile-your-mall-hidden-"+hiddenVar ).prop( "checked" );
+								$('.your-mall-checkbox > label').eq(i-11).find('input').prop('checked', true);
+								toggle_div_class(i-11);
 							}
-							hiddenVar++;
 						};
 						
 
