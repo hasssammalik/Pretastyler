@@ -205,9 +205,9 @@
 						.on("slidechange", function(e,ui) {
 							default_values[5] = (+ui.value+1);
 							if( ui.value > 3 ){
-								$(".minBust-check").show();
+								$(".bustCheck").show();
 							} else {
-								$(".minBust-check").hide();
+								$(".bustCheck").hide();
 							}
 							pull_profile_garment();
 						});
