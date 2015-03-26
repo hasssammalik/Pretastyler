@@ -75,26 +75,53 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 		<div class="bgHeader"><img src="/images/topbanner/<?php echo rand(1, 7) ?>.jpg" alt=""></div>
 		<?php } */ ?>
 		<header>
-			<ul class="userMenu">
-			    <li><a href="/mall.html" title="My personally curated fashion feed.">MALL</a></li>
+			<ul class="userMenu relative">
+			    <li class=" relative"><a href="/mall.html" title="My personally curated fashion feed.">MALL</a></li>
 			    <!-- <li><a href="/about-us.html">ABOUT US</a></li> -->
-			    <?php if (!$this->flexi_auth->is_logged_in()){ ?>
-			    	<li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
-			    <?php } ?>
-				
-				<li><a href="/faq.html" title="How things work">HELP</a></li>
-				<li><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">BLOG</a></li>
-			    
 			    <?php if ($this->flexi_auth->is_logged_in()){ ?>
-					<li><a href="/user.html" title="Your account details and profile"><i class="icon-user"></i>Welcome <span class="myuserName"><?php print $first_name ?></span></a></li>
-					<li><a href="/user/logout.html"><i class="icon-lock"></i>Log Out</a></li>
-				<?php } else { ?>
-				
-					<li><a href="/index.html#profile"><i class="icon-user"></i>SIGN-UP</a></li>
-					<li><a href="/useraccount/login.html"><i class="icon-lock"></i>LOGIN</a></li>
-
+			    	
+			    	<li class="userSub relative">
+			    		<span>ABOUT</span>
+			    		<ul class="userSubMenu">
+			    			<li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">How It Works</a></li>
+			    			<!-- <li><a href="/how-it-works.html">Take Tour</a></li> -->
+			    			<li><a href="/our-story.html" title="Know our story">Our Story</a></li>
+			    		</ul>
+			    	</li>
+			    	<li class=" relative"><a href="/faq.html" title="How things work">HELP</a></li>
+			    	<li class="userSub relative">
+			    		<span>DRESSING ROOM</span>
+			    		<ul class="userSubMenu">
+			    			<li><a href="/user/my-dressing-room.html">Wishlist</a></li>
+			    			<li><a href="/user/my-dressing-room.html">Assessed Items</a></li>
+			    			<li><a href="/user/my-dressing-room.html">Items Pending Assessment</a></li>
+			    		</ul>
+			    	</li>
+			    	<li class="userSub relative">
+			    		<span>STYLE BOARDS</span>
+			    		<ul class="userSubMenu">
+			    			<li><a href="/user/my-dressing-room.html">Create</a></li>
+			    			<li><a href="/user/my-dressing-room.html">Search</a></li>
+			    			<li><a href="/user/my-dressing-room.html">etc</a></li>
+			    		</ul>
+			    	</li>
+			    	<li class="userSub relative">
+			    		<span><?php print $first_name ?>'S ACCOUNT</span>
+			    		<ul class="userSubMenu">
+			    			<li><a href="/user.html">Edit Profile</a></li>
+			    			<li><a href="/user/logout.html">Log Out</a></li>
+			    		</ul>
+			    	</li>
+					
+			    <?php } else { ?>
+					<li class=" relative"><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
+					<li class=" relative"><a href="/faq.html" title="How things work">HELP</a></li>
+					<li class=" relative"><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
+					<li class=" relative"><a href="/index.html#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
+					<li class=" relative"><a href="/useraccount/login.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
 				<?php } ?>
-
+				
+				
 			</ul>
 			<!-- <a href="#" id="menuButton" class="sqBtn light"><i class="icon-menu"></i></a> -->
 			
