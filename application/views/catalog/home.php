@@ -29,14 +29,14 @@
 			
 				<script type="text/javascript">
 					
-					var default_values = [3,4,2,4,2,5,2];
+					var default_values = [3,5,2,4,1,5,2];
 					
 					$(function(){
 						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
-						var size = [ "Allegra", "Natalie", "Halle", "Drew", "America", "Kim", "Queen", "Ophra" ];
-						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "75 >" ];
+						var size = [ "Allegra", "Natalie", "Halle","Kim", "Queen", "Amber","Rebel"];
+						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "66 - 75","76 >" ];
 						var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
-						var bodyratio = [ "Long Legged Short Torso", "Balanced Body", "Short Legged Long Torso" ];
+						var bodyratio = [ "Balanced Body","Long Legged Short Torso", "Short Legged Long Torso" ];
 						var bust = [ "AA", "A", "B", "C", "D", "DD", "E", "EE >" ];
 						var build = [ "Small", "Medium", "Large" ];
 						
@@ -56,7 +56,6 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-41.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-42.png" /></div></div>', 
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-43.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-44.png" /></div></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-45.png" /></div></div>'
 						];
 						var ageimage = 
@@ -280,7 +279,7 @@
 					
 					<div class="home-profile home-profile-size">
 						<div class="slider-name left">
-							<p>SIZE</p>
+							<p>WEIGHT</p>
 						</div>
 						<div class="homepageslider left sliderwrap-size">
 							<div class="newprofile-size" id="circles-slider"></div>
