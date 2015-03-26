@@ -783,11 +783,6 @@
 
 
 
-
-
-						
-						pull_profile_garment( );
-
 						$(document).on("change", ".minBust-check", function(){
 							pull_profile_garment();
 						});
@@ -919,7 +914,9 @@
 						</div>
 						<div class="clear"></div>
 					</div>
+
 					<br>
+					
 					<div class="home-profile home-profile-build">
 						<div class="slider-name left">
 							<p>BUILD</p>
@@ -935,8 +932,8 @@
 					
 
 
-
-
+					<div class="clear"></div>
+					<br>
 
 
 					<div class="home-profile home-profile-necklength">
@@ -990,23 +987,10 @@
 						
 						<div class="homepageslider left area-of-concern">
 							<div class="your-mall-checkbox big-checkbox">
-								<?php /* ?>
-									<label><input type="checkbox" name="addedneck" class="additional-profile mall-neck"> Neck</label>
-									<label><input type="checkbox" name="addedupperback" class="additional-profile mall-upperback"> Upper Back</label>
-									<label><input type="checkbox" name="addedupperarms" class="additional-profile mall-upperarms"> Upper Arms</label>
-									<label><input type="checkbox" name="addedbust" class="additional-profile mall-bust"> Bust</label>
-									<label><input type="checkbox" name="addedmidriff" class="additional-profile mall-midriff"> Midriff</label>
-									<label><input type="checkbox" name="addedstomach" class="additional-profile mall-stomach"> Stomach</label>
-									<label><input type="checkbox" name="addedbottom" class="additional-profile mall-bottom"> Bottom</label>
-									<label><input type="checkbox" name="addedthighs" class="additional-profile mall-thighs"> Thighs</label>
-									<label><input type="checkbox" name="addedlowerlegs" class="additional-profile mall-lowerlegs"> Lower Legs</label>
-									<label><input type="checkbox" name="addedfeet" class="additional-profile mall-feet"> Feet</label>
-								<?php */ ?>
 								
 								<label><input type="checkbox" class="additional-profile" id="mall-neck" onclick='toggle_div_class("0")'> Neck</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-upperback" onclick='toggle_div_class("1")'> Upper Back</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-upperarms" onclick='toggle_div_class("2")'> Upper Arms</label>
-								<!-- <label><input type="checkbox" class="additional-profile" id="mall-bust" onclick='toggle_div_class("3")'> Bust</label> -->
 								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("3")'> Midriff</label><br>
 								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("4")'> Stomach</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-bottom" onclick='toggle_div_class("5")'> Bottom</label>
@@ -1055,16 +1039,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<!-- <div class="home-profile profile-your-mall-hidden-3 home-profile-bustother" id="you_mall_bustother" style="display:none;">
-						<div class="slider-name left">
-							<p>BUST</p>
-						</div>
-						
-						<div class="homepageslider left sliderwrap-bustother">
-							<div class="newprofile-bustother" id="circles-slider"></div>
-						</div>
-						<div class="clear"></div>
-					</div> -->
+					
 					
 					<div class="home-profile profile-your-mall-hidden-3 home-profile-midriff" id="you_mall_midriff" style="display:none;">
 						<div class="slider-name left" >
@@ -1137,7 +1112,7 @@
 
 
 
-					
+
 				</div>
 				
 			</div>
