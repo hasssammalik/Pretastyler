@@ -739,6 +739,7 @@
 						for (var i = 11; i < 20; i++) {
 							if( default_values[i] > 0 ){
 								toggle_div_class(hiddenVar);
+								$( ".profile-your-mall-hidden-"+hiddenVar ).prop( "checked" );
 							}
 							hiddenVar++;
 						};
