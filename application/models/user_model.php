@@ -372,10 +372,18 @@ class User_model extends CI_Model
 	 *
 	 * @return garment array ()
 	 */
-	public function generate_user_specs($user_id)
+	public function generate_user_specs($user_id, $input_user_data = FALSE)
 	{
-		$user_info = $this->get_user_info($user_id);
+		$user_info = array();
+		$fromdb = TRUE;
+		if (!empty($input_user_data)) {
+			$user_info = $this->get_user_info($user_id);
+		} else {
+			$fromdb = FALSE;
+			$user_info = $input_user_data;
+		}
 		$user_spec = array();
+		//This is an outdated table. Latest one please see upgrade document.
 		//P34 - P47, P73 Prominent
 		//H11 - H16 Horizontal
 		//N17 - N21 Neck Length
@@ -385,20 +393,24 @@ class User_model extends CI_Model
 		//B53 - B55 Bone
 		//F60 - F70 Face
 		//A56 - A59, A71 - A72 Age
-		$sql_others = "SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_arms' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_back' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_legs' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_stomach' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'horizontal' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck_length' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck_thickness' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'shoulders' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'weight' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'bone' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'face' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'age'";
+		$sql_others = "SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'upper_arms' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'back' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'lower_legs' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'stomach' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'body_shape' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck_length' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'shoulders' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'weight' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'build' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'face_shape' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'age' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'midriff' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'bottom' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'inner_thighs' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'outer_thighs'";
 		$sql_ids = array(
-			$user_info['prominent_arms_select_id'],
-			$user_info['prominent_back_select_id'],
-			$user_info['prominent_legs_select_id'],
-			$user_info['prominent_stomach_select_id'],
-			$user_info['horizontal_select_id'],
+			$user_info['upper_arms_select_id'],
+			$user_info['back_select_id'],
+			$user_info['lower_legs_select_id'],
+			$user_info['stomach_select_id'],
+			$user_info['body_shape_select_id'],
 			$user_info['neck_length_select_id'],
-			$user_info['neck_thickness_select_id'],
+			$user_info['neck_select_id'],
 			$user_info['shoulders_select_id'],
 			$user_info['weight_select_id'],
-			$user_info['bone_select_id'],
-			$user_info['face_select_id'],
+			$user_info['build_select_id'],
+			$user_info['face_shape_select_id'],
 			$user_info['age_select_id'],
+			$user_info['midriff_select_id'],
+			$user_info['bottom_select_id'],
+			$user_info['inner_thighs_select_id'],
+			$user_info['outer_thighs_select_id'],
 		);
 		$query = $this->db->query($sql_others, $sql_ids);
 		$results = $query->result_array();
@@ -406,12 +418,12 @@ class User_model extends CI_Model
 			$user_spec[] = $result['user_spec'];
 		}
 		//V01 - V10 Vertical + Height
-		if ($user_info['vertical_select_id'] == 1){
+		if ($user_info['body_ratio_select_id'] == 1){
 			//vertical is balanced
 			if ($user_info['height_select_id'] == 1) {
 				//height is short
 				if ($user_info['weight_select_id'] >=4) {
-					//weight is overweight, 4 5 6
+					//weight is overweight, 4 5 6 7
 					$user_spec[] = 'V09';
 				} else {
 					$user_spec[] = 'V10';
@@ -423,7 +435,7 @@ class User_model extends CI_Model
 				//else height, medium short, medium, medium tall
 				$user_spec[] = 'V08';
 			}
-		} else if ($user_info['vertical_select_id'] == 2){
+		} else if ($user_info['body_ratio_select_id'] == 2){
 			//veritcal is long
 			if ($user_info['height_select_id'] == 1) {
 				//height is short
@@ -435,7 +447,7 @@ class User_model extends CI_Model
 				//else height, medium short, medium, medium tall
 				$user_spec[] = 'V02';
 			}
-		} else if ($user_info['vertical_select_id'] == 3){
+		} else if ($user_info['body_ratio_select_id'] == 3){
 			//vertical is short
 			if ($user_info['height_select_id'] == 1) {
 				//height is short
@@ -474,180 +486,21 @@ class User_model extends CI_Model
 		} else if ($user_info['bra_select_id'] == 6){
 			$user_spec[] = 'B74';
 		}
-		//update or insert
-		$user_spec_data = array(
-			'user_id' => $user_id, 
-			'column' => implode(',', $user_spec),
-		);
-		$this->db->from('user_specs')->where('user_id', $user_id);
-		if ($this->db->count_all_results() == 0){
-			$query = $this->db->insert('user_specs', $user_spec_data);
-		} else {
-			$query = $this->db->update('user_specs', $user_spec_data, array('user_id' => $user_id));
-		}
-	}
-	/**
-	 * generate_user_specs_from_profile
-	 * Update user's spec by user_id 
-	 * 
-	 *
-	 * @return garment array ()
-	 */
-	public function generate_user_specs_from_profile( $user_info )
-	{
-		
-		$user_spec = array();
-		//P34 - P47, P73 Prominent
-		//H11 - H16 Horizontal
-		//N17 - N21 Neck Length
-		//N22 - N24 Neck Thickness
-		//S27 - S28 Shoulder
-		//W58 - W52, W69 Weight
-		//B53 - B55 Bone
-		//F60 - F70 Face
-		//A56 - A59, A71 - A72 Age
-		
-		$sql_others = "SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'horizontal' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'weight' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'age' ";
-		
-		$sql_ids = array(
-			$user_info['horizontal_select_id'],
-			$user_info['weight_select_id'],
-			$user_info['age_select_id']
-		);
-		
-		if( !empty( $user_info['neck_length_select_id']) ) {
-			
-			$sql_others .= " UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck_length' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'shoulders' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'face'  ";
-			
-			$sql_ids[] = $user_info['neck_length_select_id'];
-			$sql_ids[] = $user_info['shoulders_select_id'];
-			$sql_ids[] = $user_info['face_select_id'];
-			
-			if( !empty( $user_info['neck_thickness_select_id']) ){
-				$sql_others .= " UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck_thickness' ";
-			
-				$sql_ids[] = $user_info['neck_thickness_select_id'];
-			}
-			if( !empty( $user_info['prominent_back_select_id']) ){
-				$sql_others .= " UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_back' ";
-			
-				$sql_ids[] = $user_info['prominent_back_select_id'];
-			}
-			if( !empty( $user_info['prominent_arms_select_id']) ){
-				$sql_others .= " UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_arms' ";
-			
-				$sql_ids[] = $user_info['prominent_arms_select_id'];
-			}
-			if( !empty( $user_info['prominent_stomach_select_id']) ){
-				$sql_others .= " UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_stomach' ";
-			
-				$sql_ids[] = $user_info['prominent_stomach_select_id'];
-			}
-			if( !empty( $user_info['prominent_legs_select_id']) ){
-				$sql_others .= " UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_legs' ";
-			
-				$sql_ids[] = $user_info['prominent_legs_select_id'];
-			}
-		}
-		
-		/*
-		if( !empty( $user_info['prominent_legs_select_id'])) {
-			
-			$sql_others = "SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_arms' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_back' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_legs' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'prominent_stomach' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'horizontal' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck_length' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'neck_thickness' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'shoulders' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'weight' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'bone' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'face' UNION SELECT user_spec FROM pas_user_value WHERE select_id = ? AND type = 'age'";
-			
-			$sql_ids = array(
-				$user_info['prominent_arms_select_id'],
-				$user_info['prominent_back_select_id'],
-				$user_info['prominent_legs_select_id'],
-				$user_info['prominent_stomach_select_id'],
-				$user_info['horizontal_select_id'],
-				$user_info['neck_length_select_id'],
-				$user_info['neck_thickness_select_id'],
-				$user_info['shoulders_select_id'],
-				$user_info['weight_select_id'],
-				$user_info['bone_select_id'],
-				$user_info['face_select_id'],
-				$user_info['age_select_id'],
+		if ($fromdb) {
+			//update or insert
+			$user_spec_data = array(
+				'user_id' => $user_id, 
+				'column' => implode(',', $user_spec),
 			);
-		
-		} */
-		
-		$query = $this->db->query($sql_others, $sql_ids);
-		$results = $query->result_array();
-		foreach ($results as $result) {
-			$user_spec[] = $result['user_spec'];
+			$this->db->from('user_specs')->where('user_id', $user_id);
+			if ($this->db->count_all_results() == 0){
+				$query = $this->db->insert('user_specs', $user_spec_data);
+			} else {
+				$query = $this->db->update('user_specs', $user_spec_data, array('user_id' => $user_id));
+			}
+		} else {
+			return implode(',', $user_spec);
 		}
-		//V01 - V10 Vertical + Height
-		if ($user_info['vertical_select_id'] == 1){
-			//vertical is balanced
-			if ($user_info['height_select_id'] == 1) {
-				//height is short
-				if ($user_info['weight_select_id'] >=4) {
-					//weight is overweight, 4 5 6
-					$user_spec[] = 'V09';
-				} else {
-					$user_spec[] = 'V10';
-				}
-			} else if ($user_info['height_select_id'] == 5) {
-				//height is tall
-				$user_spec[] = 'V07';
-			} else {
-				//else height, medium short, medium, medium tall
-				$user_spec[] = 'V08';
-			}
-		} else if ($user_info['vertical_select_id'] == 2){
-			//veritcal is long
-			if ($user_info['height_select_id'] == 1) {
-				//height is short
-				$user_spec[] = 'V03';
-			} else if ($user_info['height_select_id'] == 5) {
-				//height is tall
-				$user_spec[] = 'V01';
-			} else {
-				//else height, medium short, medium, medium tall
-				$user_spec[] = 'V02';
-			}
-		} else if ($user_info['vertical_select_id'] == 3){
-			//vertical is short
-			if ($user_info['height_select_id'] == 1) {
-				//height is short
-				$user_spec[] = 'V06';
-			} else if ($user_info['height_select_id'] == 5) {
-				//height is tall
-				$user_spec[] = 'V04';
-			} else {
-				//else height, medium short, medium, medium tall
-				$user_spec[] = 'V05';
-			}
-		}
-		//B29 - B33, B74 Bra + minBust + Height
-		if ($user_info['bra_select_id'] == 1){
-			$user_spec[] = 'B29';
-		} else if ($user_info['bra_select_id'] == 2){
-			$user_spec[] = 'B30';
-		} else if ($user_info['bra_select_id'] == 3){
-			if ($user_info['height_select_id'] == 1 && $user_info['minBust']){
-				$user_spec[] = 'B32';
-			} else {
-				$user_spec[] = 'B31';
-			}
-		} else if ($user_info['bra_select_id'] == 4){
-			if ($user_info['height_select_id'] == 1 && $user_info['minBust']){
-				$user_spec[] = 'B33';
-			} else {
-				$user_spec[] = 'B32';
-			}
-		} else if ($user_info['bra_select_id'] == 5){
-			if ($user_info['height_select_id'] == 1 && $user_info['minBust']){
-				$user_spec[] = 'B74';
-			} else {
-				$user_spec[] = 'B33';
-			}
-		} else if ($user_info['bra_select_id'] == 6){
-			$user_spec[] = 'B74';
-		}
-		return implode(',', $user_spec);
-		
 	}
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
 	// Insert User Info
