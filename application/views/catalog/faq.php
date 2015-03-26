@@ -62,6 +62,7 @@
 	</div>
 	<div class="half">
 		<div class="faqs">
+			<div class="faqs-header">FAQs:</div>
 			<div>
 				<form action="" method="get" nama="faqForm" >
 					<input type="text" placeholder="Type your question" name="question" />
@@ -69,24 +70,24 @@
 			</div>
 			<div><strong>WHAT IS PRÊTÀSTYLER?</strong></div>
 			<div>
-				<div>
-					<p style="font-style:italic;"><strong>SIGNING UP/ MEMBERSHIP</strong></p>
-					<p style="padding-left:30px;">
-						<ul>
-							<li>a. How Do I Sign Up and What's Required?</li>
-							<li>What's in the sneaky fine print, where's the catch?</li>
-							<li>Is There a Free Version?</li>
-							<li>Free Trials</li>
-							<li>Updating Your Details</li>
-							<li>Deleting Your Account</li>
-						</ul>
-
-					</p>
+				<div style="font-style:italic;">
+					<strong>SIGNING UP/ MEMBERSHIP</strong>
+				</div>
+				<div style="padding-left:30px;">
+					<ul>
+						<li>a. How Do I Sign Up and What's Required?</li>
+						<li>What's in the sneaky fine print, where's the catch?</li>
+						<li>Is There a Free Version?</li>
+						<li>Free Trials</li>
+						<li>Updating Your Details</li>
+						<li>Deleting Your Account</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</article>
-	<div class="clear"></div>
+	</div>
+</article>
+<div class="clear"></div>
 <!-- <div class="questions">
 				<div class="group">
 					<div class="col span_8">
