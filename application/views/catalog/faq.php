@@ -69,21 +69,28 @@
 				</form>
 			</div>
 			<div><strong>WHAT IS PRÊTÀSTYLER?</strong></div>
-			<div>
-				<div style="font-style:italic;">
-					<strong>SIGNING UP/ MEMBERSHIP</strong>
-				</div>
-				<div style="padding-left:30px;">
-					<ul>
-						<li>a. How Do I Sign Up and What's Required?</li>
-						<li>What's in the sneaky fine print, where's the catch?</li>
-						<li>Is There a Free Version?</li>
-						<li>Free Trials</li>
-						<li>Updating Your Details</li>
-						<li>Deleting Your Account</li>
-					</ul>
-				</div>
+
+			<div style="font-style:italic;">
+				<strong>SIGNING UP/ MEMBERSHIP</strong>
 			</div>
+			<div style="padding-left:50px;padding-top:20px;">
+				<ul>
+					<li>a. How Do I Sign Up and What's Required?</li>
+					<li>What's in the sneaky fine print, where's the catch?</li>
+					<li>Is There a Free Version?</li>
+					<li>Free Trials</li>
+					<li>Updating Your Details</li>
+					<li>Deleting Your Account</li>
+				</ul>
+			</div>
+			<div><strong>YOUR PASSWORD</strong></div>
+			<div><strong>YOUR PROFILE</strong></div>
+			<div><strong>THE MALL</strong></div>
+			<div><strong>OUR SEARCHES</strong></div>
+			<div><strong>STYLE GENIE APP</strong></div>
+			<div><strong>STYLE CLINIC</strong></div>
+			<div><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></div>
+			<div><strong>MY PRIVATE STYLIST</strong></div>
 		</div>
 	</div>
 </article>
