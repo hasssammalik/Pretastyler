@@ -106,7 +106,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    		</ul>
 			    	</li>
 			    	<li class="userSub relative">
-			    		<span><?php print $first_name ?>'S ACCOUNT</span>
+			    		<span><?php print strtoupper($first_name) ?>'S ACCOUNT</span>
 			    		<ul class="userSubMenu">
 			    			<li><a href="/user.html">Edit Profile</a></li>
 			    			<li><a href="/user/logout.html">Log Out</a></li>
