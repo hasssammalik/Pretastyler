@@ -81,7 +81,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    <?php if ($this->flexi_auth->is_logged_in()){ ?>
 			    	
 			    	<li class="userSub relative menuBorder">
-			    		<span>ABOUT</span>
+			    		<span><a href="/how-it-works.html">ABOUT</a></span>
 			    		<ul class="userSubMenu">
 			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">How It Works</a></li>
@@ -91,7 +91,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    	</li>
 			    	<li class="relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
 			    	<li class="userSub relative menuBorder">
-			    		<span>DRESSING ROOM</span>
+			    		<span><a href="/user/my-dressing-room.html">DRESSING ROOM</a></span>
 			    		<ul class="userSubMenu">
 			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/user/my-dressing-room.html">Wishlist</a></li>
@@ -100,7 +100,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    		</ul>
 			    	</li>
 			    	<!-- <li class="userSub relative menuBorder">
-			    		<span>STYLE BOARDS</span>
+			    		<span><a href="/boards.html">STYLE BOARDS</a></span>
 			    		<ul class="userSubMenu">
 			    			<li style="background-color: #555655;height: 6px;"> &nbsp; </li>
 			    			<li><a href="/boards/create.html">Create</a></li>
@@ -109,7 +109,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    		</ul>
 			    	</li> -->
 			    	<li class="userSub relative menuBorder">
-			    		<span><?php print strtoupper($first_name) ?>'S ACCOUNT</span>
+			    		<span><a href="/user.html"><?php print strtoupper($first_name) ?>'S ACCOUNT</a></span>
 			    		<ul class="userSubMenu">
 			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
 			    			<li><a href="/user.html">Edit Profile</a></li>
