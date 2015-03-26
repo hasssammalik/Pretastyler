@@ -376,7 +376,7 @@ class User_model extends CI_Model
 	{
 		$user_info = array();
 		$fromdb = TRUE;
-		if (!empty($input_user_data)) {
+		if (empty($input_user_data)) {
 			$user_info = $this->get_user_info($user_id);
 		} else {
 			$fromdb = FALSE;
