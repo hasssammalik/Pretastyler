@@ -804,7 +804,7 @@
 						if( default_values[1] > 3 ){
 							var neckthickness = 3;
 						}
-						
+
 
 						var requestvalues = {   
 							
@@ -932,6 +932,211 @@
 					</div>
 					
 					
+					
+
+
+
+
+
+
+					<div class="home-profile home-profile-necklength">
+						
+						<div class="slider-name left">
+							<p>NECK LENGTH</p>
+						</div>
+						<div class="homepageslider left sliderwrap-necklength">
+							<div class="newprofile-necklength"  id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile home-profile-necktype">
+						<div class="slider-name left">
+							<p>NECK TYPE</p>
+						</div>
+						<div class="homepageslider left sliderwrap-necktype">
+							<div class="newprofile-necktype"  id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile home-profile-shoulders">
+						<div class="slider-name left">
+							<p>SHOULDERS</p>
+						</div>
+						<div class="homepageslider left sliderwrap-shoulders">
+							<div class="newprofile-shoulders"  id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile home-profile-faceshape">
+						<div class="slider-name left">
+							<p>FACE SHAPE</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-faceshape">
+							<div class="newprofile-faceshape"  id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					
+					
+					<div class="your-mall-profile home-profile-area-of-concern">
+						<div class="slider-name left">
+							<p>Areas of Concern</p>
+						</div>
+						
+						<div class="homepageslider left area-of-concern">
+							<div class="your-mall-checkbox big-checkbox">
+								<?php /* ?>
+									<label><input type="checkbox" name="addedneck" class="additional-profile mall-neck"> Neck</label>
+									<label><input type="checkbox" name="addedupperback" class="additional-profile mall-upperback"> Upper Back</label>
+									<label><input type="checkbox" name="addedupperarms" class="additional-profile mall-upperarms"> Upper Arms</label>
+									<label><input type="checkbox" name="addedbust" class="additional-profile mall-bust"> Bust</label>
+									<label><input type="checkbox" name="addedmidriff" class="additional-profile mall-midriff"> Midriff</label>
+									<label><input type="checkbox" name="addedstomach" class="additional-profile mall-stomach"> Stomach</label>
+									<label><input type="checkbox" name="addedbottom" class="additional-profile mall-bottom"> Bottom</label>
+									<label><input type="checkbox" name="addedthighs" class="additional-profile mall-thighs"> Thighs</label>
+									<label><input type="checkbox" name="addedlowerlegs" class="additional-profile mall-lowerlegs"> Lower Legs</label>
+									<label><input type="checkbox" name="addedfeet" class="additional-profile mall-feet"> Feet</label>
+								<?php */ ?>
+								
+								<label><input type="checkbox" class="additional-profile" id="mall-neck" onclick='toggle_div_class("0")'> Neck</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-upperback" onclick='toggle_div_class("1")'> Upper Back</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-upperarms" onclick='toggle_div_class("2")'> Upper Arms</label>
+								<!-- <label><input type="checkbox" class="additional-profile" id="mall-bust" onclick='toggle_div_class("3")'> Bust</label> -->
+								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("3")'> Midriff</label><br>
+								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("4")'> Stomach</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-bottom" onclick='toggle_div_class("5")'> Bottom</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-thighs" onclick='toggle_div_class("6")'> Inner Thighs</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-feet" onclick='toggle_div_class("7")'> Outer Thighs</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-lowerlegs" onclick='toggle_div_class("8")'> Lower Legs</label>
+								
+								<!--<label><input type="checkbox" class="additional-profile" id="mall-none"> None</label>-->
+								
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					
+					<div class="home-profile profile-your-mall-hidden-0 home-profile-neck" id="you_mall_neck" style="display:none;">
+						<div class="slider-name left">
+							<p>NECK</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-neck">
+							<div class="newprofile-neck" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile profile-your-mall-hidden-1 home-profile-upperback" id="you_mall_upperback" style="display:none;">
+						<div class="slider-name left">
+							<p>BACK</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-upperback">
+							<div class="newprofile-upperback" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile profile-your-mall-hidden-2 home-profile-upperarms" id="you_mall_upperarms" style="display:none;">
+						<div class="slider-name left">
+							<p>UPPER ARMS</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-upperarms">
+							<div class="newprofile-upperarms" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<!-- <div class="home-profile profile-your-mall-hidden-3 home-profile-bustother" id="you_mall_bustother" style="display:none;">
+						<div class="slider-name left">
+							<p>BUST</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-bustother">
+							<div class="newprofile-bustother" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div> -->
+					
+					<div class="home-profile profile-your-mall-hidden-3 home-profile-midriff" id="you_mall_midriff" style="display:none;">
+						<div class="slider-name left" >
+							<p>MIDRIFF</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-midriff">
+							<div class="newprofile-midriff" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile profile-your-mall-hidden-4 home-profile-stomach" id="you_mall_stomach" style="display:none;">
+						<div class="slider-name left">
+							<p>STOMACH</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-stomach">
+							<div class="newprofile-stomach" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile profile-your-mall-hidden-5 home-profile-bottom" id="you_mall_bottom" style="display:none;">
+						<div class="slider-name left">
+							<p>BOTTOM</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-bottom">
+							<div class="newprofile-bottom" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					<div class="home-profile profile-your-mall-hidden-6 home-profile-thighs" id="you_mall_thighs" style="display:none;">
+						<div class="slider-name left" >
+							<p>INNER THIGHS</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-thighs">
+							<div class="newprofile-thighs" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="home-profile profile-your-mall-hidden-7 home-profile-feet" id="you_mall_feet" style="display:none;">
+						<div class="slider-name left" >
+							<p>OUTER THIGHS</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-feet">
+							<div class="newprofile-feet" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					
+					<div class="home-profile profile-your-mall-hidden-8 home-profile-lowerlegs" id="you_mall_lowerlegs" style="display:none;">
+						<div class="slider-name left" >
+							<p>LOWER LEGS</p>
+						</div>
+						
+						<div class="homepageslider left sliderwrap-lowerlegs">
+							<div class="newprofile-lowerlegs" id="circles-slider"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+					
+
+
+
 					
 				</div>
 				
