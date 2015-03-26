@@ -50,8 +50,17 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = $this->data['first_name'] .'\'s Profile';
 		$data['breadcrumb'] = array('USER PROFILE');
-		$data['extraJS'] = '<script src="/js/user-profile.js"></script><script src="/js/jquery.sticky-kit.min.js"></script>';
 		
+		$data['extraCSS'] = '
+							<link rel="stylesheet" href="/css/jquery-ui.css">
+							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		';
+		$data['extraJS'] = '<script src="/js/user-profile.js"></script>
+							<script src="/js/jquery.sticky-kit.min.js"></script>
+							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+							<script src="/js/jquery-ui-slider-pips.js"></script>
+		';
+
 		$user_id = $this->flexi_auth->get_user_id();
 		$data['countries'] = $this->user_model->get_countries($user_id);
 		$data['user_info'] = $this->user_model->get_user_info($user_id);
