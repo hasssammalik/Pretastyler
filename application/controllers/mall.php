@@ -343,7 +343,8 @@ class Mall extends CI_Controller {
 		$this->session->set_userdata('initial_user_profile', $uservalue);
 		$data['user_profile_done'] = false;
 		$user_specs = $this->user_model->generate_user_specs( FALSE, $required_profile_elements);
-		$data['garments'] = $this->garment_model->get_batch_garment_score_by_user_specs($required_profile_elements, $offset, $limit);
+		$data['garments'] = $user_specs;
+		//$data['garments'] = $this->garment_model->get_batch_garment_score_by_user_specs($required_profile_elements, $offset, $limit);
 		if( !empty($pagelayout)){
 			$this->load->view('mall/garments', $data);
 		} else {
