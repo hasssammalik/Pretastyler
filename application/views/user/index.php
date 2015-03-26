@@ -753,13 +753,7 @@
 
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
 
-						var neckthickness = default_values[1];
-
-						if( default_values[1] > 3 ){
-							var neckthickness = 3;
-						}
-
-
+						
 						var requestvalues = { 
 
 							"height_select_id" : default_values[0],
@@ -1036,31 +1030,31 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-6 home-profile-thighs" id="you_mall_thighs" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-6 home-profile-innerthighs" id="you_mall_innerthighs" style="display:none;">
 						<div class="slider-name left" >
 							<p>INNER THIGHS</p>
 						</div>
 						
-						<div class="homepageslider left sliderwrap-thighs">
-							<div class="newprofile-thighs" id="circles-slider"></div>
+						<div class="homepageslider left sliderwrap-innerthighs">
+							<div class="newprofile-innerthighs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 
-					<div class="home-profile profile-your-mall-hidden-7 home-profile-feet" id="you_mall_feet" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-7 home-profile-outerthighs" id="you_mall_outerthighs" style="display:none;">
 						<div class="slider-name left" >
 							<p>OUTER THIGHS</p>
 						</div>
 						
-						<div class="homepageslider left sliderwrap-feet">
-							<div class="newprofile-feet" id="circles-slider"></div>
+						<div class="homepageslider left sliderwrap-outerthighs">
+							<div class="newprofile-outerthighs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
 					
 					
 					<div class="home-profile profile-your-mall-hidden-8 home-profile-lowerlegs" id="you_mall_lowerlegs" style="display:none;">
-						<div class="slider-name left" >
+						<div class="slider-name left">
 							<p>LOWER LEGS</p>
 						</div>
 						
@@ -1071,7 +1065,6 @@
 					</div>
 					
 					
-
 
 
 
