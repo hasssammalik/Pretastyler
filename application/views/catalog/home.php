@@ -55,11 +55,11 @@
 						];
 						var ageimage = 
 						[
-						'',
-						'',
-						'',
-						'',
-						''
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>'
 						];
 						var bodyshapeimage = 
 						[
