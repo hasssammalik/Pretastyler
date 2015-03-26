@@ -63,7 +63,7 @@
 	<div class="half">
 		<div class="faqs">
 			<div class="faqs-header">FAQs:</div>
-			<div>
+			<div style="margin:10px 0px;">
 				<form action="" method="get" nama="faqForm" >
 					<input type="text" placeholder="Type your question" name="question" />
 				</form>
@@ -73,7 +73,7 @@
 			<div style="font-style:italic;">
 				<strong>SIGNING UP/ MEMBERSHIP</strong>
 			</div>
-			<div style="padding-left:50px;padding-top:20px;">
+			<div style="padding:10px 50px;">
 				<ul>
 					<li>a. How Do I Sign Up and What's Required?</li>
 					<li>What's in the sneaky fine print, where's the catch?</li>
