@@ -87,8 +87,8 @@
 						
 						
 						
-						var neckimage = [ 
-						'<div class="hide"></div>',
+						var neckimage = [
+						'<div class="hide">test</div>',
 						'',
 						'',
 						'' 
