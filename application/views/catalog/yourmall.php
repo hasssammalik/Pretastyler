@@ -77,8 +77,6 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/faceshape/features_-37.png" /></div><span>Your face is an inverted egg or oval shape<br>You have a gently rounded chin.<br>Your face is slightly longer than it is wide<br>Your face is equal in length from hairline to browline, browline to nose tip, nose tip to chin tip<br>Your eye, nose and mouth are all well scaled to the size of your face i.e. no feature is extra large or small<br>Your eye, nose and mouth are all well-spaced within your face i.e. your eyes are not close or wide set</span></div>' 
 						];
 						
-						
-						
 						var neckimage = [
 						'<div class="hide"></div>',
 						'<div class="hide"></div>',
@@ -431,7 +429,7 @@
 							"vertical_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['vertical_select_id']; ?>,
 							"bra_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['bra_select_id']; ?>,
 							"minBust" : <?php echo  $this->session->userdata['initial_user_profile']['minBust']; ?>,
-							
+
 							"neck_length_select_id" : default_values[0],
 							
 							"shoulders_select_id" : default_values[2],
