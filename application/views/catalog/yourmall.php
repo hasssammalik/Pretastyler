@@ -368,9 +368,17 @@
 						
 						//neck_thickness_select_id ==== neck_select_id
 						
-						if( default_values[1] > 3 ){
-							var neckthickness = 3;
-						}
+						var input_minBust = ($('#mall-neck').attr('checked') == "checked")?1:0
+						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
+						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
+						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
+						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
+						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
+						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
+						var input_minBust = ($('#mall-').attr('checked') == "checked")?1:0;
+
+
+
 						var requestvalues = { 
 							
 							"height_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['height_select_id']; ?>,
@@ -386,16 +394,16 @@
 							"shoulders_select_id" : default_values[1],
 							"face_shape_select_id" : default_values[2],
 							
-							"neck_select_id" : default_values[3],
-							"back_select_id" : default_values[4],
-							"upper_arms_select_id" : default_values[5],
-							"midriff_select_id" : default_values[6],
+							"neck_select_id" : ($('#mall-neck').attr('checked') == "checked")? default_values[3] :0,
+							"back_select_id" : ($('#mall-upperback').attr('checked') == "checked")? default_values[4] :0,
+							"upper_arms_select_id" : ($('#mall-upperarms').attr('checked') == "checked")? default_values[5] :0,
+							"midriff_select_id" : ($('#mall-midriff').attr('checked') == "checked")? default_values[6] :0,
 							
-							"stomach_select_id" : default_values[9],
-							"bottom_select_id" : default_values[10],
-							"inner_thighs_select_id" : default_values[11],
-							"outer_thighs_select_id" : default_values[12],
-							"lower_legs_select_id" : default_values[13]
+							"stomach_select_id" : ($('#mall-stomach').attr('checked') == "checked")? default_values[9] :0,
+							"bottom_select_id" : ($('#mall-bottom').attr('checked') == "checked")? default_values[10] :0,
+							"inner_thighs_select_id" : ($('#mall-innerthighs').attr('checked') == "checked")? default_values[11] :0,
+							"outer_thighs_select_id" : ($('#mall-outerthighs').attr('checked') == "checked")? default_values[12] :0,
+							"lower_legs_select_id" : ($('#mall-lowerlegs').attr('checked') == "checked")? default_values[13] :0
 						};
 						
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
@@ -406,6 +414,7 @@
 					function toggle_div_class(class_num){
 						if (false == $(".profile-your-mall-hidden-"+class_num).is(':visible')) {
 							$(".profile-your-mall-hidden-"+class_num).show();
+
 						}
 						else {
 							$(".profile-your-mall-hidden-"+class_num).hide();

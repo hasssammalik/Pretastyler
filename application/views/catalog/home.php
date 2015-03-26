@@ -244,6 +244,10 @@
 
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
 
+						if( default_values[5] < 4 ){
+							input_minBust = 0;
+						}
+
 						var requestvalues = { "height_select_id" : default_values[0],
 							"weight_select_id" : default_values[1],
 							"age_select_id" : default_values[2],

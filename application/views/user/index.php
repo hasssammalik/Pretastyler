@@ -763,7 +763,7 @@
 							"body_ratio_select_id" : default_values[4],
 							"bra_select_id" : default_values[5],
 							"build_select_id" : default_values[6],
-							"minBust" : input_minBust
+							"minBust" : input_minBust,
 
 							"neck_length_select_id" : default_values[7],
 							"shoulders_select_id" : default_values[8],
