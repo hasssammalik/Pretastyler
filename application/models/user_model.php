@@ -495,7 +495,7 @@ class User_model extends CI_Model
 	 */
 	public function generate_user_specs_from_profile( $user_info )
 	{
-		$user_info['minBust'] = 0;
+		
 		$user_spec = array();
 		//P34 - P47, P73 Prominent
 		//H11 - H16 Horizontal
