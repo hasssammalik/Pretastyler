@@ -83,7 +83,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    	<li class="userSub relative menuBorder">
 			    		<span><a href="/how-it-works.html">ABOUT</a></span>
 			    		<ul class="userSubMenu">
-			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
+			    			<li class="emptySubMenuFixer"> &nbsp; </li>
 			    			<li><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">How It Works</a></li>
 			    			<!-- <li><a href="/how-it-works.html">Take Tour</a></li> -->
 			    			<li><a href="/our-story.html" title="Know our story">Our Story</a></li>
@@ -91,12 +91,12 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    	</li>
 			    	<li class="relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
 			    	<li class="userSub relative menuBorder">
-			    		<span><a href="/user/my-dressing-room.html">DRESSING ROOM</a></span>
+			    		<span><a href="/user/my-dressing-room.html#wishList">DRESSING ROOM</a></span>
 			    		<ul class="userSubMenu">
-			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
-			    			<li><a href="/user/my-dressing-room.html">Wishlist</a></li>
-			    			<li><a href="/user/my-dressing-room.html">Assessed Items</a></li>
-			    			<li><a href="/user/my-dressing-room.html">Items Pending Assessment</a></li>
+			    			<li class="emptySubMenuFixer"> &nbsp; </li>
+			    			<li><a href="/user/my-dressing-room.html#wishList">Wishlist</a></li>
+			    			<li><a href="/user/my-dressing-room.html#assessedItems">Assessed Items</a></li>
+			    			<li><a href="/user/my-dressing-room.html#itemsPendingGarment">Items Pending Assessment</a></li>
 			    		</ul>
 			    	</li>
 			    	<!-- <li class="userSub relative menuBorder">
@@ -111,7 +111,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    	<li class="userSub relative menuBorder">
 			    		<span><a href="/user.html"><?php print strtoupper($first_name) ?>'S ACCOUNT</a></span>
 			    		<ul class="userSubMenu">
-			    			<li style="background-color: #555655;height: 7px;"> &nbsp; </li>
+			    			<li class="emptySubMenuFixer"> &nbsp; </li>
 			    			<li><a href="/user.html">Edit Profile</a></li>
 			    			<li><a href="/user/logout.html">Log Out</a></li>
 			    		</ul>

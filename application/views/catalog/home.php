@@ -37,29 +37,29 @@
 						
 						var heightimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' 
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span>CM: 180 and taller <br>IN: 5\'11" and taller</span></div>',
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span>CM: 174.6 - 179.95 <br>IN: 5\'8" - 5\'10 3/4</span></div>',
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span>CM: 167.1 - 174.5 <br>IN: 5\'5" - 5\'8" 3/4</span></div>',
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span>CM: 162.5 - 167 <br>IN: 5\'4" - 5\'5" 3/4</span></div>',
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span>CM: 162.4 and under <br>IN: 5\'3" 3/4 and under</span></div>' 
 						];
 						var sizeimage = 
 						[ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-38.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-39.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-40.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-41.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-42.png" /></div></div>', 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-43.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/size/features_-45.png" /></div></div>'
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/profileSetup/size/features_-38.png" /></div></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/profileSetup/size/features_-39.png" /></div></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/profileSetup/size/features_-40.png" /></div></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/profileSetup/size/features_-41.png" /></div></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/profileSetup/size/features_-42.png" /></div></div>', 
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/profileSetup/size/features_-43.png" /></div></div>',
+						'<div id="talkbubble" class="hideTooltip"><div class="slider-image"><img src="/images/profileSetup/size/features_-45.png" /></div></div>'
 						];
 						var ageimage = 
 						[
-						/*'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-07.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-08.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-09.png" /></div></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/features_-10.png" /></div></div>' */
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>',
+						'<div class="hideTooltip"></div>'
 						];
 						var bodyshapeimage = 
 						[
@@ -244,13 +244,17 @@
 
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
 
+						if( default_values[5] < 4 ){
+							input_minBust = 0;
+						}
+
 						var requestvalues = { "height_select_id" : default_values[0],
 							"weight_select_id" : default_values[1],
 							"age_select_id" : default_values[2],
-							"horizontal_select_id" : default_values[3],
-							"vertical_select_id" : default_values[4],
+							"body_shape_select_id" : default_values[3],
+							"body_ratio_select_id" : default_values[4],
 							"bra_select_id" : default_values[5],
-							"wrist_size" : default_values[6],
+							"build_select_id" : default_values[6],
 							"minBust" : input_minBust
 						};
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
@@ -268,8 +272,7 @@
 						<img src="/images/newhomedown.png" class="noneArea noneLiner ">
 						
 						<p class="i profile-big-title">Let's start by selecting your <strong>body features</strong></p>
-						<!-- <p style="padding-left: 100px;font-size: 0.9em;">Pop your details below and your personal fashion mall will automatically 
-						overflow with clothing and accessories tailor made for your style, shape and age.</p> -->
+						
 					</div>
 					
 				</div>
@@ -380,7 +383,7 @@
 			</div>
 			<div class="clear"></div>
 			<div class="homeprofile-head">
-				<!-- <p class="homeprofile-bodytext">Here's just a few <strong>garments we've found for you</strong></p> -->
+				
 				<p class="homeprofile-bodytext" style=" font-style: italic; font-size: 22px;"><br/>What's<strong > Next?</strong></p>
 				<div class="mall-links">	
 					<div class="mall-link1">
@@ -401,24 +404,6 @@
 			</div>
 			
 		</section>
-		
-		
-		<div style="display:none;">
-			
-			<form method="post" name="yourmallsection">
-				
-				<input type="hidden" name="height_select_id" id="height_select_id">
-				<input type="hidden" name="weight_select_id" id="weight_select_id">
-				<input type="hidden" name="age_select_id" id="age_select_id">
-				<input type="hidden" name="horizontal_select_id" id="horizontal_select_id">
-				<input type="hidden" name="vertical_select_id" id="vertical_select_id">
-				<input type="hidden" name="bra_select_id" id="bra_select_id">
-				<input type="hidden" name="wrist_size" id="wrist_size">
-				
-			</form>
-			
-		</div>
-		
 		
 		
 	</div>
