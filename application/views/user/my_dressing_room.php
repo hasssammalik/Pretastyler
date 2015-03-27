@@ -1,7 +1,7 @@
 <div class="mainContent myNewTabsRoom">
 	
 	<div class="brandWrap">
-		<div class="tabs">
+		<div class="tabsDressing">
 			<ul id="dressingTabHeadContainer">
 			    <li class="tabHead-wishList"><a href="#wishList" class="act-wishList">WISHLIST <span>()</span></a></li>
 			    <li class="tabHead-assessedItems"><a href="#assessedItems" class="act-assessedItems">PENDING GARMENTS <span class="pinkycolor">()</span></a></li>
@@ -13,29 +13,31 @@
 
 	<section class="dressingTabContainer">
 			
-		<div class="tabs tab-wishList" id="wishList">
-			<div class="garments">This is Wish list </div>
+		<div class="tabs tab-wishList" id="wishList" style="display:none;">
+			<div class="garments"></div>
 		</div>
 
-		<div class="tabs tab-assessedItems" id="assessedItems">
-			<div class="garments">Contains of Assessed Items here</div>
+		<div class="tabs tab-assessedItems" id="assessedItems" style="display:none;">
+			<div class="garments"></div>
 		</div>
 
-		<div class="tabs tab-itemsPendingGarment" id="itemsPendingGarment">
-			<div class="garments">Items Pending Garments can be Found here to be assessed.</div>
+		<div class="tabs tab-itemsPendingGarment" id="itemsPendingGarment" style="display:none;">
+			<div class="garments"></div>
 		</div>
 
 
 	</section>
 
 	<style type="text/css">
-		.myNewTabsRoom .tabs {
+		.myNewTabsRoom .tabsDressing {
 		  width: 480px;
 		}
-		.myNewTabsRoom .tabs li {
+		.myNewTabsRoom .tabsDressing li {
 		  display: inline-block;
+		  flex: 1 auto;
+  		  position: relative;
 		}
-		.myNewTabsRoom .tabs li a, .myNewTabsRoom .tabs li a span, .myNewTabsRoom .tabs li a:visited span {
+		.myNewTabsRoom .tabsDressing li a, .myNewTabsRoom .tabsDressing li a span, .myNewTabsRoom .tabsDressing li a:visited span {
 			font-size: 0.8rem;
 			padding: 0.2em 1.5em;
 			color: #909090;
@@ -43,18 +45,18 @@
 			border-right: none;
 			background: #EFEFEF;
 		}
-		.myNewTabsRoom .myNewTabsRoom .tabs li a.tabClicked, .myNewTabsRoom .tabs li a.tabClicked span {
+		.myNewTabsRoom .myNewTabsRoom .tabsDressing li a.tabClicked, .myNewTabsRoom .tabsDressing li a.tabClicked span {
 			background: #B2B2B2;
   			color: white;
 		}
-		.myNewTabsRoom .tabs li a span.pinkycolor, .myNewTabsRoom .tabs li a.tabClicked span.pinkycolor {
+		.myNewTabsRoom .tabsDressing li a span.pinkycolor, .myNewTabsRoom .tabsDressing li a.tabClicked span.pinkycolor {
 		  color: #e72775;
 		}
-		.myNewTabsRoom .tabs li a:hover, .myNewTabsRoom .tabs li a:visited:hover span {
+		.myNewTabsRoom .tabsDressing li a:hover, .myNewTabsRoom .tabsDressing li a:visited:hover span {
 			background: white;
   			text-decoration: none;
 		}
-		.myNewTabsRoom .tabs li.active, .myNewTabsRoom .tabs li.active {
+		.myNewTabsRoom .tabsDressing li.active, .myNewTabsRoom .tabsDressing li.active {
 			border: none;
 		}
 
