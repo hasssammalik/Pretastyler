@@ -1,4 +1,4 @@
-<div class="mainContent">
+<div class="mainContent myNewTabsRoom">
 	
 	<div class="brandWrap">
 		<div class="tabs">
@@ -29,26 +29,30 @@
 	</section>
 
 	<style type="text/css">
-		.tabs {
-		  width: 450px;
+		.myNewTabsRoom .tabs {
+		  width: 480px;
 		}
-		.tabs li {
+		.myNewTabsRoom .tabs li {
 		  display: inline-block;
 		}
-		.tabs li a,  .tabs li a span, .tabs li a:visited span {
+		.myNewTabsRoom .tabs li a, .myNewTabsRoom .tabs li a span, .myNewTabsRoom .tabs li a:visited span {
 			font-size: 0.8rem;
-			padding: 0.2em 1.9em;
+			padding: 0.2em 1.5em;
 			color: #909090;
 			font-weight: bold;
 			border-right: none;
 			background: #EFEFEF;
 		}
-		.tabs li a.tabClicked {
+		.myNewTabsRoom .myNewTabsRoom .tabs li a.tabClicked, .myNewTabsRoom .tabs li a.tabClicked span {
 			background: #B2B2B2;
   			color: white;
 		}
-		.tabs li a span.pinkycolor {
+		.myNewTabsRoom .tabs li a span.pinkycolor, .myNewTabsRoom .tabs li a.tabClicked span.pinkycolor {
 		  color: #e72775;
+		}
+		.tabs li a:hover, .tabs li a:visited:hover span {
+			background: white;
+  			text-decoration: none;
 		}
 
 	</style>
