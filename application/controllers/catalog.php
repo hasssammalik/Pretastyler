@@ -82,6 +82,7 @@ class Catalog extends CI_Controller {
 							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 							<script src="/js/jquery-ui-slider-pips.js"></script>
 		';
+		$data['similar_garments'] = $this->garment_model->get_similar_products();
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu_mall', $data);
