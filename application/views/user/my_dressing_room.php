@@ -56,23 +56,23 @@
 			background: white;
   			text-decoration: none;
 		}
-		.myNewTabsRoom .tabsDressing li.active, .myNewTabsRoom .tabsDressing li.active {
+		.myNewTabsRoom .tabsDressing li.tabClicked, .myNewTabsRoom .tabsDressing li.tabClicked {
 			border: none;
 		}
 
 	</style>
 	
 	<script type="text/javascript">
-
-		if(window.location.hash){ 
-			var tab = window.location.hash;
-			$("act-"+tab.substring(1, tab.length)).addClass("tabClicked");
-			$(tab).show();
-		} else {
-			$("act-wishList").addClass("tabClicked");
-			$("#wishList").show();
-		}
-
+		$(function(){
+			if(window.location.hash){ 
+				var tab = window.location.hash;
+				$("act-"+tab.substring(1, tab.length)).addClass("tabClicked");
+				$(tab).show();
+			} else {
+				$("act-wishList").addClass("tabClicked");
+				$("#wishList").show();
+			}
+		});
 
 	</script>
 
