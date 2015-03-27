@@ -758,6 +758,9 @@
 
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
 
+						if( default_values[5] < 4 ){
+							input_minBust = 0;
+						}
 						
 						var requestvalues = { 
 
@@ -788,9 +791,9 @@
 						};
 
 						
-						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-							$( ".bodyEditSection" ).text( "Your Profile is Saved." );
-						});
+						//$.post( "/user/update-user-info.html", {offset: 0, limit: 5, user_data: requestvalues, pref_type : 'feature' pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+						//	$( ".bodyEditSection" ).text( "Your Profile is Saved." );
+						//});
 					}
 					
 					function toggle_div_class(class_num){
@@ -953,8 +956,8 @@
 								<label><input type="checkbox" class="additional-profile" id="mall-neck" onclick='toggle_div_class("0")'> Neck</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-back" onclick='toggle_div_class("1")'> Back</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-upperarms" onclick='toggle_div_class("2")'> Upper Arms</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("3")'> Midriff</label><br>
-								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("4")'> Stomach</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("3")'> Midriff</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("4")'> Stomach</label><br>
 								<label><input type="checkbox" class="additional-profile" id="mall-bottom" onclick='toggle_div_class("5")'> Bottom</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-innerthighs" onclick='toggle_div_class("6")'> Inner Thighs</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-outerthighs" onclick='toggle_div_class("7")'> Outer Thighs</label>
