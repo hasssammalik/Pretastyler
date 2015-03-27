@@ -458,7 +458,7 @@
 <div class="modal"></div>
 <div class="popup_modal"></div>
 <div class="popup-box">
-    <div class="cross"><div class="cross-image-homepage"><img src="/images/cross.png" alt=""></div></div>
+    <div class="cross"><div class="cross-image-homepage"><img src="/images/pink_button-05.png" alt=""></div></div>
     <h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1><hr width="95%" size="2" />
     <form action="/mall-by-profile.html" method="post">
       <div><input type="text" placeholder="First Name*" name="fname" required/><input type="text"  required placeholder="Last Name*" name="lname"/></div>
