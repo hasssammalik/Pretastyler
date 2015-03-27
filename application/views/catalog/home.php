@@ -389,7 +389,7 @@
 			<br>
 
 
-			<div class="homepage-slider" id="similarItems" style="max-width:1110px;margin:0px auto;">
+			<div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
 					<div class="sliderWrap">
 						<ul class="items">
 							<?php if ($similar_garments) {
