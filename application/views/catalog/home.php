@@ -406,8 +406,8 @@
 									<?php }
 								}?>
 							</ul>
-							<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
-							<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a>
+							<a href="#" class="prevNew"><img scr="/images/next.png"></a>
+							<a href="#" class="nextNew"><img scr="/images/next.png"></a>
 						</div>
 				</div>
 
