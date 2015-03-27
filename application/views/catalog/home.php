@@ -5,9 +5,9 @@
 			<div class="headerBackground">
 				
 				<div class="headerBackground-content role-element leadstyle-container center">
-					<p style="font-size:5vw; font-weight: bold;word-spacing:5px;letter-spacing:2px;">SHOPPING ONLINE<br>JUST GOT PERSONAL</p>
+					<p style="font-size:4vw; font-weight: bold;word-spacing:5px;letter-spacing:2px;">SHOPPING ONLINE<br>JUST GOT PERSONAL</p>
 					<p> <img width="70" src="/images/play.png" style="cursor:pointer;"> </p>
-					<p style="font-size:24px;line-height:2;font-weight:600;">
+					<p style="font-size:1.5vw;line-height:2;font-weight:600;">
 						Cut Through the Clutter of Fashion<br>
 						Find everything that suits you in one perfect place<br>
 						'Your Exclusive Fashion Mall'
@@ -271,7 +271,7 @@
 					<div class="homeprofile-head" id="profile">
 						<img src="/images/newhomedown.png" class="noneArea noneLiner ">
 						
-						<p class="i profile-big-title">Let's start by selecting your <strong>body features</strong></p>
+						<p class="i profile-big-title" style="font-size:1.8vw;">Let's start by selecting your <strong>body features</strong></p>
 						
 					</div>
 					
