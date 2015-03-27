@@ -3,9 +3,9 @@
 	<div class="brandWrap">
 		<div class="tabsDressing">
 			<ul id="dressingTabHeadContainer">
-			    <li class="tabHead-wishList"><a href="#wishList" class="act-wishList">WISHLIST <span>()</span></a></li>
-			    <li class="tabHead-assessedItems"><a href="#assessedItems" class="act-assessedItems">PENDING GARMENTS <span class="pinkycolor">()</span></a></li>
-			    <li class="tabHead-itemsPendingGarment"><a href="#itemsPendingGarment" class="act-itemsPendingGarment">HISTORY <span>()</span></a></li>
+			    <li class="tabHead-wishList"><a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>()</span></a></li>
+			    <li class="tabHead-assessedItems"><a href="#assessedItems" class="acttabsInner act-assessedItems">PENDING GARMENTS <span class="pinkycolor">()</span></a></li>
+			    <li class="tabHead-itemsPendingGarment"><a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">HISTORY <span>()</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -13,15 +13,15 @@
 
 	<section class="dressingTabContainer">
 			
-		<div class="tabs tab-wishList" id="wishList" style="display:none;">
+		<div class="tabsInner tab-wishList" id="wishList" style="display:none;">
 			<div class="garments"></div>
 		</div>
 
-		<div class="tabs tab-assessedItems" id="assessedItems" style="display:none;">
+		<div class="tabsInner tab-assessedItems" id="assessedItems" style="display:none;">
 			<div class="garments"></div>
 		</div>
 
-		<div class="tabs tab-itemsPendingGarment" id="itemsPendingGarment" style="display:none;">
+		<div class="tabsInner tab-itemsPendingGarment" id="itemsPendingGarment" style="display:none;">
 			<div class="garments"></div>
 		</div>
 
@@ -64,15 +64,24 @@
 	
 	<script type="text/javascript">
 		$(function(){
+			toggleTabContent();
+
+			$(".acttabsInner").click(toggleTabContent);
+
+			
+
+		});
+
+		function toggleTabContent(){
 			if(window.location.hash){ 
 				var tab = window.location.hash;
-				$("act-"+tab.substring(1, tab.length)).addClass("tabClicked");
+				$(".act-"+tab.substring(1, tab.length)).addClass("tabClicked");
 				$(tab).show();
 			} else {
-				$("act-wishList").addClass("tabClicked");
+				$(".act-wishList").addClass("tabClicked");
 				$("#wishList").show();
 			}
-		});
+		}
 
 	</script>
 
