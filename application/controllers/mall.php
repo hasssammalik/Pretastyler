@@ -37,6 +37,7 @@ class Mall extends CI_Controller {
 			'topbrands' =>  $this->garment_model->get_top_brands(0, 10)
 		);
 		if ($this->flexi_auth->is_logged_in()){
+			$this->session->unset_userdata('initial_user_profile');
 			$this->data['first_name'] = $this->user_model->get_user_name($this->flexi_auth->get_user_id())['first_name'];
 		}
 	}
@@ -339,11 +340,17 @@ class Mall extends CI_Controller {
 										"outer_thighs_select_id"=> ( !empty($uservalue['outer_thighs_select_id']) ? $uservalue['outer_thighs_select_id'] : 0 ),
 										"lower_legs_select_id" 	=> ( !empty($uservalue['lower_legs_select_id']) ? $uservalue['lower_legs_select_id'] : 0 )
 									);
+		if ($this->flexi_auth->is_logged_in()){
+			
+		} else {
+			$this->session->set_userdata('initial_user_profile', $uservalue);
+		}
 
-		$this->session->set_userdata('initial_user_profile', $uservalue);
-		$data['user_profile_done'] = false;
+
+		$data['user_profile_done'] = true;
 		$user_specs = $this->user_model->generate_user_specs( FALSE, $required_profile_elements);
 		$data['garments'] = $this->garment_model->get_batch_garment_score_by_user_specs($user_specs, $offset, $limit);
+		
 		if( !empty($pagelayout)){
 			$this->load->view('mall/garments', $data);
 		} else {

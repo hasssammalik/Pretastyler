@@ -168,7 +168,7 @@
 	<br>
 	<fieldset id="profilePanel" class="fixedOptions" style="z-index:4;background:white;padding-top:45px">
 		<div class="sectionHeader">
-			<div><h2>My Body <strong>Features</strong></h2><div class="bodyEditSection right i" id="bodyFeatures" data-action="edit">....</div></div>
+			<div><h2>My Body <strong>Features</strong></h2><span class="bodyEditSection small right i">.......</span></div>
 		</div>
 		
 
@@ -208,7 +208,7 @@
 						var faceshape 		= [ "Oval", "Heart", "Inverted triangle", "Diamond", "Triangle", "Pear", "Rectangle", "Oblong", "Round", "Square" ];
 						
 						var neck 			= [ "Thin", "Average", "Wide", "Double Chin", "No Definition" ];
-						var upperback 		= [ "Dowagers Hump","Sway Back"];
+						var back 			= [ "Dowagers Hump","Sway Back"];
 						var upperarms 		= [ "Too thin", "Too heavy", "Aged/Untoned" ];
 						
 						var midriff 		= [ "Moderate Roll", "Large roll" ];
@@ -320,7 +320,7 @@
 						'<div class="hide"></div>' 
 						];
 						
-						var upperbackimage = [ 
+						var backimage = [ 
 						'<div class="hide"></div>',
 						'<div class="hide"></div>' 
 						];
@@ -589,7 +589,7 @@
 							});
 						
 						
-						$(".newprofile-upperback")
+						$(".newprofile-back")
 							.slider({
 								min: 0, 
 								max: upperback.length-1, 
@@ -789,7 +789,7 @@
 
 						
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-							$( ".bodyEditSection" ).text( "Your Profile Saved." );
+							$( ".bodyEditSection" ).text( "Your Profile is Saved." );
 						});
 					}
 					
@@ -951,7 +951,7 @@
 							<div class="your-mall-checkbox big-checkbox">
 								
 								<label><input type="checkbox" class="additional-profile" id="mall-neck" onclick='toggle_div_class("0")'> Neck</label>
-								<label><input type="checkbox" class="additional-profile" id="mall-upperback" onclick='toggle_div_class("1")'> Upper Back</label>
+								<label><input type="checkbox" class="additional-profile" id="mall-back" onclick='toggle_div_class("1")'> Back</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-upperarms" onclick='toggle_div_class("2")'> Upper Arms</label>
 								<label><input type="checkbox" class="additional-profile" id="mall-midriff" onclick='toggle_div_class("3")'> Midriff</label><br>
 								<label><input type="checkbox" class="additional-profile" id="mall-stomach" onclick='toggle_div_class("4")'> Stomach</label>
@@ -978,13 +978,13 @@
 						<div class="clear"></div>
 					</div>
 					
-					<div class="home-profile profile-your-mall-hidden-1 home-profile-upperback" id="you_mall_upperback" style="display:none;">
+					<div class="home-profile profile-your-mall-hidden-1 home-profile-back" id="you_mall_back" style="display:none;">
 						<div class="slider-name left">
 							<p>BACK</p>
 						</div>
 						
-						<div class="homepageslider left sliderwrap-upperback">
-							<div class="newprofile-upperback" id="circles-slider"></div>
+						<div class="homepageslider left sliderwrap-back">
+							<div class="newprofile-back" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
