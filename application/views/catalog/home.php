@@ -381,6 +381,40 @@
 				<div class="garments turnOffPlaceHolderGarment"></div>
 				<div class="clear"></div>
 			</div>
+
+
+
+
+
+			<br>
+
+			
+			<div class="panel2 newpanelDesign" id="similarItems">
+				<div class="panelHeader">Similar Items that suit you</div>
+				<div class="panelContent">
+					<div class="sliderWrap">
+						<ul class="items">
+							<?php if ($similar_garments) {
+								foreach ($similar_garments as $row) {?>
+								<li><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"><img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name']?>"></a>
+									<?php if ($this->flexi_auth->is_logged_in()) {?>
+									<div class="rating"><?php 
+									if ($row['score']){
+										print $score;
+										?><i class="icon-star"></i><?php } else {
+											print 'Not Assessed';
+										}?></div><?php } ?>
+									</li>
+									<?php }
+								}?>
+							</ul>
+							<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
+							<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a>
+						</div>
+					</div>
+				</div>
+
+
 			<div class="clear"></div>
 			<div class="homeprofile-head">
 				
