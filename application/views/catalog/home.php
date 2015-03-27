@@ -377,19 +377,19 @@
 			<style type="text/css">
 				.garments:after { display: none;}
 			</style>
-			<!-- <div id="homepage-slider">
+			<div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
 				<div class="clear"></div>
 			</div>
- -->
 
-			<div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
+
+			<!-- <div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
 					<div class="sliderWrap">
 						<div class="garments turnOffPlaceHolderGarment"></div>
 							<a href="#" class="prevNew"><img src="/images/next.png"></a>
 							<a href="#" class="nextNew"><img src="/images/next.png"></a>
 						</div>
-				</div>
+				</div> -->
 
 
 			<div class="clear"></div>
