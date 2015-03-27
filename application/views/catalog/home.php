@@ -388,10 +388,8 @@
 
 			<br>
 
-			
-			<div class="panel2 newpanelDesign" id="similarItems">
-				<div class="panelHeader">Similar Items that suit you</div>
-				<div class="panelContent">
+
+			<div class="homepage-slider" id="similarItems" style="max-width:1110px;margin:0px auto;">
 					<div class="sliderWrap">
 						<ul class="items">
 							<?php if ($similar_garments) {
@@ -411,7 +409,6 @@
 							<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
 							<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a>
 						</div>
-					</div>
 				</div>
 
 
