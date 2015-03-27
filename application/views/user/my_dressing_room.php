@@ -50,9 +50,12 @@
 		.myNewTabsRoom .tabs li a span.pinkycolor, .myNewTabsRoom .tabs li a.tabClicked span.pinkycolor {
 		  color: #e72775;
 		}
-		.tabs li a:hover, .tabs li a:visited:hover span {
+		.myNewTabsRoom .tabs li a:hover, .myNewTabsRoom .tabs li a:visited:hover span {
 			background: white;
   			text-decoration: none;
+		}
+		.myNewTabsRoom .tabs li.active, .myNewTabsRoom .tabs li.active {
+			border: none;
 		}
 
 	</style>
