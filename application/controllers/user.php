@@ -123,9 +123,48 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
+	 * New Dressing Room Page for this controller.
+	 */
+	public function my_dressing_room()
+	{
+		if (!file_exists(APPPATH.'/views/user/my_dressing_room.php')){
+			show_404();
+		}
+		if (!$this->flexi_auth->is_logged_in()) {
+			redirect('', 'refresh');
+		}
+		
+		$data = $this->data;
+		$data['title'] = "My Dressing Room";
+		$data['breadcrumb'] = array('MY DRESSING ROOM');
+		$data['extraJS'] = '';
+		
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('user/my_dressing_room', $data);
+		$this->load->view('templates/footer', $data);
+	}
+	/**
+	 * Add to Favorites button for this controller.
+	 */
+	public function add_to_favorites()
+	{
+		if (!$this->input->post()){
+			show_404();
+		}
+		$garment_id = $this->input->post('garment_id', TRUE);
+		if ($garment_id && $this->flexi_auth->is_logged_in()) {
+			$this->garment_model->update_user_garment_favorite($garment_id, $this->flexi_auth->get_user_id());
+		} else {
+			show_404();
+		}
+	}
+	/**
+	 * Deprecated
 	 * Finds Page for this controller.
 	 */
-	public function my_finds()
+	private function my_finds()
 	{
 		if (!file_exists(APPPATH.'/views/user/my_finds.php')){
 			show_404();
@@ -146,9 +185,10 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
+	 * Deprecated
 	 * Favorites Page for this controller.
 	 */
-	public function my_wishlists()
+	private function my_wishlists()
 	{
 		if (!file_exists(APPPATH.'/views/user/my_wishlists.php')){
 			show_404();
@@ -168,24 +208,26 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
-	 * Add to Favorites button for this controller.
+	 * Deprecated
+	 * Add to Wardrobe button for this controller.
 	 */
-	public function add_to_favorites()
+	private function add_to_wardrobe()
 	{
 		if (!$this->input->post()){
 			show_404();
 		}
 		$garment_id = $this->input->post('garment_id', TRUE);
 		if ($garment_id && $this->flexi_auth->is_logged_in()) {
-			$this->garment_model->update_user_garment_favorite($garment_id, $this->flexi_auth->get_user_id());
+			$this->garment_model->update_user_garment_wardrobe($garment_id, $this->flexi_auth->get_user_id());
 		} else {
 			show_404();
 		}
 	}
 	/**
+	 * Deprecated
 	 * Wardrobe Page for this controller.
 	 */
-	public function my_wardrobe()
+	private function my_wardrobe()
 	{
 		if (!file_exists(APPPATH.'/views/user/my_wardrobe.php')){
 			show_404();
@@ -206,24 +248,10 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
-	 * Add to Wardrobe button for this controller.
+	 * Deprecated
+	 * old Dressing Room Page for this controller.
 	 */
-	public function add_to_wardrobe()
-	{
-		if (!$this->input->post()){
-			show_404();
-		}
-		$garment_id = $this->input->post('garment_id', TRUE);
-		if ($garment_id && $this->flexi_auth->is_logged_in()) {
-			$this->garment_model->update_user_garment_wardrobe($garment_id, $this->flexi_auth->get_user_id());
-		} else {
-			show_404();
-		}
-	}
-	/**
-	 * Dressing Room Page for this controller.
-	 */
-	public function my_dressing_room()
+	private function my_dressing_room_old()
 	{
 		if (!file_exists(APPPATH.'/views/user/my_dressing_room.php')){
 			show_404();
