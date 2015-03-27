@@ -385,21 +385,7 @@
 
 			<div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
 					<div class="sliderWrap">
-						<ul class="items">
-							<?php if ($similar_garments) {
-								foreach ($similar_garments as $row) {?>
-								<li><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"><img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name']?>"></a>
-									<?php if ($this->flexi_auth->is_logged_in()) {?>
-									<div class="rating"><?php 
-									if ($row['score']){
-										print $score;
-										?><i class="icon-star"></i><?php } else {
-											print 'Not Assessed';
-										}?></div><?php } ?>
-									</li>
-									<?php }
-								}?>
-							</ul>
+						<div class="garments turnOffPlaceHolderGarment"></div>
 							<a href="#" class="prevNew"><img src="/images/next.png"></a>
 							<a href="#" class="nextNew"><img src="/images/next.png"></a>
 						</div>
