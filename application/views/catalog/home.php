@@ -377,17 +377,11 @@
 			<style type="text/css">
 				.garments:after { display: none;}
 			</style>
-			<div id="homepage-slider">
+			<!-- <div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
 				<div class="clear"></div>
 			</div>
-
-
-
-
-
-			<br>
-
+ -->
 
 			<div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
 					<div class="sliderWrap">
