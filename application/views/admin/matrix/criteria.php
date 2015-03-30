@@ -123,7 +123,7 @@
 							</td>
 						</tr>
 						<tr class="form-inline">
-							<td>Horizontal Type</td>
+							<td>Body Shape (Horizontal)</td>
 							<td>
 								<?php 
 								$option = 'H';
@@ -247,7 +247,7 @@
 							<td>
 								<?php 
 								$option = 'P';
-								$option_array = array('34', '35', '36', '37', '73', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47');
+								$option_array = array('34', '35', '36', '37', '73', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '75', '76', '77', '78', '79', '80');
 								foreach ($option_array as $value) {
 								?>
 								<div class="form-group">
@@ -291,7 +291,7 @@
 							</td>
 						</tr>
 						<tr class="form-inline">
-							<td>Bone Structure</td>
+							<td>Build (Bone Structure)</td>
 							<td>
 								<?php 
 								$option = 'B';
