@@ -20,14 +20,31 @@
 			
 		<div class="tabsInner tab-wishList" id="wishList" style="display:none;">
 			<div class="garments"></div>
+
+
+
+			<!-- <div class="mousehand btnbottommore clicktoseemore_fav">
+				Click to see more <i class="icon-triangle"></i>
+			</div> -->
+
 		</div>
 
 		<div class="tabsInner tab-itemsPendingGarment" id="itemsPendingGarment" style="display:none;">
 			<div class="garments"></div>
+
+			<!-- <div class="mousehand btnbottommore clicktoseemore_pending">
+				Click to see more <i class="icon-triangle"></i>
+			</div> -->
+
 		</div>
 
 		<div class="tabsInner tab-history" id="history" style="display:none;">
 			<div class="garments"></div>
+
+			<!-- <div class="mousehand btnbottommore clicktoseemore_history">
+				Click to see more <i class="icon-triangle"></i>
+			</div> -->
+
 		</div>
 
 
