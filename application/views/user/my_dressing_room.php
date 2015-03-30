@@ -1,5 +1,5 @@
 
-<div class="mainContent myNewTabsRoom">
+<div class="mainContent myNewTabsRoom minheight250">
 	
 	<div class="tabsDressing">
 		<ul id="dressingTabHeadContainer">
