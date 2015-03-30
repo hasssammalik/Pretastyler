@@ -95,7 +95,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    		<ul class="userSubMenu">
 			    			<li class="emptySubMenuFixer"> &nbsp; </li>
 			    			<li><a href="/user/my-dressing-room.html#wishList">Wishlist</a></li>
-			    			<li><a href="/user/my-dressing-room.html#assessedItems">Assessed Items</a></li>
+			    			<li><a href="/user/my-dressing-room.html#itemsPendingGarment">Assessed Items</a></li>
 			    			<li><a href="/user/my-dressing-room.html#itemsPendingGarment">Items Pending Assessment</a></li>
 			    		</ul>
 			    	</li>
