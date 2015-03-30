@@ -4,13 +4,13 @@
 	<div class="tabsDressing">
 		<ul id="dressingTabHeadContainer">
 		    <li class="tabHead-wishList">
-		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(12)</span></a>
+		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
-		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">()</span></a>
+		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
 		    </li>
 		    <li class="tabHead-history">
-		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>()</span></a>
+		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>(0)</span></a>
 		    </li>
 		</ul>
 	</div>
