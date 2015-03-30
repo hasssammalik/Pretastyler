@@ -199,7 +199,7 @@
 							<td>
 								<?php 
 								$option = 'S';
-								$option_array = array('25', '26', '27', '28');
+								$option_array = array('25', '26', '27');
 								foreach ($option_array as $value) {
 								?>
 								<div class="form-group">
@@ -243,11 +243,179 @@
 							</td>
 						</tr>
 						<tr class="form-inline">
-							<td>Prominent Features</td>
+							<td>Back</td>
 							<td>
 								<?php 
 								$option = 'P';
-								$option_array = array('34', '35', '36', '37', '73', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '75', '76', '77', '78', '79', '80');
+								$option_array = array('41', '45');
+								foreach ($option_array as $value) {
+								?>
+								<div class="form-group">
+									<label><?php print $option.$value ?></label>
+									<select class="form-control" name="values[<?php print $option.$value ?>]">
+										<option value="S" <?php if ($criteria[$option.$value] == 'S') print 'selected="selected"'; ?>>S</option>
+										<option value="S<?php print $value ?>" <?php if ($criteria[$option.$value] == 'S'.$value) print 'selected="selected"'; ?>>S<?php print $value ?></option>
+										<option value="A" <?php if ($criteria[$option.$value] == 'A') print 'selected="selected"'; ?>>A</option>
+										<option value="A<?php print $value ?>" <?php if ($criteria[$option.$value] == 'A'.$value) print 'selected="selected"'; ?>>A<?php print $value ?></option>
+										<option value="M" <?php if ($criteria[$option.$value] == 'M') print 'selected="selected"'; ?>>M</option>
+										<option value="M<?php print $value ?>" <?php if ($criteria[$option.$value] == 'M'.$value) print 'selected="selected"'; ?>>M<?php print $value ?></option>
+										<option value="X" <?php if ($criteria[$option.$value] == 'X') print 'selected="selected"'; ?>>X</option>
+										<option value="X<?php print $value ?>" <?php if ($criteria[$option.$value] == 'X'.$value) print 'selected="selected"'; ?>>X<?php print $value ?></option>
+									</select>
+								</div>
+								<?php } ?>
+							</td>
+						</tr>
+						<tr class="form-inline">
+							<td>Midriff</td>
+							<td>
+								<?php 
+								$option = 'P';
+								$option_array = array('75', '42');
+								foreach ($option_array as $value) {
+								?>
+								<div class="form-group">
+									<label><?php print $option.$value ?></label>
+									<select class="form-control" name="values[<?php print $option.$value ?>]">
+										<option value="S" <?php if ($criteria[$option.$value] == 'S') print 'selected="selected"'; ?>>S</option>
+										<option value="S<?php print $value ?>" <?php if ($criteria[$option.$value] == 'S'.$value) print 'selected="selected"'; ?>>S<?php print $value ?></option>
+										<option value="A" <?php if ($criteria[$option.$value] == 'A') print 'selected="selected"'; ?>>A</option>
+										<option value="A<?php print $value ?>" <?php if ($criteria[$option.$value] == 'A'.$value) print 'selected="selected"'; ?>>A<?php print $value ?></option>
+										<option value="M" <?php if ($criteria[$option.$value] == 'M') print 'selected="selected"'; ?>>M</option>
+										<option value="M<?php print $value ?>" <?php if ($criteria[$option.$value] == 'M'.$value) print 'selected="selected"'; ?>>M<?php print $value ?></option>
+										<option value="X" <?php if ($criteria[$option.$value] == 'X') print 'selected="selected"'; ?>>X</option>
+										<option value="X<?php print $value ?>" <?php if ($criteria[$option.$value] == 'X'.$value) print 'selected="selected"'; ?>>X<?php print $value ?></option>
+									</select>
+								</div>
+								<?php } ?>
+							</td>
+						</tr>
+						<tr class="form-inline">
+							<td>Stomach</td>
+							<td>
+								<?php 
+								$option = 'P';
+								$option_array = array('76', '77', '78', '43');
+								foreach ($option_array as $value) {
+								?>
+								<div class="form-group">
+									<label><?php print $option.$value ?></label>
+									<select class="form-control" name="values[<?php print $option.$value ?>]">
+										<option value="S" <?php if ($criteria[$option.$value] == 'S') print 'selected="selected"'; ?>>S</option>
+										<option value="S<?php print $value ?>" <?php if ($criteria[$option.$value] == 'S'.$value) print 'selected="selected"'; ?>>S<?php print $value ?></option>
+										<option value="A" <?php if ($criteria[$option.$value] == 'A') print 'selected="selected"'; ?>>A</option>
+										<option value="A<?php print $value ?>" <?php if ($criteria[$option.$value] == 'A'.$value) print 'selected="selected"'; ?>>A<?php print $value ?></option>
+										<option value="M" <?php if ($criteria[$option.$value] == 'M') print 'selected="selected"'; ?>>M</option>
+										<option value="M<?php print $value ?>" <?php if ($criteria[$option.$value] == 'M'.$value) print 'selected="selected"'; ?>>M<?php print $value ?></option>
+										<option value="X" <?php if ($criteria[$option.$value] == 'X') print 'selected="selected"'; ?>>X</option>
+										<option value="X<?php print $value ?>" <?php if ($criteria[$option.$value] == 'X'.$value) print 'selected="selected"'; ?>>X<?php print $value ?></option>
+									</select>
+								</div>
+								<?php } ?>
+							</td>
+						</tr>
+						<tr class="form-inline">
+							<td>Upper Arms</td>
+							<td>
+								<?php 
+								$option = 'P';
+								$option_array = array('35', '34', '36');
+								foreach ($option_array as $value) {
+								?>
+								<div class="form-group">
+									<label><?php print $option.$value ?></label>
+									<select class="form-control" name="values[<?php print $option.$value ?>]">
+										<option value="S" <?php if ($criteria[$option.$value] == 'S') print 'selected="selected"'; ?>>S</option>
+										<option value="S<?php print $value ?>" <?php if ($criteria[$option.$value] == 'S'.$value) print 'selected="selected"'; ?>>S<?php print $value ?></option>
+										<option value="A" <?php if ($criteria[$option.$value] == 'A') print 'selected="selected"'; ?>>A</option>
+										<option value="A<?php print $value ?>" <?php if ($criteria[$option.$value] == 'A'.$value) print 'selected="selected"'; ?>>A<?php print $value ?></option>
+										<option value="M" <?php if ($criteria[$option.$value] == 'M') print 'selected="selected"'; ?>>M</option>
+										<option value="M<?php print $value ?>" <?php if ($criteria[$option.$value] == 'M'.$value) print 'selected="selected"'; ?>>M<?php print $value ?></option>
+										<option value="X" <?php if ($criteria[$option.$value] == 'X') print 'selected="selected"'; ?>>X</option>
+										<option value="X<?php print $value ?>" <?php if ($criteria[$option.$value] == 'X'.$value) print 'selected="selected"'; ?>>X<?php print $value ?></option>
+									</select>
+								</div>
+								<?php } ?>
+							</td>
+						</tr>
+						<tr class="form-inline">
+							<td>Bottom</td>
+							<td>
+								<?php 
+								$option = 'P';
+								$option_array = array('44', '46');
+								foreach ($option_array as $value) {
+								?>
+								<div class="form-group">
+									<label><?php print $option.$value ?></label>
+									<select class="form-control" name="values[<?php print $option.$value ?>]">
+										<option value="S" <?php if ($criteria[$option.$value] == 'S') print 'selected="selected"'; ?>>S</option>
+										<option value="S<?php print $value ?>" <?php if ($criteria[$option.$value] == 'S'.$value) print 'selected="selected"'; ?>>S<?php print $value ?></option>
+										<option value="A" <?php if ($criteria[$option.$value] == 'A') print 'selected="selected"'; ?>>A</option>
+										<option value="A<?php print $value ?>" <?php if ($criteria[$option.$value] == 'A'.$value) print 'selected="selected"'; ?>>A<?php print $value ?></option>
+										<option value="M" <?php if ($criteria[$option.$value] == 'M') print 'selected="selected"'; ?>>M</option>
+										<option value="M<?php print $value ?>" <?php if ($criteria[$option.$value] == 'M'.$value) print 'selected="selected"'; ?>>M<?php print $value ?></option>
+										<option value="X" <?php if ($criteria[$option.$value] == 'X') print 'selected="selected"'; ?>>X</option>
+										<option value="X<?php print $value ?>" <?php if ($criteria[$option.$value] == 'X'.$value) print 'selected="selected"'; ?>>X<?php print $value ?></option>
+									</select>
+								</div>
+								<?php } ?>
+							</td>
+						</tr>
+						<tr class="form-inline">
+							<td>Inner Thighs</td>
+							<td>
+								<?php 
+								$option = 'P';
+								$option_array = array('73', '47');
+								foreach ($option_array as $value) {
+								?>
+								<div class="form-group">
+									<label><?php print $option.$value ?></label>
+									<select class="form-control" name="values[<?php print $option.$value ?>]">
+										<option value="S" <?php if ($criteria[$option.$value] == 'S') print 'selected="selected"'; ?>>S</option>
+										<option value="S<?php print $value ?>" <?php if ($criteria[$option.$value] == 'S'.$value) print 'selected="selected"'; ?>>S<?php print $value ?></option>
+										<option value="A" <?php if ($criteria[$option.$value] == 'A') print 'selected="selected"'; ?>>A</option>
+										<option value="A<?php print $value ?>" <?php if ($criteria[$option.$value] == 'A'.$value) print 'selected="selected"'; ?>>A<?php print $value ?></option>
+										<option value="M" <?php if ($criteria[$option.$value] == 'M') print 'selected="selected"'; ?>>M</option>
+										<option value="M<?php print $value ?>" <?php if ($criteria[$option.$value] == 'M'.$value) print 'selected="selected"'; ?>>M<?php print $value ?></option>
+										<option value="X" <?php if ($criteria[$option.$value] == 'X') print 'selected="selected"'; ?>>X</option>
+										<option value="X<?php print $value ?>" <?php if ($criteria[$option.$value] == 'X'.$value) print 'selected="selected"'; ?>>X<?php print $value ?></option>
+									</select>
+								</div>
+								<?php } ?>
+							</td>
+						</tr>
+						<tr class="form-inline">
+							<td>Outer Thighs</td>
+							<td>
+								<?php 
+								$option = 'P';
+								$option_array = array('37', '38');
+								foreach ($option_array as $value) {
+								?>
+								<div class="form-group">
+									<label><?php print $option.$value ?></label>
+									<select class="form-control" name="values[<?php print $option.$value ?>]">
+										<option value="S" <?php if ($criteria[$option.$value] == 'S') print 'selected="selected"'; ?>>S</option>
+										<option value="S<?php print $value ?>" <?php if ($criteria[$option.$value] == 'S'.$value) print 'selected="selected"'; ?>>S<?php print $value ?></option>
+										<option value="A" <?php if ($criteria[$option.$value] == 'A') print 'selected="selected"'; ?>>A</option>
+										<option value="A<?php print $value ?>" <?php if ($criteria[$option.$value] == 'A'.$value) print 'selected="selected"'; ?>>A<?php print $value ?></option>
+										<option value="M" <?php if ($criteria[$option.$value] == 'M') print 'selected="selected"'; ?>>M</option>
+										<option value="M<?php print $value ?>" <?php if ($criteria[$option.$value] == 'M'.$value) print 'selected="selected"'; ?>>M<?php print $value ?></option>
+										<option value="X" <?php if ($criteria[$option.$value] == 'X') print 'selected="selected"'; ?>>X</option>
+										<option value="X<?php print $value ?>" <?php if ($criteria[$option.$value] == 'X'.$value) print 'selected="selected"'; ?>>X<?php print $value ?></option>
+									</select>
+								</div>
+								<?php } ?>
+							</td>
+						</tr>
+						<tr class="form-inline">
+							<td>Lower Legs</td>
+							<td>
+								<?php 
+								$option = 'P';
+								$option_array = array('40', '39', '79', '80');
 								foreach ($option_array as $value) {
 								?>
 								<div class="form-group">
