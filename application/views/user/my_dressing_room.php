@@ -1,13 +1,18 @@
+
 <div class="mainContent myNewTabsRoom">
 	
-	<div class="brandWrap">
-		<div class="tabsDressing">
-			<ul id="dressingTabHeadContainer">
-			    <li class="tabHead-wishList"><a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>()</span></a></li>
-			    <li class="tabHead-assessedItems"><a href="#assessedItems" class="acttabsInner act-assessedItems">PENDING GARMENTS <span class="pinkycolor">()</span></a></li>
-			    <li class="tabHead-itemsPendingGarment"><a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">HISTORY <span>()</span></a></li>
-			</ul>
-		</div>
+	<div class="tabsDressing">
+		<ul id="dressingTabHeadContainer">
+		    <li class="tabHead-wishList">
+		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(12)</span></a>
+		    </li>
+		    <li class="tabHead-itemsPendingGarment">
+		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">()</span></a>
+		    </li>
+		    <li class="tabHead-history">
+		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>()</span></a>
+		    </li>
+		</ul>
 	</div>
 
 
@@ -17,11 +22,11 @@
 			<div class="garments"></div>
 		</div>
 
-		<div class="tabsInner tab-assessedItems" id="assessedItems" style="display:none;">
+		<div class="tabsInner tab-itemsPendingGarment" id="itemsPendingGarment" style="display:none;">
 			<div class="garments"></div>
 		</div>
 
-		<div class="tabsInner tab-itemsPendingGarment" id="itemsPendingGarment" style="display:none;">
+		<div class="tabsInner tab-history" id="history" style="display:none;">
 			<div class="garments"></div>
 		</div>
 
@@ -30,30 +35,33 @@
 
 	<style type="text/css">
 		.myNewTabsRoom .tabsDressing {
-		  width: 480px;
+		  width: 495px;
 		}
 		.myNewTabsRoom .tabsDressing li {
 		  display: inline-block;
 		  flex: 1 auto;
   		  position: relative;
 		}
-		.myNewTabsRoom .tabsDressing li a, .myNewTabsRoom .tabsDressing li a span, .myNewTabsRoom .tabsDressing li a:visited span {
-			font-size: 0.8rem;
-			padding: 0.2em 1.5em;
-			color: #909090;
+		.myNewTabsRoom .tabsDressing li a {
+			font-size: 0.82rem;
+			padding: 0.3em 1.3em;
+			color: #808080;
 			font-weight: bold;
 			border-right: none;
 			background: #EFEFEF;
+			text-decoration: none;
 		}
-		.myNewTabsRoom .myNewTabsRoom .tabsDressing li a.tabClicked, .myNewTabsRoom .tabsDressing li a.tabClicked span {
+		
+		.myNewTabsRoom .tabsDressing li a.tabClicked {
 			background: #B2B2B2;
   			color: white;
 		}
 		.myNewTabsRoom .tabsDressing li a span.pinkycolor, .myNewTabsRoom .tabsDressing li a.tabClicked span.pinkycolor {
 		  color: #e72775;
 		}
-		.myNewTabsRoom .tabsDressing li a:hover, .myNewTabsRoom .tabsDressing li a:visited:hover span {
-			background: white;
+		.myNewTabsRoom .tabsDressing li a:hover, .myNewTabsRoom .tabsDressing li a:visited:hover {
+			background: #C7C7C7;
+			color: white;
   			text-decoration: none;
 		}
 		.myNewTabsRoom .tabsDressing li.tabClicked, .myNewTabsRoom .tabsDressing li.tabClicked {
@@ -63,26 +71,38 @@
 	</style>
 	
 	<script type="text/javascript">
+		var tab = false;
+		var callHash = 1;
+
 		$(function(){
-			toggleTabContent();
-
-			$(".acttabsInner").click(toggleTabContent);
-
+			if( window.location.hash ){
+				tab = window.location.hash;
+			} else {
+				tab = '#wishList';
+			}
+			toggleTabContent(tab);
 			
+			$(".acttabsInner").click(function(){
+				toggleTabContent($(this).attr("href"));
+			});
 
 		});
 
-		function toggleTabContent(){
-			if(window.location.hash){ 
-				var tab = window.location.hash;
+		function toggleTabContent(tab){
+			$(".tabsInner").hide();
+			$(".tabClicked").removeClass("tabClicked");
+			callHash = 1;
+			if( tab.length > 0 ){ 
 				$(".act-"+tab.substring(1, tab.length)).addClass("tabClicked");
 				$(tab).show();
 			} else {
 				$(".act-wishList").addClass("tabClicked");
 				$("#wishList").show();
 			}
+			
 		}
 
+		
 	</script>
 
 
