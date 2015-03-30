@@ -138,7 +138,7 @@ class User extends CI_Controller {
 		$data['title'] = "My Dressing Room";
 		$data['breadcrumb'] = array('MY DRESSING ROOM');
 		$data['extraJS'] = '<script src="/js/mall-dressing-room.js"></script>';
-		$data['extraJS'] .= '<script src="/js/mall-favorite.js"></script>';
+		$data['extraJS'] .= '<script src="/js/mall-favorite.js"></script><script src="/js/mall-find.js"></script>';
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
 		$this->load->view('templates/menu_mall', $data);
