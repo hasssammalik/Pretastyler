@@ -3,30 +3,30 @@
 <form class="userProfile">
 	<fieldset id="fieldset1">
 		<div class="sectionHeader">
-			<div><h2>Account <strong>Details </strong></h2><div class="accountDetails editSection right i u b mousehand" data-action="edit">EDIT</div></div>
+			<div><h2>Account <strong>Details </strong></h2><div class="accountDetails editSection right i u b mousehand" data-action="save"><span class="bkpinkycolor">SAVE</span></div></div>
 		</div>
 		<div class="llist">
 			<div class="row">
 				<div class="col span_11">
 					<label>First name:</label>
-					<input type="text" name="fname" value="<?php print $user_info['first_name']?>" class="first-name accountDetailsDisabled" disabled="disabled">
+					<input type="text" name="fname" value="<?php print $user_info['first_name']?>" class="first-name accountDetailsDisabled">
 				</div>
 				<div class="col span_2">&nbsp;</div>
 				<div class="col span_11">
 					<label>Last name:</label>
-					<input type="text" name="lname" value="<?php print $user_info['last_name']?>" class="last-name accountDetailsDisabled" disabled="disabled">
+					<input type="text" name="lname" value="<?php print $user_info['last_name']?>" class="last-name accountDetailsDisabled">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col span_11">
 					<label>Email:</label>
-					<input type="email" name="email" value="<?php print $user_email?>" class="" disabled="disabled">
+					<input type="email" name="email" value="<?php print $user_email?>" class="">
 				</div>
 				<div class="col span_2">&nbsp;</div>
 				<div class="col span_11 group">
 					<div class="col span_12">
 						<label>Country:</label>
-						<select name="country" class="country-select accountDetailsDisabled" disabled="disabled">
+						<select name="country" class="country-select accountDetailsDisabled">
 							<option value="0">Please Select</option>
 							<?php foreach ($countries as $country) {?>
 							<option value="<?php print $country['country_id']?>" <?php print ($country['default'] == 1)?'selected="selected"':'' ?>><?php print $country['country']?></option>
@@ -35,7 +35,7 @@
 					</div>
 					<div class="col span_6 leftMargin4">
 						<label>ZipCode:</label>
-						<input type="text" name="zip" value="<?php print $user_info['zipcode']?>" class="zipcode accountDetailsDisabled" disabled="disabled">
+						<input type="text" name="zip" value="<?php print $user_info['zipcode']?>" class="zipcode accountDetailsDisabled">
 					</div>
 				</div>
 			</div>
@@ -49,7 +49,7 @@
 	
 	<fieldset id="fieldset2">
 		<div class="sectionHeader">
-			<div><h2>General <strong>features</strong></h2><div class="generalFeatures editSection right i u b mousehand" data-action="edit">EDIT</div></div>
+			<div><h2>General <strong>features</strong></h2><div class="generalFeatures editSection right i u b mousehand" data-action="save"><span class="bkpinkycolor">SAVE</span></div></div>
 		</div>
 		<div class="llist">
 			
@@ -59,14 +59,14 @@
 					<label>Dresses/Swimwear:</label>
 					<div class="group">
 						<div class="col span_6">
-							<select class="ovr-select generalFeaturesDisabled" size_type="OVR" disabled="disabled">
+							<select class="ovr-select generalFeaturesDisabled" size_type="OVR">
 								<?php foreach($size_info['OVR']['regions'] as $region) { ?>
 								<option value="<?php print $region['name'] ?>" <?php print $region['selected']?'selected="selected"':'' ?>><?php print $region['name'] ?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<div class="col span_10 leftMargin4">
-							<select class="ovr-size-select generalFeaturesDisabled" disabled="disabled">
+							<select class="ovr-size-select generalFeaturesDisabled">
 								<?php foreach($size_info['OVR']['size_list'] as $size) { ?>
 								<option value="<?php print $size['value'] ?>" <?php print $size['selected']?'selected="selected"':'' ?>><?php print $size['name'] ?></option>
 								<?php } ?>
@@ -79,14 +79,14 @@
 					<label>Shorts/Jeans/Skirts:</label>
 					<div class="group">
 						<div class="col span_6">
-							<select class="bot-select generalFeaturesDisabled" size_type="BOT" disabled="disabled">
+							<select class="bot-select generalFeaturesDisabled" size_type="BOT">
 								<?php foreach($size_info['BOT']['regions'] as $region) { ?>
 								<option value="<?php print $region['name'] ?>" <?php print $region['selected']?'selected="selected"':'' ?>><?php print $region['name'] ?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<div class="col span_10 leftMargin4">
-							<select class="bot-size-select generalFeaturesDisabled" disabled="disabled">
+							<select class="bot-size-select generalFeaturesDisabled">
 								<?php foreach($size_info['BOT']['size_list'] as $size) { ?>
 								<option value="<?php print $size['value'] ?>" <?php print $size['selected']?'selected="selected"':'' ?>><?php print $size['name'] ?></option>
 								<?php } ?>
@@ -100,14 +100,14 @@
 					<label>Tops/Jackets:</label>
 					<div class="group">
 						<div class="col span_6">
-							<select class="top-select generalFeaturesDisabled" size_type="TOP" disabled="disabled">
+							<select class="top-select generalFeaturesDisabled" size_type="TOP">
 								<?php foreach($size_info['TOP']['regions'] as $region) { ?>
 								<option value="<?php print $region['name'] ?>" <?php print $region['selected']?'selected="selected"':'' ?>><?php print $region['name'] ?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<div class="col span_10 leftMargin4">
-							<select class="top-size-select generalFeaturesDisabled" disabled="disabled">
+							<select class="top-size-select generalFeaturesDisabled">
 								<?php foreach($size_info['TOP']['size_list'] as $size) { ?>
 								<option value="<?php print $size['value'] ?>" <?php print $size['selected']?'selected="selected"':'' ?>><?php print $size['name'] ?></option>
 								<?php } ?>
@@ -120,14 +120,14 @@
 					<label>Shoes/Footwear:</label>
 					<div class="group">
 						<div class="col span_6">
-							<select class="sho-select generalFeaturesDisabled" size_type="SHO" disabled="disabled">
+							<select class="sho-select generalFeaturesDisabled" size_type="SHO">
 								<?php foreach($size_info['SHO']['regions'] as $region) { ?>
 								<option value="<?php print $region['name'] ?>" <?php print $region['selected']?'selected="selected"':'' ?>><?php print $region['name'] ?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<div class="col span_10 leftMargin4">
-							<select class="sho-size-select generalFeaturesDisabled" disabled="disabled">
+							<select class="sho-size-select generalFeaturesDisabled">
 								<?php foreach($size_info['SHO']['size_list'] as $size) { ?>
 								<option value="<?php print $size['value'] ?>" <?php print $size['selected']?'selected="selected"':'' ?>><?php print $size['name'] ?></option>
 								<?php } ?>
@@ -141,7 +141,7 @@
 					<label>Hats:</label>
 					<!-- <div class="group"> 
 						<div class="col span_11"> -->
-							<select class="hat-size-select generalFeaturesDisabled" disabled="disabled">
+							<select class="hat-size-select generalFeaturesDisabled">
 								<?php foreach($size_info['HAT']['size_list'] as $size) { ?>
 								<option value="<?php print $size['value'] ?>" <?php print $size['selected']?'selected="selected"':'' ?>><?php print $size['name'] ?></option>
 								<?php } ?>
@@ -154,7 +154,7 @@
 					<label>Bangles/Bracelets:</label>
 					<!-- <div class="group"> 
 						<div class="col span_11"> -->
-							<select  class="wri-size-select generalFeaturesDisabled" disabled="disabled">
+							<select  class="wri-size-select generalFeaturesDisabled">
 								<?php foreach($size_info['WRI']['size_list'] as $size) { ?>
 								<option value="<?php print $size['value'] ?>" <?php print $size['selected']?'selected="selected"':'' ?>><?php print $size['name'] ?></option>
 								<?php } ?>
@@ -791,9 +791,9 @@
 						};
 
 						
-						//$.post( "/user/update-user-info.html", {offset: 0, limit: 5, user_data: requestvalues, pref_type : 'feature' pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-						//	$( ".bodyEditSection" ).text( "Your Profile is Saved." );
-						//});
+						$.post( "/user/update-user-info.html", {offset: 0, limit: 5, user_data: requestvalues, pref_type : 'feature' pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+							$( ".bodyEditSection" ).text( "Your Profile is Saved." );
+						});
 					}
 					
 					function toggle_div_class(class_num){
