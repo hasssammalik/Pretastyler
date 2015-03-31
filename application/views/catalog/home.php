@@ -88,9 +88,9 @@
 						];
 						var buildimage = 
 						[ 
-						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-38.png" /></div><ul><li>You have a petite frame.</li><li> You are likely to be short and small boned.</li></ul></div>',
-						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-39.png" /></div><ul><li>Your frame is between small and large</li></ul></div>',
-						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-40.png" /></div><ul><li>Your frame is large.</li><li>You are likely to be tall and large boned. </li></ul></div>' 
+						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-39.png" /></div><ul><li>You have a petite frame.</li><li> You are likely to be short and small boned.</li></ul></div>',
+						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-40.png" /></div><ul><li>Your frame is between small and large</li></ul></div>',
+						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-38.png" /></div><ul><li>Your frame is large.</li><li>You are likely to be tall and large boned. </li></ul></div>' 
 						];
 						
 						$(".newprofile-height")

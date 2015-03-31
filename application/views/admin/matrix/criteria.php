@@ -86,7 +86,7 @@
 		</div><!--/.col (left) -->
 		<!-- right column -->
 		<?php if (empty($criteria['page_type'])) { ?>
-		<div class="col-md-8">
+		<div class="col-md-4">
 			<!-- general form elements disabled -->
 			<div class="box box-warning">
 				<div class="box-header">
