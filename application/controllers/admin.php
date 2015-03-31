@@ -933,66 +933,22 @@ class Admin extends CI_Controller {
 				if ($this->input->post()){
 					//if this is a edit request.
 					$data['error_messages'] = array();
-					$criteria_id = $this->input->post('criteria_id', TRUE);
-					$name = $this->input->post('name', TRUE);
-					$position = $this->input->post('position', TRUE);
-					$tooltip = $this->input->post('tooltip', TRUE);
-					$weight = $this->input->post('weight', TRUE);
-					$has_new_image = $this->input->post('has_new_image', TRUE);
-					$ori_image = $this->input->post('ori_image', TRUE);
-					$values = $this->input->post('values', TRUE);
-					$showif = $this->input->post('showif', TRUE);
-					$hideif = $this->input->post('hideif', TRUE);
-					if (empty($criteria_id)){
+					$comment_id = $this->input->post('comment_id', TRUE);
+					$comment = $this->input->post('comment', TRUE);
+					$labels = $this->input->post('labels', TRUE);
+					if (empty($comment_id)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00006 Something went error. Please contact programmer!'));
 					}
-					if (empty($name)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria NAME!'));
+					if (empty($comment)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter comment!'));
 					}
-					if (empty($position)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria POSITION!'));
-					}
-					if (empty($tooltip)){
-						$tooltip = '';
-					}
-					if (empty($weight)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria IMPORTANCE!'));
-					}
-					if (!empty($has_new_image)) {
-						$config['upload_path'] = '/home/stylefin/public_html/images/system/';
-						$config['allowed_types'] = 'jpg|png|tif';
-						$config['file_name'] = random_string('unique').'.jpg';
-						$this->load->library('upload', $config);
-						if (!$this->upload->do_upload('new_image')) {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
-						} else {
-							$image = $this->upload->data();
-							$image_path = $image['file_name'];
-							$is_image = $image['is_image'];
-							if (!$is_image) {
-								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
-							}
-						}
-					} else {
-						$image_path = $ori_image;
+					if (empty($labels)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter labels!'));
 					}
 					if (empty($data['error_messages'])){
-						$db_showif = '';
-						$db_hideif = '';
-						if (!empty($showif)) {
-							$db_showif = '/'.implode('//', $showif).'/';
-						}
-						if (!empty($hideif)) {
-							$db_hideif = '/'.implode('//', $hideif).'/';
-						}
-						if ($this->admin_model->update_criteria($criteria_id, array(
-							'name' => $name, 
-							'position' => $position, 
-							'tooltip' => $tooltip, 
-							'weight' => $weight, 
-							'image_path' => $image_path,
-							'showif' => $db_showif, 
-							'hideif' => $db_hideif, )) && $this->admin_model->update_criteria($criteria_id, $values)){
+						if ($this->admin_model->update_comment($comment_id, array(
+							'Comment' => $comment, 
+							'LABELS' => $labels,))){
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This criteria has been successfully updated!'));
 						} else {
@@ -1012,46 +968,20 @@ class Admin extends CI_Controller {
 				if ($this->input->post()){
 					//if this is a add request.
 					$data['error_messages'] = array();
-					$name = $this->input->post('name', TRUE);
-					$position = $this->input->post('position', TRUE);
-					$tooltip = $this->input->post('tooltip', TRUE);
-					$weight = $this->input->post('weight', TRUE);
-					if (empty($name)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria NAME!'));
+					$comment = $this->input->post('comment', TRUE);
+					$labels = $this->input->post('labels', TRUE);
+					if (empty($comment)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter comment!'));
 					}
-					if (empty($position)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria POSITION!'));
-					}
-					if (empty($tooltip)){
-						$tooltip = '';
-					}
-					if (empty($weight)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria IMPORTANCE!'));
-					}
-					$config['upload_path'] = '/home/stylefin/public_html/images/system/';
-					$config['allowed_types'] = 'jpg|png|tif';
-					$config['file_name'] = random_string('unique').'.jpg';
-					$this->load->library('upload', $config);
-					if (!$this->upload->do_upload('new_image')) {
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
-					} else {
-						$image = $this->upload->data();
-						$image_path = $image['file_name'];
-						$is_image = $image['is_image'];
-						if (!$is_image) {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
-						}
+					if (empty($labels)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter labels!'));
 					}
 					if (empty($data['error_messages'])){
-						$criteria_id = $this->admin_model->insert_criteria(array(
-							'name' => $name, 
-							'field_id' => $param2,
-							'position' => $position, 
-							'tooltip' => $tooltip, 
-							'weight' => $weight, 
-							'image_path' => $image_path,));
-						if ($criteria_id){
-							redirect('/admin/matrix/criteria/edit/'.$criteria_id, 'refresh');
+						$comment_id = $this->admin_model->insert_comment(array(
+							'Comment' => $comment, 
+							'LABELS' => $labels,));
+						if ($comment_id){
+							redirect('/admin/matrix/criteria/edit/'.$param2, 'refresh');
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00010 Something went error. Please contact programmer!'));
 						}
@@ -1074,14 +1004,14 @@ class Admin extends CI_Controller {
 				if ($this->input->post()){
 					//if this is a delete request.
 					$data['error_messages'] = array();
-					$criteria_id = $this->input->post('delete_id', TRUE);
-					if (empty($criteria_id)){
+					$comment_id = $this->input->post('delete_id', TRUE);
+					if (empty($comment_id)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00011 Something went error. Please contact programmer!'));
 					}
 					if (empty($data['error_messages'])){
-						$field_id = $this->admin_model->delete_criteria($criteria_id);
-						if ($field_id){
-							redirect('/admin/matrix/field/edit/'.$field_id, 'refresh');
+						$criteria_id = $this->admin_model->delete_comment($comment_id);
+						if ($criteria_id){
+							redirect('/admin/matrix/criteria/edit/'.$criteria_id, 'refresh');
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00012 Something went error. Please contact programmer!'));
 						}
