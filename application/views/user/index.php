@@ -168,7 +168,7 @@
 	<br>
 	<fieldset id="profilePanel" class="fixedOptions" style="z-index:4;background:white;padding-top:45px">
 		<div class="sectionHeader">
-			<div><h2>My Body <strong>Features</strong></h2><div class="bodyEditSection editSection right i u b mousehand">data-action="save"><span class="bkpinkycolor">SAVE</span></div></div>
+			<div><h2>My Body <strong>Features</strong></h2><div class="bodyEditSection editSection right i u b mousehand" data-action="save"><span class="bkpinkycolor">SAVE</span></div></div>
 		</div>
 		
 
