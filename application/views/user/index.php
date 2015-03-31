@@ -791,7 +791,7 @@
 						};
 
 						
-						$.post( "/user/update-user-info.html", {offset: 0, limit: 5, user_data: requestvalues, pref_type : 'feature' pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+						$.post( "/user/update-user-info.html", {offset: 0, limit: 5, user_data: requestvalues, pref_type : 'feature', pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 							$( ".bodyEditSection" ).text( "Your Profile is Saved." );
 						});
 					}
