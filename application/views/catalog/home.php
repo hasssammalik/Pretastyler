@@ -38,10 +38,10 @@
 						var heightimage = 
 						[ 
 						'<div id="talkbubble" class="talkbubbleLowerLabel"><ul><li>CM: 162.4 and under</li><li>IN: 5\'3" 3/4 and under</li></ul></div>' ,
-						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 162.5 - 167 </li><li>IN: 5\'4" - 5\'5" 3/4</span></div>',
-						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 167.1 - 174.5 </li><li>IN: 5\'5" - 5\'8" 3/4</span></div>',
-						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 174.6 - 179.95 </li><li>IN: 5\'8" - 5\'10 3/4</span></div>',
-						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 180 and taller </li><li>IN: 5\'11" and taller</span></div>'
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 162.5 - 167 </li><li>IN: 5\'4" - 5\'5" 3/4</li></ul></div>',
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 167.1 - 174.5 </li><li>IN: 5\'5" - 5\'8" 3/4</li></ul></div>',
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 174.6 - 179.95 </li><li>IN: 5\'8" - 5\'10 3/4</li></ul></div>',
+						'<div id="talkbubble" class="talkbubbleLowerLabel"><span><ul><li>CM: 180 and taller </li><li>IN: 5\'11" and taller</li></ul></div>'
 						];
 						var sizeimage = 
 						[ 
