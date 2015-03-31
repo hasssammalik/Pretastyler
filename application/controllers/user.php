@@ -476,7 +476,7 @@ class User extends CI_Controller {
 			);
 		} else if ( $saveSection == 'feature' ) {
 			
-			$user_data = $this->input->post('user_data', TRUE);
+			$uservalue = $this->input->post('user_data', TRUE);
 			
 			$data = array(
 						"height_select_id" 		=> ( !empty($uservalue['height_select_id']) ? $uservalue['height_select_id'] : 0 ),
