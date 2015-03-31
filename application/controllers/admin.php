@@ -968,6 +968,7 @@ class Admin extends CI_Controller {
 				if ($this->input->post()){
 					//if this is a add request.
 					$data['error_messages'] = array();
+					$criteria_id = $this->input->post('criteria_id', TRUE);
 					$comment = $this->input->post('comment', TRUE);
 					$labels = $this->input->post('labels', TRUE);
 					if (empty($comment)){
@@ -978,6 +979,7 @@ class Admin extends CI_Controller {
 					}
 					if (empty($data['error_messages'])){
 						$comment_id = $this->admin_model->insert_comment(array(
+							'criteria_id' => $criteria_id, 
 							'Comment' => $comment, 
 							'LABELS' => $labels,));
 						if ($comment_id){

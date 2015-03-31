@@ -29,6 +29,7 @@
 						<input type="text" class="form-control" value="<?php print $comment['criteria_comment_id'];?>" disabled>
 						<span class="input-group-addon">ID is not changeable</span>
 						<input type="hidden" name="criteria_comment_id" value="<?php print $comment['criteria_comment_id'] ?>">
+						<input type="hidden" name="criteria_id" value="<?php print $comment['criteria_id'] ?>">
 					</div>
 					<br/>
 					<div class="form-group">
