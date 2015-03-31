@@ -104,6 +104,7 @@ class Mall extends CI_Controller {
 		$wardrobe = $this->input->post('wardrobe', TRUE);
 		$dressing_room = $this->input->post('dressing_room', TRUE);
 		$find = $this->input->post('find', TRUE);
+		$history = $this->input->post('history', TRUE);
 		$similar = $this->input->post('similar', TRUE);
 		$body = $this->input->post('body', TRUE);
 		$star = $this->input->post('star', TRUE);
@@ -129,6 +130,8 @@ class Mall extends CI_Controller {
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_find($offset, $limit, $user_id);
 		} else if ($dressing_room){
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_dressing_room($offset, $limit, $user_id);
+		} else if ($history){
+			$data['garments'] = $this->garment_model->get_batch_garment_info_by_history($offset, $limit, $user_id);
 		} else if ($similar){
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id($offset, $limit, $user_id, $similar);
 		} else if ($body){
