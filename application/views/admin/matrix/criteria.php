@@ -547,11 +547,13 @@
 						<thead>
 							<th>ID</th>
 							<th>Comment</th>
+							<th>Labels</th>
 						</thead>
 						<?php foreach ($comment as $line) { ?>
 						<tr class="form-inline">
 							<td><?php print $line['criteria_comment_id'] ?></td>
 							<td><?php print $line['Comment'] ?></td>
+							<td><?php print $line['LABELS'] ?></td>
 						</tr>
 						<?php } ?>
 					</table>
