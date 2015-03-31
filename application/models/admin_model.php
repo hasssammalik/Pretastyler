@@ -185,7 +185,7 @@ class Admin_model extends CI_Model{
 			if ($query->num_rows() >= 1){
 				return $query->result_array();
 			} else {
-				return FALSE;
+				return array();
 			}
 		} else {
 			return FALSE;
@@ -204,7 +204,7 @@ class Admin_model extends CI_Model{
 			if ($query->num_rows() >= 1){
 				return $query->row_array();
 			} else {
-				return array();
+				return FALSE;
 			}
 		} else {
 			return FALSE;
