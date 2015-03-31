@@ -463,7 +463,7 @@
 					
 					<div class="your-mall-profile home-profile-area-of-concern">
 						<div class="slider-name left">
-							<p>Areas of Concern</p>
+							<p>AREAS OF CONCERN</p>
 						</div>
 						
 						<div class="homepageslider left area-of-concern">
