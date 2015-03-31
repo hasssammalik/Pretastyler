@@ -72,7 +72,7 @@
 						'<div id="talkbubble"><span>Commonly a thin neck is also long.<br>Low necklines and medium-short to short hair styles look best on you.</span></div>',
 						'<div id="talkbubble"><span>Select if your neck is just like that of most people you meet.It is neither thick nor very thin.</span></div>',
 						'<div id="talkbubble"><span>Your neck circumference is similar to the with of your head.<br>Commonly a thick neck is also short in length.</span></div>',
-						'<div id="talkbubble"><span>Select if you rolls under chin.</span></div>',
+						'<div id="talkbubble" class="med-width"><span>Select if you rolls under chin.</span></div>',
 						'<div id="talkbubble"><span>Select if you have an undefined chin in a side profile. </span></div>' 
 						];
 						
