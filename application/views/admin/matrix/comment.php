@@ -1,8 +1,8 @@
-﻿<?php echo form_open_multipart();?>
+<?php echo form_open_multipart();?>
 <!-- Main content -->
 <section class="content">
 	<div class="row">
-		<?php if (empty($criteria['page_type'])) { ?>
+		<?php if (empty($comment['page_type'])) { ?>
 		<div class="col-md-12">
 		<?php } else {?>
 		<div class="col-md-offset-4 col-md-4">
