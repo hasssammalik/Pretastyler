@@ -85,25 +85,6 @@ class Garment_model extends CI_Model{
 		}
 	}
 	/**
-	 * can be deleted
-	 */
-	private function update_expired_score($user_id, $user_specs_str){
-		//find expired info
-		$garment_ids_query = 'select GROUP_CONCAT(garment_id) as garment_ids from pas_user_garment where expired = 1 AND user_id = ?';
-		$query = $this->db->query($garment_ids_query, array($user_id));
-		if ($query->num_rows() > 0){
-			//recalculate the scores for expired garments
-			$garment_ids = $query->row_array()['garment_ids'];
-			if (!empty($garment_ids)){
-				$query_str = 'INSERT INTO pas_user_garment (user_id, garment_id, score) SELECT '.$user_id.' AS user_id, scores.garment_id AS garment_id, scores.score AS score FROM (SELECT garment_id, (AVG(LEAST('.$user_specs_str.')) + MIN(LEAST('.$user_specs_str.'))) / 2 AS `score` FROM `pas_garment_specs` WHERE `garment_id` IN ('.$garment_ids.') GROUP BY `garment_id`) AS scores WHERE scores.score IS NOT NULL ON DUPLICATE KEY UPDATE score = VALUES(score)';
-				$query = $this->db->query($query_str);
-				//update expired info
-				$query_expired = 'UPDATE pas_user_garment SET expired = 0 WHERE user_id = ? AND garment_id IN ('.$garment_ids.')';
-				$query = $this->db->query($query_expired, array($user_id));
-			}
-		}
-	}
-	/**
 	 * get_batch_garment_info_from_quick_search
 	 * Read batch garment's info
 	 * Returning url, image, ...
@@ -560,6 +541,25 @@ class Garment_model extends CI_Model{
 	public function get_batch_garment_info_by_wardrobe($offset, $limit, $user_id = FALSE){
 		if ($user_id) {
 			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'wardrobe' => 1))->order_by('garment.garment_id desc')->limit($limit, $offset);
+			$query = $this->db->get();
+			if ($query->num_rows() == 0){
+				return FALSE;
+			}
+			return $query->result_array();
+		} else {
+			return FALSE;
+		}
+	}
+	/**
+	 * get_batch_garment_info_by_history
+	 * Read batch garment's info
+	 * Returning url, image, ...
+	 *
+	 * @return garment array ()
+	 */
+	public function get_batch_garment_info_by_history($offset, $limit, $user_id = FALSE){
+		if ($user_id) {
+			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'favorite' => -1, 'enabled' => 1))->order_by('garment.garment_id desc')->limit($limit, $offset);
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
 				return FALSE;
@@ -1035,7 +1035,13 @@ class Garment_model extends CI_Model{
 	 */
 	public function update_user_garment_favorite($garment_id, $user_id) {
 		if ($user_id) {
-			$this->db->set('favorite', 'NOT `favorite`', FALSE)->where(array('garment_id' => $garment_id, 'user_id' => $user_id))->update('user_garment');
+			$current_favorite = $this->db->get_where('user_garment', array('user_id' => $user_id, 'garment_id' => $garment_id))->row()->favorite;
+			if ($current_favorite == 1){
+				$data = array('favorite' => -1);
+			} else {
+				$data = array('favorite' => 1);
+			}
+			return $this->db->where(array('garment_id' => $garment_id, 'user_id' => $user_id))->update('user_garment', $data);
 		} else {
 			return FALSE;
 		}
