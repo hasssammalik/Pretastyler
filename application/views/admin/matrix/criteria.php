@@ -535,6 +535,30 @@
 			</div><!-- /.box -->
 		</div><!--/.col (right) -->
 		<?php } ?>
+		<?php if (empty($criteria['page_type'])) { ?>
+		<div class="col-md-4">
+			<!-- general form elements disabled -->
+			<div class="box box-warning">
+				<div class="box-header">
+					<h3 class="box-title">Comments</h3>
+				</div><!-- /.box-header -->
+				<div class="box-body no-padding">
+					<table class="table table-striped ">
+						<thead>
+							<th>ID</th>
+							<th>Comment</th>
+						</thead>
+						<?php foreach ($comment as $line) { ?>
+						<tr class="form-inline">
+							<td><?php print $line['criteria_comment_id'] ?></td>
+							<td><?php print $line['Comment'] ?></td>
+						</tr>
+						<?php } ?>
+					</table>
+				</div><!-- /.box-body -->
+			</div><!-- /.box -->
+		</div><!--/.col (right) -->
+		<?php } ?>
 	</div>   <!-- /.row -->
 	<?php if (empty($criteria['page_type'])) { ?>
 	<div class="row">

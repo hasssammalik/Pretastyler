@@ -826,6 +826,7 @@ class Admin extends CI_Controller {
 					}
 				}
 				$data['criteria'] = $this->admin_model->get_criteria_by_criteria_id($param2);
+				$data['comment'] = $this->admin_model->get_comment_by_criteria_id($param2);
 				list($data['showifs'], $data['hideifs']) = $this->admin_model->get_showif_hideif_list($data['criteria']['category_id'], $data['criteria']['field_position'], $data['criteria']['showif'], $data['criteria']['hideif']);
 				$data['title'] = "Criteria - ".$data['criteria']['name'];
 				$data['title_description'] = "manage criteria ".$data['criteria']['name'];
