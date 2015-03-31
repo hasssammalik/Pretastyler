@@ -1087,11 +1087,11 @@ class Admin extends CI_Controller {
 						}
 					}
 				}
-				$name = $this->admin_model->get_criteria_by_criteria_id($param2)['name'];
-				$data['delete_type'] = 'criteria';
+				$name = $this->admin_model->get_comment_by_comment_id($param2)['criteria_comment_id'];
+				$data['delete_type'] = 'comment';
 				$data['delete_id'] = $param2;
-				$data['title'] = "Delete criteria - ".$name;
-				$data['title_description'] = "Delete criteria - ".$name;
+				$data['title'] = "Delete comment - ".$name;
+				$data['title_description'] = "Delete comment - ".$name;
 				$this->load->view('admin/header', $data);
 				$this->load->view('admin/matrix/delete', $data);
 				$this->load->view('admin/footer', $data);
