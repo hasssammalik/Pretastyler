@@ -205,15 +205,15 @@
 						$(".newprofile-back")
 							.slider({
 								min: 0, 
-								max: upperback.length-1, 
+								max: back.length-1, 
 								value: default_values[5]-1
 							})
 							.slider("pips", {
-								labels: upperback
+								labels: back
 							})
 							.slider("float", {
 								rest: "label",
-								labels: upperbackimage
+								labels: backimage
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[5] = (+ui.value+1);
