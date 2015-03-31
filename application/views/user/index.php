@@ -168,7 +168,7 @@
 	<br>
 	<fieldset id="profilePanel" class="fixedOptions" style="z-index:4;background:white;padding-top:45px">
 		<div class="sectionHeader">
-			<div><h2>My Body <strong>Features</strong></h2><span class="bodyEditSection small right i">.......</span></div>
+			<div><h2>My Body <strong>Features</strong></h2><div class="bodyEditSection editSection right i u b mousehand">data-action="save"><span class="bkpinkycolor">SAVE</span></div></div>
 		</div>
 		
 
@@ -751,11 +751,19 @@
 							pull_profile_garment();
 						});
 						
+						$(document).on("click", '.bodyEditSection', function(){
+							$('.bodyEditSection').removeClass("u").html('<span style="color: #e72775; font-size: 14px;">saving...</span>');
+							pull_profile_garment_update_button();
+						});
+						
+						
 					});
 					
 					function pull_profile_garment() {
-						//console.log(default_values);
-
+						console.log(default_values);
+					}
+					function pull_profile_garment_update_button() {
+					
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
 
 						if( default_values[5] < 4 ){
@@ -791,8 +799,13 @@
 						};
 
 						
-						$.post( "/user/update-user-info.html", {offset: 0, limit: 5, user_data: requestvalues, pref_type : 'feature', pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-							$( ".bodyEditSection" ).text( "Your Profile is Saved." );
+						$.post( "/user/update-user-info.html", { 
+								user_data: requestvalues, 
+								pref_type : 'feature', 
+								pas_secret_name:$("input[name=pas_secret_name]").val()
+								}, 
+						function( data ) {
+							$( ".bodyEditSection" ).text( "Profile saved." );
 						});
 					}
 					
