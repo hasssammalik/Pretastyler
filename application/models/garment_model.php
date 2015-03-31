@@ -1058,6 +1058,19 @@ class Garment_model extends CI_Model{
 			return FALSE;
 		}
 	}
+	/**
+	 * update_user_garment_clear_history
+	 *
+	 * @return 
+	 */
+	public function update_user_garment_clear_history($user_id) {
+		if ($user_id) {
+			$data = array('favorite' => 0);
+			return $this->db->where(array('user_id' => $user_id, 'favorite' => -1))->update('user_garment', $data);
+		} else {
+			return FALSE;
+		}
+	}
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
 	// Insert Garment Info
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
