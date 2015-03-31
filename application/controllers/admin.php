@@ -1060,6 +1060,7 @@ class Admin extends CI_Controller {
 				$name = $this->admin_model->get_criteria_by_criteria_id($param2)['name'];
 				$data['comment'] = array(
 									'page_type' => 'add',
+									'criteria_id' => $param2, 
 									'criteria_comment_id' => 'Will be automatic generated.',
 									'Comment' => '', 
 									'LABELS' => '',);
