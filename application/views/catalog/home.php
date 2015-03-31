@@ -470,11 +470,25 @@
 <div class="popup_modal"></div>
 <div class="popup-box">
     <div class="cross"><div class="cross-image-homepage"><img src="/images/pink_button-05.png" alt=""></div></div>
-    <h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1><hr width="95%" size="2" />
-    <form action="/mall-by-profile.html" method="post">
-      <div><input type="text" placeholder="First Name*" name="fname" required/><input type="text"  required placeholder="Last Name*" name="lname"/></div>
-      <div><input type="email" placeholder="Email*" name="email" required/></div>
-      <div><input type="password" id="password" placeholder="Password*" required name="password"/><input type="password" required placeholder="Confirm Password*" name="cpass" oninput="check(this)"/></div>
+    <h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1>
+	<hr width="95%" size="2" />
+    
+	<div id="error-register">
+		
+	</div>
+	
+	<form action="/mall-by-profile.html" method="post">
+      <div>
+			<input type="text" placeholder="First Name*" name="fname" id="menu_mall_register_fname" required/>
+			<input type="text" placeholder="Last Name*" name="lname" id="menu_mall_register_lname" required/>
+	  </div>
+      <div>
+			<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
+	  </div>
+      <div>
+			<input type="password" placeholder="Password*" name="password" id="menu_mall_register_password" required />
+			<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" oninput="check(this)" required />
+	  </div>
       <script language='javascript' type='text/javascript'>
         function check(input) {
           if (input.value != document.getElementById('password').value) {
@@ -485,8 +499,8 @@
           }
         }
       </script>
-      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" ></div>
-      <!-- onclick="parent.location='http://m1.pretastyler.com/mall/mall-by-profile.html'" -->
+      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="menu_mall_login"></div>
+      
     </form>
     <div style="text-align:center">Trial Expires in 30 days.</div>
   </div>
