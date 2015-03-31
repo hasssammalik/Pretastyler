@@ -1,4 +1,4 @@
-<?php echo form_open_multipart();?>
+﻿<?php echo form_open_multipart();?>
 <!-- Main content -->
 <section class="content">
 	<div class="row">
@@ -530,6 +530,35 @@
 								<?php } ?>
 							</td>
 						</tr>
+					</table>
+				</div><!-- /.box-body -->
+			</div><!-- /.box -->
+		</div><!--/.col (right) -->
+		<?php } ?>
+		<?php if (empty($criteria['page_type'])) { ?>
+		<div class="col-md-4">
+			<!-- general form elements disabled -->
+			<div class="box box-danger">
+				<div class="box-header">
+					<h3 class="box-title">Comments</h3>
+				</div><!-- /.box-header -->
+				<div class="box-body no-padding">
+					<a href="/admin/matrix/comment/add/<?php print $criteria['criteria_id'];?>.html" class="btn btn-primary button-save">Add a New Comment</a>
+					<table class="table table-striped ">
+						<thead>
+							<th>ID</th>
+							<th>Comment</th>
+							<th>Labels</th>
+							<th>Delete</th>
+						</thead>
+						<?php foreach ($comment as $line) { ?>
+						<tr class="form-inline">
+							<td><a href="/admin/matrix/comment/edit/<?php print $line['criteria_comment_id'];?>.html"><?php print $line['criteria_comment_id'] ?></a></td>
+							<td><?php print $line['Comment'] ?></td>
+							<td><?php print $line['LABELS'] ?></td>
+							<td><a href="/admin/matrix/comment/delete/<?php print $line['criteria_comment_id'];?>.html"><i class="glyphicon glyphicon-remove"></i></a></td>
+						</tr>
+						<?php } ?>
 					</table>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
