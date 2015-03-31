@@ -1057,19 +1057,16 @@ class Admin extends CI_Controller {
 						}
 					}
 				}
-				$name = $this->admin_model->get_field_by_field_id($param2)['name'];
-				$data['criteria'] = array(
+				$name = $this->admin_model->get_criteria_by_criteria_id($param2)['name'];
+				$data['comment'] = array(
 									'page_type' => 'add',
-									'field_id' => $param2,
-									'criteria_id' => 'Will be automatic generated.',
-									'name' => '', 
-									'position' => '', 
-									'tooltip' => '', 
-									'weight' => '',);
-				$data['title'] = "Add new criteria for field - ".$name;
-				$data['title_description'] = "Add new criteria for field - ".$name;
+									'criteria_comment_id' => 'Will be automatic generated.',
+									'Comment' => '', 
+									'LABELS' => '',);
+				$data['title'] = "Add new comment for criteria - ".$name;
+				$data['title_description'] = "Add new comment for criteria - ".$name;
 				$this->load->view('admin/header', $data);
-				$this->load->view('admin/matrix/criteria', $data);
+				$this->load->view('admin/matrix/comment', $data);
 				$this->load->view('admin/footer', $data);
 			}
 			else if ($param1 == 'delete'){
