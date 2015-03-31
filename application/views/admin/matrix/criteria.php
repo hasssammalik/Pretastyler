@@ -543,7 +543,6 @@
 					<h3 class="box-title">Comments</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body no-padding">
-					<a href="/admin/matrix/comment/add/<?php print $criteria['criteria_id'];?>.html" class="btn btn-primary button-save">Add a New Comment</a>
 					<table class="table table-striped ">
 						<thead>
 							<th>ID</th>
@@ -560,6 +559,7 @@
 						</tr>
 						<?php } ?>
 					</table>
+					<a href="/admin/matrix/comment/add/<?php print $criteria['criteria_id'];?>.html" class="btn btn-primary button-save">Add a new comment</a>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 		</div><!--/.col (right) -->

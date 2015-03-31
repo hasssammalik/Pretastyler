@@ -192,6 +192,25 @@ class Admin_model extends CI_Model{
 		}
 	}
 	/**
+	 * get_comment_by_criteria_id
+	 * Read garment's info by garment_id 
+	 * Returning url, image, ...
+	 *
+	 * @return garment array if existed, if not return FALSE
+	 */
+	public function get_comment_by_comment_id($comment_id = FALSE){
+		if ($comment_id) {
+			$query = $this->db->select('*')->from('criteria_comment')->where('criteria_comment_id', $comment_id)->get();
+			if ($query->num_rows() >= 1){
+				return $query->row_array();
+			} else {
+				return FALSE;
+			}
+		} else {
+			return FALSE;
+		}
+	}
+	/**
 	 * get_user_group
 	 * Read garment's info by garment_id 
 	 * Returning url, image, ...
