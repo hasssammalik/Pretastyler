@@ -349,8 +349,8 @@
 								</div>
 								<?php } ?>
 							<div class="panel2 newpanelDesign" id="similarItems">
-								<div class="panelHeader">Similar Items that suit you</div>
-								<div class="panelContent">
+								<div class="panelHeader tab-look-header">Similar Items that suit you</div>
+								<div class="panelContent tab-look-body">
 									<div class="sliderWrap">
 										<ul class="items">
 											<?php if ($similar_garments) {

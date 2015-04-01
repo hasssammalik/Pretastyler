@@ -42,7 +42,7 @@
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to</li><li> the tip of your shoulder. Shoulder straps will tend to slip off your shoulders..</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to the tip of your shoulder. Shoulder straps will tend to slip off your shoulders.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-28.png" /></div><ul><li>Your shoulders have a slight slope.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-27.png" /></div><ul><li>Your shoulders are broad and square with almost no slope.</li></ul></div>' 
 						];
@@ -62,9 +62,9 @@
 						
 						var neckimage = [
 						'<div id="talkbubble"><ul><li>Commonly a thin neck is also long.</li><li>Low necklines and medium-short to short hair styles look best on you.</li></ul></div>',
-						'<div id="talkbubble"><ul><li>Select if your neck is just like that of most people you meet.It is neither thick nor very thin.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Select if your neck is just like that of most people you meet. It is neither thick nor very thin.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>Your neck circumference is similar to the with of your head.</li><li>Commonly a thick neck is also short in length.</li></ul></div>',
-						'<div id="talkbubble" class="med-width"><ul><li>Select if you rolls under chin.</li></ul></div>',
+						'<div id="talkbubble" class="med-width"><ul><li>Select if you have rolls under chin.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>Select if you have an undefined chin in a side profile. </li></ul></div>' 
 						];
 						
