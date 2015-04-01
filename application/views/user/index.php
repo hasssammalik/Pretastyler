@@ -49,7 +49,7 @@
 	
 	<fieldset id="fieldset2">
 		<div class="sectionHeader">
-			<div><h2>General <strong>features</strong></h2><div class="generalFeatures editSection right i u b mousehand" data-action="save"><span class="bkpinkycolor">SAVE</span></div></div>
+			<div><h2>Your <strong>Sizes</strong></h2><div class="generalFeatures editSection right i u b mousehand" data-action="save"><span class="bkpinkycolor">SAVE</span></div></div>
 		</div>
 		<div class="llist">
 			
@@ -1084,7 +1084,7 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					
+					<div class="profile-save mousehand bkpinkycolor" data-action="save">Save</div>
 					
 
 
