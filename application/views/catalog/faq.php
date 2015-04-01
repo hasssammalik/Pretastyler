@@ -34,7 +34,7 @@
 	</section> -->
 	<div class="container-full">
 		<div class="half">
-			<div class="faq-info tab-active" id="q1">
+			<div class="faq-info active" id="q1">
 				<div class="faq-header">
 					WHAT IS PRÊT À STYLER
 				</div>
