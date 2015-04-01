@@ -31,7 +31,7 @@ class User_check
 		$uri = explode('/', uri_string());
 		$is_logout = FALSE;
 		if (!empty($uri[1])){
-			if (!(strpos($uri[1], 'logout') !== false)){
+			if (strpos($uri[1], 'logout') !== false){
 				$is_logout = TRUE;
 			}
 		}
