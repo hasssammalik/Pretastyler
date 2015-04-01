@@ -40,7 +40,6 @@ class User extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/index.php')){
 			show_404();
 		}
@@ -153,7 +152,6 @@ class User extends CI_Controller {
 	 */
 	public function add_to_favorites()
 	{
-		$this->load->library('user_check');
 		if (!$this->input->post()){
 			show_404();
 		}
