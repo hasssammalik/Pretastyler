@@ -30,7 +30,7 @@
 						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
 						var size = [ "Allegra", "Natalie", "Halle","Kim", "Queen", "Amber","Rebel"];
 						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "66 - 75","76 >" ];
-						var bodyshape = [ "Hour glass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
+						var bodyshape = [ "Hourglass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
 						var bodyratio = [ "Balanced Body","Long Legged Short Torso", "Short Legged Long Torso" ];
 						var bust = [ "< A", "B", "C", "D", "DD", "E >" ];
 						var build = [ "Small", "Medium", "Large" ];
@@ -372,53 +372,16 @@
 			
 			<div class="homeprofile-head">
 				<img src="/images/newhomedown.png" class="noneArea noneLiner">
-				<p class="i profile-big-title">Here's just a few <strong>garments we've found for you</strong></p>
+				<p class="i profile-big-title homepage-titles">Here's just a few <strong>garments we've found for you</strong></p>
 			</div>
 			<style type="text/css">
 				.garments:after { display: none;}
 			</style>
-			<!-- <div id="homepage-slider">
+			<div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
 				<div class="clear"></div>
-			</div> -->
-			<script>
-$(document).ready(function(){
-	$('.slick-track').addClass('gallery');
-  $('.slick-prev').empty().append('<img src="/test/next.png"/>');
-  $('.slick-next').empty().append('<img src="/test/next.png"/>');
-})
-  </script>
-			<style>
-			#homepage-gallery {width:1024px;margin:30px auto;}
-			.item{width:200px;height:200px;margin-left:5px;background-color: #5f5f5f;color:white;float:left;}
-			.gallery button{
-				position: absolute;
-				top: 90px;
-				width:60px;height:60px;
-				border:none;
-				background:none;
-				cursor: pointer;
-			}
-			.slick-prev {
-				left:-65px;
-			}
-			.slick-prev img{
-				-moz-transform: scaleX(-1);
-				-o-transform: scaleX(-1);
-				-webkit-transform: scaleX(-1);
-				transform: scaleX(-1);
-				filter: FlipH;
-				-ms-filter: "FlipH";
-			}
-			.slick-next{right:-50px;
-			}
-			.gallery button img{
-				height:35px;width:35px;margin-left:0;
-			}
-			</style>
-				<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'  id="homepage-gallery">
-				</div>
-				<div class="clear"></div>
+			</div>
+			
 
 			<!-- <div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
 					<div class="sliderWrap">
@@ -432,16 +395,16 @@ $(document).ready(function(){
 			<div class="clear"></div>
 			<div class="homeprofile-head">
 				
-				<p class="homeprofile-bodytext" style=" font-style: italic; font-size: 22px;"><br/>What's<strong > Next?</strong></p>
+				<p class="homeprofile-bodytext" style=" font-style: italic; font-size: 1.8vw;"><br/>What's<strong > Next?</strong></p>
 				<div class="mall-links">	
 					<div class="mall-link1">
-						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 16px;">I'm on a roll show me </p>
+						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm on a roll show me </p>
 						<a class="bkpinkycolor home-vistmallbtn container noneLiner" href="/your-mall.html">
 							MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</a>
 					</div>
 					<div class="mall-link2">
-						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 16px;">I'm too excited to wait </p>
+						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm too excited to wait </p>
 						<button class="bkpinkycolor home-vistmallbtn container noneLiner"  id="signup-popup">
 							LET ME IN <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</button>
