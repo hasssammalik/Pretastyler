@@ -34,7 +34,7 @@
 	</section> -->
 	<div class="container-full">
 		<div class="half">
-			
+			<div class="questions">
 				<div class="faq-info" id="q1">
 					<div class="faq-header">
 						WHAT IS PRÊT À STYLER
@@ -83,7 +83,7 @@
 					</p><p>4. Confirm the same Password</p>
 				</div>
 			</div>
-
+</div>
 	</div>
 	<div class="half">
 		<div class="faqs">
