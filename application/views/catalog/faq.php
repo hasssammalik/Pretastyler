@@ -34,7 +34,7 @@
 	</section> -->
 	<div class="container-full">
 		<div class="half">
-			<div class="faq-info active" id="q1">
+			<div class="faq-info tab-active" id="q1">
 				<div class="faq-header">
 					WHAT IS PRÊT À STYLER
 				</div>
@@ -63,15 +63,11 @@
 	<div class="half">
 		<div class="faqs">
 			<div class="faqs-header">FAQs:</div>
-			<div style="margin:10px 0px;">
-				<form action="" method="get" nama="faqForm" >
-					<input type="text" placeholder="Type your question" name="question" />
-				</form>
-			</div>
-			<div><a href="#q1"><strong>WHAT IS PRÊTÀSTYLER?</strong></a></div>
+			<div class="tablinks">
+			<div class="active"><a href="#q1"><strong>WHAT IS PRÊTÀSTYLER?</strong></a></div>
 
 			<div style="font-style:italic;">
-				<strong>SIGNING UP/ MEMBERSHIP</strong>
+			<a href="#q2"><strong>SIGNING UP/ MEMBERSHIP</strong></a>
 			</div>
 			<div style="padding:10px 50px;">
 				<ul>
@@ -83,15 +79,16 @@
 					<li>Deleting Your Account</li>
 				</ul>
 			</div>
-			<div><strong>YOUR PASSWORD</strong></div>
-			<div><strong>YOUR PROFILE</strong></div>
-			<div><strong>THE MALL</strong></div>
-			<div><strong>OUR SEARCHES</strong></div>
-			<div><strong>STYLE GENIE APP</strong></div>
-			<div><strong>STYLE CLINIC</strong></div>
-			<div><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></div>
-			<div><strong>MY PRIVATE STYLIST</strong></div>
+			<div><a href="#q3"><strong>YOUR PASSWORD</strong></a></div>
+			<div><a href="#q4"><strong>YOUR PROFILE</strong></a></div>
+			<div><a href="#q5"><strong>THE MALL</strong></a></div>
+			<div><a href="#q6"><strong>OUR SEARCHES</strong></a></div>
+			<div><a href="#q7"><strong>STYLE GENIE APP</strong></a></div>
+			<div><a href="#q8"><strong>STYLE CLINIC</strong></div>
+			<div><a href="#q9"><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></a></div>
+			<div><a href="#q10"><strong>MY PRIVATE STYLIST</strong></a></div>
 		</div>
+	</div>
 	</div>
 </article>
 <div class="clear"></div>
