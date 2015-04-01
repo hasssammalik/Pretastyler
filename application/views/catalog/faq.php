@@ -34,7 +34,7 @@
 	</section> -->
 	<div class="container-full">
 		<div class="half">
-			<div class="faq-info">
+			<div class="faq-info active" id="q1">
 				<div class="faq-header">
 					WHAT IS PRÊT À STYLER
 				</div>
@@ -68,7 +68,7 @@
 					<input type="text" placeholder="Type your question" name="question" />
 				</form>
 			</div>
-			<div><strong>WHAT IS PRÊTÀSTYLER?</strong></div>
+			<div><a href="#q1"><strong>WHAT IS PRÊTÀSTYLER?</strong></a></div>
 
 			<div style="font-style:italic;">
 				<strong>SIGNING UP/ MEMBERSHIP</strong>
