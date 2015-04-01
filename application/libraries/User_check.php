@@ -29,10 +29,7 @@ class User_check
 		$ci->load->library('flexi_auth');
 		$ci->load->helper('url');
 		$uri = explode('/', uri_string());
-		print "<pre>";
-		print_r($uri);
-		print "</pre>";
-		if (!empty($url[2]) && !(strpos($url[2], 'logout') !== false)){
+		if (!empty($url[1]) && !(strpos($url[1], 'logout') !== false)){
 			$user_id = $ci->flexi_auth->get_user_id();
 			if (!empty($user_id)) {
 				if ($ci->flexi_auth->in_group(array('StandardUsers'))){
