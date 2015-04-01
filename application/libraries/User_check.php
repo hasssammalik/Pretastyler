@@ -29,8 +29,12 @@ class User_check
 		$ci->load->library('flexi_auth');
 		$ci->load->helper('url');
 		$uri = explode('/', uri_string());
-		if (!empty($url[1]) && !(strpos($url[1], 'logout') !== false)){
+		print (!(strpos($url[1], 'logout') !== false));
+		if (!empty($url[1]) || !(strpos($url[1], 'logout') !== false)){
 			$user_id = $ci->flexi_auth->get_user_id();
+			print "<pre>";
+			print_r($user_id);
+			print "</pre>";
 			if (!empty($user_id)) {
 				if ($ci->flexi_auth->in_group(array('StandardUsers'))){
 					//this is trial users check process
