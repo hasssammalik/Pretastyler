@@ -35,7 +35,7 @@ class User_check
 				$is_logout = TRUE;
 			}
 		}
-		if (!is_logout){
+		if (!$is_logout){
 			$user_id = $ci->flexi_auth->get_user_id();
 			if (!empty($user_id)) {
 				if ($ci->flexi_auth->in_group(array('StandardUsers'))){
