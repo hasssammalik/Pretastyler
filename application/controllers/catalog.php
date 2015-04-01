@@ -220,7 +220,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	 */
 	public function how_it_works()
 	{
-		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "How It Works - MANAGE YOUR STYLE PREFERENCES";
 		$data['breadcrumb'] = array('HOW IT WORKS');
