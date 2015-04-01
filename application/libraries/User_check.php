@@ -32,7 +32,9 @@ class User_check
 		if (!empty($user_id)) {
 			$ci->load->model('user_model');
 			$user_info = $ci->user_model->get_user_info($user_id);
+			print "<pre>";
 			print_r($user_info);
+			print "</pre>";
 		}
 	}
 
