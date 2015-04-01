@@ -20,7 +20,6 @@ class User extends CI_Controller {
 		parent::__construct();
 		$this->auth = new stdClass;
 		$this->load->library('flexi_auth');
-		$this->load->library('user_check');
 		$this->load->model('garment_model');
 		$this->load->model('category_model');
 		$this->load->model('colour_model');
@@ -41,6 +40,7 @@ class User extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/index.php')){
 			show_404();
 		}
@@ -109,6 +109,7 @@ class User extends CI_Controller {
 	 */
 	public function preferences()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/preferences.php')){
 			show_404();
 		}
@@ -128,6 +129,7 @@ class User extends CI_Controller {
 	 */
 	public function my_dressing_room()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_dressing_room.php')){
 			show_404();
 		}
@@ -151,6 +153,7 @@ class User extends CI_Controller {
 	 */
 	public function add_to_favorites()
 	{
+		$this->load->library('user_check');
 		if (!$this->input->post()){
 			show_404();
 		}
@@ -167,6 +170,7 @@ class User extends CI_Controller {
 	 */
 	private function my_finds()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_finds.php')){
 			show_404();
 		}
@@ -191,6 +195,7 @@ class User extends CI_Controller {
 	 */
 	private function my_wishlists()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_wishlists.php')){
 			show_404();
 		}
@@ -214,6 +219,7 @@ class User extends CI_Controller {
 	 */
 	private function add_to_wardrobe()
 	{
+		$this->load->library('user_check');
 		if (!$this->input->post()){
 			show_404();
 		}
@@ -230,6 +236,7 @@ class User extends CI_Controller {
 	 */
 	private function my_wardrobe()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_wardrobe.php')){
 			show_404();
 		}

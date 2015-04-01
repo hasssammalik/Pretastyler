@@ -20,7 +20,6 @@ class Mall extends CI_Controller {
 		parent::__construct();
 		$this->auth = new stdClass;
 		$this->load->library('flexi_auth');
-		$this->load->library('user_check');
 		$this->load->model('garment_model');
 		$this->load->model('category_model');
 		$this->load->model('colour_model');
@@ -47,6 +46,7 @@ class Mall extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
 		$data['extraJS'] = '<script src="/js/mall.js"></script>';
@@ -68,6 +68,7 @@ class Mall extends CI_Controller {
 	 */
 	public function mall_by_profile()
 	{
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
 		//$data['extraJS'] = '<script src="/js/mall.js"></script>';
@@ -235,6 +236,7 @@ class Mall extends CI_Controller {
 	 * Garments Similar Page for this controller.
 	 */
 	public function similar($slug = FALSE) {
+		$this->load->library('user_check');
 		if (!$slug) {
 			$this->not_found();
 			return;
@@ -259,6 +261,7 @@ class Mall extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	public function occasion($occasion = FALSE) {
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "Occasion - ".ucwords(str_replace('_', ' ', $occasion));
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'OCCASION', strtoupper(str_replace('_', ' ', $occasion)));
@@ -276,6 +279,7 @@ class Mall extends CI_Controller {
 	 */
 	public function brand($brand = FALSE)
 	{
+		$this->load->library('user_check');
 		$brand = str_replace('_', ' ', $brand);
 		$data = $this->data;
 		$data['title'] = "Brand - ".ucwords($brand);
@@ -297,6 +301,7 @@ class Mall extends CI_Controller {
 	 */
 	public function body($body = FALSE)
 	{
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "Body - ".ucwords($body);
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'BODY', strtoupper($body));

@@ -20,7 +20,6 @@ class Catalog extends CI_Controller {
 		parent::__construct();
 		$this->auth = new stdClass;
 		$this->load->library('flexi_auth');
-		$this->load->library('user_check');
 		$this->load->model('garment_model');
 		$this->load->model('category_model');
 		$this->load->model('colour_model');
@@ -62,6 +61,7 @@ class Catalog extends CI_Controller {
 	}
 	public function index()
 	{
+		$this->load->library('user_check');
 	    if ($this->flexi_auth->is_logged_in()){
 	        redirect('/mall', 'refresh');
 	    }
@@ -92,6 +92,7 @@ class Catalog extends CI_Controller {
 	
 	public function your_mall()
 	{
+		$this->load->library('user_check');
 	    if ($this->flexi_auth->is_logged_in()){
 	        redirect('/mall', 'refresh');
 	    }
@@ -123,6 +124,7 @@ class Catalog extends CI_Controller {
 	 */
 	public function product($slug = FALSE)
 	{
+		$this->load->library('user_check');
 		if (!$slug) {
 			$this->not_found();
 			return;
@@ -218,6 +220,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	 */
 	public function how_it_works()
 	{
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "How It Works - MANAGE YOUR STYLE PREFERENCES";
 		$data['breadcrumb'] = array('HOW IT WORKS');
@@ -236,7 +239,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	 */
 	public function our_story()
 	{
-		
 		$data = $this->data;
 		$data['title'] = "Our Story - PRETSTYLER";
 		$data['breadcrumb'] = array('OUR STORY');
