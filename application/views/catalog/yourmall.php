@@ -2,14 +2,6 @@
 	
 	<div class="frontWrap">
 		
-		<!--
-			<section class="role-element container wid80" id="yourmall-uppercontent">
-			<div class="wid100 center homeprofile-head">
-			<p class="profile-big-title">Here are some of the fields to get you an acurate result:</p>
-			</div>
-			</section>
-		-->
-		
 		
 		<section class="role-element container wid60 preta-tooltip" id="the-product">
 			
@@ -610,6 +602,98 @@
 		<div class="clear"></div>
 		<br><br>
 		<br>
-		<div class="garments container wid70"></div>
+		
 	</div>
 </div>
+
+	<footer>
+		<ul>
+			<li><a href="#">BROWSER EXTENSION</a>|</li>
+			<li><a href="/terms.html">TERMS</a>|</li>
+			<li><a href="/our-story.html">OUR STORY</a>|</li>
+			<li><a href="/contact-us.html">CONTACT</a>|</li>
+			<li><a href="/retailer.html">RETAILERS</a></li>
+		</ul>
+		<ul class="social">
+			<li><a href="https://www.facebook.com/PrestaStyle" class="fb" target="_blank"><i class="icon-facebook"></i></a></li>
+			<li><a href="https://twitter.com/YourUniqueStyle" class="tw" target="_blank"><i class="icon-twitter"></i></a></li>
+			<li><a href="https://www.pinterest.com/areinten/" class="pin" target="_blank"><i class="icon-pinterest"></i></a></li>
+			<li><a href="https://plus.google.com/+Pretastyler" rel="publisher">Google+</a></li>
+			
+		</ul>
+		
+	</footer>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modalOverlay"></div>
+<div class="modal"></div>
+<div class="popup_modal"></div>
+<div class="popup-box">
+    <div class="cross"><div class="cross-image-homepage"><img src="/images/pink_button-05.png" alt=""></div></div>
+    <h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1>
+	<hr width="95%" size="2" />
+    
+	<div id="error-register">
+		
+	</div>
+	
+	<form action="" method="post">
+      <div>
+			<input type="text" placeholder="First Name*" name="fname" id="menu_mall_register_fname" required/>
+			<input type="text" placeholder="Last Name*" name="lname" id="menu_mall_register_lname" required/>
+	  </div>
+      <div>
+			<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
+	  </div>
+      <div>
+			<input type="password" placeholder="Password*" name="password" id="menu_mall_register_password" required />
+			<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" required />
+	  </div>
+      
+      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="menu_mall_register"></div>
+      
+    </form>
+    <div style="text-align:center">Trial Expires in 30 days.</div>
+  </div>
+
+<?php 
+	if( ENVIRONMENT == 'production') {
+	?>
+	
+	<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+			var b=document.getElementsByTagName("script")[0];
+			a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+	
+	<!--Start of Zopim Live Chat Script-->
+	<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+			_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+			$.src='//v2.zopim.com/?2DZTXFz3pU0P9dFbK9NzPb2IBE2aAE8b';z.t=+new Date;$.
+		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+	</script>
+	<!--End of Zopim Live Chat Script-->
+	
+	<script type='text/javascript'>
+		
+		window.__wtw_lucky_site_id = 33872;
+		(function() {
+			var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+			wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://cdn') + '.luckyorange.com/w.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+		})();
+	</script>
+	
+<?php } ?>
+
+</body>
+</html>

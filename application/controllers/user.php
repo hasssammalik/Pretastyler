@@ -526,6 +526,44 @@ class User extends CI_Controller {
 			$this->load->helper('infusionsoft/infusionsoft');
 			
 			NotifyCompleteProfileByInfusionsoftID($infusionsoft_id);
+			
+		} else if ( $saveSection == 'usersetup' ) {
+		    
+		    $uservalue = $this->session->userdata('initial_user_profile');
+		    
+		    $data = array(
+		        "height_select_id" 		=> ( !empty($uservalue['height_select_id']) ? $uservalue['height_select_id'] : 0 ),
+		        "weight_select_id" 		=> ( !empty($uservalue['weight_select_id']) ? $uservalue['weight_select_id'] : 0 ),
+		        "age_select_id" 		=> ( !empty($uservalue['age_select_id']) ? $uservalue['age_select_id'] : 0 ),
+		        "body_shape_select_id" 	=> ( !empty($uservalue['body_shape_select_id']) ? $uservalue['body_shape_select_id'] : 0 ),
+		        "body_ratio_select_id" 	=> ( !empty($uservalue['body_ratio_select_id']) ? $uservalue['body_ratio_select_id'] : 0 ),
+		        "bra_select_id" 		=> ( !empty($uservalue['bra_select_id']) ? $uservalue['bra_select_id'] : 0 ),
+		        "build_select_id" 		=> ( !empty($uservalue['build_select_id']) ? $uservalue['build_select_id'] : 0 ),
+		        "minBust" 				=> ( !empty($uservalue['minBust']) ? $uservalue['minBust'] : 0 ),
+		    
+		        "neck_length_select_id" => ( !empty($uservalue['neck_length_select_id']) ? $uservalue['neck_length_select_id'] : 0 ),
+		        "shoulders_select_id" 	=> ( !empty($uservalue['shoulders_select_id']) ? $uservalue['shoulders_select_id'] : 0 ),
+		        "face_shape_select_id" 	=> ( !empty($uservalue['face_shape_select_id']) ? $uservalue['face_shape_select_id'] : 0 ),
+		    
+		        "neck_select_id" 		=> ( !empty($uservalue['neck_select_id']) ? $uservalue['neck_select_id'] : 0 ),
+		        "back_select_id" 		=> ( !empty($uservalue['back_select_id']) ? $uservalue['back_select_id'] : 0 ),
+		        "upper_arms_select_id" 	=> ( !empty($uservalue['upper_arms_select_id']) ? $uservalue['upper_arms_select_id'] : 0 ),
+		        "midriff_select_id" 	=> ( !empty($uservalue['midriff_select_id']) ? $uservalue['midriff_select_id'] : 0 ),
+		    
+		        "stomach_select_id" 	=> ( !empty($uservalue['stomach_select_id']) ? $uservalue['stomach_select_id'] : 0 ),
+		        "bottom_select_id" 		=> ( !empty($uservalue['bottom_select_id']) ? $uservalue['bottom_select_id'] : 0 ),
+		        "inner_thighs_select_id"=> ( !empty($uservalue['inner_thighs_select_id']) ? $uservalue['inner_thighs_select_id'] : 0 ),
+		        "outer_thighs_select_id"=> ( !empty($uservalue['outer_thighs_select_id']) ? $uservalue['outer_thighs_select_id'] : 0 ),
+		        "lower_legs_select_id" 	=> ( !empty($uservalue['lower_legs_select_id']) ? $uservalue['lower_legs_select_id'] : 0 )
+		    );
+		    
+		    
+		    $infusionsoft_id = $this->infusionsoft_model->get_user_infusionsoft($user_id);
+		    
+		    $this->load->helper('infusionsoft/infusionsoft');
+		    	
+		    NotifyCompleteProfileByInfusionsoftID($infusionsoft_id);
+		    
 		}
 		
 		/*

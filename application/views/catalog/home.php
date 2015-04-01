@@ -463,8 +463,6 @@
 </div>
 </div>
 
-</div>
-
 
 <div class="modal"></div>
 <div class="popup_modal"></div>
@@ -477,7 +475,7 @@
 		
 	</div>
 	
-	<form action="/mall-by-profile.html" method="post">
+	<form action="" method="post">
       <div>
 			<input type="text" placeholder="First Name*" name="fname" id="menu_mall_register_fname" required/>
 			<input type="text" placeholder="Last Name*" name="lname" id="menu_mall_register_lname" required/>
@@ -487,19 +485,10 @@
 	  </div>
       <div>
 			<input type="password" placeholder="Password*" name="password" id="menu_mall_register_password" required />
-			<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" oninput="check(this)" required />
+			<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" required />
 	  </div>
-      <script language='javascript' type='text/javascript'>
-        function check(input) {
-          if (input.value != document.getElementById('password').value) {
-            input.setCustomValidity('The two passwords must match.');
-            } else {
-            // input is valid -- reset the error message
-            input.setCustomValidity('');
-          }
-        }
-      </script>
-      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="menu_mall_login"></div>
+      
+      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="menu_mall_register"></div>
       
     </form>
     <div style="text-align:center">Trial Expires in 30 days.</div>
