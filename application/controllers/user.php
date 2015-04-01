@@ -816,6 +816,9 @@ class User extends CI_Controller {
 				$result = $this->db->get()->row_array();
 				$results = array('result' => $result, 'field_test' => $this->assessment_model->judge_field_by_criteria_id($result['field_showif'], $result['field_hideif'], array('1557')), 'criteria_test' => $this->assessment_model->judge_criteria_by_criteria_id($result['criteria_showif'], $result['criteria_hideif'], array('1557'))); */
 				$data['test_str'] = $results;
+			} else if ($slug == "library_test"){
+				$this->load->library('user_check');
+				$data['test_str'] = $slug;
 			} else {
 				$data['test_str'] = $slug;
 			}
