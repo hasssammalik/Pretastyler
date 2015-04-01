@@ -29,7 +29,11 @@ class User_check
 		$ci->load->library('flexi_auth');
 		
 		$user_id = $ci->flexi_auth->get_user_id();
-		print $user_id;
+		if (!empty($user_id)) {
+			$ci->load->model('user_model');
+			$user_info = $ci->user_model->get_user_info($user_id);
+			print_r($user_info);
+		}
 	}
 
 }
