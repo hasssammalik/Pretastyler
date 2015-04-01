@@ -25,7 +25,7 @@ class User_check
 	public function __construct()
 	{
 		$ci =& get_instance();
-		$ci->auth = new stdClass;
+		//$ci->auth = new stdClass;
 		$ci->load->library('flexi_auth');
 		
 		$user_id = $ci->flexi_auth->get_user_id();
