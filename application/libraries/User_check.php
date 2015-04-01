@@ -42,7 +42,7 @@ class User_check
 					$elapsed = $interval->format('%y years %m months %a days %h hours %i minutes %S seconds');
 					echo $elapsed;
 					print "<pre>";
-					print_r($interval->%d);
+					print_r($interval->days);
 					print "</pre>";
 				} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
 					//wait for payment system
