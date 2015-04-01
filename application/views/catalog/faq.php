@@ -34,61 +34,62 @@
 	</section> -->
 	<div class="container-full">
 		<div class="half">
-			<div class="faq-info active" id="q1">
-				<div class="faq-header">
-					WHAT IS PRÊT À STYLER
+			<div class="tabs">
+				<div class="faq-info active" id="q1">
+					<div class="faq-header">
+						WHAT IS PRÊT À STYLER
+					</div>
+					<div class="faq-body">
+						A fashion retail platform which revolutionizes the way women shop online by creating individually stocked malls filled with items specifically selected to flatter your their shape, age and style preferences.   
+						Like your fingerprints, you own a unique set of body characteristics and personal style preferences that impact which types of garments and accessories suit you.
+						<br><br>With PrêtàStyler’s advanced technology you can have a fashion mall created exclusively for you, filled with clothes and accessories that are perfectly matched to flatter your shape.
+						To complete your look and ensure you look and feel amazing every time you walk out the door each garment also comes with expert style advice on how to wear the garment to perfection.
+					</div>
 				</div>
-				<div class="faq-body">
-					A fashion retail platform which revolutionizes the way women shop online by creating individually stocked malls filled with items specifically selected to flatter your their shape, age and style preferences.   
-					Like your fingerprints, you own a unique set of body characteristics and personal style preferences that impact which types of garments and accessories suit you.
-					<br><br>With PrêtàStyler’s advanced technology you can have a fashion mall created exclusively for you, filled with clothes and accessories that are perfectly matched to flatter your shape.
-					To complete your look and ensure you look and feel amazing every time you walk out the door each garment also comes with expert style advice on how to wear the garment to perfection.
+				<div class="faq-info" id="q2">
+					<div class="faq-header">
+						A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
+					</div>
+					<div class="faq-body">
+						<p>Registration is through this [page] and costs $9 per month.</p>
+						<p>	Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
+							<p>1. Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
+							</p><p>	2. Enter you Name and Email
+						</p><p>	3. Chosse a Password (must be alphanumberic - letters and numbers only)
+					</p><p>		4. Confirm the same Password</p>
 				</div>
 			</div>
-			<div class="faq-info" id="q2">
-				<div class="faq-header">
-					A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
-				</div>
-				<div class="faq-body">
-					<p>Registration is through this [page] and costs $9 per month.</p>
-					<p>	Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
-						<p>1. Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
-						</p><p>	2. Enter you Name and Email
-					</p><p>	3. Chosse a Password (must be alphanumberic - letters and numbers only)
-				</p><p>		4. Confirm the same Password</p>
-			</div>
-
 		</div>
 	</div>
 	<div class="half">
 		<div class="faqs">
 			<div class="faqs-header">FAQs:</div>
 			<div class="tablinks">
-			<div class="active"><a href="#q1"><strong>WHAT IS PRÊTÀSTYLER?</strong></a></div>
+				<div class="active"><a href="#q1"><strong>WHAT IS PRÊTÀSTYLER?</strong></a></div>
 
-			<div style="font-style:italic;">
-			<a href="#q2"><strong>SIGNING UP/ MEMBERSHIP</strong></a>
+				<div style="font-style:italic;">
+					<a href="#q2"><strong>SIGNING UP/ MEMBERSHIP</strong></a>
+				</div>
+				<div style="padding:10px 50px;">
+					<ul>
+						<li>a. How Do I Sign Up and What's Required?</li>
+						<li>What's in the sneaky fine print, where's the catch?</li>
+						<li>Is There a Free Version?</li>
+						<li>Free Trials</li>
+						<li>Updating Your Details</li>
+						<li>Deleting Your Account</li>
+					</ul>
+				</div>
+				<div><a href="#q3"><strong>YOUR PASSWORD</strong></a></div>
+				<div><a href="#q4"><strong>YOUR PROFILE</strong></a></div>
+				<div><a href="#q5"><strong>THE MALL</strong></a></div>
+				<div><a href="#q6"><strong>OUR SEARCHES</strong></a></div>
+				<div><a href="#q7"><strong>STYLE GENIE APP</strong></a></div>
+				<div><a href="#q8"><strong>STYLE CLINIC</strong></a></div>
+				<div><a href="#q9"><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></a></div>
+				<div><a href="#q10"><strong>MY PRIVATE STYLIST</strong></a></div>
 			</div>
-			<div style="padding:10px 50px;">
-				<ul>
-					<li>a. How Do I Sign Up and What's Required?</li>
-					<li>What's in the sneaky fine print, where's the catch?</li>
-					<li>Is There a Free Version?</li>
-					<li>Free Trials</li>
-					<li>Updating Your Details</li>
-					<li>Deleting Your Account</li>
-				</ul>
-			</div>
-			<div><a href="#q3"><strong>YOUR PASSWORD</strong></a></div>
-			<div><a href="#q4"><strong>YOUR PROFILE</strong></a></div>
-			<div><a href="#q5"><strong>THE MALL</strong></a></div>
-			<div><a href="#q6"><strong>OUR SEARCHES</strong></a></div>
-			<div><a href="#q7"><strong>STYLE GENIE APP</strong></a></div>
-			<div><a href="#q8"><strong>STYLE CLINIC</strong></a></div>
-			<div><a href="#q9"><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></a></div>
-			<div><a href="#q10"><strong>MY PRIVATE STYLIST</strong></a></div>
 		</div>
-	</div>
 	</div>
 </article>
 <div class="clear"></div>
