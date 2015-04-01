@@ -45,7 +45,7 @@
 					To complete your look and ensure you look and feel amazing every time you walk out the door each garment also comes with expert style advice on how to wear the garment to perfection.
 				</div>
 			</div>
-			<div class="faq-info">
+			<div class="faq-info" id="q2">
 				<div class="faq-header">
 					A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
 				</div>
