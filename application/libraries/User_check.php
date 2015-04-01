@@ -39,11 +39,10 @@ class User_check
 					$datetime1 = new DateTime();
 					$datetime2 = new DateTime($user_info['uacc_date_added']);
 					$interval = $datetime1->diff($datetime2);
-					$elapsed = $interval->format('%y years %m months %a days %h hours %i minutes %S seconds');
-					echo $elapsed;
-					print "<pre>";
-					print_r($interval->days);
-					print "</pre>";
+					$days = $interval->days;
+					if ($days >= 14) {
+						redirect('/payment/index');
+					}
 				} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
 					//wait for payment system
 				}
