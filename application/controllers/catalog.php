@@ -114,7 +114,7 @@ class Catalog extends CI_Controller {
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/yourmall', $data);
-		$this->load->view('templates/footer', $data);
+		
 	}
 	
 	/**
