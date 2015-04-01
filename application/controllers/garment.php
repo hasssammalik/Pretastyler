@@ -20,6 +20,7 @@ class Garment extends CI_Controller {
 		parent::__construct();
 		$this->auth = new stdClass;
 		$this->load->library('flexi_auth');
+		$this->load->library('user_check');
 		$this->load->model('garment_model');
 		$this->load->model('category_model');
 		$this->load->model('colour_model');
