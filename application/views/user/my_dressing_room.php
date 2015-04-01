@@ -9,6 +9,9 @@
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
 		    </li>
+		    <li class="tabHead-itemsPendingGarment">
+		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">MY FINDS <span class="pinkycolor">(0)</span></a>
+		    </li>
 		    <li class="tabHead-history">
 		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>(0)</span></a>
 		    </li>
