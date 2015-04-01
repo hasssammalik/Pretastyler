@@ -29,22 +29,24 @@ class User_check
 		$ci->load->library('flexi_auth');
 		$ci->load->helper('url');
 		$uri = explode('/', uri_string());
-		if (!empty($uri[1]) || !(strpos($uri[1], 'logout') !== false)){
-			$user_id = $ci->flexi_auth->get_user_id();
-			if (!empty($user_id)) {
-				if ($ci->flexi_auth->in_group(array('StandardUsers'))){
-					//this is trial users check process
-					$ci->load->model('user_model');
-					$user_info = $ci->flexi_auth->get_user_by_id($user_id)->result_array()[0];
-					$datetime1 = new DateTime();
-					$datetime2 = new DateTime($user_info['uacc_date_added']);
-					$interval = $datetime1->diff($datetime2);
-					$days = $interval->days;
-					if ($days >= 14) {
-						redirect('/payment/index');
+		if (!empty($uri[1])){
+			if (!(strpos($uri[1], 'logout') !== false)){
+				$user_id = $ci->flexi_auth->get_user_id();
+				if (!empty($user_id)) {
+					if ($ci->flexi_auth->in_group(array('StandardUsers'))){
+						//this is trial users check process
+						$ci->load->model('user_model');
+						$user_info = $ci->flexi_auth->get_user_by_id($user_id)->result_array()[0];
+						$datetime1 = new DateTime();
+						$datetime2 = new DateTime($user_info['uacc_date_added']);
+						$interval = $datetime1->diff($datetime2);
+						$days = $interval->days;
+						if ($days >= 14) {
+							redirect('/payment/index');
+						}
+					} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
+						//wait for payment system
 					}
-				} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
-					//wait for payment system
 				}
 			}
 		}
