@@ -475,7 +475,7 @@
 		
 	</div>
 	
-	<form name="registerNewUser" action="" method="post">
+	<form name="registerNewUser" action="" method="post" id="menu_mall_register">
       <div>
 			<input type="text" placeholder="First Name*" name="fname" id="menu_mall_register_fname" required/>
 			<input type="text" placeholder="Last Name*" name="lname" id="menu_mall_register_lname" required/>
@@ -488,7 +488,7 @@
 			<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" required />
 	  </div>
       
-      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="menu_mall_register"></div>
+      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="register-submit"></div>
       
     </form>
     <div style="text-align:center">Trial Expires in 30 days.</div>
