@@ -11,6 +11,7 @@
 <?php if (isset($extraCSS)) print $extraCSS; ?>
 <!--- - - - - - CSS overwriter   - - - - -->
 <link href="/css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 <!--- - - - - - CSS overwriter   - - - - -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <script src="/js/jquery-1.11.1.min.js"></script>
