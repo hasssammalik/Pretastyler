@@ -383,12 +383,13 @@
 			</div> -->
 			<script>
 $(document).ready(function(){
+	$('.slick-track').addClass('gallery');
   $('.slick-prev').empty().append('<img src="/test/next.png"/>');
   $('.slick-next').empty().append('<img src="/test/next.png"/>');
 })
   </script>
 			<style>
-			#homepage-gallery.gallery {width:1024px;margin:30px auto;}
+			#homepage-gallery {width:1024px;margin:30px auto;}
 			.item{width:200px;height:200px;margin-left:5px;background-color: #5f5f5f;color:white;float:left;}
 			.gallery button{
 				position: absolute;
@@ -415,7 +416,7 @@ $(document).ready(function(){
 				height:35px;width:35px;margin-left:0;
 			}
 			</style>
-				<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}' class="gallery" id="homepage-gallery">
+				<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'  id="homepage-gallery">
 				</div>
 				<div class="clear"></div>
 
