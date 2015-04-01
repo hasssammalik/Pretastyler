@@ -1084,7 +1084,7 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div class="profile-save mousehand  u bkpinkycolor" data-action="save">Save</div>
+					<div class="profile-save mousehand  i bkpinkycolor" data-action="save">Save</div>
 					
 
 
