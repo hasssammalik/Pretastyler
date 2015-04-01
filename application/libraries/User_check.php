@@ -27,14 +27,27 @@ class User_check
 		$ci =& get_instance();
 		//$ci->auth = new stdClass;
 		$ci->load->library('flexi_auth');
-		
-		$user_id = $ci->flexi_auth->get_user_id();
-		if (!empty($user_id)) {
-			$ci->load->model('user_model');
-			$user_info = $ci->flexi_auth->get_user_by_id($user_id)->result_array();
-			print "<pre>";
-			print_r($user_info);
-			print "</pre>";
+		$ci->load->helper('url');
+		$uri = explode('/', uri_string());
+		if (!empty($url[2]) && !(strpos($url[2], 'logout') !== false)){
+			$user_id = $ci->flexi_auth->get_user_id();
+			if (!empty($user_id)) {
+				if ($ci->flexi_auth->in_group(array('StandardUsers'))){
+					//this is trial users check process
+					$ci->load->model('user_model');
+					$user_info = $ci->flexi_auth->get_user_by_id($user_id)->result_array()[0];
+					$datetime1 = new DateTime();
+					$datetime2 = new DateTime($user_info['uacc_date_added']);
+					$interval = $datetime1->diff($datetime2);
+					$elapsed = $interval->format('%y years %m months %a days %h hours %i minutes %S seconds');
+					echo $elapsed;
+					print "<pre>";
+					print_r($interval->%d);
+					print "</pre>";
+				} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
+					//wait for payment system
+				}
+			}
 		}
 	}
 
