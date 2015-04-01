@@ -171,7 +171,7 @@
 						</a>
 						<ul class="treeview-menu">
 							<li><a href="/admin/user/general.html"><i class="fa fa-angle-double-right"></i> All Users</a></li>
-							<li><a href="/admin/user/standard.html"><i class="fa fa-angle-double-right"></i> Standard Users</a></li>
+							<li><a href="/admin/user/standard.html"><i class="fa fa-angle-double-right"></i> Trial Users</a></li>
 							<li><a href="/admin/user/premium.html"><i class="fa fa-angle-double-right"></i> Premium Users</a></li>
 							<li><a href="/admin/user/uploaders.html"><i class="fa fa-angle-double-right"></i> Uploaders / Retailers</a></li>
 							<li><a href="/admin/user/administrators.html"><i class="fa fa-angle-double-right"></i> Administrators</a></li>
