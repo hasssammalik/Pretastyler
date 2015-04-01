@@ -643,7 +643,7 @@
 		
 	</div>
 	
-	<form action="" method="post">
+	<form name="registerNewUser" action="" method="post">
       <div>
 			<input type="text" placeholder="First Name*" name="fname" id="menu_mall_register_fname" required/>
 			<input type="text" placeholder="Last Name*" name="lname" id="menu_mall_register_lname" required/>
