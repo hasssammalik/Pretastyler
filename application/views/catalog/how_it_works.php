@@ -34,7 +34,7 @@
 				<h3 class="pink">YOUR PERSONALIZED FASHION FEED</h3>
 				<div class="body">
 					<p>You don't want to see the clothes that don't suit you, so we don't show them to you.  We eliminate 'shopping noise' so you can focus on only the styles that are perfect for YOU.  We'll also give you advice on how to style garments and show you why each garment will, or won't, suit you. <br>
-					So spend ten minutes now to set up your style profile and save hours in your shopping future.
+				<br>	So spend ten minutes now to set up your style profile and save hours in your shopping future.
 					</p>
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 				<h3 class="pink">TARGETED SEARCH - ON STEROIDS</h3>
 				<div class="body">
 					<p>Let the site do all your legwork to find you the exact item you’re looking for.
-					With PretaStyler’s Targeted Search engine you can get super specific to find the exact clothing you want. Say you’re after a yellow, semi- fitted dress with a deep-scooped neckline, flutter sleeves, a waistline seam and a midi length. Just enter your search terms, cross your fingers and if it’s in the mall we’ll display it in a flash. Oh, you only want the dresses from ASOS? No problem. Consider it done. <br>
+					With PretaStyler’s Targeted Search engine you can get super specific to find the exact clothing you want. Say you’re after a yellow, semi- fitted dress with a deep-scooped neckline, flutter sleeves, a waistline seam and a midi length. Just enter your search terms, cross your fingers and if it’s in the mall we’ll display it in a flash. Oh, you only want the dresses from ASOS? No problem. Consider it done. <br><br>
 					Think of it like Google for clothes. We like to call it Cloogle.
 					</p>
 				</div>
@@ -132,7 +132,7 @@
 					Pop the Style Boards on Facebook, post them on your blog and you
 					can even save them in your My Boards area to come back to later. Oh
 					and of course you can purchase directly from the boards – whether
-					it’s your board or someone else’s.<br>
+					it’s your board or someone else’s.<br><br>
 					Sharing good style is the new black. No matter what your style
 					preference, you’re going to find kindred Fashionist as 
 					that love it as	much as you do.<br>
@@ -149,9 +149,9 @@
 				<h3 class="pink">USE THE FASHION GENIE </h3>
 				<div class="body">
 					<p>Have you found a new fashion favorite but it’s not in your Personalized Fashion Feed? <br>
-					Clip an image of it into the Style Genie app <br>
-					and it’ll show your style rating to see <br>
-					if it’s a YES or an Uh No. <br>
+					Clip an image of it into the Style Genie app 
+					and it’ll show your style rating to see 
+					if it’s a YES or an Uh No. 
 					<br>
 					</p>
 				</div>
