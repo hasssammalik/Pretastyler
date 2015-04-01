@@ -55,7 +55,7 @@
 
 	<style type="text/css">
 		.myNewTabsRoom .tabsDressing {
-		  width: 495px;
+		  width: 550px;
 		}
 		.myNewTabsRoom .tabsDressing li {
 		  display: inline-block;
