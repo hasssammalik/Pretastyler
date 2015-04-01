@@ -84,7 +84,7 @@
 			<div><a href="#q5"><strong>THE MALL</strong></a></div>
 			<div><a href="#q6"><strong>OUR SEARCHES</strong></a></div>
 			<div><a href="#q7"><strong>STYLE GENIE APP</strong></a></div>
-			<div><a href="#q8"><strong>STYLE CLINIC</strong></div>
+			<div><a href="#q8"><strong>STYLE CLINIC</strong></a></div>
 			<div><a href="#q9"><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></a></div>
 			<div><a href="#q10"><strong>MY PRIVATE STYLIST</strong></a></div>
 		</div>
