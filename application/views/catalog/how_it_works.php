@@ -6,7 +6,7 @@
 		</figure>
 		<div class="grid_7 verticalmid">
 			<div class="copy">
-				<h2 class="pink">Prêt à Styler Makes Clothes Shopping Easy</h2>
+				<h2 class="pink">PrêtàStyler Makes Clothes Shopping Easy</h2>
 				<div class="body">
 					<p>You can stop trawling through a million sites looking for clothes that suit you.
 					The future of shopping has arrived.
@@ -162,7 +162,7 @@
 		</figure>
 	</section>
 	<br>
-	<blockquote>Shopping as it should be; everything that suits you in one perfect place.</blockquote>
+	<blockquote style="font-size:32px;">Shopping as it should be; everything that suits you in one perfect place.</blockquote>
 
 </article>
 <script type="text/javascript">
