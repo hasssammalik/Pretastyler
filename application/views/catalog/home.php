@@ -377,11 +377,47 @@
 			<style type="text/css">
 				.garments:after { display: none;}
 			</style>
-			<div id="homepage-slider">
+			<!-- <div id="homepage-slider">
 				<div class="garments turnOffPlaceHolderGarment"></div>
 				<div class="clear"></div>
-			</div>
-
+			</div> -->
+			<script>
+$(document).ready(function(){
+  $('.slick-prev').empty().append('<img src="/test/next.png"/>');
+  $('.slick-next').empty().append('<img src="/test/next.png"/>');
+})
+  </script>
+			<style>
+			#homepage-gallery.gallery {width:1024px;margin:30px auto;}
+			.item{width:200px;height:200px;margin-left:5px;background-color: #5f5f5f;color:white;float:left;}
+			.gallery button{
+				position: absolute;
+				top: 90px;
+				width:60px;height:60px;
+				border:none;
+				background:none;
+				cursor: pointer;
+			}
+			.slick-prev {
+				left:-65px;
+			}
+			.slick-prev img{
+				-moz-transform: scaleX(-1);
+				-o-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				transform: scaleX(-1);
+				filter: FlipH;
+				-ms-filter: "FlipH";
+			}
+			.slick-next{right:-50px;
+			}
+			.gallery button img{
+				height:35px;width:35px;margin-left:0;
+			}
+			</style>
+				<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}' class="gallery" id="homepage-gallery">
+				</div>
+				<div class="clear"></div>
 
 			<!-- <div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
 					<div class="sliderWrap">
@@ -538,5 +574,6 @@
 	
 <?php } ?>
 
+ <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
 </body>
 </html>
