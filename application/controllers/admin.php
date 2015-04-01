@@ -135,9 +135,9 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/user/general', $data);
 			$this->load->view('admin/footer', $data);
-		} else if ($page == 'standard'){
-			$data['title'] = "Standard Users";
-			$data['title_description'] = "manage all standard users";
+		} else if ($page == 'trial'){
+			$data['title'] = "Trial Users";
+			$data['title_description'] = "manage all trial users";
 			$data['filters'] = 'is_standard: true, ';
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/user/general', $data);
