@@ -1,6 +1,8 @@
 <style>
 .content{
     background-image: url(/images/payment/pretastylerpayment.jpeg);
+    background-position: 10% 35%;
+    background-attachment: fixed;
   }
   </style>
 <div class="faq">
