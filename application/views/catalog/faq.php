@@ -214,18 +214,7 @@
 								<li>After you have answered the last question the item is assessed and you are shown a pop-up with its rating for you.  From there you can purchase it, read why it did or did not suit or go back to the mall.</li>
 								<li>The item will automatically be placed in your Dressing Room under Assessed Items.</li>
 							</ol>
-							
-							<strong>Detailed Search</strong>
-							&nbsp;&nbsp;&nbsp;This search is one of our unique features and allows you to search for garments with EXACTLY the specific characteristics you’re after.  If your dream dress happens to be a red dress with a scoop neckline, fluttered sleeves, midi length and in lace, our search will get to work and if it’s available from one of the stores in the fashion mall, then you’re going find it in double time.
-							<br>We’re adding new retailers, brands and clothing all the time so keep coming back if you don’t find what you want at first.
-							<ol style="padding-left:10%;list-style-type: upper-roman;">
-								<li><strong>Start Your Detailed Search: </strong>Takes you directly to the retailer’s website to purchase it</li>
-								<li><strong>Select the type of item</strong>you wish to search for. (this is on the image below)</li>
-								<li>Then one at a time<strong>open the individual areas</strong>you’re looking for. For example if you want to search for flutter sleeves first select ‘Arms/Sleeves’ then Short Sleeve Styles. You’ll be shown all the short sleeve options and you can select flutter sleeves.</li>
-								<li>As you select different characteristics the mall below the search will start displaying items.  Your choices will narrow down as you get more and more specific with your
-								search.</li>
-							</ol>
-						</div>
+							</div>
 					</div>
 
 					
