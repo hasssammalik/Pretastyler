@@ -116,7 +116,7 @@
 			var arraytab = tab.split('#', 2);
 			tab = arraytab[1];
 			if( tab.length > 0 ){ 
-				$(".act-"+tab.substring(1, tab.length)).addClass("tabClicked");
+				$(".act-"+tab).addClass("tabClicked");
 				$(tab).show();
 			} else {
 				$(".act-wishList").addClass("tabClicked");
