@@ -7,7 +7,7 @@
 		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
-		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">MY FINDS <span class="pinkycolor">(0)</span></a>
+		    	<a href="#myfinds" class="acttabsInner act-myfinds">MY FINDS <span class="pinkycolor">(0)</span></a>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
@@ -41,6 +41,18 @@
 			</div> -->
 
 		</div>
+		
+		
+		<div class="tabsInner tab-myfinds" id="myfinds" style="display:none;">
+			<div class="garments"></div>
+			
+			<!-- <div class="mousehand btnbottommore clicktoseemore_pending">
+				Click to see more <i class="icon-triangle"></i>
+			</div> -->
+
+		</div>
+		
+		
 
 		<div class="tabsInner tab-history" id="history" style="display:none;">
 			<div class="garments"></div>
