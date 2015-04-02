@@ -81,8 +81,8 @@
 							YOUR PASSWORD
 						</div>
 						<div class="faq-body">
-							&nbsp;&nbsp;&nbsp;a. Forgetten Your Password?<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No problem, just follow these easy steps:
+							a. Forgetten Your Password?<br>
+							&nbsp;&nbsp;&nbsp;No problem, just follow these easy steps:
 							<br>
 							
 								<ol style="padding-left:10%;">
@@ -96,8 +96,27 @@
 									<li>You will receive an email confirming that your password has been changed.  </li>
 								</ol>
 			
-							<p style="padding-left:8%;">We suggest you store this email in a safe place.  We all have lapses of memory.<br>
+							<p style="padding-left:2%;">We suggest you store this email in a safe place.  We all have lapses of memory.<br>
 							If you still experience problems contact us through this <a href="mailto:info@pretastyler.com">EMAIL.</a></p>
+							b. Need to Change Your Password?<br>
+							&nbsp;&nbsp;Whenever necessary you can change your password by clicking your [Accounts] area
+located at the top right hand side of the page.
+						</div>
+					</div>
+
+					<div class="faq-info" id="q4">
+						<div class="faq-header">
+						YOUR PROFILE
+						</div>
+						<div class="faq-body">
+							a. Why Your Profile is Required?<br>
+							&nbsp;&nbsp;&nbsp;Knowing your unique shape is a core requirement so PrêtàStyler can fill your mall with all the garments and accessories that are right for you.  Completing <a href="/user.html">[your profile]</a> should take no longer than 5 minutes.  The more accurate your profile, the more perfect the items in your mall will be.
+							b. Editing Your Profile<br>
+							<ol style="padding-left:8%;">
+									<li>Log into  <a href="/useraccount/login.html">[PrêtàStyler]</a>.</li>
+									<li>Click <a href="/user.html">(your name ACCOUNT)</a> on the meu bar – top right hand corner of any page.</li>
+									
+								</ol>
 						</div>
 					</div>
 
