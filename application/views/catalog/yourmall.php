@@ -42,7 +42,7 @@
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to the tip of your shoulder. Shoulder straps will tend to slip off your shoulders.</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to the tip of your shoulder.</li> <li>Shoulder straps will tend to slip off your shoulders.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-28.png" /></div><ul><li>Your shoulders have a slight slope.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-27.png" /></div><ul><li>Your shoulders are broad and square with almost no slope.</li></ul></div>' 
 						];
