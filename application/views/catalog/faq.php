@@ -188,6 +188,46 @@
 							</ol>
 						</div>
 					</div>
+
+					<div class="faq-info" id="q7">
+						<div class="faq-header">
+							STYLE GENIE APP
+						</div>
+						
+						<div class="faq-body">
+							Being able to find what you want quickly, easily and accurately is one of the cornerstone missions of PrêtàStyler. We are always striving to go one better than our competitors and our own personal bests – the Detailed Search is one way we are doing this.  <br>
+							<strong>a. What Is It?</strong><br>
+							&nbsp;&nbsp;&nbsp;A clever Google Chrome app that allows members you to apply the same PrêtàStyler assessment smarts to any item of clothing or accessory that you find anywhere on the web. Once the item has been assessed you'll know instantly if it suit’s you. <br>
+							<strong>b. Where to Find it</strong><br>
+							&nbsp;&nbsp;&nbsp;The Google Chrome store:  Google Chrome Store Extension  Note: This chrome app works on Macs.<br>
+							<strong>c. How to Assess An Item </strong><br>
+							<ol style="padding-left:8%;list-style-type: upper-roman;">
+								<li>Find a garment or accessory you like from any online store</li>
+								<li>Search until you locate the largest image of the item.</li>
+								<li>Hover over the item and right click (Ctrl click for mac) your mouse.  If that does not work click on an area of white space. Then select 'Select image of genie search'.</li>
+								<li>Images will appear from the page: select the image of the particular garment you are interested in.</li>
+								<li>Click ‘Next’ (you don't need to add any additional images)</li>
+								<li>Click 'Assess item' to start the assessment or ‘Add to My Dressing Room’ to assesslater.</li>
+								<li>The next asks a few questions about the item to allow you to find it later, brand, color etc. Click ‘Next’</li>
+								<li>Now the assessment process starts.  Select the features that your item has. Be sure to read the description under each option if you are unsure.</li>
+								<li>Answer all questions.</li>
+								<li>After you have answered the last question the item is assessed and you are shown a pop-up with its rating for you.  From there you can purchase it, read why it did or did not suit or go back to the mall.</li>
+								<li>The item will automatically be placed in your Dressing Room under Assessed Items.</li>
+							</ol>
+							
+							<strong>Detailed Search</strong>
+							&nbsp;&nbsp;&nbsp;This search is one of our unique features and allows you to search for garments with EXACTLY the specific characteristics you’re after.  If your dream dress happens to be a red dress with a scoop neckline, fluttered sleeves, midi length and in lace, our search will get to work and if it’s available from one of the stores in the fashion mall, then you’re going find it in double time.
+							<br>We’re adding new retailers, brands and clothing all the time so keep coming back if you don’t find what you want at first.
+							<ol style="padding-left:10%;list-style-type: upper-roman;">
+								<li><strong>Start Your Detailed Search: </strong>Takes you directly to the retailer’s website to purchase it</li>
+								<li><strong>Select the type of item</strong>you wish to search for. (this is on the image below)</li>
+								<li>Then one at a time<strong>open the individual areas</strong>you’re looking for. For example if you want to search for flutter sleeves first select ‘Arms/Sleeves’ then Short Sleeve Styles. You’ll be shown all the short sleeve options and you can select flutter sleeves.</li>
+								<li>As you select different characteristics the mall below the search will start displaying items.  Your choices will narrow down as you get more and more specific with your
+								search.</li>
+							</ol>
+						</div>
+					</div>
+
 					
 				</div>
 			</div>
