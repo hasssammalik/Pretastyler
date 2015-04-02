@@ -144,30 +144,3 @@
 	</div>
 </article>
 <div class="clear"></div>
-<!-- <div class="questions">
-				<div class="group">
-					<div class="col span_8">
-						<div class="panel2">
-							<div class="panelContent">
-								<h2><span>FAQs:</span></h2>
-								<form>
-									<input type="text" name="question" placeholder="Type your question">
-									<button type="submit"><i class="icon-magnifier"></i></button>
-								</form>
-								<ul class="trending">
-									<li><span>Trending Questions</span></li>
-									<li><a href="#">Report a Problem</a></li>
-									<li><a href="#">Get Started</a></li>
-									<li><a href="#">Open a Shop</a></li>
-									<li><a href="#">Create and Edit Listings</a></li>
-									<li><a href="#">Shop Settings</a></li>
-									<li><a href="#">Collect Credit Card Payments</a></li>
-									<li><a href="#">Make a Purchase</a></li>
-									<li><a href="#">Shopping Features</a></li>
-									<li><a href="#">About Pretastyler</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
