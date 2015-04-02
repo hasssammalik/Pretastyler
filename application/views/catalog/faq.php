@@ -85,51 +85,51 @@
 							&nbsp;&nbsp;&nbsp;No problem, just follow these easy steps:
 							<br>
 							
-								<ol style="padding-left:10%;">
-									<li>Click the ‘Forgot Your Password’ link below the LOG IN button or <a href="/useraccount/login.html">HERE</a>.</li>
-									<li>On the next screen, you will be asked to enter your email address.</li>
-									<li>Click Send.</li>
-									<li>You will receive and email to confirm the request is from you with a reset link.  If you don’t at first see it remember to check your junk/spam folder.</li>
-									<li>Click the reset link in this email</li>
-									<li>You will be taken to a page where you can enter and confirm a new password.</li>
-									<li>Click SUBMIT to save the change.</li>
-									<li>You will receive an email confirming that your password has been changed.  </li>
-								</ol>
-			
+							<ol style="padding-left:10%;">
+								<li>Click the ‘Forgot Your Password’ link below the LOG IN button or <a href="/useraccount/login.html">HERE</a>.</li>
+								<li>On the next screen, you will be asked to enter your email address.</li>
+								<li>Click Send.</li>
+								<li>You will receive and email to confirm the request is from you with a reset link.  If you don’t at first see it remember to check your junk/spam folder.</li>
+								<li>Click the reset link in this email</li>
+								<li>You will be taken to a page where you can enter and confirm a new password.</li>
+								<li>Click SUBMIT to save the change.</li>
+								<li>You will receive an email confirming that your password has been changed.  </li>
+							</ol>
+							
 							<p style="padding-left:2%;">We suggest you store this email in a safe place.  We all have lapses of memory.<br>
 							If you still experience problems contact us through this <a href="mailto:info@pretastyler.com">EMAIL.</a></p>
 							b. Need to Change Your Password?<br>
 							&nbsp;&nbsp;Whenever necessary you can change your password by clicking your [Accounts] area
-located at the top right hand side of the page.
+							located at the top right hand side of the page.
 						</div>
 					</div>
-
+					
 					<div class="faq-info" id="q4">
 						<div class="faq-header">
-						YOUR PROFILE
+							YOUR PROFILE
 						</div>
 						<div class="faq-body">
 							a. Why Your Profile is Required?<br>
 							&nbsp;&nbsp;&nbsp;Knowing your unique shape is a core requirement so PrêtàStyler can fill your mall with all the garments and accessories that are right for you.  Completing <a href="/user.html">[your profile]</a> should take no longer than 5 minutes.  The more accurate your profile, the more perfect the items in your mall will be.
 							<br>b. Editing Your Profile<br>
 							<ol style="padding-left:8%;list-style-type: lower-roman;">
-									<li>Log into  <a href="/useraccount/login.html">[PrêtàStyler]</a>.</li>
-									<li>Click <a href="/user.html">(your name ACCOUNT)</a> on the meu bar – top right hand corner of any page.</li>
-									
-								</ol>
+								<li>Log into  <a href="/useraccount/login.html">[PrêtàStyler]</a>.</li>
+								<li>Click <a href="/user.html">(your name ACCOUNT)</a> on the meu bar – top right hand corner of any page.</li>
+								
+							</ol>
 						</div>
 					</div>
-
+					
 					<div class="faq-info" id="q5">
 						<div class="faq-header">
 							THE MALL
 						</div>
 						<div class="faq-body">
-						<strong>	How Items Are Displayed</strong><br>
+							<strong>	How Items Are Displayed</strong><br>
 							<ol style="padding-left:8%;list-style-type: lower-alpha;">
 								<li>On logging in your mall displays a mix of your 4 and 5 star rated items that have been uploaded within the last 24 hours.</li>
 								<li>To see items with a lower rating click on a lower star rating located at the top of the Quick Search panel at the left hand side of the page.  </li>
-
+								
 							</ol>
 							<br><strong>The Star Rating</strong><br>
 							&nbsp;&nbsp;&nbsp;Items are ranked with a star rating; from 5  to 1 stars.<br>
@@ -144,7 +144,7 @@ located at the top right hand side of the page.
 							<ol style="padding-left:10%;list-style-type: upper-roman;">
 								<li><strong>Shopping Cart: </strong>Takes you directly to the retailer’s website to purchase it</li>
 								<li><strong>Pencil: </strong>(present on your ‘My Finds’ page only) Allows you to edit the item if you
-think you’ve assessed the item incorrectly.</li>
+								think you’ve assessed the item incorrectly.</li>
 								<li><strong>Dress: </strong>Shows items that are similar in style</li>
 								<li><strong>Heart: </strong>Saves the item to your favorites area.</li>
 								<li><strong>Coat Hanger: </strong>Pops the item into your wardrobe, if you’ve already purchased it.</li>
@@ -155,9 +155,47 @@ think you’ve assessed the item incorrectly.</li>
 							<p style="padding-left:3%;">Because looking fabulous is as much about how you wear a garment as the garment itself, PrêtàStyler adds specific styling recommendations for each garment based on your body profile.  Click on the garment image or info icon to view them.  On the left of the item you’ll see ‘Why It Suits You’ and on the right ‘How to Look Your Best’</p>
 						</div>
 					</div>
-
-
-
+					
+					<div class="faq-info" id="q5">
+						<div class="faq-header">
+							SEARCHING FOR ITEMS
+						</div>
+						
+						<div class="faq-body">
+							Being able to find what you want quickly, easily and accurately is one of the cornerstone missions of PrêtàStyler. We are always striving to go one better than our competitors and our own personal bests – the Detailed Search is one way we are doing this.  <br>
+							<strong>a. Quick Search.</strong><br>
+							&nbsp;&nbsp;&nbsp;This search function allows you quickly refine your search.  <br>
+							&nbsp;&nbsp;&nbsp;You can search by any or all of the following:<br>
+							<ol style="padding-left:8%;list-style-type: upper-alpha;">
+								<li>Category:  That is the type of garment you are looking for (ie dress, jacket
+								shoes, necklace)</li>
+								<li>Brand:  Do you prefer to purchase from certain stores/brands.  Start typing in the name if you don't immediately see it in the checklist below and if we have it in our system it will magically appear in the list for you to select.</li>
+								<li>Trending/Latest:  Do you like looking at what other people are looking at or would you rather just know the new stock we now have on the site.  The choice is yours.</li>
+								<li>Occasion:  From Beach to active to evening wear, we have you covered.</li>
+								<li>Color:  You can multi-select whatever colors you prefer wearing.</li>
+								<li>Price:  Got a limited budget, no worries, just refine the budget bars by dragging each price point in to specify the range you are prepared to pay.</li>
+							</ol>
+							<br><strong>The Star Rating</strong><br>
+							&nbsp;&nbsp;&nbsp;Items are ranked with a star rating; from 5  to 1 stars.<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 stars - Great <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 stars - Good  <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 stars - OK<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 stars - Maybe<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 stars - Avoid<br>
+							
+							<strong>Detailed Search</strong>
+							&nbsp;&nbsp;&nbsp;This search is one of our unique features and allows you to search for garments with EXACTLY the specific characteristics you’re after.  If your dream dress happens to be a red dress with a scoop neckline, fluttered sleeves, midi length and in lace, our search will get to work and if it’s available from one of the stores in the fashion mall, then you’re going find it in double time.
+							<br>We’re adding new retailers, brands and clothing all the time so keep coming back if you don’t find what you want at first.
+							<ol style="padding-left:10%;list-style-type: upper-roman;">
+								<li><strong>Start Your Detailed Search: </strong>Takes you directly to the retailer’s website to purchase it</li>
+								<li><strong>Select the type of item</strong>you wish to search for. (this is on the image below)</li>
+								<li>Then one at a time<strong>open the individual areas</strong>you’re looking for. For example if you want to search for flutter sleeves first select ‘Arms/Sleeves’ then Short Sleeve Styles. You’ll be shown all the short sleeve options and you can select flutter sleeves.</li>
+								<li>As you select different characteristics the mall below the search will start displaying items.  Your choices will narrow down as you get more and more specific with your
+								search.</li>
+							</ol>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
