@@ -111,8 +111,8 @@ located at the top right hand side of the page.
 						<div class="faq-body">
 							a. Why Your Profile is Required?<br>
 							&nbsp;&nbsp;&nbsp;Knowing your unique shape is a core requirement so PrêtàStyler can fill your mall with all the garments and accessories that are right for you.  Completing <a href="/user.html">[your profile]</a> should take no longer than 5 minutes.  The more accurate your profile, the more perfect the items in your mall will be.
-							b. Editing Your Profile<br>
-							<ol style="padding-left:8%;">
+							<br>b. Editing Your Profile<br>
+							<ol style="padding-left:8%;list-style-type: lower-roman;">
 									<li>Log into  <a href="/useraccount/login.html">[PrêtàStyler]</a>.</li>
 									<li>Click <a href="/user.html">(your name ACCOUNT)</a> on the meu bar – top right hand corner of any page.</li>
 									
@@ -120,6 +120,42 @@ located at the top right hand side of the page.
 						</div>
 					</div>
 
+					<div class="faq-info" id="q5">
+						<div class="faq-header">
+							THE MALL
+						</div>
+						<div class="faq-body">
+							How Items Are Displayed<br>
+							<ol style="padding-left:8%;list-style-type: lower-alpha;">
+								<li>On logging in your mall displays a mix of your 4 and 5 star rated items that have been uploaded within the last 24 hours.</li>
+								<li>To see items with a lower rating click on a lower star rating located at the top of the Quick Search panel at the left hand side of the page.  </li>
+
+							</ol>
+							<br>The Star Rating<br>
+							&nbsp;&nbsp;&nbsp;Items are ranked with a star rating; from 5  to one stars.
+							&nbsp;&nbsp;&nbsp; 5 stars - Great
+							&nbsp;&nbsp;&nbsp; 4 stars - Good 
+							&nbsp;&nbsp;&nbsp; 3 stars - OK
+							&nbsp;&nbsp;&nbsp; 2 stars - Maybe
+							&nbsp;&nbsp;&nbsp; 1 stars - Avoid
+							<ol style="padding-left:8%;list-style-type: lower-roman;">
+								<li>Log into  <a href="/useraccount/login.html">[PrêtàStyler]</a>.</li>
+								<li>Click <a href="/user.html">(your name ACCOUNT)</a> on the meu bar – top right hand corner of any page.</li>
+							</ol>
+							The Icons
+							&nbsp;&nbsp;&nbsp;Hover your mouse over any item in the mall and icons will appear on the right hand side.
+							<ol style="padding-left:10%;list-style-type: upper-roman;">
+								<li><strong>Shopping Cart: </strong>Takes you directly to the retailer’s website to purchase it</li>
+								<li><strong>Pencil: </strong>(present on your ‘My Finds’ page only) Allows you to edit the item if you
+think you’ve assessed the item incorrectly.</li>
+								<li><strong>Dress: </strong>Shows items that are similar in style</li>
+								<li><strong>Heart: </strong>Saves the item to your favorites area.</li>
+								<li><strong>Coat Hanger: </strong>Pops the item into your wardrobe, if you’ve already purchased it.</li>
+								<li><strong>'i' for Information: </strong>(bottom right): Click this icon to enlarge the image, see multiple views of the item, read the description, sizes, colors etc.   </li>
+								<li><strong>Head: </strong>(top right) Indicates that this item has been found and assessed by another member using the Style Genie app.  Note: the assessment of the garment may not be correct.</li>
+							</ol>
+						</div>
+					</div>
 
 
 
