@@ -156,7 +156,7 @@
 						</div>
 					</div>
 					
-					<div class="faq-info" id="q5">
+					<div class="faq-info" id="q6">
 						<div class="faq-header">
 							SEARCHING FOR ITEMS
 						</div>
@@ -175,13 +175,6 @@
 								<li>Color:  You can multi-select whatever colors you prefer wearing.</li>
 								<li>Price:  Got a limited budget, no worries, just refine the budget bars by dragging each price point in to specify the range you are prepared to pay.</li>
 							</ol>
-							<br><strong>The Star Rating</strong><br>
-							&nbsp;&nbsp;&nbsp;Items are ranked with a star rating; from 5  to 1 stars.<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 stars - Great <br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 stars - Good  <br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 stars - OK<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 stars - Maybe<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 stars - Avoid<br>
 							
 							<strong>Detailed Search</strong>
 							&nbsp;&nbsp;&nbsp;This search is one of our unique features and allows you to search for garments with EXACTLY the specific characteristics you’re after.  If your dream dress happens to be a red dress with a scoop neckline, fluttered sleeves, midi length and in lace, our search will get to work and if it’s available from one of the stores in the fashion mall, then you’re going find it in double time.
