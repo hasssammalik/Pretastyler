@@ -113,7 +113,7 @@
 			$(".tabsInner").hide();
 			$(".tabClicked").removeClass("tabClicked");
 			callHash = 1;
-			var arraytab = tab.split('-', 2);
+			var arraytab = tab.split('#', 2);
 			tab = arraytab[1];
 			if( tab.length > 0 ){ 
 				$(".act-"+tab.substring(1, tab.length)).addClass("tabClicked");
