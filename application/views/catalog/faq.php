@@ -83,16 +83,27 @@
 						<div class="faq-body">
 							&nbsp;&nbsp;&nbsp;a. Forgetten Your Password?<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No problem, just follow these easy steps:
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>
+							<br>
+							<p style="padding-left:10px;">
 								<ol>
 									<li>Click the ‘Forgot Your Password’ link below the LOG IN button or <a href="/useraccount/login.html">HERE</a>.</li>
 									<li>On the next screen, you will be asked to enter your email address.</li>
 									<li>Click Send.</li>
 									<li>You will receive and email to confirm the request is from you with a reset link.  If you don’t at first see it remember to check your junk/spam folder.</li>
+									<li>Click the reset link in this email</li>
+									<li>You will be taken to a page where you can enter and confirm a new password.</li>
+									<li>Click SUBMIT to save the change.</li>
+									<li>You will receive an email confirming that your password has been changed.  </li>
 								</ol>
 							</p>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We suggest you store this email in a safe place.  We all have lapses of memory.<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you still experience problems contact us through this <a href="mailto:info@pretastyler.com">EMAIL.</a>
 						</div>
 					</div>
+
+
+
+
 				</div>
 			</div>
 		</div>
