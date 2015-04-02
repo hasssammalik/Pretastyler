@@ -1,4 +1,4 @@
-<div class="faq">
+<article class="faq">
 	<div class="container-full">
 		<div class="half">
 			<div class="qanda">
@@ -161,5 +161,5 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>
 <div class="clear"></div>
