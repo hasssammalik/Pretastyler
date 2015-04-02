@@ -133,11 +133,11 @@ located at the top right hand side of the page.
 							</ol>
 							<br><strong>The Star Rating</strong><br>
 							&nbsp;&nbsp;&nbsp;Items are ranked with a star rating; from 5  to 1 stars.<br>
-							&nbsp;&nbsp;&nbsp; 5 stars - Great <br>
-							&nbsp;&nbsp;&nbsp; 4 stars - Good  <br>
-							&nbsp;&nbsp;&nbsp; 3 stars - OK<br>
-							&nbsp;&nbsp;&nbsp; 2 stars - Maybe<br>
-							&nbsp;&nbsp;&nbsp; 1 stars - Avoid<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 stars - Great <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 stars - Good  <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 stars - OK<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 stars - Maybe<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 stars - Avoid<br>
 							
 							<strong>The Icons</strong>
 							&nbsp;&nbsp;&nbsp;Hover your mouse over any item in the mall and icons will appear on the right hand side.
@@ -151,6 +151,8 @@ think you’ve assessed the item incorrectly.</li>
 								<li><strong>'i' for Information: </strong>(bottom right): Click this icon to enlarge the image, see multiple views of the item, read the description, sizes, colors etc.   </li>
 								<li><strong>Head: </strong>(top right) Indicates that this item has been found and assessed by another member using the Style Genie app.  Note: the assessment of the garment may not be correct.</li>
 							</ol>
+							<strong>Garment Insights and Styling Recommendations</strong>
+							<p style="padding-left:3%;">Because looking fabulous is as much about how you wear a garment as the garment itself, PrêtàStyler adds specific styling recommendations for each garment based on your body profile.  Click on the garment image or info icon to view them.  On the left of the item you’ll see ‘Why It Suits You’ and on the right ‘How to Look Your Best’</p>
 						</div>
 					</div>
 
