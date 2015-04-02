@@ -1,3 +1,8 @@
+<style>
+.content{
+    background-image: url(/images/payment/pretastylerpayment.jpeg);
+  }
+  </style>
 <div class="faq">
 	<div class="container-full">
 		<div class="half">
