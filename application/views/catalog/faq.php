@@ -222,6 +222,89 @@
 							</div>
 					</div>
 
+					<div class="faq-info" id="q7">
+						<div class="faq-header">
+							STYLE GENIE APP
+						</div>
+						
+						<div class="faq-body">
+							Being able to find what you want quickly, easily and accurately is one of the cornerstone missions of PrêtàStyler. We are always striving to go one better than our competitors and our own personal bests – the Detailed Search is one way we are doing this.  <br>
+							<strong>a. What Is It?</strong><br>
+							&nbsp;&nbsp;&nbsp;A clever Google Chrome app that allows members you to apply the same PrêtàStyler assessment smarts to any item of clothing or accessory that you find anywhere on the web. Once the item has been assessed you'll know instantly if it suit’s you. <br>
+							<strong>b. Where to Find it</strong><br>
+							&nbsp;&nbsp;&nbsp;The Google Chrome store:  Google Chrome Store Extension  Note: This chrome app works on Macs.<br>
+							<strong>c. How to Assess An Item </strong><br>
+							<ol style="padding-left:8%;list-style-type: upper-roman;">
+								<li>Find a garment or accessory you like from any online store</li>
+								<li>Search until you locate the largest image of the item.</li>
+								<li>Hover over the item and right click (Ctrl click for mac) your mouse.  If that does not work click on an area of white space. Then select 'Select image of genie search'.</li>
+								<li>Images will appear from the page: select the image of the particular garment you are interested in.</li>
+								<li>Click ‘Next’ (you don't need to add any additional images)</li>
+								<li>Click 'Assess item' to start the assessment or ‘Add to My Dressing Room’ to assesslater.</li>
+								<li>The next asks a few questions about the item to allow you to find it later, brand, color etc. Click ‘Next’</li>
+								<li>Now the assessment process starts.  Select the features that your item has. Be sure to read the description under each option if you are unsure.</li>
+								<li>Answer all questions.</li>
+								<li>After you have answered the last question the item is assessed and you are shown a pop-up with its rating for you.  From there you can purchase it, read why it did or did not suit or go back to the mall.</li>
+								<li>The item will automatically be placed in your Dressing Room under Assessed Items.</li>
+							</ol>
+							<strong>Dressing Room</strong><br>
+							&nbsp;&nbsp;&nbsp;This area saves the following items:
+							<ol style="padding-left:8%;list-style-type: lower-alpha;">
+								<li><span class="u">Unassessed items</span>: items you have found on the web but have not yet assessed. To start the assessment process hover your mouse over the image and click the pencil icon. Once the item has been assessed it will be placed in your ‘Assessed items’ area and will show in the mall.</li>
+								<li><span class="u">Assessed items</span>: items you have found on the web and assessed using the style genie app.</li>
+								<li><span class="u">Wishlist items</span>: items you have marked as favourites (heart icon)</li>
+							</ol>
+							</div>
+					</div>
+
+					<div class="faq-info" id="q8">
+						<div class="faq-header">
+							STYLE CLINIC
+						</div>
+						
+						<div class="faq-body">
+							<strong>a. What is Style Clinic?</strong><br>
+							&nbsp;&nbsp;&nbsp;Your fashion experience does not end with your personalized mall or garment insights. <BR> 
+							We have an ever expanding library of invaluable, instructional features to help you, from how to wear the latest trends to organizing your wardrobe and learning about how design lines affect your shape.  It's called Style Clinic and its open 24/7.  Why not take a look right now.
+							<br>As a member you will be sent the latest Style Clinic feature each week.<br>
+							<strong>b. Do You Accept Features from Other Writers?</strong><br>
+							&nbsp;&nbsp;&nbsp;We certainly do!  In fact, we are looking to expand with a series of talented bloggers regularly providing features on all sorts of fashion, beauty, lifestyle and life issues. If you feel your features and musings would be of interest to our readers please [contact us] and provide the topic(s) you write on and a sample of your work.<br>
+							
+						</div>
+					</div>
+
+					<div class="faq-info" id="q9">
+						<div class="faq-header">
+							BUGS, SUGGESTIONS & FEEDBACK
+						</div>
+						
+						<div class="faq-body">
+							We are all ears- fire away!
+							<strong>a. Have a Problem or Found a Bug?</strong><br>
+							&nbsp;&nbsp;&nbsp;Woops!  If you have hit a snag, you can contact us using the chat/feedback box at the bottom right of every page of our website. Alternatively, we welcome emails requesting support sent to <a href="/contact-us.html">info@pretastyler.com</a>.  We will endeavor to get back to you within 36 working hours. <BR> 
+							We have an ever expanding library of invaluable, instructional features to help you, from how to wear the latest trends to organizing your wardrobe and learning about how design lines affect your shape.  It's called Style Clinic and its open 24/7.  Why not take a look right now.
+							<br>As a member you will be sent the latest Style Clinic feature each week.<br>
+							<strong>b. I Love It or Hate It – We Want Your Feedback</strong><br>
+							&nbsp;&nbsp;&nbsp;We'd love to hear from you, as to how you're finding the site. <br> 
+							We welcome the 'c'mon guys you need to do this better' feedback just as much as the 'you guys rock' fan mail.<br>
+							We want to make the site the best it can possibly be, and your feedback helps us do that.<br>
+							You can either rate your experience 1 out of 10 <a href="">HERE</a>.  We like to think of it as a temperature gauge letting us know, quickly and simply, how customers are finding their user experience on PrêtàStyler.  Are we hot or not? Let us know!<br>					
+							Alternatively, you can email our customer support  <a href="/contact-us.html">HERE</a>. So thanks in advance for taking the time to let us know what you think.  <br>
+							<strong>c. Have An Idea?  Throw It To Us!</strong><br>
+							&nbsp;&nbsp;&nbsp;We want to make the site the best it can possibly be, and your feedback helps us do that.<BR>
+							We welcome 'hey have you thought of doing...' emails.  Don’t be shy – we are all eager ears here at PrêtàStyler.
+						</div>
+					</div>
+
+					<div class="faq-info" id="q10">
+						<div class="faq-header">
+							NEED OTHER HELP?
+						</div>
+						
+						<div class="faq-body">
+							<a href="/contact-us.html">Contact us</a> and we will be back to you within 24 Australian working hours
+						</div>
+					</div>
 					
 				</div>
 			</div>
@@ -253,7 +336,7 @@
 					<div><a href="#q7"><strong>STYLE GENIE APP</strong></a></div>
 					<div><a href="#q8"><strong>STYLE CLINIC</strong></a></div>
 					<div><a href="#q9"><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></a></div>
-					<div><a href="#q10"><strong>MY PRIVATE STYLIST</strong></a></div>
+					<div><a href="#q10"><strong>NEED OTHER HELP?</strong></a></div>
 				</div>
 			</div>
 		</div>
