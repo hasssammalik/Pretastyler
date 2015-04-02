@@ -7,11 +7,12 @@
 		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
-		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
-		    </li>
-		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">MY FINDS <span class="pinkycolor">(0)</span></a>
 		    </li>
+		    <li class="tabHead-itemsPendingGarment">
+		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
+		    </li>
+		    
 		    <li class="tabHead-history">
 		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>(0)</span></a>
 		    </li>
@@ -55,7 +56,7 @@
 
 	<style type="text/css">
 		.myNewTabsRoom .tabsDressing {
-		  width: 550px;
+		  width: 570px;
 		}
 		.myNewTabsRoom .tabsDressing li {
 		  display: inline-block;
