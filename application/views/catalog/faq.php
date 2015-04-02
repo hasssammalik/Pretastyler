@@ -125,24 +125,21 @@ located at the top right hand side of the page.
 							THE MALL
 						</div>
 						<div class="faq-body">
-							How Items Are Displayed<br>
+						<strong>	How Items Are Displayed</strong><br>
 							<ol style="padding-left:8%;list-style-type: lower-alpha;">
 								<li>On logging in your mall displays a mix of your 4 and 5 star rated items that have been uploaded within the last 24 hours.</li>
 								<li>To see items with a lower rating click on a lower star rating located at the top of the Quick Search panel at the left hand side of the page.  </li>
 
 							</ol>
-							<br>The Star Rating<br>
-							&nbsp;&nbsp;&nbsp;Items are ranked with a star rating; from 5  to one stars.
-							&nbsp;&nbsp;&nbsp; 5 stars - Great
-							&nbsp;&nbsp;&nbsp; 4 stars - Good 
-							&nbsp;&nbsp;&nbsp; 3 stars - OK
-							&nbsp;&nbsp;&nbsp; 2 stars - Maybe
-							&nbsp;&nbsp;&nbsp; 1 stars - Avoid
-							<ol style="padding-left:8%;list-style-type: lower-roman;">
-								<li>Log into  <a href="/useraccount/login.html">[PrêtàStyler]</a>.</li>
-								<li>Click <a href="/user.html">(your name ACCOUNT)</a> on the meu bar – top right hand corner of any page.</li>
-							</ol>
-							The Icons
+							<br><strong>The Star Rating</strong><br>
+							&nbsp;&nbsp;&nbsp;Items are ranked with a star rating; from 5  to 1 stars.<br>
+							&nbsp;&nbsp;&nbsp; 5 stars - Great <br>
+							&nbsp;&nbsp;&nbsp; 4 stars - Good  <br>
+							&nbsp;&nbsp;&nbsp; 3 stars - OK<br>
+							&nbsp;&nbsp;&nbsp; 2 stars - Maybe<br>
+							&nbsp;&nbsp;&nbsp; 1 stars - Avoid<br>
+							
+							<strong>The Icons</strong>
 							&nbsp;&nbsp;&nbsp;Hover your mouse over any item in the mall and icons will appear on the right hand side.
 							<ol style="padding-left:10%;list-style-type: upper-roman;">
 								<li><strong>Shopping Cart: </strong>Takes you directly to the retailer’s website to purchase it</li>
