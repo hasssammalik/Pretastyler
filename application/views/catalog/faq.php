@@ -126,9 +126,9 @@
 						<li><a href="#q2a" class="i">b. What's in the sneaky fine print, where's the catch?</a></li>
 						<li><a href="#q2b" class="i">c. Is There a Free Version?</a></li>
 						<li><a href="#q2b" class="i">d. Free Trials</a></li>
-						<li><a href="#q2d" class="i">e. Updating Your Details</a></li>
-						<li><a href="#q2e" class="i">f. How to Login</a></li>
-						<li><a href="#q2f" class="i">g. Deleting Your Account</a></li>
+						<li><a href="#q2c" class="i">e. Updating Your Details</a></li>
+						<li><a href="#q2d" class="i">f. How to Login</a></li>
+						<li><a href="#q2e" class="i">g. Deleting Your Account</a></li>
 					</ul>
 				</div>
 				<div><a href="#q3"><strong>YOUR PASSWORD</strong></a></div>
