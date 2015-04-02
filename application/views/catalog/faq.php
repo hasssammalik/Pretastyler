@@ -84,8 +84,8 @@
 							&nbsp;&nbsp;&nbsp;a. Forgetten Your Password?<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No problem, just follow these easy steps:
 							<br>
-							<p style="padding-left:10px;">
-								<ol>
+							
+								<ol style="padding-left:10%;">
 									<li>Click the ‘Forgot Your Password’ link below the LOG IN button or <a href="/useraccount/login.html">HERE</a>.</li>
 									<li>On the next screen, you will be asked to enter your email address.</li>
 									<li>Click Send.</li>
@@ -95,9 +95,9 @@
 									<li>Click SUBMIT to save the change.</li>
 									<li>You will receive an email confirming that your password has been changed.  </li>
 								</ol>
-							</p>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We suggest you store this email in a safe place.  We all have lapses of memory.<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you still experience problems contact us through this <a href="mailto:info@pretastyler.com">EMAIL.</a>
+			
+							<p style="padding-left:8%;">We suggest you store this email in a safe place.  We all have lapses of memory.<br>
+							If you still experience problems contact us through this <a href="mailto:info@pretastyler.com">EMAIL.</a></p>
 						</div>
 					</div>
 
