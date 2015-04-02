@@ -117,7 +117,7 @@
 			tab = arraytab[1];
 			if( tab.length > 0 ){ 
 				$(".act-"+tab).addClass("tabClicked");
-				$(tab).show();
+				$("#"+tab).show();
 			} else {
 				$(".act-wishList").addClass("tabClicked");
 				$("#wishList").show();
