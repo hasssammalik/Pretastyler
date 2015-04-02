@@ -1,37 +1,4 @@
-<article class="faq">
-	<!-- <section class="grid">
-		<div class="grid_6">
-			<div class="videoContainer">
-				<iframe width="480" height="293" src="https://www.youtube.com/embed/miHwx-uUj8A?rel=0" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-		<div class="grid_6">
-			<div class="copy">
-				<h2 class="pink">Makes Style Your Own</h2>
-				<div class="body">
-					<p>With Style Genie, there’s no more guessing, no more returns. She teaches you how every area of a garment works for you, from neckline to hemline and even makes recommendations on what accessories to wear.</p>
-					<p>Find the right clothes every time you go shopping, ones which flatter your figure, get you noticed for the right reasons, and make you feel your best. PretaStyler eliminates the time wasted in searching through countless styles and multiple online stores in search of the right outfit.  It’s your one-shop-stop and our deep fashion finder ensures that you find that illusive outfit, with those specific style characteristics; you have been looking for, within a few clicks.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section class="grid">
-		<div class="grid_6">
-			<div class="copy">
-				<h2 class="pink">Makes Style Your Own</h2>
-				<div class="body">
-					<p>With Style Genie, there’s no more guessing, no more returns. She teaches you how every area of a garment works for you, from neckline to hemline and even makes recommendations on what accessories to wear.</p>
-					<p>Find the right clothes every time you go shopping, ones which flatter your figure, get you noticed for the right reasons, and make you feel your best. PretaStyler eliminates the time wasted in searching through countless styles and multiple online stores in search of the right outfit.  It’s your one-shop-stop and our deep fashion finder ensures that you find that illusive outfit, with those specific style characteristics; you have been looking for, within a few clicks.</p>
-				</div>
-			</div>
-		</div>
-		<div class="grid_6">
-			<div class="videoContainer">
-				<iframe width="480" height="293" src="https://www.youtube.com/embed/miHwx-uUj8A?rel=0" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</section> -->
+<div class="faq">
 	<div class="container-full">
 		<div class="half">
 			<div class="qanda">
@@ -92,7 +59,7 @@
 					F. HOW TO LOGIN?
 				</div>
 				<div class="faq-body">
-					<ul>
+					<ul style="list-style:none;">
 						<li>Click [LOGIN] located in the top right corner of every page.</li>
 						<li>A login panel will open up.</li>
 						<li>Enter the email address you signed up with and your password</li>
@@ -100,7 +67,6 @@
 					</ul>
 				</div>
 			</div>
-
 			<div class="faq-info" id="q2e">
 				<div class="faq-header">
 					G. DELETING YOUR ACCOUNT
@@ -108,6 +74,59 @@
 				<div class="faq-body">
 					We’d be really sad to see you go! But if you must, please send an email to <a href="mailto:info@pretastyler.com">info@pretastyler.com</a> requesting your account be deleted and we will personally make sure your account is removed promptly.  Be sure to also give us the email address you use on the site and tell us whether or not you still want to receive our company updates. In addition you will need to stop your monthly payments through Paypal
 				</div>
+			</div>
+
+			<div class="faq-info" id="q3">
+				<div class="faq-header">
+					YOUR PASSWORD
+				</div>
+				<div class="faq-body">
+					&nbsp;&nbsp;&nbsp;a. Forgetten Your Password?<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No problem, just follow these easy steps:
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>
+					<ol>
+						<li>Click the ‘Forgot Your Password’ link below the LOG IN button or <a href="/useraccount/login.html">HERE</a>.</li>
+						<li>On the next screen, you will be asked to enter your email address.</li>
+						<li>Click Send.</li>
+						<li>You will receive and email to confirm the request is from you with a reset link.  If you don’t at first see it remember to check your junk/spam folder.</li>
+					</ol>
+				</p>
+			</div>
+			<div class="faq-info" id="q4">
+				<div class="faq-header">
+					A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
+				</div>
+				<div class="faq-body">
+					<p>Registration is through this [page] and costs $9 per month.</p>
+					<p>	Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
+						<p>1. Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
+						</p><p>	2. Enter you Name and Email
+					</p><p>	3. Chosse a Password (must be alphanumberic - letters and numbers only)
+				</p><p>4. Confirm the same Password</p>
+			</div>
+			<div class="faq-info" id="q5">
+				<div class="faq-header">
+					A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
+				</div>
+				<div class="faq-body">
+					<p>Registration is through this [page] and costs $9 per month.</p>
+					<p>	Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
+						<p>1. Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
+						</p><p>	2. Enter you Name and Email
+					</p><p>	3. Chosse a Password (must be alphanumberic - letters and numbers only)
+				</p><p>4. Confirm the same Password</p>
+			</div>
+			<div class="faq-info" id="q6">
+				<div class="faq-header">
+					A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
+				</div>
+				<div class="faq-body">
+					<p>Registration is through this [page] and costs $9 per month.</p>
+					<p>	Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!
+						<p>1. Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)
+						</p><p>	2. Enter you Name and Email
+					</p><p>	3. Chosse a Password (must be alphanumberic - letters and numbers only)
+				</p><p>4. Confirm the same Password</p>
 			</div>
 		</div>
 	</div>
@@ -142,5 +161,5 @@
 			</div>
 		</div>
 	</div>
-</article>
+</div>
 <div class="clear"></div>
