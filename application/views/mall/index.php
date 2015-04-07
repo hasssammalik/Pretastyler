@@ -162,4 +162,8 @@
 	a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
 	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
+<<<<<<< HEAD
 <?php } ?>
+=======
+<?php } ?>
+>>>>>>> stage
