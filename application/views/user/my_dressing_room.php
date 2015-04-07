@@ -4,7 +4,9 @@
 	<div class="tabsDressing">
 		<ul id="dressingTabHeadContainer">
 		    <li class="tabHead-wishList">
+
 		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
+		    	<span id="talkbubble">Testing</span>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#myfinds" class="acttabsInner act-myfinds">MY FINDS <span class="pinkycolor">(0)</span></a>
