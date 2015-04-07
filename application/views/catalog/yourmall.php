@@ -141,7 +141,7 @@
 							.slider({
 								min: 0, 
 								max: shoulders.length-1, 
-								value: default_values[2]-1
+								value: default_values[1]-1
 							})
 							.slider("pips", {
 								labels: shoulders
@@ -151,7 +151,7 @@
 								labels: shouldersimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[2] = (+ui.value+1);
+								default_values[1] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -160,7 +160,7 @@
 							.slider({
 								min: 0, 
 								max: faceshape.length-1, 
-								value: default_values[3]-1
+								value: default_values[2]-1
 							})
 							.slider("pips", {
 								labels: faceshape
@@ -170,7 +170,7 @@
 								labels: faceshapeimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[3] = (+ui.value+1);
+								default_values[2] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -179,7 +179,7 @@
 							.slider({
 								min: 0, 
 								max: neck.length-1, 
-								value: default_values[4]-1
+								value: default_values[3]-1
 							})
 							.slider("pips", {
 								labels: neck
@@ -189,7 +189,7 @@
 								labels: neckimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[4] = (+ui.value+1);
+								default_values[3] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -198,7 +198,7 @@
 							.slider({
 								min: 0, 
 								max: back.length-1, 
-								value: default_values[5]-1
+								value: default_values[4]-1
 							})
 							.slider("pips", {
 								labels: back
@@ -208,7 +208,7 @@
 								labels: backimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[5] = (+ui.value+1);
+								default_values[4] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -217,7 +217,7 @@
 							.slider({
 								min: 0, 
 								max: upperarms.length-1, 
-								value: default_values[6]-1
+								value: default_values[5]-1
 							})
 							.slider("pips", {
 								labels: upperarms
@@ -227,7 +227,7 @@
 								labels: upperarmsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[6] = (+ui.value+1);
+								default_values[5] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -236,7 +236,7 @@
 							.slider({
 								min: 0, 
 								max: midriff.length-1, 
-								value: default_values[8]-1
+								value: default_values[6]-1
 							})
 							.slider("pips", {
 								labels: midriff
@@ -246,7 +246,7 @@
 								labels: midriffimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[8] = (+ui.value+1);
+								default_values[6] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -255,7 +255,7 @@
 							.slider({
 								min: 0, 
 								max: stomach.length-1, 
-								value: default_values[9]-1
+								value: default_values[7]-1
 							})
 							.slider("pips", {
 								labels: stomach
@@ -265,7 +265,7 @@
 								labels: stomachimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[9] = (+ui.value+1);
+								default_values[7] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -274,7 +274,7 @@
 							.slider({
 								min: 0, 
 								max: bottom.length-1, 
-								value: default_values[10]-1
+								value: default_values[8]-1
 							})
 							.slider("pips", {
 								labels: bottom
@@ -284,7 +284,7 @@
 								labels: bottomimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[10] = (+ui.value+1);
+								default_values[8] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -293,7 +293,7 @@
 							.slider({
 								min: 0, 
 								max: innerthighs.length-1, 
-								value: default_values[11]-1
+								value: default_values[9]-1
 							})
 							.slider("pips", {
 								labels: innerthighs
@@ -303,7 +303,7 @@
 								labels: innerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[11] = (+ui.value+1);
+								default_values[9] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -311,7 +311,7 @@
 							.slider({
 								min: 0, 
 								max: outerthighs.length-1, 
-								value: default_values[12]-1
+								value: default_values[10]-1
 							})
 							.slider("pips", {
 								labels: outerthighs
@@ -321,7 +321,7 @@
 								labels: outerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[12] = (+ui.value+1);
+								default_values[10] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -330,7 +330,7 @@
 							.slider({
 								min: 0, 
 								max: lowerlegs.length-1, 
-								value: default_values[13]-1
+								value: default_values[11]-1
 							})
 							.slider("pips", {
 								labels: lowerlegs
@@ -340,7 +340,7 @@
 								labels: lowerlegsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[13] = (+ui.value+1);
+								default_values[11] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -381,11 +381,11 @@
 							"upper_arms_select_id" : ($('#mall-upperarms').attr('checked') == "checked")? default_values[5] :0,
 							"midriff_select_id" : ($('#mall-midriff').attr('checked') == "checked")? default_values[6] :0,
 							
-							"stomach_select_id" : ($('#mall-stomach').attr('checked') == "checked")? default_values[9] :0,
-							"bottom_select_id" : ($('#mall-bottom').attr('checked') == "checked")? default_values[10] :0,
-							"inner_thighs_select_id" : ($('#mall-innerthighs').attr('checked') == "checked")? default_values[11] :0,
-							"outer_thighs_select_id" : ($('#mall-outerthighs').attr('checked') == "checked")? default_values[12] :0,
-							"lower_legs_select_id" : ($('#mall-lowerlegs').attr('checked') == "checked")? default_values[13] :0
+							"stomach_select_id" : ($('#mall-stomach').attr('checked') == "checked")? default_values[7] :0,
+							"bottom_select_id" : ($('#mall-bottom').attr('checked') == "checked")? default_values[8] :0,
+							"inner_thighs_select_id" : ($('#mall-innerthighs').attr('checked') == "checked")? default_values[9] :0,
+							"outer_thighs_select_id" : ($('#mall-outerthighs').attr('checked') == "checked")? default_values[10] :0,
+							"lower_legs_select_id" : ($('#mall-lowerlegs').attr('checked') == "checked")? default_values[11] :0
 						};
 						
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
