@@ -1,12 +1,13 @@
 
 <div class="mainContent myNewTabsRoom minheight250">
 	<script>
-$(document).ready(function({
-$('.tabHead-wishList').hover(function(){
-$('#wishlist').fadeIn(500);
-});
-
-}))
+$(document).ready(function()
+{
+$('.tabHead-wishList').hover(function()
+	{
+		$('#wishlist').fadeIn(500);
+	});
+})
 	</script>
 	
 	<div class="tabsDressing">

@@ -331,7 +331,7 @@
 												<div class="headerBackground">
 													<div class="headerBackground-content role-element leadstyle-container center">
 														<p style="font-size:32px; font-weight: bold;word-spacing:5px;letter-spacing:2px;">SHOPPING ONLINE<br>JUST GOT PERSONAL</p>
-														<p> <img width="70" src="/images/play.png" > </p>
+														<p><!--  <img width="70" src="/images/play.png" >  --></p>
 														<p style="font-size:20px;line-height:25px;font-weight:600;">
 															Cut Through the Clutter of Fashion<br>
 															Find everything that suits you in one perfect place<br>
