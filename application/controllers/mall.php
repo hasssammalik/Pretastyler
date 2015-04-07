@@ -37,6 +37,7 @@ class Mall extends CI_Controller {
 			'topbrands' =>  $this->garment_model->get_top_brands(0, 10)
 		);
 		if ($this->flexi_auth->is_logged_in()){
+			$this->session->unset_userdata('initial_user_profile');
 			$this->data['first_name'] = $this->user_model->get_user_name($this->flexi_auth->get_user_id())['first_name'];
 		}
 	}
@@ -45,6 +46,7 @@ class Mall extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
 		$data['extraJS'] = '<script src="/js/mall.js"></script>';
@@ -59,6 +61,28 @@ class Mall extends CI_Controller {
 		$this->load->view('templates/menu', $data);
 		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/index', $data);
+		$this->load->view('templates/footer', $data);
+	}
+	/**
+	 * Index Page for this controller.
+	 */
+	public function mall_by_profile()
+	{
+		$this->load->library('user_check');
+		$data = $this->data;
+		$data['title'] = "My Fashion Mall";
+		//$data['extraJS'] = '<script src="/js/mall.js"></script>';
+		$data['breadcrumb'] = array('MALL');
+		$data['getBook'] =true;
+		$data['deep_category'] = $this->deep_search_model->get_available_categories();
+		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. Your 24/7 online stylist. Sing up today!">
+							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. Your 24/7 online stylist. Sing up today!">
+		';
+		
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('catalog/mallclone', $data);
 		$this->load->view('templates/footer', $data);
 	}
 	/**
@@ -82,6 +106,7 @@ class Mall extends CI_Controller {
 		$wardrobe = $this->input->post('wardrobe', TRUE);
 		$dressing_room = $this->input->post('dressing_room', TRUE);
 		$find = $this->input->post('find', TRUE);
+		$history = $this->input->post('history', TRUE);
 		$similar = $this->input->post('similar', TRUE);
 		$body = $this->input->post('body', TRUE);
 		$star = $this->input->post('star', TRUE);
@@ -107,6 +132,8 @@ class Mall extends CI_Controller {
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_find($offset, $limit, $user_id);
 		} else if ($dressing_room){
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_dressing_room($offset, $limit, $user_id);
+		} else if ($history){
+			$data['garments'] = $this->garment_model->get_batch_garment_info_by_history($offset, $limit, $user_id);
 		} else if ($similar){
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id($offset, $limit, $user_id, $similar);
 		} else if ($body){
@@ -209,6 +236,7 @@ class Mall extends CI_Controller {
 	 * Garments Similar Page for this controller.
 	 */
 	public function similar($slug = FALSE) {
+		$this->load->library('user_check');
 		if (!$slug) {
 			$this->not_found();
 			return;
@@ -233,6 +261,7 @@ class Mall extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	public function occasion($occasion = FALSE) {
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "Occasion - ".ucwords(str_replace('_', ' ', $occasion));
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'OCCASION', strtoupper(str_replace('_', ' ', $occasion)));
@@ -250,6 +279,7 @@ class Mall extends CI_Controller {
 	 */
 	public function brand($brand = FALSE)
 	{
+		$this->load->library('user_check');
 		$brand = str_replace('_', ' ', $brand);
 		$data = $this->data;
 		$data['title'] = "Brand - ".ucwords($brand);
@@ -271,6 +301,7 @@ class Mall extends CI_Controller {
 	 */
 	public function body($body = FALSE)
 	{
+		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "Body - ".ucwords($body);
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'BODY', strtoupper($body));
@@ -282,6 +313,59 @@ class Mall extends CI_Controller {
 		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('mall/body', $data);
 		$this->load->view('templates/footer', $data);
+	}
+	public function garment_by_profile( )
+	{
+		if (!$this->input->post()){
+			show_404();
+		}
+		$offset = $this->input->post('offset', TRUE);
+		$limit = $this->input->post('limit', TRUE);
+		$uservalue = $this->input->post('uservalue', TRUE);
+		$pagelayout = $this->input->post('pagelayout', TRUE);
+
+		$required_profile_elements = array(
+										"height_select_id" 		=> ( !empty($uservalue['height_select_id']) ? $uservalue['height_select_id'] : 0 ),
+										"weight_select_id" 		=> ( !empty($uservalue['weight_select_id']) ? $uservalue['weight_select_id'] : 0 ),
+										"age_select_id" 		=> ( !empty($uservalue['age_select_id']) ? $uservalue['age_select_id'] : 0 ),
+										"body_shape_select_id" 	=> ( !empty($uservalue['body_shape_select_id']) ? $uservalue['body_shape_select_id'] : 0 ),
+										"body_ratio_select_id" 	=> ( !empty($uservalue['body_ratio_select_id']) ? $uservalue['body_ratio_select_id'] : 0 ),
+										"bra_select_id" 		=> ( !empty($uservalue['bra_select_id']) ? $uservalue['bra_select_id'] : 0 ),
+										"build_select_id" 		=> ( !empty($uservalue['build_select_id']) ? $uservalue['build_select_id'] : 0 ),
+										"minBust" 				=> ( !empty($uservalue['minBust']) ? $uservalue['minBust'] : 0 ),
+
+										"neck_length_select_id" => ( !empty($uservalue['neck_length_select_id']) ? $uservalue['neck_length_select_id'] : 0 ),
+										"shoulders_select_id" 	=> ( !empty($uservalue['shoulders_select_id']) ? $uservalue['shoulders_select_id'] : 0 ),
+										"face_shape_select_id" 	=> ( !empty($uservalue['face_shape_select_id']) ? $uservalue['face_shape_select_id'] : 0 ),
+										
+										"neck_select_id" 		=> ( !empty($uservalue['neck_select_id']) ? $uservalue['neck_select_id'] : 0 ),
+										"back_select_id" 		=> ( !empty($uservalue['back_select_id']) ? $uservalue['back_select_id'] : 0 ),
+										"upper_arms_select_id" 	=> ( !empty($uservalue['upper_arms_select_id']) ? $uservalue['upper_arms_select_id'] : 0 ),
+										"midriff_select_id" 	=> ( !empty($uservalue['midriff_select_id']) ? $uservalue['midriff_select_id'] : 0 ),
+										
+										"stomach_select_id" 	=> ( !empty($uservalue['stomach_select_id']) ? $uservalue['stomach_select_id'] : 0 ),
+										"bottom_select_id" 		=> ( !empty($uservalue['bottom_select_id']) ? $uservalue['bottom_select_id'] : 0 ),
+										"inner_thighs_select_id"=> ( !empty($uservalue['inner_thighs_select_id']) ? $uservalue['inner_thighs_select_id'] : 0 ),
+										"outer_thighs_select_id"=> ( !empty($uservalue['outer_thighs_select_id']) ? $uservalue['outer_thighs_select_id'] : 0 ),
+										"lower_legs_select_id" 	=> ( !empty($uservalue['lower_legs_select_id']) ? $uservalue['lower_legs_select_id'] : 0 )
+									);
+		if ($this->flexi_auth->is_logged_in()){
+			
+		} else {
+			$this->session->set_userdata('initial_user_profile', $uservalue);
+		}
+
+
+		$data['user_profile_done'] = true;
+		$user_specs = $this->user_model->generate_user_specs( FALSE, $required_profile_elements);
+		$data['garments'] = $this->garment_model->get_batch_garment_score_by_user_specs($user_specs, $offset, $limit);
+		
+		if( !empty($pagelayout)){
+			$this->load->view('mall/garments', $data);
+		} else {
+			$this->load->view('mall/user_profile_garments', $data);
+		}
+		
 	}
 	/**
 	 * Deep Search Initial Service for this controller.
@@ -342,6 +426,29 @@ class Mall extends CI_Controller {
 			$data['brand_result'] = $this->garment_model->get_search_brands($offset, $limit, $brand);
 		}
 		$this->load->view('mall/search_brand', $data);
+	}
+	
+	/**
+	* Targeted Search or Deep search for this controller
+	*/
+	public function targetsearch() {
+		
+		$data = $this->data;
+		$data['title'] = "Detailed Search";
+		$data['extraJS'] = '<script src="/js/mall-target.js"></script>';
+		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>','Detailed Search');
+		$data['getBook'] = true;
+		$data['deep_category'] = $this->deep_search_model->get_available_categories();
+		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. Your 24/7 online stylist. Sing up today!">
+							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. Your 24/7 online stylist. Sing up today!">
+		';
+		
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('mall/targetsearch', $data);
+		$this->load->view('templates/footer', $data);
+		
 	}
 }
 

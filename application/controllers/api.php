@@ -14,7 +14,6 @@
 			$this->load->model( 'category_model' );
 			$this->load->model( 'garment_model' );
 			$this->load->model( 'brand_model' );
-
 		}
 
 		public function categories() {
@@ -132,7 +131,7 @@
 				$mask_image->modulateImage( 100, 100, 130 );
 				$background = $mask_image->getImagePixelColor( 3, 3 );
 				
-				$iQuantumDepth = pow( 3, $mask_image->getQuantumDepth()['quantumDepthLong'] );
+				$iQuantumDepth = pow( 2, $mask_image->getQuantumDepth()['quantumDepthLong'] );
 				$mask_image->paintOpaqueImage( $background, 'white', 0.2 * $iQuantumDepth );
 				$mask_image->negateImage( false );
 				$mask_image->thresholdImage( 0 );

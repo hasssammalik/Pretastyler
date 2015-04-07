@@ -39,12 +39,7 @@
 
 			$data = $this->data;
 			$data['title'] = "Styleboards";
-			$data['extraCSS'] = implode( "\n", array(
-					'<link rel="stylesheet" href="/css/boards.css">',
-					'<link href="/js/boards/ui/select2/select2.css" rel="stylesheet"/>',
-					'<link rel="stylesheet" href="/css/fix.css">',
-				)
-			);
+			$data['extraCSS'] = '<link rel="stylesheet" href="/css/boards.css">';
 			$data['extraJS'] = implode( "\n", array(
 				'<script src="http://fb.me/react-with-addons-0.12.0.js"></script>',
 				'<script src="http://fb.me/JSXTransformer-0.12.0.js"></script>',
@@ -65,12 +60,8 @@
 				'<script type="text/javascript" src="/js/boards/ui/dropkick.jquery.js"></script>',
 				'<script type="text/javascript" src="/js/boards/ui/dropkick.min.js"></script>',
 
+				'<link href="/js/boards/ui/select2/select2.css" rel="stylesheet"/>',
 				'<script type="text/javascript" src="/js/boards/ui/select2/select2.js"></script>',
-
-				'<script type="text/javascript" src="/js/boards/cropper/eventEmitter/EventEmitter.js"></script>',
-				'<script type="text/javascript" src="/js/boards/cropper/classie/classie.js"></script>',
-				'<script type="text/javascript" src="/js/boards/cropper/modal.js"></script>',
-				'<script type="text/javascript" src="/js/boards/cropper/cropper.js"></script>',
 
 				'<script type="text/javascript" src="/js/boards/canvas.js"></script>',
 				'<script type="text/jsx" src="/js/boards/toolbars.js"></script>',

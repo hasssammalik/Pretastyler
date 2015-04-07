@@ -23,6 +23,8 @@ class Brand_model extends CI_Model{
 		if ( $query->num_rows() < 1 ) return array();
 		return $query->result_array();
 	}
+	
+	
 }
 /* End of file brand_model.php */
 /* Location: ./application/models/brand_model.php */

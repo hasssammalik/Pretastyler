@@ -549,33 +549,19 @@ GET YOUR FREE COPY NOW!
 </div>
 </div>
 <div class="modal"></div>
-<script>
-  var _gscq = _gscq || [];
-  _gscq.push(['language', navigator.language]);
-  (function() {
-    var gscw = document.createElement('script');
-    gscw.type = 'text/javascript'; gscw.async = true;
-    gscw.src = '//widgets.getsitecontrol.com/12423/script.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gscw, s);
-  })();
-</script>
-</script>
+<div class="popup_modal"></div>
+<?php 
+if( ENVIRONMENT == 'production') {
+?>
 <script type='text/javascript'>
 
 window.__wtw_lucky_site_id = 33872;
-
- 
-
-               (function() {
-
-                              var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-
-                              wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://cdn') + '.luckyorange.com/w.js';
-
-                              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-
-                 })();
-
-               </script>
+    (function() {
+        var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+        wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://cdn') + '.luckyorange.com/w.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
+</script>
+<?php } ?>
 </body>
 </html>

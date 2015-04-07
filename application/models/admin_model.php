@@ -173,6 +173,44 @@ class Admin_model extends CI_Model{
 		}
 	}
 	/**
+	 * get_comment_by_criteria_id
+	 * Read garment's info by garment_id 
+	 * Returning url, image, ...
+	 *
+	 * @return garment array if existed, if not return FALSE
+	 */
+	public function get_comment_by_criteria_id($criteria_id = FALSE){
+		if ($criteria_id) {
+			$query = $this->db->select('*')->from('criteria_comment')->where('criteria_id', $criteria_id)->get();
+			if ($query->num_rows() >= 1){
+				return $query->result_array();
+			} else {
+				return array();
+			}
+		} else {
+			return FALSE;
+		}
+	}
+	/**
+	 * get_comment_by_criteria_id
+	 * Read garment's info by garment_id 
+	 * Returning url, image, ...
+	 *
+	 * @return garment array if existed, if not return FALSE
+	 */
+	public function get_comment_by_comment_id($comment_id = FALSE){
+		if ($comment_id) {
+			$query = $this->db->select('*')->from('criteria_comment')->where('criteria_comment_id', $comment_id)->get();
+			if ($query->num_rows() >= 1){
+				return $query->row_array();
+			} else {
+				return FALSE;
+			}
+		} else {
+			return FALSE;
+		}
+	}
+	/**
 	 * get_user_group
 	 * Read garment's info by garment_id 
 	 * Returning url, image, ...
@@ -251,6 +289,16 @@ class Admin_model extends CI_Model{
 		return $this->db->where('criteria_id', $criteria_id)->update('criteria', $data);
 	}
 	/**
+	 * update_comment
+	 * Read garment's info by garment_id 
+	 * Returning url, image, ...
+	 *
+	 * @return garment array if existed, if not return FALSE
+	 */
+	public function update_comment($comment_id, $data) {
+		return $this->db->where('criteria_comment_id', $comment_id)->update('criteria_comment', $data);
+	}
+	/**
 	 * update_user_group
 	 * Read garment's info by garment_id 
 	 * Returning url, image, ...
@@ -301,6 +349,15 @@ class Admin_model extends CI_Model{
 		return $this->db->insert_id();
 	}
 	/**
+	 * insert_comment
+	 *
+	 * 
+	 */
+	public function insert_comment($data) {
+		$this->db->insert('criteria_comment', $data);
+		return $this->db->insert_id();
+	}
+	/**
 	 * delete_criteria
 	 *
 	 * 
@@ -309,6 +366,16 @@ class Admin_model extends CI_Model{
 		$field_id = $this->get_criteria_by_criteria_id($criteria_id)['field_id'];
 		$this->db->delete(array('criteria'), array('criteria_id' => $criteria_id));
 		return $field_id;
+	}
+	/**
+	 * delete_comment
+	 *
+	 * 
+	 */
+	public function delete_comment($comment_id) {
+		$criteria_id = $this->get_comment_by_comment_id($comment_id)['criteria_id'];
+		$this->db->delete(array('criteria_comment'), array('criteria_comment_id' => $comment_id));
+		return $criteria_id;
 	}
 	/**
 	 * delete_field

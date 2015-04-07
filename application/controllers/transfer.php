@@ -29,12 +29,37 @@ class Transfer extends CI_Controller {
 			$this->data['first_name'] = $this->user_model->get_user_name($this->flexi_auth->get_user_id())['first_name'];
 		}
 	}
+	
+	public function home() {
+		
+		$data = $this->data;
+		$data['title'] = "PretaStyler Where style and fashion Unite";
+		
+		$data['content_class'] = "full_width_page";
+		$data['extraFooter'] = TRUE;
+		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+							  ';
+		$data['extraJS'] = '
+							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+							<script src="/js/jquery-ui-slider-pips.js"></script>
+							<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/flick/jquery-ui.css">
+							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		';
+		
+		
+		$this->load->view('templates/header', $data);
+		
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('testing/home_slider', $data);
+		
+	}
 
 
 	/**
 	 * Index Page for this controller.
 	 */
-	public function mall()
+	private function mall()
 	{
 		$data = $this->data;
 		$data['title'] = "Mall";
@@ -55,7 +80,7 @@ class Transfer extends CI_Controller {
 	}
 
 
-    public function deep_search_initial() {
+    private function deep_search_initial() {
 
         header( 'Content-Type: application/json' );
         header( 'Access-Control-Allow-Origin: *' );
@@ -74,7 +99,7 @@ class Transfer extends CI_Controller {
         }
 
     }
-    public function deep_search_update() {
+    private function deep_search_update() {
 
         header( 'Content-Type: application/json' );
         header( 'Access-Control-Allow-Origin: *' );
@@ -104,7 +129,7 @@ class Transfer extends CI_Controller {
 
 
 
-	public function index() {
+	private function index() {
 
 		echo "<pre>";
 		echo '
@@ -154,7 +179,7 @@ class Transfer extends CI_Controller {
 	/**
 	 * Index Page for this controller.
 	 */
-	public function update_user_spec_with_old( $start_id = 5337, $end_id = 5837 )
+	private function update_user_spec_with_old( $start_id = 5337, $end_id = 5837 )
 	{
 		$zom_time = microtime();$zom_time = explode(" ", $zom_time); $zom_time = $zom_time[1] + $zom_time[0]; $zom_starts = $zom_time;
 		//die();

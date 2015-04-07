@@ -50,23 +50,48 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = $this->data['first_name'] .'\'s Profile';
 		$data['breadcrumb'] = array('USER PROFILE');
-		$data['extraJS'] = '<script src="/js/user-profile.js"></script><script src="/js/jquery.sticky-kit.min.js"></script>';
 		
+		$data['extraCSS'] = '
+							<link rel="stylesheet" href="/css/jquery-ui.css">
+							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		';
+		$data['extraJS'] = '<script src="/js/user-profile.js"></script>
+							<script src="/js/jquery.sticky-kit.min.js"></script>
+							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+							<script src="/js/jquery-ui-slider-pips.js"></script>
+		';
+
 		$user_id = $this->flexi_auth->get_user_id();
 		$data['countries'] = $this->user_model->get_countries($user_id);
 		$data['user_info'] = $this->user_model->get_user_info($user_id);
 		$data['user_email'] = $this->flexi_auth->get_user_identity();
-		$data['user_selection'] = implode(',',array($data['user_info']['neck_length_select_id'],
-										$data['user_info']['neck_thickness_select_id'],
-										$data['user_info']['bone_select_id'],
-										$data['user_info']['horizontal_select_id'],
-										$data['user_info']['vertical_select_id'],
-										$data['user_info']['shoulders_select_id'],
-										$data['user_info']['face_select_id'],
-										$data['user_info']['prominent_arms_select_id'],
-										$data['user_info']['prominent_back_select_id'],
-										$data['user_info']['prominent_legs_select_id'],
-										$data['user_info']['prominent_stomach_select_id']));
+		$data['user_selection'] = implode(',',array(
+										$data['user_info']["height_select_id"],
+										$data['user_info']["weight_select_id" ],
+										$data['user_info']["age_select_id" ],
+										$data['user_info']["body_shape_select_id" ],
+										$data['user_info']["body_ratio_select_id"] ,	
+										$data['user_info']["bra_select_id" ],
+										$data['user_info']["build_select_id" ],
+										$data['user_info']["minBust"] ,
+
+										$data['user_info']["neck_length_select_id"] ,
+										$data['user_info']["shoulders_select_id"] ,
+										$data['user_info']["face_shape_select_id"] ,	
+										
+										$data['user_info']["neck_select_id"] ,
+										$data['user_info']["back_select_id"] ,
+										$data['user_info']["upper_arms_select_id"] ,
+										$data['user_info']["midriff_select_id"] ,
+										
+										$data['user_info']["stomach_select_id" ],
+										$data['user_info']["bottom_select_id" ],
+										$data['user_info']["inner_thighs_select_id" ],
+										$data['user_info']["outer_thighs_select_id"] ,
+										$data['user_info']["lower_legs_select_id" ]
+										
+								));
+
 		$value_array = array('height', 'weight', 'age', 'bra');
 		foreach ($value_array as $value_value){
 			$data['value_data'][$value_value] = $this->user_model->get_user_values($user_id, $value_value);
@@ -83,6 +108,7 @@ class User extends CI_Controller {
 	 */
 	public function preferences()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/preferences.php')){
 			show_404();
 		}
@@ -98,10 +124,51 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
+	 * New Dressing Room Page for this controller.
+	 */
+	public function my_dressing_room()
+	{
+		$this->load->library('user_check');
+		if (!file_exists(APPPATH.'/views/user/my_dressing_room.php')){
+			show_404();
+		}
+		if (!$this->flexi_auth->is_logged_in()) {
+			redirect('', 'refresh');
+		}
+		
+		$data = $this->data;
+		$data['title'] = "My Dressing Room";
+		$data['breadcrumb'] = array('MY DRESSING ROOM');
+		$data['extraJS'] = '<script src="/js/mall-dressing-room.js"></script>';
+		
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('user/my_dressing_room', $data);
+		$this->load->view('templates/footer', $data);
+	}
+	/**
+	 * Add to Favorites button for this controller.
+	 */
+	public function add_to_favorites()
+	{
+		if (!$this->input->post()){
+			show_404();
+		}
+		$garment_id = $this->input->post('garment_id', TRUE);
+		if ($garment_id && $this->flexi_auth->is_logged_in()) {
+			$this->garment_model->update_user_garment_favorite($garment_id, $this->flexi_auth->get_user_id());
+		} else {
+			show_404();
+		}
+	}
+	/**
+	 * Deprecated
 	 * Finds Page for this controller.
 	 */
-	public function my_finds()
+	private function my_finds()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_finds.php')){
 			show_404();
 		}
@@ -121,10 +188,12 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
+	 * Deprecated
 	 * Favorites Page for this controller.
 	 */
-	public function my_wishlists()
+	private function my_wishlists()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_wishlists.php')){
 			show_404();
 		}
@@ -143,25 +212,29 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
-	 * Add to Favorites button for this controller.
+	 * Deprecated
+	 * Add to Wardrobe button for this controller.
 	 */
-	public function add_to_favorites()
+	private function add_to_wardrobe()
 	{
+		$this->load->library('user_check');
 		if (!$this->input->post()){
 			show_404();
 		}
 		$garment_id = $this->input->post('garment_id', TRUE);
 		if ($garment_id && $this->flexi_auth->is_logged_in()) {
-			$this->garment_model->update_user_garment_favorite($garment_id, $this->flexi_auth->get_user_id());
+			$this->garment_model->update_user_garment_wardrobe($garment_id, $this->flexi_auth->get_user_id());
 		} else {
 			show_404();
 		}
 	}
 	/**
+	 * Deprecated
 	 * Wardrobe Page for this controller.
 	 */
-	public function my_wardrobe()
+	private function my_wardrobe()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_wardrobe.php')){
 			show_404();
 		}
@@ -181,24 +254,10 @@ class User extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
-	 * Add to Wardrobe button for this controller.
+	 * Deprecated
+	 * old Dressing Room Page for this controller.
 	 */
-	public function add_to_wardrobe()
-	{
-		if (!$this->input->post()){
-			show_404();
-		}
-		$garment_id = $this->input->post('garment_id', TRUE);
-		if ($garment_id && $this->flexi_auth->is_logged_in()) {
-			$this->garment_model->update_user_garment_wardrobe($garment_id, $this->flexi_auth->get_user_id());
-		} else {
-			show_404();
-		}
-	}
-	/**
-	 * Dressing Room Page for this controller.
-	 */
-	public function my_dressing_room()
+	private function my_dressing_room_old()
 	{
 		if (!file_exists(APPPATH.'/views/user/my_dressing_room.php')){
 			show_404();
@@ -227,7 +286,7 @@ class User extends CI_Controller {
 		$error_already_existed = "This email has already been registered!";
 		$error_already_logged_in = "You have already logged in!";
 		$error_password_not_long = "Your password must be at least ".$this->flexi_auth->min_password_length()." characters!";
-		$error_password_not_valid = "Your password contains invalid characters! Please only use Alphanumeric characters with dashes, underscores, periods and commas!";
+		$error_password_not_valid = "Your password contains invalid characters!";
 		$error_insert_first_name = "Insert first name error!";
 		$error_insert_user = "Insert user error!";
 		$success_message = TRUE;
@@ -423,8 +482,35 @@ class User extends CI_Controller {
 			);
 		} else if ( $saveSection == 'feature' ) {
 			
-			$user_data = $this->input->post('user_data', TRUE);
+			$uservalue = $this->input->post('user_data', TRUE);
 			
+			$data = array(
+						"height_select_id" 		=> ( !empty($uservalue['height_select_id']) ? $uservalue['height_select_id'] : 0 ),
+						"weight_select_id" 		=> ( !empty($uservalue['weight_select_id']) ? $uservalue['weight_select_id'] : 0 ),
+						"age_select_id" 		=> ( !empty($uservalue['age_select_id']) ? $uservalue['age_select_id'] : 0 ),
+						"body_shape_select_id" 	=> ( !empty($uservalue['body_shape_select_id']) ? $uservalue['body_shape_select_id'] : 0 ),
+						"body_ratio_select_id" 	=> ( !empty($uservalue['body_ratio_select_id']) ? $uservalue['body_ratio_select_id'] : 0 ),
+						"bra_select_id" 		=> ( !empty($uservalue['bra_select_id']) ? $uservalue['bra_select_id'] : 0 ),
+						"build_select_id" 		=> ( !empty($uservalue['build_select_id']) ? $uservalue['build_select_id'] : 0 ),
+						"minBust" 				=> ( !empty($uservalue['minBust']) ? $uservalue['minBust'] : 0 ),
+
+						"neck_length_select_id" => ( !empty($uservalue['neck_length_select_id']) ? $uservalue['neck_length_select_id'] : 0 ),
+						"shoulders_select_id" 	=> ( !empty($uservalue['shoulders_select_id']) ? $uservalue['shoulders_select_id'] : 0 ),
+						"face_shape_select_id" 	=> ( !empty($uservalue['face_shape_select_id']) ? $uservalue['face_shape_select_id'] : 0 ),
+						
+						"neck_select_id" 		=> ( !empty($uservalue['neck_select_id']) ? $uservalue['neck_select_id'] : 0 ),
+						"back_select_id" 		=> ( !empty($uservalue['back_select_id']) ? $uservalue['back_select_id'] : 0 ),
+						"upper_arms_select_id" 	=> ( !empty($uservalue['upper_arms_select_id']) ? $uservalue['upper_arms_select_id'] : 0 ),
+						"midriff_select_id" 	=> ( !empty($uservalue['midriff_select_id']) ? $uservalue['midriff_select_id'] : 0 ),
+						
+						"stomach_select_id" 	=> ( !empty($uservalue['stomach_select_id']) ? $uservalue['stomach_select_id'] : 0 ),
+						"bottom_select_id" 		=> ( !empty($uservalue['bottom_select_id']) ? $uservalue['bottom_select_id'] : 0 ),
+						"inner_thighs_select_id"=> ( !empty($uservalue['inner_thighs_select_id']) ? $uservalue['inner_thighs_select_id'] : 0 ),
+						"outer_thighs_select_id"=> ( !empty($uservalue['outer_thighs_select_id']) ? $uservalue['outer_thighs_select_id'] : 0 ),
+						"lower_legs_select_id" 	=> ( !empty($uservalue['lower_legs_select_id']) ? $uservalue['lower_legs_select_id'] : 0 )
+					);
+
+			/*
 			$data = array(
 				'neck_length_select_id' => $user_data[0],
 				'neck_thickness_select_id' => $user_data[1],
@@ -438,9 +524,52 @@ class User extends CI_Controller {
 				'prominent_legs_select_id' => $user_data[9],
 				'prominent_stomach_select_id' => $user_data[10]
 			);
+			*/
+
+
 			$infusionsoft_id = $this->infusionsoft_model->get_user_infusionsoft($user_id);
+
 			$this->load->helper('infusionsoft/infusionsoft');
+			
 			NotifyCompleteProfileByInfusionsoftID($infusionsoft_id);
+			
+		} else if ( $saveSection == 'usersetup' ) {
+		    
+		    $uservalue = $this->session->userdata('initial_user_profile');
+		    
+		    $data = array(
+		        "height_select_id" 		=> ( !empty($uservalue['height_select_id']) ? $uservalue['height_select_id'] : 0 ),
+		        "weight_select_id" 		=> ( !empty($uservalue['weight_select_id']) ? $uservalue['weight_select_id'] : 0 ),
+		        "age_select_id" 		=> ( !empty($uservalue['age_select_id']) ? $uservalue['age_select_id'] : 0 ),
+		        "body_shape_select_id" 	=> ( !empty($uservalue['body_shape_select_id']) ? $uservalue['body_shape_select_id'] : 0 ),
+		        "body_ratio_select_id" 	=> ( !empty($uservalue['body_ratio_select_id']) ? $uservalue['body_ratio_select_id'] : 0 ),
+		        "bra_select_id" 		=> ( !empty($uservalue['bra_select_id']) ? $uservalue['bra_select_id'] : 0 ),
+		        "build_select_id" 		=> ( !empty($uservalue['build_select_id']) ? $uservalue['build_select_id'] : 0 ),
+		        "minBust" 				=> ( !empty($uservalue['minBust']) ? $uservalue['minBust'] : 0 ),
+		    
+		        "neck_length_select_id" => ( !empty($uservalue['neck_length_select_id']) ? $uservalue['neck_length_select_id'] : 0 ),
+		        "shoulders_select_id" 	=> ( !empty($uservalue['shoulders_select_id']) ? $uservalue['shoulders_select_id'] : 0 ),
+		        "face_shape_select_id" 	=> ( !empty($uservalue['face_shape_select_id']) ? $uservalue['face_shape_select_id'] : 0 ),
+		    
+		        "neck_select_id" 		=> ( !empty($uservalue['neck_select_id']) ? $uservalue['neck_select_id'] : 0 ),
+		        "back_select_id" 		=> ( !empty($uservalue['back_select_id']) ? $uservalue['back_select_id'] : 0 ),
+		        "upper_arms_select_id" 	=> ( !empty($uservalue['upper_arms_select_id']) ? $uservalue['upper_arms_select_id'] : 0 ),
+		        "midriff_select_id" 	=> ( !empty($uservalue['midriff_select_id']) ? $uservalue['midriff_select_id'] : 0 ),
+		    
+		        "stomach_select_id" 	=> ( !empty($uservalue['stomach_select_id']) ? $uservalue['stomach_select_id'] : 0 ),
+		        "bottom_select_id" 		=> ( !empty($uservalue['bottom_select_id']) ? $uservalue['bottom_select_id'] : 0 ),
+		        "inner_thighs_select_id"=> ( !empty($uservalue['inner_thighs_select_id']) ? $uservalue['inner_thighs_select_id'] : 0 ),
+		        "outer_thighs_select_id"=> ( !empty($uservalue['outer_thighs_select_id']) ? $uservalue['outer_thighs_select_id'] : 0 ),
+		        "lower_legs_select_id" 	=> ( !empty($uservalue['lower_legs_select_id']) ? $uservalue['lower_legs_select_id'] : 0 )
+		    );
+		    
+		    
+		    $infusionsoft_id = $this->infusionsoft_model->get_user_infusionsoft($user_id);
+		    
+		    $this->load->helper('infusionsoft/infusionsoft');
+		    	
+		    NotifyCompleteProfileByInfusionsoftID($infusionsoft_id);
+		    
 		}
 		
 		/*
@@ -693,6 +822,9 @@ class User extends CI_Controller {
 				$result = $this->db->get()->row_array();
 				$results = array('result' => $result, 'field_test' => $this->assessment_model->judge_field_by_criteria_id($result['field_showif'], $result['field_hideif'], array('1557')), 'criteria_test' => $this->assessment_model->judge_criteria_by_criteria_id($result['criteria_showif'], $result['criteria_hideif'], array('1557'))); */
 				$data['test_str'] = $results;
+			} else if ($slug == "library_test"){
+				$this->load->library('user_check');
+				$data['test_str'] = $slug;
 			} else {
 				$data['test_str'] = $slug;
 			}

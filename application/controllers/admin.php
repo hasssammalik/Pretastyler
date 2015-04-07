@@ -135,9 +135,9 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/user/general', $data);
 			$this->load->view('admin/footer', $data);
-		} else if ($page == 'standard'){
-			$data['title'] = "Standard Users";
-			$data['title_description'] = "manage all standard users";
+		} else if ($page == 'trial'){
+			$data['title'] = "Trial Users";
+			$data['title_description'] = "manage all trial users";
 			$data['filters'] = 'is_standard: true, ';
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/user/general', $data);
@@ -826,6 +826,7 @@ class Admin extends CI_Controller {
 					}
 				}
 				$data['criteria'] = $this->admin_model->get_criteria_by_criteria_id($param2);
+				$data['comment'] = $this->admin_model->get_comment_by_criteria_id($param2);
 				list($data['showifs'], $data['hideifs']) = $this->admin_model->get_showif_hideif_list($data['criteria']['category_id'], $data['criteria']['field_position'], $data['criteria']['showif'], $data['criteria']['hideif']);
 				$data['title'] = "Criteria - ".$data['criteria']['name'];
 				$data['title_description'] = "manage criteria ".$data['criteria']['name'];
@@ -920,6 +921,123 @@ class Admin extends CI_Controller {
 				$data['delete_id'] = $param2;
 				$data['title'] = "Delete criteria - ".$name;
 				$data['title_description'] = "Delete criteria - ".$name;
+				$this->load->view('admin/header', $data);
+				$this->load->view('admin/matrix/delete', $data);
+				$this->load->view('admin/footer', $data);
+			}
+			else {
+				redirect('/admin/matrix/criteria/edit/'.$param1, 'refresh');
+			}
+		} else if ($page == 'comment'){
+			if ($param1 == 'edit'){
+				if ($this->input->post()){
+					//if this is a edit request.
+					$data['error_messages'] = array();
+					$comment_id = $this->input->post('comment_id', TRUE);
+					$comment = $this->input->post('comment', TRUE);
+					$labels = $this->input->post('labels', TRUE);
+					$plus1 = $this->input->post('plus1', TRUE);
+					$plus2 = $this->input->post('plus2', TRUE);
+					$plus3 = $this->input->post('plus3', TRUE);
+					$plus4 = $this->input->post('plus4', TRUE);
+					if (empty($comment_id)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00006 Something went error. Please contact programmer!'));
+					}
+					if (empty($comment)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter comment!'));
+					}
+					if (empty($data['error_messages'])){
+						if ($this->admin_model->update_comment($comment_id, array(
+							'Comment' => $comment, 
+							'LABELS' => $labels, 
+							'PLUS1' => $plus1, 
+							'PLUS2' => $plus2, 
+							'PLUS3' => $plus3, 
+							'PLUS4' => $plus4,))){
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This criteria has been successfully updated!'));
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00007 Something went error. Please contact programmer!'));
+						}
+					}
+				}
+				$data['comment'] = $this->admin_model->get_comment_by_comment_id($param2);
+				$data['title'] = "Comment - ".$data['comment']['criteria_comment_id'];
+				$data['title_description'] = "manage comment ".$data['comment']['criteria_comment_id'];
+				$data['extraJS'] = '<script src="/js/admin/AdminLTE/comment.js" type="text/javascript"></script>';
+				$this->load->view('admin/header', $data);
+				$this->load->view('admin/matrix/comment', $data);
+				$this->load->view('admin/footer', $data);
+			}
+			else if ($param1 == 'add'){
+				if ($this->input->post()){
+					//if this is a add request.
+					$data['error_messages'] = array();
+					$criteria_id = $this->input->post('criteria_id', TRUE);
+					$comment = $this->input->post('comment', TRUE);
+					$labels = $this->input->post('labels', TRUE);
+					$plus1 = $this->input->post('plus1', TRUE);
+					$plus2 = $this->input->post('plus2', TRUE);
+					$plus3 = $this->input->post('plus3', TRUE);
+					$plus4 = $this->input->post('plus4', TRUE);
+					if (empty($comment)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter comment!'));
+					}
+					if (empty($data['error_messages'])){
+						$comment_id = $this->admin_model->insert_comment(array(
+							'criteria_id' => $criteria_id, 
+							'Comment' => $comment, 
+							'LABELS' => $labels,
+							'PLUS1' => $plus1, 
+							'PLUS2' => $plus2, 
+							'PLUS3' => $plus3, 
+							'PLUS4' => $plus4,));
+						if ($comment_id){
+							redirect('/admin/matrix/criteria/edit/'.$param2, 'refresh');
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00010 Something went error. Please contact programmer!'));
+						}
+					}
+				}
+				$name = $this->admin_model->get_criteria_by_criteria_id($param2)['name'];
+				$data['comment'] = array(
+									'page_type' => 'add',
+									'criteria_id' => $param2, 
+									'criteria_comment_id' => 'Will be automatic generated.',
+									'Comment' => '', 
+									'LABELS' => '',
+									'PLUS1' => '',
+									'PLUS2' => '',
+									'PLUS3' => '',
+									'PLUS4' => '',);
+				$data['title'] = "Add new comment for criteria - ".$name;
+				$data['title_description'] = "Add new comment for criteria - ".$name;
+				$this->load->view('admin/header', $data);
+				$this->load->view('admin/matrix/comment', $data);
+				$this->load->view('admin/footer', $data);
+			}
+			else if ($param1 == 'delete'){
+				if ($this->input->post()){
+					//if this is a delete request.
+					$data['error_messages'] = array();
+					$comment_id = $this->input->post('delete_id', TRUE);
+					if (empty($comment_id)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00011 Something went error. Please contact programmer!'));
+					}
+					if (empty($data['error_messages'])){
+						$criteria_id = $this->admin_model->delete_comment($comment_id);
+						if ($criteria_id){
+							redirect('/admin/matrix/criteria/edit/'.$criteria_id, 'refresh');
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00012 Something went error. Please contact programmer!'));
+						}
+					}
+				}
+				$name = $this->admin_model->get_comment_by_comment_id($param2)['criteria_comment_id'];
+				$data['delete_type'] = 'comment';
+				$data['delete_id'] = $param2;
+				$data['title'] = "Delete comment - ".$name;
+				$data['title_description'] = "Delete comment - ".$name;
 				$this->load->view('admin/header', $data);
 				$this->load->view('admin/matrix/delete', $data);
 				$this->load->view('admin/footer', $data);

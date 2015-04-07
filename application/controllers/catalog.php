@@ -42,7 +42,7 @@ class Catalog extends CI_Controller {
 	/**
 	 * Index Page for this controller.
 	 */
-	public function index()
+	public function index_old_home()
 	{
 		$data = $this->data;
 		$data['title'] = "PretaStyler Where style and fashion Unite";
@@ -59,11 +59,72 @@ class Catalog extends CI_Controller {
 		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/index', $data);
 	}
+	public function index()
+	{
+		$this->load->library('user_check');
+	    if ($this->flexi_auth->is_logged_in()){
+	        redirect('/mall', 'refresh');
+	    }
+	    
+		$data = $this->data;
+		$data['title'] = "PretaStyler Where style and fashion Unite";
+		$data['no_background_image'] = TRUE;
+		$data['content_class'] = "full_width_page";
+		$data['extraFooter'] = TRUE;
+		
+		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+		';
+		$data['extraCSS'] = '
+							<link rel="stylesheet" href="/css/jquery-ui.css">
+							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		';
+		$data['extraJS'] = '
+							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+							<script src="/js/jquery-ui-slider-pips.js"></script>
+		';
+		$data['similar_garments'] = $this->garment_model->get_similar_products();
+		
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('catalog/home', $data);
+	}
+	
+	public function your_mall()
+	{
+		$this->load->library('user_check');
+	    if ($this->flexi_auth->is_logged_in()){
+	        redirect('/mall', 'refresh');
+	    }
+	    
+		$data = $this->data;
+		$data['title'] = "Your Mall";
+		$data['content_class'] = "full_width_page";
+		$data['extraFooter'] = TRUE;
+		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+		';
+		
+		$data['extraJS'] = '
+							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+							<script src="/js/jquery-ui-slider-pips.js"></script>
+							<link rel="stylesheet" href="/css/jquery-ui.css">
+							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		';
+		
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('catalog/yourmall', $data);
+		
+	}
+	
 	/**
 	 * Product Page for this controller.
 	 */
 	public function product($slug = FALSE)
 	{
+		$this->load->library('user_check');
 		if (!$slug) {
 			$this->not_found();
 			return;
@@ -86,6 +147,7 @@ class Catalog extends CI_Controller {
 		} else {
 			$data['garment'] = $this->garment_model->get_garment_info($garment_id);
 		}
+		$data['product_page'] = "product-container";
 		$this->garment_model->update_garment_click($garment_id);
 		$data['colour'] = $this->colour_model->get_garment_colour($garment_id);
 		$data['size'] = $this->size_model->get_garment_size($garment_id);
@@ -108,7 +170,6 @@ class Catalog extends CI_Controller {
 						<meta property="og:image:height"     content="700">
 						';
 		$data['extraDiv'] = '
-		
 		<script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -119,7 +180,7 @@ class Catalog extends CI_Controller {
   };
 
   (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
+  var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
      js.src = "//connect.facebook.net/en_US/sdk.js";
@@ -177,7 +238,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	 */
 	public function our_story()
 	{
-		
 		$data = $this->data;
 		$data['title'] = "Our Story - PRETSTYLER";
 		$data['breadcrumb'] = array('OUR STORY');
@@ -419,6 +479,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$this->load->view('catalog/success', $data);
 	}
 	public function thankyou(){
+		
 		if($this->input->post('test-form')=='01ae3785a5fde11d3e8a29fd1f6e9400'){
 		$data['title'] = "Thank You for signing up";
 		$this->load->view('templates/header', $data);
@@ -430,8 +491,34 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 			redirect("/index");
 		}
 
+
 	}
-	
+	/**
+	* User login and signup 
+	*/
+	public function useraccount($slug = FALSE){
+		
+		if (!$this->flexi_auth->is_logged_in()){
+
+			$data = $this->data;
+			$data['title'] = "Customer Login";
+			$data['no_background_image'] = TRUE;
+			$data['content_class'] = "full_width_page";
+			$data['extraFooter'] = TRUE;
+			
+			$data['extraMeta'] = '<meta name="keyword" content="Login to PRÊT À STYLER. PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+								  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+			';
+			
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/menu_mall', $data);
+			$this->load->view('catalog/useraccount', $data);
+
+		} else {
+			redirect("/mall", "refresh");
+		}
+
+	}
 	/**
 	 * Test pages
 	 */

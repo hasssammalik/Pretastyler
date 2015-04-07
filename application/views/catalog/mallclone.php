@@ -1,3 +1,51 @@
+<script type="text/javascript">
+	function pull_profile_garment( ) {
+		
+		//"neck_type_select_id" : default_values[1], ====> NECK TYPE is not in database.
+		//"BUST" : default_values[7],   ===> BUST is not in database.
+		//"Midriff" : default_values[8],  ====> Midriff is not in database.
+		//"bottom" : default_values[10],  ====> BOTTOM is not in database.
+		//"thighs" : default_values[11],  ====> THIGHS is not in database.
+		//"legs" : default_values[13], =====> Feets in not in database.
+		
+		//neck_thickness_select_id ==== neck_select_id
+		
+		var requestvalues = {   
+			
+			"height_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['height_select_id']; ?>,
+			"weight_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['weight_select_id']; ?>,
+			"age_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['age_select_id']; ?>,
+			"horizontal_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['horizontal_select_id']; ?>,
+			"vertical_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['vertical_select_id']; ?>,
+			"bra_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['bra_select_id']; ?>,
+			
+			"neck_length_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['neck_length_select_id']; ?>,
+			
+			"shoulders_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['shoulders_select_id']; ?>,
+			"face_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['face_select_id']; ?>,
+			
+			"neck_thickness_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['neck_thickness_select_id']; ?>,
+			"prominent_back_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['prominent_back_select_id']; ?>,
+			"prominent_arms_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['prominent_arms_select_id']; ?>,
+			
+			"prominent_stomach_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['prominent_stomach_select_id']; ?>,
+			
+			"prominent_legs_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['prominent_legs_select_id']; ?>,
+			
+		};
+		
+		$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 40, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val(), pagelayout: 'mall' }, function( data ) {
+			$( ".garments" ).html( data );
+		});
+	}
+	
+	$(function(){
+		pull_profile_garment();
+		
+	});
+
+</script>
+
 <?php echo form_open('', array('class'=>'topquicksearch', 'id'=>'topquicksearch', 'name'=>'topquicksearch')); ?>
     
     <div class="quickSearch quicksearchtabtop">
@@ -11,12 +59,11 @@
 	
 	<div class="leftContent left">
 
-		<?php /*<a class="wid100 targetbutn bkpinkycolor" href="/mall/targetsearch.html">
+		<a class="wid100 targetbutn bkpinkycolor" href="/mall/targetsearch.html">
 			&nbsp; &nbsp; DETAILED SEARCH
 			<span class="targertbutnicon unicode-icon right">&#9658;</span>
 		</a>
-		*/ ?>
-		<div class="wid100 quickbelowbutn bkpinkycolor">
+		<div class="wid100 quickbelowbutn bkgrey">
 			&nbsp; &nbsp; QUICK SEARCH 
 			<span class="quickbelowicon unicode-icon right">&#x25BC;</span>
 		</div>
@@ -157,6 +204,7 @@
 </div>
 <?php if( ENVIRONMENT == 'production') { ?>
 <script type="text/javascript">
+	
 	setTimeout(function(){var a=document.createElement("script");
 	var b=document.getElementsByTagName("script")[0];
 	a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);

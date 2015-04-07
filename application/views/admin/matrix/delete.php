@@ -27,6 +27,8 @@
 						<p>This action will DELETE this <?php print $delete_type.' '.$delete_id ?> FROM EVERYWHERE and NOT RECOVERABLE.</p>
 						<p>If you need this user still be in the system, simply deactivate her at Admin Panel.</p>
 						<p>This action could take up to 10 seconds.</p>
+						<?php } else if ($delete_type == 'comment') { ?>
+						p>This action will DELETE this <?php print $delete_type.' '.$delete_id ?> FROM EVERYWHERE and NOT RECOVERABLE.</p>
 						<?php } ?>
 						<input type="hidden" name="delete_id" value="<?php print $delete_id ?>">
 					</div>
