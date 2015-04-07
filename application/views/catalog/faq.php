@@ -41,12 +41,12 @@
 						A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
 					</div>
 					<div class="faq-body">
-						<p>Registration is through this [page] and costs $9 per month.</p>
-						<p>	Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!</p>
-						<p>1. Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)</p>
-						<p>	2. Enter you Name and Email</p>
-						<p>	3. Chosse a Password (must be alphanumberic - letters and numbers only)</p>
-						<p>4. Confirm the same Password</p>
+						Registration is through this [page] and costs $9 per month.<br>
+						Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!<br>
+						<ol style="padding-left: 20px;"><li> Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)<br>
+						</li><li> Enter you Name and Email</li>
+						<li>Chosse a Password (must be alphanumberic - letters and numbers only)</li>
+						<li> Confirm the same Password</li></ol>
 					</div>
 				</div>
 				
@@ -345,11 +345,11 @@
 						<ul>
 							<li><a href="#q2" class="i">a. How Do I Sign Up and What's Required?</a></li>
 							<li><a href="#q2a" class="i">b. What's in the sneaky fine print, where's the catch?</a></li>
-							<li><a href="#q2b" class="i">c. Is There a Free Version?</a></li>
-							<li><a href="#q2b" class="i">d. Free Trials</a></li>
-							<li><a href="#q2c" class="i">e. Updating Your Details</a></li>
-							<li><a href="#q2d" class="i">f. How to Login</a></li>
-							<li><a href="#q2e" class="i">g. Deleting Your Account</a></li>
+							
+							<li><a href="#q2b" class="i">c. Free Trial</a></li>
+							<li><a href="#q2c" class="i">d. Updating Your Details</a></li>
+							<li><a href="#q2d" class="i">e. How to Login</a></li>
+							<li><a href="#q2e" class="i">f. Deleting Your Account</a></li>
 						</ul>
 					</div>
 					<div><a href="#q3"><strong>YOUR PASSWORD</strong></a></div>
