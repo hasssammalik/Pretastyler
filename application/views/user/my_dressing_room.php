@@ -3,10 +3,35 @@
 	<script>
 $(document).ready(function()
 {
-$('.tabHead-wishList').hover(function()
+$('.tabHead-wishList').mouseenter(function()
 	{
 		$('#wishlist').fadeIn(500);
+	}).mouseleave(function(){
+		$('#wishlist').fadeOut(500);
 	});
+
+$('.tabHead-itemsPendingGarment').mouseenter(function()
+	{
+		$('#pending').fadeIn(500);
+	}).mouseleave(function(){
+		$('#pending').fadeOut(500);
+	});
+
+	$('.tabHead-history').mouseenter(function()
+	{
+		$('#history').fadeIn(500);
+	}).mouseleave(function(){
+		$('#history').fadeOut(500);
+	});
+
+	$('.tabHead-myfinds').mouseenter(function()
+	{
+		$('#myfinds').fadeIn(500);
+	}).mouseleave(function(){
+		$('#myfinds').fadeOut(500);
+	});
+
+
 })
 	</script>
 	
@@ -17,7 +42,7 @@ $('.tabHead-wishList').hover(function()
 		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
 		    	<span class="talkbubble" id="wishlist">Things saved because you love them.</span>
 		    </li>
-		    <li class="tabHead-itemsPendingGarment">
+		    <li class="tabHead-itemsPendingGarment tabHead-myfinds">
 		    	<a href="#myfinds" class="acttabsInner act-myfinds">MY FINDS <span class="pinkycolor">(0)</span></a>
 		    	<span class="talkbubble" id="myfinds">Things you have found and assessed.</span>
 		    </li>
