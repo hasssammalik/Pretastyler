@@ -216,7 +216,7 @@
 						var stomach 		= [ "Post Baby", "Moderate Tummy", "Too Soft", "Large Tummy" ];
 						var bottom 			= [ "Too Large", "Too Flat" ];
 						var innerthighs 	= [ "Rub Together", "Bowed Legs" ];
-						var outerthighs 	= [ "Too  Protruding", "Saddlebags" ]
+						var outerthighs 	= [ "Too &nbsp;&nbsp;&nbsp;Protruding", "Saddlebags" ]
 						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Large Calves", "Thin Ankles" ];
 						
 
@@ -321,7 +321,7 @@
 						];
 						
 					var backimage = [ 
-						'<div id="talkbubble"><ul><li>You have a very rounded shoulder line.</li><li>The roundness starts at the base of your neck and extends to your shoulder blades.</li><li>Your head protrudes forward causing round neck tops to bind in front and sit away from the neck at the back.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>You have a very rounded shoulder line.</li><li>The roundness starts at the base of your neck and extends to your shoulder blades.</li><li>Your head protrudes forward causing round neck tops to bind in front and sit away from the neck at the back.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>You have a definite curve in the lower spine causing straight skirts to have a roll of excess fabric below the waistband in the back.</li></ul></div>' 
 						];
 						
@@ -339,7 +339,7 @@
 						
 						var stomachimage = [ 
 						'<div id="talkbubble"><ul><li>You have a tummy left over from pregnancy.</li></ul></div>',
-						'<div id="talkbubble"><ul><li>You have a tummy but not one large enough to hold your hems up in the front.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>You have a tummy but not one large enough to hold your hems up in the front.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>Your tummy is flaccid/untoned and best kept underwraps.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>You have a full stomach that protrudes in front and causes the hemline of dresses, skirts and shirts to rise up in the front.</li></ul></div>'
 						];
@@ -355,7 +355,7 @@
 						];
 
 						var outerthighsimage=[
-						'<div id="talkbubble"><ul><li>Your thighs protrude substantially and are wider than the widest part of the hip line.</li><li>They curve in a smooth line from your hip.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your thighs protrude substantially and are wider than the widest part of the hip line.</li><li>They curve in a smooth line from your hip.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>Your thighs protrude substantially and</li><li>They have a dimple at the top outer edge where the thigh and torso meet which cause your thigh to have the appearance of jodhpurs (riding pants).</li></ul></div>'
 						];
 						
