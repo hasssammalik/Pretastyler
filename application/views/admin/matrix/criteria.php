@@ -574,6 +574,7 @@
 			</div><!-- /.box -->
 		</div><!--/.col (right) -->
 	</div>
+	<?php } ?>
 	<?php if (empty($criteria['page_type'])) { ?>
 	<div class="row">
 		<!-- general form elements disabled -->
