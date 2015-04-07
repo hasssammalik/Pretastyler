@@ -305,7 +305,7 @@
 													<span class="bold-dash" style="float:left;width:9%;font-size:37px; line-height:16px;">&bull; &nbsp; &nbsp; &nbsp;</span>
 													<span style="float:left;width:91%;padding-bottom: 5px;"><?php echo $com; ?> </span>
 												</span>
-												
+												<div style="clear:both;"></div>
 												
 												 <?php } ?>
 												
