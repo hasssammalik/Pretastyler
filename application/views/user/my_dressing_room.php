@@ -19,7 +19,8 @@
 		</ul>
 	</div>
 
-
+	<br>
+	
 	<section class="dressingTabContainer">
 			
 		<div class="tabsInner tab-wishList" id="wishList" style="display:none;">
