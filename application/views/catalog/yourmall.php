@@ -69,49 +69,49 @@
 						];
 						
 						var backimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>' 
+						'<div id="talkbubble"><ul><li>You have a very rounded shoulder line.</li><li>The roundness starts at the base of your neck and extends to your shoulder blades.</li><li>Your head protrudes forward causing round neck tops to bind in front and sit away from the neck at the back.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a definite curve in the lower spine causing straight skirts to have a roll of excess fabric below the waistband in the back.</li></ul></div>' 
 						];
 						
 						var upperarmsimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>Usually associated with a very thin body.</li><li> Your arms appear bony.</li><li>You prefer to keep covered.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have full, fleshy upper arms. </li><li>You prefer to keep your upper arms except for very hot days.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Your upper arms have lost their tone.</li><li> You prefer to keep your upper arms covered most of the time.</li></ul></div>'
 						];
 						
 						
 						var midriffimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>You have a roll on sitting but none/minimal on standing.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a noticeable roll when standing.</li></ul></div>'
 						];
 						
 						var stomachimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>You have a tummy left over from pregnancy.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a tummy but not one large enough to hold your hems up in the front.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Your tummy is flaccid/untoned and best kept underwraps.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a full stomach that protrudes in front and causes the hemline of dresses, skirts and shirts to rise up in the front.</li></ul></div>'
 						];
 						
 						var bottomimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li> Your bottom is large and out of proportion with the rest of your body. </li><li>Straight skirts can be difficult to fit.</li><li>Your hemlines often rise up in the back.</li><li>Tops get caught up on your bottom.</li><li>DO NOT SELECT this feature if: Your bottom is high and firm - think Serena Williams and Jenifer Lopez (bootylicious).</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have the appearance of being almost bottomless.</li><li>Your pants and skirts are often baggy in the back around the bottom and down the back of the leg.</li><li>The hem of your skirts and dresses may hang lower in the back.</li></ul></div>'
 						];
 						
 						var innerthighsimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>Your inner thighs touch when your feet are placed directly under your hips.</li><li>When wearing shorts your thighs cause the shorts to ride up.</li></ul></div>',
+						'<div id="talkbubble"><ul><li></li></ul></div>'
 						];
 
 						var outerthighsimage=[
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>Your thighs protrude substantially and are wider than the widest part of the hip line.</li><li>They curve in a smooth line from your hip.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Your thighs protrude substantially and</li><li>They have a dimple at the top outer edge where the thigh and torso meet which cause your thigh to have the appearance of jodhpurs (riding pants).</li></ul></div>'
 						];
 						
 						var lowerlegsimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble" class="doubleline"><ul><li> Your legs bow outwards anywhere from the ankles to thighs</li><li>You have a gap between your legs where they bow.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your ankles are undefined; sometimes referred to as ‘cankles’.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your calves protrude more than average.</li><li>Calf or knee boots that fit can be difficult to find.</li></ul></div>',
+						'<div id="talkbubble" ><ul><li>Your ankles are particularly thin</li></ul></div>'
 						];
 						
 						
