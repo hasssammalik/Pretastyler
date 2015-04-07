@@ -404,7 +404,7 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[1] = (+ui.value+1);
-							console.log(default_values);
+						
 							pull_profile_garment();
 						});
 						
@@ -760,7 +760,7 @@
 					});
 					
 					function pull_profile_garment() {
-						console.log(default_values);
+						
 					}
 					function pull_profile_garment_update_button() {
 					
