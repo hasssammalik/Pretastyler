@@ -28,7 +28,7 @@
 						var bottom 			= [ "Too Large", "Too Flat" ];
 						var innerthighs 	= [ "Rub Together", "Bowed Legs" ];
 						var outerthighs 	= [ "Too  Protruding", "Saddlebags" ]
-						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Large Calves", "Thin Ankles" ];
+						var lowerlegs 		= [ "Thin Legs","Shapeless Ankles", "Muscular/Large Calves", "Thin Ankles" ];
 						
 						
 						
@@ -99,7 +99,7 @@
 						
 						var innerthighsimage = [ 
 						'<div id="talkbubble"><ul><li>Your inner thighs touch when your feet are placed directly under your hips.</li><li>When wearing shorts your thighs cause the shorts to ride up.</li></ul></div>',
-						'<div id="talkbubble"><ul><li></li></ul></div>'
+						'<div id="talkbubble"><ul><li>Your legs bow outwards anywhere from the ankles to thighs</li><li>You have a gap between your legs where they bow</li></ul></div>'
 						];
 
 						var outerthighsimage=[
@@ -108,7 +108,7 @@
 						];
 						
 						var lowerlegsimage = [ 
-						'<div id="talkbubble" class="doubleline"><ul><li> Your legs bow outwards anywhere from the ankles to thighs</li><li>You have a gap between your legs where they bow.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li> Your legs are very thin from the ankles up to the thighs.</li></ul></div>',
 						'<div id="talkbubble" class="doubleline"><ul><li>Your ankles are undefined; sometimes referred to as ‘cankles’.</li></ul></div>',
 						'<div id="talkbubble" class="doubleline"><ul><li>Your calves protrude more than average.</li><li>Calf or knee boots that fit can be difficult to find.</li></ul></div>',
 						'<div id="talkbubble" ><ul><li>Your ankles are particularly thin</li></ul></div>'
