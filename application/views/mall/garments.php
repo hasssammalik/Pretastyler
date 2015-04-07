@@ -34,8 +34,8 @@ foreach ($garments as $row) { ?>
 				<?php } ?>
 			</ul>
 			<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" class="zoom bottomleftimage-showPink" target="_blank" title="Large View/Product details">
-				<img src="/images/icons-25-info-pink" class="imageiconinfo-pink bottomleftimage-mall" style="display:none;">
-				<img src="/images/icons-25-info-grey" class="imageiconinfo-grey bottomleftimage-mall">
+				<img src="/images/icons-25-info-pink.png" class="imageiconinfo-pink bottomleftimage-mall" style="display:none;">
+				<img src="/images/icons-25-info-grey.png" class="imageiconinfo-grey bottomleftimage-mall">
 			</a>
 			<?php if ($this->flexi_auth->is_logged_in() && isset( $row['score'] ) ) {?>
 			<div class="rating" title="Suitability rating for you"><?php 
