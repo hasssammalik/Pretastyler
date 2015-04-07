@@ -43,7 +43,7 @@
 					<div class="faq-body">
 						Registration is through this [page] and costs $9 per month.<br>
 						Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!<br>
-						<ol><li> Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)<br>
+						<ol style="padding-left: 20px;"><li> Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)<br>
 						</li><li> Enter you Name and Email</li>
 						<li>Chosse a Password (must be alphanumberic - letters and numbers only)</li>
 						<li> Confirm the same Password</li></ol>
