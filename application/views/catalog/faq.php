@@ -227,6 +227,9 @@
 						<strong>b. Where to Find it</strong><br>
 						&nbsp;&nbsp;&nbsp;The Google Chrome store:  Google Chrome Store Extension  Note: This chrome app works on Macs.<br>
 						<strong>c. How to Assess An Item </strong><br>
+						
+						<iframe src="https://www.youtube.com/embed/cGt4X-Eekco" frameborder="0" style="padding-left: 8%; width:100%; margin: 5px;" allowfullscreen></iframe>
+						
 						<ol style="padding-left:8%;list-style-type: upper-roman;">
 							<li>Find a garment or accessory you like from any online store</li>
 							<li>Search until you locate the largest image of the item.</li>
