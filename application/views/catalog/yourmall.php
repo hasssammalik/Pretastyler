@@ -103,7 +103,7 @@
 						];
 
 						var outerthighsimage=[
-						'<div id="talkbubble"><ul><li>Your thighs protrude substantially and are wider than the widest part of the hip line.</li><li>They curve in a smooth line from your hip.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your thighs protrude substantially and are wider than the widest part of the hip line.</li><li>They curve in a smooth line from your hip.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>Your thighs protrude substantially and</li><li>They have a dimple at the top outer edge where the thigh and torso meet which cause your thigh to have the appearance of jodhpurs (riding pants).</li></ul></div>'
 						];
 						
