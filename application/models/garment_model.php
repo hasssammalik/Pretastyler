@@ -578,7 +578,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_info_by_find($offset, $limit, $user_id = FALSE){
 		if ($user_id) {
-			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id,'garment.import_user_id' => $user_id, 'enabled' => 1))->order_by('garment.garment_id desc')->limit($limit, $offset);
+			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id,'garment.import_user_id' => $user_id, 'enabled' => 1, 'dressing_room' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
 				return FALSE;
