@@ -41,6 +41,22 @@
 						<span class="input-group-addon">Labels</span>
 						<input type="text" class="form-control" placeholder="Enter Labels" name="labels" value="<?php print $comment['LABELS'];?>">
 					</div>
+					<div class="input-group">
+						<span class="input-group-addon">Plus 1</span>
+						<input type="text" class="form-control" placeholder="Enter Plus 1" name="plus1" value="<?php print $comment['PLUS1'];?>">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">Plus 2</span>
+						<input type="text" class="form-control" placeholder="Enter Plus 2" name="plus2" value="<?php print $comment['PLUS2'];?>">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">Plus 3</span>
+						<input type="text" class="form-control" placeholder="Enter Plus 3" name="plus3" value="<?php print $comment['PLUS3'];?>">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">Plus 4</span>
+						<input type="text" class="form-control" placeholder="Enter Plus 4" name="plus4" value="<?php print $comment['PLUS4'];?>">
+					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 		</div><!--/.col (left) -->

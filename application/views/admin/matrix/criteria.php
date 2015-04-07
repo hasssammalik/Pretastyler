@@ -548,6 +548,10 @@
 							<th>ID</th>
 							<th>Comment</th>
 							<th>Labels</th>
+							<th>Plus 1</th>
+							<th>Plus 2</th>
+							<th>Plus 3</th>
+							<th>Plus 4</th>
 							<th>Delete</th>
 						</thead>
 						<?php foreach ($comment as $line) { ?>
@@ -555,6 +559,10 @@
 							<td><a href="/admin/matrix/comment/edit/<?php print $line['criteria_comment_id'];?>.html"><?php print $line['criteria_comment_id'] ?></a></td>
 							<td><?php print $line['Comment'] ?></td>
 							<td><?php print $line['LABELS'] ?></td>
+							<td><?php print $line['PLUS1'] ?></td>
+							<td><?php print $line['PLUS2'] ?></td>
+							<td><?php print $line['PLUS3'] ?></td>
+							<td><?php print $line['PLUS4'] ?></td>
 							<td><a href="/admin/matrix/comment/delete/<?php print $line['criteria_comment_id'];?>.html"><i class="glyphicon glyphicon-remove"></i></a></td>
 						</tr>
 						<?php } ?>

@@ -936,6 +936,10 @@ class Admin extends CI_Controller {
 					$comment_id = $this->input->post('comment_id', TRUE);
 					$comment = $this->input->post('comment', TRUE);
 					$labels = $this->input->post('labels', TRUE);
+					$plus1 = $this->input->post('plus1', TRUE);
+					$plus2 = $this->input->post('plus2', TRUE);
+					$plus3 = $this->input->post('plus3', TRUE);
+					$plus4 = $this->input->post('plus4', TRUE);
 					if (empty($comment_id)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00006 Something went error. Please contact programmer!'));
 					}
@@ -948,7 +952,11 @@ class Admin extends CI_Controller {
 					if (empty($data['error_messages'])){
 						if ($this->admin_model->update_comment($comment_id, array(
 							'Comment' => $comment, 
-							'LABELS' => $labels,))){
+							'LABELS' => $labels, 
+							'PLUS1' => $plus1, 
+							'PLUS2' => $plus2, 
+							'PLUS3' => $plus3, 
+							'PLUS4' => $plus4,))){
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This criteria has been successfully updated!'));
 						} else {
@@ -971,6 +979,10 @@ class Admin extends CI_Controller {
 					$criteria_id = $this->input->post('criteria_id', TRUE);
 					$comment = $this->input->post('comment', TRUE);
 					$labels = $this->input->post('labels', TRUE);
+					$plus1 = $this->input->post('plus1', TRUE);
+					$plus2 = $this->input->post('plus2', TRUE);
+					$plus3 = $this->input->post('plus3', TRUE);
+					$plus4 = $this->input->post('plus4', TRUE);
 					if (empty($comment)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter comment!'));
 					}
@@ -981,7 +993,11 @@ class Admin extends CI_Controller {
 						$comment_id = $this->admin_model->insert_comment(array(
 							'criteria_id' => $criteria_id, 
 							'Comment' => $comment, 
-							'LABELS' => $labels,));
+							'LABELS' => $labels,
+							'PLUS1' => $plus1, 
+							'PLUS2' => $plus2, 
+							'PLUS3' => $plus3, 
+							'PLUS4' => $plus4,));
 						if ($comment_id){
 							redirect('/admin/matrix/criteria/edit/'.$param2, 'refresh');
 						} else {
@@ -995,7 +1011,11 @@ class Admin extends CI_Controller {
 									'criteria_id' => $param2, 
 									'criteria_comment_id' => 'Will be automatic generated.',
 									'Comment' => '', 
-									'LABELS' => '',);
+									'LABELS' => '',
+									'PLUS1' => '',
+									'PLUS2' => '',
+									'PLUS3' => '',
+									'PLUS4' => '',);
 				$data['title'] = "Add new comment for criteria - ".$name;
 				$data['title_description'] = "Add new comment for criteria - ".$name;
 				$this->load->view('admin/header', $data);
