@@ -5,30 +5,30 @@ $(document).ready(function()
 {
 $('.tabHead-wishList').mouseenter(function()
 	{
-		$('#wishlist').fadeIn(500);
+		$('#wishlist1').fadeIn(500);
 	}).mouseleave(function(){
-		$('#wishlist').fadeOut(500);
+		$('#wishlist1').fadeOut(500);
 	});
 
 $('.tabHead-itemsPendingGarment').mouseenter(function()
 	{
-		$('#pending').fadeIn(500);
+		$('#pending1').fadeIn(500);
 	}).mouseleave(function(){
-		$('#pending').fadeOut(500);
+		$('#pending1').fadeOut(500);
 	});
 
 	$('.tabHead-history').mouseenter(function()
 	{
-		$('#history').fadeIn(500);
+		$('#history1').fadeIn(500);
 	}).mouseleave(function(){
-		$('#history').fadeOut(500);
+		$('#history1').fadeOut(500);
 	});
 
 	$('.tabHead-myfinds').mouseenter(function()
 	{
-		$('#myfinds').fadeIn(500);
+		$('#myfinds1').fadeIn(500);
 	}).mouseleave(function(){
-		$('#myfinds').fadeOut(500);
+		$('#myfinds1').fadeOut(500);
 	});
 
 
@@ -40,20 +40,20 @@ $('.tabHead-itemsPendingGarment').mouseenter(function()
 		    <li class="tabHead-wishList">
 
 		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
-		    	<span class="talkbubble" id="wishlist">Things saved because you love them.</span>
+		    	<span class="talkbubble" id="wishlist1">Things saved because you love them.</span>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment tabHead-myfinds">
 		    	<a href="#myfinds" class="acttabsInner act-myfinds">MY FINDS <span class="pinkycolor">(0)</span></a>
-		    	<span class="talkbubble" id="myfinds">Things you have found and assessed.</span>
+		    	<span class="talkbubble" id="myfinds1">Things you have found and assessed.</span>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
-		    	<span class="talkbubble" id="pending">Items you have found waiting assessment.</span>
+		    	<span class="talkbubble" id="pending1">Items you have found waiting assessment.</span>
 		    </li>
 		    
 		    <li class="tabHead-history">
 		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>(0)</span></a>
-		    	<span class="talkbubble" id="history" style="width:380px;">Items you have deleted from My Finds and Wishlist</span>
+		    	<span class="talkbubble" id="history1" style="width:380px;">Items you have deleted from My Finds and Wishlist</span>
 		    </li>
 		</ul>
 	</div>
