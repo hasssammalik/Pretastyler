@@ -235,7 +235,7 @@ class Assessment_model extends CI_Model{
 			//todo
 		}
 		//generate criteria infos
-		if ($is_button && ($new_array['last_one'] || (count($new_array['current_field_criteria']) == count($selected_criteria_ids)))){
+		if ($is_button && ($new_array['last_one'] && (count($new_array['current_field_criteria']) == count($selected_criteria_ids)))){
 			//show all selected garment and info
 			$this->db->select('field.field_id, short_name AS field_name, criteria.criteria_id, criteria.name AS criteria_name, criteria.tooltip, criteria.image_path')->from('field')->join('criteria','field.field_id = criteria.field_id', 'left')->where_in('criteria.criteria_id', $selected_criteria_ids)->order_by('field.position','asc');
 			$query = $this->db->get();
