@@ -373,6 +373,9 @@
 										<script>
 												$.post( "/mall/garments.html", {offset: 0, limit: 10, similar: <?php print $garment['garment_id']?>, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 													$( ".garments" ).html( data );
+													if($('#similarItems').length && $('#similarItems .sliderWrap').is(':visible')){
+														$('#similarItems .sliderWrap').initSimilarCarousel();
+													}
 												});
 										</script>
 										<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
