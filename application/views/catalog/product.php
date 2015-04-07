@@ -306,6 +306,7 @@
 													<span style="float:left;width:91%;padding-bottom: 5px;"><?php echo $com; ?> </span>
 												</span>
 												
+												
 												 <?php } ?>
 												
 										</p>
