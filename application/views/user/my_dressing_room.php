@@ -53,7 +53,7 @@ $('.tabHead-itemsPendingGarment').mouseenter(function()
 		    
 		    <li class="tabHead-history">
 		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>(0)</span></a>
-		    	<span class="talkbubble" id="history">Items you have deleted from My Finds and Wishlist</span>
+		    	<span class="talkbubble" id="history" style="width:380px;">Items you have deleted from My Finds and Wishlist</span>
 		    </li>
 		</ul>
 	</div>
