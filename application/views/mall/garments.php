@@ -28,10 +28,14 @@ foreach ($garments as $row) { ?>
 				<!--<li><a href="#" title="Share item on social media" class="socialShare"><i class="icon-share"></i></a></li>-->
 				<!-- <li><a href="/styling-board.html" target="_blank" title="Create an Inspiration board using this item"><i class="icon-plus"></i></a></li> -->
 				<!-- <li><a href="/styling-board.html" target="_blank" title="See inspiration boards with this item"><i class="icon-board"></i></a></li> -->
-				<?php if ($this->flexi_auth->in_group('Administrators')) {?><li><a href="#" target="_blank" class="disable-click"><i class="icon-cross" title="Disable this garment"></i></a></li> <?php } ?>
+				<?php if ($this->flexi_auth->in_group('Administrators')) {?>
+					<li><a href="#" target="_blank" class="disable-click"><i class="icon-cross" title="Disable this garment"></i></a></li>
+				<?php } ?>
 				<?php } ?>
 			</ul>
-			<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" class="zoom" target="_blank" title="Large View/Product details"><i class="icon-magnifier"></i></a>
+			<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" class="zoom" target="_blank" title="Large View/Product details">
+				<i class="icon-info-sign"></i>
+			</a>
 			<?php if ($this->flexi_auth->is_logged_in() && isset( $row['score'] ) ) {?>
 			<div class="rating" title="Suitability rating for you"><?php 
 				if ($row['score']){
