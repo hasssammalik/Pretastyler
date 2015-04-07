@@ -108,10 +108,10 @@
 						];
 						
 						var lowerlegsimage = [ 
-						'<div id="talkbubble"><ul><li> Your legs bow outwards anywhere from the ankles to thighs</li><li>You have a gap between your legs where they bow.</li></ul></div>',
-						'<div id="talkbubble"><ul><li>Your ankles are undefined; sometimes referred to as ‘cankles’.</li></ul></div>',
-						'<div id="talkbubble"><ul><li>Your calves protrude more than average.</li><li>Calf or knee boots that fit can be difficult to find.</li></ul></div>',
-						'<div id="talkbubble"><ul><li>Your ankles are particularly thin</li></ul></div>'
+						'<div id="talkbubble" class="doubleline"><ul><li> Your legs bow outwards anywhere from the ankles to thighs</li><li>You have a gap between your legs where they bow.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your ankles are undefined; sometimes referred to as ‘cankles’.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your calves protrude more than average.</li><li>Calf or knee boots that fit can be difficult to find.</li></ul></div>',
+						'<div id="talkbubble" ><ul><li>Your ankles are particularly thin</li></ul></div>'
 						];
 						
 						
