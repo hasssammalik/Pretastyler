@@ -946,9 +946,6 @@ class Admin extends CI_Controller {
 					if (empty($comment)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter comment!'));
 					}
-					if (empty($labels)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter labels!'));
-					}
 					if (empty($data['error_messages'])){
 						if ($this->admin_model->update_comment($comment_id, array(
 							'Comment' => $comment, 
@@ -985,9 +982,6 @@ class Admin extends CI_Controller {
 					$plus4 = $this->input->post('plus4', TRUE);
 					if (empty($comment)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter comment!'));
-					}
-					if (empty($labels)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter labels!'));
 					}
 					if (empty($data['error_messages'])){
 						$comment_id = $this->admin_model->insert_comment(array(

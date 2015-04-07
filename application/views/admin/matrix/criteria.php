@@ -86,7 +86,7 @@
 		</div><!--/.col (left) -->
 		<!-- right column -->
 		<?php if (empty($criteria['page_type'])) { ?>
-		<div class="col-md-4">
+		<div class="col-md-8">
 			<!-- general form elements disabled -->
 			<div class="box box-warning">
 				<div class="box-header">
@@ -535,8 +535,10 @@
 			</div><!-- /.box -->
 		</div><!--/.col (right) -->
 		<?php } ?>
-		<?php if (empty($criteria['page_type'])) { ?>
-		<div class="col-md-4">
+	</div>   <!-- /.row -->
+	<?php if (empty($criteria['page_type'])) { ?>
+	<div class="row">
+		<div class="col-md-12">
 			<!-- general form elements disabled -->
 			<div class="box box-danger">
 				<div class="box-header">
@@ -571,8 +573,7 @@
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 		</div><!--/.col (right) -->
-		<?php } ?>
-	</div>   <!-- /.row -->
+	</div>
 	<?php if (empty($criteria['page_type'])) { ?>
 	<div class="row">
 		<!-- general form elements disabled -->
