@@ -6,20 +6,20 @@
 		    <li class="tabHead-wishList">
 
 		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
-		    	<span class="talkbubble">Testing</span>
+		    	<span class="talkbubble">Things saved because you love them.</span>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#myfinds" class="acttabsInner act-myfinds">MY FINDS <span class="pinkycolor">(0)</span></a>
-		    	<span class="talkbubble">Testing</span>
+		    	<span class="talkbubble">Things you have found and assessed.</span>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
-		    	<span class="talkbubble">Testing</span>
+		    	<span class="talkbubble">Items you have found waiting assessment.</span>
 		    </li>
 		    
 		    <li class="tabHead-history">
 		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>(0)</span></a>
-		    	<span class="talkbubble">Testing</span>
+		    	<span class="talkbubble">Items you have deleted from My Finds and Wishlist</span>
 		    </li>
 		</ul>
 	</div>
