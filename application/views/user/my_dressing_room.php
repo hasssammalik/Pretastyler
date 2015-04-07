@@ -10,7 +10,7 @@ $('.tabHead-wishList').mouseenter(function()
 		$('#wishlist1').fadeOut(500);
 	});
 
-$('.tabHead-itemsPendingGarment').mouseenter(function()
+$('.pendingGar').mouseenter(function()
 	{
 		$('#pending1').fadeIn(500);
 	}).mouseleave(function(){
@@ -46,7 +46,7 @@ $('.tabHead-itemsPendingGarment').mouseenter(function()
 		    	<a href="#myfinds" class="acttabsInner act-myfinds">MY FINDS <span class="pinkycolor">(0)</span></a>
 		    	<span class="talkbubble" id="myfinds1">Things you have found and assessed.</span>
 		    </li>
-		    <li class="tabHead-itemsPendingGarment">
+		    <li class="tabHead-itemsPendingGarment pendingGar">
 		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
 		    	<span class="talkbubble" id="pending1">Items you have found waiting assessment.</span>
 		    </li>
