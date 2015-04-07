@@ -352,7 +352,7 @@
 								<div class="panelHeader tab-look-header">Similar Items that suit you</div>
 								<div class="panelContent tab-look-body">
 									<div class="sliderWrap">
-										<ul class="items">
+										<?php /*<ul class="items">
 											<?php if ($similar_garments) {
 												foreach ($similar_garments as $row) {?>
 												<li><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"><img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name']?>"></a>
@@ -367,6 +367,15 @@
 												<?php }
 											}?>
 										</ul>
+										*/ ?>
+										<div class="garments">
+										</div>
+										<script>
+												$.post( "/mall/garments.html", {offset: 0, limit: 10, similar: <?php print $garment['garment_id']?>, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+													$( ".garments" ).html( data );
+													icon_functions()
+												});
+										</script>
 										<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
 										<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a>
 									</div>
