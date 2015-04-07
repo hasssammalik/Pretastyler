@@ -32,10 +32,10 @@ class Colour_model extends CI_Model{
 	public function get_available_colours($second_half = FALSE){
 		if (!$second_half){
 			$this->db->select('*')->from('colour')->where('status', 1)->order_by('order', 'asc')->limit(11,0);
+		} else if( $second_half === TRUE ) {
+			$this->db->select('*')->from('colour')->where('status', 1)->order_by('order', 'asc')->limit(12,11);
 		} else if( $second_half == 'full' ) {
 			$this->db->select('*')->from('colour')->where('status', 1)->order_by('order', 'asc');
-		} else {
-			$this->db->select('*')->from('colour')->where('status', 1)->order_by('order', 'asc')->limit(12,11);
 		}
 		$query = $this->db->get();
 		if ($query->num_rows() == 0){
