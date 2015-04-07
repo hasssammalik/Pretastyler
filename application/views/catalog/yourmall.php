@@ -9,7 +9,7 @@
 				
 				<script type="text/javascript">
 					
-					var default_values = [ 4,2,8,3,2,2,2,2,2,2,2,2 ];
+					var default_values = [ 4,2,8,3,2,1,2,1,2,1,3,1];
 					
 					$(function(){
 						
@@ -50,7 +50,7 @@
 						var faceshapeimage = [ 
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/oval.png" /></div><ul><li>Your face is an inverted egg or oval shape</li><li>You have a gently rounded chin.</li><li>Your face is slightly longer than it is wide</li><li>Your face is equal in length from hairline to browline, browline to nose tip, nose tip to chin tip</li><li>Your eye, nose and mouth are all well scaled to the size of your face i.e. no feature is extra large or small</li><li>Your eye, nose and mouth are all well-spaced within your face i.e. your eyes are not close or wide set</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/featues-15.png" /></div><ul><li>Your forehead is the widest part of your face</li><li>Your have jawline is narrower than your forehead</li><li>You have a pointed to gently rounded chin</li><li>You have a widow\'s peak (pointed hairline at centre of forehead).</li></ul></div>',
-						'<div id="talkbubble" class="doubleline talkbubbleMedLabel" ><div class="slider-image" style="top:-325px;"><img src="/images/profileSetup/faceshape/featues-19.png"/></div><ul><li></li></ul>Above your cheekbones is the widest part of your face</li><li>Your have jawline is narrower than your forehead</li><li>You have a pointed to gently rounded chin.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline talkbubbleMedLabel" ><div class="slider-image" style="top:-325px;"><img src="/images/profileSetup/faceshape/featues-19.png"/></div><ul><li>Above your cheekbones is the widest part of your face</li><li>Your have jawline is narrower than your forehead</li><li>You have a pointed to gently rounded chin.</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/featues-20.png" /></div><ul><li>Your chin is narrow and pointed.</li><li>Your cheekbones are high and prominent.</li><li>Your face is widest at the cheekbones.</li><li>Your hairline and/or forehead angles inward..</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/triangle.png" /></div><ul><li>Your face is a little longer than it is wide</li><li>Your forehead is the narrowest part of your face</li><li>Your have jawline is the widest region of your face</li><li>You have a broad square jawline</li><li>Your chin is shallow and flat.</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/featues-17.png" /></div><ul><li>Your jawline is the widest part of your face</li><li>You have full, round cheeks</li><li>Your forehead is the narrowest part of your face.</li></ul></div>',
