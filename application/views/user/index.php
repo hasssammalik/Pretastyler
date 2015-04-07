@@ -217,7 +217,7 @@
 						var bottom 			= [ "Too Large", "Too Flat" ];
 						var innerthighs 	= [ "Rub Together", "Bowed Legs" ];
 						var outerthighs 	= [ "Too  Protruding", "Saddlebags" ]
-						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Heavy calves", "Thin Ankles" ];
+						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Large Calves", "Thin Ankles" ];
 						
 
 
@@ -257,9 +257,9 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-38.png" /></div><ul><li>You consider yourself to be in the substantially overweight range</li><li>Your widest area is between your bust and hipline</li><li>You have a full, high stomach that starts just under your bustline.</li><li>Sometimes others may mistake you for being pregnant.</li></ul></div>' 
 						];
 						var bodyratioimage = [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-10.png" /></div><ul><li>Your torso is equal in length to your legs.</li><li>The fullest part of your bottom protrudes at approximately half your height.</li><li>Weight gain is first experienced between your bust and hipline.</li><li>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.</li><li>Use the vertical calculator if you are unsure.</li></ul></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-09.png" /></div><ul><li>Your legs are longer than your body.</li><li>Your torso is short and your waistline feels/is high.</li><li>Weight gain is first experienced at your midriff, stomach and high on the back of your hips.</li><li>Bend your elbow 90% to the floor: you are a Long Legged and Short Bodied if your waist is above your bent elbow.</li><li>Use the vertical calculator if you are unsure.</li></ul></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-11.png" /></div><ul><li>You have a long body and short legs.</li><li>Weight gain is first experienced at your bottom, hips and thighs.</li><li>You have a low waistline.</li><li>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.</li><li>Use the vertical calculator if you are unsure.</li></ul></div>',
+            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-10.png" /></div><ul><li>Your torso is equal in length to your legs.</li><li>The fullest part of your bottom protrudes at approximately half your height.</li><li>Weight gain is first experienced between your bust and hipline.</li><li>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.</li><li>The most common body ratio of Caucasian women</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-09.png" /></div><ul><li>Your legs are longer than your body.</li><li>Your torso is short and your waistline feels/is high.</li><li>Weight gain is first experienced at your midriff, stomach and high on the back of your hips.</li><li>Bend your elbow 90% to the floor: you are a Long Legged and Short Bodied if your waist is above your bent elbow.</li><li>The most common body ratio of African American women</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-11.png" /></div><ul><li>You have a long body and short legs.</li><li>Weight gain is first experienced at your bottom, hips and thighs.</li><li>You have a low waistline.</li><li>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.</li><li>The most common body ratio of Asian women"</li></ul></div>',
 												];
 						var bustimage = 
 						[ 
@@ -275,7 +275,7 @@
 						var buildimage = 
 						[ 
 						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-39.png" /></div><ul><li>You have a petite frame.</li><li> You are likely to be short and small boned.</li></ul></div>',
-						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-40.png" /></div><ul><li>Your frame is between small and large</li></ul></div>',
+						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-40.png" /></div><ul><li>Your frame is between small and large</li><li>The most common build - select this one if you are unsure. </li></ul></div>',
 						'<div id="talkbubble" class="med-width"><div class="slider-image"><img src="/images/profileSetup/build/features-38.png" /></div><ul><li>Your frame is large.</li><li>You are likely to be tall and large boned. </li></ul></div>' 
 						];
 						
@@ -296,7 +296,7 @@
 						var shouldersimage = [ 
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to the tip of your shoulder.</li> <li>Shoulder straps will tend to slip off your shoulders.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-28.png" /></div><ul><li>Your shoulders have a slight slope.</li></ul></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-27.png" /></div><ul><li>Your shoulders are broad and square with almost no slope.</li></ul></div>' 
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-27.png" /></div><ul><li>Your shoulders are broad and square with almost no slope.</li><li>The most common shoulder - select this one if you are unsure.</li></ul></div>' 
 						];
 						
 						var faceshapeimage = [ 

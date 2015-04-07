@@ -28,7 +28,7 @@
 						var bottom 			= [ "Too Large", "Too Flat" ];
 						var innerthighs 	= [ "Rub Together", "Bowed Legs" ];
 						var outerthighs 	= [ "Too  Protruding", "Saddlebags" ]
-						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Heavy calves", "Thin Ankles" ];
+						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Large Calves", "Thin Ankles" ];
 						
 						
 						
@@ -43,7 +43,7 @@
 						
 						var shouldersimage = [ 
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to the tip of your shoulder.</li> <li>Shoulder straps will tend to slip off your shoulders.</li></ul></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-28.png" /></div><ul><li>Your shoulders have a slight slope.</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-28.png" /></div><ul><li>Your shoulders have a slight slope.</li><li>The most common shoulder - select this one if you are unsure.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-27.png" /></div><ul><li>Your shoulders are broad and square with almost no slope.</li></ul></div>' 
 						];
 						
@@ -589,7 +589,7 @@
 			
 			<div class="homeprofile-head">
 				<br><br><br>
-				<p class="">Want to see garments perfect for you? Your personalized mall is ready!</p>
+				<p class=""> <strong>Your personalized mall is ready!</strong></p>
 				<div class="mall-link3">
 				<button class="bkpinkycolor home-vistmallbtn container noneLiner"  id="signup-popup">
 					SAVE AND GO SHOPPING <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
