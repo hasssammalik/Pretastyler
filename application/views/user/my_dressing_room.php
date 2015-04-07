@@ -1,25 +1,33 @@
 
 <div class="mainContent myNewTabsRoom minheight250">
+	<script>
+$(document).ready(function({
+$('.tabHead-wishList').hover(function(){
+$('#wishlist').fadeIn(500);
+});
+
+}))
+	</script>
 	
 	<div class="tabsDressing">
 		<ul id="dressingTabHeadContainer">
 		    <li class="tabHead-wishList">
 
 		    	<a href="#wishList" class="acttabsInner act-wishList">WISHLIST <span>(0)</span></a>
-		    	<span class="talkbubble">Things saved because you love them.</span>
+		    	<span class="talkbubble" id="wishlist">Things saved because you love them.</span>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#myfinds" class="acttabsInner act-myfinds">MY FINDS <span class="pinkycolor">(0)</span></a>
-		    	<span class="talkbubble">Things you have found and assessed.</span>
+		    	<span class="talkbubble" id="myfinds">Things you have found and assessed.</span>
 		    </li>
 		    <li class="tabHead-itemsPendingGarment">
 		    	<a href="#itemsPendingGarment" class="acttabsInner act-itemsPendingGarment">PENDING GARMENTS <span class="pinkycolor">(0)</span></a>
-		    	<span class="talkbubble">Items you have found waiting assessment.</span>
+		    	<span class="talkbubble" id="pending">Items you have found waiting assessment.</span>
 		    </li>
 		    
 		    <li class="tabHead-history">
 		    	<a href="#history" class="acttabsInner act-history">HISTORY <span>(0)</span></a>
-		    	<span class="talkbubble">Items you have deleted from My Finds and Wishlist</span>
+		    	<span class="talkbubble" id="history">Items you have deleted from My Finds and Wishlist</span>
 		    </li>
 		</ul>
 	</div>
