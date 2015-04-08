@@ -759,9 +759,7 @@
 						
 					});
 					
-					function pull_profile_garment() {
-						
-					}
+					function pull_profile_garment() {}
 					function pull_profile_garment_update_button() {
 					
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
@@ -785,17 +783,16 @@
 							"shoulders_select_id" : default_values[8],
 							"face_shape_select_id" : default_values[9],
 							
-							"neck_select_id" : default_values[10],
-							"back_select_id" : default_values[11],
-							"upper_arms_select_id" : default_values[12],
-							"midriff_select_id" : default_values[13],
+						    "neck_select_id" : ($('#mall-neck').attr('checked') == "checked")? default_values[10] :0,
+							"back_select_id" : ($('#mall-back').attr('checked') == "checked")? default_values[11] :0,
+							"upper_arms_select_id" : ($('#mall-upperarms').attr('checked') == "checked")? default_values[12] :0,
+							"midriff_select_id" : ($('#mall-midriff').attr('checked') == "checked")? default_values[13] :0,
 							
-							"stomach_select_id" : default_values[14],
-							"bottom_select_id" : default_values[15],
-							"inner_thighs_select_id" : default_values[16],
-							"outer_thighs_select_id" : default_values[17],
-							"lower_legs_select_id" : default_values[18]
-							
+							"stomach_select_id" : ($('#mall-stomach').attr('checked') == "checked")? default_values[14] :0,
+							"bottom_select_id" : ($('#mall-bottom').attr('checked') == "checked")? default_values[15] :0,
+							"inner_thighs_select_id" : ($('#mall-innerthighs').attr('checked') == "checked")? default_values[16] :0,
+							"outer_thighs_select_id" : ($('#mall-outerthighs').attr('checked') == "checked")? default_values[17] :0,
+							"lower_legs_select_id" : ($('#mall-lowerlegs').attr('checked') == "checked")? default_values[18] :0
 						};
 
 						
