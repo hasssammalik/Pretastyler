@@ -10,7 +10,7 @@
 
 	<div class="infoBox successpage center">
 		<div>
-			<h3>WELCOME USER</h3>
+			<h3>WELCOME <?php if ($this->flexi_auth->is_logged_in()){ print strtoupper($first_name) } else {print strtoupper('user') } ?></h3>
 			<div class="welcome-body">
 				We're thrilled to have you as part of our family of savvy fashion shoppers. <br> We've placed lots of cool features in your mall so don't forget to hover your mouse over tabs and icons to see what they do.
 				<p class="center">
