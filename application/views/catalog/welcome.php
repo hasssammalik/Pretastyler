@@ -39,7 +39,8 @@
 }
 .welcome-body{
 	background:white;
-	margin-top:10px;
+	margin-top:25px;
+	font-size:17px;
 	padding:20px;
 }
 .welcome-body a {
