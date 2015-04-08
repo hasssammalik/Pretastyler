@@ -116,7 +116,7 @@ class Mall extends CI_Controller {
 		$user_profile_done = FALSE;
 		if ($this->flexi_auth->is_logged_in()){
 			$user_id = $this->flexi_auth->get_user_id();
-			$show_premium = $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'));
+			$show_premium = TRUE; /* $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers')) */
 			$user_profile_done = $this->user_model->get_user_specs($user_id);
 		} else {
 			$user_id = FALSE;
