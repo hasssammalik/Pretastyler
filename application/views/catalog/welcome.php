@@ -42,6 +42,7 @@
 }
 .welcome-body{
 	background:white;
+	text-align:left;
 	margin-top:25px;
 	font-size:17px;
 	padding:20px;

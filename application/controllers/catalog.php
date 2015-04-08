@@ -91,6 +91,7 @@ class Catalog extends CI_Controller {
 	}
 
 	public function welcome(){
+		$data = $this->data;
 		$data['title'] = "Welcome to PretAStyler";
 		$data['content_class'] = "welcome_full_page";
 		$data['extraFooter'] = TRUE;
