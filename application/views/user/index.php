@@ -190,6 +190,7 @@
 					//var default_values = [3,5,2,4,1,4,2  , 4,2,2,8,3,2,2,2,2,2,2,2,2 ];
 					
 					var default_values = [<?php echo $user_selection; ?>];
+					console.log(default_values);
 					
 
 					$(function(){
@@ -1082,7 +1083,7 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div class="profile-save mousehand  i bkpinkycolor" data-action="save">Save</div>
+					<div class="bodyEditSection editSection profile-save bkpinkycolor i u b mousehand" data-action="save"><span class="">SAVE</span></div></div>
 					
 
 
