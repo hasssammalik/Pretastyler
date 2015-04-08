@@ -10,11 +10,11 @@
 
 	<div class="infoBox successpage center">
 		<div>
-			<h3>WELCOME <?php if ($this->flexi_auth->is_logged_in()){ print strtoupper($first_name) } else {print strtoupper('user') } ?></h3>
+			<h3>WELCOME <?php if ($this->flexi_auth->is_logged_in()){ print strtoupper($first_name); } else {echo ('USER'); } ?></h3>
 			<div class="welcome-body">
 				We're thrilled to have you as part of our family of savvy fashion shoppers. <br> We've placed lots of cool features in your mall so don't forget to hover your mouse over tabs and icons to see what they do.
 				<p class="center">
-					<a class="bkgrey" href="/mall.html">VISIT MALL</a>
+					<a class="bkpinkycolor" href="/mall.html">VISIT MALL</a>
 				</p>
 			</div>
 		</div>
@@ -31,6 +31,9 @@
 	height: 300px;
 	padding: 20px;
 	margin: 0px auto;
+}
+.infoBox h3{
+	color:#e72775;
 }
 .welcome_full_page{
 	background:url('/images/welcome-bg.jpg');
