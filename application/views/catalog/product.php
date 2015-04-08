@@ -302,7 +302,7 @@
 												<?php foreach($row['comment'] as $com){ ?>
 												
 												<span>
-													<span class="bold-dash" style="float:left;width:9%;font-size:37px; line-height:16px;">&bull; &nbsp; &nbsp; &nbsp;</span>
+													<span class="bold-dash" style="float:left;width:9%;font-size:37px;line-height:10px;padding-top:2px;">&bull; &nbsp; &nbsp; &nbsp;</span>
 													<span style="float:left;width:91%;padding-bottom: 5px;"><?php echo $com; ?> </span>
 												</span>
 												<span class="commentSpliter"></span>
