@@ -10,28 +10,13 @@
 
 	<div class="infoBox successpage center">
 		<div>
-			<h3>THANK YOU !</h3>
-			<p>
-				You have now joined the style revolution.<br>
-				Your personalised mall is almost ready for you.<br>
-				Click below to complete your body profile<br>
-			
-			</p>
-			
-			<p class="center">
-				<a class="bkpinkycolor" href="/user.html"> COMPLETE BODY PROFILE </a>
-			</p>
-			
-			<p>
-				Completed the body profile already? Lucky You!<br>
-				You can go straight to your mall and see what fabulous<br>
-				garments the style genie has picked out for you<br>
-			</p>
-			
+			<h3>WELCOME USER</h3>
+			<div class="welcome-content">
+			We're thrilled to have you as part of our family of savvy fashion shoppers. <br> We've placed lots of cool features in your mall so don't forget to hover your mouse over tabs and icons to see what they do.
 			<p class="center">
 				<a class="bkgrey" href="/mall.html">VISIT MALL</a>
 			</p>
-			
+			</div>
 		</div>
 	</div>
 
@@ -39,8 +24,9 @@
 <style>
 .infoBox{
 	  position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 53%;
+  left: 55%;
+  width:380px;
   transform: translate(-50%,-50%);
   height: 300px;
   padding: 20px;
@@ -49,6 +35,7 @@
 .welcome_full_page{
 	background:url('/images/welcome-bg.jpg');
 	background-size: cover;
+	background-position: 50% 0%;
 }
 .welcome-content{
 	position:fixed;
