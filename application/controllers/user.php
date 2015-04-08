@@ -108,6 +108,7 @@ class User extends CI_Controller {
 	 */
 	public function preferences()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/preferences.php')){
 			show_404();
 		}
@@ -127,6 +128,7 @@ class User extends CI_Controller {
 	 */
 	public function my_dressing_room()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_dressing_room.php')){
 			show_404();
 		}
@@ -166,6 +168,7 @@ class User extends CI_Controller {
 	 */
 	private function my_finds()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_finds.php')){
 			show_404();
 		}
@@ -190,6 +193,7 @@ class User extends CI_Controller {
 	 */
 	private function my_wishlists()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_wishlists.php')){
 			show_404();
 		}
@@ -213,6 +217,7 @@ class User extends CI_Controller {
 	 */
 	private function add_to_wardrobe()
 	{
+		$this->load->library('user_check');
 		if (!$this->input->post()){
 			show_404();
 		}
@@ -229,6 +234,7 @@ class User extends CI_Controller {
 	 */
 	private function my_wardrobe()
 	{
+		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_wardrobe.php')){
 			show_404();
 		}
@@ -816,6 +822,9 @@ class User extends CI_Controller {
 				$result = $this->db->get()->row_array();
 				$results = array('result' => $result, 'field_test' => $this->assessment_model->judge_field_by_criteria_id($result['field_showif'], $result['field_hideif'], array('1557')), 'criteria_test' => $this->assessment_model->judge_criteria_by_criteria_id($result['criteria_showif'], $result['criteria_hideif'], array('1557'))); */
 				$data['test_str'] = $results;
+			} else if ($slug == "library_test"){
+				$this->load->library('user_check');
+				$data['test_str'] = $slug;
 			} else {
 				$data['test_str'] = $slug;
 			}

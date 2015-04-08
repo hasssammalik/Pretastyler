@@ -40,6 +40,7 @@ class Garment extends CI_Controller {
 	 */
 	public function import_extension()
 	{
+		$this->load->library('user_check');
 		$this->load->library('session');
 		$type = $this->session->userdata('type');
 		$url = $this->session->userdata( 'url');
@@ -103,6 +104,7 @@ class Garment extends CI_Controller {
 	 */
 	public function import($url = FALSE)
 	{
+		$this->load->library('user_check');
 		if (!$url) {
 			$this->not_found();
 			return;
@@ -138,6 +140,7 @@ class Garment extends CI_Controller {
 	 */
 	public function edit_general($slug = FALSE)
 	{
+		$this->load->library('user_check');
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
 			return;
@@ -286,6 +289,7 @@ class Garment extends CI_Controller {
 	 */
 	public function assess($slug = FALSE)
 	{
+		$this->load->library('user_check');
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
 			return;
@@ -320,6 +324,7 @@ class Garment extends CI_Controller {
 	 */
 	public function edit($slug = FALSE)
 	{
+		$this->load->library('user_check');
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
 			return;

@@ -61,6 +61,7 @@ class Catalog extends CI_Controller {
 	}
 	public function index()
 	{
+		$this->load->library('user_check');
 	    if ($this->flexi_auth->is_logged_in()){
 	        redirect('/mall', 'refresh');
 	    }
@@ -91,6 +92,7 @@ class Catalog extends CI_Controller {
 	
 	public function your_mall()
 	{
+		$this->load->library('user_check');
 	    if ($this->flexi_auth->is_logged_in()){
 	        redirect('/mall', 'refresh');
 	    }
@@ -122,6 +124,7 @@ class Catalog extends CI_Controller {
 	 */
 	public function product($slug = FALSE)
 	{
+		$this->load->library('user_check');
 		if (!$slug) {
 			$this->not_found();
 			return;
@@ -235,7 +238,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	 */
 	public function our_story()
 	{
-		
 		$data = $this->data;
 		$data['title'] = "Our Story - PRETSTYLER";
 		$data['breadcrumb'] = array('OUR STORY');

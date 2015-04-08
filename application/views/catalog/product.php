@@ -306,6 +306,7 @@
 													<span style="float:left;width:91%;padding-bottom: 5px;"><?php echo $com; ?> </span>
 												</span>
 												
+												
 												 <?php } ?>
 												
 										</p>
@@ -319,7 +320,7 @@
 							<?php } else { ?>
 							<div class="panel2 newpanelDesign forceDivTwoColumn" id="ourAdvice">
 								<div class="panelheaderheightfixer">
-									<div class="panelNewHeader bkgrey signup-title" style="margin-bottom:0px;line-height:47px; font-weight:500; font-size:28px;">Never Buy a <strong>'DUD'</strong> again </div>
+									<div class="panelNewHeader bkgrey signup-title" style="margin-bottom:0px;line-height:47px; font-weight:500; font-size:36px;">Never Buy a <strong>'DUD'</strong> again </div>
 									<div style="background:url('/images/bodyback.png');background-position: 96% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 								</div>
 								
@@ -330,7 +331,7 @@
 												<div class="headerBackground">
 													<div class="headerBackground-content role-element leadstyle-container center">
 														<p style="font-size:32px; font-weight: bold;word-spacing:5px;letter-spacing:2px;">SHOPPING ONLINE<br>JUST GOT PERSONAL</p>
-														<p> <img width="70" src="/images/play.png" > </p>
+														<p><!--  <img width="70" src="/images/play.png" >  --></p>
 														<p style="font-size:20px;line-height:25px;font-weight:600;">
 															Cut Through the Clutter of Fashion<br>
 															Find everything that suits you in one perfect place<br>
@@ -352,7 +353,7 @@
 								<div class="panelHeader tab-look-header">Similar Items that suit you</div>
 								<div class="panelContent tab-look-body">
 									<div class="sliderWrap">
-										<ul class="items">
+										<?php /*<ul class="items">
 											<?php if ($similar_garments) {
 												foreach ($similar_garments as $row) {?>
 												<li><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"><img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name']?>"></a>
@@ -367,6 +368,17 @@
 												<?php }
 											}?>
 										</ul>
+										*/ ?>
+										<div class="garments">
+										</div>
+										<script>
+												$.post( "/mall/garments.html", {offset: 0, limit: 21, similar: <?php print $garment['garment_id']?>, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+													$( ".garments" ).html( data );
+													if($('#similarItems').length && $('#similarItems .sliderWrap').is(':visible')){
+														$('#similarItems .sliderWrap').initSimilarCarousel();
+													}
+												});
+										</script>
 										<a href="#" class="prevNew"><span><i class="icon-arrow-left"></i></span></a>
 										<a href="#" class="nextNew"><span><i class="icon-arrow-right"></i></span></a>
 									</div>
@@ -379,4 +391,3 @@
 					<script type="text/javascript">
 						icon_functions();
 					</script>
-								

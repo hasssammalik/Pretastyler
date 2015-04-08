@@ -11,11 +11,12 @@
 	
 	<div class="leftContent left">
 
-		<a class="wid100 targetbutn bkpinkycolor" href="/mall/targetsearch.html">
+		<?php /*<a class="wid100 targetbutn bkpinkycolor" href="/mall/targetsearch.html">
 			&nbsp; &nbsp; DETAILED SEARCH
 			<span class="targertbutnicon unicode-icon right">&#9658;</span>
 		</a>
-		<div class="wid100 quickbelowbutn bkgrey">
+		*/ ?>
+		<div class="wid100 quickbelowbutn bkpinkycolor">
 			&nbsp; &nbsp; QUICK SEARCH 
 			<span class="quickbelowicon unicode-icon right">&#x25BC;</span>
 		</div>

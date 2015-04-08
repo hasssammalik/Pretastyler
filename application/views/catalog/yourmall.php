@@ -9,7 +9,7 @@
 				
 				<script type="text/javascript">
 					
-					var default_values = [ 4,2,8,3,2,2,2,2,2,2,2,2 ];
+					var default_values = [ 2,2,2,2,2,2,2,2,2,1,1,1];
 					
 					$(function(){
 						
@@ -28,7 +28,7 @@
 						var bottom 			= [ "Too Large", "Too Flat" ];
 						var innerthighs 	= [ "Rub Together", "Bowed Legs" ];
 						var outerthighs 	= [ "Too  Protruding", "Saddlebags" ]
-						var lowerlegs 		= [ "Shapeless Calves","Shapeless Ankles", "Muscular/Heavy calves", "Thin Ankles" ];
+						var lowerlegs 		= [ "Thin Legs","Shapeless Ankles", "Muscular/Large Calves", "Thin Ankles" ];
 						
 						
 						
@@ -42,15 +42,15 @@
 						];
 						
 						var shouldersimage = [ 
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to the tip of your shoulder. Shoulder straps will tend to slip off your shoulders.</li></ul></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-28.png" /></div><ul><li>Your shoulders have a slight slope.</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-29.png" /></div><ul><li>Your shoulders have a definite slope from the base of your neck to the tip of your shoulder.</li> <li>Shoulder straps will tend to slip off your shoulders.</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-28.png" /></div><ul><li>Your shoulders have a slight slope.</li><li>The most common shoulder - select this one if you are unsure.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/shoulder/featues-27.png" /></div><ul><li>Your shoulders are broad and square with almost no slope.</li></ul></div>' 
 						];
 						
 						var faceshapeimage = [ 
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/oval.png" /></div><ul><li>Your face is an inverted egg or oval shape</li><li>You have a gently rounded chin.</li><li>Your face is slightly longer than it is wide</li><li>Your face is equal in length from hairline to browline, browline to nose tip, nose tip to chin tip</li><li>Your eye, nose and mouth are all well scaled to the size of your face i.e. no feature is extra large or small</li><li>Your eye, nose and mouth are all well-spaced within your face i.e. your eyes are not close or wide set</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/featues-15.png" /></div><ul><li>Your forehead is the widest part of your face</li><li>Your have jawline is narrower than your forehead</li><li>You have a pointed to gently rounded chin</li><li>You have a widow\'s peak (pointed hairline at centre of forehead).</li></ul></div>',
-						'<div id="talkbubble" class="doubleline talkbubbleMedLabel" ><div class="slider-image" style="top:-325px;"><img src="/images/profileSetup/faceshape/featues-19.png"/></div><ul><li></li></ul>Above your cheekbones is the widest part of your face</li><li>Your have jawline is narrower than your forehead</li><li>You have a pointed to gently rounded chin.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline talkbubbleMedLabel" ><div class="slider-image" style="top:-325px;"><img src="/images/profileSetup/faceshape/featues-19.png"/></div><ul><li>Above your cheekbones is the widest part of your face</li><li>Your have jawline is narrower than your forehead</li><li>You have a pointed to gently rounded chin.</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/featues-20.png" /></div><ul><li>Your chin is narrow and pointed.</li><li>Your cheekbones are high and prominent.</li><li>Your face is widest at the cheekbones.</li><li>Your hairline and/or forehead angles inward..</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/triangle.png" /></div><ul><li>Your face is a little longer than it is wide</li><li>Your forehead is the narrowest part of your face</li><li>Your have jawline is the widest region of your face</li><li>You have a broad square jawline</li><li>Your chin is shallow and flat.</li></ul></div>',
 						'<div id="talkbubble" class="talkbubbleMedLabel"><div class="slider-image"><img src="/images/profileSetup/faceshape/featues-17.png" /></div><ul><li>Your jawline is the widest part of your face</li><li>You have full, round cheeks</li><li>Your forehead is the narrowest part of your face.</li></ul></div>',
@@ -69,49 +69,49 @@
 						];
 						
 						var backimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>' 
+						'<div id="talkbubble"><ul><li>You have a very rounded shoulder line.</li><li>The roundness starts at the base of your neck and extends to your shoulder blades.</li><li>Your head protrudes forward causing round neck tops to bind in front and sit away from the neck at the back.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a definite curve in the lower spine causing straight skirts to have a roll of excess fabric below the waistband in the back.</li></ul></div>' 
 						];
 						
 						var upperarmsimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>Usually associated with a very thin body.</li><li> Your arms appear bony.</li><li>You prefer to keep covered.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have full, fleshy upper arms. </li><li>You prefer to keep your upper arms except for very hot days.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Your upper arms have lost their tone.</li><li> You prefer to keep your upper arms covered most of the time.</li></ul></div>'
 						];
 						
 						
 						var midriffimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>You have a roll on sitting but none/minimal on standing.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a noticeable roll when standing.</li></ul></div>'
 						];
 						
 						var stomachimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>You have a tummy left over from pregnancy.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a tummy but not one large enough to hold your hems up in the front.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Your tummy is flaccid/untoned and best kept underwraps.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have a full stomach that protrudes in front and causes the hemline of dresses, skirts and shirts to rise up in the front.</li></ul></div>'
 						];
 						
 						var bottomimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li> Your bottom is large and out of proportion with the rest of your body. </li><li>Straight skirts can be difficult to fit.</li><li>Your hemlines often rise up in the back.</li><li>Tops get caught up on your bottom.</li><li>DO NOT SELECT this feature if: Your bottom is high and firm - think Serena Williams and Jenifer Lopez (bootylicious).</li></ul></div>',
+						'<div id="talkbubble"><ul><li>You have the appearance of being almost bottomless.</li><li>Your pants and skirts are often baggy in the back around the bottom and down the back of the leg.</li><li>The hem of your skirts and dresses may hang lower in the back.</li></ul></div>'
 						];
 						
 						var innerthighsimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble"><ul><li>Your inner thighs touch when your feet are placed directly under your hips.</li><li>When wearing shorts your thighs cause the shorts to ride up.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Your legs bow outwards anywhere from the ankles to thighs</li><li>You have a gap between your legs where they bow</li></ul></div>'
 						];
 
 						var outerthighsimage=[
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble" class="doubleline"><ul><li>Your thighs protrude substantially and are wider than the widest part of the hip line.</li><li>They curve in a smooth line from your hip.</li></ul></div>',
+						'<div id="talkbubble"><ul><li>Your thighs protrude substantially and</li><li>They have a dimple at the top outer edge where the thigh and torso meet which cause your thigh to have the appearance of jodhpurs (riding pants).</li></ul></div>'
 						];
 						
 						var lowerlegsimage = [ 
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>',
-						'<div class="hide"></div>'
+						'<div id="talkbubble" class="doubleline"><ul><li> Your legs are very thin from the ankles up to the thighs.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your ankles are undefined; sometimes referred to as ‘cankles’.</li></ul></div>',
+						'<div id="talkbubble" class="doubleline"><ul><li>Your calves protrude more than average.</li><li>Calf or knee boots that fit can be difficult to find.</li></ul></div>',
+						'<div id="talkbubble" ><ul><li>Your ankles are particularly thin</li></ul></div>'
 						];
 						
 						
@@ -141,7 +141,7 @@
 							.slider({
 								min: 0, 
 								max: shoulders.length-1, 
-								value: default_values[2]-1
+								value: default_values[1]-1
 							})
 							.slider("pips", {
 								labels: shoulders
@@ -151,7 +151,7 @@
 								labels: shouldersimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[2] = (+ui.value+1);
+								default_values[1] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -160,7 +160,7 @@
 							.slider({
 								min: 0, 
 								max: faceshape.length-1, 
-								value: default_values[3]-1
+								value: default_values[2]-1
 							})
 							.slider("pips", {
 								labels: faceshape
@@ -170,7 +170,7 @@
 								labels: faceshapeimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[3] = (+ui.value+1);
+								default_values[2] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -179,7 +179,7 @@
 							.slider({
 								min: 0, 
 								max: neck.length-1, 
-								value: default_values[4]-1
+								value: default_values[3]-1
 							})
 							.slider("pips", {
 								labels: neck
@@ -189,7 +189,7 @@
 								labels: neckimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[4] = (+ui.value+1);
+								default_values[3] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -198,7 +198,7 @@
 							.slider({
 								min: 0, 
 								max: back.length-1, 
-								value: default_values[5]-1
+								value: default_values[4]-1
 							})
 							.slider("pips", {
 								labels: back
@@ -208,7 +208,7 @@
 								labels: backimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[5] = (+ui.value+1);
+								default_values[4] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -217,7 +217,7 @@
 							.slider({
 								min: 0, 
 								max: upperarms.length-1, 
-								value: default_values[6]-1
+								value: default_values[5]-1
 							})
 							.slider("pips", {
 								labels: upperarms
@@ -227,7 +227,7 @@
 								labels: upperarmsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[6] = (+ui.value+1);
+								default_values[5] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -236,7 +236,7 @@
 							.slider({
 								min: 0, 
 								max: midriff.length-1, 
-								value: default_values[8]-1
+								value: default_values[6]-1
 							})
 							.slider("pips", {
 								labels: midriff
@@ -246,7 +246,7 @@
 								labels: midriffimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[8] = (+ui.value+1);
+								default_values[6] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -255,7 +255,7 @@
 							.slider({
 								min: 0, 
 								max: stomach.length-1, 
-								value: default_values[9]-1
+								value: default_values[7]-1
 							})
 							.slider("pips", {
 								labels: stomach
@@ -265,7 +265,7 @@
 								labels: stomachimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[9] = (+ui.value+1);
+								default_values[7] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -274,7 +274,7 @@
 							.slider({
 								min: 0, 
 								max: bottom.length-1, 
-								value: default_values[10]-1
+								value: default_values[8]-1
 							})
 							.slider("pips", {
 								labels: bottom
@@ -284,7 +284,7 @@
 								labels: bottomimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[10] = (+ui.value+1);
+								default_values[8] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -293,7 +293,7 @@
 							.slider({
 								min: 0, 
 								max: innerthighs.length-1, 
-								value: default_values[11]-1
+								value: default_values[9]-1
 							})
 							.slider("pips", {
 								labels: innerthighs
@@ -303,7 +303,7 @@
 								labels: innerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[11] = (+ui.value+1);
+								default_values[9] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -311,7 +311,7 @@
 							.slider({
 								min: 0, 
 								max: outerthighs.length-1, 
-								value: default_values[12]-1
+								value: default_values[10]-1
 							})
 							.slider("pips", {
 								labels: outerthighs
@@ -321,7 +321,7 @@
 								labels: outerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[12] = (+ui.value+1);
+								default_values[10] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -330,7 +330,7 @@
 							.slider({
 								min: 0, 
 								max: lowerlegs.length-1, 
-								value: default_values[13]-1
+								value: default_values[11]-1
 							})
 							.slider("pips", {
 								labels: lowerlegs
@@ -340,7 +340,7 @@
 								labels: lowerlegsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[13] = (+ui.value+1);
+								default_values[11] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -381,11 +381,11 @@
 							"upper_arms_select_id" : ($('#mall-upperarms').attr('checked') == "checked")? default_values[5] :0,
 							"midriff_select_id" : ($('#mall-midriff').attr('checked') == "checked")? default_values[6] :0,
 							
-							"stomach_select_id" : ($('#mall-stomach').attr('checked') == "checked")? default_values[9] :0,
-							"bottom_select_id" : ($('#mall-bottom').attr('checked') == "checked")? default_values[10] :0,
-							"inner_thighs_select_id" : ($('#mall-innerthighs').attr('checked') == "checked")? default_values[11] :0,
-							"outer_thighs_select_id" : ($('#mall-outerthighs').attr('checked') == "checked")? default_values[12] :0,
-							"lower_legs_select_id" : ($('#mall-lowerlegs').attr('checked') == "checked")? default_values[13] :0
+							"stomach_select_id" : ($('#mall-stomach').attr('checked') == "checked")? default_values[7] :0,
+							"bottom_select_id" : ($('#mall-bottom').attr('checked') == "checked")? default_values[8] :0,
+							"inner_thighs_select_id" : ($('#mall-innerthighs').attr('checked') == "checked")? default_values[9] :0,
+							"outer_thighs_select_id" : ($('#mall-outerthighs').attr('checked') == "checked")? default_values[10] :0,
+							"lower_legs_select_id" : ($('#mall-lowerlegs').attr('checked') == "checked")? default_values[11] :0
 						};
 						
 						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
@@ -589,7 +589,7 @@
 			
 			<div class="homeprofile-head">
 				<br><br><br>
-				<p class="">Want to see garments perfect for you? Your personalized mall is ready!</p>
+				<p class=""> <strong>Your personalized mall is ready!</strong></p>
 				<div class="mall-link3">
 				<button class="bkpinkycolor home-vistmallbtn container noneLiner"  id="signup-popup">
 					SAVE AND GO SHOPPING <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>

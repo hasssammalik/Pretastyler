@@ -914,7 +914,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_score_by_user_specs($user_specs_str, $offset, $limit){
 		//calculate result
-		$query_str = "SELECT * FROM pas_garment RIGHT JOIN (SELECT garment_id, (AVG(LEAST(".$user_specs_str.")) + MIN(LEAST(".$user_specs_str."))) / 2 AS `score` FROM `pas_garment_specs` GROUP BY `garment_id` ) AS Scores ON (`pas_garment`.garment_id = Scores.garment_id) ORDER BY score DESC, date_created DESC LIMIT ".$offset.",".$limit;
+		$query_str = "SELECT * FROM pas_garment RIGHT JOIN (SELECT garment_id, (AVG(LEAST(".$user_specs_str.")) + MIN(LEAST(".$user_specs_str."))) / 2 AS `score` FROM `pas_garment_specs` GROUP BY `garment_id` ) AS Scores ON (`pas_garment`.garment_id = Scores.garment_id) WHERE score > 7.3 AND (category_id = 31 OR category_id = 22 OR category_id = 23 OR category_id = 37 OR category_id = 21 OR category_id = 29) AND enabled = 1 AND is_pattern = 0 AND is_standard = 1 ORDER BY RAND() LIMIT ".$offset.",".$limit;
 		$query = $this->db->query($query_str);
 		$result = $query->result_array();
 		return $result;
