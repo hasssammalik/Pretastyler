@@ -92,9 +92,9 @@ class Catalog extends CI_Controller {
 
 	public function welcome(){
 		$data['title'] = "Welcome to PretAStyler";
-		$data['content_class'] = "full_width_page";
+		$data['content_class'] = "welcome_full_page";
 		$data['extraFooter'] = TRUE;
-		
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('catalog/welcome', $data);
 

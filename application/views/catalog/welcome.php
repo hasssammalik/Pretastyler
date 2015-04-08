@@ -6,7 +6,8 @@
 </div>
 <style>
 .welcomepage{
-	background:url('/images/welcome-bg.png');
+	background:url('/images/welcome-bg.jpg');
+	background-size: cover;
 }
 .welcome-content{
 	width:400px;
