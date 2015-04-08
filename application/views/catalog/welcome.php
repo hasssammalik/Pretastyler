@@ -1,5 +1,5 @@
 <div class="mainContent ">
-<div class="welcomepage"><img src="/images/welcome-bg.jpg" alt=""/></div>
+<div class="welcomepage"></div>
 <div class="welcome-content">
 <div class="welcome-head">welcome user</div>
 <div class="welcome-body">We're thrilled to have you as part of our family of savvy fashion shoppers. <br> We've placed lots of cool features in your mall so don't forget to hover your mouse over tabs and icons to see what they do. </div>
@@ -26,3 +26,9 @@ padding:20px;
 	padding:20px;
 }
 </style>
+<script>
+$(document).ready(function(){
+	$('.welcomepage').css("height", $(document).height());
+	$('.welcomepage').css("width", $(document).width());
+})
+</script>
