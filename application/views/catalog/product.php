@@ -1,9 +1,9 @@
 <div class="mainContent ">
 	<div class="productDisplay">
 		<div class="cross"><div class="cross-image"><img src="/images/pink_button-05.png" alt /></div></div>
-		<div id="product" class="productWrap <?php if ($this->flexi_auth->is_logged_in() && $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'))) { ?> loggedInSmallDetails <?php } ?>">
+		<div id="product" class="productWrap <?php if ($this->flexi_auth->is_logged_in() ) { ?> loggedInSmallDetails <?php } ?>">
 			
-			<?php if ($this->flexi_auth->is_logged_in() && $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'))) { ?>
+			<?php if ($this->flexi_auth->is_logged_in()) { ?>
 				
 				<?php 
 					if ($garment['score']){
@@ -126,7 +126,7 @@
 								
 								<div class="">
 									
-									<?php if ($this->flexi_auth->is_logged_in() && $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'))) { ?>
+									<?php if ($this->flexi_auth->is_logged_in()) { ?>
 										<div class="productRate">
 											<?php echo ( empty($score) ? 0 : $score ) ; ?>
 											<i class="icon-star"></i>
@@ -282,7 +282,7 @@
 							</div>
 							
 							
-							<?php if ($this->flexi_auth->is_logged_in() && $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers'))) { ?>
+							<?php if ($this->flexi_auth->is_logged_in()) { ?>
 								
 								<div class="panel2 newpanelDesign" id="styingRecon">
 									
