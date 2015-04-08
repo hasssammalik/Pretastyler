@@ -32,8 +32,8 @@
 	padding: 20px;
 	margin: 0px auto;
 }
-.infoBox h3{
-	color:#e72775;
+.welcome_full_page .infoBox h3{
+	color:#e72775!important;
 }
 .welcome_full_page{
 	background:url('/images/welcome-bg.jpg');
