@@ -94,9 +94,7 @@ class Catalog extends CI_Controller {
 		$data['title'] = "Welcome to PretAStyler";
 		$data['content_class'] = "full_width_page";
 		$data['extraFooter'] = TRUE;
-		if ($this->flexi_auth->is_logged_in()){
-			$this->data['first_name'] = $this->user_model->get_user_name($this->flexi_auth->get_user_id())['first_name'];
-		}
+		
 		$this->load->view('templates/header', $data);
 		$this->load->view('catalog/welcome', $data);
 
