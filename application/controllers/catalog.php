@@ -89,6 +89,15 @@ class Catalog extends CI_Controller {
 		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/home', $data);
 	}
+
+	public function welcome(){
+		$data['title'] = "Welcome to PretAStyler";
+		$data['content_class'] = "full_width_page";
+		$data['extraFooter'] = TRUE;
+		$this->load->view('templates/header', $data);
+		$this->load->view('catalog/welcome', $data);
+
+	}
 	
 	public function your_mall()
 	{
