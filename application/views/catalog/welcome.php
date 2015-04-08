@@ -5,33 +5,7 @@
 <div class="welcome-body">We're thrilled to have you as part of our family of savvy fashion shoppers. <br> We've placed lots of cool features in your mall so don't forget to hover your mouse over tabs and icons to see what they do. </div>
 </div>
 </div>
-<style>
-.welcomepage{
-	background:url('/images/welcome-bg.jpg');
-	background-size: cover;
-}
-.welcome-content{
-	position:fixed;
-	width:400px;
-	margin:200px auto;
-}
-.welcome-head{
-background:white;
-text-transform: uppercase;
-padding:20px;
-}
-.welcome-body{
-	background:white;
-	margin-top:10px;
-	padding:20px;
-}
-</style>
-<script>
-$(document).ready(function(){
-	$('.welcomepage').css("height", $(document).height());
-	$('.welcomepage').css("width", $(document).width());
-})
-</script> -->
+ -->
 <div class="mainContent">
 
 	<div class="infoBox successpage center">
@@ -62,3 +36,39 @@ $(document).ready(function(){
 	</div>
 
 </div>
+<style>
+.infoBox{
+	  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 300px;
+  padding: 20px;
+  margin: 0px auto;
+}
+.welcome_full_page{
+	background:url('/images/welcome-bg.jpg');
+	background-size: cover;
+}
+.welcome-content{
+	position:fixed;
+	width:400px;
+	margin:200px auto;
+}
+.welcome-head{
+background:white;
+text-transform: uppercase;
+padding:20px;
+}
+.welcome-body{
+	background:white;
+	margin-top:10px;
+	padding:20px;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$('.welcome_full_page').css("height", $(document).height());
+	$('.welcome_full_page').css("width", $(document).width());
+})
+</script>
