@@ -91,6 +91,10 @@ class Catalog extends CI_Controller {
 	}
 
 	public function welcome(){
+		$this->load->library('user_check');
+	    if ($this->flexi_auth->is_logged_in()){
+	        redirect('/', 'refresh');
+	    }
 		$data = $this->data;
 		$data['title'] = "Welcome to PretAStyler";
 		$data['content_class'] = "welcome_full_page";

@@ -784,7 +784,7 @@
 							"shoulders_select_id" : default_values[8],
 							"face_shape_select_id" : default_values[9],
 							
-						    "neck_select_id" : ($('#mall-neck').attr('checked') == "checked")? default_values[10] :0,
+						   "neck_select_id" : ($('#mall-neck').attr('checked') == "checked")? default_values[10] :0,
 							"back_select_id" : ($('#mall-back').attr('checked') == "checked")? default_values[11] :0,
 							"upper_arms_select_id" : ($('#mall-upperarms').attr('checked') == "checked")? default_values[12] :0,
 							"midriff_select_id" : ($('#mall-midriff').attr('checked') == "checked")? default_values[13] :0,
