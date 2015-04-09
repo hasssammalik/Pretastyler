@@ -82,6 +82,7 @@ class Catalog extends CI_Controller {
 		$data['extraJS'] = '
 		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 		<script src="/js/jquery-ui-slider-pips.js"></script>
+		<script src="/js/circular-progress.js"></script>
 		';
 		$data['similar_garments'] = $this->garment_model->get_similar_products();
 		
@@ -129,6 +130,7 @@ class Catalog extends CI_Controller {
 		<script src="/js/jquery-ui-slider-pips.js"></script>
 		<link rel="stylesheet" href="/css/jquery-ui.css">
 		<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		<script src="/js/circular-progress.js"></script>
 		';
 		
 
