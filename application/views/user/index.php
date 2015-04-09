@@ -190,9 +190,7 @@
 					//var default_values = [3,5,2,4,1,4,2  , 4,2,2,8,3,2,2,2,2,2,2,2,2 ];
 					
 					var default_values = [<?php echo $user_selection; ?>];
-					console.log(default_values);
 					
-
 					$(function(){
 						
 						var height 			= [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
@@ -258,7 +256,7 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-38.png" /></div><ul><li>You consider yourself to be in the substantially overweight range</li><li>Your widest area is between your bust and hipline</li><li>You have a full, high stomach that starts just under your bustline.</li><li>Sometimes others may mistake you for being pregnant.</li></ul></div>' 
 						];
 						var bodyratioimage = [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-10.png" /></div><ul><li>Your torso is equal in length to your legs.</li><li>The fullest part of your bottom protrudes at approximately half your height.</li><li>Weight gain is first experienced between your bust and hipline.</li><li>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.</li><li>The most common body ratio of Caucasian women</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-10.png" /></div><ul><li>Your torso is equal in length to your legs.</li><li>The fullest part of your bottom protrudes at approximately half your height.</li><li>Weight gain is first experienced between your bust and hipline.</li><li>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.</li><li>The most common body ratio of Caucasian women</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-09.png" /></div><ul><li>Your legs are longer than your body.</li><li>Your torso is short and your waistline feels/is high.</li><li>Weight gain is first experienced at your midriff, stomach and high on the back of your hips.</li><li>Bend your elbow 90% to the floor: you are a Long Legged and Short Bodied if your waist is above your bent elbow.</li><li>The most common body ratio of African American women</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-11.png" /></div><ul><li>You have a long body and short legs.</li><li>Weight gain is first experienced at your bottom, hips and thighs.</li><li>You have a low waistline.</li><li>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.</li><li>The most common body ratio of Asian women"</li></ul></div>',
 												];
@@ -579,6 +577,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[10] = (+ui.value+1);
+								
 							});
 						
 						
@@ -597,6 +596,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[11] = (+ui.value+1);
+								
 							});
 						
 						
@@ -615,6 +615,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[12] = (+ui.value+1);
+								
 							});
 						
 						
@@ -633,6 +634,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[13] = (+ui.value+1);
+								
 							});
 						
 						
@@ -651,6 +653,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[14] = (+ui.value+1);
+								
 							});
 						
 						
@@ -669,6 +672,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[15] = (+ui.value+1);
+								
 							});
 						
 						
@@ -687,6 +691,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[16] = (+ui.value+1);
+								
 							});
 						
 						$(".newprofile-outerthighs")
@@ -704,6 +709,7 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[17] = (+ui.value+1);
+								
 							});
 						
 						$(".newprofile-lowerlegs")
@@ -721,10 +727,11 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[18] = (+ui.value+1);
+								
 							});
 						
 
-						for (var i = 11; i < 19; i++) {
+						for (var i = 10; i < 19; i++) {
 							if( default_values[i] > 0 ){
 								$('.your-mall-checkbox > label').eq(i-11).find('input').prop('checked', true);
 								toggle_div_class(i-11);
@@ -747,6 +754,70 @@
 							input_minBust = 0;
 						}
 						
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[10] == 0 ){
+								default_values[10] = 1;
+							}
+						} else {
+							default_values[10] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[11] == 0 ){
+								default_values[11] = 1;
+							}
+						} else {
+							default_values[11] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[12] == 0 ){
+								default_values[12] = 1;
+							}
+						} else {
+							default_values[12] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[13] == 0 ){
+								default_values[13] = 1;
+							}
+						} else {
+							default_values[13] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[14] == 0 ){
+								default_values[14] = 1;
+							}
+						} else {
+							default_values[14] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[15] == 0 ){
+								default_values[15] = 1;
+							}
+						} else {
+							default_values[15] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[16] == 0 ){
+								default_values[16] = 1;
+							}
+						} else {
+							default_values[16] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[17] == 0 ){
+								default_values[17] = 1;
+							}
+						} else {
+							default_values[17] = 0;
+						}
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[18] == 0 ){
+								default_values[18] = 1;
+							}
+						} else {
+							default_values[18] = 0;
+						}
+						
 						var requestvalues = { 
 
 							"height_select_id" : default_values[0],
@@ -762,16 +833,16 @@
 							"shoulders_select_id" : default_values[8],
 							"face_shape_select_id" : default_values[9],
 							
-						   "neck_select_id" : ($('#mall-neck').attr('checked') == "checked")? default_values[10] :0,
-							"back_select_id" : ($('#mall-back').attr('checked') == "checked")? default_values[11] :0,
-							"upper_arms_select_id" : ($('#mall-upperarms').attr('checked') == "checked")? default_values[12] :0,
-							"midriff_select_id" : ($('#mall-midriff').attr('checked') == "checked")? default_values[13] :0,
+						   "neck_select_id" : default_values[10],
+							"back_select_id" : default_values[11],
+							"upper_arms_select_id" : default_values[12],
+							"midriff_select_id" : default_values[13],
 							
-							"stomach_select_id" : ($('#mall-stomach').attr('checked') == "checked")? default_values[14] :0,
-							"bottom_select_id" : ($('#mall-bottom').attr('checked') == "checked")? default_values[15] :0,
-							"inner_thighs_select_id" : ($('#mall-innerthighs').attr('checked') == "checked")? default_values[16] :0,
-							"outer_thighs_select_id" : ($('#mall-outerthighs').attr('checked') == "checked")? default_values[17] :0,
-							"lower_legs_select_id" : ($('#mall-lowerlegs').attr('checked') == "checked")? default_values[18] :0
+							"stomach_select_id" : default_values[14],
+							"bottom_select_id" : default_values[15],
+							"inner_thighs_select_id" : default_values[16],
+							"outer_thighs_select_id" : default_values[17],
+							"lower_legs_select_id" : default_values[18]
 						};
 
 						
@@ -788,6 +859,7 @@
 					
 					function toggle_div_class(class_num){
 						if (false == $(".profile-your-mall-hidden-"+class_num).is(':visible')) {
+						
 							$(".profile-your-mall-hidden-"+class_num).show();
 						}
 						else {
