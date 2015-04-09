@@ -1086,7 +1086,7 @@
 							<div class="newprofile-lowerlegs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
-					</div>
+					</div><br><br>
 					<div class="bodyEditSection editSection profile-save bkpinkycolor i u b mousehand" data-action="save"><span class="">SAVE</span></div></div>
 					
 
