@@ -71,25 +71,25 @@
 						<h4><strong>BOOM, YOU HAVE A WINNER</strong></h4>
 						<p>You're going to turn heads and break hearts in this little number.</p>
 					</div>
-					<? } else if (  $garment['score'] > 6 ) { ?>
+					<?php } else if (  $garment['score'] > 6 ) { ?>
 					<div class="assessmentResult">
 						<h3><strong>GOOD</strong></h3>
 						<h4><strong>LOOKING GOOD, GORGEOUS</strong></h4>
 						<p>Figure flattering and fabulous all at the same time.</p>
 					</div>
-					<? } else if ( $garment['score'] > 5 ) { ?>
+					<?php } else if ( $garment['score'] > 5 ) { ?>
 					<div class="assessmentResult">
 						<h3><strong>MAYBE</strong></h3>
 						<h4><strong>MMM, BIT OF A RISKY PURCHASE</strong></h4>
 						<p>Why take the risk on this one when you can find something better?</p>
 					</div>
-					<? } else { ?>
+					<?php } else { ?>
 					<div class="assessmentResult">
 						<h3><strong>AVOID</strong></h3>
 						<h4><strong>DERP, YOU DESERVE BETTER THAN THIS</strong></h4>
 						<p>You can look so much better. Give this one a miss.</p>
 					</div>
-					<? } ?>
+					<?php } ?>
 					
 					
 					<h4><span>WHAT'S NEXT?</span></h4>
