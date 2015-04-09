@@ -733,8 +733,8 @@
 
 						for (var i = 10; i < 19; i++) {
 							if( default_values[i] > 0 ){
-								$('.your-mall-checkbox > label').eq(i-11).find('input').prop('checked', true);
-								toggle_div_class(i-11);
+								$('.your-mall-checkbox > label').eq(i-10).find('input').prop('checked', true);
+								toggle_div_class(i-10);
 							}
 						};
 						
