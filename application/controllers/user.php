@@ -164,6 +164,21 @@ class User extends CI_Controller {
 		}
 	}
 	/**
+	 * History button for this controller.
+	 */
+	public function history()
+	{
+		if (!$this->input->post()){
+			show_404();
+		}
+		$garment_id = $this->input->post('garment_id', TRUE);
+		if ($garment_id && $this->flexi_auth->is_logged_in()) {
+			$this->garment_model->update_user_garment_favorite_history($garment_id, $this->flexi_auth->get_user_id());
+		} else {
+			show_404();
+		}
+	}
+	/**
 	 * Deprecated
 	 * Finds Page for this controller.
 	 */
