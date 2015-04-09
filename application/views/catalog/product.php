@@ -258,8 +258,8 @@
 								}
 								print $garment['url']; 
 							?>" class="button buy" target="_blank">BUY / LEARN MORE</a></li>
-										<li class=""><a href="/mall/similar/<?php print $garment['garment_id'] . '-'. $garment['name'] ?>" class="button other" target="_blank">SIMILAR GARMENTS</a></li>
-										<li class=""><a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>favorite-click <?php } else{ ?> login_alert_user<?php } ?>" target="_blank">ADD TO WISHLIST</a></li>
+										<li class=""><a href="/mall/similar/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button other" target="_blank">SIMILAR GARMENTS</a></li>
+										<li class=""><a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>favorite-click-product-page <?php } else{ ?> login_alert_user<?php } ?>" target="_blank">ADD TO WISHLIST</a></li>
 										<ul>
 										</div>
 										<ul class="bottomOptions">
