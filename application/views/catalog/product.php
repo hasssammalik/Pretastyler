@@ -260,7 +260,10 @@
 							?>" class="button buy" target="_blank">BUY / LEARN MORE</a></li>
 										<li class=""><a href="/mall/similar/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button other" target="_blank">SIMILAR GARMENTS</a></li>
 										<li class="">
-											<a class="mousehand button other <?php if ($this->flexi_auth->is_logged_in()){?>favorite-click-product-page <?php if( !empty($garment['favorite'])) { if( $garment['favorite'] == 1){ print 'bkpinkycolor'; $faved = 1; } } else{ ?> login_alert_user<?php } ?>">
+											<a class="mousehand button other <?php
+											if ($this->flexi_auth->is_logged_in()){
+												?>favorite-click-product-page <?php
+													if( !empty($garment['favorite'])) { if( $garment['favorite'] == 1){ print 'bkpinkycolor'; $faved = 1; } } } else{ ?> login_alert_user<?php } ?>">
 											<?php if( !empty($faved)){
 													echo 'ADDED TO WISHLIST';
 												} else {
