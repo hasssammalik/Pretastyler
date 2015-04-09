@@ -484,6 +484,10 @@
 							default_values[5] = (+ui.value+1);
 							if( ui.value > 3 ){
 								$(".bustCheck").show();
+								<?php if ( $minBust > 0 ){ ?>
+									$('.minBust-check').prop('checked', true);
+								<?php } ?>
+									
 							} else {
 								$(".bustCheck").hide();
 							}

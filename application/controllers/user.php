@@ -73,8 +73,7 @@ class User extends CI_Controller {
 										$data['user_info']["body_ratio_select_id"] ,	
 										$data['user_info']["bra_select_id" ],
 										$data['user_info']["build_select_id" ],
-										$data['user_info']["minBust"] ,
-
+										
 										$data['user_info']["neck_length_select_id"] ,
 										$data['user_info']["shoulders_select_id"] ,
 										$data['user_info']["face_shape_select_id"] ,	
@@ -91,6 +90,7 @@ class User extends CI_Controller {
 										$data['user_info']["lower_legs_select_id" ]
 										
 								));
+		$data['minBust'] = $data['user_info']["minBust"];
 
 		$value_array = array('height', 'weight', 'age', 'bra');
 		foreach ($value_array as $value_value){
