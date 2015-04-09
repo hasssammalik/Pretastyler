@@ -59,6 +59,7 @@ class User extends CI_Controller {
 							<script src="/js/jquery.sticky-kit.min.js"></script>
 							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 							<script src="/js/jquery-ui-slider-pips.js"></script>
+							<script src="/js/circular-progress.js"></script>
 		';
 
 		$user_id = $this->flexi_auth->get_user_id();

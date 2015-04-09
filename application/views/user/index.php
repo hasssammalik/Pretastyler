@@ -852,9 +852,15 @@
 								pas_secret_name:$("input[name=pas_secret_name]").val()
 								}, 
 						function( data ) {
+							
+						});
+						if( brandnewloader(30) == true ){
 							$( ".bodyEditSection" ).text( "Profile saved" );
 							window.location.reload();
-						});
+						}
+						
+						
+
 					}
 					
 					function toggle_div_class(class_num){

@@ -27,6 +27,7 @@
 	</div> <?php }?>
 <div class="modal"></div>
 <div class="popup_modal"></div>
+<div class="brandnewmodal"></div>
 <div class="popup-box"></div>
 
 <?php 
