@@ -321,7 +321,7 @@
 						'<div id="talkbubble"><ul><li>Select if you have an undefined chin in a side profile. </li></ul></div>' 
 						];
 						
-					var backimage = [ 
+					    var backimage = [ 
 						'<div id="talkbubble" class="doubleline"><ul><li>You have a very rounded shoulder line.</li><li>The roundness starts at the base of your neck and extends to your shoulder blades.</li><li>Your head protrudes forward causing round neck tops to bind in front and sit away from the neck at the back.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>You have a definite curve in the lower spine causing straight skirts to have a roll of excess fabric below the waistband in the back.</li></ul></div>' 
 						];
@@ -387,7 +387,6 @@
 						.on("slidechange", function(e,ui) {
 							//$(".val1").text( "You selected " + heightimage[ui.value] + " (" + ui.value + ")");
 							default_values[0] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						$(".newprofile-size")
@@ -405,8 +404,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[1] = (+ui.value+1);
-						
-							pull_profile_garment();
 						});
 						
 						
@@ -425,7 +422,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[2] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						
@@ -444,7 +440,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[3] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						
@@ -463,7 +458,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[4] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						
@@ -491,7 +485,6 @@
 							} else {
 								$(".bustCheck").hide();
 							}
-							pull_profile_garment();
 						});
 						
 						
@@ -510,7 +503,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[6] = (+ui.value+1);
-							pull_profile_garment();
 						});
 
 
@@ -533,7 +525,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[7] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -552,7 +543,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[8] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -571,7 +561,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[9] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -590,7 +579,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[10] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -609,7 +597,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[11] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -628,7 +615,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[12] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -647,7 +633,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[13] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -666,7 +651,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[14] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -685,7 +669,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[15] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						
@@ -704,7 +687,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[16] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						$(".newprofile-outerthighs")
@@ -722,7 +704,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[17] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 						$(".newprofile-lowerlegs")
@@ -740,7 +721,6 @@
 							})
 							.on("slidechange", function(e,ui) {
 								default_values[18] = (+ui.value+1);
-								pull_profile_garment();
 							});
 						
 
@@ -751,11 +731,6 @@
 							}
 						};
 						
-
-						$(document).on("change", ".minBust-check", function(){
-							pull_profile_garment();
-						});
-						
 						$(document).on("click", '.bodyEditSection', function(){
 							$('.bodyEditSection').removeClass("u").html('<span style="color: #e72775; font-size: 14px;">saving...</span>');
 							pull_profile_garment_update_button();
@@ -764,7 +739,6 @@
 						
 					});
 					
-					function pull_profile_garment() {}
 					function pull_profile_garment_update_button() {
 					
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
