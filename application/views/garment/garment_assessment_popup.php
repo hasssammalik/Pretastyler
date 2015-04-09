@@ -95,10 +95,10 @@
 					<h4><span>WHAT'S NEXT?</span></h4>
 					<div class="buttonsHolder">
 						<a href="/mall/similar/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button" target="_parent" >See similar items</a>
-						<a href="/product/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button"target="_parent" >See garment insights</a>
-						<a href="/user/my-dressing-room.html" class="button" target="_parent" >open my dessing room</a>
+						<a href="/product/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button" target="_parent" >See garment insights</a>
+						<a href="/user/my-dressing-room.html#itemsPendingGarment" class="button" target="_parent" >open my dessing room</a>
 						<a href="/mall.html" class="button" target="_parent" >go to the shopping mall</a>
-						<a href="/user/my-finds.html" class="button" target="_parent" >go to my finds</a>
+						<a href="/user/my-dressing-room.html#myfinds" class="button" target="_parent" >go to my finds</a>
 						<a href="<?php print $garment['url'] ?>" target="_parent"  class="button">buy item</a>
 						<a href="/garment/edit/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button" target="_parent" >edit my item</a>
 					</div>
