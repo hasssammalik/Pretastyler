@@ -761,56 +761,56 @@
 						} else {
 							default_values[10] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-back').attr('checked') == "checked") {
 							if( default_values[11] == 0 ){
 								default_values[11] = 1;
 							}
 						} else {
 							default_values[11] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-upperarms').attr('checked') == "checked") {
 							if( default_values[12] == 0 ){
 								default_values[12] = 1;
 							}
 						} else {
 							default_values[12] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-midriff').attr('checked') == "checked") {
 							if( default_values[13] == 0 ){
 								default_values[13] = 1;
 							}
 						} else {
 							default_values[13] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-stomach').attr('checked') == "checked") {
 							if( default_values[14] == 0 ){
 								default_values[14] = 1;
 							}
 						} else {
 							default_values[14] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-bottom').attr('checked') == "checked") {
 							if( default_values[15] == 0 ){
 								default_values[15] = 1;
 							}
 						} else {
 							default_values[15] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-innerthighs').attr('checked') == "checked") {
 							if( default_values[16] == 0 ){
 								default_values[16] = 1;
 							}
 						} else {
 							default_values[16] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-outerthighs').attr('checked') == "checked") {
 							if( default_values[17] == 0 ){
 								default_values[17] = 1;
 							}
 						} else {
 							default_values[17] = 0;
 						}
-						if( $('#mall-neck').attr('checked') == "checked") {
+						if( $('#mall-lowerlegs').attr('checked') == "checked") {
 							if( default_values[18] == 0 ){
 								default_values[18] = 1;
 							}
