@@ -191,7 +191,6 @@
 					
 					var default_values = [<?php echo $user_selection; ?>];
 					
-
 					$(function(){
 						
 						var height 			= [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
@@ -257,7 +256,7 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-38.png" /></div><ul><li>You consider yourself to be in the substantially overweight range</li><li>Your widest area is between your bust and hipline</li><li>You have a full, high stomach that starts just under your bustline.</li><li>Sometimes others may mistake you for being pregnant.</li></ul></div>' 
 						];
 						var bodyratioimage = [ 
-            '<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-10.png" /></div><ul><li>Your torso is equal in length to your legs.</li><li>The fullest part of your bottom protrudes at approximately half your height.</li><li>Weight gain is first experienced between your bust and hipline.</li><li>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.</li><li>The most common body ratio of Caucasian women</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-10.png" /></div><ul><li>Your torso is equal in length to your legs.</li><li>The fullest part of your bottom protrudes at approximately half your height.</li><li>Weight gain is first experienced between your bust and hipline.</li><li>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.</li><li>The most common body ratio of Caucasian women</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-09.png" /></div><ul><li>Your legs are longer than your body.</li><li>Your torso is short and your waistline feels/is high.</li><li>Weight gain is first experienced at your midriff, stomach and high on the back of your hips.</li><li>Bend your elbow 90% to the floor: you are a Long Legged and Short Bodied if your waist is above your bent elbow.</li><li>The most common body ratio of African American women</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body ratio/featues-11.png" /></div><ul><li>You have a long body and short legs.</li><li>Weight gain is first experienced at your bottom, hips and thighs.</li><li>You have a low waistline.</li><li>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.</li><li>The most common body ratio of Asian women"</li></ul></div>',
 												];
@@ -320,7 +319,7 @@
 						'<div id="talkbubble"><ul><li>Select if you have an undefined chin in a side profile. </li></ul></div>' 
 						];
 						
-					var backimage = [ 
+					    var backimage = [ 
 						'<div id="talkbubble" class="doubleline"><ul><li>You have a very rounded shoulder line.</li><li>The roundness starts at the base of your neck and extends to your shoulder blades.</li><li>Your head protrudes forward causing round neck tops to bind in front and sit away from the neck at the back.</li></ul></div>',
 						'<div id="talkbubble"><ul><li>You have a definite curve in the lower spine causing straight skirts to have a roll of excess fabric below the waistband in the back.</li></ul></div>' 
 						];
@@ -386,7 +385,6 @@
 						.on("slidechange", function(e,ui) {
 							//$(".val1").text( "You selected " + heightimage[ui.value] + " (" + ui.value + ")");
 							default_values[0] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						$(".newprofile-size")
@@ -404,8 +402,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[1] = (+ui.value+1);
-						
-							pull_profile_garment();
 						});
 						
 						
@@ -424,7 +420,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[2] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						
@@ -443,7 +438,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[3] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						
@@ -462,7 +456,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[4] = (+ui.value+1);
-							pull_profile_garment();
 						});
 						
 						
@@ -483,10 +476,13 @@
 							default_values[5] = (+ui.value+1);
 							if( ui.value > 3 ){
 								$(".bustCheck").show();
+								<?php if ( $minBust > 0 ){ ?>
+									$('.minBust-check').prop('checked', true);
+								<?php } ?>
+									
 							} else {
 								$(".bustCheck").hide();
 							}
-							pull_profile_garment();
 						});
 						
 						
@@ -505,7 +501,6 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[6] = (+ui.value+1);
-							pull_profile_garment();
 						});
 
 
@@ -517,7 +512,7 @@
 							.slider({
 								min: 0, 
 								max: necklength.length-1, 
-								value: default_values[0]-1
+								value: default_values[7]-1
 							})
 							.slider("pips", {
 								labels: necklength
@@ -527,8 +522,7 @@
 								labels: necklengthimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[0] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[7] = (+ui.value+1);
 							});
 						
 						
@@ -536,7 +530,7 @@
 							.slider({
 								min: 0, 
 								max: shoulders.length-1, 
-								value: default_values[2]-1
+								value: default_values[8]-1
 							})
 							.slider("pips", {
 								labels: shoulders
@@ -546,8 +540,7 @@
 								labels: shouldersimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[2] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[8] = (+ui.value+1);
 							});
 						
 						
@@ -555,7 +548,7 @@
 							.slider({
 								min: 0, 
 								max: faceshape.length-1, 
-								value: default_values[3]-1
+								value: default_values[9]-1
 							})
 							.slider("pips", {
 								labels: faceshape
@@ -565,8 +558,7 @@
 								labels: faceshapeimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[3] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[9] = (+ui.value+1);
 							});
 						
 						
@@ -574,7 +566,7 @@
 							.slider({
 								min: 0, 
 								max: neck.length-1, 
-								value: default_values[4]-1
+								value: default_values[10]-1
 							})
 							.slider("pips", {
 								labels: neck
@@ -584,8 +576,8 @@
 								labels: neckimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[4] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[10] = (+ui.value+1);
+								
 							});
 						
 						
@@ -593,7 +585,7 @@
 							.slider({
 								min: 0, 
 								max: back.length-1, 
-								value: default_values[5]-1
+								value: default_values[11]-1
 							})
 							.slider("pips", {
 								labels: back
@@ -603,8 +595,8 @@
 								labels: backimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[5] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[11] = (+ui.value+1);
+								
 							});
 						
 						
@@ -612,7 +604,7 @@
 							.slider({
 								min: 0, 
 								max: upperarms.length-1, 
-								value: default_values[6]-1
+								value: default_values[12]-1
 							})
 							.slider("pips", {
 								labels: upperarms
@@ -622,8 +614,8 @@
 								labels: upperarmsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[6] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[12] = (+ui.value+1);
+								
 							});
 						
 						
@@ -631,7 +623,7 @@
 							.slider({
 								min: 0, 
 								max: midriff.length-1, 
-								value: default_values[8]-1
+								value: default_values[13]-1
 							})
 							.slider("pips", {
 								labels: midriff
@@ -641,8 +633,8 @@
 								labels: midriffimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[8] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[13] = (+ui.value+1);
+								
 							});
 						
 						
@@ -650,7 +642,7 @@
 							.slider({
 								min: 0, 
 								max: stomach.length-1, 
-								value: default_values[9]-1
+								value: default_values[14]-1
 							})
 							.slider("pips", {
 								labels: stomach
@@ -660,8 +652,8 @@
 								labels: stomachimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[9] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[14] = (+ui.value+1);
+								
 							});
 						
 						
@@ -669,7 +661,7 @@
 							.slider({
 								min: 0, 
 								max: bottom.length-1, 
-								value: default_values[10]-1
+								value: default_values[15]-1
 							})
 							.slider("pips", {
 								labels: bottom
@@ -679,8 +671,8 @@
 								labels: bottomimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[10] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[15] = (+ui.value+1);
+								
 							});
 						
 						
@@ -688,7 +680,7 @@
 							.slider({
 								min: 0, 
 								max: innerthighs.length-1, 
-								value: default_values[11]-1
+								value: default_values[16]-1
 							})
 							.slider("pips", {
 								labels: innerthighs
@@ -698,15 +690,15 @@
 								labels: innerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[11] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[16] = (+ui.value+1);
+								
 							});
 						
 						$(".newprofile-outerthighs")
 							.slider({
 								min: 0, 
 								max: outerthighs.length-1, 
-								value: default_values[13]-1
+								value: default_values[17]-1
 							})
 							.slider("pips", {
 								labels: outerthighs
@@ -716,15 +708,15 @@
 								labels: outerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[13] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[17] = (+ui.value+1);
+								
 							});
 						
 						$(".newprofile-lowerlegs")
 							.slider({
 								min: 0, 
 								max: lowerlegs.length-1, 
-								value: default_values[13]-1
+								value: default_values[18]-1
 							})
 							.slider("pips", {
 								labels: lowerlegs
@@ -734,22 +726,17 @@
 								labels: lowerlegsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[13] = (+ui.value+1);
-								pull_profile_garment();
+								default_values[18] = (+ui.value+1);
+								
 							});
 						
 
-						for (var i = 11; i < 19; i++) {
+						for (var i = 10; i < 19; i++) {
 							if( default_values[i] > 0 ){
-								$('.your-mall-checkbox > label').eq(i-11).find('input').prop('checked', true);
-								toggle_div_class(i-11);
+								$('.your-mall-checkbox > label').eq(i-10).find('input').prop('checked', true);
+								toggle_div_class(i-10);
 							}
 						};
-						
-
-						$(document).on("change", ".minBust-check", function(){
-							pull_profile_garment();
-						});
 						
 						$(document).on("click", '.bodyEditSection', function(){
 							$('.bodyEditSection').removeClass("u").html('<span style="color: #e72775; font-size: 14px;">saving...</span>');
@@ -759,15 +746,76 @@
 						
 					});
 					
-					function pull_profile_garment() {
-						
-					}
 					function pull_profile_garment_update_button() {
 					
 						var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
 
 						if( default_values[5] < 4 ){
 							input_minBust = 0;
+						}
+						
+						if( $('#mall-neck').attr('checked') == "checked") {
+							if( default_values[10] == 0 ){
+								default_values[10] = 1;
+							}
+						} else {
+							default_values[10] = 0;
+						}
+						if( $('#mall-back').attr('checked') == "checked") {
+							if( default_values[11] == 0 ){
+								default_values[11] = 1;
+							}
+						} else {
+							default_values[11] = 0;
+						}
+						if( $('#mall-upperarms').attr('checked') == "checked") {
+							if( default_values[12] == 0 ){
+								default_values[12] = 1;
+							}
+						} else {
+							default_values[12] = 0;
+						}
+						if( $('#mall-midriff').attr('checked') == "checked") {
+							if( default_values[13] == 0 ){
+								default_values[13] = 1;
+							}
+						} else {
+							default_values[13] = 0;
+						}
+						if( $('#mall-stomach').attr('checked') == "checked") {
+							if( default_values[14] == 0 ){
+								default_values[14] = 1;
+							}
+						} else {
+							default_values[14] = 0;
+						}
+						if( $('#mall-bottom').attr('checked') == "checked") {
+							if( default_values[15] == 0 ){
+								default_values[15] = 1;
+							}
+						} else {
+							default_values[15] = 0;
+						}
+						if( $('#mall-innerthighs').attr('checked') == "checked") {
+							if( default_values[16] == 0 ){
+								default_values[16] = 1;
+							}
+						} else {
+							default_values[16] = 0;
+						}
+						if( $('#mall-outerthighs').attr('checked') == "checked") {
+							if( default_values[17] == 0 ){
+								default_values[17] = 1;
+							}
+						} else {
+							default_values[17] = 0;
+						}
+						if( $('#mall-lowerlegs').attr('checked') == "checked") {
+							if( default_values[18] == 0 ){
+								default_values[18] = 1;
+							}
+						} else {
+							default_values[18] = 0;
 						}
 						
 						var requestvalues = { 
@@ -785,7 +833,7 @@
 							"shoulders_select_id" : default_values[8],
 							"face_shape_select_id" : default_values[9],
 							
-							"neck_select_id" : default_values[10],
+						   "neck_select_id" : default_values[10],
 							"back_select_id" : default_values[11],
 							"upper_arms_select_id" : default_values[12],
 							"midriff_select_id" : default_values[13],
@@ -795,7 +843,6 @@
 							"inner_thighs_select_id" : default_values[16],
 							"outer_thighs_select_id" : default_values[17],
 							"lower_legs_select_id" : default_values[18]
-							
 						};
 
 						
@@ -805,12 +852,20 @@
 								pas_secret_name:$("input[name=pas_secret_name]").val()
 								}, 
 						function( data ) {
-							$( ".bodyEditSection" ).text( "Profile saved." );
+							
 						});
+						if( brandnewloader(3, 'redirect') == true ){
+							$( ".bodyEditSection" ).text( "Profile saved" );
+							window.location.reload();
+						}
+						
+						
+
 					}
 					
 					function toggle_div_class(class_num){
 						if (false == $(".profile-your-mall-hidden-"+class_num).is(':visible')) {
+						
 							$(".profile-your-mall-hidden-"+class_num).show();
 						}
 						else {
@@ -1083,8 +1138,8 @@
 							<div class="newprofile-lowerlegs" id="circles-slider"></div>
 						</div>
 						<div class="clear"></div>
-					</div>
-					<div class="profile-save mousehand  i bkpinkycolor" data-action="save">Save</div>
+					</div><br><br>
+					<div class="bodyEditSection editSection profile-save bkpinkycolor i u b mousehand" data-action="save"><span class="">SAVE</span></div></div>
 					
 
 

@@ -34,7 +34,7 @@ class Catalog extends CI_Controller {
 			'colours1' => $this->colour_model->get_available_colours(),
 			'colours2' => $this->colour_model->get_available_colours(TRUE),
 			'occasions' => $this->occasion_model->get_available_occasions()
-		);
+			);
 		if ($this->flexi_auth->is_logged_in()){
 			$this->data['first_name'] = $this->user_model->get_user_name($this->flexi_auth->get_user_id())['first_name'];
 		}
@@ -50,7 +50,7 @@ class Catalog extends CI_Controller {
 		$data['content_class'] = "content2";
 		$data['extraFooter'] = TRUE;
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
-							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+		<meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 		';
 		
 		
@@ -62,10 +62,10 @@ class Catalog extends CI_Controller {
 	public function index()
 	{
 		$this->load->library('user_check');
-	    if ($this->flexi_auth->is_logged_in()){
-	        redirect('/mall', 'refresh');
-	    }
-	    
+		if ($this->flexi_auth->is_logged_in()){
+			redirect('/mall', 'refresh');
+		}
+		
 		$data = $this->data;
 		$data['title'] = "PretaStyler Where style and fashion Unite";
 		$data['no_background_image'] = TRUE;
@@ -73,15 +73,16 @@ class Catalog extends CI_Controller {
 		$data['extraFooter'] = TRUE;
 		
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
-							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+		<meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 		';
 		$data['extraCSS'] = '
-							<link rel="stylesheet" href="/css/jquery-ui.css">
-							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		<link rel="stylesheet" href="/css/jquery-ui.css">
+		<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
 		';
 		$data['extraJS'] = '
-							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-							<script src="/js/jquery-ui-slider-pips.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+		<script src="/js/jquery-ui-slider-pips.js"></script>
+		<script src="/js/circular-progress.js"></script>
 		';
 		$data['similar_garments'] = $this->garment_model->get_similar_products();
 		
@@ -89,27 +90,47 @@ class Catalog extends CI_Controller {
 		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/home', $data);
 	}
+
+	public function welcome(){
+		$this->load->library('user_check');
+		if ($this->flexi_auth->is_logged_in()){
+			
+			
+			$data = $this->data;
+			$data['title'] = "Welcome to PretAStyler";
+			$data['content_class'] = "welcome_full_page";
+			$data['extraFooter'] = TRUE;
+
+			$this->load->view('templates/header', $data);
+			$this->load->view('catalog/welcome', $data);
+		}
+		else{
+			redirect('/index');
+		}
+
+	}
 	
 	public function your_mall()
 	{
 		$this->load->library('user_check');
-	    if ($this->flexi_auth->is_logged_in()){
-	        redirect('/mall', 'refresh');
-	    }
-	    
+		if ($this->flexi_auth->is_logged_in()){
+			redirect('/mall', 'refresh');
+		}
+		
 		$data = $this->data;
 		$data['title'] = "Your Mall";
 		$data['content_class'] = "full_width_page";
 		$data['extraFooter'] = TRUE;
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
-							  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+		<meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 		';
 		
 		$data['extraJS'] = '
-							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-							<script src="/js/jquery-ui-slider-pips.js"></script>
-							<link rel="stylesheet" href="/css/jquery-ui.css">
-							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+		<script src="/js/jquery-ui-slider-pips.js"></script>
+		<link rel="stylesheet" href="/css/jquery-ui.css">
+		<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+		<script src="/js/circular-progress.js"></script>
 		';
 		
 
@@ -154,61 +175,61 @@ class Catalog extends CI_Controller {
 		$data['title'] = $data['garment']['name'];
 		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>', $data['title'] );
 		$data['extraJS'] = '<script src="/js/actual_product.js"></script>
-						<meta itemprop="name" content="'.$data['garment']['name'].'">
-						<meta itemprop="description" content="'.$data['garment']['name'].'">
-						<meta itemprop="image" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
-						
-						<meta property="og:url" content="'. current_url() .'">
-						<meta property="og:title" content="Pretastyle">
+		<meta itemprop="name" content="'.$data['garment']['name'].'">
+		<meta itemprop="description" content="'.$data['garment']['name'].'">
+		<meta itemprop="image" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
+		
+		<meta property="og:url" content="'. current_url() .'">
+		<meta property="og:title" content="Pretastyle">
 
-						<meta property="og:description" content="'.$data['garment']['name'].'" />
-						<meta property="og:site_name" content="PretAStyler " />
-						<meta property="og:image"            content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
-						<meta property="og:image:secure_url" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
-						<meta property="og:image:type"       content="image/jpg">
-						<meta property="og:image:width"      content="200">
-						<meta property="og:image:height"     content="700">
-						';
+		<meta property="og:description" content="'.$data['garment']['name'].'" />
+		<meta property="og:site_name" content="PretAStyler " />
+		<meta property="og:image"            content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
+		<meta property="og:image:secure_url" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
+		<meta property="og:image:type"       content="image/jpg">
+		<meta property="og:image:width"      content="200">
+		<meta property="og:image:height"     content="700">
+		';
 		$data['extraDiv'] = '
 		<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : "838075186234157",
-      xfbml      : true,
-      version    : "v2.2"
-    });
-  };
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : "838075186234157",
+				xfbml      : true,
+				version    : "v2.2"
+			});
+		};
 
-  (function(d, s, id){
-  var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, "script", "facebook-jssdk"));
-</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=838075186234157&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, "script", "facebook-jssdk"));</script>
-';
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, "script", "facebook-jssdk"));
+		</script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=838075186234157&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, "script", "facebook-jssdk"));</script>
+		';
 
 		$data['similar_garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id(0, 10, $this->flexi_auth->get_user_id(), $garment_id);
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER, YOUR PERSONALIZED FASHION FEED.">
-							  <meta name="description" content="PRÊT À STYLER eliminates "shopping noise" so you can focus on only the styles that are perfect for YOU.">
+		<meta name="description" content="PRÊT À STYLER eliminates "shopping noise" so you can focus on only the styles that are perfect for YOU.">
 		';
-		
+
 		$data['extraFooterJS'] = '<script type="text/javascript">
-setTimeout(function(){var a=document.createElement("script");
-var b=document.getElementsByTagName("script")[0];
-a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
-a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>';
-		
+		setTimeout(function(){var a=document.createElement("script");
+			var b=document.getElementsByTagName("script")[0];
+			a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
+			a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+		</script>';
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
 		$this->load->view('templates/menu_mall', $data);
@@ -224,7 +245,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['title'] = "How It Works - MANAGE YOUR STYLE PREFERENCES";
 		$data['breadcrumb'] = array('HOW IT WORKS');
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER, YOUR PERSONALIZED FASHION FEED.">
-							  <meta name="description" content="With our preference tool you can quickly tweak your Personalized Fashion Feed to show only clothing and accessories with colors, price and brands you love.">
+		<meta name="description" content="With our preference tool you can quickly tweak your Personalized Fashion Feed to show only clothing and accessories with colors, price and brands you love.">
 		';
 		
 		$this->load->view('templates/header', $data);
@@ -242,7 +263,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['title'] = "Our Story - PRETSTYLER";
 		$data['breadcrumb'] = array('OUR STORY');
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER, our story">
-							  <meta name="description" content="The launch of PrêtàStyler is the culmination of years of experience, research and hard work.">
+		<meta name="description" content="The launch of PrêtàStyler is the culmination of years of experience, research and hard work.">
 		';
 
 		$this->load->view('templates/header', $data);
@@ -260,7 +281,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['title'] = "FAQ PRÊT À STYLER - MAKES STYLE YOUR OWN";
 		$data['breadcrumb'] = array('FAQ');
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER - MAKES STYLE YOUR OWN">
-							  <meta name="description" content="Find the right clothes every time you go shopping, ones which flatter your figure, get you noticed for the right reasons, and make you feel your best.">
+		<meta name="description" content="Find the right clothes every time you go shopping, ones which flatter your figure, get you noticed for the right reasons, and make you feel your best.">
 		';
 
 		$this->load->view('templates/header', $data);
@@ -316,7 +337,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['title'] = "Packages - PRÊT À STYLER";
 		$data['breadcrumb'] = array('PACKAGES');
 		$data['extraMeta'] = '<meta name="keyword" content="Personal Style Program with My Private Stylist">
-							  <meta name="description" content="PRÊT À STYLER provides differents packages, basic, personalized and ultimate. Sing up today!">
+		<meta name="description" content="PRÊT À STYLER provides differents packages, basic, personalized and ultimate. Sing up today!">
 		';
 		$data['premium_mem'] = FALSE;
 		if ( $this->flexi_auth->in_group(array('Administrators', 'Uploaders', 'PremiumUsers')) ) {
@@ -378,7 +399,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['title'] = "About Us - PRÊT À STYLER";
 		$data['breadcrumb'] = array('ABOUT US');
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER - shopping online easily">
-							  <meta name="description" content="Pretastyler makes clothes shopping easy, personalized fahsion, manage your style and more. Visite us today! ">
+		<meta name="description" content="Pretastyler makes clothes shopping easy, personalized fahsion, manage your style and more. Visite us today! ">
 		';
 
 		$this->load->view('templates/header', $data);
@@ -413,7 +434,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		
 		$data['countries'] = $this->user_model->get_all_countries();
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER - shopping online easily">
-							  <meta name="description" content="Pretastyler is a shopping center where you can customize your profile and manage your style preference. Contact us today! ">
+		<meta name="description" content="Pretastyler is a shopping center where you can customize your profile and manage your style preference. Contact us today! ">
 		';
 
 		$this->load->view('templates/header', $data);
@@ -432,7 +453,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['breadcrumb'] = array('RETAILER');
 		$data['countries'] = $this->user_model->get_all_countries();
 		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER - shopping online easily">
-							  <meta name="description" content="Do you want to join to PRÊT À STYLER retailer program? Contact us today! ">
+		<meta name="description" content="Do you want to join to PRÊT À STYLER retailer program? Contact us today! ">
 		';
 
 		$this->load->view('templates/header', $data);
@@ -471,27 +492,25 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 		$data['breadcrumb'] = array('THANK YOU');
 		
 		$data['extraJS'] = '<style>.headPageTitle { display:none;}.content {background-image:url(/images/'.
-							$image.'.jpg);margin:0;padding:0;height:100%;} .container { margin-top: 20px; }</style>';
-		
+			$image.'.jpg);margin:0;padding:0;height:100%;} .container { margin-top: 20px; }</style>';
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
 		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('catalog/success', $data);
 	}
-	public function thankyou(){
-		
+	public function thankyou()
+	{
 		if($this->input->post('test-form')=='01ae3785a5fde11d3e8a29fd1f6e9400'){
-		$data['title'] = "Thank You for signing up";
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
-		$this->load->view('thankyou');
+			$data['title'] = "Thank You for signing up";
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/menu', $data);
+			$this->load->view('templates/menu_mall', $data);
+			$this->load->view('thankyou');
 		}
 		else{
 			redirect("/index");
 		}
-
-
 	}
 	/**
 	* User login and signup 
@@ -507,7 +526,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 			$data['extraFooter'] = TRUE;
 			
 			$data['extraMeta'] = '<meta name="keyword" content="Login to PRÊT À STYLER. PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
-								  <meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+			<meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 			';
 			
 			$this->load->view('templates/header', $data);

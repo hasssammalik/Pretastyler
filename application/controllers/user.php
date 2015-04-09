@@ -59,6 +59,7 @@ class User extends CI_Controller {
 							<script src="/js/jquery.sticky-kit.min.js"></script>
 							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 							<script src="/js/jquery-ui-slider-pips.js"></script>
+							<script src="/js/circular-progress.js"></script>
 		';
 
 		$user_id = $this->flexi_auth->get_user_id();
@@ -73,8 +74,7 @@ class User extends CI_Controller {
 										$data['user_info']["body_ratio_select_id"] ,	
 										$data['user_info']["bra_select_id" ],
 										$data['user_info']["build_select_id" ],
-										$data['user_info']["minBust"] ,
-
+										
 										$data['user_info']["neck_length_select_id"] ,
 										$data['user_info']["shoulders_select_id"] ,
 										$data['user_info']["face_shape_select_id"] ,	
@@ -91,6 +91,7 @@ class User extends CI_Controller {
 										$data['user_info']["lower_legs_select_id" ]
 										
 								));
+		$data['minBust'] = $data['user_info']["minBust"];
 
 		$value_array = array('height', 'weight', 'age', 'bra');
 		foreach ($value_array as $value_value){
@@ -158,6 +159,21 @@ class User extends CI_Controller {
 		$garment_id = $this->input->post('garment_id', TRUE);
 		if ($garment_id && $this->flexi_auth->is_logged_in()) {
 			$this->garment_model->update_user_garment_favorite($garment_id, $this->flexi_auth->get_user_id());
+		} else {
+			show_404();
+		}
+	}
+	/**
+	 * History button for this controller.
+	 */
+	public function history()
+	{
+		if (!$this->input->post()){
+			show_404();
+		}
+		$garment_id = $this->input->post('garment_id', TRUE);
+		if ($garment_id && $this->flexi_auth->is_logged_in()) {
+			$this->garment_model->update_user_garment_favorite_history($garment_id, $this->flexi_auth->get_user_id());
 		} else {
 			show_404();
 		}
