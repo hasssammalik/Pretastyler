@@ -303,6 +303,7 @@ class Assessment_model extends CI_Model{
 	 * @return category array if existed, if not return FALSE
 	 */
 	public function get_new_field_criteria_for_assessment($category_id, $field_id, $selected_criteria_ids, $is_button = FALSE){
+		$is_availiable_last_one = FALSE;
 		$new_array = array();
 		if ($is_button){
 			//need to get new field_id
@@ -330,6 +331,7 @@ class Assessment_model extends CI_Model{
 			if (!$found_next_field){
 				//no next field found
 				$new_array['new_field_id'] = $field_id;
+				$is_availiable_last_one = TRUE;
 			}
 		} else {
 			//use existing one
@@ -351,7 +353,7 @@ class Assessment_model extends CI_Model{
 		if ($position >= $max_position) {
 			$new_array['last_one'] = TRUE;
 		} else {
-			$new_array['last_one'] = FALSE;
+			$new_array['last_one'] = $is_availiable_last_one;
 		}
 		//generate current data
 		if (empty($selected_criteria_ids)){
