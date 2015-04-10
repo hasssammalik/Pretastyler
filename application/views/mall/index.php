@@ -29,6 +29,10 @@
 					<div class="refined sectionTogglediv" id="refinedby">
 						<ul class="refinelist">
 							<li class="price"><div>Price (0 - 1000)</div> </li>
+							<li class="category"><div>All Categories</div> </li>
+							<li class="brand"><div>All Brands</div> </li>
+							<li class="occasion"><div>All Occasion</div> </li>
+							<li class="color"><div>All Colors</div> </li>
 							<?php if( !empty( $first_name)) { ?>
 								<li class="star"><div>4 ☆</div> <a class="closesearchx" data-type="star" data-set="4">x</a></li>
 								<li class="star"><div>5 ☆</div> <a class="closesearchx" data-type="star" data-set="5">x</a></li>
