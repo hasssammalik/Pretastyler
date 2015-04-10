@@ -1,6 +1,6 @@
 <div class="mainContent">
 
-	<div class="infoBox successpage center">
+	<div class="welcomebox">
 		<div>
 			<h3>WELCOME <?php if ($this->flexi_auth->is_logged_in()){ print strtoupper($first_name); } else {echo ('USER'); } ?></h3>
 			<div class="welcome-body">
