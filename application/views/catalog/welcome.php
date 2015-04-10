@@ -36,7 +36,7 @@
 	color:#e72775!important;
 }
 .welcome_full_page{
-	background:url('/images/welcome-bg.jpg');
+	background:url('/img/welcome-bg.jpg');
 	background-size: cover;
 	background-position: 50% 0%;
 }
