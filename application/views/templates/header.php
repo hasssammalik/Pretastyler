@@ -133,7 +133,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			<?php /* if (!isset($no_sqBtn)) { ?>
 			<a href="#" class="sqBtn" id="trigger"><img src="/images/pinkbutton.png" width="46px"></a>
 			<?php } */?>
-			<a href="/" class="logo"><img src="/images/newlogo.png" width="193" alt=""></a>
+			<a href="/" class="logo"><img src="/img/newlogo.png" width="193" alt="PrêtàStyler" title="PrêtàStyler"></a>
 			<?php /* ?><!-- <nav>
 				<ul>
 					<?php if ($this->flexi_auth->is_logged_in()){ ?>
