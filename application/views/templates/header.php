@@ -36,10 +36,10 @@
 <script src="/js/jquery.nouislider.all.min.js"></script>
 <script src="/js/jquery.jscrollpane.min.js"></script>
 <script src="/js/jquery.elevateZoom-3.0.8.min.js"></script>
-<script src="/js/functions.js?v=2.2.0.0"></script>
+<script src="/js/functions.js?v=2.2.0.1"></script>
 <script src="/js/script.js?v=2.2.0.0"></script>
 <script src="/js/tabs.js?v=2.2.0.0"></script>
-<script src="/js/menu-mall.js?v=2.2.0.0"></script>
+<script src="/js/menu-mall.js?v=2.2.0.1"></script>
 <?php if (isset($extraJS)) print $extraJS ?>
 
 <!-- Start Visual Website Optimizer Asynchronous Code -->
@@ -133,7 +133,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			<?php /* if (!isset($no_sqBtn)) { ?>
 			<a href="#" class="sqBtn" id="trigger"><img src="/images/pinkbutton.png" width="46px"></a>
 			<?php } */?>
-			<a href="/" class="logo"><img src="/images/newlogo.png" width="193" alt=""></a>
+			<a href="/" class="logo"><img src="/img/newlogo.png" width="193" alt="PrêtàStyler" title="PrêtàStyler"></a>
 			<?php /* ?><!-- <nav>
 				<ul>
 					<?php if ($this->flexi_auth->is_logged_in()){ ?>

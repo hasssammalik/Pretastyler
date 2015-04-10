@@ -854,7 +854,7 @@
 						function( data ) {
 							
 						});
-						if( brandnewloader(3, 'redirect') == true ){
+						if( brandnewloader(10, 'redirect') == true ){
 							$( ".bodyEditSection" ).text( "Profile saved" );
 							window.location.reload();
 						}
