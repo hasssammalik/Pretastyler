@@ -934,7 +934,7 @@ class Garment_model extends CI_Model{
 		} else {
 			//calculate result
 			$user_specs_str = $query->row_array()['column'];
-			$query_str = 'INSERT INTO pas_user_garment (user_id, garment_id, score, expired) SELECT '.$user_id.' AS user_id, scores.garment_id AS garment_id, scores.score AS score, 0 AS expired FROM (SELECT garment_id, (AVG(LEAST('.$user_specs_str.')) + MIN(LEAST('.$user_specs_str.'))) / 2 AS `score` FROM `pas_garment_specs` GROUP BY `garment_id`) AS scores WHERE scores.score IS NOT NULL ON DUPLICATE KEY UPDATE score = VALUES(score), expired = 0';
+			$query_str = 'INSERT INTO pas_user_garment (user_id, garment_id, score, expired) SELECT '.$user_id.' AS user_id, scores.garment_id AS garment_id, scores.score AS score, 0 AS expired FROM (SELECT garment_id, (AVG(LEAST('.$user_specs_str.')) + MIN(LEAST('.$user_specs_str.'))) / 2 AS `score` FROM `pas_garment_specs` GROUP BY `garment_id`) AS scores WHERE scores.score IS NOT NULL ON DUPLICATE KEY UPDATE score = VALUES(score)';
 			$query = $this->db->query($query_str);
 		}
 	}
