@@ -108,7 +108,7 @@ class Admin extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Dashboard";
 		$data['title_description'] = "view all stats";
-		$data['extraJS'] = '<script src="/js/admin/AdminLTE/dashboard.js" type="text/javascript"></script>';
+		$data['extraJS'] = '<script src="/js/admin/AdminLTE/dashboard.js?v=2.2.0.0" type="text/javascript"></script>';
 		$this->load->view('admin/header', $data);
 		$this->load->view('admin/index', $data);
 		$this->load->view('admin/footer', $data);
@@ -426,7 +426,7 @@ class Admin extends CI_Controller {
 			$data['title'] = "Categories";
 			$data['title_description'] = "manage all categories";
 			$data['categories'] = $this->category_model->get_available_categories();
-			$data['extraJS'] = '<script src="/js/admin/AdminLTE/categories.js" type="text/javascript"></script>';
+			$data['extraJS'] = '<script src="/js/admin/AdminLTE/categories.js?v=2.2.0.0" type="text/javascript"></script>';
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/matrix/categories', $data);
 			$this->load->view('admin/footer', $data);
@@ -480,7 +480,7 @@ class Admin extends CI_Controller {
 				$data['fields'] = $this->admin_model->get_fields_by_category_id($param2);
 				$data['title'] = "Category - ".$data['category']['name'];
 				$data['title_description'] = "manage category ".$data['category']['name'];
-				$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js" type="text/javascript"></script>';
+				$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
 				$this->load->view('admin/header', $data);
 				$this->load->view('admin/matrix/category', $data);
 				$this->load->view('admin/footer', $data);
@@ -665,7 +665,7 @@ class Admin extends CI_Controller {
 				list($data['deep_search_parent_list'], $data['deep_search_required_list']) = $this->admin_model->get_deep_search_list($data['field']['category_id'], $data['field']['position'], $data['field']['deep_search_parent_field_id'], $data['field']['deep_search_required_field_id']);
 				$data['title'] = "Field - ".$data['field']['short_name'];
 				$data['title_description'] = "manage field ".$data['field']['short_name'];
-				$data['extraJS'] = '<script src="/js/admin/AdminLTE/field.js" type="text/javascript"></script>';
+				$data['extraJS'] = '<script src="/js/admin/AdminLTE/field.js?v=2.2.0.0" type="text/javascript"></script>';
 				$this->load->view('admin/header', $data);
 				$this->load->view('admin/matrix/field', $data);
 				$this->load->view('admin/footer', $data);
@@ -830,7 +830,7 @@ class Admin extends CI_Controller {
 				list($data['showifs'], $data['hideifs']) = $this->admin_model->get_showif_hideif_list($data['criteria']['category_id'], $data['criteria']['field_position'], $data['criteria']['showif'], $data['criteria']['hideif']);
 				$data['title'] = "Criteria - ".$data['criteria']['name'];
 				$data['title_description'] = "manage criteria ".$data['criteria']['name'];
-				$data['extraJS'] = '<script src="/js/admin/AdminLTE/criteria.js" type="text/javascript"></script>';
+				$data['extraJS'] = '<script src="/js/admin/AdminLTE/criteria.js?v=2.2.0.0" type="text/javascript"></script>';
 				$this->load->view('admin/header', $data);
 				$this->load->view('admin/matrix/criteria', $data);
 				$this->load->view('admin/footer', $data);
@@ -964,7 +964,7 @@ class Admin extends CI_Controller {
 				$data['comment'] = $this->admin_model->get_comment_by_comment_id($param2);
 				$data['title'] = "Comment - ".$data['comment']['criteria_comment_id'];
 				$data['title_description'] = "manage comment ".$data['comment']['criteria_comment_id'];
-				$data['extraJS'] = '<script src="/js/admin/AdminLTE/comment.js" type="text/javascript"></script>';
+				$data['extraJS'] = '<script src="/js/admin/AdminLTE/comment.js?v=2.2.0.0" type="text/javascript"></script>';
 				$this->load->view('admin/header', $data);
 				$this->load->view('admin/matrix/comment', $data);
 				$this->load->view('admin/footer', $data);

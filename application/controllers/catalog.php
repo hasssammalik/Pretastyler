@@ -174,16 +174,16 @@ class Catalog extends CI_Controller {
 		$data['size'] = $this->size_model->get_garment_size($garment_id);
 		$data['title'] = $data['garment']['name'];
 		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>', $data['title'] );
-		$data['extraJS'] = '<script src="/js/actual_product.js"></script>
+		$data['extraJS'] = '<script src="/js/actual_product.js?v=2.2.0.0"></script>
 		<meta itemprop="name" content="'.$data['garment']['name'].'">
 		<meta itemprop="description" content="'.$data['garment']['name'].'">
 		<meta itemprop="image" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		
 		<meta property="og:url" content="'. current_url() .'">
-		<meta property="og:title" content="Pretastyle">
+		<meta property="og:title" content="Prêt à Styler">
 
 		<meta property="og:description" content="'.$data['garment']['name'].'" />
-		<meta property="og:site_name" content="PretAStyler " />
+		<meta property="og:site_name" content="Prêt à Styler " />
 		<meta property="og:image"            content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		<meta property="og:image:secure_url" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		<meta property="og:image:type"       content="image/jpg">

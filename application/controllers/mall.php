@@ -49,7 +49,7 @@ class Mall extends CI_Controller {
 		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
-		$data['extraJS'] = '<script src="/js/mall.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.0"></script>';
 		$data['breadcrumb'] = array('MALL');
 		$data['getBook'] =true;
 		$data['deep_category'] = $this->deep_search_model->get_available_categories();
@@ -71,7 +71,7 @@ class Mall extends CI_Controller {
 		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
-		//$data['extraJS'] = '<script src="/js/mall.js"></script>';
+		//$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.0"></script>';
 		$data['breadcrumb'] = array('MALL');
 		$data['getBook'] =true;
 		$data['deep_category'] = $this->deep_search_model->get_available_categories();
@@ -218,7 +218,7 @@ class Mall extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = $title_string." - Mall Search";
 		$data['breadcrumb'] = array('MALL SEARCH');
-		$data['extraJS'] = '<script src="/js/mall.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.0"></script>';
 		$data['extraDiv'] = '<div id="hiddenKeyword" style="display:none">'.$keyword.'</div>'.
 							'<div id="hiddenOccasion" style="display:none">'.$occasion.'</div>'.
 							'<div id="hiddenColour" style="display:none">'.$colour.'</div>'.
@@ -251,7 +251,7 @@ class Mall extends CI_Controller {
 		$garment = $this->garment_model->get_garment_info($garment_id, $this->flexi_auth->get_user_id());
 		$data['title'] = "Similar Items - ".ucwords($garment['name']);
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'SIMILAR ITEMS', strtoupper($garment['name']));
-		$data['extraJS'] = '<script src="/js/mall-similar.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-similar.js?v=2.2.0.0"></script>';
 		$data['extraDiv'] = '<div id="hiddenGarmentId" style="display:none">'.$garment_id.'</div>';
 		$data['getBook']= true;
 		$this->load->view('templates/header', $data);
@@ -265,7 +265,7 @@ class Mall extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Occasion - ".ucwords(str_replace('_', ' ', $occasion));
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'OCCASION', strtoupper(str_replace('_', ' ', $occasion)));
-		$data['extraJS'] = '<script src="/js/mall-occasion.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-occasion.js?v=2.2.0.0"></script>';
 		$data['extraDiv'] = '<div id="hiddenOccasion" style="display:none">'.strtolower($occasion).'</div>';
 		$data['getBook']= true;
 		$this->load->view('templates/header', $data);
@@ -284,7 +284,7 @@ class Mall extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Brand - ".ucwords($brand);
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'BRAND', strtoupper($brand));
-		$data['extraJS'] = '<script src="/js/mall-brand.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-brand.js?v=2.2.0.0"></script>';
 		$data['extraDiv'] = '<div id="hiddenBrand" style="display:none">'.$brand.'</div>';
 		$data['brand'] = $brand;
 		$data['getBook']= true;
@@ -305,7 +305,7 @@ class Mall extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Body - ".ucwords($body);
 		$data['breadcrumb'] = array( '<a href="/mall.html">MALL</a>', 'BODY', strtoupper($body));
-		$data['extraJS'] = '<script src="/js/mall-body.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-body.js?v=2.2.0.0"></script>';
 		$data['extraDiv'] = '<div id="hiddenBody" style="display:none">'.$body.'</div>';
 		$data['getBook']= true;
 		$this->load->view('templates/header', $data);
@@ -435,7 +435,7 @@ class Mall extends CI_Controller {
 		
 		$data = $this->data;
 		$data['title'] = "Detailed Search";
-		$data['extraJS'] = '<script src="/js/mall-target.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-target.js?v=2.2.0.0"></script>';
 		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>','Detailed Search');
 		$data['getBook'] = true;
 		$data['deep_category'] = $this->deep_search_model->get_available_categories();

@@ -71,7 +71,7 @@ class Garment extends CI_Controller {
 			});
 			$data = $this->data;
 			$data['title'] = "Import Garment";
-			$data['extraJS'] = '<script src="/js/garment-import.js"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
+			$data['extraJS'] = '<script src="/js/garment-import.js?v=2.2.0.0"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
 			if ($type == 2){
 				$selected_image = base64_decode_url($selected_image);
 				foreach ($filtered_images as $key => $value){
@@ -119,7 +119,7 @@ class Garment extends CI_Controller {
 			
 			$data = $this->data;
 			$data['title'] = "Import Garment";
-			$data['extraJS'] = '<script src="/js/garment-import.js"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
+			$data['extraJS'] = '<script src="/js/garment-import.js?v=2.2.0.0"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
 			$data['extraDiv'] = '<div id="hiddenURL" style="display:none">'.$url.'</div>';
 			
 			$data['images'] = array_slice($filtered_images, 0, 7);
@@ -160,7 +160,7 @@ class Garment extends CI_Controller {
 			return;
 		}
 		$data['title'] = "Edit Garment General Information - ".$data['garment']['name'];
-		$data['extraJS'] = '<script src="/js/garment-edit-general.js"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
+		$data['extraJS'] = '<script src="/js/garment-edit-general.js?v=2.2.0.0"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
 		$data['extraDiv'] = '<div id="hiddenID" style="display:none">'.$garment_id.'</div>';
 		
 		$data['colours1'] = $this->colour_model->get_garment_colours($garment_id);
@@ -309,7 +309,7 @@ class Garment extends CI_Controller {
 			return;
 		}
 		$data['title'] = "Assess Garment";
-		$data['extraJS'] = '<script src="/js/garment-assess.js"></script>';
+		$data['extraJS'] = '<script src="/js/garment-assess.js?v=2.2.0.0"></script>';
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_assessment($garment_id, $data['garment']['category_id']);
 		$data['extraDiv'] = '<div class="hiddenCategory" style="display:none" category_id="'.$data['garment']['category_id'].'"></div>';
 		
@@ -344,7 +344,7 @@ class Garment extends CI_Controller {
 			return;
 		}
 		$data['title'] = "Edit Garment - ".$data['garment']['name'];
-		$data['extraJS'] = '<script src="/js/garment-edit.js"></script>';
+		$data['extraJS'] = '<script src="/js/garment-edit.js?v=2.2.0.0"></script>';
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
 		$data['extraDiv'] = '<div class="hiddenCategory" style="display:none" category_id="'.$data['garment']['category_id'].'"></div>';
 		
