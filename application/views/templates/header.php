@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <?php if (isset($extraMeta)) print $extraMeta ?>
 <title><?php print $title ?> - Prêt à Styler – Your Online Stylist and Personal Shopper</title>
-<link href="/css/vendors.css" rel="stylesheet">
-<link href="/css/default.css" rel="stylesheet">
-<link href="/css/mozilla.css" rel="stylesheet">
+<link href="/css/vendors.css?v=2.2.0.0" rel="stylesheet">
+<link href="/css/default.css?v=2.2.0.0" rel="stylesheet">
+<link href="/css/mozilla.css?v=2.2.0.0" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
 <!--- - - - - - CSS overwriter   - - - - -->
-<link href="/css/style.css" rel="stylesheet">
+<link href="/css/style.css?v=2.2.0.0" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 <!--- - - - - - CSS overwriter   - - - - -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <script src="/js/jquery-1.11.1.min.js"></script>
-<script src="/js/actual_product.js"></script>
+<script src="/js/actual_product.js?v=2.2.0.0"></script>
 <script src="/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="/js/modernizr.custom.86254.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
@@ -36,10 +36,10 @@
 <script src="/js/jquery.nouislider.all.min.js"></script>
 <script src="/js/jquery.jscrollpane.min.js"></script>
 <script src="/js/jquery.elevateZoom-3.0.8.min.js"></script>
-<script src="/js/functions.js"></script>
-<script src="/js/script.js"></script>
-<script src="/js/tabs.js"></script>
-<script src="/js/menu-mall.js"></script>
+<script src="/js/functions.js?v=2.2.0.0"></script>
+<script src="/js/script.js?v=2.2.0.0"></script>
+<script src="/js/tabs.js?v=2.2.0.0"></script>
+<script src="/js/menu-mall.js?v=2.2.0.0"></script>
 <?php if (isset($extraJS)) print $extraJS ?>
 
 <!-- Start Visual Website Optimizer Asynchronous Code -->
