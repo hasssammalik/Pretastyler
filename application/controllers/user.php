@@ -52,14 +52,14 @@ class User extends CI_Controller {
 		$data['breadcrumb'] = array('USER PROFILE');
 		
 		$data['extraCSS'] = '
-							<link rel="stylesheet" href="/css/jquery-ui.css">
-							<link href="/css/jquery-ui-slider-pips.css" rel="stylesheet">
+							<link rel="stylesheet" href="/css/jquery-ui.css?v=2.2.0.0">
+							<link href="/css/jquery-ui-slider-pips.css?v=2.2.0.0" rel="stylesheet">
 		';
-		$data['extraJS'] = '<script src="/js/user-profile.js"></script>
+		$data['extraJS'] = '<script src="/js/user-profile.js?v=2.2.0.0"></script>
 							<script src="/js/jquery.sticky-kit.min.js"></script>
 							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 							<script src="/js/jquery-ui-slider-pips.js"></script>
-							<script src="/js/circular-progress.js"></script>
+							<script src="/js/circular-progress.js?v=2.2.0.0"></script>
 		';
 
 		$user_id = $this->flexi_auth->get_user_id();
@@ -140,7 +140,7 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "My Dressing Room";
 		$data['breadcrumb'] = array('MY DRESSING ROOM');
-		$data['extraJS'] = '<script src="/js/mall-dressing-room.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-dressing-room.js?v=2.2.0.0"></script>';
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
@@ -195,7 +195,7 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Finds";
 		$data['breadcrumb'] = array('FINDS');
-		$data['extraJS'] = '<script src="/js/mall-find.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-find.js?v=2.2.0.0"></script>';
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
@@ -219,7 +219,7 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Wishlists";
 		$data['breadcrumb'] = array('WISHLISTS');
-		$data['extraJS'] = '<script src="/js/mall-favorite.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-favorite.js?v=2.2.0.0"></script>';
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
@@ -261,7 +261,7 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Wardrobe";
 		$data['breadcrumb'] = array('WARDROBE');
-		$data['extraJS'] = '<script src="/js/mall-wardrobe.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-wardrobe.js?v=2.2.0.0"></script>';
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
@@ -285,7 +285,7 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "Dressing Room";
 		$data['breadcrumb'] = array('DRESSING ROOM');
-		$data['extraJS'] = '<script src="/js/mall-dressing-room.js"></script>';
+		$data['extraJS'] = '<script src="/js/mall-dressing-room.js?v=2.2.0.0"></script>';
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
@@ -644,7 +644,7 @@ class User extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = "New Password";
 		$data['breadcrumb'] = array('USER','NEW PASSWORD');
-		$data['extraJS'] = '<script src="/js/user-forget-password.js"></script>';
+		$data['extraJS'] = '<script src="/js/user-forget-password.js?v=2.2.0.0"></script>';
 		$data['extraDiv'] = '<div id="hiddenId" style="display:none">'.$user_id.'</div><div id="hiddenToken" style="display:none">'.$forgotten_password_token.'</div>';
 		
 		$this->load->view('templates/header', $data);

@@ -332,7 +332,7 @@
 							<?php } else { ?>
 							<div class="panel2 newpanelDesign forceDivTwoColumn" id="ourAdvice">
 								<div class="panelheaderheightfixer">
-									<div class="panelNewHeader bkgrey signup-title" style="margin-bottom:0px;line-height:47px; font-weight:500; font-size:36px;">Never Buy a <strong>'DUD'</strong> again </div>
+									<div class="panelNewHeader bkgrey signup-title">Never Buy a <strong>'DUD'</strong> again </div>
 									<div style="background:url('/images/bodyback.png');background-position: 96% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 								</div>
 								
