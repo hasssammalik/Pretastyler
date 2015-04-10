@@ -20,7 +20,7 @@ foreach ($garments as $row) { ?>
 					print $row['url']; 
 				?>" target="_blank" title="Buy item"><i class="icon-cart"></i></a></li>
 				<?php if ($this->flexi_auth->is_logged_in()){
-				if ($this->flexi_auth->in_group('Administrators') || $row['import_user_id'] == $this->flexi_auth->get_user_id()) {?><li><a target="_blank" href="/garment/edit/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" title="<?php if ($row['dressing_room']) {print 'Assess item';} else {print 'Edit item';} ?>"><i class="icon-pencil"></i></a></li> <?php }}?>
+				if ($this->flexi_auth->in_group('Administrators') || $row['import_user_id'] == $this->flexi_auth->get_user_id()) {?><li><a target="_blank" href="<?php if ($row['dressing_room']) {print print '/garment/assess/'.$row['garment_id'].'-'.url_title($row['name']).'.html';} else {print '/garment/edit/'.$row['garment_id'].'-'.url_title($row['name']).'.html';} ?>" title="<?php if ($row['dressing_room']) {print 'Assess item';} else {print 'Edit item';} ?>"><i class="icon-pencil"></i></a></li> <?php }}?>
 				<li><a href="/mall/similar/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank" title="See similiar items"><i class="icon-dress"></i></a></li>
 				<!-- <li><a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank" class="<?php if($user_profile_done == false){ echo "no_user_profile_complete"; } ?>" title="Garments insights"><i class="icon-scales"></i></a></li> -->
 				<?php if ($this->flexi_auth->is_logged_in()) { ?>
