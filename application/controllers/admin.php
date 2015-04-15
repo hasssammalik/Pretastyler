@@ -58,10 +58,11 @@ class Admin extends CI_Controller {
 		$data = $this->data;
 		if ($this->flexi_auth->is_logged_in()){
 			if ($this->flexi_auth->in_group('Administrator')) {
-				redirect('/admin', 'refresh');
+				print_r($this->flexi_auth);
+				redirect('/admin/matrix', 'refresh');
 			} else {
 				$this->flexi_auth->logout();
-				redirect('/admin/login', 'refresh');
+				redirect('/', 'refresh');
 			}
 		}
 		
