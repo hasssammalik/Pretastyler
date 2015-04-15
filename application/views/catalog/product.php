@@ -350,7 +350,7 @@
 															'Your Exclusive Fashion Mall'
 														</p>
 														<br><br>
-														<p><button><a href="http://m1.pretastyler.com/index.html#profile">GET STARTED</a></button></p>
+														<p><button><a href="/index.html#profile">GET STARTED</a></button></p>
 													</div>
 
 												</div>

@@ -363,7 +363,7 @@
 	 *   There are then functions within the library to check whether a user is logged in via entering a password, or via a cookie - typically sensitive data should 
 	 *   only be available to users logged in via a password, and less sensitive data to users logged in via 'Remember me' cookies.
 	*/
-	$config['security']['login_session_expire'] = 60*60*3;
+	$config['security']['login_session_expire'] = 0;
 	
 	/**
 	 * Set whether a users login time is extended when their session token is validated (On every page load).
@@ -382,7 +382,7 @@
 	 * Note: Only used when $config['security']['validate_login_onload'] = TRUE
 	 * !IMPORTANT: 'logout_user_onclose' will also void any 'Remember me' cookies and so both features should not be used together.
 	*/
-	$config['security']['logout_user_onclose'] = TRUE;
+	$config['security']['logout_user_onclose'] = FALSE;
 
 	/**
 	 * Set whether a user has their 'logged in via password' status removed as soon as the browser is closed.
@@ -398,7 +398,7 @@
 	 *
 	 * Note: Only used when $config['security']['logout_user_onclose'] = FALSE
 	*/
-	$config['security']['unset_password_status_onclose'] = TRUE;
+	$config['security']['unset_password_status_onclose'] = FALSE;
 	
 	/**
 	 * Set the lifetime of a users login cookies in seconds, this includes the 'Remember me' cookies.
