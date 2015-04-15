@@ -99,7 +99,7 @@
 								<?php if( !empty($score)){?>
 									<?php if( $score == 5 ){?>
 										<span class="pinkyheading">BOOM, YOU HAVE A WINNER</span>
-										<span class="panelSmalldesc">YOU'RE GOING TO HEADS AND BREAK HEARTS IN THIS LITTLE NUMBER</span>
+										<span class="panelSmalldesc">YOU'RE GOING TO TURN HEADS AND BREAK HEARTS IN THIS LITTLE NUMBER</span>
 										<?php } else if( $score == 4 ) { ?>
 										<span class="pinkyheading">LOOKING GOOD, GORGEOUS</span>
 										<span class="panelSmalldesc">FIGURE FLATTERING AND FABULOUS ALL AT THE SAME TIME</span>
