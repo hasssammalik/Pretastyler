@@ -9,8 +9,8 @@
 					<p> <!-- <img width="70" src="/images/play.png" style="cursor:pointer;"> --> </p>
 					<p style="font-size:24px;line-height:2;font-weight:600;">
 						Cut Through the Clutter of Fashion<br>
-						Find everything that suits you in one perfect place<br>
-						'Your Exclusive Fashion Mall'
+						Find what suits you, why it works and<br>
+						how to style it to look your best
 					</p>
 				</div>
 				
