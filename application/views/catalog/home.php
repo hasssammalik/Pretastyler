@@ -5,12 +5,12 @@
 			<div class="headerBackground">
 				
 				<div class="headerBackground-content role-element leadstyle-container center" style="padding-top: 6%;">
-					<p style="font-size:36px; font-weight: bold;word-spacing:5px;letter-spacing:2px;">SHOPPING ONLINE<br>JUST GOT PERSONAL</p>
+					<p style="font-size:36px; font-weight: bold;word-spacing:5px;letter-spacing:2px;">Shopping Online<br>Just Got Personal</p>
 					<p> <!-- <img width="70" src="/images/play.png" style="cursor:pointer;"> --> </p>
 					<p style="font-size:24px;line-height:2;font-weight:600;">
 						Cut Through the Clutter of Fashion<br>
 						Find what suits you, why it works and<br>
-						how to style it to look your best
+						how to style it to look your best.
 					</p>
 				</div>
 				
