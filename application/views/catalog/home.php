@@ -7,7 +7,7 @@
 				<div class="headerBackground-content role-element leadstyle-container center" style="padding-top: 6%;">
 					<p style="font-size: 3.8em; font-weight: bold; letter-spacing:2px;margin-top: -5px;line-height: 1.5;">Shopping Online<br>Just Got Personal</p>
 					<p> <!-- <img width="70" src="/images/play.png" style="cursor:pointer;"> --> </p>
-					<p style="font-size: 3.6em;line-height: 1.5;padding-top: 19px;">
+					<p style="font-size: 2.9em;line-height: 1.5;padding-top: 75px;">
 						Cut Through the Clutter of Fashion<br>
 						Find what suits you, why it works and<br>
 						how to style it to look your best.
