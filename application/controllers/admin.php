@@ -40,9 +40,11 @@ class Admin extends CI_Controller {
 	private function login_check(){
 		if (!$this->flexi_auth->is_logged_in()){
 			redirect('/admin/login', 'refresh');
-		} else if (!$this->flexi_auth->in_group('Administrators')){
-			$this->flexi_auth->logout();
-			redirect('/admin/login', 'refresh');
+		} else {
+			if (!$this->flexi_auth->in_group('Administrators')){
+				$this->flexi_auth->logout();
+				redirect('/admin/login', 'refresh');
+			}
 		}
 	}
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
@@ -54,9 +56,13 @@ class Admin extends CI_Controller {
 	public function login()
 	{
 		$data = $this->data;
-		if ($this->flexi_auth->is_logged_in() && !$this->flexi_auth->in_group('Administrator')){
-			$this->flexi_auth->logout();
-			redirect('/admin/login', 'refresh');
+		if ($this->flexi_auth->is_logged_in()){
+			if ($this->flexi_auth->in_group('Administrators')) {
+				redirect('/admin', 'refresh');
+			} else {
+				$this->flexi_auth->logout();
+				redirect('/admin/login', 'refresh');
+			}
 		}
 		
 		if ($this->input->post()){
