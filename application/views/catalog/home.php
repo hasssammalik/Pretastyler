@@ -402,7 +402,7 @@
 						<a class="bkpinkycolor home-vistmallbtn container noneLiner" id="more-questions" href="/your-mall.html">
 							MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</a>
-						<div class="mall-link-tooltip" style="position:absolute;top:20px;width:200px;background:#fafafa;color:white;display:none;>Testing</div>
+						<div class="mall-link-tooltip" style="position:absolute;top:20px;width:200px;background:#fafafa;color:white;display:none;">Testing</div>
 					</div>
 					<div class="mall-link2">
 						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm too excited to wait </p>
