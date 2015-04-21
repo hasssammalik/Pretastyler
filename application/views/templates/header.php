@@ -91,6 +91,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    		</ul>
 			    	</li>
 			    	<li class="relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
+			    	<li class=" relative menuBorder"><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
 			    	<li class="userSub relative menuBorder">
 			    		<span><a href="/user/my-dressing-room.html#wishList">DRESSING ROOM</a></span>
 			    		<ul class="userSubMenu">

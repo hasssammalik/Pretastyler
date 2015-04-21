@@ -271,7 +271,7 @@
 					<div class="homeprofile-head" id="profile">
 						<img src="/images/newhomedown.png" class="noneArea noneLiner ">
 						
-						<p class="i profile-big-title" style="font-size:1.8vw;">Let's start by selecting your <strong>body features</strong></p>
+						<p class="i profile-big-title" style="font-size:1.8vw;">Start by selecting your <strong>body features</strong></p>
 						
 					</div>
 					
@@ -397,11 +397,12 @@
 				
 				<p class="homeprofile-bodytext" style=" font-style: italic; font-size: 1.8vw;"><br/>What's<strong > Next?</strong></p>
 				<div class="mall-links">	
-					<div class="mall-link1">
+					<div class="mall-link1" >
 						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm on a roll show me </p>
-						<a class="bkpinkycolor home-vistmallbtn container noneLiner" href="/your-mall.html">
+						<a class="bkpinkycolor home-vistmallbtn container noneLiner" id="more-questions" href="/your-mall.html" onmouseover="document.getElementById('tooltip1').style.display = 'block';" onmouseout="document.getElementById('tooltip1').style.display = 'none';">
 							MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</a>
+						<div class="mall-link-tooltip" id="tooltip1">Just a few more questions will change the accuracy of your mall from good to great.</div>
 					</div>
 					<div class="mall-link2">
 						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm too excited to wait </p>
@@ -439,7 +440,7 @@
 	<div class="modalOverlay"></div>
 	<footer>
 		<ul>
-			<li><a href="#">BROWSER EXTENSION</a>|</li>
+			<li><a href="https://chrome.google.com/webstore/detail/select-image-for-genie-se/ggciakfahmdidbpcccinmldogcjkcmhd">STYLE GENIE EXTENSION</a>|</li>
 			<li><a href="/terms.html">TERMS</a>|</li>
 			<li><a href="/our-story.html">OUR STORY</a>|</li>
 			<li><a href="/contact-us.html">CONTACT</a>|</li>
