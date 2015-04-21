@@ -52,9 +52,11 @@
 		<div class="grid_7 verticalmid">
 			<div class="copy">
 				<p class="center"><img src="images/2.png" width="68" height="66" alt="2"></p>
-				<h3 class="pink">MANAGE YOUR STYLE PREFERENCES</h3>
+				<h3 class="pink">TARGETED SEARCH - ON STEROIDS</h3>
 				<div class="body">
-					<p>Shop exactly the way you want to. With our preference tool you can quickly tweak your Personalized Fashion Feed to show only clothing and accessories with the features, colors, price and brands you love.</p>
+					<p>Let the site do all your legwork to find you the exact item you’re looking for.
+					With PretaStyler’s Targeted Search engine you can get super specific to find the exact clothing you want. Say you’re after a yellow, semi- fitted dress with a deep-scooped neckline, flutter sleeves, a waistline seam and a midi length. Just enter your search terms, cross your fingers and if it’s in the mall we’ll display it in a flash. Oh, you only want the dresses from ASOS? No problem. Consider it done. <br><br>
+					Think of it like Google for clothes. We like to call it Cloogle.</p>
 				</div>
 			</div>
 		</div>
@@ -64,11 +66,9 @@
 		<div class="grid_7 verticalmid">
 			<div class="copy">
 				<p class="center"><img src="images/3.png" width="66" height="66" alt="3"></p>
-				<h3 class="pink">TARGETED SEARCH - ON STEROIDS</h3>
+				<h3 class="pink">YOUR 24/7 ONLINE STYLIST</h3>
 				<div class="body">
-					<p>Let the site do all your legwork to find you the exact item you’re looking for.
-					With PretaStyler’s Targeted Search engine you can get super specific to find the exact clothing you want. Say you’re after a yellow, semi- fitted dress with a deep-scooped neckline, flutter sleeves, a waistline seam and a midi length. Just enter your search terms, cross your fingers and if it’s in the mall we’ll display it in a flash. Oh, you only want the dresses from ASOS? No problem. Consider it done. <br><br>
-					Think of it like Google for clothes. We like to call it Cloogle.
+					<p>Want to know how to work that outfit like Mother Fashion intended? Get ready to go shopping with a side-serve of savvy style advice to guide your purchases.From now on all your new purchases are going to be front and centre in your wardrobe - not languishing in the back with the price tags still on. - <em>it’s time to kick buyer’s remorse to the curb.</em> 
 					</p>
 				</div>
 			</div>
@@ -86,10 +86,15 @@
 		<div class="grid_7 verticalmid">
 			<div class="copy">
 				<p class="center"><img src="images/4.png" width="62" height="70" alt="4"></p>
-				<h3 class="pink">YOUR 24/7 ONLINE STYLIST</h3>
+				<h3 class="pink">OODLES OF INSPIRATION</h3>
 				<div class="body">
-					<p>Want to know how to work that outfit like Mother Fashion intended? Get ready to go shopping with a side-serve of savvy style advice to guide your purchases.From now on all your new purchases are going to be front and centre in your wardrobe - not languishing in the back with the price tags still on. - <em>it’s time to kick buyer’s remorse to the curb.</em> 
-					</p>
+					<p>Feeling like you need a style kick-start? Check out our inspiration boards,
+					soon you'll be fizzing with excitement at all the new things you could try out. Oh, but
+					these aren’t just any old style boards. The PretaStyler ‘magic’ means that you’ll
+					know straight away if the clothing on any fashion board will suit you. Even if you 
+					find it posted on your favorite blog. How will you know? Your star rating is on it! 
+					Once you’ve been inspired, you’re going to want to start building
+					your own boards. Which leads us on to…<br></p>
 				</div>
 			</div>
 		</div>							
@@ -99,15 +104,17 @@
 		<div class="grid_7 verticalmid">
 			<div class="copy">
 				<p class="center"><img src="images/5.png" width="66" height="66" alt="5"></p>
-				<h3 class="pink">OODLES OF INSPIRATION</h3>
+				<h3 class="pink">CREATING YOUR OWN FASHION BOARDS</h3>
 				<div class="body">
-					<p>Feeling like you need a style kick-start? Check out our inspiration boards,
-					soon you'll be fizzing with excitement at all the new things you could try out. Oh, but
-					these aren’t just any old style boards. The PretaStyler ‘magic’ means that you’ll
-					know straight away if the clothing on any fashion board will suit you. Even if you 
-					find it posted on your favorite blog. How will you know? Your star rating is on it! 
-					Once you’ve been inspired, you’re going to want to start building
-					your own boards. Which leads us on to…<br>
+					<p>Start pulling together your own boards and sharing them with friends 
+					If you want their advice before buying that cute chartreuse top with the cap sleeves (seriously, buy it).
+					Pop the Style Boards on Facebook, post them on your blog and you
+					can even save them in your My Boards area to come back to later. Oh
+					and of course you can purchase directly from the boards – whether
+					it’s your board or someone else’s.<br><br>
+					Sharing good style is the new black. No matter what your style
+					preference, you’re going to find kindred Fashionist as 
+					that love it as	much as you do.<br>
 					</p>
 				</div>
 			</div>
@@ -125,24 +132,20 @@
 		<div class="grid_7 verticalmid">
 			<div class="copy">
 				<p class="center"><img src="images/6.png" width="62" height="70" alt="6"></p>
-				<h3 class="pink">CREATING YOUR OWN FASHION BOARDS</h3>
+				<h3 class="pink">USE THE FASHION GENIE </h3>
 				<div class="body">
-					<p>Start pulling together your own boards and sharing them with friends 
-					If you want their advice before buying that cute chartreuse top with the cap sleeves (seriously, buy it).
-					Pop the Style Boards on Facebook, post them on your blog and you
-					can even save them in your My Boards area to come back to later. Oh
-					and of course you can purchase directly from the boards – whether
-					it’s your board or someone else’s.<br><br>
-					Sharing good style is the new black. No matter what your style
-					preference, you’re going to find kindred Fashionist as 
-					that love it as	much as you do.<br>
+					<p>Have you found a new fashion favorite but it’s not in your Personalized Fashion Feed? <br>
+					Clip an image of it into the Style Genie app 
+					and it’ll show your style rating to see 
+					if it’s a YES or an Uh No. 
+					<br>
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<section class="grid">
+	<section class="grid" style="display:none;">
 		<div class="grid_7 verticalmid">
 			<div class="copy">
 				<p class="center"><img src="images/7.png" width="66" height="66" alt="5"></p>
