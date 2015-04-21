@@ -400,6 +400,7 @@ class Garment_model extends CI_Model{
 				$result[$key]['result'] = 3;
 			} else if ($value['score']>=3){
 				$result[$key]['result'] = 2;
+				$result[$key]['reason'] = $this->get_garment_criteria_reason($garment_id, $value['field_id'], $user_specs_str, $value['score'], $is_admin);
 			} else {
 				$result[$key]['result'] = 1;
 				$result[$key]['reason'] = $this->get_garment_criteria_reason($garment_id, $value['field_id'], $user_specs_str, $value['score'], $is_admin);
