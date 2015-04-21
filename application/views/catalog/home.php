@@ -271,7 +271,7 @@
 					<div class="homeprofile-head" id="profile">
 						<img src="/images/newhomedown.png" class="noneArea noneLiner ">
 						
-						<p class="i profile-big-title" style="font-size:1.8vw;">Let's start by selecting your <strong>body features</strong></p>
+						<p class="i profile-big-title" style="font-size:1.8vw;">Start by selecting your <strong>body features</strong></p>
 						
 					</div>
 					
