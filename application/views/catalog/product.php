@@ -52,12 +52,12 @@
 												}
 												
 												if (isset($row['reason'])) {
-												?><a href="#"><i class="icon-triangle"></i></a><?php }?></span></td>
+												?><!--<a href="#"><i class="icon-triangle"></i></a> --><?php }?></span></td>
 										</tr>
 										<?php if (isset($row['reason'])) {?>
 											<tr class="description">
 												<td colspan="3">
-													<div><strong>Why it's an avoid: </strong><?php print $row['reason'] ?></div>
+													<div><strong>Why: </strong><?php print $row['reason'] ?></div>
 												</td>
 											</tr>
 										<?php }} 
