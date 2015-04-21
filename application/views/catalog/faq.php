@@ -16,9 +16,10 @@
 </script>
 <style>
 	.content{
-	background-image: url(/images/payment/pretastylerpayment.jpeg);
-	background-position: 10% 35%;
-	background-attachment: fixed;
+		background-image: url(/images/payment/pretastylerpayment.jpeg);
+		background-position: 10% 35%;
+		background-attachment: fixed;
+		position: static;
 	}
 </style>
 <div class="faq">
@@ -41,7 +42,7 @@
 						A. HOW DO I SIGN UP AND WHAT'S REQUIRED?
 					</div>
 					<div class="faq-body">
-						Registration is through this [page] and costs $9 per month.<br>
+						Registration is through this <a href="/index.html#profile">page</a> and costs $9 per month.<br>
 						Once you have registered you will be lead through the profile and preferences set-up. Upon completion your personalized mall will be stocked and the fun begins!<br>
 						<ol style="padding-left: 20px;"><li> Click <a href="/index.html#profile">HERE</a> or the SIGN-UP link on the top right of every page. (You can also sign up using any of the signup buttons throughout the website)<br>
 						</li><li> Enter you Name and Email</li>
@@ -74,7 +75,7 @@
 						E. UPDATING YOUR DETAILS
 					</div>
 					<div class="faq-body">
-						Whenever necessary, you can update your details by clicking your [Account] area located
+						Whenever necessary, you can update your details by clicking your <a href="/user.html">Account</a> area located
 						at the top right hand side of the page
 					</div>
 				</div>
@@ -85,7 +86,7 @@
 					</div>
 					<div class="faq-body">
 						<ul style="list-style:none;">
-							<li>Click [LOGIN] located in the top right corner of every page.</li>
+							<li>Click <a href="/useraccount/login.html">LOGIN</a> located in the top right corner of every page.</li>
 							<li>A login panel will open up.</li>
 							<li>Enter the email address you signed up with and your password</li>
 							<li>Finally, click the LOGIN button.</li>
@@ -125,7 +126,7 @@
 						<p style="padding-left:2%;">We suggest you store this email in a safe place.  We all have lapses of memory.<br>
 						If you still experience problems contact us through this <a href="mailto:info@pretastyler.com">EMAIL.</a></p>
 						b. Need to Change Your Password?<br>
-						&nbsp;&nbsp;Whenever necessary you can change your password by clicking your [Accounts] area
+						&nbsp;&nbsp;Whenever necessary you can change your password by clicking your Accounts area
 						located at the top right hand side of the page.
 					</div>
 				</div>
@@ -136,10 +137,10 @@
 					</div>
 					<div class="faq-body">
 						a. Why Your Profile is Required?<br>
-						&nbsp;&nbsp;&nbsp;Knowing your unique shape is a core requirement so PrêtàStyler can fill your mall with all the garments and accessories that are right for you.  Completing <a href="/user.html">[your profile]</a> should take no longer than 5 minutes.  The more accurate your profile, the more perfect the items in your mall will be.
+						&nbsp;&nbsp;&nbsp;Knowing your unique shape is a core requirement so PrêtàStyler can fill your mall with all the garments and accessories that are right for you.  Completing <a href="/user.html">your profile</a> should take no longer than 5 minutes.  The more accurate your profile, the more perfect the items in your mall will be.
 						<br>b. Editing Your Profile<br>
 						<ol style="padding-left:8%;list-style-type: lower-roman;">
-							<li>Log into  <a href="/useraccount/login.html">[PrêtàStyler]</a>.</li>
+							<li>Log into  <a href="/useraccount/login.html">PrêtàStyler</a>.</li>
 							<li>Click <a href="/user.html">(your name ACCOUNT)</a> on the meu bar – top right hand corner of any page.</li>
 							
 						</ol>
@@ -202,7 +203,7 @@
 							<li>Price:  Got a limited budget, no worries, just refine the budget bars by dragging each price point in to specify the range you are prepared to pay.</li>
 						</ol>
 						
-						<strong>Detailed Search</strong>
+						<strong>b. Detailed Search</strong>
 						&nbsp;&nbsp;&nbsp;This search is one of our unique features and allows you to search for garments with EXACTLY the specific characteristics you’re after.  If your dream dress happens to be a red dress with a scoop neckline, fluttered sleeves, midi length and in lace, our search will get to work and if it’s available from one of the stores in the fashion mall, then you’re going find it in double time.
 						<br>We’re adding new retailers, brands and clothing all the time so keep coming back if you don’t find what you want at first.
 						<ol style="padding-left:10%;list-style-type: upper-roman;">
@@ -214,8 +215,27 @@
 						</ol>
 					</div>
 				</div>
-				
+
 				<div class="faq-info" id="q7">
+					<div class="faq-header">
+						DRESSING ROOM
+					</div>
+					
+					<div class="faq-body">
+						
+						<strong>a. Wishlist</strong><br>
+						&nbsp;&nbsp;&nbsp;This is where your favorite items are saved.  Place items into this area by clicking the heart icon on located on garment image when the image is hovered over.<br>
+						<strong>b. My Finds</strong><br>
+						&nbsp;&nbsp;&nbsp;Items saved in this area are those you have found and assessed from other websites using our <a href="https://chrome.google.com/webstore/detail/select-image-for-genie-se/ggciakfahmdidbpcccinmldogcjkcmhd" title="Style Genie webstore extension">Style Genie extension</a>.<br>
+						<strong>c. Pending Garments</strong><br>
+						&nbsp;&nbsp;&nbsp;This area saves items you have found on other websites, saved but not yet assessed using our Style Genie extension. To assess an item in this area hover over the image and then click the pencil icon.<br>
+						<strong>d. History</strong><br>
+						&nbsp;&nbsp;&nbsp;We know mistakes happen so this is where you can recover any item you have deleted from your Wishlist, My Finds or Pending areas are saved.<br>
+						
+					</div>
+				</div>
+				
+				<div class="faq-info" id="q8">
 					<div class="faq-header">
 						STYLE GENIE APP
 					</div>
@@ -246,7 +266,7 @@
 					</div>
 				</div>
 				
-				<!-- <div class="faq-info" id="q7">
+				<!-- <div class="faq-info" id="q8.1">
 					<div class="faq-header">
 						STYLE GENIE APP
 					</div>
@@ -281,7 +301,7 @@
 					</div>
 				</div> -->
 				
-				<div class="faq-info" id="q8">
+				<div class="faq-info" id="q9">
 					<div class="faq-header">
 						STYLE CLINIC
 					</div>
@@ -292,12 +312,12 @@
 						We have an ever expanding library of invaluable, instructional features to help you, from how to wear the latest trends to organizing your wardrobe and learning about how design lines affect your shape.  It's called Style Clinic and its open 24/7.  Why not take a look right now.
 						<br>As a member you will be sent the latest Style Clinic feature each week.<br>
 						<strong>b. Do You Accept Features from Other Writers?</strong><br>
-						&nbsp;&nbsp;&nbsp;We certainly do!  In fact, we are looking to expand with a series of talented bloggers regularly providing features on all sorts of fashion, beauty, lifestyle and life issues. If you feel your features and musings would be of interest to our readers please [contact us] and provide the topic(s) you write on and a sample of your work.<br>
+						&nbsp;&nbsp;&nbsp;We certainly do!  In fact, we are looking to expand with a series of talented bloggers regularly providing features on all sorts of fashion, beauty, lifestyle and life issues. If you feel your features and musings would be of interest to our readers please <a href="/contact-us.html">contact us</a> and provide the topic(s) you write on and a sample of your work.<br>
 						
 					</div>
 				</div>
 				
-				<div class="faq-info" id="q9">
+				<div class="faq-info" id="q10">
 					<div class="faq-header">
 						BUGS, SUGGESTIONS & FEEDBACK
 					</div>
@@ -320,7 +340,7 @@
 					</div>
 				</div>
 				
-				<div class="faq-info" id="q10">
+				<div class="faq-info" id="q11">
 					<div class="faq-header">
 						NEED OTHER HELP?
 					</div>
@@ -359,10 +379,11 @@
 					<div><a href="#q4"><strong>YOUR PROFILE</strong></a></div>
 					<div><a href="#q5"><strong>THE MALL</strong></a></div>
 					<div><a href="#q6"><strong>OUR SEARCHES</strong></a></div>
-					<div><a href="#q7"><strong>STYLE GENIE APP</strong></a></div>
-					<div><a href="#q8"><strong>STYLE CLINIC</strong></a></div>
-					<div><a href="#q9"><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></a></div>
-					<div><a href="#q10"><strong>NEED OTHER HELP?</strong></a></div>
+					<div><a href="#q7"><strong>DRESSING ROOM</strong></a></div>
+					<div><a href="#q8"><strong>STYLE GENIE APP</strong></a></div>
+					<div><a href="#q9"><strong>STYLE CLINIC</strong></a></div>
+					<div><a href="#q10"><strong>BUGS, SUGGESTIONS & FEEDBACK</strong></a></div>
+					<div><a href="#q11"><strong>NEED OTHER HELP?</strong></a></div>
 				</div>
 			</div>
 		</div>

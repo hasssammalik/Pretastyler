@@ -24,7 +24,7 @@
 				<div class="panel2 newpanelDesign" id="ourAdviceLog">
 					
 					<div class="panelheaderheightfixer">
-						<div class="panelNewHeader bkgrey" style="margin-bottom:0px;line-height: 47px;">WHY IT WORKS FOR YOU</div>
+						<div class="panelNewHeader bkgrey" style="margin-bottom:0px;line-height: 47px;"><?php if(isset($score)&& $score>2) {?>WHY IT WORKS FOR YOU<?php }else{echo 'WHY IT DOES NOT WORK FOR YOU?'; }?></div>
 						<div style="background:url('/images/bodyback.png');background-position: 4% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
 					</div>
 					<div class="panelContent panelcontentFirst">
@@ -52,12 +52,12 @@
 												}
 												
 												if (isset($row['reason'])) {
-												?><a href="#"><i class="icon-triangle"></i></a><?php }?></span></td>
+												?><!--<a href="#"><i class="icon-triangle"></i></a> --><?php }?></span></td>
 										</tr>
 										<?php if (isset($row['reason'])) {?>
 											<tr class="description">
 												<td colspan="3">
-													<div><strong>Why it's an avoid: </strong><?php print $row['reason'] ?></div>
+													<div><strong>Why: </strong><?php print $row['reason'] ?></div>
 												</td>
 											</tr>
 										<?php }} 
