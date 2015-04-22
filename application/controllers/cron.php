@@ -21,6 +21,7 @@ class Cron extends CI_Controller {
 		if( PHP_SAPI != 'cli') exit('Direct Access is not permitted!');
 		$this->load->model('garment_model');
 		$this->load->model('assessment_model');
+		$this->load->model('cron_model');
 	}
 	/**
 	 * Index Cron Page for this controller.
