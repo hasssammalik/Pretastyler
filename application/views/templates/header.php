@@ -10,7 +10,7 @@
 <link href="/css/mozilla.css?v=2.2.0.0" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
 <!--- - - - - - CSS overwriter   - - - - -->
-<link href="/css/style.css?v=2.2.0.0" rel="stylesheet">
+<link href="/css/style.css?v=2.2.0.2" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 <!--- - - - - - CSS overwriter   - - - - -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -36,8 +36,8 @@
 <script src="/js/jquery.nouislider.all.min.js"></script>
 <script src="/js/jquery.jscrollpane.min.js"></script>
 <script src="/js/jquery.elevateZoom-3.0.8.min.js"></script>
-<script src="/js/functions.js?v=2.2.0.1"></script>
-<script src="/js/script.js?v=2.2.0.0"></script>
+<script src="/js/functions.js?v=2.2.0.2"></script>
+<script src="/js/script.js?v=2.2.0.1"></script>
 <script src="/js/tabs.js?v=2.2.0.0"></script>
 <script src="/js/menu-mall.js?v=2.2.0.1"></script>
 <?php if (isset($extraJS)) print $extraJS ?>

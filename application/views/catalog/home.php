@@ -440,7 +440,7 @@
 	<div class="modalOverlay"></div>
 	<footer>
 		<ul>
-			<li><a href="https://chrome.google.com/webstore/detail/select-image-for-genie-se/ggciakfahmdidbpcccinmldogcjkcmhd">STYLE GENIE EXTENSION</a>|</li>
+			<li><a target="_blank" href="https://chrome.google.com/webstore/detail/select-image-for-genie-se/ggciakfahmdidbpcccinmldogcjkcmhd">STYLE GENIE EXTENSION</a>|</li>
 			<li><a href="/terms.html">TERMS</a>|</li>
 			<li><a href="/our-story.html">OUR STORY</a>|</li>
 			<li><a href="/contact-us.html">CONTACT</a>|</li>
