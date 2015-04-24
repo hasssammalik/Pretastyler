@@ -37,8 +37,7 @@
 												<div class="row">
 
 													<div class="fbloginbutton right">
-														<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-														</fb:login-button>
+														<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onclick="checkLoginState();"></div>
 													</div>
 													<input type="submit" onclick="" value="Log in" id="login-submit"> 
 
