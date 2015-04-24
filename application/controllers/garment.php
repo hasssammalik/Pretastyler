@@ -40,8 +40,6 @@ class Garment extends CI_Controller {
 	 */
 	public function import_extension()
 	{
-		$this->load->helper('https');
-		use_ssl(FALSE);
 		$this->load->library('user_check');
 		$this->load->library('session');
 		$type = $this->session->userdata('type');
