@@ -495,8 +495,7 @@ $this->load->view('templates/footer', $data);
 		$data['title'] = "Thank You for signing up";
 		$data['breadcrumb'] = array('THANK YOU');
 		
-		$data['extraJS'] = "<style> .headPageTitle { display:none;} .content {background-image:url(/img/'.
-			$image.'.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style> <script>(function() {
+		$data['extraJS'] = "<style> .headPageTitle { display:none;} .content {background-image:url(/img/$image.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style> <script>(function() {
   var _fbq = window._fbq || (window._fbq = []);
   if (!_fbq.loaded) {
     var fbds = document.createElement('script');
