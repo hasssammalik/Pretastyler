@@ -399,7 +399,11 @@
 				<div class="mall-links">	
 					<div class="mall-link1" >
 						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm on a roll show me </p>
-						<a class="bkpinkycolor home-vistmallbtn container noneLiner" id="more-questions" href="/your-mall.html" onmouseover="document.getElementById('tooltip1').style.display = 'block';" onmouseout="document.getElementById('tooltip1').style.display = 'none';">
+						<a class="bkpinkycolor home-vistmallbtn container noneLiner" 
+						onClick="ga('send', 'event', { eventCategory: 'button-morequestions', eventAction: 'click', eventLabel: 'button more questions', eventValue: 1});"
+						id="more-questions" href="/your-mall.html" 
+						onmouseover="document.getElementById('tooltip1').style.display = 'block';" 
+						onmouseout="document.getElementById('tooltip1').style.display = 'none';">
 							MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</a>
 						<div class="mall-link-tooltip" id="tooltip1">Just a few more questions will change the accuracy of your mall from good to great.</div>

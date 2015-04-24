@@ -591,7 +591,9 @@
 				<br><br><br>
 				<p class=""> <strong>Your personalized mall is ready!</strong></p>
 				<div class="mall-link3">
-				<button class="bkpinkycolor home-vistmallbtn container noneLiner"  id="signup-popup">
+				<button class="bkpinkycolor home-vistmallbtn container noneLiner" 
+				onClick="ga('send', 'event', { eventCategory: 'button-saveandshopping', eventAction: 'click', eventLabel: 'button saveandshopping', eventValue: 1});"
+				id="signup-popup">
 					SAVE AND GO SHOPPING <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 				</button></div>
 				<div class="clear"></div>
