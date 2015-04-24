@@ -160,7 +160,7 @@
   function statusChangeCallback(response, clicked) {
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      if( ((typeof clicked != "undefined") && (typeof clicked.valueOf() == "string")) && (clicked.length > 3){
+      if( ((typeof clicked != "undefined") && (typeof clicked.valueOf() == "string")) && (clicked.length > 3) ) {
       	fbAPI();
       }
     }
