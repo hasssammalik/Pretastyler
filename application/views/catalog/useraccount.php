@@ -158,7 +158,9 @@
   function checkLoginState( ) {
     FB.getLoginStatus(function(response) {
        if (response.status === 'connected') {
-	      	fbAPI();
+	      	FB.api('/me', function(response) {
+		      login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
+		    });
 	    }
     });
   }
@@ -184,13 +186,6 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
-  function fbAPI() {
-    FB.api('/me', function(response) {
-      login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
-    });
-  }
 </script>
 
 
