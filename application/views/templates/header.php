@@ -41,6 +41,8 @@
 <script src="/js/script.js?v=2.2.0.1"></script>
 <script src="/js/tabs.js?v=2.2.0.0"></script>
 <script src="/js/menu-mall.js?v=2.2.0.2"></script>
+
+<!-- Remarketing code  -->
 <script>(function() {
   var _fbq = window._fbq || (window._fbq = []);
   if (!_fbq.loaded) {
