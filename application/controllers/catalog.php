@@ -495,8 +495,8 @@ $this->load->view('templates/footer', $data);
 		$data['title'] = "Thank You for signing up";
 		$data['breadcrumb'] = array('THANK YOU');
 		
-		$data['extraJS'] = "<style>.headPageTitle { display:none;}.content {background-image:url(/images/'.
-			$image.'.jpg);margin:0;padding:0;height:100%;} .container { margin-top: 20px; }</style> <script>(function() {
+		$data['extraJS'] = "<style> .headPageTitle { display:none;} .content {background-image:url(/img/'.
+			$image.'.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style> <script>(function() {
   var _fbq = window._fbq || (window._fbq = []);
   if (!_fbq.loaded) {
     var fbds = document.createElement('script');
@@ -509,8 +509,7 @@ $this->load->view('templates/footer', $data);
 })();
 window._fbq = window._fbq || [];
 window._fbq.push(['track', '6022631669625', {'value':'0.00','currency':'AUD'}]);
-</script>
-<noscript><img height=\"1\" width=\"1\" alt=\"\" style=\"display:none\" src=\"https://www.facebook.com/tr?ev=6022631669625&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1\" /></noscript>";
+</script><noscript><img height='1' width='1' alt='' style='display:none' src='https://www.facebook.com/tr?ev=6022631669625&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1'/></noscript>";
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
