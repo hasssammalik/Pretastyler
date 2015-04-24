@@ -36,9 +36,7 @@
 												</div>
 												<div class="row">
 
-													<div class="fbloginbutton right">
-														<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" id="fbloginbuttonIcon"></div>
-													</div>
+													<div class="fbloginbutton right " id="fbloginbuttonIcon">Login with Facebook</div>
 													<input type="submit" onclick="" value="Log in" id="login-submit"> 
 
 												</div>
@@ -156,20 +154,12 @@
 
 <script type='text/javascript'>
 
-  // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response, clicked) {
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      if( ((typeof clicked != "undefined") && (typeof clicked.valueOf() == "string")) && (clicked.length > 3) ) {
-      	fbAPI();
-      }
-    }
-  }
-
-  function checkLoginState( clicked ) {
+ 
+  function checkLoginState( ) {
     FB.getLoginStatus(function(response) {
-      statusChangeCallback(response, clicked);
-
+       if (response.status === 'connected') {
+	      	fbAPI();
+	    }
     });
   }
 
@@ -182,10 +172,7 @@
     });
 
 
-	FB.getLoginStatus(function(response) {
-	    statusChangeCallback(response);
-	});
-
+	
   };
 
   // Load the SDK asynchronously
