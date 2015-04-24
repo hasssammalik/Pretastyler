@@ -38,7 +38,7 @@
 													<input type="submit" onclick="" value="Log in" id="login-submit">
 												</div>
 												<div class="row">
-													<a href="#" class="forgot-link-tab">Forgot your password?</a><br>
+													<a href="#forget-password" class="forgot-link-tab">Forgot your password?</a><br>
 													<a href="/index.html#profile">Don't have an account? <span class="b underlinebugbold">SIGN UP NOW</span></a>
 												</div>
 											</fieldset>
@@ -61,7 +61,7 @@
 													<input type="submit" value="SEND" id="forgot-submit">
 												</div>
 												<div class="row">
-													<a href="#" class="login-link-tab">Already have an account? <span class="b underlinebugbold">LOGIN NOW</span></a>
+													<a href="#login" class="login-link-tab">Already have an account? <span class="b underlinebugbold">LOGIN NOW</span></a>
 												</div>
 											</fieldset>
 										<?php echo form_close() ?>
