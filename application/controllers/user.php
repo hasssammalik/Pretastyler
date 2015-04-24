@@ -52,14 +52,16 @@ class User extends CI_Controller {
 		$data['breadcrumb'] = array('USER PROFILE');
 		
 		$data['extraCSS'] = '
-							<link rel="stylesheet" href="/css/jquery-ui.css?v=2.2.0.0">
-							<link href="/css/jquery-ui-slider-pips.css?v=2.2.0.0" rel="stylesheet">
+							<link rel="stylesheet" href="/css/jquery-ui.css?v=2.2.0.2">
+							<link href="/css/jquery-ui-slider-pips.css?v=2.2.0.2" rel="stylesheet">
 		';
+		
 		$data['extraJS'] = '<script src="/js/user-profile.js?v=2.2.0.0"></script>
 							<script src="/js/jquery.sticky-kit.min.js"></script>
 							<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-							<script src="/js/jquery-ui-slider-pips.js"></script>
+							<script src="/js/jquery-ui-slider-pips.js?v=2.2.0.2"></script>
 							<script src="/js/circular-progress.js?v=2.2.0.0"></script>
+							<script type="text/javascript">$(function(){ preload_all_img_tags(); });</script>
 		';
 
 		$user_id = $this->flexi_auth->get_user_id();

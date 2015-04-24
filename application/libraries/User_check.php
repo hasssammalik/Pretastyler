@@ -46,7 +46,7 @@ class User_check
 					$datetime2 = new DateTime($user_info['uacc_date_added']);
 					$interval = $datetime1->diff($datetime2);
 					$days = $interval->days;
-					if ($days >= 14) {
+					if ($days >= 30) {
 						redirect('payment');
 					}
 				} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
