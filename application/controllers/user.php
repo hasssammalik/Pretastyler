@@ -28,7 +28,7 @@ class User extends CI_Controller {
 		$this->load->model('deep_search_model');
 		$this->load->model('user_model');
 		$this->load->model('infusionsoft_model');
-		$this->load->helper(array('url','form'));
+		$this->load->helper(array('url','form','https'));
 		$this->data = array(
 		);
 		if ($this->flexi_auth->is_logged_in()){
@@ -131,6 +131,7 @@ class User extends CI_Controller {
 	 */
 	public function my_dressing_room()
 	{
+		use_ssl();
 		$this->load->library('user_check');
 		if (!file_exists(APPPATH.'/views/user/my_dressing_room.php')){
 			show_404();
