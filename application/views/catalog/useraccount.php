@@ -17,7 +17,7 @@
 								<div class="col" style="position:relative;">
 								<?php if ( uri_string() == '' ) { $link_url_to = "index"; } else {  $link_url_to = uri_string(); } ?>
 									<div id="login-form" return_url="/<?php print $link_url_to ?>.html">
-										<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('/index.html', $attlog); ?>
+										<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('/useraccount/login.html', $attlog); ?>
 										
 											<fieldset>
 												<div class="row">
@@ -35,10 +35,13 @@
 													<label class="remember-label"><input type="checkbox" id="menu_mall_login_remember_me"><span> Remember me</span></label>
 												</div>
 												<div class="row">
-													<input type="submit" onclick="" value="Log in" id="login-submit">
+
+													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon">Login with Facebook</div>
+													<input type="submit" onclick="" value="Log in" id="login-submit"> 
+
 												</div>
 												<div class="row">
-													<a href="#" class="forgot-link-tab">Forgot your password?</a><br>
+													<a href="#forget-password" class="forgot-link-tab">Forgot your password?</a><br>
 													<a href="/index.html#profile">Don't have an account? <span class="b underlinebugbold">SIGN UP NOW</span></a>
 												</div>
 											</fieldset>
@@ -61,7 +64,7 @@
 													<input type="submit" value="SEND" id="forgot-submit">
 												</div>
 												<div class="row">
-													<a href="#" class="login-link-tab">Already have an account? <span class="b underlinebugbold">LOGIN NOW</span></a>
+													<a href="#login" class="login-link-tab">Already have an account? <span class="b underlinebugbold">LOGIN NOW</span></a>
 												</div>
 											</fieldset>
 										<?php echo form_close() ?>
@@ -148,6 +151,43 @@
 	</script>
 	
 <?php } ?>
+
+<script type='text/javascript'>
+
+ 
+  function checkLoginState( ) {
+    FB.getLoginStatus(function(response) {
+       if (response.status === 'connected') {
+	      	FB.api('/me', function(response) {
+		      login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
+		    });
+	    }
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '416574138523788',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+
+
+	
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
 
 </body>
 </html>

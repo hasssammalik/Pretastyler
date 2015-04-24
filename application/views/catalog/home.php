@@ -24,13 +24,13 @@
 			
 				<script type="text/javascript">
 					
-					var default_values = [3,5,2,4,1,4,2];
+					var default_values = [1,1,1,1,1,1,1];
 					
 					$(function(){
 						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
 						var size = [ "Allegra", "Natalie", "Halle","Kim", "Queen", "Amber","Rebel"];
 						var age = [ "< 30", "31 -45 ", "46 - 55", "56 - 65", "66 - 75","76 >" ];
-						var bodyshape = [ "Hourglass", "Inverted Triangle", "Rectangle", "Triangle", "Oval", "Diamond"];
+						var bodyshape = [ "Hourglass", "Inverted Triangle", "Triangle", "Rectangle", "Oval", "Diamond"];
 						var bodyratio = [ "Balanced Body","Long Legged Short Torso", "Short Legged Long Torso" ];
 						var bust = [ "< A", "B", "C", "D", "DD", "E >" ];
 						var build = [ "Small", "Medium", "Large" ];
@@ -65,8 +65,8 @@
 						[
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-33.png" /></div><ul><li>You appear to be the same width across your bustline as you are across the widest part of your hipline</li><li>Your waist is well defined and your narrowest area</li><li>NOTE: You can be any weight and be an hourglass figure.</li></ul></div>',
 						'<div id="talkbubble" class="doubleline"><div class="slider-image"><img src="/images/profileSetup/body shape/features-34.png" /></div><ul><li>You are larger above the waist than below</li><li>You are widest across your bustline</li><li>Your armpits are wider than the widest part of your hipline (when viewed from the front).</li><li>You are smaller below waist than below</li></ul></div>',
-						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-35.png" /></div><ul><li>Your bust, waist and hipline are close to or the same in width.</li><li>Your waist is undefined</li><li>Your have a wide rib cage.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-36.png" /></div><ul><li> You are larger below the waist than above</li><li>You have a well-defined waist</li><li>You have a narrow lower rib cage</li><li>Your armpits are narrower than the widest part of your hipline (when viewed from the front).</li></ul></div>',
+						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-35.png" /></div><ul><li>Your bust, waist and hipline are close to or the same in width.</li><li>Your waist is undefined</li><li>Your have a wide rib cage.</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-37.png" /></div><ul><li>You consider yourself to be in the substantially overweight range</li><li>Your widest area is between your bust and hipline</li><li>You have a full stomach that sits low around the hips</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/body shape/features-38.png" /></div><ul><li>You consider yourself to be in the substantially overweight range</li><li>Your widest area is between your bust and hipline</li><li>You have a full, high stomach that starts just under your bustline.</li><li>Sometimes others may mistake you for being pregnant.</li></ul></div>' 
 						];
@@ -399,7 +399,11 @@
 				<div class="mall-links">	
 					<div class="mall-link1" >
 						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm on a roll show me </p>
-						<a class="bkpinkycolor home-vistmallbtn container noneLiner" id="more-questions" href="/your-mall.html" onmouseover="document.getElementById('tooltip1').style.display = 'block';" onmouseout="document.getElementById('tooltip1').style.display = 'none';">
+						<a class="bkpinkycolor home-vistmallbtn container noneLiner" 
+						onClick="ga('send', 'event', { eventCategory: 'button-morequestions', eventAction: 'click', eventLabel: 'button more questions', eventValue: 1});"
+						id="more-questions" href="/your-mall.html" 
+						onmouseover="document.getElementById('tooltip1').style.display = 'block';" 
+						onmouseout="document.getElementById('tooltip1').style.display = 'none';">
 							MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
 						</a>
 						<div class="mall-link-tooltip" id="tooltip1">Just a few more questions will change the accuracy of your mall from good to great.</div>

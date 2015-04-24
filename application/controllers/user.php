@@ -314,7 +314,15 @@ class User extends CI_Controller {
 			$first_name = $this->input->post('first_name', TRUE);
 			$last_name = $this->input->post('last_name', TRUE);
 			$email = $this->input->post('email', TRUE);
-			$password = $this->input->post('password', TRUE);
+			
+			$facebookid = $this->input->post('fbid', TRUE);
+			$facebookverify = $this->input->post('fbverify', TRUE);
+			if( !empty( $facebookid ) && !empty( $facebookverify ) ) {
+				$password = $facebookid . "asmexPretA";
+			} else {
+				$password = $this->input->post('password', TRUE);
+			}
+			
 			if ($this->flexi_auth->identity_available($email)) {
 				if (strlen($password) >= $this->flexi_auth->min_password_length()){
 					if ($this->flexi_auth->valid_password_chars($password)){
@@ -363,7 +371,14 @@ class User extends CI_Controller {
 			print $error_already_logged_in;
 		} else if ($this->input->post()){
 			$email = $this->input->post('email', TRUE);
-			$password = $this->input->post('password', TRUE);
+			$facebookid = $this->input->post('fbid', TRUE);
+			$facebookverify = $this->input->post('fbverify', TRUE);
+			if( !empty( $facebookid ) && !empty( $facebookverify ) ) {
+				$password = $facebookid . "asmexPretA";
+			} else {
+				$password = $this->input->post('password', TRUE);
+			}
+			
 			$remember_me = $this->input->post('remember_me', TRUE);
 			if ($this->flexi_auth->validate_current_password($password, $email)) {
 				if ($this->flexi_auth->login($email, $password, $remember_me)){
