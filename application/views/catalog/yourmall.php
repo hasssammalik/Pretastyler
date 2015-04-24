@@ -9,7 +9,7 @@
 				
 				<script type="text/javascript">
 					
-					var default_values = [ 2,2,2,2,2,2,2,2,2,1,1,1];
+					var default_values = [ 1,1,1,1,1,1,1,1,1,1,1,1];
 					
 					$(function(){
 						

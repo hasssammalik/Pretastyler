@@ -24,7 +24,7 @@
 			
 				<script type="text/javascript">
 					
-					var default_values = [3,5,2,4,1,4,2];
+					var default_values = [1,1,1,1,1,1,1];
 					
 					$(function(){
 						var height = [ "Short", "Med-short", "Medium", "Med-tall", "Tall" ];
