@@ -37,7 +37,7 @@
 												<div class="row">
 
 													<div class="fbloginbutton right">
-														<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onclick="checkLoginState();"></div>
+														<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" id="fbloginbuttonIcon"></div>
 													</div>
 													<input type="submit" onclick="" value="Log in" id="login-submit"> 
 
@@ -156,35 +156,56 @@
 
 <script type='text/javascript'>
 
-function checkLoginState() {
-    
-    FB.getLoginStatus(function(response) {
-    	if (response.status === 'connected') {
-    		 FB.api('/me', function(response) {
-		      login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
-		    });
-    	}
-    });
-}
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response, clicked) {
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      if( ((typeof clicked != "undefined") && (typeof clicked.valueOf() == "string")) && (clicked.length > 3){
+      	fbAPI();
+      }
+    }
+  }
 
-window.fbAsyncInit = function() {
+  function checkLoginState( clicked ) {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response, clicked);
+
+    });
+  }
+
+  window.fbAsyncInit = function() {
     FB.init({
       appId      : '416574138523788',
       cookie     : true,
       xfbml      : true,
       version    : 'v2.3'
     });
-};
 
-(function(d, s, id) {
+
+	FB.getLoginStatus(function(response) {
+	    statusChangeCallback(response);
+	});
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+  }(document, 'script', 'facebook-jssdk'));
 
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function fbAPI() {
+    FB.api('/me', function(response) {
+      login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
+    });
+  }
 </script>
+
 
 </body>
 </html>
