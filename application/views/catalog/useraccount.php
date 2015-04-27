@@ -165,6 +165,7 @@ window.fbAsyncInit = function() {
 };
 
 function fb_login(){
+	$( "#error-login" ).html(" ");
     FB.login(function(response) {
 
         if (response.status === 'connected') {
@@ -172,6 +173,8 @@ function fb_login(){
                login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
             });
 
+        } else {
+            $( "#error-login" ).html("Facebook login Cancelled.");
         }
     }, {
         scope: 'publish_stream,email'
