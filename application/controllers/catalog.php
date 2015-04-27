@@ -548,6 +548,8 @@ window._fbq.push(['track', '6022631669625', {'value':'0.00','currency':'AUD'}]);
 			$data['extraMeta'] = '<meta name="keyword" content="Login to PRÊT À STYLER. PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 			<meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 			';
+
+			$data['extraJS'] = '<script src="/js/circular-progress.js"></script>';
 			
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu_mall', $data);
