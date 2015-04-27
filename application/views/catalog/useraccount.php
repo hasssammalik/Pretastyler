@@ -39,6 +39,7 @@
 													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon">
 														<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 														</fb:login-button>
+													</div>
 													<input type="submit" onclick="" value="Log in" id="login-submit"> 
 
 												</div>
