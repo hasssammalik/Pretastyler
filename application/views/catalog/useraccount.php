@@ -36,7 +36,7 @@
 												</div>
 												<div class="row">
 
-													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon">Login with Facebook</div>
+													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon" onclick="fb_login();">Login with Facebook</div>
 													<input type="submit" onclick="" value="Log in" id="login-submit"> 
 
 												</div>
