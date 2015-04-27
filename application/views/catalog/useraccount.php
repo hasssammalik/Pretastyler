@@ -36,7 +36,9 @@
 												</div>
 												<div class="row">
 
-													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon">Login with Facebook</div>
+													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon">
+														<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+														</fb:login-button>
 													<input type="submit" onclick="" value="Log in" id="login-submit"> 
 
 												</div>
