@@ -617,9 +617,10 @@ class Admin extends CI_Controller {
 							$deep_search_required_field_id = 0;
 						}
 					} else if ($deep_search_level == 1){
-						if (empty($deep_search_name)){
+						//temporary change, will change back when deep search function online.
+						/* if (empty($deep_search_name)){
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter field DEEP SEARCH NAME!'));
-						}
+						} */
 						$deep_search_parent_field_id = 0;
 						$deep_search_required_field_id = 0;
 					} else {
