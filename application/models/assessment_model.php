@@ -274,7 +274,7 @@ class Assessment_model extends CI_Model{
 	 * @return category array if existed, if not return FALSE
 	 */
 	public function get_initial_field_criteria_for_assessment($garment_id, $category_id){
-		$this->db->select('field.field_id, short_name AS field_name, criteria.criteria_id, criteria.name AS criteria_name')->from('field')->join('criteria','field.field_id = criteria.field_id', 'left')->join('garment_specs','criteria.criteria_id = garment_specs.criteria_id', 'left')->where('garment_specs.garment_id', $garment_id)->order_by('field.position','asc');
+		$this->db->select('field.field_id, short_name AS field_name, criteria.criteria_id, criteria.name AS criteria_name')->from('field')->join('criteria','field.field_id = criteria.field_id', 'left')->join('garment_criteria','criteria.criteria_id = garment_criteria.criteria_id', 'left')->where('garment_criteria.garment_id', $garment_id)->order_by('field.position','asc');
 		$query = $this->db->get();
 		if ($query->num_rows() == 0){
 			$this->db->select('category_field.field_id')->from('category_field')->join('field', 'category_field.field_id = field.field_id', 'right')->where(array('category_id' => $category_id))->order_by('position', 'asc');
