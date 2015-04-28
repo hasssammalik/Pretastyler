@@ -76,7 +76,7 @@ $(function(){
 			{ "data": "delete", "searchable": false , "sortable": false }
 		],
 		"order": [ 0, 'desc' ],
-		"sPaginationType": "input"
+		"pagingType": "input"
 	} );
 	
 	
