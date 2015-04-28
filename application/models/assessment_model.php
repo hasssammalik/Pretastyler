@@ -348,13 +348,13 @@ class Assessment_model extends CI_Model{
 		unset($new_array['field']['hideif']);
 		//last one check
 		$position = $new_array['field']['position'];
-		$this->db->select('max(position) as max_position')->from('category_field')->join('field', 'category_field.field_id = field.field_id', 'right')->where('category_id', $category_id);
-		$max_position = $this->db->get()->row()->max_position;
-		if ($position >= $max_position) {
-			$new_array['last_one'] = TRUE;
-		} else {
+		//$this->db->select('max(position) as max_position')->from('category_field')->join('field', 'category_field.field_id = field.field_id', 'right')->where('category_id', $category_id);
+		//$max_position = $this->db->get()->row()->max_position;
+		//if ($position >= $max_position) {
+		//	$new_array['last_one'] = TRUE;
+		//} else {
 			$new_array['last_one'] = $is_availiable_last_one;
-		}
+		//}
 		//generate current data
 		if (empty($selected_criteria_ids)){
 			$new_array['current_field_criteria'] = array();
