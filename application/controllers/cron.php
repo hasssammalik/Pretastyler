@@ -20,6 +20,7 @@ class Cron extends CI_Controller {
 		parent::__construct();
 		if( PHP_SAPI != 'cli') exit('Direct Access is not permitted!');
 		$this->load->model('garment_model');
+		$this->load->model('user_model');
 		$this->load->model('assessment_model');
 		$this->load->model('cron_model');
 	}
@@ -33,6 +34,7 @@ class Cron extends CI_Controller {
 		echo date('Y-m-d H:i:s')."\t".$total." user ids got!\n".date('Y-m-d H:i:s')."\t"."Starting update process...\n";
 		$index = 1;
 		foreach($user_ids as $user_id){
+			$this->user_model->generate_user_specs($user_id['user_id']);
 			$this->garment_model->update_all_score($user_id['user_id']);
 			echo date('Y-m-d H:i:s')."\t"."(".$index." / ".$total.")\t".$user_id['user_id']."\tis updated!\n";
 			$index++;

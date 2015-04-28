@@ -36,7 +36,7 @@
 												</div>
 												<div class="row">
 
-													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon">Login with Facebook</div>
+													<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon" onclick="fb_login();">Login with Facebook</div>
 													<input type="submit" onclick="" value="Log in" id="login-submit"> 
 
 												</div>
@@ -151,31 +151,35 @@
 	</script>
 	
 <?php } ?>
-
+<div id="fb-root"></div>
 <script type='text/javascript'>
 
- 
-  function checkLoginState( ) {
-    FB.getLoginStatus(function(response) {
-       if (response.status === 'connected') {
-	      	FB.api('/me', function(response) {
-		      login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
-		    });
-	    }
-    });
-  }
-
-  window.fbAsyncInit = function() {
+window.fbAsyncInit = function() {
     FB.init({
       appId      : '416574138523788',
       cookie     : true,
       xfbml      : true,
       version    : 'v2.3'
     });
-
-
 	
-  };
+};
+
+function fb_login(){
+	$( "#error-login" ).html(" ");
+    FB.login(function(response) {
+
+        if (response.status === 'connected') {
+            FB.api('/me', function(response) {
+               login_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
+            });
+
+        } else {
+            $( "#error-login" ).html("Facebook login Cancelled.");
+        }
+    }, {
+        scope: 'publish_stream,email'
+    });
+}
 
   // Load the SDK asynchronously
   (function(d, s, id) {
@@ -188,6 +192,10 @@
 
 </script>
 
+<div class="modal"></div>
+<div class="popup_modal"></div>
+<div class="brandnewmodal"></div>
+<div class="popup-box"></div>
 
 </body>
 </html>
