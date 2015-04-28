@@ -192,6 +192,10 @@ function fb_login(){
 
 </script>
 
+<div class="modal"></div>
+<div class="popup_modal"></div>
+<div class="brandnewmodal"></div>
+<div class="popup-box"></div>
 
 </body>
 </html>
