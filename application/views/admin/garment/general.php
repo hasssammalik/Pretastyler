@@ -84,7 +84,7 @@ $(function(){
 		mouseenter: function(){
 			var real_img = $(this).attr("src");
 			$(this).parent("td").css("position", 'relative');
-			$(this).parent("td").append('<div class="hoverBigImageImage" style="position: absolute; top: 1px; left: 48px; max-width: 500px; min-width: 400px; padding: 6px; z-index: 2;"><img src="'+real_img+'" style="width: 100% !important;"></div>').fadeIn("fast");
+			$(this).parent("td").append('<div class="hoverBigImageImage" style="position: absolute; top: -150px; left: 48px; max-width: 500px; min-width: 400px; padding: 6px; z-index: 2;"><img src="'+real_img+'" style="width: 100% !important;"></div>').fadeIn("fast");
 		},
 		mouseleave: function(){
 			$( ".hoverBigImageImage" ).fadeOut("fast").remove();
