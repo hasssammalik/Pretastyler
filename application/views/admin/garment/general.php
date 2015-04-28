@@ -82,9 +82,16 @@ $(function(){
 	
 	$(document).on({
 		mouseenter: function(){
+			
 			var real_img = $(this).attr("src");
 			$(this).parent("td").css("position", 'relative');
-			$(this).parent("td").append('<div class="hoverBigImageImage" style="position: absolute; top: -150px; left: 48px; max-width: 500px; min-width: 400px; padding: 6px; z-index: 2;"><img src="'+real_img+'" style="width: 100% !important;"></div>').fadeIn("fast");
+			$(this).parent("td").append('<div class="hoverBigImageImage" style="position: absolute; top: -150px; left: 48px; max-width: 400px; min-width: 300px; padding: 6px; z-index: 2;"><img src="'+real_img+'" style="width: 100% !important;"></div>').fadeIn("fast");
+			if ($(this).parent("td").position().top+ $(this).next().find('img').height() + 150>= $(window).height()){
+				$(this).next().css('top', ($(window).height() - $(this).next().find('img').height() - $(this).parent("td").position().top - 150)+'px');
+			} else {
+				$(this).next().css('top', '0px');
+			}
+			
 		},
 		mouseleave: function(){
 			$( ".hoverBigImageImage" ).fadeOut("fast").remove();
