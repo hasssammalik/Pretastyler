@@ -16,6 +16,7 @@
 								<th>Image</th>
 								<th>Category</th>
 								<th>Name</th>
+								<th>Price Range</th>
 								<th>Retailer</th>
 								<th>Owner</th>
 								<th>Created</th>
@@ -34,6 +35,7 @@
 								<th>Image</th>
 								<th>Category</th>
 								<th>Name</th>
+								<th>Price Range</th>
 								<th>Retailer</th>
 								<th>Owner</th>
 								<th>Created</th>
@@ -65,6 +67,7 @@ $(function(){
 			{ "data": "image", "searchable": false , "sortable": false },
 			{ "data": "category" },
 			{ "data": "name" },
+			{ "data": "price_range" },
 			{ "data": "retailer" },
 			{ "data": "owner"},
 			{ "data": "date_created" },

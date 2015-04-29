@@ -271,7 +271,7 @@
 				<div class="container">
 					
 					<div class="homeprofile-head" id="profile">
-					<a href="/index.html#profile">	<img src="/images/newhomedown.png" class="noneArea noneLiner "></a>
+					<a href="#profile">	<img src="/images/newhomedown.png" class="noneArea noneLiner "></a>
 						
 						<p class="i profile-big-title" style="font-size:1.8vw;">Start by selecting your <strong>body features</strong></p>
 						
@@ -370,8 +370,8 @@
 			<br>
 		</section>
 		
-		<!-- <section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
-			
+		 <section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
+			<!--
 			<div class="homeprofile-head">
 				<img src="/images/newhomedown.png" class="noneArea noneLiner">
 				<p class="i profile-big-title homepage-titles">Here's just a few <strong>garments we've found for you</strong></p>
@@ -384,7 +384,7 @@
 				<div class="clear"></div>
 			</div>
 			
-
+			-->
 			
 
 
@@ -416,7 +416,6 @@
 			</div>
 			
 		</section>
-		 -->
 		
 	</div>
 	<section class="brand role-element leadstyle-container" id="brands" style="background-color:white;">
