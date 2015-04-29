@@ -363,14 +363,14 @@
 
 						var requestvalues = { 
 							
-							"height_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['height_select_id']; ?>,
-							"weight_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['weight_select_id']; ?>,
-							"age_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['age_select_id']; ?>,
-							"body_shape_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['body_shape_select_id']; ?>,
-							"body_ratio_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['body_ratio_select_id']; ?>,
-							"bra_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['bra_select_id']; ?>,
-							"build_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['build_select_id']; ?>,
-							"minBust" : <?php echo  $this->session->userdata['initial_user_profile']['minBust']; ?>,
+							"height_select_id" : <?php      echo ( !empty( $this->session->userdata['initial_user_profile']['height_select_id'])      ? $this->session->userdata['initial_user_profile']['height_select_id'] : 0 ); ?>,
+							"weight_select_id" : <?php      echo ( !empty( $this->session->userdata['initial_user_profile']['weight_select_id'])      ? $this->session->userdata['initial_user_profile']['weight_select_id'] : 0 ); ?>,
+							"age_select_id" : <?php         echo ( !empty( $this->session->userdata['initial_user_profile']['age_select_id'])         ? $this->session->userdata['initial_user_profile']['age_select_id'] : 0 ); ?>,
+							"body_shape_select_id" : <?php  echo ( !empty( $this->session->userdata['initial_user_profile']['body_shape_select_id'])  ? $this->session->userdata['initial_user_profile']['body_shape_select_id'] : 0 ); ?>,
+							"body_ratio_select_id" : <?php  echo ( !empty( $this->session->userdata['initial_user_profile']['body_ratio_select_id'])  ? $this->session->userdata['initial_user_profile']['body_ratio_select_id'] : 0 ); ?>,
+							"bra_select_id" : <?php         echo ( !empty( $this->session->userdata['initial_user_profile']['bra_select_id'])         ? $this->session->userdata['initial_user_profile']['bra_select_id'] : 0 ); ?>,
+							"build_select_id" : <?php       echo ( !empty( $this->session->userdata['initial_user_profile']['build_select_id'])       ? $this->session->userdata['initial_user_profile']['build_select_id'] : 0 ); ?>,
+							"minBust" : <?php               echo ( !empty( $this->session->userdata['initial_user_profile']['minBust'])               ? $this->session->userdata['initial_user_profile']['minBust'] : 0 ); ?>,
 
 							"neck_length_select_id" : default_values[0],
 							"shoulders_select_id" : default_values[1],
