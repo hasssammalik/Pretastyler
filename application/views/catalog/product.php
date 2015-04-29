@@ -1,6 +1,6 @@
 <div class="mainContent ">
 	<div class="productDisplay">
-		<?php if ($this->flexi_auth->is_logged_in()) {$imageclass="cross-to-mall"; }else $imageclass="cross-to-home"; ?><div class="cross"><div class="$imageclass"><img src="/images/pink_button-05.png" alt /></div></div>
+		<?php if ($this->flexi_auth->is_logged_in()) {$imageclass="cross-to-mall"; }else $imageclass="cross-to-home"; ?><div class="cross"><div class="<?php echo $imageclass;?> cross-image"><img src="/images/pink_button-05.png" alt /></div></div>
 		<div id="product" class="productWrap <?php if ($this->flexi_auth->is_logged_in() ) { ?> loggedInSmallDetails <?php } ?>">
 			
 			<?php if ($this->flexi_auth->is_logged_in()) { ?>
