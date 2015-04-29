@@ -34,7 +34,7 @@ class Mall extends CI_Controller {
 			'colours' => $this->colour_model->get_available_colours('full'),
 			'occasions' => $this->occasion_model->get_available_occasions(),
 			'categories' => $this->category_model->get_available_categories(),
-			'topbrands' =>  $this->garment_model->get_top_brands(0, 10)
+			'topstores' =>  $this->garment_model->get_top_stores(0, 10)
 		);
 		if ($this->flexi_auth->is_logged_in()){
 			$this->session->unset_userdata('initial_user_profile');
@@ -49,7 +49,7 @@ class Mall extends CI_Controller {
 		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
-		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.0"></script>';
+		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.1"></script>';
 		if ($this->flexi_auth->is_logged_in()){
 			$user_id = $this->flexi_auth->get_user_id();
 			if ($user_id == 1){
@@ -104,7 +104,7 @@ class Mall extends CI_Controller {
 		$occasion = $this->input->post('occasion', TRUE);
 		$occasion_home = $this->input->post('occasion_home', TRUE);
 		$colour = $this->input->post('colour', TRUE);
-		$brand = $this->input->post('brand', TRUE);
+		$store = $this->input->post('store', TRUE);
 		$category = $this->input->post('category', TRUE);
 		$price_range = $this->input->post('price_range', TRUE);
 		$criteria = $this->input->post('criteria', TRUE);
@@ -191,7 +191,7 @@ class Mall extends CI_Controller {
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_occasion_category_and_criteria_ids($offset, $limit, $user_id, $occasion_ids, $category_ids, $criteria_ids);
 		} 
 		else { 
-			$data['garments'] = $this->garment_model->get_batch_garment_info_from_quick_search($offset, $limit, $user_id, $keyword, $occasion, $colour, $category, $brand, $price_range, $criteria, $show_premium, $star, $order_by, $star_range);
+			$data['garments'] = $this->garment_model->get_batch_garment_info_from_quick_search($offset, $limit, $user_id, $keyword, $occasion, $colour, $category, $store, $price_range, $criteria, $show_premium, $star, $order_by, $star_range);
 		}
 		
 		
@@ -419,19 +419,19 @@ class Mall extends CI_Controller {
 
 	}
 	/**
-	 * Search Brand for this controller.
+	 * Search Store for this controller.
 	 */
-	public function search_brand(){
+	public function search_store(){
 		if (!$this->input->post()){
 			show_404();
 		}
 		$offset = $this->input->post('offset', TRUE);
 		$limit = $this->input->post('limit', TRUE);
-		$brand = $this->input->post('brand', TRUE);
-		if( $brand ) {
-			$data['brand_result'] = $this->garment_model->get_search_brands($offset, $limit, $brand);
+		$store = $this->input->post('store', TRUE);
+		if( $store ) {
+			$data['store_result'] = $this->garment_model->get_search_stores($offset, $limit, $store);
 		}
-		$this->load->view('mall/search_brand', $data);
+		$this->load->view('mall/search_store', $data);
 	}
 	
 	/**
