@@ -144,7 +144,7 @@
 								<?php if (!empty($garment['extra_image1_path']) || !empty($garment['extra_image2_path']) ) {?>
 									<div class="thumbsWrap">
 										<ul class="items">
-											<li style="display: none;"><a href="#" data-index="1" class="firstThumbproduct"><img src="<?php print '/images/garment/'.$garment['image_path'] ?>" alt="<?php print $garment['name']?>"></a></li>
+											<li style="display: none;" class="firstThumbproduct"><a href="#" data-index="1"><img src="<?php print '/images/garment/'.$garment['image_path'] ?>" alt="<?php print $garment['name']?>"></a></li>
 											<?php if (!empty($garment['extra_image1_path']) ) {?>
 												<li><a href="#" data-index="2"><img src="<?php print '/images/garment/'.$garment['extra_image1_path'] ?>" alt="<?php print $garment['name']?>"></a></li>
 											<?php } ?>
