@@ -91,7 +91,7 @@ class Garment_model extends CI_Model{
 	 *
 	 * @return garment array ()
 	 */
-	public function get_batch_garment_info_from_quick_search($offset, $limit, $user_id = FALSE, $keyword, $occasion, $colour, $category, $brand, $price_range, $criteria, $show_premium = FALSE, $star = FALSE , $order_by = FALSE, $star_range = FALSE) {
+	public function get_batch_garment_info_from_quick_search($offset, $limit, $user_id = FALSE, $keyword, $occasion, $colour, $category, $store, $price_range, $criteria, $show_premium = FALSE, $star = FALSE , $order_by = FALSE, $star_range = FALSE) {
 		$user_specs_str = FALSE;
 		if ($user_id){
 			$query = $this->db->get_where('user_specs', array('user_id' => $user_id));
@@ -271,19 +271,19 @@ class Garment_model extends CI_Model{
 			$this->db->where($where_category);
 		}
 		
-		if ($brand) {
-			if (count($brand) == 1){
-				$where_brand = 'brand LIKE "%'.$brand[0].'%"';
+		if ($store) {
+			if (count($store) == 1){
+				$where_store = 'store LIKE "%'.$store[0].'%"';
 			} else {
-				$where_brand = '(brand LIKE "%'.$brand[0].'%"';
+				$where_store = '(store LIKE "%'.$store[0].'%"';
 			}
-			for ($i=1;$i<count($brand);$i++){
-				$where_brand .= ' OR brand LIKE "%'.$brand[$i].'%"';
+			for ($i=1;$i<count($store);$i++){
+				$where_store .= ' OR store LIKE "%'.$store[$i].'%"';
 			}
-			if (count($brand) > 1){
-				$where_brand .= ')';
+			if (count($store) > 1){
+				$where_store .= ')';
 			}
-			$this->db->where($where_brand);
+			$this->db->where($where_store);
 		}
 		
 		if($star) {
@@ -965,12 +965,12 @@ class Garment_model extends CI_Model{
 		}
 	}
 	/**
-	 * get_top_brands
+	 * get_top_stores
 	 *
-	 * @return brands
+	 * @return stores
 	 */
-	public function get_top_brands($offset, $limit){
-		$query = $this->db->select('brand, COUNT(garment_id) AS brand_count')->from('garment')->group_by('brand')->order_by('brand_count desc')->where('brand <>', '')->limit($limit, $offset)->get();
+	public function get_top_stores($offset, $limit){
+		$query = $this->db->select('store, COUNT(garment_id) AS store_count')->from('garment')->group_by('store')->order_by('store_count desc')->where('store <>', '')->limit($limit, $offset)->get();
 		if ($query->num_rows() == 0){
 			return FALSE;
 		} else {
@@ -978,12 +978,12 @@ class Garment_model extends CI_Model{
 		}
 	}
 	/**
-	 * get_search_brands
+	 * get_search_stores
 	 *
-	 * @return brands
+	 * @return stores
 	 */
-	public function get_search_brands($offset, $limit, $brand){
-		$query = $this->db->select('brand, COUNT(garment_id) AS brand_count')->from('garment')->group_by('brand')->order_by('brand_count desc')->like('brand', $brand)->limit($limit, $offset)->get();
+	public function get_search_stores($offset, $limit, $store){
+		$query = $this->db->select('store, COUNT(garment_id) AS store_count')->from('garment')->group_by('store')->order_by('store_count desc')->like('store', $store)->limit($limit, $offset)->get();
 		if ($query->num_rows() == 0){
 			return FALSE;
 		} else {

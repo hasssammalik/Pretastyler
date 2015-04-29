@@ -363,14 +363,14 @@
 
 						var requestvalues = { 
 							
-							"height_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['height_select_id']; ?>,
-							"weight_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['weight_select_id']; ?>,
-							"age_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['age_select_id']; ?>,
-							"body_shape_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['body_shape_select_id']; ?>,
-							"body_ratio_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['body_ratio_select_id']; ?>,
-							"bra_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['bra_select_id']; ?>,
-							"build_select_id" : <?php echo  $this->session->userdata['initial_user_profile']['build_select_id']; ?>,
-							"minBust" : <?php echo  $this->session->userdata['initial_user_profile']['minBust']; ?>,
+							"height_select_id" : <?php      echo ( !empty( $this->session->userdata['initial_user_profile']['height_select_id'])      ? $this->session->userdata['initial_user_profile']['height_select_id'] : 0 ); ?>,
+							"weight_select_id" : <?php      echo ( !empty( $this->session->userdata['initial_user_profile']['weight_select_id'])      ? $this->session->userdata['initial_user_profile']['weight_select_id'] : 0 ); ?>,
+							"age_select_id" : <?php         echo ( !empty( $this->session->userdata['initial_user_profile']['age_select_id'])         ? $this->session->userdata['initial_user_profile']['age_select_id'] : 0 ); ?>,
+							"body_shape_select_id" : <?php  echo ( !empty( $this->session->userdata['initial_user_profile']['body_shape_select_id'])  ? $this->session->userdata['initial_user_profile']['body_shape_select_id'] : 0 ); ?>,
+							"body_ratio_select_id" : <?php  echo ( !empty( $this->session->userdata['initial_user_profile']['body_ratio_select_id'])  ? $this->session->userdata['initial_user_profile']['body_ratio_select_id'] : 0 ); ?>,
+							"bra_select_id" : <?php         echo ( !empty( $this->session->userdata['initial_user_profile']['bra_select_id'])         ? $this->session->userdata['initial_user_profile']['bra_select_id'] : 0 ); ?>,
+							"build_select_id" : <?php       echo ( !empty( $this->session->userdata['initial_user_profile']['build_select_id'])       ? $this->session->userdata['initial_user_profile']['build_select_id'] : 0 ); ?>,
+							"minBust" : <?php               echo ( !empty( $this->session->userdata['initial_user_profile']['minBust'])               ? $this->session->userdata['initial_user_profile']['minBust'] : 0 ); ?>,
 
 							"neck_length_select_id" : default_values[0],
 							"shoulders_select_id" : default_values[1],
@@ -642,9 +642,7 @@
     <h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1>
 	<hr width="95%" size="2" />
     
-	<div id="error-register">
-		
-	</div>
+	<div id="error-register"></div>
 	
 	<form name="registerNewUser" action="" method="post" id="menu_mall_register">
       <div>
@@ -659,8 +657,11 @@
 			<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" required />
 	  </div>
       
-      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="register-submit"></div>
-      
+    	<div class="center">
+			<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon" onclick="fb_login();">Signup with Facebook</div>
+      		<input type="submit" name="starttrial" value="Start my Trial" class="left" id="register-submit">
+    	</div>
+      	<div class="clear"></div>
     </form>
     <div style="text-align:center">Trial Expires in 30 days.</div>
   </div>
@@ -697,6 +698,48 @@
 	</script>
 	
 <?php } ?>
+
+<div id="fb-root"></div>
+<script type='text/javascript'>
+
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '416574138523788',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+	
+};
+
+function fb_login(){
+	$( "#error-login" ).html(" ");
+    FB.login(function(response) {
+
+        if (response.status === 'connected') {
+            FB.api('/me', function(response) {
+               register_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
+            });
+
+        } else {
+            $( "#error-login" ).html("Facebook login Cancelled.");
+        }
+    }, {
+        scope: 'publish_stream,email'
+    });
+}
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
 
 </body>
 </html>
