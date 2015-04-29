@@ -257,9 +257,11 @@
 							"build_select_id" : default_values[6],
 							"minBust" : input_minBust
 						};
-						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-							$( ".garments" ).html( data );
-						});
+
+						//commenting the slider images load
+						// $.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+						// 	$( ".garments" ).html( data );
+						// });
 					}
 					
 					
@@ -269,7 +271,7 @@
 				<div class="container">
 					
 					<div class="homeprofile-head" id="profile">
-						<img src="/images/newhomedown.png" class="noneArea noneLiner ">
+					<a href="/index.html#profile">	<img src="/images/newhomedown.png" class="noneArea noneLiner "></a>
 						
 						<p class="i profile-big-title" style="font-size:1.8vw;">Start by selecting your <strong>body features</strong></p>
 						
@@ -368,7 +370,7 @@
 			<br>
 		</section>
 		
-		<section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
+		<!-- <section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
 			
 			<div class="homeprofile-head">
 				<img src="/images/newhomedown.png" class="noneArea noneLiner">
@@ -383,13 +385,7 @@
 			</div>
 			
 
-			<!-- <div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
-					<div class="sliderWrap">
-						<div class="garments turnOffPlaceHolderGarment"></div>
-							<a href="#" class="prevNew"><img src="/images/next.png"></a>
-							<a href="#" class="nextNew"><img src="/images/next.png"></a>
-						</div>
-				</div> -->
+			
 
 
 			<div class="clear"></div>
@@ -420,7 +416,7 @@
 			</div>
 			
 		</section>
-		
+		 -->
 		
 	</div>
 	<section class="brand role-element leadstyle-container" id="brands" style="background-color:white;">
