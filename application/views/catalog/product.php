@@ -1,6 +1,6 @@
 <div class="mainContent ">
 	<div class="productDisplay">
-		<div class="cross"><div class="cross-image"><img src="/images/pink_button-05.png" alt /></div></div>
+		<?php if ($this->flexi_auth->is_logged_in()) {$imageclass="cross-to-mall"; }else $imageclass="cross-to-home"; ?><div class="cross"><div class="<?php echo $imageclass;?> cross-image"><img src="/images/pink_button-05.png" alt /></div></div>
 		<div id="product" class="productWrap <?php if ($this->flexi_auth->is_logged_in() ) { ?> loggedInSmallDetails <?php } ?>">
 			
 			<?php if ($this->flexi_auth->is_logged_in()) { ?>
@@ -144,7 +144,7 @@
 								<?php if (!empty($garment['extra_image1_path']) || !empty($garment['extra_image2_path']) ) {?>
 									<div class="thumbsWrap">
 										<ul class="items">
-											<?php /* <li><a href="#" data-index="1"><img src="<?php print '/images/garment/'.$garment['image_path'] ?>" alt="<?php print $garment['name']?>"></a></li>*/?>
+											<li style="display: none;" class="firstThumbproduct"><a href="#" data-index="1"><img src="<?php print '/images/garment/'.$garment['image_path'] ?>" alt="<?php print $garment['name']?>"></a></li>
 											<?php if (!empty($garment['extra_image1_path']) ) {?>
 												<li><a href="#" data-index="2"><img src="<?php print '/images/garment/'.$garment['extra_image1_path'] ?>" alt="<?php print $garment['name']?>"></a></li>
 											<?php } ?>

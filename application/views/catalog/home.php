@@ -257,9 +257,11 @@
 							"build_select_id" : default_values[6],
 							"minBust" : input_minBust
 						};
-						$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-							$( ".garments" ).html( data );
-						});
+
+						//commenting the slider images load
+						// $.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+						// 	$( ".garments" ).html( data );
+						// });
 					}
 					
 					
@@ -269,7 +271,7 @@
 				<div class="container">
 					
 					<div class="homeprofile-head" id="profile">
-						<img src="/images/newhomedown.png" class="noneArea noneLiner ">
+					<a href="#profile">	<img src="/images/newhomedown.png" class="noneArea noneLiner "></a>
 						
 						<p class="i profile-big-title" style="font-size:1.8vw;">Start by selecting your <strong>body features</strong></p>
 						
@@ -368,8 +370,8 @@
 			<br>
 		</section>
 		
-		<section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
-			
+		 <section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
+			<!--
 			<div class="homeprofile-head">
 				<img src="/images/newhomedown.png" class="noneArea noneLiner">
 				<p class="i profile-big-title homepage-titles">Here's just a few <strong>garments we've found for you</strong></p>
@@ -382,14 +384,8 @@
 				<div class="clear"></div>
 			</div>
 			
-
-			<!-- <div class="homepage-slider" id="similarItems" style="width:1024px;margin:0px auto;">
-					<div class="sliderWrap">
-						<div class="garments turnOffPlaceHolderGarment"></div>
-							<a href="#" class="prevNew"><img src="/images/next.png"></a>
-							<a href="#" class="nextNew"><img src="/images/next.png"></a>
-						</div>
-				</div> -->
+			-->
+			
 
 
 			<div class="clear"></div>
@@ -420,7 +416,6 @@
 			</div>
 			
 		</section>
-		
 		
 	</div>
 	<section class="brand role-element leadstyle-container" id="brands" style="background-color:white;">
@@ -477,9 +472,7 @@
     <h1 style="padding: 5px;text-transform:uppercase;text-align:center;">One Last Thing</h1>
 	<hr width="95%" size="2" />
     
-	<div id="error-register">
-		
-	</div>
+	<div id="error-register"></div>
 	
 	<form name="registerNewUser" action="" method="post" id="menu_mall_register">
       <div>
@@ -494,8 +487,11 @@
 			<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" required />
 	  </div>
       
-      <div style="text-align:center"><input type="submit" name="starttrial" value="Start my Trial" id="register-submit"></div>
-      
+    	<div class="center">
+			<div class="fbloginbutton right mousehand" id="fbloginbuttonIcon" onclick="fb_login();">Signup with Facebook</div>
+      		<input type="submit" name="starttrial" value="Start my Trial" class="left" id="register-submit">
+    	</div>
+      	<div class="clear"></div>
     </form>
     <div style="text-align:center">Trial Expires in 30 days.</div>
   </div>
@@ -534,5 +530,48 @@
 <?php } ?>
 
  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+<div id="fb-root"></div>
+<script type='text/javascript'>
+
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '416574138523788',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+	
+};
+
+function fb_login(){
+	$( "#error-login" ).html(" ");
+    FB.login(function(response) {
+
+        if (response.status === 'connected') {
+            FB.api('/me', function(response) {
+               register_with_facebook( response.id, response.email, response.first_name, response.last_name, response.verified );
+            });
+
+        } else {
+            $( "#error-login" ).html("Facebook login Cancelled.");
+        }
+    }, {
+        scope: 'publish_stream,email'
+    });
+}
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+ 
 </body>
 </html>
