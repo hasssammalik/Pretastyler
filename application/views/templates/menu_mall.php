@@ -25,6 +25,7 @@ if( !empty( $breadcrumb[0] ) ) { ?>
 	<div class="headPageTitle" style="float:left;">
 		<?php echo strtoupper($title) ?>
 	</div>
+	<?php  if(isset($newClass)){ ?>
 	<div class="nomad-banner">
 		<div class="nomad-banner-image">
 
@@ -39,6 +40,7 @@ if( !empty( $breadcrumb[0] ) ) { ?>
 		<div class="clear">
 		</div>
 	</div>
+	<?php } ?>
 </div>
 <br>
 <?php } ?>
