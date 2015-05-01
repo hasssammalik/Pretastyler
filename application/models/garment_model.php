@@ -91,7 +91,7 @@ class Garment_model extends CI_Model{
 	 *
 	 * @return garment array ()
 	 */
-	public function get_batch_garment_info_from_quick_search($offset, $limit, $user_id = FALSE, $keyword, $occasion, $colour, $category, $store, $price_range, $criteria, $show_premium = FALSE, $star = FALSE , $order_by = FALSE, $star_range = FALSE) {
+	public function get_batch_garment_info_from_quick_search($offset, $limit, $user_id = FALSE, $keyword, $occasion, $colour, $category, $store, $price_range, $criteria, $show_premium = FALSE, $star = FALSE , $order_by = FALSE, $star_range = FALSE, $length = FALSE) {
 		$user_specs_str = FALSE;
 		if ($user_id){
 			$query = $this->db->get_where('user_specs', array('user_id' => $user_id));
@@ -363,6 +363,9 @@ class Garment_model extends CI_Model{
 		
 		if (!$show_premium){
 			$this->db->where('is_standard', 1);
+		}
+		if ($length) {
+			$this->db->join('garment_criteria', 'garment.garment_id = garment_criteria.garment_id')->where_in('garment_criteria.criteria_id', $length);
 		}
 		$this->db->where(array('enabled' => 1, 'is_pattern' => 0));
 		$this->db->limit($limit, $offset);
