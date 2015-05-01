@@ -1,3 +1,27 @@
+<?php
+if (!$this->flexi_auth->is_logged_in()){
+	$newClass="nomadpage";
+}
+?>
+<div class="<?php if(isset($newClass)){echo $newClass;} ?>">
+	<?php  if(isset($newClass)){ ?>
+	<div class="nomad-banner">
+		<div class="nomad-banner-image">
+			<img src="/images/mall-warning.png">
+		</div>
+		<div class="nomad-banner-text bkpinkycolor">
+			WARNING: This mall is not OPTIMIZED!<br>Test drive a customised mall today<br>
+			<a href="/#profile"><i>	Discover the Possibilities </i></a>
+		</div>
+		<div class="nomad-banner-image">
+			<img src="/images/mall-warning.png">
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+	<?php } ?>
+</div>
+<br>
 <?php echo form_open('', array('class'=>'topquicksearch', 'id'=>'topquicksearch', 'name'=>'topquicksearch')); ?>
     
     <div class="quickSearch quicksearchtabtop">
@@ -30,7 +54,7 @@
 						<ul class="refinelist">
 							<li class="price"><div>Price (0 - 1000)</div> </li>
 							<li class="category"><div>All Categories</div> </li>
-							<li class="brand"><div>All Brands</div> </li>
+							<li class="store"><div>All Stores</div> </li>
 							<li class="occasion"><div>All Occasion</div> </li>
 							<li class="color"><div>All Colors</div> </li>
 							<?php if( !empty( $first_name)) { ?>
@@ -67,22 +91,27 @@
 						<?php } ?>
 					</fieldset>
 				</div>
+
+				<div class="quickSearch_dynamic_category_lengths">
+
+				</div>
+
 				<hr class="widfulled">
-				<div class="col widfulled left-brand">
-					<label>BRAND:</label><span class="sectionToggle mousehand"><i class="icon-triangle"></i></span>
-					<div class="brand sectionTogglediv">
-						<div class="searchbrand" id="searchbrand">
-							<input type="text" name="quicksearchbrand" class="quicksearchbrand" id="quicksearchbrand" placeholder="Type your keywords...">
-							<img class="quicksearchbrand-magnify mousehand" src="/images/searchwhite.png">
+				<div class="col widfulled left-store">
+					<label>STORE:</label><span class="sectionToggle mousehand"><i class="icon-triangle"></i></span>
+					<div class="store sectionTogglediv">
+						<div class="searchstore" id="searchstore">
+							<input type="text" name="quicksearchstore" class="quicksearchstore" id="quicksearchstore" placeholder="Type your keywords...">
+							<img class="quicksearchstore-magnify mousehand" src="/images/searchwhite.png">
 						</div>
-						<div class="topbrands searchbrandresult quick-brand">
-							<div class="quicktopbrand">
-								<div class="topbrandtext b i"><br>TOP BRANDS</div>
-								<fieldset class="checkboxes otherSection quickbrands-type-select">
-								<?php foreach ($topbrands as $row) { ?>
+						<div class="topstores searchstoreresult quick-store">
+							<div class="quicktopstore">
+								<div class="topstoretext b i"><br>TOP STORES</div>
+								<fieldset class="checkboxes otherSection quickstores-type-select">
+								<?php foreach ($topstores as $row) { ?>
 								<label><input type="checkbox"
-									value="<?php print $row['brand']; ?>"><span
-									title="<?php print $row['brand']; ?>"><?php print $row['brand']; ?></span></label>
+									value="<?php print $row['store']; ?>"><span
+									title="<?php print $row['store']; ?>"><?php print $row['store']; ?></span></label>
 								<?php } ?>
 								</fieldset>
 							</div>

@@ -25,6 +25,3 @@ echo form_open(); echo form_close();
 	</div>
 <br>
 <?php } ?>
-
-
-

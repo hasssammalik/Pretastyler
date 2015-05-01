@@ -55,6 +55,7 @@ $(function(){
 		"serverSide": true,
 		"stateSave": true,
 		"ajax": {url: "/admin/general-users.html", type: 'POST', data:{<?php print $filters ?>pas_secret_name:$("input[name=pas_secret_name]").val()}},
+		"pagingType": "input",
 		"columns": [
 			{ "data": "user_id", "width": "5%"},
 			{ "data": "first_name", "width": "10%" },

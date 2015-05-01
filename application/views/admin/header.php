@@ -58,7 +58,7 @@
 		<!-- DATA TABES SCRIPT -->
 		<script src="/js/admin/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
 		<script src="/js/admin/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-
+		<script src="/js/admin/plugins/datatables/dataTables.pagination.input.js" type="text/javascript"></script>
 		<!-- AdminLTE App -->
 		<script src="/js/admin/AdminLTE/app.js" type="text/javascript"></script>
 		

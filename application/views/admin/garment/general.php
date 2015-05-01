@@ -16,6 +16,7 @@
 								<th>Image</th>
 								<th>Category</th>
 								<th>Name</th>
+								<th>Price Range</th>
 								<th>Retailer</th>
 								<th>Owner</th>
 								<th>Created</th>
@@ -34,6 +35,7 @@
 								<th>Image</th>
 								<th>Category</th>
 								<th>Name</th>
+								<th>Price Range</th>
 								<th>Retailer</th>
 								<th>Owner</th>
 								<th>Created</th>
@@ -58,6 +60,7 @@ $(function(){
 		"lengthMenu": [[20, 50, 100], [20, 50, 100]],
 		"serverSide": true,
 		"stateSave": true,
+		"pagingType": "input",
 		"ajax": {url: "/admin/general-garments.html", type: 'POST', data:{<?php print $filters ?>pas_secret_name:$("input[name=pas_secret_name]").val()}},
 		"columns": [
 			{ "data": "garment_id" },
@@ -65,6 +68,7 @@ $(function(){
 			{ "data": "image", "searchable": false , "sortable": false },
 			{ "data": "category" },
 			{ "data": "name" },
+			{ "data": "price_range" },
 			{ "data": "retailer" },
 			{ "data": "owner"},
 			{ "data": "date_created" },

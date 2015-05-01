@@ -6,17 +6,16 @@
 <?php if (isset($extraMeta)) print $extraMeta ?>
 <title><?php print $title ?> - Prêt à Styler – Your Online Stylist and Personal Shopper</title>
 <link href="/css/vendors.css?v=2.2.0.0" rel="stylesheet">
-<link href="/css/default.css?v=2.2.0.2" rel="stylesheet">
+<link href="/css/default.css?v=2.2.0.6" rel="stylesheet">
 <link href="/css/mozilla.css?v=2.2.0.0" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
 <!--- - - - - - CSS overwriter   - - - - -->
-<link href="/css/style.css?v=2.2.0.2" rel="stylesheet">
+<link href="/css/style.css?v=2.2.0.3" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 <link href="/css/jTour.css" rel="stylesheet">
 <!--- - - - - - CSS overwriter   - - - - -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <script src="/js/jquery-1.11.1.min.js"></script>
-<script src="/js/actual_product.js?v=2.2.0.0"></script>
 <script src="/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="/js/modernizr.custom.86254.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
@@ -37,10 +36,10 @@
 <script src="/js/jquery.nouislider.all.min.js"></script>
 <script src="/js/jquery.jscrollpane.min.js"></script>
 <script src="/js/jquery.elevateZoom-3.0.8.min.js"></script>
-<script src="/js/functions.js?v=2.2.0.2"></script>
-<script src="/js/script.js?v=2.2.0.1"></script>
+<script src="/js/functions.js?v=2.2.0.4"></script>
+<script src="/js/script.js?v=2.2.0.3"></script>
 <script src="/js/tabs.js?v=2.2.0.0"></script>
-<script src="/js/menu-mall.js?v=2.2.0.5"></script>
+<script src="/js/menu-mall.js?v=2.2.0.9"></script>
 
 <!-- Remarketing code  -->
 <script>(function() {
@@ -141,8 +140,8 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    <?php } else { ?>
 					<li class=" relative menuBorder"><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
 					<li class=" relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
-					<li class=" relative menuBorder"><a href="http://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
-					<li class=" relative menuBorder"><a href="/index.html#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
+					<li class=" relative menuBorder"><a href="https://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
+					<li class=" relative menuBorder"><a href="/#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
 					<li class=" relative menuBorder"><a href="/useraccount/login.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
 				<?php } ?>
 				
