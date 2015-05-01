@@ -13,7 +13,7 @@ if( !empty( $breadcrumb[0] ) ) { ?>
 		</div>
 		<div class="nomad-banner-text bkpinkycolor">
 			WARNING: This mall is not OPTIMIZED!<br>Test drive a customised mall today<br>
-			<i>	Discover the Possibilities </i>
+			<a href="/#profile"><i>	Discover the Possibilities </i></a>
 		</div>
 		<div class="nomad-banner-image">
 			<img src="/images/mall-warning.png">
