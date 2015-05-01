@@ -76,7 +76,7 @@ class Category_model extends CI_Model{
 		
 		$query = $this->db->select('criteria_id AS id, `name`')->from('criteria')->where('field_id', $length['field_id'])->order_by('position')->get();
 		$length['criterias'] = $query->result_array();
-		unset($length['field_id'])
+		unset($length['field_id']);
 		return $length;
 	}	
 }
