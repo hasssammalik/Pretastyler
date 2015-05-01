@@ -456,6 +456,25 @@ class Mall extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 		
 	}
+
+	/**
+	 *
+	 */
+	public function quicksearch_categorylength() {
+
+		$category_id = $this->input->post( 'category_id', TRUE );
+		
+		if( $category_id > 0 )
+		{
+			$category_lengths = $this->category_model->get_length( $category_id );
+
+			$this->load->view('mall/quicksearch_length', $category_lengths );
+
+		}
+
+		
+
+	}
 }
 
 /* End of file mall.php */
