@@ -467,9 +467,9 @@ class Mall extends CI_Controller {
 		
 		if( $category_id > 0 )
 		{
-			$category_lengths = $this->category_model->get_length( $category_id );
+			$data['category_lengths'] = $this->category_model->get_length( $category_id );
 
-			$this->load->view('mall/quicksearch_length', $category_lengths );
+			$this->load->view('mall/quicksearch_length', $data );
 
 		}
 
