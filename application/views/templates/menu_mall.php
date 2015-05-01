@@ -21,7 +21,7 @@ if (!$this->flexi_auth->is_logged_in()){
 }
  if( !empty( $breadcrumb[0] ) ) { ?>
 
-	<div class="<?php echo $newClass; ?>">
+	<div class="<?php if(isset($newClass)){echo $newClass;} ?>">
 		<div class="headPageTitle ">
 		   <?php echo strtoupper($title) ?>
 		</div>
