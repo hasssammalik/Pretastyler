@@ -118,6 +118,7 @@ class Mall extends CI_Controller {
 		$star = $this->input->post('star', TRUE);
 		$order_by = $this->input->post('order_by', TRUE);
 		$star_range = $this->input->post('star_range', TRUE);
+		$length = $this->input->post('length', TRUE);
 		$show_premium = FALSE;
 		$user_profile_done = FALSE;
 		if ($this->flexi_auth->is_logged_in()){
@@ -191,7 +192,7 @@ class Mall extends CI_Controller {
 			$data['garments'] = $this->garment_model->get_batch_garment_info_by_occasion_category_and_criteria_ids($offset, $limit, $user_id, $occasion_ids, $category_ids, $criteria_ids);
 		} 
 		else { 
-			$data['garments'] = $this->garment_model->get_batch_garment_info_from_quick_search($offset, $limit, $user_id, $keyword, $occasion, $colour, $category, $store, $price_range, $criteria, $show_premium, $star, $order_by, $star_range);
+			$data['garments'] = $this->garment_model->get_batch_garment_info_from_quick_search($offset, $limit, $user_id, $keyword, $occasion, $colour, $category, $store, $price_range, $criteria, $show_premium, $star, $order_by, $star_range, $length);
 		}
 		
 		

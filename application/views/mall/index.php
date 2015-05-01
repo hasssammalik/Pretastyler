@@ -1,3 +1,33 @@
+<?php
+echo form_open(); echo form_close();
+if (!$this->flexi_auth->is_logged_in()){
+	$newClass="nomadpage";
+}
+if( !empty( $breadcrumb[0] ) ) { ?>
+
+<div class="<?php if(isset($newClass)){echo $newClass;} ?>">
+	<div class="headPageTitle">
+		<?php echo strtoupper($title) ?>
+	</div>
+	<?php  if(isset($newClass)){ ?>
+	<div class="nomad-banner">
+		<div class="nomad-banner-image">
+			<img src="/images/mall-warning.png">
+		</div>
+		<div class="nomad-banner-text bkpinkycolor">
+			WARNING: This mall is not OPTIMIZED!<br>Test drive a customised mall today<br>
+			<i>	Discover the Possibilities </i>
+		</div>
+		<div class="nomad-banner-image">
+			<img src="/images/mall-warning.png">
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+	<?php } ?>
+</div>
+<br>
+<?php } ?>
 <?php echo form_open('', array('class'=>'topquicksearch', 'id'=>'topquicksearch', 'name'=>'topquicksearch')); ?>
     
     <div class="quickSearch quicksearchtabtop">

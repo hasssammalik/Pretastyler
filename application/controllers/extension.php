@@ -157,6 +157,9 @@ class Extension extends CI_Controller {
 			} else if ($slug == "generate_user_specs"){
 				$result = $this->user_model->generate_user_specs(99);
 				$data['test_str'] = $result;
+			} else if ($slug == "length"){
+				$result = $this->category_model->get_length($param1);
+				$data['test_str'] = $result;
 			} else {
 				$data['test_str'] = $slug;
 			}
