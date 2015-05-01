@@ -71,7 +71,7 @@ class Category_model extends CI_Model{
 	 * @return an array of all the categories present in the database.
 	 */
 	public function get_length($category_id) {
-		$query = $this->db->select('category.category_id AS id, category.`name`, category_field.field_id')->from('category')->join('category_field', 'category.category_id = category_field.category_id', 'left')->join('field', 'category_field = field.field_id', 'left')->where('category.category_id', $category_id)->order_by('field.position DESC')->limit(1)->get();
+		$query = $this->db->select('category.category_id AS id, category.`name`, category_field.field_id')->from('category')->join('category_field', 'category.category_id = category_field.category_id', 'left')->join('field', 'category_field.field_id = field.field_id', 'left')->where('category.category_id', $category_id)->order_by('field.position DESC')->limit(1)->get();
 		$length = $query->row_array();
 		
 		$query = $this->db->select('criteria_id AS id, `name`')->from('criteria')->where('field_id', $length['field_id'])->order_by('position')->get();
