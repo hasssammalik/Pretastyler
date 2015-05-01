@@ -4,7 +4,7 @@ if( !empty( $category_lengths ) ) {
 	<div id="quick-search-category-length-section-<?php echo $category_lengths['id'] ?>">
 		<hr class="widfulled">	
 		<div class="col widfulled">
-			<label><?php echo $category_lengths['name'] ?>:</label>
+			<label><?php echo $category_lengths['name'] ?> Length:</label>
 			<fieldset class="checkboxes otherSection quick-<?php echo $category_lengths['name'] ?>-length" 
 						data-cat-length-name="<?php echo $category_lengths['name'] ?>" 
 						data-cat-length-id="<?php echo $category_lengths['id'] ?>" 
