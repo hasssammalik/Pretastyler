@@ -98,7 +98,7 @@ if( !empty( $breadcrumb[0] ) ) { ?>
 					</fieldset>
 				</div>
 
-				<div class="quickSearch_dynamic_lengths">
+				<div class="quickSearch_dynamic_category_lengths">
 
 				</div>
 
