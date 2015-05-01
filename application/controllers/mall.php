@@ -468,7 +468,7 @@ class Mall extends CI_Controller {
 		if( $category_id > 0 )
 		{
 			if( $category_id == 31 || $category_id == 22 || $category_id == 25 || 
-				$category_id == 23 || $category_id == 37 || $category_id == 21 || 
+				$category_id == 23 || $category_id == 37 || 
 				$category_id == 29 || $category_id == 24 || $category_id == 28 || $category_id == 34 ){
 
 				$data['category_lengths'] = $this->category_model->get_length( $category_id );
