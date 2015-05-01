@@ -67,6 +67,11 @@
 						<?php } ?>
 					</fieldset>
 				</div>
+
+				<div class="quickSearch_dynamic_lengths">
+
+				</div>
+
 				<hr class="widfulled">
 				<div class="col widfulled left-store">
 					<label>STORE:</label><span class="sectionToggle mousehand"><i class="icon-triangle"></i></span>
