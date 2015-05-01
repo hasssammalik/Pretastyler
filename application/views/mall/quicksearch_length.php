@@ -2,7 +2,7 @@
 if( !empty( $category_lengths ) ) {
 	foreach ( $category_lengths as $category ) {
 ?>
-		<div id="quick-search-category-length-section-<?php echo $categories['id'] ?>">
+		<div id="quick-search-category-length-section-<?php echo $category['id'] ?>">
 			<hr class="widfulled">	
 			<div class="col widfulled">
 				<label><?php echo $category['name'] ?>:</label>
