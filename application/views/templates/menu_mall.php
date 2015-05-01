@@ -16,10 +16,13 @@
 </section>
 <?php
 echo form_open(); echo form_close();
-
+if (!$this->flexi_auth->is_logged_in()){
+	$newClass="nomadpage";
+}
  if( !empty( $breadcrumb[0] ) ) { ?>
-	<div>
-		<div class="headPageTitle">
+
+	<div class="<?php echo $newClass; ?>">
+		<div class="headPageTitle ">
 		   <?php echo strtoupper($title) ?>
 		</div>
 	</div>
