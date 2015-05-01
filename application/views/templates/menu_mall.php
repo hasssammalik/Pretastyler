@@ -14,9 +14,14 @@
 	</script>
 
 </section>
-<div class="headPageTitle">
-	<?php echo strtoupper($title) ?>
-</div>
+<?php
+echo form_open(); echo form_close();
 
-
-
+ if( !empty( $breadcrumb[0] ) ) { ?>
+	<div>
+		<div class="headPageTitle">
+		   <?php echo strtoupper($title) ?>
+		</div>
+	</div>
+<br>
+<?php } ?>

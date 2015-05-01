@@ -1,10 +1,8 @@
 <?php
-echo form_open(); echo form_close();
 if (!$this->flexi_auth->is_logged_in()){
 	$newClass="nomadpage";
 }
-if( !empty( $breadcrumb[0] ) ) { ?>
-
+?>
 <div class="<?php if(isset($newClass)){echo $newClass;} ?>">
 	<?php  if(isset($newClass)){ ?>
 	<div class="nomad-banner">
@@ -24,7 +22,6 @@ if( !empty( $breadcrumb[0] ) ) { ?>
 	<?php } ?>
 </div>
 <br>
-<?php } ?>
 <?php echo form_open('', array('class'=>'topquicksearch', 'id'=>'topquicksearch', 'name'=>'topquicksearch')); ?>
     
     <div class="quickSearch quicksearchtabtop">
