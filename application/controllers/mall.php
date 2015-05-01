@@ -49,7 +49,7 @@ class Mall extends CI_Controller {
 		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
-		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.1"></script>';
+		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.2"></script>';
 		if ($this->flexi_auth->is_logged_in()){
 			$user_id = $this->flexi_auth->get_user_id();
 			if ($user_id == 1){
@@ -225,7 +225,7 @@ class Mall extends CI_Controller {
 		$data = $this->data;
 		$data['title'] = $title_string." - Mall Search";
 		$data['breadcrumb'] = array('MALL SEARCH');
-		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.0"></script>';
+		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.3"></script>';
 		$data['extraDiv'] = '<div id="hiddenKeyword" style="display:none">'.$keyword.'</div>'.
 							'<div id="hiddenOccasion" style="display:none">'.$occasion.'</div>'.
 							'<div id="hiddenColour" style="display:none">'.$colour.'</div>'.
