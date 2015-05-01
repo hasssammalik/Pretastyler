@@ -60,6 +60,7 @@ $(function(){
 		"lengthMenu": [[20, 50, 100], [20, 50, 100]],
 		"serverSide": true,
 		"stateSave": true,
+		"pagingType": "input",
 		"ajax": {url: "/admin/general-garments.html", type: 'POST', data:{<?php print $filters ?>pas_secret_name:$("input[name=pas_secret_name]").val()}},
 		"columns": [
 			{ "data": "garment_id" },
