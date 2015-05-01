@@ -22,9 +22,10 @@ if (!$this->flexi_auth->is_logged_in()){
 if( !empty( $breadcrumb[0] ) ) { ?>
 
 <div class="<?php if(isset($newClass)){echo $newClass;} ?>">
-	<div class="headPageTitle" style="float:left;">
+	<div class="headPageTitle">
 		<?php echo strtoupper($title) ?>
 	</div>
+	<?php  if(isset($newClass)){ ?>
 	<div class="nomad-banner">
 		<div class="nomad-banner-image">
 
@@ -39,6 +40,7 @@ if( !empty( $breadcrumb[0] ) ) { ?>
 		<div class="clear">
 		</div>
 	</div>
+	<?php } ?>
 </div>
 <br>
 <?php } ?>
