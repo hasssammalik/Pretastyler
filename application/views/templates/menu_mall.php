@@ -14,7 +14,9 @@
 	</script>
 
 </section>
-
+<div class="headPageTitle">
+	<?php echo strtoupper($title) ?>
+</div>
 
 
 
