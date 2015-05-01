@@ -459,7 +459,7 @@ class Mall extends CI_Controller {
 	}
 
 	/**
-	 *
+	 * Quick Search Category's length for Criteria for this controller
 	 */
 	public function quicksearch_categorylength() {
 
@@ -467,13 +467,16 @@ class Mall extends CI_Controller {
 		
 		if( $category_id > 0 )
 		{
-			$data['category_lengths'] = $this->category_model->get_length( $category_id );
+			if( $category_id == 31 || $category_id == 22 || $category_id == 25 || 
+				$category_id == 23 || $category_id == 37 || $category_id == 21 || 
+				$category_id == 29 || $category_id == 24 || $category_id == 28 || $category_id == 34 ){
 
-			$this->load->view('mall/quicksearch_length', $data );
+				$data['category_lengths'] = $this->category_model->get_length( $category_id );
 
+				$this->load->view('mall/quicksearch_length', $data );
+
+			}
 		}
-
-		
 
 	}
 }
