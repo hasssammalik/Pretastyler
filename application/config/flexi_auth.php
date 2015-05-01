@@ -429,7 +429,12 @@
 	 * Default allows alpha-numeric, dashes, underscores, periods and commas ('\.\,\-_ a-z0-9').
 	 * Note this is a regular expression.
 	*/ 
-	$config['security']['valid_password_chars'] = '\.\,\-_ a-z0-9';
+	//$config['security']['valid_password_chars'] = '\.\,\-_ a-z0-9';
+
+	/**
+	 * Set All characters to be allowed to use in password
+	 */
+	$config['security']['valid_password_chars'] = '\s\S';
 
 	/**
 	 * Set the static (non-database stored) salt used for password and hash token generation.
