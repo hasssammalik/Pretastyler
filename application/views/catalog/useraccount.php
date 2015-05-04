@@ -16,16 +16,21 @@
 							<div class="group">
 								<div class="col" style="position:relative;">
 								<?php 
-									if( !empty( $_SERVER['HTTP_REFERER'] )){
-										if ( strpos( $_SERVER['HTTP_REFERER'], 'pretastyler.com' ) !== false ) 
-										{ 
-											$link_url_to = $_SERVER['HTTP_REFERER'];
-											$link_url_to = explode( 'pretastyler.com', $link_url_to );
-											$link_url_to = $link_url_to[1];
 
-										} else {  $link_url_to = '/mall.html'; }
+									$link_url_to = '/mall.html';
+
+									if ( empty( $_GET['returnurl'] ) ) {
+										if( !empty( $_SERVER['HTTP_REFERER'] )){
+											if ( strpos( $_SERVER['HTTP_REFERER'], 'pretastyler.com' ) !== false ) 
+											{ 
+												$link_url = $_SERVER['HTTP_REFERER'];
+												$link_url = explode( 'pretastyler.com', $link_url );
+												$link_url_to = $link_url_to[1];
+
+											}
+										} 
 									} else {
-										$link_url_to = '/mall.html';
+										$link_url_to = $_GET['returnurl'];
 									}
 
 								?>

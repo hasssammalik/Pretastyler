@@ -142,7 +142,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 					<li class=" relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
 					<li class=" relative menuBorder"><a href="https://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
 					<li class=" relative menuBorder"><a href="/#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
-					<li class=" relative menuBorder"><a href="/useraccount/login.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
+					<li class=" relative menuBorder"><a href="/useraccount/login.html?returnurl=<?php echo ( !empty( uri_string() ) ? uri_string() : 'mall' ); ?>.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
 				<?php } ?>
 				
 				
