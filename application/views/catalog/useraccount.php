@@ -21,10 +21,10 @@
 
 									if ( empty( $_GET['returnurl'] ) ) {
 										if( !empty( $_SERVER['HTTP_REFERER'] )){
-											if ( strpos( $_SERVER['HTTP_REFERER'], 'pretastyler.com/' ) !== false ) 
+											if ( strpos( $_SERVER['HTTP_REFERER'], 'pretastyler.com' ) !== false ) 
 											{ 
 												$link_url = $_SERVER['HTTP_REFERER'];
-												$link_url = explode( 'pretastyler.com', $link_url );
+												$link_url = explode( 'pretastyler.com/', $link_url );
 												$link_url_to = $link_url_to[1];
 
 											}
