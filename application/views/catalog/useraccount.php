@@ -15,7 +15,14 @@
 						<div class=" loginPanel">
 							<div class="group">
 								<div class="col" style="position:relative;">
-								<?php if ( strpos( $_SERVER['HTTP_REFERER'], 'pretastyler.com' ) !== false ) { $link_url_to = $_SERVER['HTTP_REFERER']; } else {  $link_url_to = '/mall.html'; } ?>
+								<?php 
+									if ( strpos( $_SERVER['HTTP_REFERER'], 'pretastyler.com' ) !== false ) 
+									{ 
+										$link_url_to = $_SERVER['HTTP_REFERER'];
+										$link_url_to = explode( 'pretastyler.com', $link_url_to );
+										$link_url_to = $link_url_to[1];
+
+									} else {  $link_url_to = '/mall.html'; } ?>
 									<div id="login-form" return_url="/<?php print $link_url_to ?>.html">
 										<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('/useraccount/login.html', $attlog); ?>
 										
