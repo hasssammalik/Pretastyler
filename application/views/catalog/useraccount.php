@@ -23,7 +23,7 @@
 										$link_url_to = $link_url_to[1];
 
 									} else {  $link_url_to = '/mall.html'; } ?>
-									<div id="login-form" return_url="<?php print $link_url_to ?>.html">
+									<div id="login-form" return_url="<?php print $link_url_to ?>">
 										<?php  $attlog = array('name' => 'menu_mall_login', 'id' => 'menu_mall_login');echo form_open('/useraccount/login.html', $attlog); ?>
 										
 											<fieldset>
