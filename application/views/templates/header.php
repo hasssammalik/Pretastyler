@@ -146,7 +146,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    			$linkBackUrl = '/'. uri_string() .'.html';
 			    		}
 			    	} else {
-			    		$linkBackUrl = 'mall.html';
+			    		$linkBackUrl = '/mall.html';
 			    	}
 
 			    	?>
