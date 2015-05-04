@@ -137,12 +137,24 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    		</ul>
 			    	</li>
 					
-			    <?php } else { ?>
+			    <?php } else { 
+
+			    	if( !empty( uri_string() ) ) {
+			    		if( uri_string() == 'useraccount/login' && !empty($_GET['returnurl']) ) {
+			    			$linkBackUrl = $_GET['returnurl'];
+			    		} else {
+			    			$linkBackUrl = '/'. uri_string() .'.html';
+			    		}
+			    	} else {
+			    		$linkBackUrl = 'mall.html';
+			    	}
+
+			    	?>
 					<li class=" relative menuBorder"><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
 					<li class=" relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
 					<li class=" relative menuBorder"><a href="https://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
 					<li class=" relative menuBorder"><a href="/#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
-					<li class=" relative menuBorder"><a href="/useraccount/login.html?returnurl=<?php echo ( !empty( uri_string() ) ? uri_string() : 'mall' ); ?>.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
+					<li class=" relative menuBorder"><a href="/useraccount/login.html?returnurl=<?php echo $linkBackUrl ?>" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
 				<?php } ?>
 				
 				
