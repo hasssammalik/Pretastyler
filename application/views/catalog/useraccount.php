@@ -30,7 +30,7 @@
 											}
 										} 
 									} else {
-										$link_url_to = $_GET['returnurl'];
+										$link_url_to = '/'.$_GET['returnurl'];
 									}
 
 								?>
