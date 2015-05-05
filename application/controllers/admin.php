@@ -1066,6 +1066,7 @@ class Admin extends CI_Controller {
 	{
 		$this->login_check();
 		$param1 = (int)	$param1;
+		echo $param1;
 		$id = $this->flexi_auth->get_user_id();
 
 		// Step 1 check permission
