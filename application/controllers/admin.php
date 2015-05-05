@@ -1097,9 +1097,8 @@ class Admin extends CI_Controller {
 			redirect('/admin', 'refresh');
 		}
 
+	}
 
-
-		//check for 1 and 99;
 }
 
 /* End of file admin.php */
