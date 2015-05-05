@@ -1078,11 +1078,11 @@ class Admin extends CI_Controller {
 
 			// Login with user data from model
 			if( $this->flexi_auth_model->custom_login_with_user_data( $param1 ) === false ) {
-				redirect('/admin/user/general.html?error=user does not exist', 'refresh');
+				redirect('/admin/user/general.html?error=user does not exist&view=page', 'refresh');
 			}
 
 			// Step 4 redirect to mall
-			redirect('/mall.html?error=user does not exist', 'refresh');
+			redirect('/mall', 'refresh');
 		} else {
 			redirect('/admin', 'refresh');
 		}
