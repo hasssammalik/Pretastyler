@@ -1082,7 +1082,7 @@ class Admin extends CI_Controller {
 			}
 
 			// Step 4 redirect to mall
-			redirect('/mall.html', 'refresh');
+			redirect('/mall.html?error=user does not exist', 'refresh');
 		} else {
 			redirect('/admin', 'refresh');
 		}
