@@ -70,12 +70,12 @@ if (!$this->flexi_auth->is_logged_in()){
 					<div class="col widfulled">
 						<label>RATING:</label><span class="sectionToggle mousehand"><i class="icon-triangle"></i></span>
 						<div class="QuickRating search-quick-rating quick-star sectionTogglediv" id="quick-rating-search">
-							<span class="starclick mousehand lowclassstar" data-val="1" title="Avoid">☆<br><span class="star-visible">1</span></span>
-							<span class="starclick mousehand lowclassstar" data-val="2" title="Maybe">☆<br><span class="star-visible">2</span></span>
-							<span class="starclick mousehand lowclassstar" data-val="3" title="OK">☆<br><span class="star-visible">3</span></span>
-							<span class="starclick mousehand active" data-val="4" title="Good">☆<br><span class="star-visible">4</span></span>
-							<span class="starclick mousehand active" data-val="5" title="Great">☆<br><span class="star-visible">5</span></span>
-							<span class="starAllShow mousehand" title="Show all">SHOW ALL</span>
+							<span class="hoverStars starclick mousehand lowclassstar" data-val="1" title="Avoid">☆<br><span class="star-visible">1</span></span>
+							<span class="hoverStars starclick mousehand lowclassstar" data-val="2" title="Maybe">☆<br><span class="star-visible">2</span></span>
+							<span class="hoverStars starclick mousehand lowclassstar" data-val="3" title="OK">☆<br><span class="star-visible">3</span></span>
+							<span class="hoverStars starclick mousehand active" data-val="4" title="Good">☆<br><span class="star-visible">4</span></span>
+							<span class="hoverStars starclick mousehand active" data-val="5" title="Great">☆<br><span class="star-visible">5</span></span>
+							<span class="starAllShow mousehand" title="Show all"><p>SHOW ALL</p></span>
 							<input type="hidden" name="starinput" class="starinputval">
 						</div>
 					</div>
