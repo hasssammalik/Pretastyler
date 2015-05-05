@@ -1072,27 +1072,27 @@ class Admin extends CI_Controller {
 		// Step 1 check permission
 		if( $param1 > 1 && ( $id == 1 || $id == 99 ) ) {
 
-			
-			// Step 3 login to param id
-			$param1;
-
+			// Check User Exist or not in User Table
 			$query = $this->flexi_auth->get_user_by_id_query( $id );
 
 			// User exists, now validate credentials.
 			if ($query->num_rows() == 1)
-		    {	
+		    {
 		    	// Step 2 logout
 				$this->flexi_auth->logout();
 
+				// User Details
 				$user = $query->row();
+
+				// Load flexi auth model
+				$this->load->model('flexi_auth_model');
+
+				// Login with user data from model
+				$this->flexi_auth_model->set_login_sessions($user);
+
 			} else {
 				redirect('/admin/user/general.html?error=user does not exist', 'refresh');
 			}
-
-			echo "<pre>";
-			print_r($user);
-			die();
-			
 
 			// Step 4 redirect to mall
 			redirect('/mall.html', 'refresh');
