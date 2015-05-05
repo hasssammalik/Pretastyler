@@ -1065,32 +1065,19 @@ class Admin extends CI_Controller {
 	public function switchuser($param1 = FALSE)
 	{
 		$this->login_check();
+		
 		$param1 = (int)	$param1;
-		echo $param1;
+		
 		$id = $this->flexi_auth->get_user_id();
 
 		// Step 1 check permission
-		if( $param1 > 1 && ( $id == 1 || $id == 99 ) ) {
+		if( $param1 > 0 && ( $id == 1 || $id == 99 ) ) {
 
-			// Check User Exist or not in User Table
-			$query = $this->flexi_auth->get_user_by_id_query( $id );
+			// Load flexi auth model
+			$this->load->model('flexi_auth_model');
 
-			// User exists, now validate credentials.
-			if ($query->num_rows() == 1)
-		    {
-		    	// Step 2 logout
-				$this->flexi_auth->logout();
-
-				// User Details
-				$user = $query->row();
-
-				// Load flexi auth model
-				$this->load->model('flexi_auth_model');
-
-				// Login with user data from model
-				$this->flexi_auth_model->set_login_sessions($user);
-
-			} else {
+			// Login with user data from model
+			if( $this->flexi_auth_model->custom_login_with_user_data( $param1 ) === false ) {
 				redirect('/admin/user/general.html?error=user does not exist', 'refresh');
 			}
 
