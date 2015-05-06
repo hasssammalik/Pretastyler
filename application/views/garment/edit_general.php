@@ -87,7 +87,7 @@
 							</fieldset>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row relative">
 						<div class="col span_11">
 							<label>Colours (Multi Select): <span class="required">*</span></label>
 							<div class="group colours assessment-colours">
@@ -116,7 +116,7 @@
 							</div>
 						</div>
 						<div class="col span_2">&nbsp;</div>
-						<div class="col span_11">
+						<div class="col span_11 poseBottomRight">
 
 							<a href="#" class="button medium assess-click bkpinkycolor">Save and edit details</a>
 							<a href="#" class="button medium dressing-room-click">Save and view Dressing room</a>
