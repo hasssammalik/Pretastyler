@@ -65,12 +65,24 @@
 							</select>
 						</div>
 						<div class="col span_2">&nbsp;</div>
+
+						<?php if ($this->flexi_auth->in_group(array('Administrators', 'Uploaders'))) { ?>
+						<div class="col span_11">
+							<label>Sizes: </label>
+							<select class="assessment-sizes-region" style="display:none;">
+							</select>
+							<div class="assessment-sizes" style="display:none;">
+							</div>
+						</div>
+						<?php } /*?>
 						<div class="col span_11">
 							<!--<label>Season:</label>
 							<select class="assessment-season">
 								<option>Please Select</option>
 							</select> -->
 						</div>
+						<?php */ ?>
+
 					</div>
 					<div class="row">
 						<div class="col span_11">
@@ -130,7 +142,7 @@
 							</fieldset>
 						</div>
 					</div>
-					<?php if ($this->flexi_auth->in_group(array('Administrators', 'Uploaders'))) { ?>
+					<?php /* if ($this->flexi_auth->in_group(array('Administrators', 'Uploaders'))) { ?>
 					<div class="row">
 						<div class="col span_12">
 							<label>Sizes: </label>
@@ -140,7 +152,7 @@
 							</div>
 						</div>
 					</div>
-					<?php } /* ?>
+					<?php }  ?>
 					<div class="row">
 						<label>Descriptions: </label>
 						<textarea name="description" class="assessment-description" style="height: 300px;"></textarea>
