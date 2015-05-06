@@ -52,7 +52,7 @@ class Mall extends CI_Controller {
 		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.3"></script>';
 		if ($this->flexi_auth->is_logged_in()){
 			$user_id = $this->flexi_auth->get_user_id();
-			if ($user_id == 1 || $user_id == 99 || $user_id == 2003 || $user_id == 1654 ){
+			if ($user_id == 1 || $user_id == 2003 || $user_id == 1654 ){
 				$data['extraJS'] .= '<script src="/js/jTour.min.js"></script>';
 				$data['extraJS'] .= '<script src="/js/mall.tour.js?v=2.2.0.1"></script>';
 			}
