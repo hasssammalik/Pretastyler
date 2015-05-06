@@ -138,12 +138,12 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    	</li>
 					
 			    <?php } else { 
-
-			    	if( !empty( uri_string() ) ) {
-			    		if( uri_string() == 'useraccount/login' && !empty($_GET['returnurl']) ) {
+			    	$uri_string_varData = uri_string();
+			    	if( !empty( $uri_string_varData ) ) {
+			    		if( $uri_string_varData == 'useraccount/login' && !empty($_GET['returnurl']) ) {
 			    			$linkBackUrl = $_GET['returnurl'];
 			    		} else {
-			    			$linkBackUrl = '/'. uri_string() .'.html';
+			    			$linkBackUrl = '/'. $uri_string_varData .'.html';
 			    		}
 			    	} else {
 			    		$linkBackUrl = '/mall.html';
