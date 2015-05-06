@@ -2334,6 +2334,40 @@ class Flexi_auth_model extends Flexi_auth_lite_model
 		);
 		set_cookie($ci_session);	
 	}
+
+	/**
+	 *
+	 *
+	 */
+	public function custom_login_with_user_data( $user_id ){
+
+		$id = (int) $user_id;
+
+		if( $id > 0 ){
+		// Check User Exist or not in User Table
+			$query = $this->flexi_auth->get_user_by_id_query( $id );
+
+			// User exists, now validate credentials.
+			if ($query->num_rows() == 1)
+		    {
+		    	// Initialize Flexi Library
+		    	$this->load->library('flexi_auth');
+
+		    	// User Details
+				$user = $query->row();
+
+				// Step 2 logout
+				$this->flexi_auth->logout();
+				
+				// Login with user data from model
+				if( $this->set_login_sessions($user) ) {
+					return true;
+				}				
+			}
+		}
+		return false;
+	}
+
 }
 
 /* End of file flexi_auth_model.php */

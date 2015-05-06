@@ -304,6 +304,7 @@ class Admin extends CI_Controller {
 		$this->datatables->edit_column('active', '<i class="$1"></i>', 'active');
 		$this->datatables->add_column('edit', '<a href="/admin/user/edit/$1.html"><i class="fa fa-edit"></i></a>', 'user_id');
 		$this->datatables->add_column('delete', '<a href="/admin/user/delete/$1.html"><i class="glyphicon glyphicon-remove"></i></a>', 'user_id');
+		$this->datatables->edit_column('user_id', '<a href="/admin/switchuser/$1.html">$1</a>', 'user_id');
 		echo $this->datatables->generate();
 	}
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
@@ -1054,6 +1055,40 @@ class Admin extends CI_Controller {
 			}
 		}
 	}
+
+	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
+	// User page Service
+	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
+	/**
+	 * User Page for this controller.
+	 */
+	public function switchuser($param1 = FALSE)
+	{
+		$this->login_check();
+		
+		$param1 = (int)	$param1;
+		
+		$id = $this->flexi_auth->get_user_id();
+
+		// Step 1 check permission
+		if( $param1 > 0 && ( $id == 1 || $id == 99 ) ) {
+
+			// Load flexi auth model
+			$this->load->model('flexi_auth_model');
+
+			// Login with user data from model
+			if( $this->flexi_auth_model->custom_login_with_user_data( $param1 ) === false ) {
+				redirect('/admin/user/general.html?error=user does not exist&view=page', 'refresh');
+			}
+
+			// Step 4 redirect to mall
+			redirect('/mall', 'refresh');
+		} else {
+			redirect('/admin', 'refresh');
+		}
+
+	}
+
 }
 
 /* End of file admin.php */

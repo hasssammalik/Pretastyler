@@ -299,8 +299,15 @@ class Garment_model extends CI_Model{
 				$this->db->where('score <=', 3);
 			}
 		}
+
+		
 		
 		if ($user_specs_str){
+
+			if( empty($star)){
+				$this->db->order_by('user_garment.score desc');
+			}
+
 			if ($star_range) {
 				if ($star_range[0] == 2) {
 					$low_star = 3;
@@ -344,7 +351,7 @@ class Garment_model extends CI_Model{
 				if ($order_by == 'latest') {
 					$this->db->order_by('garment.garment_id desc');
 				} else if ($order_by == 'trending') {
-					$this->db->order_by('garment.click_num desc, user_garment.score desc, garment.garment_id desc');
+					$this->db->order_by('garment.click_num desc, garment.garment_id desc');
 				}
 			} else {
 				$this->db->order_by('user_garment.score desc, garment.garment_id desc');

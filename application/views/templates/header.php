@@ -6,7 +6,7 @@
 <?php if (isset($extraMeta)) print $extraMeta ?>
 <title><?php print $title ?> - Prêt à Styler – Your Online Stylist and Personal Shopper</title>
 <link href="/css/vendors.css?v=2.2.0.0" rel="stylesheet">
-<link href="/css/default.css?v=2.2.0.6" rel="stylesheet">
+<link href="/css/default.css?v=2.2.0.8" rel="stylesheet">
 <link href="/css/mozilla.css?v=2.2.0.0" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
 <!--- - - - - - CSS overwriter   - - - - -->
@@ -137,12 +137,24 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    		</ul>
 			    	</li>
 					
-			    <?php } else { ?>
+			    <?php } else { 
+			    	$uri_string_varData = uri_string();
+			    	if( !empty( $uri_string_varData ) ) {
+			    		if( $uri_string_varData == 'useraccount/login' && !empty($_GET['returnurl']) ) {
+			    			$linkBackUrl = $_GET['returnurl'];
+			    		} else {
+			    			$linkBackUrl = '/'. $uri_string_varData .'.html';
+			    		}
+			    	} else {
+			    		$linkBackUrl = '/mall.html';
+			    	}
+
+			    	?>
 					<li class=" relative menuBorder"><a href="/how-it-works.html" title="Learn why PrêtàStyler is so special.">HOW IT WORKS?</a></li>
 					<li class=" relative menuBorder"><a href="/faq.html" title="How things work">HELP</a></li>
 					<li class=" relative menuBorder"><a href="https://pretastyler.com/blog" title="Features on everything style and fashion related.">STYLE CLINIC</a></li>
 					<li class=" relative menuBorder"><a href="/#profile" title="Register to Pretastyler"><i class="icon-user"></i>SIGN-UP</a></li>
-					<li class=" relative menuBorder"><a href="/useraccount/login.html" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
+					<li class=" relative menuBorder"><a href="/useraccount/login.html?returnurl=<?php echo $linkBackUrl ?>" title="Login to Pretastlyer"><i class="icon-lock"></i>LOGIN</a></li>
 				<?php } ?>
 				
 				

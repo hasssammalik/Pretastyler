@@ -9,7 +9,7 @@
 					<p> <!-- <img width="70" src="/images/play.png" style="cursor:pointer;"> --> </p>
 					<p style="font-size: 2.9em;line-height: 1.5;padding-top: 75px;">
 						Cut Through the Clutter of Fashion<br>
-						Find what suits you, why it works and<br>
+						Discover what suits you, why it works and<br>
 						how to style it to look your best.
 					</p>
 				</div>
