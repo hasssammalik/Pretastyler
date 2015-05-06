@@ -142,11 +142,6 @@
 					</div>
 					<?php */ ?>
 					
-					<div class="row">
-						<a href="#" class="button medium dressing-room-click"></a>
-						<a href="#" class="button medium assess-click"></a>
-						<p><span class="required">*</span> Mandatory/ Required Fields</p>
-					</div>
 				</form>
 			</div>
 		</div>
