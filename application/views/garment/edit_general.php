@@ -57,7 +57,7 @@
 							</select> -->
 						</div>
 						<?php */ ?>
-						
+
 					</div>
 					<div class="row">
 						<div class="col span_11">
@@ -67,7 +67,7 @@
 							</select>
 						</div>
 						<div class="col span_2">&nbsp;</div>
-						<div class="col span_11">
+						<div class="col span_11 heightFix70">
 							<label>Occassions (Multi Select): <span class="required">*</span></label>
 							<fieldset class="checkboxes assessment-occasions otherSection" id="checkbox-search-occasion">
 								<?php foreach ($occasions as $row) { ?>
@@ -88,30 +88,41 @@
 						</div>
 					</div>
 					<div class="row">
-						<label>Colours (Multi Select): <span class="required">*</span></label>
-						<div class="group colours assessment-colours">
-							<fieldset class="checkboxes group">
-								<div class="col span_12">
-								<?php foreach ($colours1 as $row) { ?>
-								<label>
-									<input type="checkbox" value="<?php print $row['colour_id'] ?>" <?php if ($row['checked']) print 'checked="checked"' ?>>
-									<span>
-										<img src="/images/colours/<?php print $row['image_path'] ?>" width="20" height="20" alt="<?php print $row['name'] ?>" <?php
-										if( $row['image_path'] == 'sample-whites.png' ) { ?> class="borderGrey" <?php }?> >
-										<?php print $row['name'] ?>
-									</span>
-								</label>
-								<?php } ?>
+						<div class="col span_11">
+							<label>Colours (Multi Select): <span class="required">*</span></label>
+							<div class="group colours assessment-colours">
+								<fieldset class="checkboxes group">
+									<div class="col span_12">
+									<?php foreach ($colours1 as $row) { ?>
+									<label>
+										<input type="checkbox" value="<?php print $row['colour_id'] ?>">
+										<span>
+											<img src="/images/colours/<?php print $row['image_path'] ?>" width="20" height="20" alt="<?php print $row['name'] ?>" <?php
+											if( $row['image_path'] == 'sample-whites.png' ) { ?> class="borderGrey" <?php }?> >
+											<?php print $row['name'] ?>
+										</span>
+									</label>
+									<?php } ?>
 								</div>
 								<div class="col span_12">
 									<?php foreach ($colours2 as $row) { ?>
 									<label><input type="checkbox"
-										value="<?php print $row['colour_id'] ?>" <?php if ($row['checked']) print 'checked="checked"' ?>><span><img
+										value="<?php print $row['colour_id'] ?>"><span><img
 											src="/images/colours/<?php print $row['image_path'] ?>"
 											width="20" height="20" alt="<?php print $row['name'] ?>"><?php print $row['name'] ?></span></label>
 									<?php } ?>
 								</div>
-							</fieldset>
+								</fieldset>
+							</div>
+						</div>
+						<div class="col span_2">&nbsp;</div>
+						<div class="col span_11">
+
+							<a href="#" class="button medium assess-click bkpinkycolor">Save and edit details</a>
+							<a href="#" class="button medium dressing-room-click">Save and view Dressing room</a>
+							
+							<p><span class="required">*</span> Mandatory/ Required Fields</p>
+						
 						</div>
 					</div>
 					<?php /* if ($this->flexi_auth->in_group(array('Administrators', 'Uploaders'))) { ?>
@@ -132,8 +143,8 @@
 					<?php */ ?>
 					
 					<div class="row">
-						<a href="#" class="button medium dressing-room-click">Save and view Dressing room</a>
-						<a href="#" class="button medium assess-click">Save and edit details</a>
+						<a href="#" class="button medium dressing-room-click"></a>
+						<a href="#" class="button medium assess-click"></a>
 						<p><span class="required">*</span> Mandatory/ Required Fields</p>
 					</div>
 				</form>
