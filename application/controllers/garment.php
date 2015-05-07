@@ -71,7 +71,7 @@ class Garment extends CI_Controller {
 			});
 			$data = $this->data;
 			$data['title'] = "Import Garment";
-			$data['extraJS'] = '<script src="/js/garment-import.js?v=2.2.0.0"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
+			$data['extraJS'] = '<script src="/js/garment-import.js?v=2.2.0.1"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
 			if ($type == 2){
 				$selected_image = base64_decode_url($selected_image);
 				foreach ($filtered_images as $key => $value){
@@ -119,7 +119,7 @@ class Garment extends CI_Controller {
 			
 			$data = $this->data;
 			$data['title'] = "Import Garment";
-			$data['extraJS'] = '<script src="/js/garment-import.js?v=2.2.0.0"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
+			$data['extraJS'] = '<script src="/js/garment-import.js?v=2.2.0.1"></script><script src="/js/jquery-ui.min.js"></script><script src="/js/jquery.multiselect.min.js"></script><link href="/css/jquery.multiselect.css" rel="stylesheet">';
 			$data['extraDiv'] = '<div id="hiddenURL" style="display:none">'.$url.'</div>';
 			
 			$data['images'] = array_slice($filtered_images, 0, 7);

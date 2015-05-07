@@ -92,15 +92,17 @@
 							</select>
 						</div>
 						<div class="col span_2">&nbsp;</div>
-						<div class="col span_11 heightFix70">
-							<label>Occassions (Multi Select): <span class="required">*</span></label>
-							<fieldset class="checkboxes assessment-occasions otherSection" id="checkbox-search-occasion">
-								<?php foreach ($occasions as $row) { ?>
-								<label><input type="checkbox"
-									value="<?php print $row['occasion_id'] ?>"><span
-									title="<?php print $row['description'] ?>"><?php print $row['name'] ?></span></label>
-								<?php } ?>
-							</fieldset>
+						<div class="col span_11">
+							<div class="garmentOccasionFixer">
+								<label>Occassions (Multi Select): <span class="required">*</span></label>
+								<fieldset class="checkboxes assessment-occasions otherSection" id="checkbox-search-occasion">
+									<?php foreach ($occasions as $row) { ?>
+									<label><input type="checkbox"
+										value="<?php print $row['occasion_id'] ?>"><span
+										title="<?php print $row['description'] ?>"><?php print $row['name'] ?></span></label>
+									<?php } ?>
+								</fieldset>
+							</div>
 						</div>
 					</div>
 					<div class="row">
