@@ -9,10 +9,16 @@
 <link href="/css/default.css?v=2.2.0.9" rel="stylesheet">
 <link href="/css/mozilla.css?v=2.2.0.0" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
+
 <!--- - - - - - CSS overwriter   - - - - -->
-<link href="/css/style.css?v=2.2.0.3" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+<link href="/css/style.css?v=2.2.0.3" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/browserfixes.css?v=2.2.0.1">
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/css/IEbrowserfixes.css?v=2.2.0.1">
+<![endif]-->
 <!--- - - - - - CSS overwriter   - - - - -->
+
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <script src="/js/jquery-1.11.1.min.js"></script>
 <script src="/js/jquery-migrate-1.2.1.min.js"></script>
@@ -22,10 +28,12 @@
 <script src="/js/jquery.touchSwipe.min.js"></script>
 <script src="/js/jquery.ba-throttle-debounce.min.js"></script>
 <script src="/js/jquery.transit.min.js"></script>
+
 <!--[if (gte IE 6)&(lte IE 8)]>
 <script src="/js/selectivizr-min.js"></script>
 <script src="/js/html5.js"></script>
 <![endif]-->
+
 <script src="/js/jquery.focuspoint.min.js"></script>
 <script src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
 <script src="/js/jquery.fancybox.pack.js"></script>
@@ -89,9 +97,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 
 	<?php if (isset($extraDiv)) print $extraDiv ?>
 	<div id="wrap">
-		<?php /* if (!isset($no_background_image)) { ?>
-		<div class="bgHeader"><img src="/images/topbanner/<?php echo rand(1, 7) ?>.jpg" alt=""></div>
-		<?php } */ ?>
+		
 		<header>
 			<ul class="userMenu relative">
 			    <li class=" relative"><a href="/mall.html" title="My personally curated fashion feed.">MALL</a></li>
@@ -118,15 +124,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 			    			<li><a class="acttabsInner" href="/user/my-dressing-room.html#itemsPendingGarment">Items Pending Assessment</a></li>
 			    		</ul>
 			    	</li>
-			    	<!-- <li class="userSub relative menuBorder">
-			    		<span><a href="/boards.html">STYLE BOARDS</a></span>
-			    		<ul class="userSubMenu">
-			    			<li style="background-color: #555655;height: 6px;"> &nbsp; </li>
-			    			<li><a href="/boards/create.html">Create</a></li>
-			    			<li><a href="/boards/my.html">Search</a></li>
-			    			<li><a href="/user/loved.html">etc</a></li>
-			    		</ul>
-			    	</li> -->
+			    	
 			    	<li class="userSub relative menuBorder">
 			    		<span><a href="/user.html"><?php print strtoupper($first_name) ?>'S ACCOUNT</a></span>
 			    		<ul class="userSubMenu">
@@ -158,26 +156,9 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 				
 				
 			</ul>
-			<!-- <a href="#" id="menuButton" class="sqBtn light"><i class="icon-menu"></i></a> -->
 			
-			<?php /* if (!isset($no_sqBtn)) { ?>
-			<a href="#" class="sqBtn" id="trigger"><img src="/images/pinkbutton.png" width="46px"></a>
-			<?php } */?>
 			<a href="/" class="logo"><img src="/img/newlogo.png" width="193" alt="PrêtàStyler" title="PrêtàStyler"></a>
-			<?php /* ?><!-- <nav>
-				<ul>
-					<?php if ($this->flexi_auth->is_logged_in()){ ?>
-					<li><a href="/user.html"><span>Welcome <?php print $first_name ?></span></a><a href="/user/logout.html"><span>Log Out</span></a></li>
-					<?php } else { ?>
-					<li><a href="javascript:void(0)" onclick="register_click();"><span>Join Us</span></a><a href="javascript:void(0)" onclick="login_click();"><span>Log In</span></a></li>
-					<?php } ?>
-					<li><a href="/our-story.html">OUR STORY</a></li>
-					<li><a href="/how-it-works.html">HOW IT WORKS ?</a></li>
-					<li><a href="/">STYLE FEED</a></li>
-					<li><a href="http://pretastyler.com/blog">BLOG</a></li>
-				</ul>
-			</nav>
-			 --><?php */ ?>
+			
 		</header>
 		
 		<?php if (isset($content_class)) { ?>
