@@ -97,9 +97,9 @@
 									<div class="col span_12">
 									<?php foreach ($colours1 as $row) { ?>
 									<label>
-										<input type="checkbox" value="<?php print $row['colour_id'] ?>">
+										<input type="checkbox" value="<?php print $row['colour_id'] ?>" <?php if ($row['checked']) print 'checked="checked"' ?>>
 										<span>
-											<img src="/images/colours/<?php print $row['image_path'] ?>" width="20" height="20" alt="<?php print $row['name'] ?>" <?php
+											<img class="mousehand" src="/images/colours/<?php print $row['image_path'] ?>" width="20" height="20" alt="<?php print $row['name'] ?>" <?php
 											if( $row['image_path'] == 'sample-whites.png' ) { ?> class="borderGrey" <?php }?> >
 											<?php print $row['name'] ?>
 										</span>
@@ -108,10 +108,12 @@
 								</div>
 								<div class="col span_12">
 									<?php foreach ($colours2 as $row) { ?>
-									<label><input type="checkbox"
-										value="<?php print $row['colour_id'] ?>"><span><img
-											src="/images/colours/<?php print $row['image_path'] ?>"
-											width="20" height="20" alt="<?php print $row['name'] ?>"><?php print $row['name'] ?></span></label>
+										<label><input type="checkbox"  value="<?php print $row['colour_id'] ?>" <?php if ($row['checked']) print 'checked="checked"' ?>>
+											<span>
+												<img class="mousehand" src="/images/colours/<?php print $row['image_path'] ?>" width="20" height="20" alt="<?php print $row['name'] ?>">
+												<?php print $row['name'] ?>
+											</span>
+										</label>
 									<?php } ?>
 								</div>
 								</fieldset>

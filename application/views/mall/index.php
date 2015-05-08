@@ -25,21 +25,15 @@ if (!$this->flexi_auth->is_logged_in()){
 <?php echo form_open('', array('class'=>'topquicksearch', 'id'=>'topquicksearch', 'name'=>'topquicksearch')); ?>
     
     <div class="quickSearch quicksearchtabtop">
-        
+        <?php if ( $this->flexi_auth->is_logged_in() ){ ?><div class="TourButtonStarter bkpinkycolor mousehand">START TOUR</div> <?php } ?>
         <input type="text" name="searchTerm" placeholder="Search..." id="input-search-keyword" class="quicksearchinputtab">
         <input type="image" name="Quick Search" id="quicksearch" src="/images/search_icon.png" class="quicksearchimagetab" width="40">
-    
     </div>
 	
 	
 	
 	<div class="leftContent left">
 
-		<?php /*<a class="wid100 targetbutn bkpinkycolor" href="/mall/targetsearch.html">
-			&nbsp; &nbsp; DETAILED SEARCH
-			<span class="targertbutnicon unicode-icon right">&#9658;</span>
-		</a>
-		*/ ?>
 		<div class="wid100 quickbelowbutn bkpinkycolor">
 			&nbsp; &nbsp; QUICK SEARCH 
 			<span class="quickbelowicon unicode-icon right">&#x25BC;</span>

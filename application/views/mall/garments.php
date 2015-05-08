@@ -12,7 +12,7 @@ foreach ($garments as $row) { ?>
 			<?php if ( $row['is_standard'] == 0 ) { ?>
 				<a class="topCorner" title="Item uploaded and assessed by another member"><i class="icon-user2"></i></a>
 			<?php } ?>
-			<ul class="options">
+			<ul class="options hoverStepsOptions">
 				<li><a href="<?php 
 					if (strpos($row['url'],'theiconic.com.au') !== false) {
 						print 'https://www.tagserve.com.au/clickServlet?AID=264&MID=36&PID=47&SID=297&CID=52&SUBID=&TARGETURL=';
@@ -33,12 +33,12 @@ foreach ($garments as $row) { ?>
 				<?php } ?>
 				<?php } ?>
 			</ul>
-			<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" class="zoom bottomleftimage-showPink" target="_blank" title="Large View/Product details">
+			<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" class="zoom bottomleftimage-showPink jTourStepsCustom7" target="_blank" title="Large View/Product details">
 				<img src="/img/icons-25-info-pink.png" class="imageiconinfo-pink bottomleftimage-mall">
 				<img src="/img/icons-25-info-grey.png" class="imageiconinfo-grey bottomleftimage-mall">
 			</a>
 			<?php if ($this->flexi_auth->is_logged_in() && isset( $row['score'] ) ) {?>
-			<div class="rating" title="Suitability rating for you"><?php 
+			<div class="rating jTourStepsCustom8" title="Suitability rating for you"><?php 
 				if ($row['score']){
 					if ($row['score']>7.3){
 						print 5;

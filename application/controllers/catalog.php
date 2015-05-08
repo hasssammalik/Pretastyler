@@ -183,7 +183,7 @@ class Catalog extends CI_Controller {
 		<meta itemprop="description" content="'.$data['garment']['name'].'">
 		<meta itemprop="image" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		
-		<meta property="og:url" content="'. current_url() .'">
+		<meta property="og:url" content="http://www.pretastyler.com/">
 		<meta property="og:title" content="Prêt à Styler">
 
 		<meta property="og:description" content="'.$data['garment']['name'].'" />
@@ -196,50 +196,42 @@ class Catalog extends CI_Controller {
 		';
 		$data['extraDiv'] = '
 		<script>
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : "838075186234157",
-				xfbml      : true,
-				version    : "v2.2"
-			});
-		};
+			window.fbAsyncInit = function()
+			{
+				FB.init({
+					appId      : "918018634911199",
+					xfbml      : true,
+					version    : "v2.3"
+				});
+};
 
-		(function(d, s, id){
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, "script", "facebook-jssdk"));
-		</script>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=838075186234157&version=v2.0";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, "script", "facebook-jssdk"));</script>
-		';
+(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, \'script\', \'facebook-jssdk\'));
+</script>';
 
-		$data['similar_garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id(0, 10, $this->flexi_auth->get_user_id(), $garment_id);
-		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER, YOUR PERSONALIZED FASHION FEED.">
-		<meta name="description" content="PRÊT À STYLER eliminates "shopping noise" so you can focus on only the styles that are perfect for YOU.">
-		';
+$data['similar_garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id(0, 10, $this->flexi_auth->get_user_id(), $garment_id);
+$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER, YOUR PERSONALIZED FASHION FEED.">
+<meta name="description" content="PRÊT À STYLER eliminates "shopping noise" so you can focus on only the styles that are perfect for YOU.">
+';
 
-		$data['extraFooterJS'] = '<script type="text/javascript">
-		setTimeout(function(){var a=document.createElement("script");
-			var b=document.getElementsByTagName("script")[0];
-			a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
-			a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-		</script>';
+$data['extraFooterJS'] = '<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName("script")[0];
+	a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>';
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
-		$this->load->view('catalog/product', $data);
-		$this->load->view('templates/footer', $data);
-	}
+$this->load->view('templates/header', $data);
+$this->load->view('templates/menu', $data);
+$this->load->view('templates/menu_mall', $data);
+$this->load->view('catalog/product', $data);
+$this->load->view('templates/footer', $data);
+}
 	/**
 	 * How It Works Page for this controller.
 	 */
@@ -496,25 +488,25 @@ class Catalog extends CI_Controller {
 		$data['breadcrumb'] = array('THANK YOU');
 		
 		$data['extraJS'] = "<style> .headPageTitle { display:none;} .content {background-image:url(/img/$image.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style> <script>(function() {
-		  var _fbq = window._fbq || (window._fbq = []);
-		  if (!_fbq.loaded) {
-		    var fbds = document.createElement('script');
-		    fbds.async = true;
-		    fbds.src = '//connect.facebook.net/en_US/fbds.js';
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(fbds, s);
-		    _fbq.loaded = true;
-		  }
+			var _fbq = window._fbq || (window._fbq = []);
+			if (!_fbq.loaded) {
+				var fbds = document.createElement('script');
+				fbds.async = true;
+				fbds.src = '//connect.facebook.net/en_US/fbds.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(fbds, s);
+				_fbq.loaded = true;
+			}
 		})();
-		window._fbq = window._fbq || [];
-		window._fbq.push(['track', '6022631669625', {'value':'0.00','currency':'AUD'}]);
-		</script><noscript><img height='1' width='1' alt='' style='display:none' src='https://www.facebook.com/tr?ev=6022631669625&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1'/></noscript>";
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6022631669625', {'value':'0.00','currency':'AUD'}]);
+</script><noscript><img height='1' width='1' alt='' style='display:none' src='https://www.facebook.com/tr?ev=6022631669625&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1'/></noscript>";
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
-		$this->load->view('catalog/success', $data);
-	}
+$this->load->view('templates/header', $data);
+$this->load->view('templates/menu', $data);
+$this->load->view('templates/menu_mall', $data);
+$this->load->view('catalog/success', $data);
+}
 	/* removed from the main website
 	public function thankyou(){
 		

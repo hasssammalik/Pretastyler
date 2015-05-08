@@ -3,35 +3,33 @@
 	<script>
 $(document).ready(function()
 {
-$('.tabHead-wishList').mouseenter(function()
+	$('.tabHead-wishList').mouseenter(function()
 	{
-		$('#wishlist1').fadeIn(500);
+		$('#wishlist1').show();
 	}).mouseleave(function(){
-		$('#wishlist1').fadeOut(500);
+		$('#wishlist1').hide();
 	});
 
-$('.pendingGar').mouseenter(function()
+	$('.pendingGar').mouseenter(function()
 	{
-		$('#pending1').fadeIn(500);
+		$('#pending1').show();
 	}).mouseleave(function(){
-		$('#pending1').fadeOut(500);
+		$('#pending1').hide();
 	});
 
 	$('.tabHead-history').mouseenter(function()
 	{
-		$('#history1').fadeIn(500);
+		$('#history1').show();
 	}).mouseleave(function(){
-		$('#history1').fadeOut(500);
+		$('#history1').hide();
 	});
 
 	$('.tabHead-myfinds').mouseenter(function()
 	{
-		$('#myfinds1').fadeIn(500);
+		$('#myfinds1').show();
 	}).mouseleave(function(){
-		$('#myfinds1').fadeOut(500);
+		$('#myfinds1').hide();
 	});
-
-
 })
 	</script>
 	
