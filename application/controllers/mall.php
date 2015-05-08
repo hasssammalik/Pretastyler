@@ -55,6 +55,7 @@ class Mall extends CI_Controller {
 			if ($user_id == 1 || $user_id == 2003 || $user_id == 1654 ){
 				$data['extraJS'] .= '<script src="/js/jTour.min.js"></script>';
 				$data['extraJS'] .= '<script src="/js/mall.tour.js?v=2.2.0.3"></script>';
+				$data['extraCSS'] = '<link href="/css/jTour.css" rel="stylesheet">';
 			}
 		}
 		$data['breadcrumb'] = array('MALL');
