@@ -147,8 +147,8 @@ if (!$this->flexi_auth->is_logged_in()){
 							<?php foreach ($colours as $row) { ?>
 							<label>
 								<input type="checkbox" value="<?php print $row['colour_id'] ?>">
-								<span class="mousehand">
-									<img src="/images/colours/<?php print $row['image_path'] ?>" width="20" height="20" alt="<?php print $row['name'] ?>" title="<?php print $row['name'] ?>" <?php
+								<span>
+									<img class="mousehand" src="/images/colours/<?php print $row['image_path'] ?>" width="20" height="20" alt="<?php print $row['name'] ?>" title="<?php print $row['name'] ?>" <?php
 									if( $row['image_path'] == 'sample-whites.png' ) { ?> class="borderGrey" <?php }?> >
 									<?php // print $row['name'] ?>
 								</span>
