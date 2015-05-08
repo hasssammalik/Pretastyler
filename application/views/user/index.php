@@ -259,7 +259,7 @@
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/bodyratio/featues-10.png" /></div><ul><li>Your torso is equal in length to your legs.</li><li>The fullest part of your bottom protrudes at approximately half your height.</li><li>Weight gain is first experienced between your bust and hipline.</li><li>Bend your elbow 90% to the floor: you are a Balanced Body if you bent elbow in at the same position as your waist.</li><li>The most common body ratio of Caucasian women</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/bodyratio/featues-09.png" /></div><ul><li>Your legs are longer than your body.</li><li>Your torso is short and your waistline feels/is high.</li><li>Weight gain is first experienced at your midriff, stomach and high on the back of your hips.</li><li>Bend your elbow 90% to the floor: you are a Long Legged and Short Bodied if your waist is above your bent elbow.</li><li>The most common body ratio of African American women</li></ul></div>',
 						'<div id="talkbubble"><div class="slider-image"><img src="/images/profileSetup/bodyratio/featues-11.png" /></div><ul><li>You have a long body and short legs.</li><li>Weight gain is first experienced at your bottom, hips and thighs.</li><li>You have a low waistline.</li><li>Bend your elbow 90% to the floor: you are a Short Legged and Long Bodied if your waist sits below your bent elbow.</li><li>The most common body ratio of Asian women"</li></ul></div>',
-												];
+						];
 						var bustimage = 
 						[ 
 						'<div id="talkbubble"><ul><li>Select this size if you have had a bilateral mastectomy and do not wear a prosthesis</li></ul></div>',
