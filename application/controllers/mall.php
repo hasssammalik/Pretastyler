@@ -49,15 +49,12 @@ class Mall extends CI_Controller {
 		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
-		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.3"></script>';
-		if ($this->flexi_auth->is_logged_in()){
-			$user_id = $this->flexi_auth->get_user_id();
-			if ($user_id == 1 || $user_id == 2003 || $user_id == 1654 ){
-				$data['extraJS'] .= '<script src="/js/jTour.min.js"></script>';
-				$data['extraJS'] .= '<script src="/js/mall.tour.js?v=2.2.0.3"></script>';
-				$data['extraCSS'] = '<link href="/css/jTour.css" rel="stylesheet">';
-			}
-		}
+		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.4"></script>';
+		
+		$data['extraJS'] .= '<script src="/js/jTour.min.js"></script>';
+		$data['extraJS'] .= '<script src="/js/mall.tour.js?v=2.2.0.4"></script>';
+		$data['extraCSS'] = '<link href="/css/jTour.css" rel="stylesheet">';
+		
 		$data['breadcrumb'] = array('MALL');
 		$data['getBook'] =true;
 		$data['deep_category'] = $this->deep_search_model->get_available_categories();
