@@ -33,12 +33,12 @@ foreach ($garments as $row) { ?>
 				<?php } ?>
 				<?php } ?>
 			</ul>
-			<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" class="zoom bottomleftimage-showPink" target="_blank" title="Large View/Product details">
+			<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" class="zoom bottomleftimage-showPink jTourStepsCustom7" target="_blank" title="Large View/Product details">
 				<img src="/img/icons-25-info-pink.png" class="imageiconinfo-pink bottomleftimage-mall">
 				<img src="/img/icons-25-info-grey.png" class="imageiconinfo-grey bottomleftimage-mall">
 			</a>
 			<?php if ($this->flexi_auth->is_logged_in() && isset( $row['score'] ) ) {?>
-			<div class="rating" title="Suitability rating for you"><?php 
+			<div class="rating jTourStepsCustom8" title="Suitability rating for you"><?php 
 				if ($row['score']){
 					if ($row['score']>7.3){
 						print 5;
