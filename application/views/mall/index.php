@@ -24,7 +24,7 @@ if (!$this->flexi_auth->is_logged_in()){
 <br>
 <?php echo form_open('', array('class'=>'topquicksearch', 'id'=>'topquicksearch', 'name'=>'topquicksearch')); ?>
     
-    <div class="quickSearch quicksearchtabtop <?php if ( $this->flexi_auth->is_logged_in() ){ ?> quickSearchTourButtonStart <??>">
+    <div class="quickSearch quicksearchtabtop <?php if ( $this->flexi_auth->is_logged_in() ){ ?> quickSearchTourButtonStart <?php } ?>">
         <?php if ( $this->flexi_auth->is_logged_in() ){ ?><div class="TourButtonStarter bkpinkycolor mousehand">START TOUR</div> <?php } ?>
         <input type="text" name="searchTerm" placeholder="Search..." id="input-search-keyword" class="quicksearchinputtab">
         <input type="image" name="Quick Search" id="quicksearch" src="/images/search_icon.png" class="quicksearchimagetab" width="40">
