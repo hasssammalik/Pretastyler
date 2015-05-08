@@ -12,7 +12,7 @@ foreach ($garments as $row) { ?>
 			<?php if ( $row['is_standard'] == 0 ) { ?>
 				<a class="topCorner" title="Item uploaded and assessed by another member"><i class="icon-user2"></i></a>
 			<?php } ?>
-			<ul class="options">
+			<ul class="options hoverStepsOptions">
 				<li><a href="<?php 
 					if (strpos($row['url'],'theiconic.com.au') !== false) {
 						print 'https://www.tagserve.com.au/clickServlet?AID=264&MID=36&PID=47&SID=297&CID=52&SUBID=&TARGETURL=';
