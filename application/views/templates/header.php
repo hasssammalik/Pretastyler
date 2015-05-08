@@ -12,7 +12,6 @@
 <!--- - - - - - CSS overwriter   - - - - -->
 <link href="/css/style.css?v=2.2.0.3" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
-<link href="/css/jTour.css" rel="stylesheet">
 <!--- - - - - - CSS overwriter   - - - - -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <script src="/js/jquery-1.11.1.min.js"></script>
