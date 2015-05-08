@@ -5,30 +5,30 @@ $(document).ready(function()
 {
 	$('.tabHead-wishList').mouseenter(function()
 	{
-		$('#wishlist1').show(500);
+		$('#wishlist1').show();
 	}).mouseleave(function(){
-		$('#wishlist1').hide(500);
+		$('#wishlist1').hide();
 	});
 
 	$('.pendingGar').mouseenter(function()
 	{
-		$('#pending1').show(500);
+		$('#pending1').show();
 	}).mouseleave(function(){
-		$('#pending1').hide(500);
+		$('#pending1').hide();
 	});
 
 	$('.tabHead-history').mouseenter(function()
 	{
-		$('#history1').show(500);
+		$('#history1').show();
 	}).mouseleave(function(){
-		$('#history1').hide(500);
+		$('#history1').hide();
 	});
 
 	$('.tabHead-myfinds').mouseenter(function()
 	{
-		$('#myfinds1').show(500);
+		$('#myfinds1').show();
 	}).mouseleave(function(){
-		$('#myfinds1').hide(500);
+		$('#myfinds1').hide();
 	});
 })
 	</script>
