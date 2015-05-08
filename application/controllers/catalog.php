@@ -186,7 +186,7 @@ class Catalog extends CI_Controller {
 		<meta property="og:url" content="'. current_url() .'">
 		<meta property="og:title" content="Prêt à Styler">
 
-		<meta property="og:description" content="'.$data['garment']['name'].'" />
+		<meta property="og:description" content=Check out this fabulous item from my PrêtàStyler mall.  Sign up for your own private fashion mall filled with styles perfect for your shape. Free Trial (no credit card req’d)."'.$data['garment']['name'].'" />
 		<meta property="og:site_name" content="Prêt à Styler " />
 		<meta property="og:image"            content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		<meta property="og:image:secure_url" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
