@@ -196,11 +196,12 @@ class Catalog extends CI_Controller {
 		';
 		$data['extraDiv'] = '
 		<script>
-			window.fbAsyncInit = function() {
+			window.fbAsyncInit = function()
+			{
 				FB.init({
-					appId      : '918018634911199',
+					appId      : "918018634911199",
 					xfbml      : true,
-					version    : 'v2.3'
+					version    : "v2.3"
 				});
 };
 
@@ -210,7 +211,7 @@ class Catalog extends CI_Controller {
 	js = d.createElement(s); js.id = id;
 	js.src = "//connect.facebook.net/en_US/sdk.js";
 	fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+}(document, \'script\', \'facebook-jssdk\'));
 </script>';
 
 $data['similar_garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id(0, 10, $this->flexi_auth->get_user_id(), $garment_id);
