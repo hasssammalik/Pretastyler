@@ -183,7 +183,7 @@ class Catalog extends CI_Controller {
 		<meta itemprop="description" content="'.$data['garment']['name'].'">
 		<meta itemprop="image" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		
-		<meta property="og:url" content="'. current_url() .'">
+		<meta property="og:url" content="http://www.pretastyler.com/">
 		<meta property="og:title" content="Prêt à Styler">
 
 		<meta property="og:description" content="'.$data['garment']['name'].'" />
