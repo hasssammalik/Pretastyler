@@ -403,7 +403,12 @@ class Admin extends CI_Controller {
 		$category_id = $this->input->post('category_id', TRUE);
 		$owner = $this->input->post('owner', TRUE);
 		$show_outdated = $this->input->post('outdated', TRUE);
-		$this->datatables->select("garment_id, CONCAT('/images/garment/', pas_garment.image_path) AS image, pas_category.name AS category, pas_category.category_id, pas_garment.name, pas_garment.price_range, pas_garment.store AS retailer, pas_garment.url, CONCAT(first_name, ' ' , last_name) AS owner, pas_user_info.user_id, date_created, date_modified, pas_garment.date_admin_modified, enabled, pas_garment.click_num", FALSE)->from('garment')->join('user_info', 'user_info.user_id = garment.import_user_id')->join('category', 'category.category_id = garment.category_id')->where("outdated", $show_outdated);
+		$this->datatables->select("garment_id, CONCAT('/images/garment/', pas_garment.image_path) AS image, pas_category.name AS category, pas_category.category_id, pas_garment.name, pas_garment.price_range, pas_garment.store AS retailer, pas_garment.url, CONCAT(first_name, ' ' , last_name) AS owner, pas_user_info.user_id, date_created, date_modified, pas_garment.date_admin_modified, enabled, pas_garment.click_num", FALSE)->from('garment')->join('user_info', 'user_info.user_id = garment.import_user_id')->join('category', 'category.category_id = garment.category_id');
+		if ($show_outdated){
+			$this->datatables->where('outdated', 1);
+		} else {
+			$this->datatables->where('outdated', 0);
+		}
 		if ($is_premium) {
 			$this->datatables->where('is_standard', 0);
 		}
