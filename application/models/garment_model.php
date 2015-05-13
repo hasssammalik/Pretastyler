@@ -653,7 +653,7 @@ class Garment_model extends CI_Model{
 			$query_criteria_ids = 'SELECT GROUP_CONCAT(criteria_id) AS criteria_ids FROM pas_garment_criteria WHERE garment_id = ?';
 			$criteria_ids = $this->db->query($query_criteria_ids, array($garment_id))->row()->criteria_ids;
 			//get similar garments
-			$this->db->select('*, COUNT(criteria_id) as similarity')->from('garment')->join('garment_criteria', 'garment.garment_id = garment_criteria.garment_id', 'left')->where('garment.garment_id <>', $garment_id, 'enabled' => 1, 'is_pattern' => 0, 'outdated' => 0)->where_in('criteria_id', explode(',', $criteria_ids))->group_by('garment.garment_id')->order_by('similarity', 'desc')->limit($limit, $offset);
+			$this->db->select('*, COUNT(criteria_id) as similarity')->from('garment')->join('garment_criteria', 'garment.garment_id = garment_criteria.garment_id', 'left')->where(array('garment.garment_id <>' => $garment_id, 'enabled' => 1, 'is_pattern' => 0, 'outdated' => 0))->where_in('criteria_id', explode(',', $criteria_ids))->group_by('garment.garment_id')->order_by('similarity', 'desc')->limit($limit, $offset);
 			if ($user_id) {
 				$this->db->join('user_garment','garment.garment_id = user_garment.garment_id','left')->where(array('user_garment.user_id' => $user_id, 'user_garment.score >' => 6));
 			}
