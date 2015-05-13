@@ -10,6 +10,17 @@
 			<div class="rightSide-disable">
 				<h4><span>Select Main Image</span></h4>
 				<?php foreach ($images as $image_key => $image) { ?>
+				
+				<?php 
+					if (strpos( $image->src,'static.theiconic.com.au%2Fp%2F') !== false) {
+						$imageNew = explode( 'static.theiconic.com.au%2Fp%2F', $image->src );
+						$images[$image_key]->src = 'http://static.theiconic.com.au/p/'.$imageNew[1];
+				        $imageProp = getimagesize( $images[$image_key]->src );
+				        $images[$image_key]->width = $imageProp[0];
+				        $images[$image_key]->height   = $imageProp[1];
+					}
+				?>
+
 				<div class="item">
 					<div class="itemName"><span><strong>SIZE:</strong> <?php print $image->height.' x '. $image->width ?></span></div>
 					<div class="imgWrap">
