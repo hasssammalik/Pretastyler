@@ -374,7 +374,7 @@ class Garment_model extends CI_Model{
 		if ($length) {
 			$this->db->join('garment_criteria', 'garment.garment_id = garment_criteria.garment_id')->where_in('garment_criteria.criteria_id', $length);
 		}
-		$this->db->where(array('enabled' => 1, 'is_pattern' => 0));
+		$this->db->where(array('enabled' => 1, 'is_pattern' => 0, 'outdated' => 0));
 		$this->db->limit($limit, $offset);
 		$query = $this->db->get();
 		//print_r($this->db);die;
@@ -532,7 +532,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_info_by_favorite($offset, $limit, $user_id = FALSE){
 		if ($user_id) {
-			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'favorite' => 1, 'enabled' => 1, 'expired' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
+			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'favorite' => 1, 'enabled' => 1, 'expired' => 0, 'outdated' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
 				return FALSE;
@@ -551,7 +551,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_info_by_wardrobe($offset, $limit, $user_id = FALSE){
 		if ($user_id) {
-			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'wardrobe' => 1))->order_by('garment.garment_id desc')->limit($limit, $offset);
+			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'wardrobe' => 1, 'outdated' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
 				return FALSE;
@@ -570,7 +570,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_info_by_history($offset, $limit, $user_id = FALSE){
 		if ($user_id) {
-			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'expired' => 1, 'enabled' => 1))->order_by('garment.garment_id desc')->limit($limit, $offset);
+			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'expired' => 1, 'enabled' => 1, 'outdated' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
 				return FALSE;
@@ -590,7 +590,7 @@ class Garment_model extends CI_Model{
 	public function get_batch_garment_info_by_find($offset, $limit, $user_id = FALSE){
 		if ($user_id) {
 
-			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id,'garment.import_user_id' => $user_id, 'enabled' => 1, 'expired' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
+			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id,'garment.import_user_id' => $user_id, 'enabled' => 1, 'expired' => 0, 'outdated' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
 			
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
@@ -610,7 +610,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_info_by_dressing_room($offset, $limit, $user_id = FALSE){
 		if ($user_id) {
-			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'dressing_room' => 1, 'enabled' => 1, 'expired' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
+			$this->db->select('*')->from('garment')->join('user_garment','garment.garment_id = user_garment.garment_id')->where(array('user_garment.user_id' => $user_id, 'dressing_room' => 1, 'enabled' => 1, 'expired' => 0, 'outdated' => 0))->order_by('garment.garment_id desc')->limit($limit, $offset);
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
 				return FALSE;
@@ -629,7 +629,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_info_by_occasion_id($offset, $limit, $user_id = FALSE, $occasion_id = FALSE){
 		if ($occasion_id) {
-			$this->db->select('*')->from('garment')->join('garment_occasion', 'garment.garment_id = garment_occasion.garment_id', 'left')->where(array('occasion_id' => $occasion_id))->order_by('garment.garment_id', 'desc')->limit($limit, $offset);
+			$this->db->select('*')->from('garment')->join('garment_occasion', 'garment.garment_id = garment_occasion.garment_id', 'left')->where(array('occasion_id' => $occasion_id, 'outdated' => 0))->order_by('garment.garment_id', 'desc')->limit($limit, $offset);
 			$query = $this->db->get();
 			if ($query->num_rows() == 0){
 				return FALSE;
@@ -653,7 +653,7 @@ class Garment_model extends CI_Model{
 			$query_criteria_ids = 'SELECT GROUP_CONCAT(criteria_id) AS criteria_ids FROM pas_garment_criteria WHERE garment_id = ?';
 			$criteria_ids = $this->db->query($query_criteria_ids, array($garment_id))->row()->criteria_ids;
 			//get similar garments
-			$this->db->select('*, COUNT(criteria_id) as similarity')->from('garment')->join('garment_criteria', 'garment.garment_id = garment_criteria.garment_id', 'left')->where('garment.garment_id <>', $garment_id)->where_in('criteria_id', explode(',', $criteria_ids))->group_by('garment.garment_id')->order_by('similarity', 'desc')->limit($limit, $offset);
+			$this->db->select('*, COUNT(criteria_id) as similarity')->from('garment')->join('garment_criteria', 'garment.garment_id = garment_criteria.garment_id', 'left')->where('garment.garment_id <>', $garment_id, 'enabled' => 1, 'is_pattern' => 0, 'outdated' => 0)->where_in('criteria_id', explode(',', $criteria_ids))->group_by('garment.garment_id')->order_by('similarity', 'desc')->limit($limit, $offset);
 			if ($user_id) {
 				$this->db->join('user_garment','garment.garment_id = user_garment.garment_id','left')->where(array('user_garment.user_id' => $user_id, 'user_garment.score >' => 6));
 			}
@@ -692,7 +692,7 @@ class Garment_model extends CI_Model{
 			} else {
 				$this->db->join('body_garment','garment.garment_id = body_garment.garment_id','left')->join('body_type','body_garment.body_type_id = body_type.body_type_id','left')->where(array('body_type.body_type_name' => $body))->order_by('body_garment.body_score', 'random');
 			}
-			$this->db->where(array('enabled' => 1, 'is_pattern' => 0, 'body_garment.body_score >=' => 7.3));
+			$this->db->where(array('enabled' => 1, 'is_pattern' => 0, 'outdated' => 0, 'body_garment.body_score >=' => 7.3));
 			$this->db->where_not_in('garment.category_id', array(33, 34, 35, 30, 38, 36));
 			$this->db->limit($limit, $offset);
 			$query = $this->db->get();
@@ -808,7 +808,7 @@ class Garment_model extends CI_Model{
 			} else {
 				$this->db->join('body_garment','garment.garment_id = body_garment.garment_id','left')->where(array('body_garment.body_type_id' => 9))->order_by('body_garment.body_score', 'random');
 			}
-			$this->db->where(array('enabled' => 1, 'is_pattern' => 0, 'body_garment.body_score >=' => 7.3));
+			$this->db->where(array('enabled' => 1, 'is_pattern' => 0, 'outdated' => 0, 'body_garment.body_score >=' => 7.3));
 			$this->db->join('garment_occasion', 'garment.garment_id = garment_occasion.garment_id', 'left');
 			if (count($occasion_ids) == 1) {
 				$this->db->where('garment_occasion.occasion_id', $occasion_ids[0]);
@@ -927,7 +927,7 @@ class Garment_model extends CI_Model{
 	 */
 	public function get_batch_garment_score_by_user_specs($user_specs_str, $offset, $limit){
 		//calculate result
-		$query_str = "SELECT * FROM pas_garment RIGHT JOIN (SELECT garment_id, (AVG(LEAST(".$user_specs_str.")) + MIN(LEAST(".$user_specs_str."))) / 2 AS `score` FROM `pas_garment_specs` GROUP BY `garment_id` ) AS Scores ON (`pas_garment`.garment_id = Scores.garment_id) WHERE score > 7.3 AND (category_id = 31 OR category_id = 22 OR category_id = 23 OR category_id = 37 OR category_id = 21 OR category_id = 29) AND enabled = 1 AND is_pattern = 0 AND is_standard = 1 ORDER BY RAND() LIMIT ".$offset.",".$limit;
+		$query_str = "SELECT * FROM pas_garment RIGHT JOIN (SELECT garment_id, (AVG(LEAST(".$user_specs_str.")) + MIN(LEAST(".$user_specs_str."))) / 2 AS `score` FROM `pas_garment_specs` GROUP BY `garment_id` ) AS Scores ON (`pas_garment`.garment_id = Scores.garment_id) WHERE score > 7.3 AND (category_id = 31 OR category_id = 22 OR category_id = 23 OR category_id = 37 OR category_id = 21 OR category_id = 29) AND enabled = 1 AND is_pattern = 0 AND is_standard = 1 AND outdated = 0 ORDER BY RAND() LIMIT ".$offset.",".$limit;
 		$query = $this->db->query($query_str);
 		$result = $query->result_array();
 		return $result;
@@ -947,7 +947,7 @@ class Garment_model extends CI_Model{
 		} else {
 			//calculate result
 			$user_specs_str = $query->row_array()['column'];
-			$query_str = 'INSERT INTO pas_user_garment (user_id, garment_id, score, expired) SELECT '.$user_id.' AS user_id, scores.garment_id AS garment_id, scores.score AS score, 0 AS expired FROM (SELECT garment_id, (AVG(LEAST('.$user_specs_str.')) + MIN(LEAST('.$user_specs_str.'))) / 2 AS `score` FROM `pas_garment_specs` GROUP BY `garment_id`) AS scores WHERE scores.score IS NOT NULL ON DUPLICATE KEY UPDATE score = VALUES(score)';
+			$query_str = 'INSERT INTO `pas_user_garment` (`user_id`, `garment_id`, `score`, `expired`) SELECT '.$user_id.' AS `user_id`, `scores`.`garment_id` AS `garment_id`, `scores`.`score` AS `score`, 0 AS `expired` FROM (SELECT `pas_garment_specs`.`garment_id`, (AVG(LEAST('.$user_specs_str.')) + MIN(LEAST('.$user_specs_str.'))) / 2 AS `score` FROM `pas_garment_specs` LEFT JOIN `pas_garment` ON (`pas_garment_specs`.`garment_id` = `pas_garment`.`garment_id`) WHERE `outdated` = 0 GROUP BY `pas_garment_specs`.`garment_id`) AS `scores` WHERE `scores`.`score` IS NOT NULL ON DUPLICATE KEY UPDATE `score` = VALUES(`score`)';
 			$query = $this->db->query($query_str);
 		}
 	}
@@ -1237,7 +1237,7 @@ class Garment_model extends CI_Model{
 			foreach ( $values as $value )
 				$this->db->where( array( $key => $value ) );
 		}
-
+		$this->db->where('outdated', 0);
 		if ( !$count ) $this->db->limit( $limit, $offset );
 		$query = $this->db->order_by('garment_id desc')->get();
 
