@@ -470,7 +470,7 @@ class Admin extends CI_Controller {
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter category POSITION!'));
 					}
 					if (!empty($has_new_image)) {
-						$config['upload_path'] = '/home/stylefin/public_html/images/system/';
+						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/system/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
 						$this->load->library('upload', $config);
@@ -517,7 +517,7 @@ class Admin extends CI_Controller {
 					if (empty($order)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter category POSITION!'));
 					}
-					$config['upload_path'] = '/home/stylefin/public_html/images/system/';
+					$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/system/';
 					$config['allowed_types'] = 'jpg|png|tif';
 					$config['file_name'] = random_string('unique').'.jpg';
 					$this->load->library('upload', $config);
@@ -805,7 +805,7 @@ class Admin extends CI_Controller {
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria IMPORTANCE!'));
 					}
 					if (!empty($has_new_image)) {
-						$config['upload_path'] = '/home/stylefin/public_html/images/system/';
+						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/system/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
 						$this->load->library('upload', $config);
@@ -876,7 +876,7 @@ class Admin extends CI_Controller {
 					if (empty($weight)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter criteria IMPORTANCE!'));
 					}
-					$config['upload_path'] = '/home/stylefin/public_html/images/system/';
+					$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/system/';
 					$config['allowed_types'] = 'jpg|png|tif';
 					$config['file_name'] = random_string('unique').'.jpg';
 					$this->load->library('upload', $config);

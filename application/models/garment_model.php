@@ -1136,7 +1136,7 @@ class Garment_model extends CI_Model{
 	{
 		$image_url = prep_url($image_url);
 		$image_path = random_string('unique').'.jpg';
-		$path = '/home/stylefin/public_html/images/garment/';
+		$path = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 		file_put_contents($path.$image_path, file_get_contents($image_url));
 		return $image_path;
 	}
