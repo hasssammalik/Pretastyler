@@ -1239,7 +1239,7 @@ class Garment_model extends CI_Model{
 		}
 
 		if ( !$count ) $this->db->limit( $limit, $offset );
-		$query = $this->db->get();
+		$query = $this->db->order_by('garment_id desc')->get();
 
 		if ( $count ) return $query->num_rows();
 
