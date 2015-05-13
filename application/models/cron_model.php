@@ -24,12 +24,8 @@ class Cron_model extends CI_Model{
 	 * 
 	 */
 	public function delete_outdated_garment() {
-		$sql_query = '';
-		/* $this->db->delete('body_garment', array('garment_id' => $garment_id));
-		$this->db->delete('garment', array('garment_id' => $garment_id));
-		$this->db->delete('garment_criteria', array('garment_id' => $garment_id));
-		$this->db->delete('garment_specs', array('garment_id' => $garment_id));
-		$this->db->delete('user_garment', array('garment_id' => $garment_id)); */
+		$sql_query = 'UPDATE `pas_garment` SET `outdated` = 1 WHERE (DATE_SUB(CURDATE(), INTERVAL 4 MONTH) > date_created AND category_id IN (36, 30, 34, 33, 35, 38)) OR (DATE_SUB(CURDATE(), INTERVAL 3 MONTH) > date_created AND category_id IN (31, 22, 25, 23, 37, 21, 29, 24, 28, 32));';
+		$this->db->query($sql_query);
 	}
 }
 /* End of file cron_model.php */

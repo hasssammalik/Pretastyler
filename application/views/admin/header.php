@@ -185,6 +185,7 @@
 						</a>
 						<ul class="treeview-menu">
 							<li><a href="/admin/garment/general.html"><i class="fa fa-angle-double-right"></i> General Garments</a></li>
+							<li><a href="/admin/garment/outdated.html"><i class="fa fa-angle-double-right"></i> Outdated Garments</a></li>
 							<li><a href="/admin/garment/premium.html"><i class="fa fa-angle-double-right"></i> Premium Garments</a></li>
 							<li><a href="/admin/garment/possible-retailer-garments.html"><i class="fa fa-angle-double-right"></i> Possible Retailer Garments</a></li>
 						</ul>

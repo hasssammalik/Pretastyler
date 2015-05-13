@@ -28,6 +28,9 @@ class Cron extends CI_Controller {
 	 * Index Cron Page for this controller.
 	 */
 	public function index(){
+		echo date('Y-m-d H:i:s')."\t"."Updating all outdated garments...\n";
+		$this->cron_model->delete_outdated_garment();
+		echo date('Y-m-d H:i:s')."\t"."All outdated garments updated...\n";
 		echo date('Y-m-d H:i:s')."\t"."Getting All User ids...\n";
 		$user_ids = $this->garment_model->get_user_list();
 		$total = count($user_ids);

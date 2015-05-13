@@ -66,7 +66,8 @@
 
 				$results = array( 'total' => 0, 'garments' => array() );
 
-				$limit = 8;
+				$limit = intval( $this->input->get( 'limit' ) );
+				if ( !$limit || $limit < 1 || $limit > 100 ) $limit = 20;
 				$page = intval( $this->input->get( 'p' ) ) ? intval( $this->input->get( 'p' ) ) : 1;
 				$offset = $limit * ( $page - 1 );
 
