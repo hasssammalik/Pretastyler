@@ -86,7 +86,15 @@ class Garment extends CI_Controller {
 			}
 			$data['extraDiv'] = '<div id="hiddenURL" style="display:none">'.$url.'</div>';
 			
-			$data['images'] = array_slice($filtered_images, 0, 10);
+			$data_images = array_slice($filtered_images, 0, 10);
+			$this->session->set_userdata( 'upload_data_images', $data_images );
+
+			$this->load->library('curl');
+			$this->curl->create(site_url() . 'garment/upload-image-path.html');
+			$this->curl->option('connecttimeout', 1);
+			$data = $this->curl->execute();
+
+
 			$data['garment_name'] = $garment_name;
 			$data['colours1'] = $this->colour_model->get_available_colours();
 			$data['colours2'] = $this->colour_model->get_available_colours(TRUE);
@@ -635,6 +643,32 @@ class Garment extends CI_Controller {
 			show_404();
 		}
 	}
+	/**
+	 * The Image Convert for Real Path
+	 */
+	public function upload_image_path( $imagedata = false )
+	{
+
+		$images = $this->session->userdata( 'upload_data_images');
+		if ( $imagedata == 'get' ){
+			$this->load->view('garment/import_garment_images', array('images' => $images) );
+			$this->session->unset_userdata('upload_data_images'); 
+		} else {
+			$this->session->set_userdata('numberofimagesuploaded', count($images) );
+			foreach ($images as $image_key => $image) {
+				if (strpos( $image->src,'static.theiconic.com.au%2Fp%2F') !== false) {
+					$imageNew = explode( 'static.theiconic.com.au%2Fp%2F', $image->src );
+					$images[$image_key]->src = 'http://static.theiconic.com.au/p/'.$imageNew[1];
+			        $imageProp = getimagesize( $images[$image_key]->src );
+			        $images[$image_key]->width = $imageProp[0];
+			        $images[$image_key]->height   = $imageProp[1];
+				}
+			}
+			$this->session->unset_userdata('upload_data_images');
+			$this->session->set_userdata( 'upload_data_images', $images );
+		}
+	}
+
 }
 
 /* End of file garment.php */
