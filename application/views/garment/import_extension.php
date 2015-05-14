@@ -9,7 +9,7 @@
 			</div>
 			<div class="rightSide-disable">
 				<h4><span>Select Main Image</span></h4>
-				<div class="Garment_Uploaded"></div>
+				<div id="Garment_Uploaded_Images"></div>
 				<a href="#" class="button" id="nextButton" style="display:none;">Next</a>
 			</div>
 		</div>
@@ -168,4 +168,18 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	
+	function httpGet(theUrl)
+	{
+	    var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.open( "GET", theUrl, false );
+	    xmlHttp.send( null );
+	    return xmlHttp.responseText;
+	}
+
+	var garmentUploadimages = document.getElementById('Garment_Uploaded_Images');
+	garmentUploadimages.innerHTML = httpGet('http://m1.pretastyler.com/garment/upload-image-path.html');
+
+</script>
 <?php } ?>

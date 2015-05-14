@@ -89,11 +89,12 @@ class Garment extends CI_Controller {
 			$data_images = array_slice($filtered_images, 0, 10);
 			$this->session->set_userdata( 'upload_data_images', $data_images );
 
-			$this->load->library('curl');
-			$this->curl->create(site_url() . 'garment/upload-image-path.html');
-			$this->curl->option('connecttimeout', 1);
-			$data = $this->curl->execute();
-
+			$ch = curl_init(site_url() . 'garment/upload-image-path.html');
+			curl_setopt($ch, CURLOPT_URL, "example.com");
+			curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,2);
+			curl_setopt($ch, CURLOPT_TIMEOUT, 1);
+			curl_exec($ch);
+			curl_close($ch);
 
 			$data['garment_name'] = $garment_name;
 			$data['colours1'] = $this->colour_model->get_available_colours();
