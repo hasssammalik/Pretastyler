@@ -179,7 +179,7 @@
 	}
 
 	var garmentUploadimages = document.getElementById('Garment_Uploaded_Images');
-	garmentUploadimages.innerHTML = httpGet('http://m1.pretastyler.com/garment/upload-image-path.html');
+	garmentUploadimages.innerHTML = httpGet('http://m1.pretastyler.com/garment/upload-image-path/get.html');
 
 </script>
 <?php } ?>
