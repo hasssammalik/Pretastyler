@@ -666,7 +666,7 @@ class Garment extends CI_Controller {
 					}
 					echo '<div class="item"><div class="itemName"><span><strong>SIZE:</strong>';
 					echo  $image->height.' x '. $image->width .'</span></div><div class="imgWrap"><div><a href="#"><img src="';
-					echo  $image->src '" alt="" class="image-choice"></a></div>';
+					echo  $image->src .'" alt="" class="image-choice"></a></div>';
 					if ($this->flexi_auth->in_group(array('Administrators', 'Uploaders'))) { 
 						echo '<div class="choiceText"></div>';
 					}
