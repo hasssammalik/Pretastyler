@@ -655,7 +655,7 @@ class Garment extends CI_Controller {
 			$this->load->view('garment/import_garment_images', array('images' => $images) );
 			$this->session->unset_userdata('upload_data_images'); 
 		} else {
-			$this->session->set_userdata('numberofimagesuploaded', count($images) );
+			
 			foreach ($images as $image_key => $image) {
 				if (strpos( $image->src,'static.theiconic.com.au%2Fp%2F') !== false) {
 					$imageNew = explode( 'static.theiconic.com.au%2Fp%2F', $image->src );
