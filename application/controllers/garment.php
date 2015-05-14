@@ -649,7 +649,7 @@ class Garment extends CI_Controller {
 	 */
 	public function upload_image_path( $imagedata = false )
 	{
-
+		$this->load->library('user_check');
 		$images = $this->session->userdata( 'upload_data_images');
 		if( !empty( $images )) {
 			if ( $imagedata == 'get' ){
