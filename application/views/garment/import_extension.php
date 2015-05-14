@@ -173,6 +173,7 @@ $(function(){
 	$.get( "<?php echo site_url() ?>garment/upload-image-path/get.html", function( data ) {
 		var garmentUploadimages = document.getElementById('Garment_Uploaded_Images');
 		garmentUploadimages.innerHTML = data;
+		importGarmentUploadsInit();
 	});
 	
 });
