@@ -651,22 +651,26 @@ class Garment extends CI_Controller {
 	{
 
 		$images = $this->session->userdata( 'upload_data_images');
-		if ( $imagedata == 'get' ){
-			$this->load->view('garment/import_garment_images', array('images' => $images) );
-			$this->session->unset_userdata('upload_data_images'); 
-		} else {
-			
-			foreach ($images as $image_key => $image) {
-				if (strpos( $image->src,'static.theiconic.com.au%2Fp%2F') !== false) {
-					$imageNew = explode( 'static.theiconic.com.au%2Fp%2F', $image->src );
-					$images[$image_key]->src = 'http://static.theiconic.com.au/p/'.$imageNew[1];
-			        $imageProp = getimagesize( $images[$image_key]->src );
-			        $images[$image_key]->width = $imageProp[0];
-			        $images[$image_key]->height   = $imageProp[1];
+		if( !empty( $images )) {
+			if ( $imagedata == 'get' ){
+				$this->load->view('garment/import_garment_images', array('images' => $images) );
+				$this->session->unset_userdata('upload_data_images'); 
+			} else {
+				
+				foreach ($images as $image_key => $image) {
+					if (strpos( $image->src,'static.theiconic.com.au%2Fp%2F') !== false) {
+						$imageNew = explode( 'static.theiconic.com.au%2Fp%2F', $image->src );
+						$images[$image_key]->src = 'http://static.theiconic.com.au/p/'.$imageNew[1];
+				        $imageProp = getimagesize( $images[$image_key]->src );
+				        $images[$image_key]->width = $imageProp[0];
+				        $images[$image_key]->height   = $imageProp[1];
+					}
 				}
+				$this->session->unset_userdata('upload_data_images');
+				$this->session->set_userdata( 'upload_data_images', $images );
 			}
-			$this->session->unset_userdata('upload_data_images');
-			$this->session->set_userdata( 'upload_data_images', $images );
+		} else {
+			return false;
 		}
 	}
 

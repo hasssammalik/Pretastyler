@@ -169,17 +169,12 @@
 	</div>
 </div>
 <script type="text/javascript">
+$(function(){
+	$.get( "<?php echo site_url() ?>garment/upload-image-path/get.html", function( data ) {
+		var garmentUploadimages = document.getElementById('Garment_Uploaded_Images');
+		garmentUploadimages.innerHTML = data;
+	});
 	
-	function httpGet(theUrl)
-	{
-	    var xmlHttp = new XMLHttpRequest();
-	    xmlHttp.open( "GET", theUrl, false );
-	    xmlHttp.send( null );
-	    return xmlHttp.responseText;
-	}
-
-	var garmentUploadimages = document.getElementById('Garment_Uploaded_Images');
-	garmentUploadimages.innerHTML = httpGet('http://m1.pretastyler.com/garment/upload-image-path/get.html');
-
+});
 </script>
 <?php } ?>
