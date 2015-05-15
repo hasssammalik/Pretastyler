@@ -47,6 +47,7 @@
 <script src="/js/script.js?v=2.2.0.5"></script>
 <script src="/js/tabs.js?v=2.2.0.0"></script>
 <script src="/js/menu-mall.js?v=2.2.0.9"></script>
+<?php if (isset($extraJS)) print $extraJS ?>
 
 <?php if( ENVIRONMENT == 'production') { ?>
 	<!-- Remarketing code  -->
@@ -66,7 +67,7 @@
 	window._fbq.push(['track', 'PixelInitialized', {}]);
 	</script>
 	<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1458274767744915&amp;ev=PixelInitialized" /></noscript>
-	<?php if (isset($extraJS)) print $extraJS ?>
+	
 
 	<!-- Start Visual Website Optimizer Asynchronous Code -->
 	<script type='text/javascript'>
