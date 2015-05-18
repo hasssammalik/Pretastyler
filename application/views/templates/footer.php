@@ -60,6 +60,6 @@ if( ENVIRONMENT == 'production') {
 	</script>
 	<!--End of Zopim Live Chat Script-->
 <?php } ?>
-<div class="fb-root"></div>
+<div id="fb-root"></div>
 </body>
 </html>
