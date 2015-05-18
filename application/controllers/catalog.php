@@ -181,57 +181,47 @@ class Catalog extends CI_Controller {
 		$data['extraJS'] = '<script src="/js/actual_product.js?v=2.2.0.5"></script>
 		<meta itemprop="name" content="'.$data['garment']['name'].'">
 		<meta itemprop="description" content="'.$data['garment']['name'].'">
-		<meta itemprop="image" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
+		<meta itemprop="image" content="https://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		
-		<meta property="og:url" content="http://www.pretastyler.com/">
+		<meta property="og:url" content="https://www.pretastyler.com/">
 		<meta property="og:title" content="Prêt à Styler">
 
 		<meta property="og:description" content="'.$data['garment']['name'].'" />
 		<meta property="og:site_name" content="Prêt à Styler " />
-		<meta property="og:image"            content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
-		<meta property="og:image:secure_url" content="http://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
+		<meta property="og:image"            content="https://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
+		<meta property="og:image:secure_url" content="https://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
 		<meta property="og:image:type"       content="image/jpg">
 		<meta property="og:image:width"      content="200">
 		<meta property="og:image:height"     content="700">
 		';
-		$data['extraDiv'] = '
-		<script>
-			window.fbAsyncInit = function()
-			{
-				FB.init({
-					appId      : "918018634911199",
-					xfbml      : true,
-					version    : "v2.3"
-				});
-};
+		$data['extraDiv'] = '<script> window.fbAsyncInit = function() {	FB.init({ appId:"918018634911199", xfbml: true,	version: "v2.3"	});	};
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, \'script\', \'facebook-jssdk\'));
+			</script>';
 
-(function(d, s, id){
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) {return;}
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js";
-	fjs.parentNode.insertBefore(js, fjs);
-}(document, \'script\', \'facebook-jssdk\'));
-</script>';
+		$data['similar_garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id(0, 10, $this->flexi_auth->get_user_id(), $garment_id);
+		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER, YOUR PERSONALIZED FASHION FEED.">
+		<meta name="description" content="PRÊT À STYLER eliminates "shopping noise" so you can focus on only the styles that are perfect for YOU.">
+		';
 
-$data['similar_garments'] = $this->garment_model->get_batch_garment_info_by_similar_garment_id(0, 10, $this->flexi_auth->get_user_id(), $garment_id);
-$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER, YOUR PERSONALIZED FASHION FEED.">
-<meta name="description" content="PRÊT À STYLER eliminates "shopping noise" so you can focus on only the styles that are perfect for YOU.">
-';
+		$data['extraFooterJS'] = '<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+			var b=document.getElementsByTagName("script")[0];
+			a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
+			a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+		</script>';
 
-$data['extraFooterJS'] = '<script type="text/javascript">
-setTimeout(function(){var a=document.createElement("script");
-	var b=document.getElementsByTagName("script")[0];
-	a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/7573.js?"+Math.floor(new Date().getTime()/3600000);
-	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>';
-
-$this->load->view('templates/header', $data);
-$this->load->view('templates/menu', $data);
-$this->load->view('templates/menu_mall', $data);
-$this->load->view('catalog/product', $data);
-$this->load->view('templates/footer', $data);
-}
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('catalog/product', $data);
+		$this->load->view('templates/footer', $data);
+	}
 	/**
 	 * How It Works Page for this controller.
 	 */
