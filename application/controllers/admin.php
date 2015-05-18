@@ -1101,6 +1101,38 @@ class Admin extends CI_Controller {
 		}
 
 	}
+	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
+	// Notification page Service
+	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
+	/**
+	 * Notification Page for this controller.
+	 */
+	public function notifications()
+	{
+		$this->login_check();
+		$data = $this->data;
+		
+		$data['current_folder'] = "Notification management";
+		$data['current_folder_path'] = "notification";
+			$data['title'] = "All Notification";
+			$data['title_description'] = "manage all notification";
+			$data['filters'] = '';
+			$this->load->view('admin/header', $data);
+			$this->load->view('admin/notification/index', $data);
+			$this->load->view('admin/footer', $data);
+
+	}
+
+	public function getnotifications()
+	{
+		
+		$this->datatables->select("pas_notification.notify_id, pas_notification.notify_date, pas_notification.level, pas_notification.notify_title, pas_notification.notify_description, pas_notification.notify_status")->from('user_info')->order;
+
+		$this->datatables->add_column('change_status', '<span class="notification_status_switch" data-status="$1"></span>', 'notify_status' );
+		$this->datatables->edit_column('notify_status', '<span class="notification_Original">$1</span>', 'notify_status');
+
+		echo $this->datatables->generate();
+	}
 
 }
 
