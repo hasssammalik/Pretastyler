@@ -39,7 +39,7 @@ foreach ($garments as $row) { ?>
 			</a>
 			<?php if ($this->flexi_auth->is_logged_in() && isset( $row['score'] ) ) {?>
 			<div class="rating jTourStepsCustom8" title="Suitability rating for you"><?php 
-				if ($row['score']){
+				/*if ($row['score']){
 					if ($row['score']>7.3){
 						print 5;
 					} else if ($row['score']>6){
@@ -50,13 +50,23 @@ foreach ($garments as $row) { ?>
 						print 2;
 					} else {
 						print 1;
+					}*/
+				if ($row['score']){
+					if ($row['score'] >= 8.91 ){
+						print 99;
+					} else if ($row['score'] > 0.9 ){
+						print round(( ( 98 * $row['score'] ) - 80.19 ) / 8.01 );
+					} else {
+						print 1;
 					}
-				?>
-				<i class="icon-star"></i>
-				<?php } else if ($row['score'] == 0){
-					print '1<i class="icon-star"></i>';
-				} else {
-					print 'Not Assessed';
+					?>
+					<!-- <i class="icon-star"></i> -->
+					%
+					<?php } else if ($row['score'] == 0){
+						//print '1<i class="icon-star"></i>';
+						print '1%';
+					} else {
+						print 'Not Assessed';
 				}?>
 			</div>
 			<?php } ?>
