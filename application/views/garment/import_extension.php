@@ -62,7 +62,7 @@
 							<select class="assessment-sizes-region" style="display:none;">
 							</select>
 							<div class="assessment-sizes">
-								<span style="color: #dd1763; font-size:13px;">Please Select <b style="font-size:12px;">Item Type</b> to choose Size.</span>
+								<span style="color: #dd1763; font-size:13px;">Please Select <b style="font-size:12px;">Item Type</b> to choose Sizes.</span>
 							</div>
 						</div>
 						<?php } /*?>
