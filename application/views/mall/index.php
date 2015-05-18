@@ -57,7 +57,6 @@ if (!$this->flexi_auth->is_logged_in()){
 							<li class="occasion"><div>All Occasion</div> </li>
 							<li class="color"><div>All Colors</div> </li>
 							<?php if( !empty( $first_name)) { ?>
-								<li class="star"><div>4 ☆</div> <a class="closesearch" data-type="star" data-set="4">x</a></li>
 								<li class="star"><div>5 ☆</div> <a class="closesearch" data-type="star" data-set="5">x</a></li>
 							<?php } ?>
 						</ul>
