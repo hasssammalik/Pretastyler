@@ -1,19 +1,14 @@
 							<div class="clear"></div>
 							<footer>
 								
-								<ul>
+								<ul class="footerMenus">
 									<li><a target="_blank" href="https://chrome.google.com/webstore/detail/select-image-for-genie-se/ggciakfahmdidbpcccinmldogcjkcmhd">STYLE GENIE EXTENSION</a>|</li>
 									<li><a href="/terms.html">TERMS</a>|</li>
 									<li><a href="/our-story.html">OUR STORY</a>|</li> 
 									<li><a href="/contact-us.html">CONTACT</a>|</li>
 									<li><a href="/retailer.html">RETAILERS</a></li>
 								</ul>
-								<div
-								class="fb-like"
-								data-share="true"
-								data-width="450"
-								data-show-faces="true">
-							</div>
+								
 							<ul class="social">
 
 								<li><a href="http://www.facebook.com/myprivatestylist" class="fb"><i class="icon-facebook"></i></a></li>
@@ -58,12 +53,12 @@ if( ENVIRONMENT == 'production') {
 	<!--Start of Zopim Live Chat Script-->
 	<script type="text/javascript">
 		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-				_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-				$.src='//v2.zopim.com/?2DZTXFz3pU0P9dFbK9NzPb2IBE2aAE8b';z.t=+new Date;$.
-				type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-			</script>
-			<!--End of Zopim Live Chat Script-->
-			<?php } ?>
-		</body>
-		</html>
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+		$.src='//v2.zopim.com/?2DZTXFz3pU0P9dFbK9NzPb2IBE2aAE8b';z.t=+new Date;$.
+		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+	</script>
+	<!--End of Zopim Live Chat Script-->
+<?php } ?>
+</body>
+</html>
