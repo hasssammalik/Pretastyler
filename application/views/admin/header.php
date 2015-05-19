@@ -23,7 +23,7 @@
 		<!-- bootstrap wysihtml5 - text editor -->
 		<link href="/css/admin/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
 		<!-- Theme style -->
-		<link href="/css/admin/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="/css/admin/AdminLTE.css?v=2.2.0.0" rel="stylesheet" type="text/css" />
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,7 +60,7 @@
 		<script src="/js/admin/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
 		<script src="/js/admin/plugins/datatables/dataTables.pagination.input.js" type="text/javascript"></script>
 		<!-- AdminLTE App -->
-		<script src="/js/admin/AdminLTE/app.js" type="text/javascript"></script>
+		<script src="/js/admin/AdminLTE/app.js?v=2.2.0.0" type="text/javascript"></script>
 		
 				
 		<?php if (!empty($extraJS)) {
