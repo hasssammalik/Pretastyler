@@ -1120,7 +1120,7 @@ class Admin extends CI_Controller {
 		$data['title_description'] = "manage all notification";
 		$data['filters'] = '';
 		$this->load->view('admin/header', $data);
-		$this->load->view('admin/notification/index', $data);
+		$this->load->view('admin/notifications/index', $data);
 		$this->load->view('admin/footer', $data);
 
 	}
