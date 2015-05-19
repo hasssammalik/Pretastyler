@@ -77,8 +77,8 @@ class Notification_model extends CI_Model
 		if ( !empty( $data )){ 
 			$querydata = array(
 				'notify_date' => date('Y-m-d H:i:s'),                 // Static
-				'notify_group' => $notification_group[0],             // Opt
-				'notify_level' => $notification_level[2],             // Required
+				'notify_group' => $this->notification_group[0],             // Opt
+				'notify_level' => $this->notification_level[2],             // Required
 				'notify_title' => $data['title'],                     // Required
 				'notify_description' => $data['description'],         // Required
 				'notify_status' => 1                                  // Opt

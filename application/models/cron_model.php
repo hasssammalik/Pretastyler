@@ -32,11 +32,11 @@ class Cron_model extends CI_Model{
 		
 		$stack_notification = array();
 
-		$this->db->where('enabled' => 1);
-		$this->db->where('outdated' => 0 );
+		$this->db->where('enabled', 1);
+		$this->db->where('outdated', 0 );
 		//$this->db->where('date_created < DATE_SUB(NOW(), INTERVAL 1 HOUR)' );
 
-		$this->from('garment');
+		$this->db->from('garment');
 		$this->db->select('garment_id, import_user_id, name, image_path, extra_image1_path, extra_image2_path');
 		
 		$query = $this->db->get();
