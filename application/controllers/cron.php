@@ -44,6 +44,8 @@ class Cron extends CI_Controller {
 		}
 		echo date('Y-m-d H:i:s')."\tStart Generating All Garment Specs...\n";
 		$this->assessment_model->update_all_garment_specs();
+		echo date('Y-m-d H:i:s')."\tStarting Notification model for missing image...\n";
+		$this->cron_model->update_garment_image_existence_notification();
 		echo date('Y-m-d H:i:s')."\tAll Done!\n";
 	}
 }
