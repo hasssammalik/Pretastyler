@@ -18,7 +18,6 @@
 								<th>Title</th>
 								<th>Description</th>
 								<th>Status</th>
-								<th>Actions</th>
 							</tr>
 						</thead>
 						<tfoot>
@@ -30,7 +29,6 @@
 								<th>Title</th>
 								<th>Description</th>
 								<th>Status</th>
-								<th>Actions</th>
 							</tr>
 						</tfoot>
 					</table>
@@ -50,12 +48,11 @@ $(function(){
 		"pagingType": "input",
 		"columns": [
 			{ "data": "notify_id", "width": "3%"},
-			{ "data": "notify_date", "width": "14%" },
-			{ "data": "notify_level", "width": "3%" },
+			{ "data": "notify_date", "width": "12%" },
+			{ "data": "notify_level", "width": "4%" },
 			{ "data": "notify_title", "width": "18%" },
 			{ "data": "notify_description" },
-			{ "data": "notify_status", "width": "3%" },
-			{ "data": "change_status", "searchable": false , "sortable": false }
+			{ "data": "active", "width": "3%", "searchable": false , "sortable": false }
 		],
 		"order": [ 0, 'desc' ]
 	});
