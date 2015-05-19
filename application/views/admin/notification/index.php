@@ -49,16 +49,16 @@ $(function(){
 		"ajax": {url: "/admin/getnotifications.html", type: 'POST', data:{ pas_secret_name:$("input[name=pas_secret_name]").val() }},
 		"pagingType": "input",
 		"columns": [
-			{ "data": "notify_id", "width": "5%"},
-			{ "data": "notify_date" },
-			{ "data": "notify_level" },
+			{ "data": "notify_id", "width": "3%"},
+			{ "data": "notify_date", "width": "14%" },
+			{ "data": "notify_level", "width": "3%" },
 			{ "data": "notify_title", "width": "18%" },
-			{ "data": "notify_description", "width": "25%" },
-			{ "data": "notify_status" },
+			{ "data": "notify_description" },
+			{ "data": "notify_status", "width": "3%" },
 			{ "data": "change_status", "searchable": false , "sortable": false }
 		],
 		"order": [ 0, 'desc' ]
-	} );
+	});
 	
 });
 </script>
