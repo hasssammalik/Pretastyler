@@ -62,10 +62,10 @@ foreach ($garments as $row) { ?>
 					?>
 					<!-- <i class="icon-star"></i> -->
 					%
-					<?php } else if ($row['score'] == 0){
+				<?php } else if ($row['score'] == 0){
 						//print '1<i class="icon-star"></i>';
 						print '1%';
-					} else {
+				} else {
 						print 'Not Assessed';
 				}?>
 			</div>
