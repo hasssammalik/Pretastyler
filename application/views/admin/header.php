@@ -101,14 +101,16 @@
 								<li>
 									<!-- inner menu: contains the actual data -->
 									<ul class="menu">
-										<?php foreach ($notifications as $noty) {
-										?>
-										<li>
-											<a href="/admin/notifications.html">
-												<i class="fa fa-warning danger"></i> <?php echo $noty['notify_title'] ?>
-											</a>
-										</li>
-										<?php } ?>
+										<?php 
+										if( !empty($notifications)){
+											foreach ($notifications as $noty) {
+											?>
+											<li>
+												<a href="/admin/notifications.html">
+													<i class="fa fa-warning danger"></i> <?php echo $noty['notify_title'] ?>
+												</a>
+											</li>
+										<?php } } ?>
 										
 
 										<!--
