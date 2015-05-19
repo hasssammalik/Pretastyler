@@ -1,10 +1,15 @@
 <!-- Main content -->
-<section class="content">
+<section class="content adminNotificationPage">
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-header">
 					<h3 class="box-title">All Notification</h3>
+					<?php if(!empty($notifications)){?>
+						<span class="notification_readall mousehand readall">Read All Notification</span>
+					<?php } else { ?>
+						<span class="notification_readall mousehand unreadall">Unread All Notification</span>
+					<?php } ?>
 				</div><!-- /.box-header -->
 				<?php echo form_open();echo form_close(); ?>
 				<div class="box-body table-responsive">
@@ -75,6 +80,28 @@ $(function(){
 			if (data > 0){
 				icon.removeClass('fa-envelope-o');
 				icon.addClass('fa-envelope');
+			} else {
+				alert("Something Error! Contact Programmer!");
+			}
+		});
+	} );
+	$('.adminNotificationPage').on('click', '.readall', function () {
+		var icon = $(this);
+		$.post("/admin/set-notification-status.html", { notify_status_all: 'all', notify_status: 'read' ,pas_secret_name:$("input[name=pas_secret_name]").val()}, function(data){
+			if (data > 0){
+				icon.removeClass('readall');
+				icon.addClass('unreadall');
+			} else {
+				alert("Something Error! Contact Programmer!");
+			}
+		});
+	} );
+	$('.adminNotificationPage').on('click', '.unreadall', function () {
+		var icon = $(this);
+		$.post("/admin/set-notification-status.html", { notify_status_all: 'all', notify_status: 'unread' ,pas_secret_name:$("input[name=pas_secret_name]").val()}, function(data){
+			if (data > 0){
+				icon.removeClass('unreadall');
+				icon.addClass('readall');
 			} else {
 				alert("Something Error! Contact Programmer!");
 			}

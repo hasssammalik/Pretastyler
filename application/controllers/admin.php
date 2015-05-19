@@ -1144,6 +1144,7 @@ class Admin extends CI_Controller {
 		$this->login_check();
 		$notify_id = (int) $this->input->post('id', TRUE);
 		$notify_status = $this->input->post('notify_status', TRUE);
+		$notify_status_all = $this->input->post('notify_status_all', TRUE);
 		
 		if( $notify_id > 0 ){
 			if( $notify_status == 'read' ){
@@ -1152,6 +1153,17 @@ class Admin extends CI_Controller {
 			} 
 			else if ( $notify_status == 'unread' ){
 				$this->notification_model->update_notification_status( $notify_id, '1' );
+				echo 1;
+			} else {
+				echo 0;
+			}
+		} else if ( $notify_status_all == 'all' ){
+			if( $notify_status == 'read' ){
+				$this->notification_model->update_notification_status( null, 'all', '1' );
+				echo 1;
+			} 
+			else if ( $notify_status == 'unread' ){
+				$this->notification_model->update_notification_status( null, 'all', '0' );
 				echo 1;
 			} else {
 				echo 0;

@@ -97,12 +97,18 @@ class Notification_model extends CI_Model
 	 *
 	 * @return boolean
 	 */
-	public function update_notification_status( $notification_id, $status )
+	public function update_notification_status( $notification_id, $status, $status_for_all = false )
 	{
 		if( !empty( $notification_id )){
 			return $this->db->where('notify_id', $notification_id)->update('notifications', array('notify_status' => $status ) );
-		} else if( $status == 'all' ) {
-			return $this->db->where('notify_status', '1')->update('notifications', array('notify_status' => '0' ) );
+		} 
+		else if( $status == 'all' ) {
+			if( $status_for_all == 1){
+				return $this->db->where('notify_status', '0')->update('notifications', array('notify_status' => $status_for_all ) );
+			} else if ( $status_for_all == 0 ){
+				return $this->db->where('notify_status', '1')->update('notifications', array('notify_status' => $status_for_all ) );
+			}
+			return false;
 		} else {
 			return false;
 		}
