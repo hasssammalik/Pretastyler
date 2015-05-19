@@ -1115,7 +1115,7 @@ class Admin extends CI_Controller {
 		$data = $this->data;
 		
 		$data['current_folder'] = "Notification management";
-		$data['current_folder_path'] = "notification";
+		$data['current_folder_path'] = "notifications";
 		$data['title'] = "All Notification";
 		$data['title_description'] = "manage all notification";
 		$data['filters'] = '';
