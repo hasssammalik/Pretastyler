@@ -70,7 +70,7 @@ class Notification_model extends CI_Model
 	 * insert_notification
 	 * insert notification
 	 *
-	 * @return garment array ()
+	 * @return boolean
 	 */
 	public function insert_notification( $data )
 	{
@@ -95,7 +95,7 @@ class Notification_model extends CI_Model
 	 * update_notification_status
 	 * Update the status of particular notification id 
 	 *
-	 * @return garment array ()
+	 * @return boolean
 	 */
 	public function update_notification_status( $notification_id, $status )
 	{
@@ -106,6 +106,25 @@ class Notification_model extends CI_Model
 		} else {
 			return false;
 		}
+	}
+	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
+	// Get Summary of Notifications
+	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
+	/**
+	 * get_summary_notifications
+	 * Update the status of particular notification id 
+	 *
+	 * @return notification data array()
+	 */
+	public function get_summary_notifications()
+	{
+		$query = $this->db->select('notify_id, notify_title, notify_level')->from('notifications')->where(array('notify_status' => 1))->get();
+		if ($query->num_rows() == 0){
+			return FALSE;
+		} else {
+			return $query->row_array();
+		}
+		
 	}
 }
 

@@ -29,12 +29,14 @@ class Admin extends CI_Controller {
 		$this->load->model('size_model');
 		$this->load->model('user_model');
 		$this->load->model('admin_model');
+		$this->load->model('notification_model');
 		$this->load->helper('url');
 		$this->load->helper('form');
 		$this->data = array(
 		);
 		if ($this->flexi_auth->is_logged_in()){
 			$this->data['first_name'] = $this->user_model->get_user_name($this->flexi_auth->get_user_id())['first_name'];
+			$this->data['notifications'] = $this->model_notification->get_summary_notifications();
 		}
 	}
 	private function login_check(){
@@ -1102,7 +1104,7 @@ class Admin extends CI_Controller {
 
 	}
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
-	// Notification page Service
+	// Notification Page Service
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
 	/**
 	 * Notification Page for this controller.
@@ -1114,15 +1116,17 @@ class Admin extends CI_Controller {
 		
 		$data['current_folder'] = "Notification management";
 		$data['current_folder_path'] = "notification";
-			$data['title'] = "All Notification";
-			$data['title_description'] = "manage all notification";
-			$data['filters'] = '';
-			$this->load->view('admin/header', $data);
-			$this->load->view('admin/notification/index', $data);
-			$this->load->view('admin/footer', $data);
+		$data['title'] = "All Notification";
+		$data['title_description'] = "manage all notification";
+		$data['filters'] = '';
+		$this->load->view('admin/header', $data);
+		$this->load->view('admin/notification/index', $data);
+		$this->load->view('admin/footer', $data);
 
 	}
-
+	/**
+	 * Request handler of Notification page for this controller.
+	 */
 	public function getnotifications()
 	{
 		
@@ -1133,7 +1137,14 @@ class Admin extends CI_Controller {
 
 		echo $this->datatables->generate();
 	}
+	/**
+	 * Request handler for All page in HEADER for this controller.
+	 */
+	public function getnotification_summary()
+	{
 
+		return $this->model_notification->get_summary_notifications();
+	}
 }
 
 /* End of file admin.php */

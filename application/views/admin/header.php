@@ -88,24 +88,33 @@
 				<div class="navbar-right">
 					<ul class="nav navbar-nav">
 						<!-- Notifications: style can be found in dropdown.less -->
+
+						<?php $num_notific = count( $notifications ) ?>
+
 						<li class="dropdown notifications-menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 								<i class="fa fa-warning"></i>
-								<span class="label label-warning">10</span>
+								<span class="label label-warning"><?php echo $num_notific ?></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li class="header">You have 10 notifications</li>
+								<li class="header">You have <?php echo $num_notific ?> notifications</li>
 								<li>
 									<!-- inner menu: contains the actual data -->
 									<ul class="menu">
+										<!-- <?php echo '<pre>'; print_r($notifications); foreach ($notifications as $noty) {
+										?>
+										<li>
+											<a href="/admin/notifications.html">
+												<i class="fa fa-warning danger"></i> 
+											</a>
+										</li>
+										<?php } ?>
+										-->
+
+										<!--
 										<li>
 											<a href="#">
 												<i class="ion ion-ios7-people info"></i> 5 new members joined today
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<i class="fa fa-warning danger"></i> Very long description here that may not fit into the page and may cause design problems
 											</a>
 										</li>
 										<li>
@@ -124,9 +133,10 @@
 												<i class="ion ion-ios7-person danger"></i> You changed your username
 											</a>
 										</li>
+										-->
 									</ul>
 								</li>
-								<li class="footer"><a href="#">View all</a></li>
+								<li class="footer"><a href="/admin/notifications.html">View all</a></li>
 							</ul>
 						</li>
 						<!-- User Account: style can be found in dropdown.less -->
