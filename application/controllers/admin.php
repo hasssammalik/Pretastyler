@@ -36,7 +36,7 @@ class Admin extends CI_Controller {
 		);
 		if ($this->flexi_auth->is_logged_in()){
 			$this->data['first_name'] = $this->user_model->get_user_name($this->flexi_auth->get_user_id())['first_name'];
-			$this->data['notifications'] = $this->model_notification->get_summary_notifications();
+			$this->data['notifications'] = $this->notification_model->get_summary_notifications();
 		}
 	}
 	private function login_check(){
