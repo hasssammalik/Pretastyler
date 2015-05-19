@@ -1130,7 +1130,7 @@ class Admin extends CI_Controller {
 	public function getnotifications()
 	{
 		
-		$this->datatables->select("pas_notifications.notify_id, pas_notifications.notify_date, pas_notifications.notify_level, pas_notifications.notify_title, pas_notifications.notify_description, IF ( pas_notifications.notify_status = 1, 'fa fa-envelope', 'fa fa-envelope-o') AS active")->from('notifications');
+		$this->datatables->select("pas_notifications.notify_id, pas_notifications.notify_date, pas_notifications.notify_level, pas_notifications.notify_title, pas_notifications.notify_description, IF ( pas_notifications.notify_status = 1, 'fa fa-envelope', 'fa fa-envelope-o') AS active", FALSE)->from('notifications');
 
 		$this->datatables->add_column('change_status', '<i class="notification_status_switch mousehand $1" data-status="$1"></i>', 'notify_status' );
 		$this->datatables->edit_column('notify_status', '<span class="notification_Original">$1</span>', 'notify_status');
