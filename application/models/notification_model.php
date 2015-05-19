@@ -119,10 +119,10 @@ class Notification_model extends CI_Model
 	public function get_summary_notifications()
 	{
 		$query = $this->db->select('notify_id, notify_title, notify_level')->from('notifications')->where(array('notify_status' => 1))->get();
-		if ($query->num_rows() == 0){
-			return FALSE;
+		if ($query->num_rows >= 1){
+			return $query->result_array();
 		} else {
-			return $query->row_array();
+			return FALSE;
 		}
 		
 	}
