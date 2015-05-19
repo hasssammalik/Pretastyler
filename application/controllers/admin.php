@@ -1139,10 +1139,26 @@ class Admin extends CI_Controller {
 	/**
 	 * Request handler for All page in HEADER for this controller.
 	 */
-	public function getnotification_summary()
+	public function set_notification_status()
 	{
-
-		return $this->model_notification->get_summary_notifications();
+		$this->login_check();
+		$notify_id = (int) $this->input->post('id', TRUE);
+		$notify_status = $this->input->post('notify_status', TRUE);
+		
+		if( $notify_id > 0 ){
+			if( $notify_status == 'read' ){
+				$this->notification_model->update_notification_status( $notify_id, '0' );
+				echo 1;
+			} 
+			else if ( $notify_status == 'unread' ){
+				$this->notification_model->update_notification_status( $notify_id, '1' );
+				echo 1;
+			} else {
+				echo 0;
+			}
+		} else {
+			echo 0;
+		}
 	}
 }
 

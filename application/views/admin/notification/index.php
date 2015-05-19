@@ -56,6 +56,29 @@ $(function(){
 		],
 		"order": [ 0, 'desc' ]
 	});
-	
+	$('#notifications-table tbody').on('click', '.fa-envelope', function () {
+		var input_notify_id = $(this).parents('tr').find('td').eq(0).text();
+		var icon = $(this);
+		$.post("/admin/set-notification-status.html", { id: input_notify_id , notify_status: 'read' ,pas_secret_name:$("input[name=pas_secret_name]").val()}, function(data){
+			if (data > 0){
+				icon.removeClass('fa-envelope');
+				icon.addClass('fa-envelope-o');
+			} else {
+				alert("Something Error! Contact Programmer!");
+			}
+		});
+	} );
+	$('#notifications-table tbody').on('click', '.fa-envelope-o', function () {
+		var input_notify_id = $(this).parents('tr').find('td').eq(0).text();
+		var icon = $(this);
+		$.post("/admin/set-notification-status.html", { id: input_notify_id , notify_status: 'unread' ,pas_secret_name:$("input[name=pas_secret_name]").val()}, function(data){
+			if (data > 0){
+				icon.removeClass('fa-envelope-o');
+				icon.addClass('fa-envelope');
+			} else {
+				alert("Something Error! Contact Programmer!");
+			}
+		});
+	} );
 });
 </script>
