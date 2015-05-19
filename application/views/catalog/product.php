@@ -1,3 +1,9 @@
+<?php
+$star_result = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
+
+?>
+
+
 <div class="mainContent ">
 	<div class="productDisplay">
 		<?php if ($this->flexi_auth->is_logged_in()) {$imageclass="cross-to-mall"; }else $imageclass="cross-to-home"; ?><div class="cross"><div class="<?php echo $imageclass;?> cross-image"><img src="/images/pink_button-05.png" alt /></div></div>
@@ -46,7 +52,12 @@
 										<tr>
 											<td class="th1"><strong><?php print $row['area']?></strong></td>
 											<td class="th2"><?php print $row['style_item']?></td>
-											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate" style="background:initial;"><?php print $row['result'] ?><i class="icon-star"></i><?php
+											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate" style="background:initial;">
+												
+												<?php print $star_result[$row['result']] ?>
+												<!-- <i class="icon-star"></i> -->
+
+												<?php
 												if ($this->flexi_auth->in_group('Administrators')){
 													print '('.$row['score'].')';
 												}

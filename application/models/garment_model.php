@@ -403,7 +403,6 @@ class Garment_model extends CI_Model{
 		$result = $query->result_array();
 		foreach ($result as $key => $value) {
 
-			/*
 			if ($value['score']>=7.3){
 				$result[$key]['result'] = 5;
 			} else if ($value['score']>=6){
@@ -418,22 +417,7 @@ class Garment_model extends CI_Model{
 				$result[$key]['reason'] = $this->get_garment_criteria_reason($garment_id, $value['field_id'], $user_specs_str, $value['score'], $is_admin);
 			}
 			$result[$key]['comment'] = $this->get_garment_criteria_comment($value['criteria_id'], $user_specs_str);
-			*/
 			
-			if ($value['score'] >= 8.91 ){
-				$result[$key]['result'] = '99%';
-			} else if ($value['score']>=3){
-				$result[$key]['result'] = '99%';
-				$result[$key]['reason'] = $this->get_garment_criteria_reason($garment_id, $value['field_id'], $user_specs_str, $value['score'], $is_admin);
-			} else {
-				 if ($value['score'] > 0.9 ){
-					$result[$key]['result'] = round(( ( 98 * $value['score'] ) - 80.19 ) / 8.01 ).'%';
-				} else {
-					$result[$key]['result'] = '1%';
-				}
-				$result[$key]['reason'] = $this->get_garment_criteria_reason($garment_id, $value['field_id'], $user_specs_str, $value['score'], $is_admin);
-			}
-			$result[$key]['comment'] = $this->get_garment_criteria_comment($value['criteria_id'], $user_specs_str);
 		}
 		return $result;
 	}
