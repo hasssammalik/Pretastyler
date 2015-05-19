@@ -89,7 +89,7 @@
 					<ul class="nav navbar-nav">
 						<!-- Notifications: style can be found in dropdown.less -->
 
-						<?php $num_notific = count( $notifications ) ?>
+						<?php $num_notific = ( !empty($notifications) ? count( $notifications ) : '0' ) ?>
 
 						<li class="dropdown notifications-menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
