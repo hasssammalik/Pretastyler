@@ -27,7 +27,7 @@
 						<?php } else { ?>
 						<h4><span>Admin Comment for <?php print $initial_data['field']['name'] ?></span><h4>
 						<?php } ?>
-						<textarea class="admin-comment">
+						<textarea class="admin-comment"></textarea>
 					<?php } ?>
 				<?php if (-1 == $initial_data['field']['field_id']) { ?>
 				<h4><span class="current-field" field_id="<?php print $initial_data['field']['field_id'] ?>"><?php print $initial_data['field']['name'] ?></span></h4>
