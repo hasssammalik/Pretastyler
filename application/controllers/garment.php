@@ -442,6 +442,21 @@ class Garment extends CI_Controller {
 	/**
 	 * Update Garment Specs  Service for this controller.
 	 */
+	public function update_admin_comment(){
+		if (!$this->flexi_auth->is_logged_in()){
+			return "You didn't log in!";
+		}
+		$garment_id = $this->input->post( 'garment_id', TRUE );
+		$admin_comment = $this->input->post( 'admin_comment', TRUE );
+		if (!$this->flexi_auth->in_group('Administrators')) {
+			$this->general_error('Not Permitted', 'Sorry, it seems you don\'t have the permission to edit this garment.');
+			return;
+		}
+		$this->assessment_model->set_assessment_comment($garment_id, $admin_comment);
+	}
+	/**
+	 * Update Garment Specs  Service for this controller.
+	 */
 	public function update_specs()
 	{
 		if (!$this->flexi_auth->is_logged_in()){
