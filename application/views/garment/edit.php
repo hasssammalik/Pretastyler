@@ -20,6 +20,15 @@
 				</ul>
 				<a href="/garment/edit-general/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button">Edit General Information</a>
 				<a href="#" class="button" id="saveButton">Save Garment</a>
+				<?php //for admin comments
+					if ($this->flexi_auth->in_group(array('Administrators'))){
+						if (-1 == $initial_data['field']['field_id']) { ?>
+						<h4><span>Overall Admin Comment:</span><h4>
+						<?php } else { ?>
+						<h4><span>Admin Comment for <?php print $initial_data['field']['name'] ?></span><h4>
+						<?php } ?>
+						<textarea class="admin-comment">
+					<?php } ?>
 				<?php if (-1 == $initial_data['field']['field_id']) { ?>
 				<h4><span class="current-field" field_id="<?php print $initial_data['field']['field_id'] ?>"><?php print $initial_data['field']['name'] ?></span></h4>
 				<ul class="items">
