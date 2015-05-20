@@ -26,9 +26,18 @@
 						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Overall Admin Comment:</span><h4>
 						<?php } else { ?>
 						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Admin Comment for <?php print $initial_data['field']['name'] ?></span><h4>
+						<?php } 
+						if ($admin_comment) {
+							foreach ($admin_comment as $comment){ ?>
+						<textarea class="admin-comment<?php print (($comment['field_id'] == $initial_data['field']['field_id'])?' current-comment':'')?>" field_id="<?php print $comment['field_id'] ?>"><?php print $comment['content'] ?></textarea>
+						<?php }
+						} else {
+							foreach ($initial_data['current_field_criteria'] as $comment){ ?>
+						<textarea class="admin-comment<?php print (($comment['field_id'] == $initial_data['field']['field_id'])?' current-comment':'')?>" field_id="<?php print $comment['field_id'] ?>"></textarea>
 						<?php } ?>
-						<textarea class="admin-comment"></textarea>
-					<?php } ?>
+						<textarea class="admin-comment<?php print ((-1 == $initial_data['field']['field_id'])?' current-comment':'')?>" field_id="-1"></textarea>
+						<?php }
+					} ?>
 				<?php if (-1 == $initial_data['field']['field_id']) { ?>
 				<h4><span class="current-field" field_id="<?php print $initial_data['field']['field_id'] ?>"><?php print $initial_data['field']['name'] ?></span></h4>
 				<ul class="items">

@@ -18,6 +18,47 @@ class Assessment_model extends CI_Model{
 		$this->load->database();
 	}
 	/**
+	 * get_assessment_comment
+	 * Read category's
+	 * Returning category info
+	 *
+	 * @return category array if existed, if not return FALSE
+	 */
+	public function get_assessment_comment($garment_id){
+		$query = $this->db->get_where('assessment_comment', array('garment_id' => $garment_id));
+		if ($query->num_rows() == 0){
+			return FALSE;
+		}
+		$result = $query->row_array();
+		return json_decode($result['comment']);
+	}
+	/**
+	 * set_assessment_comment
+	 * Read category's
+	 * Returning category info
+	 *
+	 * @return category array if existed, if not return FALSE
+	 */
+	public function set_assessment_comment($garment_id, $comments){
+		$comments_json = json_encode($comments);
+		$data = array(
+					'garment_id' => $garment_id,
+					'comment' => $comments_json,
+					'date_created' => date('Y-m-d H:i:s'));
+		//determine update or insert
+		$do_update = TRUE;
+		if (!$this->get_assessment_comment($garment_id)){
+			$do_update = FALSE;
+		}
+		$this->db->set($data);
+		if ($do_update) {
+			$this->db->where('garment_id', $garment_id)->update('assessment_comment');
+		} else {
+			$this->db->insert('assessment_comment');
+		}
+		return TRUE;
+	}
+	/**
 	 * insert_garment_criteria
 	 * Read category's
 	 * Returning category info

@@ -356,6 +356,9 @@ class Garment extends CI_Controller {
 		$data['extraJS'] = '<script src="/js/garment-edit.js?v=2.2.0.1"></script>';
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
 		$data['extraDiv'] = '<div class="hiddenCategory" style="display:none" category_id="'.$data['garment']['category_id'].'"></div>';
+		if ($this->flexi_auth->in_group('Administrators')){
+			$data['admin_comment'] = $this->assessment_model->get_assessment_comment($garment_id);
+		}
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
