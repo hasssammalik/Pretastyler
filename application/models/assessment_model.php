@@ -40,10 +40,9 @@ class Assessment_model extends CI_Model{
 	 * @return category array if existed, if not return FALSE
 	 */
 	public function set_assessment_comment($garment_id, $comments){
-		$comments_json = json_encode($comments);
 		$data = array(
 					'garment_id' => $garment_id,
-					'comment' => $comments_json,
+					'comment' => $comments,
 					'date_created' => date('Y-m-d H:i:s'));
 		//determine update or insert
 		$do_update = TRUE;
