@@ -30,7 +30,7 @@
 						<?php } 
 						if ($admin_comment) {
 							foreach ($admin_comment as $comment){ ?>
-						<textarea class="admin-comment<?php print (($comment['field_id'] == $initial_data['field']['field_id'])?' current-comment':'')?>" field_id="<?php print $comment['field_id'] ?>"><?php print $comment['content'] ?></textarea>
+						<textarea class="admin-comment<?php print (($comment->field_id == $initial_data['field']['field_id'])?' current-comment':'')?>" field_id="<?php print $comment->field_id ?>"><?php print $comment->content ?></textarea>
 						<?php }
 						} else {
 							foreach ($initial_data['current_field_criteria'] as $comment){ ?>
