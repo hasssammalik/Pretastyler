@@ -24,9 +24,9 @@
 					if ($this->flexi_auth->in_group(array('Administrators'))){ ?>
 						<div class="comment-section">
 						<?php if (-1 == $initial_data['field']['field_id']) { ?>
-						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Overall Admin Comment:</span><h4>
+						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Overall Admin Comment:</span></h4>
 						<?php } else { ?>
-						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Admin Comment for <?php print $initial_data['field']['short_name'] ?></span><h4>
+						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Admin Comment for <?php print $initial_data['field']['short_name'] ?></span></h4>
 						<?php } 
 						if ($admin_comment) {
 							foreach ($admin_comment as $comment){ ?>
