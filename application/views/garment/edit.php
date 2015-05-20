@@ -21,11 +21,12 @@
 				<a href="/garment/edit-general/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button">Edit General Information</a>
 				<a href="#" class="button" id="saveButton">Save Garment</a>
 				<?php //for admin comments
-					if ($this->flexi_auth->in_group(array('Administrators'))){
-						if (-1 == $initial_data['field']['field_id']) { ?>
+					if ($this->flexi_auth->in_group(array('Administrators'))){ ?>
+						<div class="comment-section">
+						<?php if (-1 == $initial_data['field']['field_id']) { ?>
 						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Overall Admin Comment:</span><h4>
 						<?php } else { ?>
-						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Admin Comment for <?php print $initial_data['field']['name'] ?></span><h4>
+						<h4><span class="comment-header" field_id="<?php print $initial_data['field']['field_id'] ?>">Admin Comment for <?php print $initial_data['field']['short_name'] ?></span><h4>
 						<?php } 
 						if ($admin_comment) {
 							foreach ($admin_comment as $comment){ ?>
@@ -36,8 +37,9 @@
 						<textarea class="admin-comment<?php print (($comment['field_id'] == $initial_data['field']['field_id'])?' current-comment':'')?>" field_id="<?php print $comment['field_id'] ?>"></textarea>
 						<?php } ?>
 						<textarea class="admin-comment<?php print ((-1 == $initial_data['field']['field_id'])?' current-comment':'')?>" field_id="-1"></textarea>
-						<?php }
-					} ?>
+						<?php } ?>
+						</div>
+					<?php } ?>
 				<?php if (-1 == $initial_data['field']['field_id']) { ?>
 				<h4><span class="current-field" field_id="<?php print $initial_data['field']['field_id'] ?>"><?php print $initial_data['field']['name'] ?></span></h4>
 				<ul class="items">
