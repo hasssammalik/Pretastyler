@@ -21,7 +21,9 @@
 				<div class="box-body">
 					<div class="form-group">
 						<label>Overall Comments</label>
-						<textarea class="form-control" rows="3" placeholder="Enter Tool Tip" name="tooltip"><?php print $admin_comment[0]->content;?></textarea>
+						<?php foreach ($admin_comment as $comment){ ?>
+							<textarea class="form-control" rows="3" placeholder="Enter Tool Tip" name="tooltip"><?php print $comment->content;?></textarea>
+						<?php } ?>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
