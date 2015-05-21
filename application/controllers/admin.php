@@ -1080,7 +1080,7 @@ class Admin extends CI_Controller {
 			}
 			if ($this->input->post()){
 				//if this is a edit request.
-				$data['error_messages'] = array();
+				/* $data['error_messages'] = array();
 				$category_id = $this->input->post('category_id', TRUE);
 				$name = $this->input->post('name', TRUE);
 				$order = $this->input->post('order', TRUE);
@@ -1120,8 +1120,10 @@ class Admin extends CI_Controller {
 					} else {
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
-				}
+				} */
 			}
+			$data['garment'] = $this->garment_model->get_garment_info($param1);
+			$data['admin_comment'] = $this->assessment_comment->get_assessment_comment($param1);
 			$data['title'] = "Question Comment - ".$data['garment']['name'];
 			$data['title_description'] = "manage question comment ".$data['garment']['name'];
 			$this->load->view('admin/header', $data);
