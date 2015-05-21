@@ -25,7 +25,6 @@
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
-			<?php } ?>
 		</div><!--/.col (left) -->
 	</div>   <!-- /.row -->
 	<div class="row">
