@@ -53,15 +53,19 @@ class Cron_model extends CI_Model{
 				foreach ($garments as $garment ) {
 					$message = '';
 					$Init_message = 'Imported by <a target="_blank" href="/admin/user/view/'.$garment['import_user_id'].'.html">'.$garment['first_name'].' '.$garment['last_name'].'</a>, Garment id <a target="_blank" href="/product/'.$garment['garment_id'].'.html">'.$garment['garment_id'].'</a> has ';
+					$garment_disable = false;
 
 					if( !empty( $garment['image_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['image_path'] ) ){
 							$message = ' missing image "'.$garment['image_path'].'" ';
+							$garment_disable = true;
 						} else if( filesize( $garment_image_path . $garment['image_path'] ) < 2 ){
 							$message = ' missing image "'.$garment['image_path'].'" with Size "0" ';
+							$garment_disable = true;
 						}
 					} else {
 						$message = ' no base image.';
+						$garment_disable = true;
 					}
 					if( !empty( $garment['extra_image1_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['extra_image1_path'] ) ){
@@ -69,12 +73,14 @@ class Cron_model extends CI_Model{
 								$message .= ' and <br>';
 							}
 							$message .= ' missing BACK image "'.$garment['extra_image1_path'].'" '; 
+							$garment_disable = true;
 
 						} else if( filesize( $garment_image_path . $garment['extra_image1_path'] ) < 2 ){
 							if( !empty( $message )){
 								$message .= ' and <br>';
 							}
 							$message .= ' missing image "'.$garment['extra_image1_path'].'" with Size "0" ';
+							$garment_disable = true;
 						}
 					}
 					if( !empty( $garment['extra_image2_path'] ) ){
@@ -82,18 +88,28 @@ class Cron_model extends CI_Model{
 							if( !empty( $message )){
 								$message .= ' and <br>';
 							}
-							$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
+							$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".';
+							$garment_disable = true;
 
 						} else if( filesize( $garment_image_path . $garment['extra_image2_path'] ) < 2 ){
 							if( !empty( $message )){
 								$message .= ' and <br>';
 							}
 							$message .= ' missing image "'.$garment['extra_image2_path'].'" with Size "0" ';
+							$garment_disable = true;
 						}
 					}
 					
 					if( !empty( $message )){
+
 						$this->notification_model->insert_notification( array('title' => 'Missing Image of garment '.$garment['garment_id'] .' by '.$garment['first_name'].' '.$garment['last_name'], 'description' => $Init_message . $message ) );
+						//$this->notification_model->disable_garment_without_image( $garment['garment_id'] );
+
+						if( $garment_disable === true ){
+							// Disable the garment which don't have images.
+							$this->db->where('garment_id', $garment['garment_id'] )->update('garment', array('enabled', '0'));
+						}
+						
 					}
 					
 				}
