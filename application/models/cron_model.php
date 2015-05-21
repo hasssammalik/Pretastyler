@@ -41,7 +41,7 @@ class Cron_model extends CI_Model{
 		$this->db->join('user_info', 'garment.import_user_id = user_info.user_id', 'left');
 		
 		$query = $this->db->get();
-
+		var_dump($this->db);
 		if ($query->num_rows() > 0){
 			$garments = $query->result_array();
 
@@ -83,7 +83,7 @@ class Cron_model extends CI_Model{
 								$message .= ' and';
 							}
 							$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
-							
+
 						} else if( filesize( $garment_image_path . $garment['extra_image2_path'] ) < 2 ){
 							if( !empty( $message )){
 								$message .= ' and';
