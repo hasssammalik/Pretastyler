@@ -51,6 +51,9 @@ class Assessment_model extends CI_Model{
 					unset($result[$old_key]);
 				}
 			}
+			if (empty($comment_value->new_criteria_id)){
+				unset($decoded_comments[$comment_key]);
+			}
 		}
 		foreach ($result as $old_key => $old_value){
 			$decoded_comments[] = (object) array('field_id' => $old_value['field_id'], 'old_criteria_id' => $old_value['criteria_id'], 'new_criteria_id' => '-1', 'content' => '');
