@@ -56,31 +56,39 @@ class Cron_model extends CI_Model{
 
 					if( !empty( $garment['image_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['image_path'] ) ){
-							if( filesize( $garment_image_path . $garment['image_path'] ) < 2 ){
-								$message = ' missing image name "'.$garment['image_path'].'" ';
-							}
+							$message = ' missing image "'.$garment['image_path'].'" ';
+						} else if( filesize( $garment_image_path . $garment['image_path'] ) < 2 ){
+							$message = ' missing image "'.$garment['image_path'].'" with Size "0" ';
 						}
 					} else {
 						$message = ' no base image.';
 					}
 					if( !empty( $garment['extra_image1_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['extra_image1_path'] ) ){
-							if( filesize( $garment_image_path . $garment['extra_image1_path'] ) < 2 ){
-								if( !empty( $message )){
-									$message .= ' and';
-								}
-								$message .= ' missing BACK image "'.$garment['extra_image1_path'].'" '; 
+							if( !empty( $message )){
+								$message .= ' and';
 							}
+							$message .= ' missing BACK image "'.$garment['extra_image1_path'].'" '; 
+
+						} else if( filesize( $garment_image_path . $garment['extra_image1_path'] ) < 2 ){
+							if( !empty( $message )){
+								$message .= ' and';
+							}
+							$message .= ' missing image "'.$garment['extra_image1_path'].'" with Size "0" ';
 						}
 					}
 					if( !empty( $garment['extra_image2_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['extra_image2_path'] ) ){
-							if( filesize( $garment_image_path . $garment['extra_image2_path'] ) < 2 ){
-								if( !empty( $message )){
-									$message .= ' and';
-								}
-								$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
+							if( !empty( $message )){
+								$message .= ' and';
 							}
+							$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
+							
+						} else if( filesize( $garment_image_path . $garment['extra_image2_path'] ) < 2 ){
+							if( !empty( $message )){
+								$message .= ' and';
+							}
+							$message .= ' missing image "'.$garment['extra_image2_path'].'" with Size "0" ';
 						}
 					}
 					
