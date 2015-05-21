@@ -66,13 +66,13 @@ class Cron_model extends CI_Model{
 					if( !empty( $garment['extra_image1_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['extra_image1_path'] ) ){
 							if( !empty( $message )){
-								$message .= ' and';
+								$message .= ' and &#10;';
 							}
 							$message .= ' missing BACK image "'.$garment['extra_image1_path'].'" '; 
 
 						} else if( filesize( $garment_image_path . $garment['extra_image1_path'] ) < 2 ){
 							if( !empty( $message )){
-								$message .= ' and';
+								$message .= ' and &#10;';
 							}
 							$message .= ' missing image "'.$garment['extra_image1_path'].'" with Size "0" ';
 						}
@@ -80,13 +80,13 @@ class Cron_model extends CI_Model{
 					if( !empty( $garment['extra_image2_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['extra_image2_path'] ) ){
 							if( !empty( $message )){
-								$message .= ' and';
+								$message .= ' and &#10;';
 							}
 							$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
 
 						} else if( filesize( $garment_image_path . $garment['extra_image2_path'] ) < 2 ){
 							if( !empty( $message )){
-								$message .= ' and';
+								$message .= ' and &#10;';
 							}
 							$message .= ' missing image "'.$garment['extra_image2_path'].'" with Size "0" ';
 						}
