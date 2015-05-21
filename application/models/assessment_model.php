@@ -40,6 +40,22 @@ class Assessment_model extends CI_Model{
 	 * @return category array if existed, if not return FALSE
 	 */
 	public function set_assessment_comment($garment_id, $comments){
+		//prepare old_criteria_ids
+		$decoded_comments = json_decode($comments);
+		$query = $this->db->select('criteria.field_id, criteria.criteria_id')->from('garment_criteria')->join('criteria','garment_criteria.criteria_id = criteria.criteria_id', 'left')->where('garment_id', $garment_id)->get();
+		$result = $query->result_array();
+		foreach ($decoded_comments as $comment_key => $comment_value) {
+			foreach ($result as $old_key => $old_value){
+				if ($comment_value->field_id == $old_value['field_id']){
+					$decoded_comments[$comment_key]->old_criteria_id = $old_value['criteria_id'];
+					unset($result[$old_key]);
+				}
+			}
+		}
+		foreach ($result as $old_key => $old_value){
+			$decoded_comments[] = (object) array('field_id' => $old_value['field_id'], 'old_criteria_id' => $old_value['criteria_id'], 'new_criteria_id' => '-1', 'content' => '');
+		}
+		$comments = json_encode($decoded_comments);
 		$data = array(
 					'garment_id' => $garment_id,
 					'comment' => $comments,
