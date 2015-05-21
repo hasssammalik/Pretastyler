@@ -22,7 +22,7 @@
 				<a href="#" class="button" id="saveButton">Save Garment</a>
 				<?php //for admin comments
 					if ($this->flexi_auth->in_group(array('Administrators'))){ ?>
-						<div>Uploaded by <?php print $user_name ?>(<a href="/admin/garment/user/<?php print $garment['import_user_id'] ?>.html" target="_blank">See Her Garments</a>, <a href="/admin/user/view/<?php print $garment['import_user_id'] ?>.html" target="_blank">See Her Info</a>)</div>
+						<div>Uploaded by <?php print $user_name ?> (<a href="/admin/garment/user/<?php print $garment['import_user_id'] ?>.html" target="_blank">See Her Garments</a>, <a href="/admin/user/view/<?php print $garment['import_user_id'] ?>.html" target="_blank">See Her Info</a>)</div>
 						
 						<div class="comment-section">
 						<?php if (-1 == $initial_data['field']['field_id']) { ?>
