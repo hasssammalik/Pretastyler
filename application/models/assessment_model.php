@@ -52,7 +52,9 @@ class Assessment_model extends CI_Model{
 				}
 			}
 			if (empty($comment_value->new_criteria_id)){
-				unset($decoded_comments[$comment_key]);
+				if ($comment_value->field_id !=-1){
+					unset($decoded_comments[$comment_key]);
+				}
 			}
 		}
 		foreach ($result as $old_key => $old_value){
