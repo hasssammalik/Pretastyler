@@ -107,7 +107,7 @@ class Cron_model extends CI_Model{
 
 						if( $garment_disable === true ){
 							// Disable the garment which don't have images.
-							$this->db->where('garment_id', $garment['garment_id'] )->update('garment', array('enabled', '0'));
+							$this->db->where('garment_id', $garment['garment_id'] )->update('garment', array('enabled'=>'0'));
 						}
 						
 					}
