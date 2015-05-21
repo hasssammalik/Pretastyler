@@ -1074,7 +1074,7 @@ class Admin extends CI_Controller {
 			$data['categories'] = $this->category_model->get_available_categories();
 			$data['extraJS'] = '<script src="/js/admin/AdminLTE/categories.js?v=2.2.0.0" type="text/javascript"></script>';
 			$this->load->view('admin/header', $data);
-			$this->load->view('admin/matrix/categories', $data);
+			$this->load->view('admin/matrix/question_comments', $data);
 			$this->load->view('admin/footer', $data);
 		}
 	}
