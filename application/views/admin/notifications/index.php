@@ -92,6 +92,7 @@ $(function(){
 				icon.removeClass('readall');
 				icon.addClass('unreadall');
 				icon.text('Unread All Notification');
+				$('.fa-envelope').removeClass('fa-envelope').addClass('fa-envelope-o');
 			} else {
 				alert("Something Error! Contact Programmer!");
 			}
@@ -104,6 +105,7 @@ $(function(){
 				icon.removeClass('unreadall');
 				icon.addClass('readall');
 				icon.text('Read All Notification');
+				$('.fa-envelope-o').removeClass('fa-envelope-o').addClass('fa-envelope');
 			} else {
 				alert("Something Error! Contact Programmer!");
 			}
