@@ -1,4 +1,5 @@
 <!-- Main content -->
+<?php echo form_open();echo form_close(); ?>
 <section class="content">
 	<div class="row">
 		<div class="col-xs-12">
