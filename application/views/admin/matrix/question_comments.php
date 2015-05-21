@@ -10,6 +10,7 @@
 							<tr>
 								<th>Edit</th>
 								<th>Garment ID</th>
+								<th>Name</th>
 								<th>Date Created</th>
 								<th>Email Sent?</th>
 								<th>Email Sent Date</th>
@@ -23,6 +24,7 @@
 							<tr>
 								<th>Edit</th>
 								<th>Garment ID</th>
+								<th>Name</th>
 								<th>Date Created</th>
 								<th>Email Sent?</th>
 								<th>Email Sent Date</th>
@@ -48,6 +50,7 @@ $(function(){
 		"columns": [
 			{ "data": "edit", "searchable": false , "sortable": false },
 			{ "data": "garment_id" },
+			{ "data": "name" },
 			{ "data": "date_created"},
 			{ "data": "email_sent"},
 			{ "data": "email_date" },
