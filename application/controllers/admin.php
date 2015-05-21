@@ -30,6 +30,7 @@ class Admin extends CI_Controller {
 		$this->load->model('user_model');
 		$this->load->model('admin_model');
 		$this->load->model('notification_model');
+		$this->load->model('assessment_model');
 		$this->load->helper('url');
 		$this->load->helper('form');
 		$this->data = array(
@@ -1080,7 +1081,7 @@ class Admin extends CI_Controller {
 			}
 			if ($this->input->post()){
 				//if this is a edit request.
-				$data['error_messages'] = array();
+				/* $data['error_messages'] = array();
 				$category_id = $this->input->post('category_id', TRUE);
 				$name = $this->input->post('name', TRUE);
 				$order = $this->input->post('order', TRUE);
@@ -1120,8 +1121,10 @@ class Admin extends CI_Controller {
 					} else {
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
-				}
+				} */
 			}
+			$data['garment'] = $this->garment_model->get_garment_info($param1);
+			$data['admin_comment'] = $this->assessment_model->get_assessment_comment($param1);
 			$data['title'] = "Question Comment - ".$data['garment']['name'];
 			$data['title_description'] = "manage question comment ".$data['garment']['name'];
 			$this->load->view('admin/header', $data);
