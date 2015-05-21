@@ -433,7 +433,7 @@ class Admin extends CI_Controller {
 	// Matrix Pages & Services
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
 	/**
-	 * User Page for this controller.
+	 * Matrix Page for this controller.
 	 */
 	public function matrix($page = FALSE, $param1 = FALSE, $param2 = FALSE)
 	{
@@ -1071,12 +1071,22 @@ class Admin extends CI_Controller {
 		} else if ($page == 'question_comments'){
 			$data['title'] = "Question Comments";
 			$data['title_description'] = "manage question comments";
-			$data['categories'] = $this->category_model->get_available_categories();
-			$data['extraJS'] = '<script src="/js/admin/AdminLTE/categories.js?v=2.2.0.0" type="text/javascript"></script>';
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/matrix/question_comments', $data);
 			$this->load->view('admin/footer', $data);
 		}
+	}
+	/**
+	 * Question comments Service for this controller.
+	 */
+	public function question_comments(){
+		$this->login_check();
+		$this->datatables->select("garment_id, date_created, IF (email_sent = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS email_sent, email_date", FALSE)->from('assessment_comment');
+		$this->datatables->edit_column('email_sent', '<i class="$1"></i>', 'email_sent');
+		$this->datatables->add_column('edit_basic', '<a href="/garment/edit-general/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
+		$this->datatables->add_column('edit_criteria', '<a href="/garment/edit/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
+		$this->datatables->add_column('edit', '<a href="/admin/question-comment/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
+		echo $this->datatables->generate();
 	}
 
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
