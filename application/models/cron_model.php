@@ -38,9 +38,10 @@ class Cron_model extends CI_Model{
 
 		$this->db->from('garment');
 		$this->db->select('garment.garment_id, garment.import_user_id, garment.name, garment.image_path, garment.extra_image1_path, garment.extra_image2_path');
-		$this->db->join('user_info', 'garment.import_user_id = user_info.user_id', 'right');
+		$this->db->join('user_info', 'garment.import_user_id = user_info.user_id', 'left');
 		
 		$query = $this->db->get();
+
 		if ($query->num_rows() > 0){
 			$garments = $query->result_array();
 
@@ -54,26 +55,32 @@ class Cron_model extends CI_Model{
 					$Init_message = 'Imported by <a target="_blank" href="/admin/user/view/'.$garment['import_user_id'].'.html">'.$garment['first_name'].' '.$garment['last_name'].'</a>, Garment id <a target="_blank" href="/product/'.$garment['garment_id'].'.html">'.$garment['garment_id'].'</a> has ';
 
 					if( !empty( $garment['image_path'] ) ){
-						if( !file_exists( $garment_image_path . $garment['image_path'] ) && filesize( $garment_image_path . $garment['image_path'] ) > 1 ){
-							$message = ' missing image name "'.$garment['image_path'].'" ';
+						if( !file_exists( $garment_image_path . $garment['image_path'] ) ){
+							if( filesize( $garment_image_path . $garment['image_path'] ) < 2 ){
+								$message = ' missing image name "'.$garment['image_path'].'" ';
+							}
 						}
 					} else {
-						$message = ' no base or main image.';
+						$message = ' no base image.';
 					}
 					if( !empty( $garment['extra_image1_path'] ) ){
-						if( !file_exists( $garment_image_path . $garment['extra_image1_path'] ) && filesize( $garment_image_path . $garment['extra_image1_path'] ) > 1 ){
-							if( !empty( $message )){
-								$message .= ' and';
+						if( !file_exists( $garment_image_path . $garment['extra_image1_path'] ) ){
+							if( filesize( $garment_image_path . $garment['extra_image1_path'] ) < 2 ){
+								if( !empty( $message )){
+									$message .= ' and';
+								}
+								$message .= ' missing BACK image "'.$garment['extra_image1_path'].'" '; 
 							}
-							$message .= ' missing BACK image "'.$garment['extra_image1_path'].'" '; 
 						}
 					}
 					if( !empty( $garment['extra_image2_path'] ) ){
-						if( !file_exists( $garment_image_path . $garment['extra_image2_path'] ) && filesize( $garment_image_path . $garment['extra_image2_path'] ) > 1 ){
-							if( !empty( $message )){
-								$message .= ' and';
+						if( !file_exists( $garment_image_path . $garment['extra_image2_path'] ) ){
+							if( filesize( $garment_image_path . $garment['extra_image2_path'] ) < 2 ){
+								if( !empty( $message )){
+									$message .= ' and';
+								}
+								$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
 							}
-							$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
 						}
 					}
 					
