@@ -22,6 +22,7 @@
 					<div class="form-group">
 						<label>Overall Comments</label>
 						<?php foreach ($admin_comment as $comment){ ?>
+							<?php print $comment->field_id;?>
 							<textarea class="form-control" rows="3" placeholder="Enter Tool Tip" name="tooltip"><?php print $comment->content;?></textarea>
 						<?php } ?>
 					</div>
