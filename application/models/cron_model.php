@@ -37,9 +37,11 @@ class Cron_model extends CI_Model{
 		//$this->db->where('date_created < DATE_SUB(NOW(), INTERVAL 1 HOUR)' );
 
 		$this->db->from('garment');
-		$this->db->select('garment_id, import_user_id, name, image_path, extra_image1_path, extra_image2_path');
+		$this->db->select('user_info.first_name, user_info.last_name, garment.garment_id, garment.import_user_id, garment.name, garment.image_path, garment.extra_image1_path, garment.extra_image2_path');
+		$this->db->join('user_info', 'garment.import_user_id = user_info.user_id', 'left');
 		
 		$query = $this->db->get();
+		
 		if ($query->num_rows() > 0){
 			$garments = $query->result_array();
 
@@ -50,26 +52,48 @@ class Cron_model extends CI_Model{
 
 				foreach ($garments as $garment ) {
 					$message = '';
+					$Init_message = 'Imported by <a target="_blank" href="/admin/user/view/'.$garment['import_user_id'].'.html">'.$garment['first_name'].' '.$garment['last_name'].'</a>, Garment id <a target="_blank" href="/product/'.$garment['garment_id'].'.html">'.$garment['garment_id'].'</a> has ';
+
 					if( !empty( $garment['image_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['image_path'] ) ){
-							$message = 'Imported by user id <a href="/admin/user/view/'.$garment['import_user_id'].'.html">'.$garment['import_user_id'].'</a>, Garment id ' . $garment['garment_id'] . ' has missing image name "'.$garment['image_path'].'" ';
+							$message = ' missing image "'.$garment['image_path'].'" ';
+						} else if( filesize( $garment_image_path . $garment['image_path'] ) < 2 ){
+							$message = ' missing image "'.$garment['image_path'].'" with Size "0" ';
 						}
 					} else {
-						$message = 'Imported by user id <a href="/admin/user/view/'.$garment['import_user_id'].'.html">'.$garment['import_user_id'].'</a>, Garment id '.$garment['garment_id'].' has no base image.';
+						$message = ' no base image.';
 					}
 					if( !empty( $garment['extra_image1_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['extra_image1_path'] ) ){
-							$message .= ' and missing second image "'.$garment['extra_image1_path'].'" '; 
+							if( !empty( $message )){
+								$message .= ' and <br>';
+							}
+							$message .= ' missing BACK image "'.$garment['extra_image1_path'].'" '; 
+
+						} else if( filesize( $garment_image_path . $garment['extra_image1_path'] ) < 2 ){
+							if( !empty( $message )){
+								$message .= ' and <br>';
+							}
+							$message .= ' missing image "'.$garment['extra_image1_path'].'" with Size "0" ';
 						}
 					}
 					if( !empty( $garment['extra_image2_path'] ) ){
 						if( !file_exists( $garment_image_path . $garment['extra_image2_path'] ) ){
-							$message .= ' and missing third image "'.$garment['extra_image2_path'].'".'; 
+							if( !empty( $message )){
+								$message .= ' and <br>';
+							}
+							$message .= ' missing BOARD image "'.$garment['extra_image2_path'].'".'; 
+
+						} else if( filesize( $garment_image_path . $garment['extra_image2_path'] ) < 2 ){
+							if( !empty( $message )){
+								$message .= ' and <br>';
+							}
+							$message .= ' missing image "'.$garment['extra_image2_path'].'" with Size "0" ';
 						}
 					}
 					
 					if( !empty( $message )){
-						$this->notification_model->insert_notification( array('title' => 'Missing Image for garment id '.$garment['garment_id'] .' by user id '.$garment['import_user_id'], 'description' => $message ) );
+						$this->notification_model->insert_notification( array('title' => 'Missing Image of garment '.$garment['garment_id'] .' by '.$garment['first_name'].' '.$garment['last_name'], 'description' => $Init_message . $message ) );
 					}
 					
 				}

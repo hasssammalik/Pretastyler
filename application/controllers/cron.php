@@ -28,6 +28,10 @@ class Cron extends CI_Controller {
 	 * Index Cron Page for this controller.
 	 */
 	public function index(){
+		
+		echo date('Y-m-d H:i:s')."\tStarting Notification model for missing image...\n";
+		$this->cron_model->update_garment_image_existence_notification();
+
 		echo date('Y-m-d H:i:s')."\t"."Updating all outdated garments...\n";
 		$this->cron_model->delete_outdated_garment();
 		echo date('Y-m-d H:i:s')."\t"."All outdated garments updated...\n";
@@ -44,8 +48,6 @@ class Cron extends CI_Controller {
 		}
 		echo date('Y-m-d H:i:s')."\tStart Generating All Garment Specs...\n";
 		$this->assessment_model->update_all_garment_specs();
-		echo date('Y-m-d H:i:s')."\tStarting Notification model for missing image...\n";
-		$this->cron_model->update_garment_image_existence_notification();
 		echo date('Y-m-d H:i:s')."\tAll Done!\n";
 	}
 }
