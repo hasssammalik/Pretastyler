@@ -1068,6 +1068,14 @@ class Admin extends CI_Controller {
 			else {
 				redirect('/admin/matrix/criteria/edit/'.$param1, 'refresh');
 			}
+		} else if ($page == 'question_comments'){
+			$data['title'] = "Question Comments";
+			$data['title_description'] = "manage question comments";
+			$data['categories'] = $this->category_model->get_available_categories();
+			$data['extraJS'] = '<script src="/js/admin/AdminLTE/categories.js?v=2.2.0.0" type="text/javascript"></script>';
+			$this->load->view('admin/header', $data);
+			$this->load->view('admin/matrix/categories', $data);
+			$this->load->view('admin/footer', $data);
 		}
 	}
 
