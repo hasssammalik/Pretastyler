@@ -21,7 +21,7 @@
 				<div class="box-body">
 					<div class="form-group">
 						<label>Overall Comments</label>
-						<textarea class="form-control" rows="3" placeholder="Enter Tool Tip" name="tooltip"><?php print $admin_comment['content'];?></textarea>
+						<textarea class="form-control" rows="3" placeholder="Enter Tool Tip" name="tooltip"><?php print $admin_comment->content;?></textarea>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
