@@ -37,11 +37,11 @@ class Cron_model extends CI_Model{
 		//$this->db->where('date_created < DATE_SUB(NOW(), INTERVAL 1 HOUR)' );
 
 		$this->db->from('garment');
-		$this->db->select('garment.garment_id, garment.import_user_id, garment.name, garment.image_path, garment.extra_image1_path, garment.extra_image2_path');
+		$this->db->select('user_info.first_name, user_info.last_name, garment.garment_id, garment.import_user_id, garment.name, garment.image_path, garment.extra_image1_path, garment.extra_image2_path');
 		$this->db->join('user_info', 'garment.import_user_id = user_info.user_id', 'left');
 		
 		$query = $this->db->get();
-		var_dump($this->db);
+		
 		if ($query->num_rows() > 0){
 			$garments = $query->result_array();
 
