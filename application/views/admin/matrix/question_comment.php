@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<div class="btn-group pull-right">
 				<a href="/admin/matrix/question-comments.html" class="btn btn-danger">Back</a>
-				<a href="/admin/matrix/field/edit/<?php print $field['field_id']; ?>.html" class="btn btn-warning">Discard</a>
+				<a href="/admin/matrix/question-comment/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
 				<input type="submit" class="btn btn-primary button-save" value="Save">
 			</div>
 			<br/>
@@ -31,7 +31,7 @@
 		<div class="col-md-12">
 			<div class="btn-group pull-right">
 				<a href="/admin/matrix/question-comments.html" class="btn btn-danger">Back</a>
-				<a href="/admin/matrix/field/edit/<?php print $field['field_id']; ?>.html" class="btn btn-warning">Discard</a>
+				<a href="/admin/matrix/question-comment/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
 				<input type="submit" class="btn btn-primary button-save" value="Save">
 			</div>
 			<br/>
