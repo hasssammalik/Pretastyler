@@ -477,41 +477,13 @@ class Catalog extends CI_Controller {
 		$data['title'] = "Thank You for signing up";
 		$data['breadcrumb'] = array('THANK YOU');
 		
-		$data['extraJS'] = "<style> .headPageTitle { display:none;} .content {background-image:url(/img/$image.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style> <script>(function() {
-			var _fbq = window._fbq || (window._fbq = []);
-			if (!_fbq.loaded) {
-				var fbds = document.createElement('script');
-				fbds.async = true;
-				fbds.src = '//connect.facebook.net/en_US/fbds.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(fbds, s);
-				_fbq.loaded = true;
-			}
-		})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', '6022631669625', {'value':'0.00','currency':'AUD'}]);
-</script><noscript><img height='1' width='1' alt='' style='display:none' src='https://www.facebook.com/tr?ev=6022631669625&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1'/></noscript>";
-
-$this->load->view('templates/header', $data);
-$this->load->view('templates/menu', $data);
-$this->load->view('templates/menu_mall', $data);
-$this->load->view('catalog/success', $data);
-}
-	/* removed from the main website
-	public function thankyou(){
+		$data['extraCSS'] = '<style> .headPageTitle { display:none;} .content {background-image:url(/img/'.$image.'.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style>';
 		
-		if($this->input->post('test-form')=='01ae3785a5fde11d3e8a29fd1f6e9400'){
-			$data['title'] = "Thank You for signing up";
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
-			$this->load->view('thankyou');
-		}
-		else{
-			redirect("/index");
-		}
-	} 
-	*/
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu', $data);
+		$this->load->view('templates/menu_mall', $data);
+		$this->load->view('catalog/success', $data);
+	}
 	/**
 	* User login and signup 
 	*/
