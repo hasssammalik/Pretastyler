@@ -127,7 +127,7 @@
 						})
 						.on("slidechange", function(e,ui) {
 							default_values[1] = (+ui.value+1);
-							console.log(default_values);
+							//console.log(default_values);
 							pull_profile_garment();
 						});
 						
@@ -258,10 +258,10 @@
 							"minBust" : input_minBust
 						};
 
-						//commenting the slider images load
-						// $.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
-						// 	$( ".garments" ).html( data );
-						// });
+						//save profile to global
+						$.post( "/user/homepage-user-profile.html", { uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+							//
+						});
 					}
 					
 					

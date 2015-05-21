@@ -320,59 +320,6 @@ class Mall extends CI_Controller {
 		$this->load->view('mall/body', $data);
 		$this->load->view('templates/footer', $data);
 	}
-	public function garment_by_profile( )
-	{
-		if (!$this->input->post()){
-			show_404();
-		}
-		$offset = $this->input->post('offset', TRUE);
-		$limit = $this->input->post('limit', TRUE);
-		$uservalue = $this->input->post('uservalue', TRUE);
-		$pagelayout = $this->input->post('pagelayout', TRUE);
-
-		$required_profile_elements = array(
-										"height_select_id" 		=> ( !empty($uservalue['height_select_id']) ? $uservalue['height_select_id'] : 0 ),
-										"weight_select_id" 		=> ( !empty($uservalue['weight_select_id']) ? $uservalue['weight_select_id'] : 0 ),
-										"age_select_id" 		=> ( !empty($uservalue['age_select_id']) ? $uservalue['age_select_id'] : 0 ),
-										"body_shape_select_id" 	=> ( !empty($uservalue['body_shape_select_id']) ? $uservalue['body_shape_select_id'] : 0 ),
-										"body_ratio_select_id" 	=> ( !empty($uservalue['body_ratio_select_id']) ? $uservalue['body_ratio_select_id'] : 0 ),
-										"bra_select_id" 		=> ( !empty($uservalue['bra_select_id']) ? $uservalue['bra_select_id'] : 0 ),
-										"build_select_id" 		=> ( !empty($uservalue['build_select_id']) ? $uservalue['build_select_id'] : 0 ),
-										"minBust" 				=> ( !empty($uservalue['minBust']) ? $uservalue['minBust'] : 0 ),
-
-										"neck_length_select_id" => ( !empty($uservalue['neck_length_select_id']) ? $uservalue['neck_length_select_id'] : 0 ),
-										"shoulders_select_id" 	=> ( !empty($uservalue['shoulders_select_id']) ? $uservalue['shoulders_select_id'] : 0 ),
-										"face_shape_select_id" 	=> ( !empty($uservalue['face_shape_select_id']) ? $uservalue['face_shape_select_id'] : 0 ),
-										
-										"neck_select_id" 		=> ( !empty($uservalue['neck_select_id']) ? $uservalue['neck_select_id'] : 0 ),
-										"back_select_id" 		=> ( !empty($uservalue['back_select_id']) ? $uservalue['back_select_id'] : 0 ),
-										"upper_arms_select_id" 	=> ( !empty($uservalue['upper_arms_select_id']) ? $uservalue['upper_arms_select_id'] : 0 ),
-										"midriff_select_id" 	=> ( !empty($uservalue['midriff_select_id']) ? $uservalue['midriff_select_id'] : 0 ),
-										
-										"stomach_select_id" 	=> ( !empty($uservalue['stomach_select_id']) ? $uservalue['stomach_select_id'] : 0 ),
-										"bottom_select_id" 		=> ( !empty($uservalue['bottom_select_id']) ? $uservalue['bottom_select_id'] : 0 ),
-										"inner_thighs_select_id"=> ( !empty($uservalue['inner_thighs_select_id']) ? $uservalue['inner_thighs_select_id'] : 0 ),
-										"outer_thighs_select_id"=> ( !empty($uservalue['outer_thighs_select_id']) ? $uservalue['outer_thighs_select_id'] : 0 ),
-										"lower_legs_select_id" 	=> ( !empty($uservalue['lower_legs_select_id']) ? $uservalue['lower_legs_select_id'] : 0 )
-									);
-		if ($this->flexi_auth->is_logged_in()){
-			
-		} else {
-			$this->session->set_userdata('initial_user_profile', $uservalue);
-		}
-
-
-		$data['user_profile_done'] = true;
-		$user_specs = $this->user_model->generate_user_specs( FALSE, $required_profile_elements);
-		$data['garments'] = $this->garment_model->get_batch_garment_score_by_user_specs($user_specs, $offset, $limit);
-		
-		if( !empty($pagelayout)){
-			$this->load->view('mall/garments', $data);
-		} else {
-			$this->load->view('mall/user_profile_garments', $data);
-		}
-		
-	}
 	/**
 	 * Deep Search Initial Service for this controller.
 	 */
