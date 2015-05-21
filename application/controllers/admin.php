@@ -1075,10 +1075,57 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/matrix/question_comments', $data);
 			$this->load->view('admin/footer', $data);
 		} else if ($page == 'question_comment'){
-			$data['title'] = "Question Comment - ";
-			$data['title_description'] = "manage question comments";
+			if (empty($param1)){
+				redirect('/admin/matrix/question_comments', 'refresh');
+			}
+			if ($this->input->post()){
+				//if this is a edit request.
+				$data['error_messages'] = array();
+				$category_id = $this->input->post('category_id', TRUE);
+				$name = $this->input->post('name', TRUE);
+				$order = $this->input->post('order', TRUE);
+				$has_new_image = $this->input->post('has_new_image', TRUE);
+				$ori_image = $this->input->post('ori_image', TRUE);
+				if (empty($category_id)){
+					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00001 Something went error. Please contact programmer!'));
+				}
+				if (empty($name)){
+					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter category NAME!'));
+				}
+				if (empty($order)){
+					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'You must enter category POSITION!'));
+				}
+				if (!empty($has_new_image)) {
+					$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/system/';
+					$config['allowed_types'] = 'jpg|png|tif';
+					$config['file_name'] = random_string('unique').'.jpg';
+					$this->load->library('upload', $config);
+					if (!$this->upload->do_upload('new_image')) {
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
+					} else {
+						$image = $this->upload->data();
+						$image_path = $image['file_name'];
+						$is_image = $image['is_image'];
+						if (!$is_image) {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
+						}
+					}
+				} else {
+					$image_path = $ori_image;
+				}
+				if (empty($data['error_messages'])){
+					if ($this->admin_model->update_category($category_id, array('name' => $name, 'order' => $order, 'image_path' => $image_path, ))){
+						$data['success_messages'] = array();
+						array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+					} else {
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+					}
+				}
+			}
+			$data['title'] = "Question Comment - ".$data['garment']['name'];
+			$data['title_description'] = "manage question comment ".$data['garment']['name'];
 			$this->load->view('admin/header', $data);
-			$this->load->view('admin/matrix/question_comments', $data);
+			$this->load->view('admin/matrix/question_comment', $data);
 			$this->load->view('admin/footer', $data);
 		}
 	}
@@ -1091,7 +1138,7 @@ class Admin extends CI_Controller {
 		$this->datatables->edit_column('email_sent', '<i class="$1"></i>', 'email_sent');
 		$this->datatables->add_column('edit_basic', '<a href="/garment/edit-general/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
 		$this->datatables->add_column('edit_criteria', '<a href="/garment/edit/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
-		$this->datatables->add_column('edit', '<a href="/admin/matrix/question-comment/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
+		$this->datatables->add_column('edit', '<a href="/admin/matrix/question-comment/$1.html"><i class="fa fa-edit"></i></a>', 'garment_id');
 		echo $this->datatables->generate();
 	}
 
