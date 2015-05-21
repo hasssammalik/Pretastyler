@@ -30,6 +30,7 @@ class Admin extends CI_Controller {
 		$this->load->model('user_model');
 		$this->load->model('admin_model');
 		$this->load->model('notification_model');
+		$this->load->model('assessment_comment');
 		$this->load->helper('url');
 		$this->load->helper('form');
 		$this->data = array(
