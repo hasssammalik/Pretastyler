@@ -358,7 +358,7 @@ class Garment extends CI_Controller {
 		$data['extraDiv'] = '<div class="hiddenCategory" style="display:none" category_id="'.$data['garment']['category_id'].'"></div>';
 		if ($this->flexi_auth->in_group('Administrators')){
 			$data['admin_comment'] = $this->assessment_model->get_assessment_comment($garment_id);
-			$user_name = $this->user_model->get_user_name();
+			$user_name = $this->user_model->get_user_name($data['garment']['import_user_id']);
 			$data['user_name'] = $user_name['first_name'].' '.$user_name['last_name'];
 		}
 		
