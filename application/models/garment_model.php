@@ -65,6 +65,9 @@ class Garment_model extends CI_Model{
 			} else {
 				//calculate result
 				$user_specs_str = $query->row_array()['column'];
+				if (empty($user_specs_str)) {
+					return FALSE;
+				}
 				$query_str = "SELECT (AVG(LEAST(".$user_specs_str.")) + MIN(LEAST(".$user_specs_str."))) / 2 AS `score` FROM `pas_garment_specs` WHERE `garment_id` = ? GROUP BY `garment_id`";
 				$query = $this->db->query($query_str, array($garment_id));
 				$result = $query->row_array();
