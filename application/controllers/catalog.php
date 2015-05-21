@@ -477,7 +477,7 @@ class Catalog extends CI_Controller {
 		$data['title'] = "Thank You for signing up";
 		$data['breadcrumb'] = array('THANK YOU');
 		
-		$data['extraCSS'] = '<style> .headPageTitle { display:none;} .content {background-image:url(/img/$image.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style>';
+		$data['extraCSS'] = '<style> .headPageTitle { display:none;} .content {background-image:url(/img/'.$image.'.jpg); margin:0; padding:0; height:100%; } .container { margin-top: 20px; }</style>';
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu', $data);
