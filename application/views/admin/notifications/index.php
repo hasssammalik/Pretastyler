@@ -91,6 +91,7 @@ $(function(){
 			if (data > 0){
 				icon.removeClass('readall');
 				icon.addClass('unreadall');
+				icon.text('Unread All Notification');
 			} else {
 				alert("Something Error! Contact Programmer!");
 			}
@@ -102,6 +103,7 @@ $(function(){
 			if (data > 0){
 				icon.removeClass('unreadall');
 				icon.addClass('readall');
+				icon.text('Read All Notification');
 			} else {
 				alert("Something Error! Contact Programmer!");
 			}

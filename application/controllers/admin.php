@@ -1159,11 +1159,11 @@ class Admin extends CI_Controller {
 			}
 		} else if ( $notify_status_all == 'all' ){
 			if( $notify_status == 'read' ){
-				$this->notification_model->update_notification_status( null, 'all', '1' );
+				$this->notification_model->update_notification_status( null, 'all', '0' );
 				echo 1;
 			} 
 			else if ( $notify_status == 'unread' ){
-				$this->notification_model->update_notification_status( null, 'all', '0' );
+				$this->notification_model->update_notification_status( null, 'all', '1' );
 				echo 1;
 			} else {
 				echo 0;
