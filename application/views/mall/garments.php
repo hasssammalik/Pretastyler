@@ -67,7 +67,7 @@ foreach ($garments as $row) { ?>
 						print '1%';
 				} else {
 						print 'Not Assessed';
-				}?>MATCH
+				}?><br>MATCH
 			</div>
 			<?php } ?>
 		</div>
