@@ -827,7 +827,22 @@ body.outlook p {
 							<h1>Hello, <?php print $user_info['first_name'].' '.$user_info['last_name'] ?></h1>
 							<p class="lead">Your following item has been corrected.</p>
 							<p class="lead"><a href="http://pretastyler.com/product/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>"><?php print $garment['name'] ?></a></p>
-							<img src="http://pretastyler.com/images/garment/<?php print $garment['image_path'] ?>">
+							<table class="row callout">
+								<tr>
+								<td class="wrapper last">
+
+									<table class="twelve columns">
+									<tr>
+										<td class="panel">
+										<img src="http://pretastyler.com/images/garment/<?php print $garment['image_path'] ?>">
+										</td>
+										<td class="expander"></td>
+									</tr>
+									</table>
+
+								</td>
+								</tr>
+							</table>
 							<p>Stylefully yours,</p>
 							<p>Ann Reinten</p>
 							</td>
