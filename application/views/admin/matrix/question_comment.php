@@ -19,6 +19,11 @@
 					<h3 class="box-title">Overall Comments</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
+					<div class="input-group">
+						<label for="garment-image-path">Garment Image</label>
+						<img src="/images/garment/<?php print $garment['image_path'] ?>">
+					</div>
+					<br/>
 					<div class="form-group">
 						<textarea class="form-control" rows="3" placeholder="Enter Overall Comments" name="overall-comments"><?php print $admin_comment['overall'] ?></textarea>
 					</div>
@@ -42,7 +47,7 @@
 								<label class="col-md-12">You Selected:</label>
 								<div class="col-md-12" style="border: 1px solid rgb(169, 169, 169);">
 									<?php if (isset($value['old_criteria_name'])) { ?>
-									<label class="col-md-12 text-center"><a href="/admin/matrix/criteria/edit/<?php print $value['old_criteria_id'] ?>.html"><?php print $value['old_criteria_name']?></a></label>
+									<label class="col-md-12 text-center"><a href="/admin/matrix/criteria/edit/<?php print $value['old_criteria_id'] ?>.html" target="_blank"><?php print $value['old_criteria_name']?></a></label>
 									<img class="col-md-6 col-md-offset-3" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
 									<?php } else {?>
 									<label class="col-md-12 text-center">Not Selected</label>
@@ -52,7 +57,7 @@
 							<div class="col-md-4">
 								<label class="col-md-12">Changed To:</label>
 								<div class="col-md-12" style="border: 1px solid rgb(169, 169, 169);">
-									<label class="col-md-12 text-center"><a href="/admin/matrix/criteria/edit/<?php print $value['new_criteria_id'] ?>.html"><?php print $value['new_criteria_name']?></a></label>
+									<label class="col-md-12 text-center"><a href="/admin/matrix/criteria/edit/<?php print $value['new_criteria_id'] ?>.html" target="_blank"><?php print $value['new_criteria_name']?></a></label>
 									<img class="col-md-6 col-md-offset-3" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
 								</div>
 							</div>
