@@ -36,11 +36,19 @@
 						<div class="col-md-4">
 							<label>You Selected:</label>
 							<div class="form-control">
+								<?php if (isset($value['old_criteria_name'])) { ?>
+								<label><?php print $value['old_criteria_name']?></label>
+								<img src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
+								<?php } else {?>
+								<label>Not Selected</label>
+								<?php } ?>
 							</div>
 						</div>
 							<div class="col-md-4">
 							<label>Changed To:</label>
 							<div class="form-control">
+								<label><?php print $value['new_criteria_name']?></label>
+								<img src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
 							</div>
 						</div>
 						<div class="col-md-4">
