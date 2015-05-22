@@ -864,92 +864,55 @@ body.outlook p {
 						<tr>
 							<td class="panel">
 							<p class="lead">Correction for Question <?php print $value['field_name'] ?></p>
-							
+							<table class="row">
+							  <tr>
+								<td class="wrapper">
+
+								  <table class="four columns">
+									<tr>
+									  <td>
+										<?php if (isset($value['old_criteria_name'])) { ?>
+										<p style="text-align:center"><?php print $value['old_criteria_name']?></p>
+										<img class="center" src="http://pretastyler.com/images/system/<?php print $value['old_criteria_image_path'] ?>">
+										<?php } else {?>
+										<p style="text-align:center">Not Selected</p>
+										<?php } ?>
+									  </td>
+									  <td class="expander"></td>
+									</tr>
+								  </table>
+
+								</td>
+								<td class="wrapper">
+
+								  <table class="four columns">
+									<tr>
+									  <td>
+										<p style="text-align:center"><?php print $value['new_criteria_name']?></p>
+										<img class="center" src="http://pretastyler.com/images/system/<?php print $value['new_criteria_image_path'] ?>">
+									  </td>
+									  <td class="expander"></td>
+									</tr>
+								  </table>
+
+								</td>
+								<td class="wrapper last">
+
+								  <table class="four columns">
+									<tr>
+									  <td>
+										<p style="text-align:center">Comments:</p>
+										<p><?php print $value['content'] ?></p>
+									  </td>
+									  <td class="expander"></td>
+									</tr>
+								  </table>
+
+								</td>
+							  </tr>
+							</table>
 							</td>
 							<td class="expander"></td>
-						</tr>
-						<tr>
-						<td class="wrapper">
-							<table class="four columns">
-								<tr>
-									<td class="panel">
-										<p>You Selected: </p>
-										<table class="row">
-											<tr>
-											<td class="wrapper">
-
-												<table class="twelve columns">
-												<tr>
-													<td class="panel">
-													<?php if (isset($value['old_criteria_name'])) { ?>
-													<p class="center"><?php print $value['old_criteria_name']?></p>
-													<img class="center" src="http://pretastyler.com/images/system/<?php print $value['old_criteria_image_path'] ?>">
-													<?php } else {?>
-													<p class="center">Not Selected</p>
-													<?php } ?>
-													</td>
-													<td class="expander"></td>
-												</tr>
-												</table>
-
-											</td>
-											</tr>
-										</table>
-									</td>
-									<td class="expander"></td>
-								</tr>
-							</table>
-							<table class="four columns">
-								<tr>
-									<td class="panel">
-										<p>Corrected To: </p>
-										<table class="row callout">
-											<tr>
-											<td class="wrapper last">
-
-												<table class="twelve columns">
-												<tr>
-													<td class="panel">
-													<p class="lead">Overall Comment:</p>
-													<p><?php print $admin_comment['overall'] ?></p>
-													</td>
-													<td class="expander"></td>
-												</tr>
-												</table>
-
-											</td>
-											</tr>
-										</table>
-									</td>
-									<td class="expander"></td>
-								</tr>
-							</table>
-							<table class="four columns">
-								<tr>
-									<td class="panel">
-										<p>Comments: </p>
-										<table class="row callout">
-											<tr>
-											<td class="wrapper last">
-
-												<table class="twelve columns">
-												<tr>
-													<td class="panel">
-													<p class="lead">Overall Comment:</p>
-													<p><?php print $admin_comment['overall'] ?></p>
-													</td>
-													<td class="expander"></td>
-												</tr>
-												</table>
-
-											</td>
-											</tr>
-										</table>
-									</td>
-									<td class="expander"></td>
-								</tr>
-							</table>
-						</td>
 						</tr>
 						</table>
 
