@@ -32,20 +32,38 @@
 				<div class="box-body">
 					<div class="form-group">
 						<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
-						<label class="col-md-12">Comments - <?php print $value['field_name'] ?> - Click <a href="/admin/matrix/field/edit/<?php print $value['field_id']?>.html" target="_blank">here</a> to this field.</label>
-						<div class="col-md-4">
-							<label>You Selected:</label>
-							<div class="form-control">
-							</div>
+						<div class="row">
+							<label class="col-md-12">Comments - <?php print $value['field_name'] ?> - Click <a href="/admin/matrix/field/edit/<?php print $value['field_id']?>.html" target="_blank">here</a> to this field.</label>
 						</div>
+						<div class="row">
 							<div class="col-md-4">
-							<label>Changed To:</label>
-							<div class="form-control">
+								<div class="row">
+									<label>You Selected:</label>
+									<div class="form-control">
+										<?php if (isset($value['old_criteria_name'])) { ?>
+										<label><?php print $value['old_criteria_name']?></label>
+										<img src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
+										<?php } else {?>
+										<label>Not Selected</label>
+										<?php } ?>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-4">
-							<label>Comments:</label>
-							<textarea class="form-control" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
+								<div class="col-md-4">
+								<div class="row">
+									<label>Changed To:</label>
+									<div class="form-control">
+										<label><?php print $value['new_criteria_name']?></label>
+										<img src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="row">
+									<label>Comments:</label>
+									<textarea class="form-control" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
+								</div>
+							</div>
 						</div>
 						<?php } ?>
 					</div>
