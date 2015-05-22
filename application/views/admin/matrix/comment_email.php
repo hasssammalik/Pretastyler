@@ -858,19 +858,25 @@ body.outlook p {
 				<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
 				<table class="row callout">
 					<tr>
-					<td class="wrapper last">
+					<td class="wrapper">
 
 						<table class="twelve columns">
 						<tr>
 							<td class="panel">
 							<p class="lead">Correction for Question <?php print $value['field_name'] ?></p>
+							
+							</td>
+							<td class="expander"></td>
+						</tr>
+						<tr>
+						<td class="wrapper">
 							<table class="four columns">
 								<tr>
 									<td class="panel">
 										<p>You Selected: </p>
-										<table class="row callout">
+										<table class="row">
 											<tr>
-											<td class="wrapper last">
+											<td class="wrapper">
 
 												<table class="twelve columns">
 												<tr>
@@ -943,8 +949,7 @@ body.outlook p {
 									<td class="expander"></td>
 								</tr>
 							</table>
-							</td>
-							<td class="expander"></td>
+						</td>
 						</tr>
 						</table>
 
