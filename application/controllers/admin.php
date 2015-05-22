@@ -1124,7 +1124,7 @@ class Admin extends CI_Controller {
 				} */
 			}
 			$data['garment'] = $this->garment_model->get_garment_info($param1);
-			$data['admin_comment'] = $this->assessment_model->get_assessment_comment($param1);
+			$data['admin_comment'] = $this->admin_model->get_detailed_question_comments($param1);
 			$data['title'] = "Question Comment - ".$data['garment']['name'];
 			$data['title_description'] = "manage question comment ".$data['garment']['name'];
 			$this->load->view('admin/header', $data);

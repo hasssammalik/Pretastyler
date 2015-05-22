@@ -457,6 +457,75 @@ class Admin_model extends CI_Model{
 	public function delete_user($user_id) {
 		return $this->db->delete(array('user_garment', 'user_info', 'user_infusionsoft', 'user_specs'), array('user_id' => $user_id));
 	}
+	/**
+	 * get_detailed_question_comments
+	 *
+	 * 
+	 */
+	public function get_detailed_question_comments($garment_id) {
+		$query = $this->db->get_where('assessment_comment', array('garment_id' => $garment_id));
+		if ($query->num_rows() == 0){
+			return FALSE;
+		}
+		$result = $query->row_array();
+		$decoded_comments = json_decode($result['comment']);
+		$detailed_comments = array();
+		$field_ids = array();
+		$criteria_ids = array();
+		//get overall comment, field_ids & criteria_ids
+		foreach ($decoded_comments as $key=>$value) {
+			if ($value->field_id == -1){
+				$detailed_comments['overall'] = $value->content;
+			} else {
+				$field_ids[] = $value->field_id;
+				$criteria_ids[] = $value->new_criteria_id;
+				if (isset($value->old_criteria_id)){
+					$criteria_ids[] = $value->old_criteria_id;
+					$detailed_comments['individuals'][] = array('field_id' => $value->field_id, 'new_criteria_id' => $value->new_criteria_id, 'content' => $value->content, 'old_criteria_id' => $value->old_criteria_id);
+				} else {
+					$detailed_comments['individuals'][] = array('field_id' => $value->field_id, 'new_criteria_id' => $value->new_criteria_id, 'content' => $value->content);
+				}
+			}
+		}
+		//get field & criteria information
+		$field_detail = $this->db->select('field_id, name, position')->from('field')->where_in('field_id', $field_ids)->get()->result_array();
+		$criteria_detail = $this->db->select('criteria_id, name, image_path')->from('criteria')->where_in('criteria_id', $criteria_ids)->get()->result_array();
+		//map field& criteria information to 
+		foreach($field_detail as $field_key=>$field_value){
+			foreach($detailed_comments['individuals'] as $comment_key=>$comment_value){
+				if (empty($detailed_comments['individuals'][$comment_key]['field_name'])){
+					if ($field_value['field_id'] == $comment_value['field_id']){
+						$detailed_comments['individuals'][$comment_key]['field_name'] = $field_value['name'];
+						$detailed_comments['individuals'][$comment_key]['position'] = $field_value['position'];
+					}
+				}
+			}
+		}
+		foreach($criteria_detail as $criteria_key=>$criteria_value){
+			foreach($detailed_comments['individuals'] as $comment_key=>$comment_value){
+				if (empty($detailed_comments['individuals'][$comment_key]['new_criteria_name'])){
+					if ($criteria_value['criteria_id'] == $comment_value['new_criteria_id']){
+						$detailed_comments['individuals'][$comment_key]['new_criteria_name'] = $criteria_value['name'];
+						$detailed_comments['individuals'][$comment_key]['new_criteria_image_path'] = $criteria_value['image_path'];
+					}
+				}
+				if (isset($detailed_comments['individuals'][$comment_key]['old_criteria_id'])){
+					if (empty($detailed_comments['individuals'][$comment_key]['old_criteria_name'])){
+						if ($criteria_value['criteria_id'] == $comment_value['old_criteria_id']){
+							$detailed_comments['individuals'][$comment_key]['old_criteria_name'] = $criteria_value['name'];
+							$detailed_comments['individuals'][$comment_key]['old_criteria_image_path'] = $criteria_value['image_path'];
+						}
+					}
+				}
+			}
+		}
+		//reorder individuals field by position
+		usort($detailed_comments['individuals'], function($a, $b) {
+			return $a['position'] - $b['position'];
+		});
+		
+		return $detailed_comments;
+	}
 }
 /* End of file admin_model.php */
 /* Location: ./application/models/admin_model.php */
