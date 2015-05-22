@@ -1130,6 +1130,11 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/matrix/question_comment', $data);
 			$this->load->view('admin/footer', $data);
+		} else if ($page == 'comment_email'){
+			$data['garment'] = $this->garment_model->get_garment_info($param1);
+			$data['user_info'] = $this->user_model->get_user_info($data['garment']['import_user_id']);
+			$data['admin_comment'] = $this->admin_model->get_detailed_question_comments($param1);
+			$this->load->view('admin/matrix/comment_email', $data);
 		}
 	}
 	/**
