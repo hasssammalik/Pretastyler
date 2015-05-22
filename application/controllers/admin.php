@@ -1140,11 +1140,12 @@ class Admin extends CI_Controller {
 	/**
 	 * Send Email Service for this controller
 	 */
-	public function send_email($garment_id, $email_to = FALSE){
+	public function send_email($garment_id){
 		$this->login_check();
 		$data['garment'] = $this->garment_model->get_garment_info($garment_id);
 		$data['user_info'] = $this->user_model->get_user_info($data['garment']['import_user_id']);
 		$data['admin_comment'] = $this->admin_model->get_detailed_question_comments($garment_id);
+		$email_to = $this->input->get('email_to', TRUE);
 		if (empty($email_to)){
 			$email_to = $this->user_model->get_user_email($data['garment']['import_user_id']);
 		}
