@@ -288,7 +288,7 @@ $star_result = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 										<ul class="bottomOptions">
 									
 									<li>
-										<a href="https://www.facebook.com/sharer.php?u=<?php echo current_url() ?>" onClick="return fbs_click(500,400,'<?php echo current_url() ?>','<?php print $garment['name']?>')" target="_blank" class="fb"><i class="icon-facebook"></i></a>
+										<a class="fb" id="fbs_share"><i class="icon-facebook"></i></a>
 									</li>
 									
 									<li><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" target="_blank" class="pi"><i class="icon-pinterest"></i></a></li>
