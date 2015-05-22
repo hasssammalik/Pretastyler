@@ -5,26 +5,26 @@
 	<meta name="viewport" content="width=device-width"/>
 	<style>
 /**********************************************
-* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
+* Ink v1.0.5 - Copyright 2013 ZURB Inc		*
 **********************************************/
 
 /* Client-specific Styles & Reset */
 
 #outlook a { 
-  padding:0; 
+	padding:0; 
 } 
 
 body{ 
-  width:100% !important; 
-  min-width: 100%;
-  -webkit-text-size-adjust:100%; 
-  -ms-text-size-adjust:100%; 
-  margin:0; 
-  padding:0;
+	width:100% !important; 
+	min-width: 100%;
+	-webkit-text-size-adjust:100%; 
+	-ms-text-size-adjust:100%; 
+	margin:0; 
+	padding:0;
 }
 
 .ExternalClass { 
-  width:100%;
+	width:100%;
 } 
 
 .ExternalClass, 
@@ -33,118 +33,118 @@ body{
 .ExternalClass font, 
 .ExternalClass td, 
 .ExternalClass div { 
-  line-height: 100%; 
+	line-height: 100%; 
 } 
 
 #backgroundTable { 
-  margin:0; 
-  padding:0; 
-  width:100% !important; 
-  line-height: 100% !important; 
+	margin:0; 
+	padding:0; 
+	width:100% !important; 
+	line-height: 100% !important; 
 }
 
 img { 
-  outline:none; 
-  text-decoration:none; 
-  -ms-interpolation-mode: bicubic;
-  width: auto;
-  max-width: 100%; 
-  float: left; 
-  clear: both; 
-  display: block;
+	outline:none; 
+	text-decoration:none; 
+	-ms-interpolation-mode: bicubic;
+	width: auto;
+	max-width: 100%; 
+	float: left; 
+	clear: both; 
+	display: block;
 }
 
 center {
-  width: 100%;
-  min-width: 580px;
+	width: 100%;
+	min-width: 580px;
 }
 
 a img { 
-  border: none;
+	border: none;
 }
 
 p {
-  margin: 0 0 0 10px;
+	margin: 0 0 0 10px;
 }
 
 table {
-  border-spacing: 0;
-  border-collapse: collapse;
+	border-spacing: 0;
+	border-collapse: collapse;
 }
 
 td { 
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  border-collapse: collapse !important; 
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	border-collapse: collapse !important; 
 }
 
 table, tr, td {
-  padding: 0;
-  vertical-align: top;
-  text-align: left;
+	padding: 0;
+	vertical-align: top;
+	text-align: left;
 }
 
 hr {
-  color: #d9d9d9; 
-  background-color: #d9d9d9; 
-  height: 1px; 
-  border: none;
+	color: #d9d9d9; 
+	background-color: #d9d9d9; 
+	height: 1px; 
+	border: none;
 }
 
 /* Responsive Grid */
 
 table.body {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 table.container {
-  width: 580px;
-  margin: 0 auto;
-  text-align: inherit;
+	width: 580px;
+	margin: 0 auto;
+	text-align: inherit;
 }
 
 table.row { 
-  padding: 0px; 
-  width: 100%;
-  position: relative;
+	padding: 0px; 
+	width: 100%;
+	position: relative;
 }
 
 table.container table.row {
-  display: block;
+	display: block;
 }
 
 td.wrapper {
-  padding: 10px 20px 0px 0px;
-  position: relative;
+	padding: 10px 20px 0px 0px;
+	position: relative;
 }
 
 table.columns,
 table.column {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 table.columns td,
 table.column td {
-  padding: 0px 0px 10px; 
+	padding: 0px 0px 10px; 
 }
 
 table.columns td.sub-columns,
 table.column td.sub-columns,
 table.columns td.sub-column,
 table.column td.sub-column {
-  padding-right: 10px;
+	padding-right: 10px;
 }
 
 td.sub-column, td.sub-columns {
-  min-width: 0px;
+	min-width: 0px;
 }
 
 table.row td.last,
 table.container td.last {
-  padding-right: 0px;
+	padding-right: 0px;
 }
 
 table.one { width: 30px; }
@@ -224,75 +224,75 @@ td.offset-by-ten { padding-left: 500px; }
 td.offset-by-eleven { padding-left: 550px; }
 
 td.expander {
-  visibility: hidden;
-  width: 0px;
-  padding: 0 !important;
+	visibility: hidden;
+	width: 0px;
+	padding: 0 !important;
 }
 
 table.columns .text-pad,
 table.column .text-pad {
-  padding-left: 10px;
-  padding-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 table.columns .left-text-pad,
 table.columns .text-pad-left,
 table.column .left-text-pad,
 table.column .text-pad-left {
-  padding-left: 10px;
+	padding-left: 10px;
 }
 
 table.columns .right-text-pad,
 table.columns .text-pad-right,
 table.column .right-text-pad,
 table.column .text-pad-right {
-  padding-right: 10px;
+	padding-right: 10px;
 }
 
 /* Block Grid */
 
 .block-grid {
-  width: 100%;
-  max-width: 580px;
+	width: 100%;
+	max-width: 580px;
 }
 
 .block-grid td {
-  display: inline-block;
-  padding:10px;
+	display: inline-block;
+	padding:10px;
 }
 
 .two-up td {
-  width:270px;
+	width:270px;
 }
 
 .three-up td {
-  width:173px;
+	width:173px;
 }
 
 .four-up td {
-  width:125px;
+	width:125px;
 }
 
 .five-up td {
-  width:96px;
+	width:96px;
 }
 
 .six-up td {
-  width:76px;
+	width:76px;
 }
 
 .seven-up td {
-  width:62px;
+	width:62px;
 }
 
 .eight-up td {
-  width:52px;
+	width:52px;
 }
 
 /* Alignment & Visibility Classes */
 
 table.center, td.center {
-  text-align: center;
+	text-align: center;
 }
 
 h1.center,
@@ -301,39 +301,39 @@ h3.center,
 h4.center,
 h5.center,
 h6.center {
-  text-align: center;
+	text-align: center;
 }
 
 span.center {
-  display: block;
-  width: 100%;
-  text-align: center;
+	display: block;
+	width: 100%;
+	text-align: center;
 }
 
 img.center {
-  margin: 0 auto;
-  float: none;
+	margin: 0 auto;
+	float: none;
 }
 
 .show-for-small,
 .hide-for-desktop {
-  display: none;
+	display: none;
 }
 
 /* Typography */
 
 body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
-  color: #222222;
-  font-family: "Helvetica", "Arial", sans-serif; 
-  font-weight: normal; 
-  padding:0; 
-  margin: 0;
-  text-align: left; 
-  line-height: 1.3;
+	color: #222222;
+	font-family: "Helvetica", "Arial", sans-serif; 
+	font-weight: normal; 
+	padding:0; 
+	margin: 0;
+	text-align: left; 
+	line-height: 1.3;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  word-break: normal;
+	word-break: normal;
 }
 
 h1 {font-size: 40px;}
@@ -345,33 +345,33 @@ h6 {font-size: 20px;}
 body, table.body, p, td {font-size: 14px;line-height:19px;}
 
 p.lead, p.lede, p.leed {
-  font-size: 18px;
-  line-height:21px;
+	font-size: 18px;
+	line-height:21px;
 }
 
 p { 
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 small {
-  font-size: 10px;
+	font-size: 10px;
 }
 
 a {
-  color: #2ba6cb; 
-  text-decoration: none;
+	color: #2ba6cb; 
+	text-decoration: none;
 }
 
 a:hover { 
-  color: #2795b6 !important;
+	color: #2795b6 !important;
 }
 
 a:active { 
-  color: #2795b6 !important;
+	color: #2795b6 !important;
 }
 
 a:visited { 
-  color: #2ba6cb !important;
+	color: #2ba6cb !important;
 }
 
 h1 a, 
@@ -380,41 +380,41 @@ h3 a,
 h4 a, 
 h5 a, 
 h6 a {
-  color: #2ba6cb;
+	color: #2ba6cb;
 }
 
 h1 a:active, 
-h2 a:active,  
+h2 a:active,	
 h3 a:active, 
 h4 a:active, 
 h5 a:active, 
 h6 a:active { 
-  color: #2ba6cb !important; 
+	color: #2ba6cb !important; 
 } 
 
 h1 a:visited, 
-h2 a:visited,  
+h2 a:visited,	
 h3 a:visited, 
 h4 a:visited, 
 h5 a:visited, 
 h6 a:visited { 
-  color: #2ba6cb !important; 
+	color: #2ba6cb !important; 
 } 
 
 /* Panels */
 
 .panel {
-  background: #f2f2f2;
-  border: 1px solid #d9d9d9;
-  padding: 10px !important;
+	background: #f2f2f2;
+	border: 1px solid #d9d9d9;
+	padding: 10px !important;
 }
 
 .sub-grid table {
-  width: 100%;
+	width: 100%;
 }
 
 .sub-grid td.sub-columns {
-  padding-bottom: 0;
+	padding-bottom: 0;
 }
 
 /* Buttons */
@@ -424,8 +424,8 @@ table.tiny-button,
 table.small-button,
 table.medium-button,
 table.large-button {
-  width: 100%;
-  overflow: hidden;
+	width: 100%;
+	overflow: hidden;
 }
 
 table.button td,
@@ -433,29 +433,29 @@ table.tiny-button td,
 table.small-button td,
 table.medium-button td,
 table.large-button td {
-  display: block;
-  width: auto !important;
-  text-align: center;
-  background: #2ba6cb;
-  border: 1px solid #2284a1;
-  color: #ffffff;
-  padding: 8px 0;
+	display: block;
+	width: auto !important;
+	text-align: center;
+	background: #2ba6cb;
+	border: 1px solid #2284a1;
+	color: #ffffff;
+	padding: 8px 0;
 }
 
 table.tiny-button td {
-  padding: 5px 0 4px;
+	padding: 5px 0 4px;
 }
 
 table.small-button td {
-  padding: 8px 0 7px;
+	padding: 8px 0 7px;
 }
 
 table.medium-button td {
-  padding: 12px 0 10px;
+	padding: 12px 0 10px;
 }
 
 table.large-button td {
-  padding: 21px 0 18px;
+	padding: 21px 0 18px;
 }
 
 table.button td a,
@@ -463,40 +463,40 @@ table.tiny-button td a,
 table.small-button td a,
 table.medium-button td a,
 table.large-button td a {
-  font-weight: bold;
-  text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	font-size: 16px;
 }
 
 table.tiny-button td a {
-  font-size: 12px;
-  font-weight: normal;
+	font-size: 12px;
+	font-weight: normal;
 }
 
 table.small-button td a {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 table.medium-button td a {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 table.large-button td a {
-  font-size: 24px;
+	font-size: 24px;
 }
 
 table.button:hover td,
 table.button:visited td,
 table.button:active td {
-  background: #2795b6 !important;
+	background: #2795b6 !important;
 }
 
 table.button:hover td a,
 table.button:visited td a,
 table.button:active td a {
-  color: #fff !important;
+	color: #fff !important;
 }
 
 table.button:hover td,
@@ -504,7 +504,7 @@ table.tiny-button:hover td,
 table.small-button:hover td,
 table.medium-button:hover td,
 table.large-button:hover td {
-  background: #2795b6 !important;
+	background: #2795b6 !important;
 }
 
 table.button:hover td a,
@@ -522,257 +522,257 @@ table.medium-button td a:visited,
 table.large-button:hover td a,
 table.large-button:active td a,
 table.large-button td a:visited {
-  color: #ffffff !important; 
+	color: #ffffff !important; 
 }
 
 table.secondary td {
-  background: #e9e9e9;
-  border-color: #d0d0d0;
-  color: #555;
+	background: #e9e9e9;
+	border-color: #d0d0d0;
+	color: #555;
 }
 
 table.secondary td a {
-  color: #555;
+	color: #555;
 }
 
 table.secondary:hover td {
-  background: #d0d0d0 !important;
-  color: #555;
+	background: #d0d0d0 !important;
+	color: #555;
 }
 
 table.secondary:hover td a,
 table.secondary td a:visited,
 table.secondary:active td a {
-  color: #555 !important;
+	color: #555 !important;
 }
 
 table.success td {
-  background: #5da423;
-  border-color: #457a1a;
+	background: #5da423;
+	border-color: #457a1a;
 }
 
 table.success:hover td {
-  background: #457a1a !important;
+	background: #457a1a !important;
 }
 
 table.alert td {
-  background: #c60f13;
-  border-color: #970b0e;
+	background: #c60f13;
+	border-color: #970b0e;
 }
 
 table.alert:hover td {
-  background: #970b0e !important;
+	background: #970b0e !important;
 }
 
 table.radius td {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
 table.round td {
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
 }
 
 /* Outlook First */
 
 body.outlook p {
-  display: inline !important;
+	display: inline !important;
 }
 
-/*  Media Queries */
+/*	Media Queries */
 
 @media only screen and (max-width: 600px) {
 
-  table[class="body"] img {
-    width: auto !important;
-    height: auto !important;
-  }
+	table[class="body"] img {
+	width: auto !important;
+	height: auto !important;
+	}
 
-  table[class="body"] center {
-    min-width: 0 !important;
-  }
+	table[class="body"] center {
+	min-width: 0 !important;
+	}
 
-  table[class="body"] .container {
-    width: 95% !important;
-  }
+	table[class="body"] .container {
+	width: 95% !important;
+	}
 
-  table[class="body"] .row {
-    width: 100% !important;
-    display: block !important;
-  }
+	table[class="body"] .row {
+	width: 100% !important;
+	display: block !important;
+	}
 
-  table[class="body"] .wrapper {
-    display: block !important;
-    padding-right: 0 !important;
-  }
+	table[class="body"] .wrapper {
+	display: block !important;
+	padding-right: 0 !important;
+	}
 
-  table[class="body"] .columns,
-  table[class="body"] .column {
-    table-layout: fixed !important;
-    float: none !important;
-    width: 100% !important;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    display: block !important;
-  }
+	table[class="body"] .columns,
+	table[class="body"] .column {
+	table-layout: fixed !important;
+	float: none !important;
+	width: 100% !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	display: block !important;
+	}
 
-  table[class="body"] .wrapper.first .columns,
-  table[class="body"] .wrapper.first .column {
-    display: table !important;
-  }
+	table[class="body"] .wrapper.first .columns,
+	table[class="body"] .wrapper.first .column {
+	display: table !important;
+	}
 
-  table[class="body"] table.columns td,
-  table[class="body"] table.column td {
-    width: 100% !important;
-  }
+	table[class="body"] table.columns td,
+	table[class="body"] table.column td {
+	width: 100% !important;
+	}
 
-  table[class="body"] .columns td.one,
-  table[class="body"] .column td.one { width: 8.333333% !important; }
-  table[class="body"] .columns td.two,
-  table[class="body"] .column td.two { width: 16.666666% !important; }
-  table[class="body"] .columns td.three,
-  table[class="body"] .column td.three { width: 25% !important; }
-  table[class="body"] .columns td.four,
-  table[class="body"] .column td.four { width: 33.333333% !important; }
-  table[class="body"] .columns td.five,
-  table[class="body"] .column td.five { width: 41.666666% !important; }
-  table[class="body"] .columns td.six,
-  table[class="body"] .column td.six { width: 50% !important; }
-  table[class="body"] .columns td.seven,
-  table[class="body"] .column td.seven { width: 58.333333% !important; }
-  table[class="body"] .columns td.eight,
-  table[class="body"] .column td.eight { width: 66.666666% !important; }
-  table[class="body"] .columns td.nine,
-  table[class="body"] .column td.nine { width: 75% !important; }
-  table[class="body"] .columns td.ten,
-  table[class="body"] .column td.ten { width: 83.333333% !important; }
-  table[class="body"] .columns td.eleven,
-  table[class="body"] .column td.eleven { width: 91.666666% !important; }
-  table[class="body"] .columns td.twelve,
-  table[class="body"] .column td.twelve { width: 100% !important; }
+	table[class="body"] .columns td.one,
+	table[class="body"] .column td.one { width: 8.333333% !important; }
+	table[class="body"] .columns td.two,
+	table[class="body"] .column td.two { width: 16.666666% !important; }
+	table[class="body"] .columns td.three,
+	table[class="body"] .column td.three { width: 25% !important; }
+	table[class="body"] .columns td.four,
+	table[class="body"] .column td.four { width: 33.333333% !important; }
+	table[class="body"] .columns td.five,
+	table[class="body"] .column td.five { width: 41.666666% !important; }
+	table[class="body"] .columns td.six,
+	table[class="body"] .column td.six { width: 50% !important; }
+	table[class="body"] .columns td.seven,
+	table[class="body"] .column td.seven { width: 58.333333% !important; }
+	table[class="body"] .columns td.eight,
+	table[class="body"] .column td.eight { width: 66.666666% !important; }
+	table[class="body"] .columns td.nine,
+	table[class="body"] .column td.nine { width: 75% !important; }
+	table[class="body"] .columns td.ten,
+	table[class="body"] .column td.ten { width: 83.333333% !important; }
+	table[class="body"] .columns td.eleven,
+	table[class="body"] .column td.eleven { width: 91.666666% !important; }
+	table[class="body"] .columns td.twelve,
+	table[class="body"] .column td.twelve { width: 100% !important; }
 
-  table[class="body"] td.offset-by-one,
-  table[class="body"] td.offset-by-two,
-  table[class="body"] td.offset-by-three,
-  table[class="body"] td.offset-by-four,
-  table[class="body"] td.offset-by-five,
-  table[class="body"] td.offset-by-six,
-  table[class="body"] td.offset-by-seven,
-  table[class="body"] td.offset-by-eight,
-  table[class="body"] td.offset-by-nine,
-  table[class="body"] td.offset-by-ten,
-  table[class="body"] td.offset-by-eleven {
-    padding-left: 0 !important;
-  }
+	table[class="body"] td.offset-by-one,
+	table[class="body"] td.offset-by-two,
+	table[class="body"] td.offset-by-three,
+	table[class="body"] td.offset-by-four,
+	table[class="body"] td.offset-by-five,
+	table[class="body"] td.offset-by-six,
+	table[class="body"] td.offset-by-seven,
+	table[class="body"] td.offset-by-eight,
+	table[class="body"] td.offset-by-nine,
+	table[class="body"] td.offset-by-ten,
+	table[class="body"] td.offset-by-eleven {
+	padding-left: 0 !important;
+	}
 
-  table[class="body"] table.columns td.expander {
-    width: 1px !important;
-  }
+	table[class="body"] table.columns td.expander {
+	width: 1px !important;
+	}
 
-  table[class="body"] .right-text-pad,
-  table[class="body"] .text-pad-right {
-    padding-left: 10px !important;
-  }
+	table[class="body"] .right-text-pad,
+	table[class="body"] .text-pad-right {
+	padding-left: 10px !important;
+	}
 
-  table[class="body"] .left-text-pad,
-  table[class="body"] .text-pad-left {
-    padding-right: 10px !important;
-  }
+	table[class="body"] .left-text-pad,
+	table[class="body"] .text-pad-left {
+	padding-right: 10px !important;
+	}
 
-  table[class="body"] .hide-for-small,
-  table[class="body"] .show-for-desktop {
-    display: none !important;
-  }
+	table[class="body"] .hide-for-small,
+	table[class="body"] .show-for-desktop {
+	display: none !important;
+	}
 
-  table[class="body"] .show-for-small,
-  table[class="body"] .hide-for-desktop {
-    display: inherit !important;
-  }
+	table[class="body"] .show-for-small,
+	table[class="body"] .hide-for-desktop {
+	display: inherit !important;
+	}
 }
 
-  </style>
-  <style>
+	</style>
+	<style>
 
-    table.facebook td {
-      background: #3b5998;
-      border-color: #2d4473;
-    }
+	table.facebook td {
+		background: #3b5998;
+		border-color: #2d4473;
+	}
 
-    table.facebook:hover td {
-      background: #2d4473 !important;
-    }
+	table.facebook:hover td {
+		background: #2d4473 !important;
+	}
 
-    table.twitter td {
-      background: #00acee;
-      border-color: #0087bb;
-    }
+	table.twitter td {
+		background: #00acee;
+		border-color: #0087bb;
+	}
 
-    table.twitter:hover td {
-      background: #0087bb !important;
-    }
+	table.twitter:hover td {
+		background: #0087bb !important;
+	}
 
-    table.google-plus td {
-      background-color: #DB4A39;
-      border-color: #CC0000;
-    }
+	table.google-plus td {
+		background-color: #DB4A39;
+		border-color: #CC0000;
+	}
 
-    table.google-plus:hover td {
-      background: #CC0000 !important;
-    }
+	table.google-plus:hover td {
+		background: #CC0000 !important;
+	}
 
-    .template-label {
-      color: #ffffff;
-      font-weight: bold;
-      font-size: 11px;
-    }
+	.template-label {
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 11px;
+	}
 
-    .callout .wrapper {
-      padding-bottom: 20px;
-    }
+	.callout .wrapper {
+		padding-bottom: 20px;
+	}
 
-    .callout .panel {
-      background: #ECF8FF;
-      border-color: #b9e5ff;
-    }
+	.callout .panel {
+		background: #ECF8FF;
+		border-color: #b9e5ff;
+	}
 
-    .header {
-      background: #999999;
-    }
+	.header {
+		background: #999999;
+	}
 
-    .footer .wrapper {
-      background: #ebebeb;
-    }
+	.footer .wrapper {
+		background: #ebebeb;
+	}
 
-    .footer h5 {
-      padding-bottom: 10px;
-    }
+	.footer h5 {
+		padding-bottom: 10px;
+	}
 
-    table.columns .text-pad {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
+	table.columns .text-pad {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
-    table.columns .left-text-pad {
-      padding-left: 10px;
-    }
+	table.columns .left-text-pad {
+		padding-left: 10px;
+	}
 
-    table.columns .right-text-pad {
-      padding-right: 10px;
-    }
+	table.columns .right-text-pad {
+		padding-right: 10px;
+	}
 
-    @media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 600px) {
 
-      table[class="body"] .right-text-pad {
-        padding-left: 10px !important;
-      }
+		table[class="body"] .right-text-pad {
+		padding-left: 10px !important;
+		}
 
-      table[class="body"] .left-text-pad {
-        padding-right: 10px !important;
-      }
-    }
+		table[class="body"] .left-text-pad {
+		padding-right: 10px !important;
+		}
+	}
 
 	</style>
 </head>
@@ -780,186 +780,265 @@ body.outlook p {
 	<table class="body">
 		<tr>
 			<td class="center" align="center" valign="top">
-        <center>
+		<center>
 
-          <table class="row header">
-            <tr>
-              <td class="center" align="center">
-                <center>
+			<table class="row header">
+			<tr>
+				<td class="center" align="center">
+				<center>
 
-                  <table class="container">
-                    <tr>
-                      <td class="wrapper last">
+					<table class="container">
+					<tr>
+						<td class="wrapper last">
 
-                        <table class="twelve columns">
-                          <tr>
-                            <td class="six sub-columns">
-                              <a href="http://pretastyler.com"><img src="http://pretastyler.com/img/newlogo.png"></a>
-                            </td>
-                            <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
-                              <span class="template-label">Your Online Stylist and Personal Shopper</span>
-                            </td>
-                            <td class="expander"></td>
-                          </tr>
-                        </table>
+						<table class="twelve columns">
+							<tr>
+							<td class="six sub-columns">
+								<a href="http://pretastyler.com"><img src="http://pretastyler.com/img/newlogo.png"></a>
+							</td>
+							<td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
+								<span class="template-label">Your Online Stylist and Personal Shopper</span>
+							</td>
+							<td class="expander"></td>
+							</tr>
+						</table>
 
-                      </td>
-                    </tr>
-                  </table>
+						</td>
+					</tr>
+					</table>
 
-                </center>
-              </td>
-            </tr>
-          </table>
+				</center>
+				</td>
+			</tr>
+			</table>
 
-          <table class="container">
-            <tr>
-              <td>
+			<table class="container">
+			<tr>
+				<td>
 
-                <table class="row">
-                  <tr>
-                    <td class="wrapper last">
+				<table class="row">
+					<tr>
+					<td class="wrapper last">
 
-                      <table class="twelve columns">
-                        <tr>
-                          <td>
-                            <h1>Hello, <?php print $user_info['first_name'].' '.$user_info['last_name'] ?></h1>
+						<table class="twelve columns">
+						<tr>
+							<td>
+							<h1>Hello, <?php print $user_info['first_name'].' '.$user_info['last_name'] ?></h1>
 							<p class="lead">Your following item has been corrected.</p>
 							<p class="lead"><a href="http://pretastyler.com/product/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>"><?php print $garment['name'] ?></a></p>
+							<img src="http://pretastyler.com/images/garment/<?php print $garment['image_path'] ?>">
 							<p>Stylefully yours,</p>
 							<p>Ann Reinten</p>
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
+							</td>
+							<td class="expander"></td>
+						</tr>
+						</table>
 
-                    </td>
-                  </tr>
-                </table>
+					</td>
+					</tr>
+				</table>
 
-                <table class="row callout">
-                  <tr>
-                    <td class="wrapper last">
+				<table class="row callout">
+					<tr>
+					<td class="wrapper last">
 
-                      <table class="twelve columns">
-                        <tr>
-                          <td class="panel">
-                            <p class="lead">Overall Comment:</p>
-                            <p><?php print $admin_comment['overall'] ?></p>
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
+						<table class="twelve columns">
+						<tr>
+							<td class="panel">
+							<p class="lead">Overall Comment:</p>
+							<p><?php print $admin_comment['overall'] ?></p>
+							</td>
+							<td class="expander"></td>
+						</tr>
+						</table>
 
-                    </td>
-                  </tr>
-                </table>
+					</td>
+					</tr>
+				</table>
 				<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
-                <table class="row callout">
-                  <tr>
-                    <td class="wrapper last">
+				<table class="row callout">
+					<tr>
+					<td class="wrapper last">
 
-                      <table class="twelve columns">
-                        <tr>
-                          <td class="panel">
-                            <p class="lead">Correction for Question <?php print $value['field_name'] ?></p>
-                            
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
+						<table class="twelve columns">
+						<tr>
+							<td class="panel">
+							<p class="lead">Correction for Question <?php print $value['field_name'] ?></p>
+							<table class="four columns">
+								<tr>
+									<td class="panel">
+										<p>You Selected: </p>
+										<table class="row callout">
+											<tr>
+											<td class="wrapper last">
 
-                    </td>
-                  </tr>
-                </table>
+												<table class="twelve columns">
+												<tr>
+													<td class="panel">
+													<?php if (isset($value['old_criteria_name'])) { ?>
+													<p class="center"><?php print $value['old_criteria_name']?></p>
+													<img class="center" src="http://pretastyler.com/images/system/<?php print $value['old_criteria_image_path'] ?>">
+													<?php } else {?>
+													<p class="center">Not Selected</p>
+													<?php } ?>
+													</td>
+													<td class="expander"></td>
+												</tr>
+												</table>
+
+											</td>
+											</tr>
+										</table>
+									</td>
+									<td class="expander"></td>
+								</tr>
+							</table>
+							<table class="four columns">
+								<tr>
+									<td class="panel">
+										<p>Corrected To: </p>
+										<table class="row callout">
+											<tr>
+											<td class="wrapper last">
+
+												<table class="twelve columns">
+												<tr>
+													<td class="panel">
+													<p class="lead">Overall Comment:</p>
+													<p><?php print $admin_comment['overall'] ?></p>
+													</td>
+													<td class="expander"></td>
+												</tr>
+												</table>
+
+											</td>
+											</tr>
+										</table>
+									</td>
+									<td class="expander"></td>
+								</tr>
+							</table>
+							<table class="four columns">
+								<tr>
+									<td class="panel">
+										<p>Comments: </p>
+										<table class="row callout">
+											<tr>
+											<td class="wrapper last">
+
+												<table class="twelve columns">
+												<tr>
+													<td class="panel">
+													<p class="lead">Overall Comment:</p>
+													<p><?php print $admin_comment['overall'] ?></p>
+													</td>
+													<td class="expander"></td>
+												</tr>
+												</table>
+
+											</td>
+											</tr>
+										</table>
+									</td>
+									<td class="expander"></td>
+								</tr>
+							</table>
+							</td>
+							<td class="expander"></td>
+						</tr>
+						</table>
+
+					</td>
+					</tr>
+				</table>
 				<?php } ?>
-                <table class="row footer">
-                  <tr>
-                    <td class="wrapper">
+				<table class="row footer">
+					<tr>
+					<td class="wrapper">
 
-                      <table class="six columns">
-                        <tr>
-                          <td class="left-text-pad">
+						<table class="six columns">
+						<tr>
+							<td class="left-text-pad">
 
-                            <h5>Connect With Us:</h5>
+							<h5>Connect With Us:</h5>
 
-                            <table class="tiny-button facebook">
-                              <tr>
-                                <td>
-                                  <a href="#">Facebook</a>
-                                </td>
-                              </tr>
-                            </table>
+							<table class="tiny-button facebook">
+								<tr>
+								<td>
+									<a href="#">Facebook</a>
+								</td>
+								</tr>
+							</table>
 
-                            <br>
+							<br>
 
-                            <table class="tiny-button twitter">
-                              <tr>
-                                <td>
-                                  <a href="#">Twitter</a>
-                                </td>
-                              </tr>
-                            </table>
+							<table class="tiny-button twitter">
+								<tr>
+								<td>
+									<a href="#">Twitter</a>
+								</td>
+								</tr>
+							</table>
 
-                            <br>
+							<br>
 
-                            <table class="tiny-button google-plus">
-                              <tr>
-                                <td>
-                                  <a href="#">Google +</a>
-                                </td>
-                              </tr>
-                            </table>
+							<table class="tiny-button google-plus">
+								<tr>
+								<td>
+									<a href="#">Google +</a>
+								</td>
+								</tr>
+							</table>
 
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
+							</td>
+							<td class="expander"></td>
+						</tr>
+						</table>
 
-                    </td>
-                    <td class="wrapper last">
+					</td>
+					<td class="wrapper last">
 
-                      <table class="six columns">
-                        <tr>
-                          <td class="last right-text-pad">
-                            <h5>Contact Info:</h5>
-                            <p>Phone: 408.341.0600</p>
-                            <p>Email: <a href="mailto:hseldon@trantor.com">hseldon@trantor.com</a></p>
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
+						<table class="six columns">
+						<tr>
+							<td class="last right-text-pad">
+							<h5>Contact Info:</h5>
+							<p>Phone: 408.341.0600</p>
+							<p>Email: <a href="mailto:hseldon@trantor.com">hseldon@trantor.com</a></p>
+							</td>
+							<td class="expander"></td>
+						</tr>
+						</table>
 
-                    </td>
-                  </tr>
-                </table>
+					</td>
+					</tr>
+				</table>
 
 
-                <table class="row">
-                  <tr>
-                    <td class="wrapper last">
+				<table class="row">
+					<tr>
+					<td class="wrapper last">
 
-                      <table class="twelve columns">
-                        <tr>
-                          <td align="center">
-                            <center>
-                              <p style="text-align:center;"><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Unsubscribe</a></p>
-                            </center>
-                          </td>
-                          <td class="expander"></td>
-                        </tr>
-                      </table>
+						<table class="twelve columns">
+						<tr>
+							<td align="center">
+							<center>
+								<p style="text-align:center;"><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Unsubscribe</a></p>
+							</center>
+							</td>
+							<td class="expander"></td>
+						</tr>
+						</table>
 
-                    </td>
-                  </tr>
-                </table>
+					</td>
+					</tr>
+				</table>
 
-              <!-- container end below -->
-              </td>
-            </tr>
-          </table>
+				<!-- container end below -->
+				</td>
+			</tr>
+			</table>
 
-        </center>
+		</center>
 			</td>
 		</tr>
 	</table>
