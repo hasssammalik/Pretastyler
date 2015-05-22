@@ -45,7 +45,7 @@
 											<label class="col-md-12 text-center"><?php print $value['old_criteria_name']?></label>
 											<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
 											<?php } else {?>
-											<label>Not Selected</label>
+											<label class="col-md-12 text-center">Not Selected</label>
 										<?php } ?>
 										</div>
 									</div>
