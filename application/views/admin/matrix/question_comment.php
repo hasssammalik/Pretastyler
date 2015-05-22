@@ -32,7 +32,7 @@
 				<div class="box-body">
 					<div class="form-group">
 						<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
-						<label>Comments - <?php print $value['field_name'] ?></label>
+						<label>Comments - <?php print $value['field_name'] ?> - Click <a href="/admin/matrix/field/edit/<?php print $value['field_id']?>.html" target="_blank">here</a> to this field.</label>
 						<textarea class="form-control" rows="3" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
 						<?php } ?>
 					</div>
