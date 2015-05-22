@@ -58,7 +58,7 @@ $star_tooltip = array(  'Avoid items with low percentage matches',
 										<tr>
 											<td class="th1"><strong><?php print $row['area']?></strong></td>
 											<td class="th2"><?php print $row['style_item']?></td>
-											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate belowToolTip" style="background:initial;">
+											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate belowToolTip mousehand" style="background:initial;">
 												<?php print $star_result[$row['result']] ?>
 												<span class="hiddenPopup"><?php print $star_tooltip[$row['result']] ?></span>
 												<?php
