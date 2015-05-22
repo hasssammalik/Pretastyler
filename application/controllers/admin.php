@@ -1160,8 +1160,7 @@ class Admin extends CI_Controller {
 		$this->email->to($email_to);
 		$this->email->subject('Your item '.$data['garment']['name'].' has been corrected');
 		$this->email->message($message);
-		$this->email->send();
-		echo $this->email->print_debugger();
+		return $this->email->send();
 	}
 	/**
 	 * Question comments Service for this controller.
