@@ -880,12 +880,11 @@ body.outlook p {
 											<img class="center" src="http://pretastyler.com/images/system/<?php print $value['old_criteria_image_path'] ?>">
 											<?php } else {?>
 											<p style="text-align:center">Not Selected</p>
+											<?php } ?>
 											</td>
 											<td class="expander"></td>
 										  </tr>
 										</table>
-										
-										<?php } ?>
 									  </td>
 									  <td class="expander"></td>
 									</tr>
