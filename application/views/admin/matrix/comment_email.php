@@ -150,7 +150,7 @@ table.container td.last {
 table.one { width: 30px; }
 table.two { width: 80px; }
 table.three { width: 130px; }
-table.four { width: 180px; }
+table.four { width: 178px; margin: 1px; height: 350px}
 table.five { width: 230px; }
 table.six { width: 280px; }
 table.seven { width: 330px; }
@@ -348,7 +348,9 @@ p.lead, p.lede, p.leed {
 	font-size: 18px;
 	line-height:21px;
 }
-
+p.lead.red {
+	color: #e72775;
+}
 p { 
 	margin-bottom: 10px;
 }
@@ -870,7 +872,7 @@ body.outlook p {
 								  <table class="four columns">
 									<tr>
 									  <td>
-										<p class="lead">You Selected:</p>
+										<p class="lead red">You Selected:</p>
 										<table class="four columns">
 										  <tr>
 											<td class="panel">
@@ -895,7 +897,7 @@ body.outlook p {
 								  <table class="four columns">
 									<tr>
 									  <td>
-										<p class="lead">Corrected To:</p>
+										<p class="lead red">Corrected To:</p>
 										<table class="four columns">
 										  <tr>
 											<td class="panel">
@@ -916,7 +918,7 @@ body.outlook p {
 								  <table class="four columns">
 									<tr>
 									  <td>
-										<p class="lead">Comments:</p>
+										<p class="lead red">Comments:</p>
 										<table class="four columns">
 										  <tr>
 											<td class="panel">
