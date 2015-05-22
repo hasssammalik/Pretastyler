@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-5">
 			<!-- general form elements -->
 			<div class="box box-primary">
 				<div class="box-header">
@@ -25,6 +25,8 @@
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
+		</div>
+		<div class="col-md-7">
 			<div class="box box-primary">
 				<div class="box-header">
 					<h3 class="box-title">Individual Field Comments</h3>
@@ -37,36 +39,26 @@
 						</div>
 						<div class="row">
 							<div class="col-md-4">
-								<div class="row">
-									<label class="col-md-12">You Selected:</label>
-									<div class="col-md-12">
-										<div class="row">
-											<?php if (isset($value['old_criteria_name'])) { ?>
-											<label class="col-md-12 text-center"><?php print $value['old_criteria_name']?></label>
-											<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
-											<?php } else {?>
-											<label class="col-md-12 text-center">Not Selected</label>
-										<?php } ?>
-										</div>
-									</div>
+								<label class="col-md-12">You Selected:</label>
+								<div class="col-md-12" style="bolder: 1px solid rgb(169, 169, 169);">
+									<?php if (isset($value['old_criteria_name'])) { ?>
+									<label class="col-md-12 text-center"><?php print $value['old_criteria_name']?></label>
+									<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
+									<?php } else {?>
+									<label class="col-md-12 text-center">Not Selected</label>
+									<?php } ?>
 								</div>
 							</div>
 							<div class="col-md-4">
-								<div class="row">
-									<label class="col-md-12">Changed To:</label>
-									<div class="col-md-12">
-										<div class="row">
-											<label class="col-md-12 text-center"><?php print $value['new_criteria_name']?></label>
-											<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
-										</div>
-									</div>
+								<label class="col-md-12">Changed To:</label>
+								<div class="col-md-12" style="bolder: 1px solid rgb(169, 169, 169);">
+									<label class="col-md-12 text-center"><?php print $value['new_criteria_name']?></label>
+									<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
 								</div>
 							</div>
 							<div class="col-md-4">
-								<div class="row">
-									<label class="col-md-12">Comments:</label>
-									<textarea class="col-md-12" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
-								</div>
+								<label class="col-md-12">Comments:</label>
+								<textarea class="col-md-12" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
 							</div>
 						</div>
 						<?php } ?>
