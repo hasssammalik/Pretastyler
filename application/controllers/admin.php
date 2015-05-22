@@ -1149,7 +1149,7 @@ class Admin extends CI_Controller {
 		if (empty($email_to)){
 			$email_to = $this->user_model->get_user_email($data['garment']['import_user_id']);
 		}
-		$message = $this->load->view('admin/matrix/comment_email', $data);
+		$message = $this->load->view('admin/matrix/comment_email', $data, TRUE);
 		
 		$this->load->library('email');
 		$this->email->clear();
