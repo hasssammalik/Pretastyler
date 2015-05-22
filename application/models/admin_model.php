@@ -526,6 +526,14 @@ class Admin_model extends CI_Model{
 		
 		return $detailed_comments;
 	}
+	/**
+	 * update_comment_email_sent
+	 *
+	 * 
+	 */
+	public function update_comment_email_sent($garment_id) {
+		$this->db->set(array('email_sent' => 1, 'email_date' => date('Y-m-d H:i:s')))->where('garment_id', $garment_id)->update('assessment_comment');
+	}
 }
 /* End of file admin_model.php */
 /* Location: ./application/models/admin_model.php */
