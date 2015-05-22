@@ -489,7 +489,7 @@ class Admin_model extends CI_Model{
 		}
 		//get field & criteria information
 		$field_detail = $this->db->select('field_id, name, position')->from('field')->where_in('field_id', $field_ids)->get()->result_array();
-		$criteria_detail = $this->db->select('criteria_id, name, image_path')->from('criteria')->where_in('criteria', $criteria_ids)->get()->result_array();
+		$criteria_detail = $this->db->select('criteria_id, name, image_path')->from('criteria')->where_in('criteria_id', $criteria_ids)->get()->result_array();
 		//map field& criteria information to 
 		foreach($field_detail as $field_key=>$field_value){
 			foreach($detailed_comments['individuals'] as $comment_key=>$comment_value){
