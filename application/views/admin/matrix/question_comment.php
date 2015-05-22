@@ -38,30 +38,34 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div class="row">
-									<label>You Selected:</label>
-									<div class="form-control">
-										<?php if (isset($value['old_criteria_name'])) { ?>
-										<label><?php print $value['old_criteria_name']?></label>
-										<img src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
-										<?php } else {?>
-										<label>Not Selected</label>
+									<label class="col-md-12">You Selected:</label>
+									<div class="form-control col-md-12">
+										<div class="row">
+											<?php if (isset($value['old_criteria_name'])) { ?>
+											<label class="col-md-12 text-center"><?php print $value['old_criteria_name']?></label>
+											<img class="col-md-12" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
+											<?php } else {?>
+											<label>Not Selected</label>
 										<?php } ?>
-									</div>
-								</div>
-							</div>
-								<div class="col-md-4">
-								<div class="row">
-									<label>Changed To:</label>
-									<div class="form-control">
-										<label><?php print $value['new_criteria_name']?></label>
-										<img src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="row">
-									<label>Comments:</label>
-									<textarea class="form-control" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
+									<label class="col-md-12">Changed To:</label>
+									<div class="form-control col-md-12">
+										<div class="row">
+											<label class="col-md-12 text-center"><?php print $value['new_criteria_name']?></label>
+											<img class="col-md-12" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="row">
+									<label class="col-md-12">Comments:</label>
+									<textarea class="form-control col-md-12" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
 								</div>
 							</div>
 						</div>
