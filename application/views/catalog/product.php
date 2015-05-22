@@ -293,7 +293,7 @@ $star_result = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 									
 									<li><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" target="_blank" class="pi"><i class="icon-pinterest"></i></a></li>
 									
-									<li><a href="" class="tweet" target="" ><i class="icon-twitter"></i></a></li>
+									<li><a href="" class="tweet" id="t_share" target=""><i class="icon-twitter"></i></a></li>
 									
 									<li><a href="<?php print current_url() ?>" class="gplus" target="_blank" ><i class="icon-googleplus"></i></a></li>
 									
