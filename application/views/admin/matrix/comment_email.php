@@ -903,7 +903,7 @@ body.outlook p {
 								  <table class="four columns">
 									<tr>
 									  <td>
-										<p style="text-align:center">Comments:</p>
+										<p class="lead">Comments:</p>
 										<p><?php print $value['content'] ?></p>
 									  </td>
 									  <td class="expander"></td>
