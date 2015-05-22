@@ -20,9 +20,21 @@
 				</div><!-- /.box-header -->
 				<div class="box-body">
 					<div class="form-group">
-						<label>Overall Comments</label>
-							<textarea class="form-control" rows="3" placeholder="Enter Tool Tip" name="tooltip"></textarea>
-							<pre><?php print_r($admin_comment); ?></pre>
+						<pre><?php print_r($admin_comment); ?></pre>
+						<textarea class="form-control" rows="3" placeholder="Enter Overall Comments" name="overall-comments"><?php print $admin_comment['overall'] ?></textarea>
+					</div>
+				</div><!-- /.box-body -->
+			</div><!-- /.box -->
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3 class="box-title">Individual Field Comments</h3>
+				</div><!-- /.box-header -->
+				<div class="box-body">
+					<div class="form-group">
+						<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
+						<label>Comments - <?php print $value['field_name'] ?></label>
+						<textarea class="form-control" rows="3" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
+						<?php } ?>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
