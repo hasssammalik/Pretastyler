@@ -794,7 +794,7 @@ body.outlook p {
                         <table class="twelve columns">
                           <tr>
                             <td class="six sub-columns">
-                              <img src="http://pretastyler.com/img/newlogo.png">
+                              <a href="http://pretastyler.com"><img src="http://pretastyler.com/img/newlogo.png"></a>
                             </td>
                             <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
                               <span class="template-label">Your Online Stylist and Personal Shopper</span>
@@ -825,6 +825,7 @@ body.outlook p {
                           <td>
                             <h1>Hello, <?php print $user_info['first_name'].' '.$user_info['last_name'] ?></h1>
                 						<p class="lead">Your following item has been corrected.</p>
+                						<p class="lead"><a href="http://pretastyler.com/product/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>"><?php print $garment['name'] ?></a></p>
                 						<p>Stylefully yours,</p>
                 						<p>Ann Reinten</p>
                           </td>
