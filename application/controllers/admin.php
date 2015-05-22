@@ -1155,13 +1155,12 @@ class Admin extends CI_Controller {
 		$this->email->clear();
 		$config['wordwrap'] = FALSE;
 		$config['mailtype'] = 'html';
+		$this->email->initialize($config);
 		$this->email->from('no-reply@pretastyler.com', 'Prêt à Styler');
 		$this->email->to($email_to);
 		$this->email->subject('Your item '.$data['garment']['name'].' has been corrected');
 		$this->email->message($message);
 		return $this->email->send();
-
-		$this->email->initialize($config);
 	}
 	/**
 	 * Question comments Service for this controller.
