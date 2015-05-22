@@ -871,6 +871,7 @@ body.outlook p {
 								  <table class="four columns">
 									<tr>
 									  <td>
+										<p class="lead">You Selected:</p>
 										<?php if (isset($value['old_criteria_name'])) { ?>
 										<p style="text-align:center"><?php print $value['old_criteria_name']?></p>
 										<img class="center" src="http://pretastyler.com/images/system/<?php print $value['old_criteria_image_path'] ?>">
@@ -888,6 +889,7 @@ body.outlook p {
 								  <table class="four columns">
 									<tr>
 									  <td>
+										<p class="lead">Corrected To:</p>
 										<p style="text-align:center"><?php print $value['new_criteria_name']?></p>
 										<img class="center" src="http://pretastyler.com/images/system/<?php print $value['new_criteria_image_path'] ?>">
 									  </td>
