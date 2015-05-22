@@ -823,7 +823,7 @@ body.outlook p {
                       <table class="twelve columns">
                         <tr>
                           <td>
-                            <h1>Hello, <?php print $user_info['first_name'].' '.$user_info['last_name']</h1>
+                            <h1>Hello, <?php print $user_info['first_name'].' '.$user_info['last_name'] ?></h1>
                 						<p class="lead">Your following item has been corrected.</p>
                 						<p>Stylefully yours,</p>
                 						<p>Ann Reinten</p>
