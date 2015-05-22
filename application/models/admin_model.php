@@ -477,14 +477,14 @@ class Admin_model extends CI_Model{
 			if ($value->field_id == -1){
 				$detailed_comments['overall'] = $value->content;
 			} else {
+				$field_ids[] = $value->field_id;
+				$criteria_ids[] = $value->new_criteria_id;
 				if (isset($value->old_criteria_id)){
+					$criteria_ids[] = $value->old_criteria_id;
 					$detailed_comments['individuals'][] = array('field_id' => $value->field_id, 'new_criteria_id' => $value->new_criteria_id, 'content' => $value->content, 'old_criteria_id' => $value->old_criteria_id);
 				} else {
 					$detailed_comments['individuals'][] = array('field_id' => $value->field_id, 'new_criteria_id' => $value->new_criteria_id, 'content' => $value->content);
 				}
-				$field_ids[] = $value->field_id;
-				$criteria_ids[] = $value->new_criteria_id;
-				$criteria_ids[] = $value->old_criteria_id;
 			}
 		}
 		//get field & criteria information
