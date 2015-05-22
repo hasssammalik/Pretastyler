@@ -1,6 +1,12 @@
 <?php
-$star_result = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
-
+$star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
+$star_tooltip = array(  'Avoid items with low percentage matches',
+						'Avoid items with low percentage matches',
+						'Risky items with med-low percentage matches',
+						'OK items with med-high percentage matches',
+						'Good items with high percentage matches',
+						'Great items with your highest percentage matches'
+				);
 ?>
 
 
@@ -37,7 +43,7 @@ $star_result = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 						<div class="section">
 							<div class="title title-nopadding">
 								<table>
-									<?php if( !empty($advise) && is_array($advise) ) {  ?>
+									<?php if( !empty($advise) && is_array($advise) ) { ?>
 									<tr>
 										<th class="th1">Area</th>
 										<th class="th2" style="padding-right: 40px;">Style</th>
@@ -52,11 +58,9 @@ $star_result = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 										<tr>
 											<td class="th1"><strong><?php print $row['area']?></strong></td>
 											<td class="th2"><?php print $row['style_item']?></td>
-											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate" style="background:initial;">
-												
+											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate belowToolTip" style="background:initial;">
 												<?php print $star_result[$row['result']] ?>
-												<!-- <i class="icon-star"></i> -->
-
+												<span class="hiddenPopup"><?php print $star_tooltip[$row['result']] ?></span>
 												<?php
 												if ($this->flexi_auth->in_group('Administrators')){
 													print '('.$row['score'].')';
