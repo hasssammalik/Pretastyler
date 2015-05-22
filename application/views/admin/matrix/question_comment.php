@@ -6,7 +6,7 @@
 			<div class="btn-group pull-right">
 				<a href="/admin/matrix/question-comments.html" class="btn btn-danger">Back</a>
 				<a href="/admin/matrix/question-comment/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
-				<input type="submit" class="btn btn-primary button-save" value="Save">
+				<!--<input type="submit" class="btn btn-primary button-save" value="Save">-->
 			</div>
 			<br/>
 		</div>
@@ -34,6 +34,9 @@
 					<h3 class="box-title">Email Preview</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
+					<div class="btn-group pull-right">
+						<div class="btn btn-primary button-save send-click">Re-send Email</div>
+					</div>
 					<iframe src="/admin/matrix/comment-email/<?php print $garment['garment_id'] ?>.html" style="width: 100%;height: 1500px;"></iframe>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
@@ -86,10 +89,15 @@
 			<div class="btn-group pull-right">
 				<a href="/admin/matrix/question-comments.html" class="btn btn-danger">Back</a>
 				<a href="/admin/matrix/question-comment/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
-				<input type="submit" class="btn btn-primary button-save" value="Save">
+				<!--<input type="submit" class="btn btn-primary button-save" value="Save">-->
 			</div>
 			<br/>
 		</div>
 	</div>
 </section><!-- /.content -->
 <?php echo form_close(); ?>
+<script>
+$('.send-click').click(function(){
+	$.get( "/admin/send-email/<?php print $garment['garment_id']; ?>.html", function( data ) {});
+});
+</script>
