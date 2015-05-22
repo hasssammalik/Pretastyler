@@ -34,7 +34,7 @@
 					<h3 class="box-title">Email Preview</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
-					<iframe src="/admin/matrix/comment-email/<?php print $garment['garment_id']> ?>.html"></iframe>
+					<iframe src="/admin/matrix/comment-email/<?php print $garment['garment_id'] ?>.html"></iframe>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 		</div>
