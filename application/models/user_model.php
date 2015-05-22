@@ -115,6 +115,26 @@ class User_model extends CI_Model
 		}
 	}
 	/**
+	 * get_user_email
+	 * Read user's spec by user_id 
+	 * 
+	 *
+	 * @return garment array ()
+	 */
+	public function get_user_email($user_id = FALSE)
+	{
+		if ($user_id) {
+			$query = $this->db->select('uacc_email AS email')->from('user_accounts')->where('uacc_id', $user_id);
+			if ($query->num_rows >= 1){
+				return $query->row_array()['email'];
+			} else {
+				return FALSE;
+			}
+		} else {
+			return FALSE;
+		}
+	}
+	/**
 	 * get_all_user_info
 	 * Read user's spec by user_id 
 	 * 

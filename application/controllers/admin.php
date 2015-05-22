@@ -1138,6 +1138,31 @@ class Admin extends CI_Controller {
 		}
 	}
 	/**
+	 * Send Email Service for this controller
+	 */
+	public function send_email($garment_id, $email_to = FALSE){
+		$this->login_check();
+		$data['garment'] = $this->garment_model->get_garment_info($garment_id);
+		$data['user_info'] = $this->user_model->get_user_info($data['garment']['import_user_id']);
+		$data['admin_comment'] = $this->admin_model->get_detailed_question_comments($garment_id);
+		if (empty($email_to)){
+			$email_to = $this->user_model->get_user_email($data['garment']['import_user_id']);
+		}
+		$message = $this->load->view('admin/matrix/comment_email', $data);
+		
+		$this->load->library('email');
+		$this->email->clear();
+		$config['wordwrap'] = FALSE;
+		$config['mailtype'] = 'html';
+		$this->email->from('no-reply@pretastyler.com', 'Prêt à Styler');
+		$this->email->to($email_to);
+		$this->email->subject('Your item '.$data['garment']['name'].' has been corrected');
+		$this->email->message($message);
+		return $this->email->send();
+
+		$this->email->initialize($config);
+	}
+	/**
 	 * Question comments Service for this controller.
 	 */
 	public function question_comments(){
