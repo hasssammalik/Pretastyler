@@ -34,14 +34,18 @@
 						<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
 						<label>Comments - <?php print $value['field_name'] ?> - Click <a href="/admin/matrix/field/edit/<?php print $value['field_id']?>.html" target="_blank">here</a> to this field.</label>
 						<div class="col-md-4">
-						<label>You Selected:</label>
+							<label>You Selected:</label>
+							<div class="form-control">
+							</div>
+						</div>
+							<div class="col-md-4">
+							<label>Changed To:</label>
+							<div class="form-control">
+							</div>
 						</div>
 						<div class="col-md-4">
-						<label>Changed To:</label>
-						</div>
-						<div class="col-md-4">
-						<label>Comments:</label>
-						<textarea class="form-control" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
+							<label>Comments:</label>
+							<textarea class="form-control" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
 						</div>
 						<?php } ?>
 					</div>
