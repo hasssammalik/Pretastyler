@@ -6,7 +6,7 @@
 <?php if (isset($extraMeta)) print $extraMeta ?>
 <title><?php print $title ?> - Prêt à Styler – Your Online Stylist and Personal Shopper</title>
 <link href="/css/vendors.css?v=2.2.0.0" rel="stylesheet">
-<link href="/css/default.css?v=2.2.1.2" rel="stylesheet">
+<link href="/css/default.css?v=2.2.1.3" rel="stylesheet">
 <link href="/css/mozilla.css?v=2.2.0.0" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
 
@@ -44,7 +44,7 @@
 <script src="/js/jquery.jscrollpane.min.js"></script>
 <script src="/js/jquery.elevateZoom-3.0.8.min.js"></script>
 <script src="/js/functions.js?v=2.2.0.6"></script>
-<script src="/js/script.js?v=2.2.0.7"></script>
+<script src="/js/script.js?v=2.2.0.8"></script>
 <script src="/js/tabs.js?v=2.2.0.0"></script>
 <script src="/js/menu-mall.js?v=2.2.0.9"></script>
 <?php if (isset($extraJS)) print $extraJS ?>
