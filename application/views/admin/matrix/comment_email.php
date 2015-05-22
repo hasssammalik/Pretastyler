@@ -824,10 +824,10 @@ body.outlook p {
                         <tr>
                           <td>
                             <h1>Hello, <?php print $user_info['first_name'].' '.$user_info['last_name'] ?></h1>
-                						<p class="lead">Your following item has been corrected.</p>
-                						<p class="lead"><a href="http://pretastyler.com/product/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>"><?php print $garment['name'] ?></a></p>
-                						<p>Stylefully yours,</p>
-                						<p>Ann Reinten</p>
+							<p class="lead">Your following item has been corrected.</p>
+							<p class="lead"><a href="http://pretastyler.com/product/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>"><?php print $garment['name'] ?></a></p>
+							<p>Stylefully yours,</p>
+							<p>Ann Reinten</p>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -844,7 +844,8 @@ body.outlook p {
                       <table class="twelve columns">
                         <tr>
                           <td class="panel">
-                            <p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. <a href="#">Click it! ?</a></p>
+                            <p class="lead">Overall Comment:</p>
+                            <p><?php print $admin_comment['overall'] ?></p>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -853,7 +854,25 @@ body.outlook p {
                     </td>
                   </tr>
                 </table>
+				<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
+                <table class="row callout">
+                  <tr>
+                    <td class="wrapper last">
 
+                      <table class="twelve columns">
+                        <tr>
+                          <td class="panel">
+                            <p class="lead">Correction for Question <?php print $value['field_name'] ?></p>
+                            
+                          </td>
+                          <td class="expander"></td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+				<?php } ?>
                 <table class="row footer">
                   <tr>
                     <td class="wrapper">
