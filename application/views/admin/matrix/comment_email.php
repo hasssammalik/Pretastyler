@@ -734,8 +734,7 @@ body.outlook p {
 	}
 
 	.callout .panel {
-		background: #ECF8FF;
-		border-color: #b9e5ff;
+		border-color: #000;
 	}
 
 	.header {
@@ -872,7 +871,7 @@ body.outlook p {
 									<tr>
 									  <td>
 										<p class="lead">You Selected:</p>
-										<table class="three columns">
+										<table class="four columns">
 										  <tr>
 											<td class="panel">
 											<?php if (isset($value['old_criteria_name'])) { ?>
@@ -897,7 +896,7 @@ body.outlook p {
 									<tr>
 									  <td>
 										<p class="lead">Corrected To:</p>
-										<table class="three columns">
+										<table class="four columns">
 										  <tr>
 											<td class="panel">
 												<p style="text-align:center"><?php print $value['new_criteria_name']?></p>
@@ -918,7 +917,7 @@ body.outlook p {
 									<tr>
 									  <td>
 										<p class="lead">Comments:</p>
-										<table class="three columns">
+										<table class="four columns">
 										  <tr>
 											<td class="panel">
 												<p height="100%"><?php print $value['content'] ?></p>
