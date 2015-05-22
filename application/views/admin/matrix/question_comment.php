@@ -29,6 +29,14 @@
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3 class="box-title">Email Preview</h3>
+				</div><!-- /.box-header -->
+				<div class="box-body">
+					<iframe src="/admin/matrix/comment-email/<?php print $garment['garment_id']> ?>.html"></iframe>
+				</div><!-- /.box-body -->
+			</div><!-- /.box -->
 		</div>
 		<div class="col-md-7">
 			<div class="box box-primary">
