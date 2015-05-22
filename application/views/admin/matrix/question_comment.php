@@ -20,7 +20,6 @@
 				</div><!-- /.box-header -->
 				<div class="box-body">
 					<div class="form-group">
-						<pre><?php print_r($admin_comment); ?></pre>
 						<textarea class="form-control" rows="3" placeholder="Enter Overall Comments" name="overall-comments"><?php print $admin_comment['overall'] ?></textarea>
 					</div>
 				</div><!-- /.box-body -->
@@ -34,16 +33,17 @@
 				<div class="box-body">
 					<div class="form-group">
 						<?php foreach ($admin_comment['individuals'] as $key=>$value) {?>
+						<hr>
 						<div class="row">
 							<label class="col-md-12">Comments - <?php print $value['field_name'] ?> - Click <a href="/admin/matrix/field/edit/<?php print $value['field_id']?>.html" target="_blank">here</a> to this field.</label>
 						</div>
 						<div class="row">
 							<div class="col-md-4">
 								<label class="col-md-12">You Selected:</label>
-								<div class="col-md-12" style="bolder: 1px solid rgb(169, 169, 169);">
+								<div class="col-md-12" style="border: 1px solid rgb(169, 169, 169);">
 									<?php if (isset($value['old_criteria_name'])) { ?>
-									<label class="col-md-12 text-center"><?php print $value['old_criteria_name']?></label>
-									<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
+									<label class="col-md-12 text-center"><a href="/admin/matrix/criteria/edit/<?php print $value['old_criteria_id'] ?>.html"><?php print $value['old_criteria_name']?></a></label>
+									<img class="col-md-6 col-md-offset-3" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
 									<?php } else {?>
 									<label class="col-md-12 text-center">Not Selected</label>
 									<?php } ?>
@@ -51,9 +51,9 @@
 							</div>
 							<div class="col-md-4">
 								<label class="col-md-12">Changed To:</label>
-								<div class="col-md-12" style="bolder: 1px solid rgb(169, 169, 169);">
-									<label class="col-md-12 text-center"><?php print $value['new_criteria_name']?></label>
-									<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
+								<div class="col-md-12" style="border: 1px solid rgb(169, 169, 169);">
+									<label class="col-md-12 text-center"><a href="/admin/matrix/criteria/edit/<?php print $value['new_criteria_id'] ?>.html"><?php print $value['new_criteria_name']?></a></label>
+									<img class="col-md-6 col-md-offset-3" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
 								</div>
 							</div>
 							<div class="col-md-4">
@@ -61,6 +61,7 @@
 								<textarea class="col-md-12" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
 							</div>
 						</div>
+						<hr>
 						<?php } ?>
 					</div>
 				</div><!-- /.box-body -->
