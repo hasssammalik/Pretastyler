@@ -59,15 +59,13 @@ foreach ($garments as $row) { ?>
 					} else {
 						print 1;
 					}
-					?>
-					<!-- <i class="icon-star"></i> -->
-					%
+					?>%
 				<?php } else if ($row['score'] == 0){
 						//print '1<i class="icon-star"></i>';
 						print '1%';
 				} else {
 						print 'Not Assessed';
-				}?><br>MATCH
+				}?><br><span class="ratingmatchword">MATCH</span>
 			</div>
 			<?php } ?>
 		</div>
