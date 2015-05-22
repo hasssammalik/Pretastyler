@@ -872,11 +872,19 @@ body.outlook p {
 									<tr>
 									  <td>
 										<p class="lead">You Selected:</p>
-										<?php if (isset($value['old_criteria_name'])) { ?>
-										<p style="text-align:center"><?php print $value['old_criteria_name']?></p>
-										<img class="center" src="http://pretastyler.com/images/system/<?php print $value['old_criteria_image_path'] ?>">
-										<?php } else {?>
-										<p style="text-align:center">Not Selected</p>
+										<table class="three columns">
+										  <tr>
+											<td class="panel">
+											<?php if (isset($value['old_criteria_name'])) { ?>
+											<p style="text-align:center"><?php print $value['old_criteria_name']?></p>
+											<img class="center" src="http://pretastyler.com/images/system/<?php print $value['old_criteria_image_path'] ?>">
+											<?php } else {?>
+											<p style="text-align:center">Not Selected</p>
+											</td>
+											<td class="expander"></td>
+										  </tr>
+										</table>
+										
 										<?php } ?>
 									  </td>
 									  <td class="expander"></td>
@@ -890,8 +898,15 @@ body.outlook p {
 									<tr>
 									  <td>
 										<p class="lead">Corrected To:</p>
-										<p style="text-align:center"><?php print $value['new_criteria_name']?></p>
-										<img class="center" src="http://pretastyler.com/images/system/<?php print $value['new_criteria_image_path'] ?>">
+										<table class="three columns">
+										  <tr>
+											<td class="panel">
+												<p style="text-align:center"><?php print $value['new_criteria_name']?></p>
+												<img class="center" src="http://pretastyler.com/images/system/<?php print $value['new_criteria_image_path'] ?>">
+											</td>
+											<td class="expander"></td>
+										  </tr>
+										</table>
 									  </td>
 									  <td class="expander"></td>
 									</tr>
@@ -904,7 +919,14 @@ body.outlook p {
 									<tr>
 									  <td>
 										<p class="lead">Comments:</p>
-										<p><?php print $value['content'] ?></p>
+										<table class="three columns">
+										  <tr>
+											<td class="panel">
+												<p height="100%"><?php print $value['content'] ?></p>
+											</td>
+											<td class="expander"></td>
+										  </tr>
+										</table>
 									  </td>
 									  <td class="expander"></td>
 									</tr>
@@ -922,87 +944,6 @@ body.outlook p {
 					</tr>
 				</table>
 				<?php } ?>
-				<table class="row footer">
-					<tr>
-					<td class="wrapper">
-
-						<table class="six columns">
-						<tr>
-							<td class="left-text-pad">
-
-							<h5>Connect With Us:</h5>
-
-							<table class="tiny-button facebook">
-								<tr>
-								<td>
-									<a href="#">Facebook</a>
-								</td>
-								</tr>
-							</table>
-
-							<br>
-
-							<table class="tiny-button twitter">
-								<tr>
-								<td>
-									<a href="#">Twitter</a>
-								</td>
-								</tr>
-							</table>
-
-							<br>
-
-							<table class="tiny-button google-plus">
-								<tr>
-								<td>
-									<a href="#">Google +</a>
-								</td>
-								</tr>
-							</table>
-
-							</td>
-							<td class="expander"></td>
-						</tr>
-						</table>
-
-					</td>
-					<td class="wrapper last">
-
-						<table class="six columns">
-						<tr>
-							<td class="last right-text-pad">
-							<h5>Contact Info:</h5>
-							<p>Phone: 408.341.0600</p>
-							<p>Email: <a href="mailto:hseldon@trantor.com">hseldon@trantor.com</a></p>
-							</td>
-							<td class="expander"></td>
-						</tr>
-						</table>
-
-					</td>
-					</tr>
-				</table>
-
-
-				<table class="row">
-					<tr>
-					<td class="wrapper last">
-
-						<table class="twelve columns">
-						<tr>
-							<td align="center">
-							<center>
-								<p style="text-align:center;"><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Unsubscribe</a></p>
-							</center>
-							</td>
-							<td class="expander"></td>
-						</tr>
-						</table>
-
-					</td>
-					</tr>
-				</table>
-
 				<!-- container end below -->
 				</td>
 			</tr>
