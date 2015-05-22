@@ -98,6 +98,8 @@
 <?php echo form_close(); ?>
 <script>
 $('.send-click').click(function(){
-	$.get( "/admin/send-email/<?php print $garment['garment_id']; ?>.html", function( data ) {});
+	$.get( "/admin/send-email/<?php print $garment['garment_id']; ?>.html", function( data ) {
+		$('.send-click').text("Finished! Click to re-send again.");
+	});
 });
 </script>
