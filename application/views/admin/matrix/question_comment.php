@@ -39,11 +39,11 @@
 							<div class="col-md-4">
 								<div class="row">
 									<label class="col-md-12">You Selected:</label>
-									<div class="form-control col-md-12">
+									<div class="col-md-12">
 										<div class="row">
 											<?php if (isset($value['old_criteria_name'])) { ?>
 											<label class="col-md-12 text-center"><?php print $value['old_criteria_name']?></label>
-											<img class="col-md-12" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
+											<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['old_criteria_image_path'] ?>">
 											<?php } else {?>
 											<label>Not Selected</label>
 										<?php } ?>
@@ -54,10 +54,10 @@
 							<div class="col-md-4">
 								<div class="row">
 									<label class="col-md-12">Changed To:</label>
-									<div class="form-control col-md-12">
+									<div class="col-md-12">
 										<div class="row">
 											<label class="col-md-12 text-center"><?php print $value['new_criteria_name']?></label>
-											<img class="col-md-12" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
+											<img class="col-md-4 col-md-offset-4" src="/images/system/<?php print $value['new_criteria_image_path'] ?>">
 										</div>
 									</div>
 								</div>
@@ -65,7 +65,7 @@
 							<div class="col-md-4">
 								<div class="row">
 									<label class="col-md-12">Comments:</label>
-									<textarea class="form-control col-md-12" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
+									<textarea class="col-md-12" rows="8" placeholder="Enter Comments for <?php print $value['field_name'] ?>" name="overall-comments"><?php print $value['content'] ?></textarea>
 								</div>
 							</div>
 						</div>
