@@ -45,7 +45,7 @@
 <script src="/js/jquery.elevateZoom-3.0.8.min.js"></script>
 <script src="/js/functions.js?v=2.2.0.6"></script>
 <script src="/js/script.js?v=2.2.0.8"></script>
-<script src="/js/tabs.js?v=2.2.0.0"></script>
+<script src="/js/tabs.js?v=2.2.0.1"></script>
 <script src="/js/menu-mall.js?v=2.2.0.9"></script>
 <?php if (isset($extraJS)) print $extraJS ?>
 
