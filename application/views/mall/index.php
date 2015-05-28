@@ -68,13 +68,40 @@ if (!$this->flexi_auth->is_logged_in()){
 					<div class="col widfulled">
 						<label>RATING:</label><span class="sectionToggle mousehand"><i class="icon-triangle"></i></span>
 						<div class="QuickRating search-quick-rating quick-star sectionTogglediv" id="quick-rating-search">
-							<span class="hoverStars starclick mousehand lowclassstar" data-val="1" title="Avoid">☆<br><span class="star-visible">1</span></span>
-							<span class="hoverStars starclick mousehand lowclassstar" data-val="2" title="Maybe">☆<br><span class="star-visible">2</span></span>
-							<span class="hoverStars starclick mousehand lowclassstar" data-val="3" title="OK">☆<br><span class="star-visible">3</span></span>
-							<span class="hoverStars starclick mousehand" data-val="4" title="Good">☆<br><span class="star-visible">4</span></span>
-							<span class="hoverStars starclick mousehand active" data-val="5" title="Great">☆<br><span class="star-visible">5</span></span>
+							
+							<span class="hoverStars starclick mousehand lowclassstar" data-val="1" data-tooltip="Avoid items with low percentage matches" title="Avoid">
+								☆
+								<br>
+								<span class="star-visible">1</span>
+							</span>
+
+							<span class="hoverStars starclick mousehand lowclassstar" data-val="2" title="Maybe" data-tooltip="Risky items with med-low percentage matches">
+								☆
+								<br>
+								<span class="star-visible">2</span>
+							</span>
+							
+							<span class="hoverStars starclick mousehand lowclassstar" data-val="3" title="OK" data-tooltip="OK items with med-high percentage matches">
+								☆
+								<br>
+								<span class="star-visible">3</span>
+							</span>
+							
+							<span class="hoverStars starclick mousehand" data-val="4" title="Good" data-tooltip="Good items with high percentage matches">
+								☆
+								<br>
+								<span class="star-visible">4</span>
+							</span>
+							
+							<span class="hoverStars starclick mousehand active" data-val="5" title="Great" data-tooltip="Great items with your highest percentage matches">
+								☆
+								<br>
+								<span class="star-visible">5</span>
+							</span>
+							
 							<span class="starAllShow mousehand" title="Show all">SHOW ALL</span>
 							<input type="hidden" name="starinput" class="starinputval">
+
 						</div>
 					</div>
 					<hr class="widfulled">

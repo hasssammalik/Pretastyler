@@ -1,12 +1,5 @@
 <?php
 $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
-$star_tooltip = array(  'Avoid items with low percentage matches',
-						'Avoid items with low percentage matches',
-						'Risky items with med-low percentage matches',
-						'OK items with med-high percentage matches',
-						'Good items with high percentage matches',
-						'Great items with your highest percentage matches'
-				);
 ?>
 
 
@@ -19,6 +12,17 @@ $star_tooltip = array(  'Avoid items with low percentage matches',
 				
 				<?php 
 					if ($garment['score']){
+
+						$score_percent = 1;
+						if ($garment['score'] >= 8.91 ){
+							$score_percent = 99;
+						} else if ($garment['score'] > 0.9 ){
+							$score_percent = round(( ( 98 * $garment['score'] ) - 80.19 ) / 8.01 );
+						} else {
+							$score_percent = 1;
+						}
+						$score_percent .= '%';
+
 						if ($garment['score']>7.3){
 							$score = 5;
 							} else if ($garment['score']>6){
@@ -58,9 +62,9 @@ $star_tooltip = array(  'Avoid items with low percentage matches',
 										<tr>
 											<td class="th1"><strong><?php print $row['area']?></strong></td>
 											<td class="th2"><?php print $row['style_item']?></td>
-											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate belowToolTip mousehand" style="background:initial;">
+											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate mousehand" style="background:initial;">
 												<?php print $star_result[$row['result']] ?>
-												<span class="hiddenPopup"><?php print $star_tooltip[$row['result']] ?></span>
+												
 												<?php
 												if ($this->flexi_auth->in_group('Administrators')){
 													print '('.$row['score'].')';
@@ -143,8 +147,11 @@ $star_tooltip = array(  'Avoid items with low percentage matches',
 									
 									<?php if ($this->flexi_auth->is_logged_in()) { ?>
 										<div class="productRate">
-											<?php echo ( empty($score) ? 0 : $score ) ; ?>
-											<i class="icon-star"></i>
+											<?php 
+											echo $score_percent;
+											// echo ( empty($score) ? 0 : $score ) ; ?>
+
+											<!-- <i class="icon-star"></i> -->
 										</div>
 										<?php } else { ?>
 										
