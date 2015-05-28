@@ -213,6 +213,20 @@
 							<li><a href="/admin/matrix/question-comments.html"><i class="fa fa-angle-double-right"></i> Question Comments</a></li>
 						</ul>
 					</li>
+					<!-- HA: FOR NOTIS-->
+					<li class="treeview active">
+						<a href="#">
+							<i class="fa fa-th"></i> 
+							<span>Notification Management</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="admin/notifications/index.html"><i class="fa fa-angle-double-right"></i> All Notifications</a></li>
+						</ul>
+					</li>
+
+					<!-- /HA: FOR NOTIS-->
+
 				</ul>
 			</section>
 			<!-- /.sidebar -->
