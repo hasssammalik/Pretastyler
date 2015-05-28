@@ -69,19 +69,24 @@ if (!$this->flexi_auth->is_logged_in()){
 						<label>RATING:</label><span class="sectionToggle mousehand"><i class="icon-triangle"></i></span>
 						<div class="QuickRating search-quick-rating quick-star sectionTogglediv" id="quick-rating-search">
 							
-							<span class="hoverStars starclick mousehand lowclassstar" data-val="1" title="Avoid" datatooltipnew="Avoid items with low percentage matches">☆<br><span class="star-visible">1</span>
+							<span class="hoverStars starclick mousehand lowclassstar mallStar-tooltip-js" data-val="1" title="Avoid" datatooltipnew="Avoid items with low percentage matches">
+								☆<br><span class="star-visible">1</span>
 							</span>
 
-							<span class="hoverStars starclick mousehand lowclassstar" data-val="2" title="Maybe" datatooltipnew="Risky items with med-low percentage matches">☆<br><span class="star-visible">2</span>
+							<span class="hoverStars starclick mousehand lowclassstar mallStar-tooltip-js" data-val="2" title="Maybe" datatooltipnew="Risky items with med-low percentage matches">
+								☆<br><span class="star-visible">2</span>
 							</span>
 							
-							<span class="hoverStars starclick mousehand lowclassstar" data-val="3" title="OK" datatooltipnew="OK items with med-high percentage matches">☆<br><span class="star-visible">3</span>
+							<span class="hoverStars starclick mousehand lowclassstar mallStar-tooltip-js" data-val="3" title="OK" datatooltipnew="OK items with med-high percentage matches">
+								☆<br><span class="star-visible">3</span>
 							</span>
 							
-							<span class="hoverStars starclick mousehand" data-val="4" title="Good" datatooltipnew="Good items with high percentage matches">☆<br><span class="star-visible">4</span>
+							<span class="hoverStars starclick mousehand mallStar-tooltip-js" data-val="4" title="Good" datatooltipnew="Good items with high percentage matches">
+								☆<br><span class="star-visible">4</span>
 							</span>
 							
-							<span class="hoverStars starclick mousehand active" data-val="5" title="Great" datatooltipnew="Great items with your highest percentage matches">☆<br><span class="star-visible">5</span>
+							<span class="hoverStars starclick mousehand active mallStar-tooltip-js" data-val="5" title="Great" datatooltipnew="Great items with your highest percentage matches">
+								☆<br><span class="star-visible">5</span>
 							</span>
 							
 							<span class="starAllShow mousehand" title="Show all">SHOW ALL</span>
