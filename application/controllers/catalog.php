@@ -223,6 +223,25 @@ class Catalog extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	/**
+	 * Request for getting extra details of Product
+	 */
+	public function product_extra_details()
+	{
+		if (!$this->input->post()){
+			show_404();
+			return false;
+		}
+		$garment_id = (int) $this->input->post('garment_id', TRUE);
+		if( !empty( $garment_id )){
+			$data['advise'] = $this->garment_model->get_garment_advise($garment_id, $this->flexi_auth->get_user_id(), $this->flexi_auth->in_group('Administrators'));
+			$this->load->view('catalog/product_extra', $data);
+		} else {
+			echo false;
+		}
+		
+	}
+
+	/**
 	 * How It Works Page for this controller.
 	 */
 	public function how_it_works()
