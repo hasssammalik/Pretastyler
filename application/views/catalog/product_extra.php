@@ -1,4 +1,4 @@
-<div class="newDesign_popover" style="display: none;">
+<div class="newDesign_popover">
 
 	<div class="may_gInsight hoverpopupDiv" style="display: none;">
 									
@@ -64,11 +64,9 @@
 						</tr>
 					<?php  } ?>
 					</table>
-					</div>
 				</div>
-		</div>
+			</div>
 	</div>
-
 
 	<div class="may_StylingRecom hoverpopupDiv" style="display: none;">
 													
