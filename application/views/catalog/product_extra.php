@@ -13,10 +13,10 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 			<div class="section">
 				<table>
 					<?php if( !empty($advise) && is_array($advise) ) { ?>
-					<tr>
-						<th class="th1">Area</th>
-						<th class="th2" style="padding-right: 40px;">Style</th>
-						<th class="th3">Result</th>
+					<tr class="gInsight_Content_table_header">
+						<th class="th1">AREA</th>
+						<th class="th2" style="padding-right: 40px;">STYLE ITEM</th>
+						<th class="th3">RESULT</th>
 					</tr>
 					<?php foreach ($advise as $row){ ?>
 							<tr>
