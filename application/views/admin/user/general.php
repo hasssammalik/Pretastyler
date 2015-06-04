@@ -17,6 +17,7 @@
 								<th>Email Address</th>
 								<th>Creation Date</th>
 								<th>Last Login</th>
+								<th>Days Since Last Login</th>
 								<th>Garments</th>
 								<th>Group</th>
 								<th>Infusionsoft</th>
@@ -33,6 +34,7 @@
 								<th>Email Address</th>
 								<th>Creation Date</th>
 								<th>Last Login</th>
+								<th>Days Since Last Login</th>
 								<th>Garments</th>
 								<th>Group</th>
 								<th>Infusionsoft</th>
@@ -63,6 +65,7 @@ $(function(){
 			{ "data": "email" },
 			{ "data": "creation_date" },
 			{ "data": "last_login" },
+			{ "data": "Days_Since_Last_Login" },
 			{ "data": "garments" },
 			{ "data": "group_name" },
 			{ "data": "infusionsoft_id" },
