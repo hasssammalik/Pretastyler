@@ -1,3 +1,6 @@
+<?php
+$star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
+?>
 <div class="newDesign_popover">
 
 	<div class="may_gInsight hoverpopupDiv" style="display: none;">
