@@ -422,6 +422,9 @@ class Admin extends CI_Controller {
 		if ($owner) {
 			$this->datatables->where('pas_user_info.user_id', $owner);
 		}
+		//---HM-----//
+		$this->datatables->where('pas_garment.date_admin_modified', 'is not null');
+
 		$this->datatables->edit_column('owner', '$1 (<a href="/admin/user/view/$2.html">User</a>, <a href="/admin/garment/user/$2.html">Garment</a>)', 'owner, user_id,');
 		$this->datatables->edit_column('image', '<img class="hoverBigImage" src="$1" height=20 />', 'image');
 		$this->datatables->edit_column('retailer', '<a href="$1" target="_blank">$2</a>', 'url, retailer');
