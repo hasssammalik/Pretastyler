@@ -105,7 +105,28 @@ class Garment_model extends CI_Model{
 			}
 		}
 		if ($criteria) {
-			$index = 0;
+			$criterias = array();
+			foreach ($criteria as $row){
+				if (!empty($row)){
+					$criterias[] = $row;
+				}
+			}
+			$sql_query = 'SELECT distinct(d0.garment_id) FROM pas_garment_criteria AS d0';
+			if (count($criterias) == 1){
+				$sql_query.= ' WHERE d0.criteria_id = '.$criterias[0];
+			} else {
+				$where_clause = array();
+				$where_clause[] = 'd0.criteria_id = '.$criterias[0];
+				for ($i = 1; $i < count($criterias); $i++){
+					$sql_query .= ', pas_garment_criteria AS d'.$i;
+					$where_clause[] = 'd0.garment_id = d'.$i.'.garment_id';
+					$where_clause[] = 'd'.$i.'.criteria_id = '.$criterias[$i];
+				}
+				$sql_query.= ' WHERE '.implode(' AND ', $where_clause);
+			}
+			$this->db->join('('.$sql_query.') AS criteria', 'garment.garment_id = criteria.garment_id', 'right');
+			
+			/* $index = 0;
 			$criterias = array();
 			foreach ($criteria as $row){
 				if (!empty($row)){
@@ -186,7 +207,7 @@ class Garment_model extends CI_Model{
 					$sql_query.= ' WHERE '.implode(' AND ', $where_clause);
 				}
 				$this->db->join('('.$sql_query.') AS criteria', 'garment.garment_id = criteria.garment_id', 'right');
-			}
+			} */
 		}
 		$this->db->distinct('garment_id')->from('garment');
 		if ($occasion) {
