@@ -74,7 +74,7 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 	<div class="may_StylingRecom hoverpopupDiv" style="display: none;">
 		<span class="gPopups_close_btn mousehand">&times;</span>
 		<div class="StylingRecom_header bkpinkycolor">
-			<div class="StylingRecom_header_one">HOW TO LOOK YOUR BEST</div>
+			<div class="StylingRecom_header_one" style="min-height: 27px;">HOW TO LOOK YOUR BEST</div>
 			<div class="StylingRecom_header_two"></div>
 		</div>
 		<div class="StylingRecom_Content">
