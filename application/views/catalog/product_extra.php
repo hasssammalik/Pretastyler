@@ -3,8 +3,10 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 ?>
 <div class="newDesign_popover">
 
+	<span class="gPopups_close_btn" style="display: none;">&times;</span>
+
 	<div class="may_gInsight hoverpopupDiv" style="display: none;">
-									
+		
 		<div class="gInsight_header bkpinkycolor">
 			<div class="gInsight_header_one">GARMENT INSIGHTS:</div>
 			<div class="gInsight_header_two"><?php if(isset($score)&& $score>2) {?>WHY IT WORKS FOR YOU<?php }else{echo 'WHY IT DOES NOT WORK FOR YOU?'; }?></div>
