@@ -3,10 +3,8 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 ?>
 <div class="newDesign_popover">
 
-	<span class="gPopups_close_btn" style="display: none;">&times;</span>
-
 	<div class="may_gInsight hoverpopupDiv" style="display: none;">
-		
+		<span class="gPopups_close_btn">&times;</span>
 		<div class="gInsight_header bkpinkycolor">
 			<div class="gInsight_header_one">GARMENT INSIGHTS:</div>
 			<div class="gInsight_header_two"><?php if(isset($score)&& $score>2) {?>WHY IT WORKS FOR YOU<?php }else{echo 'WHY IT DOES NOT WORK FOR YOU?'; }?></div>
@@ -74,7 +72,7 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 	</div>
 
 	<div class="may_StylingRecom hoverpopupDiv" style="display: none;">
-													
+		<span class="gPopups_close_btn">&times;</span>
 		<div class="StylingRecom_header bkpinkycolor">
 			<div class="StylingRecom_header_one">HOW TO LOOK YOUR BEST</div>
 			<div class="StylingRecom_header_two"></div>
