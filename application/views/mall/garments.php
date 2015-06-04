@@ -94,13 +94,10 @@ foreach ($garments as $row) { ?>
 						print 'Not Assessed';
 				}?><br><span class="ratingmatchword" data-ratenum="<?php echo $score ?>">MATCH</span>
 			</div>
-
-			<div class="extraOptions_garment">
-			</div>
-
 			<?php } ?>
 		</div>
 	</div>
+	<div class="extraOptions_garment"></div>
 </div>
 <?php }
 } ?>
