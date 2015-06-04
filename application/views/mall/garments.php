@@ -35,12 +35,12 @@ foreach ($garments as $row) { ?>
 
 				<li>
 					<a class="garment_insights_popup mousehand">
-						<img src="https://cdn0.iconfinder.com/data/icons/TWG_Retina_Icons/24/bulb_off.png">
+						<img src="/img/icon-insights-32.png" class="garment_insights_popup_img">
 					</a>
 				</li>
 				<li>
 					<a class="garment_recommendataion_popup mousehand" title="Styling Recommendation">
-						<img src="https://cdn0.iconfinder.com/data/icons/TWG_Retina_Icons/24/bulb_off.png">
+						<img src="/img/icon-recommend-32.png" class="garment_recommendataion_popup_img">
 					</a>
 				</li>
 
