@@ -95,7 +95,7 @@ foreach ($garments as $row) { ?>
 				}?><br><span class="ratingmatchword" data-ratenum="<?php echo $score ?>">MATCH</span>
 			</div>
 
-			<div class="extraOptions_garment" style="display: none;">
+			<div class="extraOptions_garment">
 			</div>
 
 			<?php } ?>
