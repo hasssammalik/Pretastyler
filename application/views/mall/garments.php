@@ -96,7 +96,6 @@ foreach ($garments as $row) { ?>
 			</div>
 
 			<div class="extraOptions_garment" style="display: none;">
-
 			</div>
 
 			<?php } ?>
