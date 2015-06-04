@@ -232,6 +232,8 @@ class Catalog extends CI_Controller {
 			return false;
 		}
 		$garment_id = (int) $this->input->post('garment_id', TRUE);
+		$data['score_id'] = (int) $this->input->post('score_id', TRUE);
+
 		if( !empty( $garment_id )){
 			$data['advise'] = $this->garment_model->get_garment_advise($garment_id, $this->flexi_auth->get_user_id(), $this->flexi_auth->in_group('Administrators'));
 			$this->load->view('catalog/product_extra', $data);

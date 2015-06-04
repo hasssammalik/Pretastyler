@@ -48,7 +48,7 @@
 							?>
 							<tr>
 								<td colspan="3">
-									<div><?php print '(Average['.(array_sum($scores) / count($scores)).'] + Min['.min($scores).'])/2 = '.$garment['score']; ?></div>
+									<div><?php print '(Average['.(array_sum($scores) / count($scores)).'] + Min['.min($scores).'])/2 = '.$score_id; ?></div>
 									<div>excelent > 7.3</div>
 									<div>good > 6</div>
 									<div>ok > 5</div>

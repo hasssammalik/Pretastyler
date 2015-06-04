@@ -92,7 +92,7 @@ foreach ($garments as $row) { ?>
 						print '1%';
 				} else {
 						print 'Not Assessed';
-				}?><br><span class="ratingmatchword">MATCH</span>
+				}?><br><span class="ratingmatchword" data-ratenum="<?php echo $score ?>">MATCH</span>
 			</div>
 
 			<div class="extraOptions_garment" style="display: none;">
