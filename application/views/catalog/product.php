@@ -638,6 +638,22 @@ if ( !empty($garment['score']) ){
 
 													function select_garments_spec() {
 														
+														var input_minBust = ($('.minBust-check').attr('checked') == "checked")?1:0;
+
+														if( default_values[5] < 4 ){
+															input_minBust = 0;
+														}
+
+														var requestvalues = { "height_select_id" : default_values[0],
+															"weight_select_id" : default_values[1],
+															"age_select_id" : default_values[2],
+															"body_shape_select_id" : default_values[3],
+															"body_ratio_select_id" : default_values[4],
+															"bra_select_id" : default_values[5],
+															"build_select_id" : default_values[6],
+															"minBust" : input_minBust
+														};
+														
 														$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 															
 															$( ".garments_in_product" ).html( data );
@@ -649,7 +665,7 @@ if ( !empty($garment['score']) ){
 														$(".button_callgarment").on("click", function() {
 															select_garments_spec();
 														});
-														
+
 													});
 													
 												</script>
