@@ -37,13 +37,13 @@ if ( !empty($garment['score']) ){
 		<div class="cross">
 			<div class="<?php echo $imageclass;?> cross-image"><img src="/images/pink_button-05.png" alt /></div>
 		</div>
-		<?php if ($this->flexi_auth->is_logged_in()) { ?>
+		<?php if (!$this->flexi_auth->is_logged_in()) { ?>
 			<div class="notLoggedInHeader bkpinkycolor">
 				<p>
 				<?php if( $garment['outdated'] == 1 ){ ?>
 					OH, BOO! LOOKS LIKE IT'S SOLD OUT. DONT'T WORRY, WE CAN FIND YOU SOMETHING EVEN BETTER
 				<?php } else { ?>
-
+					Leave the hard work to us; We’ll find the style that suit your shape
 				<?php } ?>
 				</p>
 			</div>
@@ -151,9 +151,9 @@ if ( !empty($garment['score']) ){
 									
 										<span class="pinkyheading notLoggedInHeaderSecond">
 											<?php if( $garment['outdated'] == 1 ) { ?>
-												SURE, IT'S NICE, BUT WILL IT SUIT YOU?
-											<?php } else { ?>
 												YOU WANT IT &bull; WE'LL FIND IT &bull; FAST
+											<?php } else { ?>
+												SURE, IT'S NICE, BUT WILL IT SUIT YOU?
 											<?php } ?>
 										</span>
 									
@@ -311,8 +311,8 @@ if ( !empty($garment['score']) ){
 											?>
 											</a>
 										</li>
-										<ul>
-										</div>
+										</ul>
+									</div>
 										<ul class="bottomOptions">
 									
 									<li>
@@ -330,6 +330,10 @@ if ( !empty($garment['score']) ){
 									</div>
 									<div class="clear"></div>
 								</div>
+
+								<?php if( $garment['outdated'] == 1 ){ ?>
+									<div class="modal_for_outdated_garment"></div>
+								<?php } ?>
 							</div>
 							
 							
@@ -371,8 +375,10 @@ if ( !empty($garment['score']) ){
 							<?php } else { ?>
 							<div class="panel2 newpanelDesign forceDivTwoColumn" id="ourAdvice">
 								<div class="panelheaderheightfixer">
-									<div class="panelNewHeader bkgrey signup-title">Never Buy a <strong>'DUD'</strong> again </div>
-									<div style="background:url('/images/bodyback.png');background-position: 96% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
+									<div class="panelNewHeader notLoggedIn_panelHeader">
+										Select your features and we will start finding items just like the one you want plus lots of others and place them in your private fashion mall.
+									</div>
+									
 								</div>
 								
 								<div class="panelContent">
