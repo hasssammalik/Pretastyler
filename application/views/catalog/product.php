@@ -728,9 +728,10 @@ if ( !empty($garment['score']) ){
 											<br>
 										</section>
 										
-										<div class="clear"></div>
 								</div>
-								<?php } ?>
+							<?php } ?>
+							<div class="clear"></div>
+							<br>
 							<div class="panel2 newpanelDesign" id="similarItems">
 								<div class="panelHeader tab-look-header">Similar Items that suit you</div>
 								<div class="panelContent tab-look-body">
