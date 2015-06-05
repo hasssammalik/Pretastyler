@@ -19,9 +19,9 @@ echo form_open(); echo form_close();
 
  if( !empty( $breadcrumb[0] ) ) { ?>
 	<div>
-		<div class="headPageTitle">
+		<h1 class="headPageTitle">
 		   <?php echo strtoupper($title) ?>
-		</div>
+		</h1>
 	</div>
 <br>
 <?php } ?>
