@@ -6,7 +6,7 @@ if ($garments) {
 foreach ($garments as $row) { ?>
 <div class="item may_product_with_popups" style="font-size: 14px;">
 	<div class="imgWrap">
-		<div class="itemName itemidentification" style="margin-bottom: 0px;" garment_id="<?php print $row['garment_id'] ?>"><span style="text-align: left;text-overflow: ellipsis;white-space: nowrap;width: 200px;display: block;padding-top: 10px;height: 16px;"><?php print $row['name'] ?></span></div>
+		<div class="itemName itemidentification" style="margin-bottom: 0px;" garment_id="<?php print $row['garment_id'] ?>"><h5 style="text-align: left;text-overflow: ellipsis;white-space: nowrap;width: 200px;display: block;padding-top: 10px;height: 16px;font-weight:initial"><?php print $row['name'] ?></h5></div>
 		<div class="hoverForMallListOptions" style="margin-top: 0px;">
 			<span style = "height: 324px;">
 				<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"></a>
