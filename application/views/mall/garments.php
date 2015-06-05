@@ -59,6 +59,7 @@ foreach ($garments as $row) { ?>
 				<img src="/img/icons-25-info-pink.png" class="imageiconinfo-pink bottomleftimage-mall">
 				<img src="/img/icons-25-info-grey.png" class="imageiconinfo-grey bottomleftimage-mall">
 			</a>
+			<div class="mall-store-name"><?php print $row['store'] ?></div>
 			<?php if ($this->flexi_auth->is_logged_in() && isset( $row['score'] ) ) {?>
 			<div class="rating jTourStepsCustom8" title="Suitability rating for you"><?php 
 				/*if ($row['score']){
