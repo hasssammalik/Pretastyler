@@ -9,7 +9,13 @@ foreach ($garments as $row) { ?>
 		<div class="itemName itemidentification" style="margin-bottom: 0px;" garment_id="<?php print $row['garment_id'] ?>"><span style="text-align: left;text-overflow: ellipsis;white-space: nowrap;width: 200px;display: block;padding-top: 10px;height: 16px;"><?php print $row['name'] ?></span></div>
 		<div class="hoverForMallListOptions" style="margin-top: 0px;">
 			<span style = "height: 324px;">
-				<a class="imgcontainer" href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank">
+				<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"></a>
+				<a class="imgcontainer" href="<?php 
+						if (strpos($row['url'],'theiconic.com.au') !== false) {
+							print 'https://www.tagserve.com.au/clickServlet?AID=264&MID=36&PID=47&SID=297&CID=52&SUBID=&TARGETURL=';
+						}
+						print $row['url']; 
+					?>" target="_blank">
 					<img src="<?php print '/images/garment/'.$row['image_path'] ?>" alt="<?php print $row['name'] ?>">
 				</a>
 			</span>
@@ -53,6 +59,7 @@ foreach ($garments as $row) { ?>
 				<img src="/img/icons-25-info-pink.png" class="imageiconinfo-pink bottomleftimage-mall">
 				<img src="/img/icons-25-info-grey.png" class="imageiconinfo-grey bottomleftimage-mall">
 			</a>
+			<div class="mall-store-name"><?php print $row['store'] ?></div>
 			<?php if ($this->flexi_auth->is_logged_in() && isset( $row['score'] ) ) {?>
 			<div class="rating jTourStepsCustom8" title="Suitability rating for you"><?php 
 				/*if ($row['score']){
