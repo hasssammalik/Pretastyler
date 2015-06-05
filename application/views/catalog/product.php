@@ -659,6 +659,9 @@ if ( !empty($garment['score']) ){
 														$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 6, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 															
 															$( ".garments_in_product" ).html( data );
+
+															$(".galleryAreaWrap .galleryArea").css("background-color", "#E5E5E5");
+
 															$("body").removeClass("loading");
 														});
 													}
