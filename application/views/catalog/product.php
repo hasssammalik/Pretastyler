@@ -656,7 +656,7 @@ if ( !empty($garment['score']) ){
 
 														$("body").addClass("loading");
 
-														$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 8, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+														$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 6, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 															
 															$( ".garments_in_product" ).html( data );
 															$("body").removeClass("loading");
