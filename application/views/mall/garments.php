@@ -9,7 +9,7 @@ foreach ($garments as $row) { ?>
 		<div class="itemName itemidentification" style="margin-bottom: 0px;" garment_id="<?php print $row['garment_id'] ?>"><span style="text-align: left;text-overflow: ellipsis;white-space: nowrap;width: 200px;display: block;padding-top: 10px;height: 16px;"><?php print $row['name'] ?></span></div>
 		<div class="hoverForMallListOptions" style="margin-top: 0px;">
 			<span style = "height: 324px;">
-				<a class="imgcontainer" href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"></a>
+				<a href="/product/<?php print $row['garment_id'].'-'.url_title($row['name']).'.html' ?>" target="_blank"></a>
 				<a class="imgcontainer" href="<?php 
 						if (strpos($row['url'],'theiconic.com.au') !== false) {
 							print 'https://www.tagserve.com.au/clickServlet?AID=264&MID=36&PID=47&SID=297&CID=52&SUBID=&TARGETURL=';
