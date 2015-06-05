@@ -632,8 +632,6 @@ if ( !empty($garment['score']) ){
 														});
 													}
 													
-													
-
 												</script>
 												
 												<div class="profileWrap container">
@@ -708,6 +706,7 @@ if ( !empty($garment['score']) ){
 														<div class="clear"></div>
 													</div>
 													<br>
+													
 													<div class="home-profile home-profile-build">
 														<div class="slider-name left">
 															<p>BUILD</p>
@@ -718,16 +717,15 @@ if ( !empty($garment['score']) ){
 														</div>
 														<div class="clear"></div>
 													</div>
-													
 													<div class="clear"></div>
 													
-												</div>
+												</div> <!-- profileWrap -->
 												<div class="clear"></div>
-											</div>
+											</div> <!-- wid100 -->
 											<div class="clear"></div>
-											<br>
-										</section>
-										
+											
+										</section> 
+									</div>
 								</div>
 							<?php } ?>
 							<div class="clear"></div>
