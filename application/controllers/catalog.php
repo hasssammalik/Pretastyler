@@ -72,7 +72,8 @@ class Catalog extends CI_Controller {
 		$data['content_class'] = "full_width_page";
 		$data['extraFooter'] = TRUE;
 		
-		$data['extraMeta'] = '<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
+		$data['extraMeta'] = '
+		<meta name="keyword" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 		<meta name="description" content="PRÊT À STYLER makes clothes shopping easy. The future of shopping has arrived.">
 		';
 		$data['extraCSS'] = '
@@ -85,7 +86,7 @@ class Catalog extends CI_Controller {
 		<script src="/js/circular-progress.js"></script>
 		<script type="text/javascript">$(function(){ preload_all_img_tags(); });</script>
 		';
-		$data['similar_garments'] = $this->garment_model->get_similar_products();
+		//$data['similar_garments'] = $this->garment_model->get_similar_products();
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu_mall', $data);
@@ -178,7 +179,16 @@ class Catalog extends CI_Controller {
 		$data['size'] = $this->size_model->get_garment_size($garment_id);
 		$data['title'] = $data['garment']['name'];
 		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>', $data['title'] );
-		$data['extraJS'] = '<script src="/js/actual_product.js?v=2.2.0.5"></script>
+		$data['extraCSS'] = '
+		<link rel="stylesheet" href="/css/jquery-ui.css?v=2.2.0.2">
+		<link href="/css/jquery-ui-slider-pips.css?v=2.2.0.2" rel="stylesheet">
+		';
+		$data['extraJS'] = '
+		<script src="/js/actual_product.js?v=2.2.0.5"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+		<script src="/js/jquery-ui-slider-pips.js?v=2.2.0.2"></script>';
+		
+		$data['extraMeta'] = '
 		<meta itemprop="name" content="'.$data['garment']['name'].'">
 		<meta itemprop="description" content="'.$data['garment']['name'].'">
 		<meta itemprop="image" content="https://pretastyler.com/images/garment/'.$data['garment']['image_path'].'">
@@ -193,6 +203,7 @@ class Catalog extends CI_Controller {
 		<meta property="og:image:type"       content="image/jpg">
 		<meta property="og:image:width"      content="200">
 		<meta property="og:image:height"     content="700">
+
 		';
 		$data['extraDiv'] = '<script> window.fbAsyncInit = function() {	FB.init({ appId:"918018634911199", xfbml: true,	version: "v2.3"	});	};
 			(function(d, s, id){
