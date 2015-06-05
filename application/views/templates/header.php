@@ -6,13 +6,13 @@
 <?php if (isset($extraMeta)) print $extraMeta ?>
 <title><?php print $title ?> - Prêt à Styler – Your Online Stylist and Personal Shopper</title>
 <link href="/css/vendors.css?v=2.2.0.0" rel="stylesheet">
-<link href="/css/default.css?v=2.2.1.3" rel="stylesheet">
+<link href="/css/default.css?v=2.2.1.4" rel="stylesheet">
 <link href="/css/mozilla.css?v=2.2.0.0" rel="stylesheet">
 <?php if (isset($extraCSS)) print $extraCSS; ?>
 
 <!--- - - - - - CSS overwriter   - - - - -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
-<link href="/css/style.css?v=2.2.0.3" rel="stylesheet">
+<link href="/css/style.css?v=2.2.0.4" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/browserfixes.css?v=2.2.0.1">
 <!--[if IE]>
 <link rel="stylesheet" type="text/css" href="/css/IEbrowserfixes.css?v=2.2.0.1">
