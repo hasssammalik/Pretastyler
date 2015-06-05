@@ -384,9 +384,9 @@ if ( !empty($garment['score']) ){
 									
 								</div>
 								
-								<div class="panelContent">
+								<div class="panelContent panelproductpage">
 									
-										<section class="role-element container wid60 preta-tooltip" id="the-product">
+										<section class="productpage container preta-tooltip" id="the-product" style="margin-right: 50px;">
 			
 											<div class="wid100">
 											
@@ -635,17 +635,6 @@ if ( !empty($garment['score']) ){
 													
 
 												</script>
-												
-												<div class="container">
-													
-													<div class="homeprofile-head" id="profile">
-													<a href="#profile">	<img src="/images/newhomedown.png" class="noneArea noneLiner "></a>
-														
-														<p class="i profile-big-title" style="font-size:1.8vw;">Start by selecting your <strong>body features</strong></p>
-														
-													</div>
-													
-												</div>
 												
 												<div class="profileWrap container">
 													
