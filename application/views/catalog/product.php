@@ -162,7 +162,7 @@ if ( !empty($garment['score']) ){
 							
 						</div>
 						
-						<div class="galleryArea relative itemidentification panelcontentSecond" garment_id="<?php print ( !empty( $garment['garment_id'] ) ? $garment['garment_id'] : '' ) ?>">
+						<div class="galleryArea relative itemidentification panelcontentSecond garments_in_product" garment_id="<?php print ( !empty( $garment['garment_id'] ) ? $garment['garment_id'] : '' ) ?>">
 							
 							<div class="productFirstColumn product-inside-columns">
 								
@@ -605,6 +605,11 @@ if ( !empty($garment['score']) ){
 															pull_profile_garment();
 														});
 														
+
+														$(".button_callgarment").on("click", function () {
+															select_garments_spec();
+														})
+
 													});
 													
 													function pull_profile_garment( ) {
@@ -629,6 +634,16 @@ if ( !empty($garment['score']) ){
 														//save profile to global
 														$.post( "/user/homepage-user-profile.html", { uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 															//
+														});
+
+
+													}
+
+													function select_garments_spec() {
+														
+														$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
+															
+															$( ".garments_in_product" ).html( data );
 														});
 													}
 													
@@ -726,10 +741,18 @@ if ( !empty($garment['score']) ){
 											
 										</section> 
 									</div>
+									<div class="clear"></div>
+									<br>
+									<div class="product_page_slider_below_btn">
+										<div class="button_callgarment product_page_slider_below_btn_one bkpinkycolor">SEE ALL YOUR STYLES</div> 
+										<div class="product_page_slider_below_btn_two"><a href="/our-story.html">WHY?</a></div>
+										<div class="product_page_slider_below_btn_three"><a href="/our-story.html">WHO IS PRETASTYLER?</a></div>
+									</div>
 								</div>
 							<?php } ?>
-							<div class="clear"></div>
+							
 							<br>
+							
 							<div class="panel2 newpanelDesign" id="similarItems">
 								<div class="panelHeader tab-look-header">Similar Items that suit you</div>
 								<div class="panelContent tab-look-body">
@@ -756,53 +779,4 @@ if ( !empty($garment['score']) ){
 					<script type="text/javascript">
 						icon_functions();
 					</script>
-<div class="HomePage-profileslider-product" style="display: none;">
-	
-		 <section class="wid100 bkYellowGrey home-product-list-custom-profile" id="home-product-custom-list">
-			<!--
-			<div class="homeprofile-head">
-				<img src="/images/newhomedown.png" class="noneArea noneLiner">
-				<p class="i profile-big-title homepage-titles">Here's just a few <strong>garments we've found for you</strong></p>
-			</div>
-			<style type="text/css">
-				.garments:after { display: none;}
-			</style>
-			<div id="homepage-slider">
-				<div class="garments turnOffPlaceHolderGarment"></div>
-				<div class="clear"></div>
-			</div>
 			
-			-->
-			
-
-
-			<div class="clear"></div>
-			<div class="homeprofile-head">
-				
-				<p class="homeprofile-bodytext" style=" font-style: italic; font-size: 1.8vw;"><br/>What's<strong > Next?</strong></p>
-				<div class="mall-links">	
-					<div class="mall-link1" >
-						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm on a roll show me </p>
-						<a class="bkpinkycolor home-vistmallbtn container noneLiner" 
-						onClick="ga('send', 'event', { eventCategory: 'button-morequestions', eventAction: 'click', eventLabel: 'button more questions', eventValue: 1});"
-						id="more-questions" href="/your-mall.html" 
-						onmouseover="document.getElementById('tooltip1').style.display = 'block';" 
-						onmouseout="document.getElementById('tooltip1').style.display = 'none';">
-							MORE QUESTIONS <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
-						</a>
-						<div class="mall-link-tooltip" id="tooltip1">Just a few more questions will change the accuracy of your mall from good to great.</div>
-					</div>
-					<div class="mall-link2">
-						<p class="homeprofile-bodytext" style="font-style: italic;font-weight:bold;  font-size: 26px;">I'm too excited to wait </p>
-						<button class="bkpinkycolor home-vistmallbtn container noneLiner"  id="signup-popup">
-							LET ME IN <span class="quickbelowicon unicode-icon right">&#9658; &nbsp;</span>
-						</button>
-						
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			
-		</section>
-
-</div>
