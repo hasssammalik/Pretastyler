@@ -606,9 +606,9 @@ if ( !empty($garment['score']) ){
 														});
 														
 
-														$(".button_callgarment").on("click", function () {
+														$(".button_callgarment").on("click", function() {
 															select_garments_spec();
-														})
+														});
 
 													});
 													
