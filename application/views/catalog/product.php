@@ -1,41 +1,57 @@
 <?php
 $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
-?>
 
+if ( !empty($garment['score']) ){
+	$score_percent = 1;
+	if ($garment['score'] >= 8.91 ){
+		$score_percent = 99;
+	} else if ($garment['score'] > 0.9 ){
+		$score_percent = round(( ( 98 * $garment['score'] ) - 80.19 ) / 8.01 );
+	} else {
+		$score_percent = 1;
+	}
+	$score_percent .= '%';
+
+	if ($garment['score']>7.3){
+		$score = 5;
+		} else if ($garment['score']>6){
+		$score = 4;
+		} else if ($garment['score']>5){
+		$score = 3;
+		} else if ($garment['score']>3){
+		$score = 2;
+		} else {
+		$score = 1;
+	}
+}
+?>
 
 <div class="mainContent ">
 	<div class="productDisplay">
-		<?php if ($this->flexi_auth->is_logged_in()) {$imageclass="cross-to-mall"; }else $imageclass="cross-to-home"; ?><div class="cross"><div class="<?php echo $imageclass;?> cross-image"><img src="/images/pink_button-05.png" alt /></div></div>
+		<?php 
+		if ($this->flexi_auth->is_logged_in()) {
+			$imageclass="cross-to-mall"; 
+		} else {
+			$imageclass="cross-to-home";
+		} ?>
+		<div class="cross">
+			<div class="<?php echo $imageclass;?> cross-image"><img src="/images/pink_button-05.png" alt /></div>
+		</div>
+		<?php if ($this->flexi_auth->is_logged_in()) { ?>
+			<div class="notLoggedInHeader bkpinkycolor">
+				<p>
+				<?php if( $garment['outdated'] == 1 ){ ?>
+					OH, BOO! LOOKS LIKE IT'S SOLD OUT. DONT'T WORRY, WE CAN FIND YOU SOMETHING EVEN BETTER
+				<?php } else { ?>
+
+				<?php } ?>
+				</p>
+			</div>
+		<?php } ?>
+
 		<div id="product" class="productWrap <?php if ($this->flexi_auth->is_logged_in() ) { ?> loggedInSmallDetails <?php } ?>">
 			
 			<?php if ($this->flexi_auth->is_logged_in()) { ?>
-				
-				<?php 
-					if ($garment['score']){
-
-						$score_percent = 1;
-						if ($garment['score'] >= 8.91 ){
-							$score_percent = 99;
-						} else if ($garment['score'] > 0.9 ){
-							$score_percent = round(( ( 98 * $garment['score'] ) - 80.19 ) / 8.01 );
-						} else {
-							$score_percent = 1;
-						}
-						$score_percent .= '%';
-
-						if ($garment['score']>7.3){
-							$score = 5;
-							} else if ($garment['score']>6){
-							$score = 4;
-							} else if ($garment['score']>5){
-							$score = 3;
-							} else if ($garment['score']>3){
-							$score = 2;
-							} else {
-							$score = 1;
-						}
-					}
-				?>
 				
 				<div class="panel2 newpanelDesign" id="ourAdviceLog">
 					
@@ -62,16 +78,16 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 										<tr>
 											<td class="th1"><strong><?php print $row['area']?></strong></td>
 											<td class="th2"><?php print $row['style_item']?></td>
-											<td class="th3"><span class="starsWrap rating star<?php print $row['result']?>Rate mousehand" style="background:initial;">
-												<?php print $star_result[$row['result']] ?>
-												
-												<?php
-												if ($this->flexi_auth->in_group('Administrators')){
-													print '('.$row['score'].')';
-												}
-												
-												if (isset($row['reason'])) {
-												?><!--<a href="#"><i class="icon-triangle"></i></a> --><?php }?></span></td>
+											<td class="th3">
+											    <span class="starsWrap rating star<?php print $row['result']?>Rate mousehand" style="background:initial;">
+													<?php print $star_result[$row['result']] ?>
+													
+													<?php
+													if ($this->flexi_auth->in_group('Administrators')){
+														print '('.$row['score'].')';
+													} ?>
+												</span>
+											</td>
 										</tr>
 										<?php if (isset($row['reason'])) {?>
 											<tr class="description">
@@ -132,11 +148,18 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 										<span class="pinkyheading">DERP, YOU DESERVE BETTER THAN THIS</span>
 										<span class="panelSmalldesc">YOU CAN LOOK SO MUCH BETTER. GIVE THIS ONE A MISS</span>
 									<?php } } else { ?>
-									<span class="pinkyheading">SURE, IT'S NICE, BUT WILL IT SUIT YOU?</span>
-									<span class="panelSmalldesc">WHAT IF WE COULD SHOW YOU A WAY TO MAKE SURE IT DOES?</span>
+									
+										<span class="pinkyheading notLoggedInHeaderSecond">
+											<?php if( $garment['outdated'] == 1 ) { ?>
+												SURE, IT'S NICE, BUT WILL IT SUIT YOU?
+											<?php } else { ?>
+												YOU WANT IT &bull; WE'LL FIND IT &bull; FAST
+											<?php } ?>
+										</span>
+									
 								<?php } ?>
 							</div>
-							<div style="background:url('/images/pinkback.png');background-position: 4% 0px;background-repeat:no-repeat;background-size:20px;height:20px;"></div>
+							
 						</div>
 						
 						<div class="galleryArea itemidentification panelcontentSecond" garment_id="<?php print ( !empty( $garment['garment_id'] ) ? $garment['garment_id'] : '' ) ?>">
@@ -147,11 +170,7 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 									
 									<?php if ($this->flexi_auth->is_logged_in()) { ?>
 										<div class="productRate">
-											<?php 
-											echo $score_percent;
-											// echo ( empty($score) ? 0 : $score ) ; ?>
-
-											<!-- <i class="icon-star"></i> -->
+											<?php echo $score_percent; ?>
 										</div>
 										<?php } else { ?>
 										
@@ -176,10 +195,8 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 										</ul>
 									</div>
 								<?php } ?>
-								
-								
-								
 							</div>
+
 							<div class="productSecondColumn product-inside-columns">
 								
 								<div class="sliderWrap">
