@@ -653,7 +653,7 @@ if ( !empty($garment['score']) ){
 															"build_select_id" : default_values[6],
 															"minBust" : input_minBust
 														};
-														
+
 														$.post( "/mall/garment-by-profile.html", {offset: 0, limit: 5, uservalue: requestvalues, pas_secret_name:$("input[name=pas_secret_name]").val()}, function( data ) {
 															
 															$( ".garments_in_product" ).html( data );
@@ -662,6 +662,12 @@ if ( !empty($garment['score']) ){
 
 
 													$(function(){
+														$(document).ajaxStart(function() {
+															$("body").addClass("loading");
+														});
+														$(document).ajaxStop(function() {
+															$("body").removeClass("loading");
+														});
 														$(".button_callgarment").on("click", function() {
 															select_garments_spec();
 														});
