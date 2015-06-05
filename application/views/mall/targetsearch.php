@@ -57,7 +57,7 @@
 	</div>
 	
 	<br>
-	<br>
+	<div class="detailed-search-results">Search Results</div>
 	<div class="garments">
 	</div>
 	
