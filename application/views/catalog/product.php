@@ -606,9 +606,6 @@ if ( !empty($garment['score']) ){
 														});
 														
 
-														$(".button_callgarment").on("click", function() {
-															select_garments_spec();
-														});
 
 													});
 													
@@ -646,6 +643,14 @@ if ( !empty($garment['score']) ){
 															$( ".garments_in_product" ).html( data );
 														});
 													}
+
+
+													$(function(){
+														$(".button_callgarment").on("click", function() {
+															select_garments_spec();
+														});
+														
+													});
 													
 												</script>
 												
