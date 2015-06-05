@@ -162,7 +162,7 @@ if ( !empty($garment['score']) ){
 							
 						</div>
 						
-						<div class="galleryArea itemidentification panelcontentSecond" garment_id="<?php print ( !empty( $garment['garment_id'] ) ? $garment['garment_id'] : '' ) ?>">
+						<div class="galleryArea relative itemidentification panelcontentSecond" garment_id="<?php print ( !empty( $garment['garment_id'] ) ? $garment['garment_id'] : '' ) ?>">
 							
 							<div class="productFirstColumn product-inside-columns">
 								
@@ -313,27 +313,28 @@ if ( !empty($garment['score']) ){
 										</li>
 										</ul>
 									</div>
-										<ul class="bottomOptions">
+									<ul class="bottomOptions">
 									
-									<li>
-										<a href="" class="fb" id="fb_share"><i class="icon-facebook"></i></a>
-									</li>
-									
-									<li><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" target="_blank" class="pi"><i class="icon-pinterest"></i></a></li>
-									
-									<li><a href="" class="tweet" id="t_share" target=""><i class="icon-twitter"></i></a></li>
-									
-									<li><a href="<?php print current_url() ?>" class="gplus" target="_blank" ><i class="icon-googleplus"></i></a></li>
-									
-								</ul>
+										<li>
+											<a href="" class="fb" id="fb_share"><i class="icon-facebook"></i></a>
+										</li>
+										
+										<li><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" target="_blank" class="pi"><i class="icon-pinterest"></i></a></li>
+										
+										<li><a href="" class="tweet" id="t_share" target=""><i class="icon-twitter"></i></a></li>
+										
+										<li><a href="<?php print current_url() ?>" class="gplus" target="_blank" ><i class="icon-googleplus"></i></a></li>
+										
+									</ul>
 										
 									</div>
 									<div class="clear"></div>
-								</div>
 
-								<?php if( $garment['outdated'] == 1 ){ ?>
-									<div class="modal_for_outdated_garment"></div>
-								<?php } ?>
+									<?php if( $garment['outdated'] == 1 ){ ?>
+										<div class="modal_for_outdated_garment"></div>
+									<?php } ?>
+
+								</div>
 							</div>
 							
 							
