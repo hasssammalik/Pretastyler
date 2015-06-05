@@ -719,15 +719,16 @@ if ( !empty($garment['score']) ){
 														<div class="clear"></div>
 													</div>
 													
-													
+													<div class="clear"></div>
 													
 												</div>
-												
+												<div class="clear"></div>
 											</div>
+											<div class="clear"></div>
 											<br>
 										</section>
 										
-									
+										<div class="clear"></div>
 								</div>
 								<?php } ?>
 							<div class="panel2 newpanelDesign" id="similarItems">
