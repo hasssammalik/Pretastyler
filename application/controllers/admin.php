@@ -78,6 +78,13 @@ class Admin extends CI_Controller {
 			if ($this->flexi_auth->validate_current_password($password, $email)) {
 				if ($this->flexi_auth->login($email, $password, $remember_me)){
 					if ($this->flexi_auth->in_group('Administrators')){
+
+						//---------HM---------------//insert user login in new table
+						$record=  array('email' => $email, 'login' => sysdate  );
+						
+						$this->admin_model->insert_user_login($record);
+						//---------HM---------------//
+
 						redirect('admin', 'refresh');
 					} else {
 						$this->flexi_auth->logout();
