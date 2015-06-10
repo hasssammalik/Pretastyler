@@ -59,6 +59,16 @@ if( ENVIRONMENT == 'production') {
 		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	</script>
 	<!--End of Zopim Live Chat Script-->
+	<!--Start of VigLink Script-->
+	<script type="text/javascript">
+		var vglnk = { key: 'af8089067dfb74843572699539151beb' };
+		(function(d, t) {
+			var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+			s.src = '//cdn.viglink.com/api/vglnk.js';
+			var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+		}(document, 'script'));
+	</script>
+	<!--End of VigLink Script-->
 <?php } ?>
 <div id="fb-root"></div>
 </body>
