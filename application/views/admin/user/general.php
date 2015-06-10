@@ -17,7 +17,7 @@
 								<th>Email Address</th>
 								<th>Creation Date</th>
 								<th>Last Login</th>
-								<th>Last per month</th>
+								<th>Login per month</th>
 								<th>Days Since Last Login</th>
 								<th>Garments</th>
 								<th>Group</th>
@@ -35,7 +35,7 @@
 								<th>Email Address</th>
 								<th>Creation Date</th>
 								<th>Last Login</th>
-								<th>Last per month</th>
+								<th>Login per month</th>
 								<th>Days Since Last Login</th>
 								<th>Garments</th>
 								<th>Group</th>
