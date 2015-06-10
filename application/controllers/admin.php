@@ -344,7 +344,7 @@ group by email) s2 on s1.email = s2.email*/
 		$this->datatables->add_column('delete', '<a href="/admin/user/delete/$1.html"><i class="glyphicon glyphicon-remove"></i></a>', 'user_id');
 		$this->datatables->edit_column('user_id', '<a href="/admin/switchuser/$1.html">$1</a>', 'user_id');
 		echo $this->datatables->generate();
-		echo $this->db->last_query();
+		
 	}
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
 	// Garment Pages & Services

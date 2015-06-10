@@ -50,6 +50,7 @@
 	</div>
 
 </section><!-- /.content -->
+
 <script type="text/javascript">
 $(function(){
 	$("#user-table").dataTable( {
@@ -105,3 +106,4 @@ $(function(){
 	} );
 });
 </script>
+<? echo $this->db->last_query(); ?>
