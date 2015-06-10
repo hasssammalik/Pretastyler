@@ -106,4 +106,4 @@ $(function(){
 	} );
 });
 </script>
-<?php echo $this->db->last_query(); ?>
+<?php echo $this->datatables->last_query(); ?>
