@@ -106,4 +106,4 @@ $(function(){
 	} );
 });
 </script>
-<? echo $this->db->last_query(); ?>
+<?php echo $this->db->last_query(); ?>
