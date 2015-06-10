@@ -7,7 +7,7 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 		<span class="gPopups_close_btn mousehand">&times;</span>
 		<div class="gInsight_header bkpinkycolor">
 			<div class="gInsight_header_one">GARMENT INSIGHTS:</div>
-			<div class="gInsight_header_two"><?php if(isset($score)&& $score>2) {?>WHY IT WORKS FOR YOU<?php }else{echo 'WHY IT DOES NOT WORK FOR YOU?'; }?></div>
+			<div class="gInsight_header_two"><?php if(isset($score)&& $score>5) {?>WHY IT WORKS FOR YOU?<?php }else{echo 'WHY IT DOES NOT WORK FOR YOU?'; }?></div>
 		</div>
 		<div class="gInsight_Content">
 			<div class="section">
@@ -51,7 +51,7 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 							?>
 							<tr>
 								<td colspan="3">
-									<div><?php print '(Average['.(array_sum($scores) / count($scores)).'] + Min['.min($scores).'])/2 = '.$score_id; ?></div>
+									<div><?php print '(Average['.(array_sum($scores) / count($scores)).'] + Min['.min($scores).'])/2 = '.$score; ?></div>
 									<div>excelent > 7.3</div>
 									<div>good > 6</div>
 									<div>ok > 5</div>
@@ -74,7 +74,7 @@ $star_result  = array('Avoid', 'Avoid', 'Risky', 'Maybe', 'Good', 'Great' );
 	<div class="may_StylingRecom hoverpopupDiv" style="display: none;">
 		<span class="gPopups_close_btn mousehand">&times;</span>
 		<div class="StylingRecom_header bkpinkycolor">
-			<div class="StylingRecom_header_one" style="min-height: 27px;">HOW TO LOOK YOUR BEST</div>
+			<div class="StylingRecom_header_one">HOW TO LOOK YOUR BEST</div>
 			<div class="StylingRecom_header_two">STYLING TIPS AND HINTS</div>
 		</div>
 		<div class="StylingRecom_Content">
