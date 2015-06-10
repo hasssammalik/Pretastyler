@@ -150,7 +150,6 @@ class Deep_search_model extends CI_Model{
 			$children = $query->result_array();
 			foreach ($children as $child_key => $child_value){
 				if ($this->judge_field_by_criteria_id($child_value['showif'], $child_value['hideif'], $selected_criteria_ids)){
-					$children[$child_key]['judged'] = TRUE;
 					if ($child_value['deep_search_required_field_id']){
 						//check if the required field is answered
 						if (!empty($array_criteria_ids[$child_value['deep_search_required_field_id']])) {
@@ -163,7 +162,6 @@ class Deep_search_model extends CI_Model{
 						$children[$child_key]['clickable'] = TRUE;
 					}
 				} else {
-					$children[$child_key]['judged'] = FALSE;
 					$children[$child_key]['clickable'] = FALSE;
 				}
 				if ($new_array['new_field_id'] == $child_value['field_id']){
