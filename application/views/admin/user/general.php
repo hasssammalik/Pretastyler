@@ -17,6 +17,7 @@
 								<th>Email Address</th>
 								<th>Creation Date</th>
 								<th>Last Login</th>
+								<th>Last per month</th>
 								<th>Days Since Last Login</th>
 								<th>Garments</th>
 								<th>Group</th>
@@ -34,6 +35,7 @@
 								<th>Email Address</th>
 								<th>Creation Date</th>
 								<th>Last Login</th>
+								<th>Last per month</th>
 								<th>Days Since Last Login</th>
 								<th>Garments</th>
 								<th>Group</th>
@@ -66,6 +68,7 @@ $(function(){
 			{ "data": "email" },
 			{ "data": "creation_date" },
 			{ "data": "last_login" },
+			{ "data": "login_per_Mnth" },
 			{ "data": "Days_Since_Last_Login" },
 			{ "data": "garments" },
 			{ "data": "group_name" },
@@ -106,4 +109,3 @@ $(function(){
 	} );
 });
 </script>
-<?php echo $this->datatables->last_query(); ?>
