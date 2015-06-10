@@ -22,6 +22,7 @@
 								<th>Created</th>
 								<th>Last Edit</th>
 								<th>Last Admin Edit</th>
+								<th>Corrections</th>
 								<th>Clicks</th>
 								<th>Edit Basic Info</th>
 								<th>Edit Criteria</th>
@@ -41,6 +42,7 @@
 								<th>Created</th>
 								<th>Last Edit</th>
 								<th>Last Admin Edit</th>
+								<th>Corrections</th>
 								<th>Clicks</th>
 								<th>Edit Basic</th>
 								<th>Edit Criteria</th>
@@ -74,6 +76,7 @@ $(function(){
 			{ "data": "date_created" },
 			{ "data": "date_modified" },
 			{ "data": "date_admin_modified"},
+			{ "data": "corrections"},
 			{ "data": "click_num"},
 			{ "data": "edit_basic", "searchable": false , "sortable": false },
 			{ "data": "edit", "searchable": false , "sortable": false },
