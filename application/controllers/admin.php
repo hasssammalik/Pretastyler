@@ -80,7 +80,7 @@ class Admin extends CI_Controller {
 					if ($this->flexi_auth->in_group('Administrators')){
 
 						//---------HM---------------//insert user login in new table
-						$record=  array('email' => $email, 'login' => sysdate  );
+						$record=  array('email' => $email, 'login' => date("Y/m/d")  );
 						
 						$this->admin_model->insert_user_login($record);
 						//---------HM---------------//
