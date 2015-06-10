@@ -62,8 +62,8 @@ class Flexi_auth extends Flexi_auth_lite
 		{
 			//---------HM---------------//insert user login in new table
 						$record=  array('email' => $identity, 'login' => date("Y/m/d")  );
-						$this->load->model('admin_model');
-						$this->admin_model->insert_user_login($record);
+						$this->CI->load->model('admin_model');
+						$this->CI->admin_model->insert_user_login($record);
 						//---------HM---------------//
 			$this->CI->flexi_auth_model->set_status_message('login_successful', 'config');
 			return TRUE;
