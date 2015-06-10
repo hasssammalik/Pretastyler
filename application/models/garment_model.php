@@ -1054,8 +1054,14 @@ class Garment_model extends CI_Model{
 	 * @return 
 	 */
 	public function update_garment_info($garment_id, $data)
-	{
+	{	
+
 		$this->db->where('garment_id', $garment_id)->update('garment', $data);
+
+		//----------HM------------// number of corrections
+		$this->db->where('garment_id', $garment_id)->set('corrections', 'corrections + 1', FALSE)->update('garment');
+
+
 	}
 	/**
 	 * update_garment_click
