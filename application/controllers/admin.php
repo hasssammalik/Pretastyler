@@ -299,8 +299,7 @@ class Admin extends CI_Controller {
 
  	$this->db->query('Drop table pas_view');
 
-///
- 	$sql='CREATE Table pas_view  
+    $this->db->query('CREATE Table pas_view  
 select user_id, first_name, last_name, S1.email, garments, active, group_name, infusionsoft_id, creation_date, last_login,login_per_Mnth, Days_Since_Last_Login, uacc_group_fk
 from ( 
 select pas_user_info.user_id, first_name, last_name, pas_user_accounts.uacc_email AS email, pas_garment_info.garments, IF (uacc_active = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS active, pas_user_groups.ugrp_desc AS group_name, infusionsoft_id, pas_user_accounts.uacc_date_added AS creation_date, pas_user_accounts.uacc_date_last_login AS last_login, datediff(sysdate(), pas_user_accounts.uacc_date_last_login) as Days_Since_Last_Login, uacc_group_fk
@@ -315,9 +314,7 @@ select email, count(*) login_per_Mnth
 from pas_user_logins
 where Month(Login) = Month (current_timestamp())
 group by email
-) as S2  on S1.email=S2.email;
-';
-
+) as S2  on S1.email=S2.email');
 
  	$this->datatables->select("pas_user_info.user_id, first_name, last_name, pas_user_accounts.uacc_email AS email, garment_info.garments, IF (uacc_active = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS active, pas_user_groups.ugrp_desc AS group_name, infusionsoft_id, pas_user_accounts.uacc_date_added AS creation_date, pas_user_accounts.uacc_date_last_login AS last_login, datediff(sysdate(), pas_user_accounts.uacc_date_last_login) as Days_Since_Last_Login", FALSE);
 
