@@ -320,7 +320,7 @@ class Admin extends CI_Controller {
 			$this->datatables->where('pas_user_info.user_id', $user_id);
 		}
 
-		*/
+	
 		$this->datatables->edit_column('garments', '<a href="/admin/garment/user/$1.html">$2</a>', 'user_id, garments');
 		$this->datatables->edit_column('group_name', '$1 (<a href="/admin/user/change-group/$2.html">Change</a>)', 'group_name, user_id');
 		$this->datatables->edit_column('infusionsoft_id', '<a href="https://om185.infusionsoft.com/Contact/manageContact.jsp?view=edit&ID=$1" target="_blank">$1</a> (<a href="/admin/user/change-infusionsoft/$2.html">Change</a>)', 'infusionsoft_id, user_id');
