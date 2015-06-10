@@ -307,8 +307,9 @@ left join
 SELECT import_user_id, COUNT(garment_id) AS garments FROM pas_garment GROUP BY import_user_id
 ) garment_info 
 on pas_user_info.user_id = garment_info.import_user_id
-) s1 
+) s1  ");
 
+/*
 
 left join  
 
@@ -316,10 +317,7 @@ left join
 (select email, count(*) login_per_Mnth
 from pas_user_logins
 where Month(Login) = Month (current_timestamp())
-group by email) s2 on s1.email = s2.email"
-);
-
-
+group by email) s2 on s1.email = s2.email*/
 			/*
 		if ($is_standard) {
 			$this->datatables->where('pas_user_accounts.uacc_group_fk', 3);
