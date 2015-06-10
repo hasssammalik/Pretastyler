@@ -40,12 +40,12 @@ foreach ($garments as $row) { ?>
 				<!-- <li><a href="/styling-board.html" target="_blank" title="See inspiration boards with this item"><i class="icon-board"></i></a></li> -->
 
 				<li>
-					<a class="garment_insights_popup mousehand">
+					<a class="garment_insights_popup mousehand" title="<?php if($row['score']>5) {?>Why this item works for you<?php }else{echo 'Why this item does not work for you'; }?>">
 						<img src="/img/icon-insights-32.png" class="garment_newpopup_img">
 					</a>
 				</li>
 				<li>
-					<a class="garment_recommendataion_popup mousehand" title="Styling Recommendation">
+					<a class="garment_recommendataion_popup mousehand" title="Styling Suggestions">
 						<img src="/img/icon-recommend-32.png" class="garment_newpopup_img">
 					</a>
 				</li>
@@ -99,7 +99,7 @@ foreach ($garments as $row) { ?>
 						print '1%';
 				} else {
 						print 'Not Assessed';
-				}?><br><span class="ratingmatchword" data-ratenum="<?php echo $score ?>">MATCH</span>
+				}?><br><span class="ratingmatchword" data-ratenum="<?php echo $row['score'] ?>">MATCH</span>
 			</div>
 			<?php } ?>
 		</div>
