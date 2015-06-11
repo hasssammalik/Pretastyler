@@ -298,7 +298,7 @@ class Admin extends CI_Controller {
 		//old //$this->datatables->select("pas_user_info.user_id, first_name, last_name, pas_user_accounts.uacc_email AS email, garment_info.garments, IF (uacc_active = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS active, pas_user_groups.ugrp_desc AS group_name, infusionsoft_id, pas_user_accounts.uacc_date_added AS creation_date, pas_user_accounts.uacc_date_last_login AS last_login, datediff(sysdate(), pas_user_accounts.uacc_date_last_login) as Days_Since_Last_Login", FALSE)->from('user_info')->join('user_accounts', 'user_info.user_id = user_accounts.uacc_id')->join('user_groups', 'user_groups.ugrp_id = user_accounts.uacc_group_fk')->join('user_infusionsoft', 'user_info.user_id = user_infusionsoft.user_id', 'left')->join('(SELECT import_user_id, COUNT(garment_id) AS garments FROM pas_garment GROUP BY import_user_id) AS garment_info', 'user_info.user_id = garment_info.import_user_id', 'left');
 
 	date_default_timezone_set('Australia/Melbourne');
-	$date = date('Y/m/d h:i:s a', time());
+	$date = date('Y/m/d h:i:s');
 
  	$this->db->query('Drop table pas_view');
 
