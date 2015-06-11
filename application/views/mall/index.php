@@ -34,11 +34,12 @@ if (!$this->flexi_auth->is_logged_in()){
 	
 	<div class="leftContent left">
 
+		<?php if ($this->flexi_auth->in_group(array('Administrators'))) { ?>
 		<a class="wid100 targetbutn bkpinkycolor" href="/mall/targetsearch.html">
 			&nbsp; &nbsp; DETAILED SEARCH
 			<span class="targertbutnicon unicode-icon right">&#9658;</span>
 		</a>
-		
+		<?php } ?>
 		<div class="wid100 quickbelowbutn bkpinkycolor">
 			&nbsp; &nbsp; QUICK SEARCH 
 			<span class="quickbelowicon unicode-icon right">&#x25BC;</span>
