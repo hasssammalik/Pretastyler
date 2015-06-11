@@ -296,12 +296,14 @@ class Admin extends CI_Controller {
 		//-- HM --------------change select 
 
 		//old //$this->datatables->select("pas_user_info.user_id, first_name, last_name, pas_user_accounts.uacc_email AS email, garment_info.garments, IF (uacc_active = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS active, pas_user_groups.ugrp_desc AS group_name, infusionsoft_id, pas_user_accounts.uacc_date_added AS creation_date, pas_user_accounts.uacc_date_last_login AS last_login, datediff(sysdate(), pas_user_accounts.uacc_date_last_login) as Days_Since_Last_Login", FALSE)->from('user_info')->join('user_accounts', 'user_info.user_id = user_accounts.uacc_id')->join('user_groups', 'user_groups.ugrp_id = user_accounts.uacc_group_fk')->join('user_infusionsoft', 'user_info.user_id = user_infusionsoft.user_id', 'left')->join('(SELECT import_user_id, COUNT(garment_id) AS garments FROM pas_garment GROUP BY import_user_id) AS garment_info', 'user_info.user_id = garment_info.import_user_id', 'left');
+	$AUSdate= '';	
+	date_default_timezone_set('Australia/Melbourne');
+	$AUSdate = date('Y/m/d h:i:s');
 
-	
 
  	$this->db->query('Drop table pas_view');
 
- 	$sql="CREATE Table pas_view  select user_id, first_name, last_name, S1.email, garments, active, group_name, infusionsoft_id, creation_date, last_login,login_per_Mnth, Days_Since_Last_Login, uacc_group_fk from ( select pas_user_info.user_id, first_name, last_name, pas_user_accounts.uacc_email AS email, pas_garment_info.garments, IF (uacc_active = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS active, pas_user_groups.ugrp_desc AS group_name, infusionsoft_id, pas_user_accounts.uacc_date_added AS creation_date, pas_user_accounts.uacc_date_last_login AS last_login, datediff(sysdate(), pas_user_accounts.uacc_date_last_login) as Days_Since_Last_Login, uacc_group_fk from pas_user_info join pas_user_accounts on pas_user_info.user_id = pas_user_accounts.uacc_id join pas_user_groups on pas_user_groups.ugrp_id = pas_user_accounts.uacc_group_fk join pas_user_infusionsoft  on pas_user_info.user_id = pas_user_infusionsoft.user_id left join  (SELECT import_user_id, COUNT(garment_id) AS garments FROM pas_garment GROUP BY import_user_id) as pas_garment_info on pas_user_info.user_id = pas_garment_info.import_user_id ) S1 left join ( select email, count(*) login_per_Mnth from pas_user_logins where Month(Login) = Month ( current_timestamp()) group by email) as S2  on S1.email=S2.email ";
+ 	$sql="CREATE Table pas_view  select user_id, first_name, last_name, S1.email, garments, active, group_name, infusionsoft_id, creation_date, last_login,login_per_Mnth, Days_Since_Last_Login, uacc_group_fk from ( select pas_user_info.user_id, first_name, last_name, pas_user_accounts.uacc_email AS email, pas_garment_info.garments, IF (uacc_active = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS active, pas_user_groups.ugrp_desc AS group_name, infusionsoft_id, pas_user_accounts.uacc_date_added AS creation_date, pas_user_accounts.uacc_date_last_login AS last_login, datediff(sysdate(), pas_user_accounts.uacc_date_last_login) as Days_Since_Last_Login, uacc_group_fk, $AUSdate as AUS_date  from pas_user_info join pas_user_accounts on pas_user_info.user_id = pas_user_accounts.uacc_id join pas_user_groups on pas_user_groups.ugrp_id = pas_user_accounts.uacc_group_fk join pas_user_infusionsoft  on pas_user_info.user_id = pas_user_infusionsoft.user_id left join  (SELECT import_user_id, COUNT(garment_id) AS garments FROM pas_garment GROUP BY import_user_id) as pas_garment_info on pas_user_info.user_id = pas_garment_info.import_user_id ) S1 left join ( select email, count(*) login_per_Mnth from pas_user_logins where Month(Login) = Month ( current_timestamp()) group by email) as S2  on S1.email=S2.email ";
 
     $this->db->query($sql);
 
@@ -336,10 +338,7 @@ class Admin extends CI_Controller {
 		$this->datatables->add_column('edit', '<a href="/admin/user/edit/$1.html"><i class="fa fa-edit"></i></a>', 'user_id');
 		$this->datatables->add_column('delete', '<a href="/admin/user/delete/$1.html"><i class="glyphicon glyphicon-remove"></i></a>', 'user_id');
 		$this->datatables->edit_column('user_id', '<a href="/admin/switchuser/$1.html">$1</a>', 'user_id');
-		echo $this->datatables->generate();
-
-		
-		
+		echo $this->datatables->generate();		
 	}
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
 	// Garment Pages & Services
