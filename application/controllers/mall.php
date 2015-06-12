@@ -438,7 +438,7 @@ class Mall extends CI_Controller {
 		
 		$data = $this->data;
 		$data['title'] = "Detailed Search";
-		$data['extraJS'] = '<script src="/js/mall-target.js?v=2.2.0.2"></script>';
+		$data['extraJS'] = '<script src="/js/mall-target.js?v=2.2.0.3"></script>';
 		$data['breadcrumb'] = array('<a href="/mall.html">MALL</a>','Detailed Search');
 		$data['getBook'] = true;
 		$data['deep_category'] = $this->deep_search_model->get_available_categories();
