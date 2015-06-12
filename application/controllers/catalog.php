@@ -86,7 +86,8 @@ class Catalog extends CI_Controller {
 		<script src="/js/circular-progress.js"></script>
 		<script type="text/javascript">$(function(){ preload_all_img_tags(); });</script>
 		';
-		//$data['similar_garments'] = $this->garment_model->get_similar_products();
+		$data['categories'] = $this->category_model->get_available_categories();
+		$data['countries']  = $this->user_model->get_countries();
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/menu_mall', $data);

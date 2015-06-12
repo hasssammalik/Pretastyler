@@ -927,7 +927,7 @@
 
 			<div class="clear"></div>
 			<div class="homeprofile-head newSignupJune">
-				<div class="innerSignupForm container wid60">
+				<div class="innerSignupForm container wid40">
 				    <h1 style="padding: 5px; text-align:center;"><i>Save your details and <strong>Create Your Mall</strong></i></h1>
 					
 					<div id="error-register"></div>
@@ -947,16 +947,20 @@
 					    </div>
 				      	
 				      	<div class="center">
-							<div class="fbloginbutton left mousehand" id="fbloginbuttonIcon" onclick="fb_login();">Signup with Facebook</div>
-				      		<label>Take me to my best: 
-				      			<select name="category" class="best_category" id="menu_mall_register_category">
+				      	    <div style="width: 47%; display: inline-block;">
+				      	    	<div class="fbloginbutton mousehand" id="fbloginbuttonIcon" onclick="fb_login();" style="width: 160px;display: inline-block;">Signup with Facebook</div>
+				      	    </div>
+							
+				      		<label style="  width: 40%; display: inline-block;">Take me to my best: 
+				      			<select name="category" class="menu_mall_register_category" id="menu_mall_register_category" style=" width: 38%;">
+
 				      				<option value="dresses" selected="selected">Dresses</option>
 				      			</select>
 				      		</label>
 				    	</div>
 
 				    	<div class="center">
-							<input type="submit" name="starttrial" value="Save and Open Mall" class="right" id="register-submit">
+							<input type="submit" name="starttrial" value="Save and Open Mall" class="" id="register-submit">
 				    	</div>
 
 				      	<div class="clear"></div>
