@@ -940,7 +940,7 @@
 				        <div>
 							<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
 							<label style="width: 45%; display: inline-block;">
-				      			<select name="category" class="menu_mall_register_category" id="bordernormal menu_mall_register_category">
+				      			<select name="category" class="menu_mall_register_category bordernormal" id="menu_mall_register_category">
 				      			<?php foreach ($countries as $country) { ?>
 				      				<option value="<?php echo $country['country_id'] ?>" selected="selected"><?php echo $country['country'] ?></option>
 				      			<?php } ?>
@@ -969,7 +969,7 @@
 				    	</div>
 
 				    	<div class="">
-				    		<input type="hidden" name="trialtoken" value="pretastyler">
+				    		<div style="width: 55%;display: inline-block;"></div>
 							<input type="submit" name="starttrial" value="Save and Open Mall" class="" id="register-submit">
 				    	</div>
 
