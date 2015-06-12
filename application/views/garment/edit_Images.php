@@ -2,8 +2,7 @@
 <!-- Main content -->
 <!----test-->
 
-<? 
-
+<?php
 if ($this->input->post()){
 					//if this is a edit request.
 					$data['error_messages'] = array();
@@ -51,15 +50,6 @@ if ($this->input->post()){
 						}
 					}
 				}	
-
-
-
-
-
-
-
-
-
 
 
 ?>
