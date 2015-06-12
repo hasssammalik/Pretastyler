@@ -744,7 +744,7 @@ class Garment extends CI_Controller {
 		}
 		
 		$data['title'] = $data['garment']['name'];
-		//$data['title_description'] = "update images ".$data['garment']['name'];
+		$data['title_description'] = "update images ".$data['garment']['name'];
 		//$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
 		$this->load->view('admin/header', $data);
 		$this->load->view('garment/edit_Images', $data);
