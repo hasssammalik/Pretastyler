@@ -12,7 +12,7 @@
 			<br/>
 		</div>
 	</div>
-	</div>
+
 	
 <div class="row">
 		<!-- left column -->
@@ -41,7 +41,7 @@
 										
 					<div class="input-group">
 						<label for="garment-image-path">Image</label>
-						<img src="/images/system/<?php print $garment['image_url'] ?>">
+						<img src="/images/garment/<?php print $garment['image_url'] ?>">
 						<input type="hidden" name="has_new_image" value="0">
 						<input type="hidden" name="ori_image" value="<?php print $garment['image_url'] ?>">
 					</div>
@@ -64,7 +64,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="btn-group pull-right">
-				<a href="//admin/garment/general.html" class="btn btn-danger">Back</a>
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
 				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
 				<input type="submit" class="btn btn-primary button-save" value="Save">
 				<a href="/garment/ImageEdit/<?php print $garment['garment_id'];?>.html" class="btn btn-danger">Delete</a>
