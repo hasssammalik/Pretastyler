@@ -50,7 +50,7 @@
 					<div class="pager"></div>
 				</div>
 			</div>
-			<div class="next-button">Skip
+			<div class="next-button" style="display:none;">Skip
 			</div>
 		</div>
 	</div>
