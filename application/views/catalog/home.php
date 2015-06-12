@@ -930,8 +930,7 @@
 
 
 
-			<div class="popup-box">
-			   
+			
 			    <h1 style="padding: 5px; text-align:center;"><i>Save your details and <strong>Create Your Mall</strong></i></h1>
 				
 				<div id="error-register"></div>
@@ -964,10 +963,9 @@
 			    	</div>
 
 			      	<div class="clear"></div>
-			      	
+
 			    </form>
 			    <!-- <div style="text-align:center">Trial Expires in 30 days.</div> -->
-			</div>
 
 				
 				<?php /* ?>
