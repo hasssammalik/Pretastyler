@@ -742,6 +742,8 @@ class Garment extends CI_Controller {
 					$garment_id = $this->input->post('garment_id', TRUE);
 					$name = $this->input->post('name', TRUE);
 					$ori_image = $this->input->post('ori_image', TRUE);
+					$image_no = $this->input->post('image_no', TRUE);
+					
 					if (empty($garment_id)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00001 Something went error. Please contact programmer!'));
 					}
@@ -766,7 +768,17 @@ class Garment extends CI_Controller {
 					}
 					if (empty($data['error_messages'])){
 
-					 	
+					 	if($image_no=="1"){
+						if ($this->admin_model->update_garment_image($garment_id, array('image1_path' => $image_path))){
+						
+							print_r($this->db->last_query());
+						
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+						}
+					} elseif($image_no=="2"){
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
 						
 							print_r($this->db->last_query());
@@ -776,6 +788,17 @@ class Garment extends CI_Controller {
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 						}
+					} elseif  ($image_no=="2"){
+						if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){
+						
+							print_r($this->db->last_query());
+						
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+						}
+					} 
 					
 					}
 				}///	
