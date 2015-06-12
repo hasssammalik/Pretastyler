@@ -47,8 +47,8 @@ class User_check
 					$interval = $datetime1->diff($datetime2);
 					$days = $interval->days;
 					if ($days >= 30) {
-						redirect('payment'); */
-					}
+						redirect('payment');
+					} */
 				} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
 					//wait for payment system
 				}
