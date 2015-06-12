@@ -18,10 +18,9 @@ if ($this->input->post()){
 					echo "hassam testing";
 
 						print_r($garment_id);
-						echo $garment_id;
-						print $garment_id; 
+						
 					
-					if (!empty($has_new_image)) {
+					if (1==1) {
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
