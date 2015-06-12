@@ -737,6 +737,7 @@ class Garment extends CI_Controller {
 		//if post
 			if ($this->input->post()){
 					//if this is a edit request.
+					$this->load->model('admin_model');
 					$data['error_messages'] = array();
 					$garment_id = $this->input->post('garment_id', TRUE);
 					$name = $this->input->post('name', TRUE);

@@ -269,7 +269,7 @@ class Admin_model extends CI_Model{
 	 */
 	public function update_garment_image($garment_id, $data) {
 		return $this->db->where('garment_id', $garment_id)->update('garment', $data);
-		
+
 	}
 
 	/**
