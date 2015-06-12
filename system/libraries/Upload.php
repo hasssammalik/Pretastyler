@@ -327,6 +327,7 @@ class CI_Upload {
 		 */
 		$this->set_image_properties($this->upload_path.$this->file_name);
 
+		print_r($this->upload_path.$this->file_name);
 		return TRUE;
 	}
 
