@@ -1,61 +1,23 @@
 <?php echo form_open_multipart();?>
 <!-- Main content -->
-<!----test-->
-<div class="row">
-		<!-- left column -->
-		
-		<div class="col-md-4">
-<?php
-if ($this->input->post()){
-					//if this is a edit request.
-					$data['error_messages'] = array();
-					$garment_id = $this->input->post('garment_id', TRUE);
-									
-					$has_new_image = $this->input->post('has_new_image', TRUE);
-					$ori_image = $this->input->post('ori_image', TRUE);
+<table>
+<?php 
 
 
-					echo "hassam testing";
-
-						print_r($garment_id);
-						
-					
-					if (1==1) {
-						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
-						$config['allowed_types'] = 'jpg|png|tif';
-						$config['file_name'] = random_string('unique').'.jpg';
-						
-						
-
-
-						print $config['file_name'];
-
-						print_r('new_image');
-
-						$this->load->library('upload', $config);
-
-						if (!$this->upload->do_upload('new_image')) {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
-						} else {
-							$image = $this->upload->data();
-							$image_path = $image['file_name'];
-							$is_image = $image['is_image'];
-							if (!$is_image) {
-								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
-							}
-						}
-					} else {
-						$image_path = $ori_image;
-					}
-					if (empty($data['error_messages'])){
-					}
-				}	
+    foreach ($_POST as $key => $value) {
+        echo "<tr>";
+        echo "<td>";
+        echo $key;
+        echo "</td>";
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+        echo "</tr>";
+    }
 
 
 ?>
-</div>
-</div>
-
+</table>
 
 <div class="row">
 		<!-- left column -->
