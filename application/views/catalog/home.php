@@ -939,7 +939,14 @@
 					    </div>
 				        <div>
 							<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
-							<input type="text" placeholder="Country*" name="country" id="menu_mall_register_country" required/>
+							<label style="  width: 40%; display: inline-block;">Take me to my best: 
+				      			<select name="category" class="menu_mall_register_category" id="menu_mall_register_category" style=" width: 45%;">
+				      			<?php foreach ($countries as $country) { ?>
+				      				<option value="<?php echo $country['country_id'] ?>" selected="selected"><?php echo $country['country'] ?></option>
+				      			<?php } ?>
+				      			
+				      			</select>
+				      		</label>
 					    </div>
 				        <div>
 							<input type="password" placeholder="Password*" name="password" id="menu_mall_register_password" required />
@@ -953,8 +960,10 @@
 							
 				      		<label style="  width: 40%; display: inline-block;">Take me to my best: 
 				      			<select name="category" class="menu_mall_register_category" id="menu_mall_register_category" style=" width: 38%;">
-
-				      				<option value="dresses" selected="selected">Dresses</option>
+				      			<?php foreach ($categories as $value) { ?>
+				      				<option value="<?php echo $value['category_id'] ?>" selected="selected"><?php echo $value['name'] ?></option>
+				      			<?php } ?>
+				      			
 				      			</select>
 				      		</label>
 				    	</div>
