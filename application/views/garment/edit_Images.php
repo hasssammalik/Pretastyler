@@ -1,20 +1,23 @@
 <?php echo form_open_multipart();?>
 <!-- Main content -->
-<div class="row">
-		
-		<div class="col-md-12">		
-			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
-				<input type="submit" class="btn btn-primary button-save" value="Save">
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
-			</div>
-			<br/>
-		</div>
-</div>
+<table>
+<?php 
 
 
+    foreach ($_POST as $key => $value) {
+        echo "<tr>";
+        echo "<td>";
+        echo $key;
+        echo "</td>";
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+        echo "</tr>";
+    }
 
+
+?>
+</table>
 
 <div class="row">
 		<!-- left column -->
@@ -50,10 +53,20 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload a first image.</p>
+						<p class="help-block">Upload first image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
+			<div class="col-md-12">		
+			<div class="btn-group pull-right">
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
+				<input type="submit" class="btn btn-primary button-save" value="Save">
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
+			</div>
+			<br/>
+		</div>
+
 		</div><!--/.col (left) -->
 
 
@@ -90,10 +103,20 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload a first image.</p>
+						<p class="help-block">Upload sedcond image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
+			<div class="col-md-12">		
+			<div class="btn-group pull-right">
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
+				<input type="submit" class="btn btn-primary button-save" value="Save">
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
+			</div>
+			<br/>
+		</div>
+
 		</div><!--/.col (left) -->
 
 
@@ -131,19 +154,11 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload a first image.</p>
+						<p class="help-block">Upload last image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
-		</div><!--/.col (left) -->
-
-
-</div>   <!-- /.row -->
-
-
-<div class="row">
-		
-		<div class="col-md-12">		
+			<div class="col-md-12">		
 			<div class="btn-group pull-right">
 				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
 				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
@@ -152,7 +167,14 @@
 			</div>
 			<br/>
 		</div>
-</div>
+
+		</div><!--/.col (left) -->
+
+
+</div>   <!-- /.row -->
+
+
+
 
 
 </section><!-- /.content -->

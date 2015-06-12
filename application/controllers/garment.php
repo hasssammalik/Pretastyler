@@ -733,18 +733,14 @@ class Garment extends CI_Controller {
 			$this->general_error('Not Permitted', 'Sorry, it seems you don\'t have the permission to edit this garment.');
 			return;
 		}
-		$data['title'] = "Edit Garment - ".$data['garment']['name'];
-		$data['extraJS'] = '<script src="/js/garment-edit.js?v=2.2.0.3"></script>';
-		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
-		$data['extraDiv'] = '<div class="hiddenCategory" style="display:none" category_id="'.$data['garment']['category_id'].'"></div>';
-		if ($this->flexi_auth->in_group('Administrators')){
-			$data['admin_comment'] = $this->assessment_model->get_assessment_comment($garment_id);
-			$user_name = $this->user_model->get_user_name($data['garment']['import_user_id']);
-			$data['user_name'] = $user_name['first_name'].' '.$user_name['last_name'];
-		}
 		
+		//if post
+			
+
+
+		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
 		$data['title'] = $data['garment']['name'];
-		//$data['title_description'] = "update images ".$data['garment']['name'];
+		$data['title_description'] = "update images for ".$data['garment']['name'];
 		//$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
 		$this->load->view('admin/header', $data);
 		$this->load->view('garment/edit_Images', $data);

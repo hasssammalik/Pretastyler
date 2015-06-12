@@ -536,7 +536,7 @@ class Admin extends CI_Controller {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 						}
 					}
-				}
+				}///
 				$data['category'] = $this->category_model->get_category($param2);
 				$data['fields'] = $this->admin_model->get_fields_by_category_id($param2);
 				$data['title'] = "Category - ".$data['category']['name'];
