@@ -1,12 +1,25 @@
 <?php echo form_open_multipart();?>
 <!-- Main content -->
+<div class="row">
+		
+		<div class="col-md-12">		
+			<div class="btn-group pull-right">
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
+				<input type="submit" class="btn btn-primary button-save" value="Save">
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
+			</div>
+			<br/>
+		</div>
+</div>
 
 
-	
+
+
 <div class="row">
 		<!-- left column -->
 		
-		<div class="col-md-offset-4 col-md-4">
+		<div class="col-md-4">
 		
 			<!-- general form elements -->
 			<div class="box box-primary">
@@ -18,13 +31,12 @@
 					<div class="input-group">
 						<span class="input-group-addon">ID</span>
 						<input type="text" class="form-control" id="garment-id" value="<?php print $garment['garment_id'];?>" disabled>
-						<span class="input-group-addon">ID is not changeable</span>
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
 					</div>
 					<br/>
 					<div class="input-group">
 						<span class="input-group-addon">Name</span>
-						<input type="text" class="form-control" id="garment-name" placeholder="Enter garment Name" name="name" value="<?php print $garment['name'];?>">
+						<input type="text" class="form-control" id="garment-name" placeholder="Enter garment Name" name="name" value="<?php print $garment['name'];?>" disabled>
 					</div>
 					<br/>
 										
@@ -45,9 +57,9 @@
 		</div><!--/.col (left) -->
 
 
-		<!-- left column -->
+		<!-- centre column -->
 		
-		<div class="col-md-offset-4 col-md-4">
+		<div class="col-md-4">
 		
 			<!-- general form elements -->
 			<div class="box box-primary">
@@ -59,13 +71,12 @@
 					<div class="input-group">
 						<span class="input-group-addon">ID</span>
 						<input type="text" class="form-control" id="garment-id" value="<?php print $garment['garment_id'];?>" disabled>
-						<span class="input-group-addon">ID is not changeable</span>
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
 					</div>
 					<br/>
 					<div class="input-group">
 						<span class="input-group-addon">Name</span>
-						<input type="text" class="form-control" id="garment-name" placeholder="Enter garment Name" name="name" value="<?php print $garment['name'];?>">
+						<input type="text" class="form-control" id="garment-name" placeholder="Enter garment Name" name="name" value="<?php print $garment['name'];?>" disabled>
 					</div>
 					<br/>
 										
@@ -87,9 +98,9 @@
 
 
 
-		<!-- left column -->
+		<!-- right column -->
 		
-		<div class="col-md-offset-4 col-md-4">
+		<div class="col-md-4">
 		
 			<!-- general form elements -->
 			<div class="box box-primary">
@@ -101,13 +112,12 @@
 					<div class="input-group">
 						<span class="input-group-addon">ID</span>
 						<input type="text" class="form-control" id="garment-id" value="<?php print $garment['garment_id'];?>" disabled>
-						<span class="input-group-addon">ID is not changeable</span>
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
 					</div>
 					<br/>
 					<div class="input-group">
 						<span class="input-group-addon">Name</span>
-						<input type="text" class="form-control" id="garment-name" placeholder="Enter garment Name" name="name" value="<?php print $garment['name'];?>">
+						<input type="text" class="form-control" id="garment-name" placeholder="Enter garment Name" name="name" value="<?php print $garment['name'];?>" disabled>
 					</div>
 					<br/>
 										
@@ -131,7 +141,18 @@
 </div>   <!-- /.row -->
 
 
-
+<div class="row">
+		
+		<div class="col-md-12">		
+			<div class="btn-group pull-right">
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
+				<input type="submit" class="btn btn-primary button-save" value="Save">
+				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
+			</div>
+			<br/>
+		</div>
+</div>
 
 
 </section><!-- /.content -->
