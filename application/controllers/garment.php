@@ -773,8 +773,7 @@ class Garment extends CI_Controller {
 					 	if($image_no=="1"){
 						if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){
 						
-							print_r($this->db->last_query());
-						
+											
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
@@ -783,7 +782,7 @@ class Garment extends CI_Controller {
 					} elseif($image_no=="2"){
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
 						
-							print_r($this->db->last_query());
+							
 						
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
@@ -793,7 +792,7 @@ class Garment extends CI_Controller {
 					} elseif  ($image_no=="3"){
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){
 						
-							print_r($this->db->last_query());
+							
 						
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
