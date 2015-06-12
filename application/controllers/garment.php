@@ -743,11 +743,11 @@ class Garment extends CI_Controller {
 			$data['user_name'] = $user_name['first_name'].' '.$user_name['last_name'];
 		}
 		
-		//$this->load->view('templates/header', $data);
-		//$this->load->view('templates/menu', $data);
-		//$this->load->view('templates/menu_mall', $data);
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/menu', $data);
+		$this->load->view('templates/menu_mall', $data);
 		$this->load->view('garment/edit_Images', $data);
-		//$this->load->view('templates/footer', $data);
+		$this->load->view('templates/footer', $data);
 
 	}	
 
