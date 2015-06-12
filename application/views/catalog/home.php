@@ -961,7 +961,7 @@
 				      		<label style="  width: 50%; display: inline-block;">Take me to my best: 
 				      			<select name="category" class="menu_mall_register_category bordernormal" id="menu_mall_register_category" style=" width: 48%;">
 				      			<?php foreach ($categories as $value) { ?>
-				      				<option value="<?php echo $value['category_id'] ?>" <?php if( $value['category_id'] == 48 ){ ?> selected="selected"<?php } ?>><?php echo $value['name'] ?></option>
+				      				<option value="<?php echo $value['category_id'] ?>" <?php if( $value['category_id'] == 21 ){ ?> selected="selected"<?php } ?>><?php echo $value['name'] ?></option>
 				      			<?php } ?>
 				      			
 				      			</select>
