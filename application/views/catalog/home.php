@@ -939,8 +939,8 @@
 					    </div>
 				        <div>
 							<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
-							<label style="  width: 40%; display: inline-block;">Take me to my best: 
-				      			<select name="category" class="menu_mall_register_category" id="menu_mall_register_category" style=" width: 45%;">
+							<label style="width: 45%; display: inline-block;">
+				      			<select name="category" class="menu_mall_register_category" id="bordernormal menu_mall_register_category">
 				      			<?php foreach ($countries as $country) { ?>
 				      				<option value="<?php echo $country['country_id'] ?>" selected="selected"><?php echo $country['country'] ?></option>
 				      			<?php } ?>
@@ -959,7 +959,7 @@
 				      	    </div>
 							
 				      		<label style="  width: 40%; display: inline-block;">Take me to my best: 
-				      			<select name="category" class="menu_mall_register_category" id="menu_mall_register_category" style=" width: 38%;">
+				      			<select name="category" class="menu_mall_register_category bordernormal" id="menu_mall_register_category" style=" width: 38%;">
 				      			<?php foreach ($categories as $value) { ?>
 				      				<option value="<?php echo $value['category_id'] ?>" selected="selected"><?php echo $value['name'] ?></option>
 				      			<?php } ?>
@@ -969,6 +969,7 @@
 				    	</div>
 
 				    	<div class="">
+				    		<input type="hidden" name="trialtoken" value="pretastyler">
 							<input type="submit" name="starttrial" value="Save and Open Mall" class="" id="register-submit">
 				    	</div>
 
