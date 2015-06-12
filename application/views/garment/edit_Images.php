@@ -1,7 +1,10 @@
 <?php echo form_open_multipart();?>
 <!-- Main content -->
 <!----test-->
-
+<div class="row">
+		<!-- left column -->
+		
+		<div class="col-md-4">
 <?php
 if ($this->input->post()){
 					//if this is a edit request.
@@ -21,6 +24,12 @@ if ($this->input->post()){
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
 						
+						echo "hassam testing";
+
+						print_r($garment_id);
+						echo $garment_id;
+						print $garment_id; 
+
 
 						print $config['file_name'];
 
@@ -47,7 +56,8 @@ if ($this->input->post()){
 
 
 ?>
-
+</div>
+</div>
 
 
 <div class="row">
