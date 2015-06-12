@@ -26,6 +26,7 @@
 								<th>Clicks</th>
 								<th>Edit Basic Info</th>
 								<th>Edit Criteria</th>
+								<th>Images</th>
 								<th>Delete</th>
 							</tr>
 						</thead>
@@ -46,6 +47,7 @@
 								<th>Clicks</th>
 								<th>Edit Basic</th>
 								<th>Edit Criteria</th>
+								<th>Images</th>
 								<th>Delete</th>
 							</tr>
 						</tfoot>
@@ -80,6 +82,7 @@ $(function(){
 			{ "data": "click_num"},
 			{ "data": "edit_basic", "searchable": false , "sortable": false },
 			{ "data": "edit", "searchable": false , "sortable": false },
+			{ "data": "images", "searchable": false , "sortable": false },
 			{ "data": "delete", "searchable": false , "sortable": false }
 		],
 		"order": [ 0, 'desc' ]
