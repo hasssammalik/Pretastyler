@@ -745,7 +745,7 @@ class Garment extends CI_Controller {
 					if (empty($garment_id)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00001 Something went error. Please contact programmer!'));
 					}
-					if (!empty($has_new_image)) {
+					if (1==1) {
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
