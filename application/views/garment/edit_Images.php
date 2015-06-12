@@ -1,7 +1,68 @@
 <?php echo form_open_multipart();?>
 <!-- Main content -->
+<!----test-->
+
+<? 
+
+if ($this->input->post()){
+					//if this is a edit request.
+					$data['error_messages'] = array();
+					$garment_id = $this->input->post('garment_id', TRUE);
+									
+					$has_new_image = $this->input->post('has_new_image', TRUE);
+					$ori_image = $this->input->post('ori_image', TRUE);
 
 
+
+					if (empty($garment_id)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00001 Something went error. Please contact programmer!'));
+					}
+					if (!empty($has_new_image)) {
+						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
+						$config['allowed_types'] = 'jpg|png|tif';
+						$config['file_name'] = random_string('unique').'.jpg';
+						
+
+						print $config['file_name'];
+
+						print_r('new_image')
+
+						$this->load->library('upload', $config);
+
+						if (!$this->upload->do_upload('new_image')) {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
+						} else {
+							$image = $this->upload->data();
+							$image_path = $image['file_name'];
+							$is_image = $image['is_image'];
+							if (!$is_image) {
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
+							}
+						}
+					} else {
+						$image_path = $ori_image;
+					}
+					if (empty($data['error_messages'])){
+						if ($this->admin_model->update_category($category_id, array('name' => $name, 'order' => $order, 'image_path' => $image_path, ))){
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+						}
+					}
+				}	
+
+
+
+
+
+
+
+
+
+
+
+?>
 
 
 
@@ -39,7 +100,7 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload a first image.</p>
+						<p class="help-block">Upload first image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
@@ -89,7 +150,7 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload a first image.</p>
+						<p class="help-block">Upload sedcond image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
@@ -140,7 +201,7 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload a first image.</p>
+						<p class="help-block">Upload last image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
