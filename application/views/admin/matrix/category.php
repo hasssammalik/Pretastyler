@@ -1,25 +1,4 @@
 <?php echo form_open_multipart();?>
-<table>
-<?php 
-
-
-    foreach ($_POST as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        echo $key;
-        echo "</td>";
-        echo "<td>";
-        echo $value;
-        echo "</td>";
-        echo "</tr>";
-    }
-
-
-?>
-</table>
-
-
-
 <!-- Main content -->
 <section class="content">
 	<div class="row">

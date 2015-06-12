@@ -1,7 +1,7 @@
 <div class="mainContent">
 	<?php // echo form_open(); echo form_close();?>
 	<style type="text/css">
-		.target-search-page .itemsWrap ul.items li { width: 292px; float: none; }
+		.target-search-page .itemsWrap ul.items li { width: 215px; float: none; }
 
 		.sliderWrap.getCurrentWindowwidminus350 {
 		  position: relative;
@@ -50,7 +50,7 @@
 					<div class="pager"></div>
 				</div>
 			</div>
-			<div class="next-button">Skip
+			<div class="next-button" style="display:none;">Skip
 			</div>
 		</div>
 	</div>

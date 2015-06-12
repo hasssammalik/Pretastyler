@@ -735,9 +735,53 @@ class Garment extends CI_Controller {
 		}
 		
 		//if post
-			
+			if ($this->input->post()){
+					//if this is a edit request.
+					$this->load->model('admin_model');
+					$data['error_messages'] = array();
+					$garment_id = $this->input->post('garment_id', TRUE);
+					$name = $this->input->post('name', TRUE);
+					$ori_image = $this->input->post('ori_image', TRUE);
+					if (empty($garment_id)){
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00001 Something went error. Please contact programmer!'));
+					}
+					if (1==1) {
+						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/system/';
+						$config['allowed_types'] = 'jpg|png|tif';
+						$config['file_name'] = random_string('unique').'.jpg';
+
+						$this->load->library('upload', $config);
+						if (!$this->upload->do_upload('new_image')) {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
+						} else {
+							$image = $this->upload->data();
+							$image_path = $image['file_name'];
+							$is_image = $image['is_image'];
+							if (!$is_image) {
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
+							}
+						}
+					} else {
+						$image_path = $ori_image;
+					}
+					if (empty($data['error_messages'])){
+						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
+						
+							print_r($this->db->last_query());
+						
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+						}
+					}
+				}///	
 
 
+
+
+
+		////	
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
 		$data['title'] = $data['garment']['name'];
 		$data['title_description'] = "update images for ".$data['garment']['name'];

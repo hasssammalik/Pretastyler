@@ -258,6 +258,20 @@ class Admin_model extends CI_Model{
 	public function update_category($category_id, $data) {
 		return $this->db->where('category_id', $category_id)->update('category', $data);
 	}
+
+
+	/**
+	 * update_garment_image
+	 * Read garment's info by garment_id 
+	 * Returning url, image, ...
+	 *
+	 * @return garment array if existed, if not return FALSE
+	 */
+	public function update_garment_image($garment_id, $data) {
+		return $this->db->where('garment_id', $garment_id)->update('garment', $data);
+
+	}
+
 	/**
 	 * update_field
 	 * Read garment's info by garment_id 
