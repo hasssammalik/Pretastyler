@@ -327,6 +327,7 @@ class CI_Upload {
 		 */
 		$this->set_image_properties($this->upload_path.$this->file_name);
 
+		print_r(" PRINTING BY UPLOAD FUNCTION </br> ");
 		print_r($this->upload_path.$this->file_name);
 		return TRUE;
 	}
