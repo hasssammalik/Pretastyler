@@ -743,11 +743,12 @@ class Garment extends CI_Controller {
 			$data['user_name'] = $user_name['first_name'].' '.$user_name['last_name'];
 		}
 		
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/menu', $data);
-		$this->load->view('templates/menu_mall', $data);
+		$data['title'] = "Category - ".$data['garment']['name'];
+		$data['title_description'] = "manage category ".$data['garment']['name'];
+		//$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
+		$this->load->view('admin/header', $data);
 		$this->load->view('garment/edit_Images', $data);
-		$this->load->view('templates/footer', $data);
+		$this->load->view('admin/footer', $data);
 
 	}	
 
