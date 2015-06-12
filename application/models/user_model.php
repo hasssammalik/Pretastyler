@@ -532,13 +532,14 @@ class User_model extends CI_Model
 	 *
 	 * @return garment array ()
 	 */
-	public function insert_user_name($user_id, $first_name, $last_name)
+	public function insert_user_name($user_id, $first_name, $last_name, $country)
 	{
 		if ($user_id){
 			$data = array(
 				'user_id' => $user_id,
 				'first_name' => $first_name,
 				'last_name' => $last_name,
+				'country_id' => $country
 			);
 			return $this->db->insert('user_info', $data);
 		} else {

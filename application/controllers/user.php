@@ -314,6 +314,7 @@ class User extends CI_Controller {
 			$first_name = $this->input->post('first_name', TRUE);
 			$last_name = $this->input->post('last_name', TRUE);
 			$email = $this->input->post('email', TRUE);
+			$country = $this->input->post('country', TRUE);
 			
 			$facebookid = $this->input->post('fbid', TRUE);
 			$facebookverify = $this->input->post('fbverify', TRUE);
@@ -327,7 +328,7 @@ class User extends CI_Controller {
 				if (strlen($password) >= $this->flexi_auth->min_password_length()){
 					if ($this->flexi_auth->valid_password_chars($password)){
 						if ($user_id = $this->flexi_auth->insert_user($email, FALSE, $password, FALSE, 3, TRUE)) {
-							if ($this->user_model->insert_user_name($user_id, $first_name, $last_name)){
+							if ($this->user_model->insert_user_name($user_id, $first_name, $last_name, $country)){
 								if ($this->flexi_auth->login($email, $password)){
 									$this->register_extra($user_id, $email, $password, $first_name);
 									print $success_message;
