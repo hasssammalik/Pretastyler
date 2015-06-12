@@ -60,10 +60,8 @@
 			</div><!-- /.box -->
 			<div class="col-md-12">		
 			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
 				<input type="submit" class="btn btn-primary button-save" value="Save">
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
 			</div>
 			<br/>
 		</div>
@@ -105,16 +103,14 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload sedcond image.</p>
+						<p class="help-block">Upload second image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 			<div class="col-md-12">		
 			<div class="btn-group pull-right">
 				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
 				<input type="submit" class="btn btn-primary button-save" value="Save">
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
 			</div>
 			<br/>
 		</div>
@@ -163,10 +159,8 @@
 			</div><!-- /.box -->
 			<div class="col-md-12">		
 			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
-				<input type="submit" class="btn btn-primary button-save" value="Save">
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-danger">Delete</a>
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
+				<input type="submit" class="btn btn-primary button-save" value="Save">				
 			</div>
 			<br/>
 		</div>

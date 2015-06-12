@@ -747,7 +747,7 @@ class Garment extends CI_Controller {
 					if (empty($garment_id)){
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00001 Something went error. Please contact programmer!'));
 					}
-					if (1==1) {
+					if (!empty($image_no)) {
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
@@ -758,6 +758,8 @@ class Garment extends CI_Controller {
 						} else {
 							$image = $this->upload->data();
 							$image_path = $image['file_name'];
+
+
 							$is_image = $image['is_image'];
 							if (!$is_image) {
 								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
@@ -788,7 +790,7 @@ class Garment extends CI_Controller {
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 						}
-					} elseif  ($image_no=="2"){
+					} elseif  ($image_no=="3"){
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){
 						
 							print_r($this->db->last_query());
