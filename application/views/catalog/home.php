@@ -926,47 +926,44 @@
 
 
 			<div class="clear"></div>
-			<div class="homeprofile-head">
+			<div class="homeprofile-head newSignupJune">
+				<div class="innerSignupForm container wid60">
+				    <h1 style="padding: 5px; text-align:center;"><i>Save your details and <strong>Create Your Mall</strong></i></h1>
+					
+					<div id="error-register"></div>
+					
+					<form name="registerNewUser" action="" method="post" id="menu_mall_register">
+				        <div>
+							<input type="text" placeholder="First Name*" name="fname" id="menu_mall_register_fname" required/>
+							<input type="text" placeholder="Last Name*" name="lname" id="menu_mall_register_lname" required/>
+					    </div>
+				        <div>
+							<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
+							<input type="text" placeholder="Country*" name="country" id="menu_mall_register_country" required/>
+					    </div>
+				        <div>
+							<input type="password" placeholder="Password*" name="password" id="menu_mall_register_password" required />
+							<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" required />
+					    </div>
+				      	
+				      	<div class="center">
+							<div class="fbloginbutton left mousehand" id="fbloginbuttonIcon" onclick="fb_login();">Signup with Facebook</div>
+				      		<label>Take me to my best: 
+				      			<select name="category" class="best_category" id="menu_mall_register_category">
+				      				<option value="dresses" selected="selected">Dresses</option>
+				      			</select>
+				      		</label>
+				    	</div>
 
+				    	<div class="center">
+							<input type="submit" name="starttrial" value="Save and Open Mall" class="right" id="register-submit">
+				    	</div>
 
+				      	<div class="clear"></div>
 
-			
-			    <h1 style="padding: 5px; text-align:center;"><i>Save your details and <strong>Create Your Mall</strong></i></h1>
-				
-				<div id="error-register"></div>
-				
-				<form name="registerNewUser" action="" method="post" id="menu_mall_register">
-			        <div>
-						<input type="text" placeholder="First Name*" name="fname" id="menu_mall_register_fname" required/>
-						<input type="text" placeholder="Last Name*" name="lname" id="menu_mall_register_lname" required/>
-				    </div>
-			        <div>
-						<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
-						<input type="text" placeholder="Country*" name="country" id="menu_mall_register_country" required/>
-				    </div>
-			        <div>
-						<input type="password" placeholder="Password*" name="password" id="menu_mall_register_password" required />
-						<input type="password" placeholder="Confirm Password*" name="cpass" id="menu_mall_register_rpassword" required />
-				    </div>
-			      	
-			      	<div class="center">
-						<div class="fbloginbutton left mousehand" id="fbloginbuttonIcon" onclick="fb_login();">Signup with Facebook</div>
-			      		<label>Take me to my best: 
-			      			<select name="category" class="best_category" id="menu_mall_register_category">
-			      				<option value="dresses" selected="selected">Dresses</option>
-			      			</select>
-			      		</label>
-			    	</div>
-
-			    	<div class="center">
-						<input type="submit" name="starttrial" value="Save and Open Mall" class="right" id="register-submit">
-			    	</div>
-
-			      	<div class="clear"></div>
-
-			    </form>
-			    <!-- <div style="text-align:center">Trial Expires in 30 days.</div> -->
-
+				    </form>
+				    <!-- <div style="text-align:center">Trial Expires in 30 days.</div> -->
+			    </div>
 				
 				<?php /* ?>
 				<p class="homeprofile-bodytext" style=" font-style: italic; font-size: 1.8vw;"><br/>What's<strong > Next?</strong></p>
