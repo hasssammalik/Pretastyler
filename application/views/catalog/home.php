@@ -940,7 +940,7 @@
 				        <div>
 							<input type="email" placeholder="Email*" name="email" id="menu_mall_register_email" required/>
 							<label style="width: 45%; display: inline-block;">
-				      			<select name="category" class="menu_mall_register_category bordernormal" id="menu_mall_register_category">
+				      			<select name="country" class="menu_mall_register_country bordernormal" id="menu_mall_register_country">
 				      			<?php foreach ($countries as $country) { ?>
 				      				<option value="<?php echo $country['country_id'] ?>"<?php if( $country['country_id'] == 13 ){ ?> selected="selected"<?php } ?>><?php echo $country['country'] ?></option>
 				      			<?php } ?>
