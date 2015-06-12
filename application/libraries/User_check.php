@@ -40,14 +40,14 @@ class User_check
 			if (!empty($user_id)) {
 				if ($ci->flexi_auth->in_group(array('StandardUsers'))){
 					//this is trial users check process
-					$ci->load->model('user_model');
+					/* $ci->load->model('user_model');
 					$user_info = $ci->flexi_auth->get_user_by_id($user_id)->result_array()[0];
 					$datetime1 = new DateTime();
 					$datetime2 = new DateTime($user_info['uacc_date_added']);
 					$interval = $datetime1->diff($datetime2);
 					$days = $interval->days;
 					if ($days >= 30) {
-						redirect('payment');
+						redirect('payment'); */
 					}
 				} else if ($ci->flexi_auth->in_group(array('PremiumUsers'))){
 					//wait for payment system
