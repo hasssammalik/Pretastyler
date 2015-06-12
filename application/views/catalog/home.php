@@ -351,7 +351,7 @@
 							.slider({
 								min: 0, 
 								max: necklength.length-1, 
-								value: default_values[6]-1
+								value: default_values[7]-1
 							})
 							.slider("pips", {
 								labels: necklength
@@ -361,7 +361,7 @@
 								labels: necklengthimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[6] = (+ui.value+1);
+								default_values[7] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -370,7 +370,7 @@
 							.slider({
 								min: 0, 
 								max: shoulders.length-1, 
-								value: default_values[7]-1
+								value: default_values[8]-1
 							})
 							.slider("pips", {
 								labels: shoulders
@@ -380,7 +380,7 @@
 								labels: shouldersimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[7] = (+ui.value+1);
+								default_values[8] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -389,7 +389,7 @@
 							.slider({
 								min: 0, 
 								max: faceshape.length-1, 
-								value: default_values[8]-1
+								value: default_values[9]-1
 							})
 							.slider("pips", {
 								labels: faceshape
@@ -399,7 +399,7 @@
 								labels: faceshapeimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[8] = (+ui.value+1);
+								default_values[9] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -408,7 +408,7 @@
 							.slider({
 								min: 0, 
 								max: neck.length-1, 
-								value: default_values[9]-1
+								value: default_values[10]-1
 							})
 							.slider("pips", {
 								labels: neck
@@ -418,7 +418,7 @@
 								labels: neckimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[9] = (+ui.value+1);
+								default_values[10] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -427,7 +427,7 @@
 							.slider({
 								min: 0, 
 								max: back.length-1, 
-								value: default_values[10]-1
+								value: default_values[11]-1
 							})
 							.slider("pips", {
 								labels: back
@@ -437,7 +437,7 @@
 								labels: backimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[10] = (+ui.value+1);
+								default_values[11] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -446,7 +446,7 @@
 							.slider({
 								min: 0, 
 								max: upperarms.length-1, 
-								value: default_values[11]-1
+								value: default_values[12]-1
 							})
 							.slider("pips", {
 								labels: upperarms
@@ -456,7 +456,7 @@
 								labels: upperarmsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[11] = (+ui.value+1);
+								default_values[12] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -465,7 +465,7 @@
 							.slider({
 								min: 0, 
 								max: midriff.length-1, 
-								value: default_values[12]-1
+								value: default_values[13]-1
 							})
 							.slider("pips", {
 								labels: midriff
@@ -475,7 +475,7 @@
 								labels: midriffimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[12] = (+ui.value+1);
+								default_values[13] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -484,7 +484,7 @@
 							.slider({
 								min: 0, 
 								max: stomach.length-1, 
-								value: default_values[13]-1
+								value: default_values[14]-1
 							})
 							.slider("pips", {
 								labels: stomach
@@ -494,7 +494,7 @@
 								labels: stomachimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[13] = (+ui.value+1);
+								default_values[14] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -503,7 +503,7 @@
 							.slider({
 								min: 0, 
 								max: bottom.length-1, 
-								value: default_values[14]-1
+								value: default_values[15]-1
 							})
 							.slider("pips", {
 								labels: bottom
@@ -513,7 +513,7 @@
 								labels: bottomimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[14] = (+ui.value+1);
+								default_values[15] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -522,7 +522,7 @@
 							.slider({
 								min: 0, 
 								max: innerthighs.length-1, 
-								value: default_values[15]-1
+								value: default_values[16]-1
 							})
 							.slider("pips", {
 								labels: innerthighs
@@ -532,7 +532,7 @@
 								labels: innerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[15] = (+ui.value+1);
+								default_values[16] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -540,7 +540,7 @@
 							.slider({
 								min: 0, 
 								max: outerthighs.length-1, 
-								value: default_values[16]-1
+								value: default_values[17]-1
 							})
 							.slider("pips", {
 								labels: outerthighs
@@ -550,7 +550,7 @@
 								labels: outerthighsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[16] = (+ui.value+1);
+								default_values[17] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
@@ -559,7 +559,7 @@
 							.slider({
 								min: 0, 
 								max: lowerlegs.length-1, 
-								value: default_values[17]-1
+								value: default_values[18]-1
 							})
 							.slider("pips", {
 								labels: lowerlegs
@@ -569,7 +569,7 @@
 								labels: lowerlegsimage
 							})
 							.on("slidechange", function(e,ui) {
-								default_values[17] = (+ui.value+1);
+								default_values[18] = (+ui.value+1);
 								pull_profile_garment();
 							});
 						
