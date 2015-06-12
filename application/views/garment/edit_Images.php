@@ -24,7 +24,7 @@ if ($this->input->post()){
 
 						print $config['file_name'];
 
-						print_r('new_image')
+						print_r('new_image');
 
 						$this->load->library('upload', $config);
 
