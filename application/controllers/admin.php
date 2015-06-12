@@ -419,7 +419,7 @@ class Admin extends CI_Controller {
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00016 Something went error. Please contact programmer!'));
 					}
 				}
-			}
+			} 
 			$name = $this->garment_model->get_garment_info($param1)['name'];
 			$data['delete_type'] = 'garment';
 			$data['delete_id'] = $param1;
@@ -464,6 +464,7 @@ class Admin extends CI_Controller {
 		$this->datatables->edit_column('category', '$1 (<a href="/admin/matrix/category/$2.html">Matrix</a>, <a href="/admin/garment/category/$2.html">Garment</a>)', 'category, category_id');
 		$this->datatables->add_column('edit_basic', '<a href="/garment/edit-general/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
 		$this->datatables->add_column('edit', '<a href="/garment/edit/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
+		$this->datatables->add_column('images', '<a href="/garment/ImageEdit/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
 		$this->datatables->add_column('delete', '<a href="/admin/garment/delete/$1.html"><i class="glyphicon glyphicon-remove"></i></a>', 'garment_id');
 		echo $this->datatables->generate();
 	}
