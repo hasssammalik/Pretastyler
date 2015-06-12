@@ -958,8 +958,8 @@
 				      	    	<div class="fbloginbutton mousehand" id="fbloginbuttonIcon" onclick="fb_login();" style="width: 160px;display: inline-block;">Signup with Facebook</div>
 				      	    </div>
 							
-				      		<label style="  width: 40%; display: inline-block;">Take me to my best: 
-				      			<select name="category" class="menu_mall_register_category bordernormal" id="menu_mall_register_category" style=" width: 38%;">
+				      		<label style="  width: 50%; display: inline-block;">Take me to my best: 
+				      			<select name="category" class="menu_mall_register_category bordernormal" id="menu_mall_register_category" style=" width: 48%;">
 				      			<?php foreach ($categories as $value) { ?>
 				      				<option value="<?php echo $value['category_id'] ?>" selected="selected"><?php echo $value['name'] ?></option>
 				      			<?php } ?>
