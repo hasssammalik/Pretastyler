@@ -26,7 +26,7 @@
 								<th>Clicks</th>
 								<th>Edit Basic Info</th>
 								<th>Edit Criteria</th>
-								<th>Images</th>
+								<th>Edit Images</th>
 								<th>Delete</th>
 							</tr>
 						</thead>
@@ -47,7 +47,7 @@
 								<th>Clicks</th>
 								<th>Edit Basic</th>
 								<th>Edit Criteria</th>
-								<th>Images</th>
+								<th>Edit Images</th>
 								<th>Delete</th>
 							</tr>
 						</tfoot>
