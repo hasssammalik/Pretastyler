@@ -1,17 +1,6 @@
 <?php echo form_open_multipart();?>
 <!-- Main content -->
-<section class="content">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
-				<input type="submit" class="btn btn-primary button-save" value="Save">
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id'];?>.html" class="btn btn-danger">Delete</a>
-			</div>
-			<br/>
-		</div>
-	</div>
+
 
 	
 <div class="row">
@@ -56,22 +45,11 @@
 		</div><!--/.col (left) -->
 
 
-	</div>   <!-- /.row -->
+</div>   <!-- /.row -->
 
 
 
 
-	<div class="row">
-		<div class="col-md-12">
-			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id']; ?>.html" class="btn btn-warning">Discard</a>
-				<input type="submit" class="btn btn-primary button-save" value="Save">
-				<a href="/garment/ImageEdit/<?php print $garment['garment_id'];?>.html" class="btn btn-danger">Delete</a>
-			</div>
-			<br/>
-		</div>
-	</div>
-	
+
 </section><!-- /.content -->
 <?php echo form_close(); ?>
