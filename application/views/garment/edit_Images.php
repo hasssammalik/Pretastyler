@@ -1,5 +1,4 @@
-<div class="row">
-<?php echo form_open_multipart();?>
+
 <!-- Main content -->
 <table>
 <?php 
@@ -20,9 +19,9 @@
 ?>
 </table>
 
-
+<div class="row">
 		<!-- left column -->
-		
+		<?php echo form_open_multipart();?>
 		<div class="col-md-4">
 		
 			<!-- general form elements -->
@@ -69,42 +68,10 @@
 		</div>
 
 		</div><!--/.col (left) -->
+			<?php echo form_close(); ?>
 
-
-
-</div>   <!-- /.row -->
-
-
-
-
-
-</section><!-- /.content -->
-<?php echo form_close(); ?>
-
-<?php echo form_open_multipart();?>
-<!-- Main content -->
-<table>
-<?php 
-
-
-    foreach ($_POST as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        echo $key;
-        echo "</td>";
-        echo "<td>";
-        echo $value;
-        echo "</td>";
-        echo "</tr>";
-    }
-
-
-?>
-</table>
-
-<div class="row">
-		<!-- left column -->
-		
+		<!-- centre column -->
+				<?php echo form_open_multipart();?>
 		<div class="col-md-4">
 		
 			<!-- general form elements -->
@@ -129,14 +96,14 @@
 					<div class="input-group">
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
-						<input type="hidden" name="has_new_image" value="1">
+						<input type="hidden" name="has_new_image" value="0">
 						<input type="hidden" name="ori_image" value="<?php print $garment['image_path'] ?>">
 					</div>
 					<br/>
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload first image.</p>
+						<p class="help-block">Upload sedcond image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
@@ -151,56 +118,11 @@
 		</div>
 
 		</div><!--/.col (left) -->
+			<?php echo form_close(); ?>
 
 
-
-</div>   <!-- /.row -->
-
-
-
-
-
-</section><!-- /.content -->
-<?php echo form_close(); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php echo form_open_multipart();?>
-<!-- Main content -->
-<table>
-<?php 
-
-
-    foreach ($_POST as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        echo $key;
-        echo "</td>";
-        echo "<td>";
-        echo $value;
-        echo "</td>";
-        echo "</tr>";
-    }
-
-
-?>
-</table>
-
-<div class="row">
-		<!-- left column -->
-		
+		<!-- right column -->
+			<?php echo form_open_multipart();?>
 		<div class="col-md-4">
 		
 			<!-- general form elements -->
@@ -225,14 +147,14 @@
 					<div class="input-group">
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
-						<input type="hidden" name="has_new_image" value="1">
+						<input type="hidden" name="has_new_image" value="0">
 						<input type="hidden" name="ori_image" value="<?php print $garment['image_path'] ?>">
 					</div>
 					<br/>
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload first image.</p>
+						<p class="help-block">Upload last image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
@@ -247,17 +169,12 @@
 		</div>
 
 		</div><!--/.col (left) -->
+			<?php echo form_close(); ?>
 
-
-
-
+</div>   <!-- /.row -->
 
 
 
 
 
 </section><!-- /.content -->
-<?php echo form_close(); ?>
-
-
-</div>   <!-- /.row -->

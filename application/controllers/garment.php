@@ -765,6 +765,8 @@ class Garment extends CI_Controller {
 						$image_path = $ori_image;
 					}
 					if (empty($data['error_messages'])){
+
+					 	
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
 						
 							print_r($this->db->last_query());
@@ -774,6 +776,7 @@ class Garment extends CI_Controller {
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 						}
+					
 					}
 				}///	
 
