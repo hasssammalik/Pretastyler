@@ -18,7 +18,7 @@
 		<!-- left column -->
 		
 		<div class="col-md-offset-4 col-md-4">
-		<?php } ?>
+		
 			<!-- general form elements -->
 			<div class="box box-primary">
 				<div class="box-header">
@@ -72,6 +72,6 @@
 			<br/>
 		</div>
 	</div>
-	<?php } ?>
+	
 </section><!-- /.content -->
 <?php echo form_close(); ?>
