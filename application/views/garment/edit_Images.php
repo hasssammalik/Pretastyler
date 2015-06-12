@@ -95,7 +95,7 @@
 										
 					<div class="input-group">
 						<label for="garment-image-path">Image</label>
-						<img src="/images/garment/<?php print $garment['image_path'] ?>">
+						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="0">
 						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image1_path'] ?>">
 					</div>
@@ -145,7 +145,7 @@
 										
 					<div class="input-group">
 						<label for="garment-image-path">Image</label>
-						<img src="/images/garment/<?php print $garment['image_path'] ?>">
+						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
 						<input type="hidden" name="has_new_image" value="0">
 						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image2_path'] ?>">
 					</div>
