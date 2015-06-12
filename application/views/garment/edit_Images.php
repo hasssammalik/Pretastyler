@@ -42,12 +42,6 @@ if ($this->input->post()){
 						$image_path = $ori_image;
 					}
 					if (empty($data['error_messages'])){
-						if ($this->admin_model->update_category($category_id, array('name' => $name, 'order' => $order, 'image_path' => $image_path, ))){
-							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
-						} else {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
-						}
 					}
 				}	
 
