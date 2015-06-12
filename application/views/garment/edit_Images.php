@@ -15,20 +15,18 @@ if ($this->input->post()){
 					$ori_image = $this->input->post('ori_image', TRUE);
 
 
+					echo "hassam testing";
 
-					if (empty($garment_id)){
-						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00001 Something went error. Please contact programmer!'));
-					}
+						print_r($garment_id);
+						echo $garment_id;
+						print $garment_id; 
+					
 					if (!empty($has_new_image)) {
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
 						
-						echo "hassam testing";
-
-						print_r($garment_id);
-						echo $garment_id;
-						print $garment_id; 
+						
 
 
 						print $config['file_name'];
