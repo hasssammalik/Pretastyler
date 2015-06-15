@@ -1,7 +1,9 @@
 <?php echo form_open_multipart();?>
 
 <?php print_r($_FILES); ?> </br>
-<?php print_r($_POST); ?>
+<?php print_r($_POST); ?> </br>
+<?php print_r($error_messages); ?> </br>
+
 <!-- Main content -->
 
 <div class="row">

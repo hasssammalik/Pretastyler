@@ -745,110 +745,107 @@ class Garment extends CI_Controller {
 					$ori_image2 = $this->input->post('ori_image2', TRUE);
 					$ori_image3 = $this->input->post('ori_image3', TRUE);
 					$image_no = $this->input->post('image_no', TRUE);
-					$image_path="";
-					$image_path2="";
-					$image_path3="";
-
+					
+					
 					
 					
 					//Upload first image	
 					if (!empty($_FILES['new_image']['name'])) {
-						print_r($_FILES['new_image']['name']);
+						print_r("first file" . $_FILES['new_image']['name'] . "</br>");
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
-
+						$image_path="";	
 						$this->load->library('upload', $config);
 						if (!$this->upload->do_upload('new_image')) {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
+							echo $this->upload->display_errors();
 						} else {
 							$image = $this->upload->data();
 							$image_path = $image['file_name'];
-
-
 							$is_image = $image['is_image'];
 							if (!$is_image) {
 								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
 							}
 						}
-					} else {
-						$image_path = $ori_image;
-					}
 
+
+					//update DB
+						if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){						
+						print_r("first ". $image_path ."</br>");					
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+					}
+					} 
 
 					//Upload first image	
 					if (!empty($_FILES['new_image2']['name'])) {
-						print_r($_FILES['new_image2']['name']);
+						print_r("second file" . $_FILES['new_image2']['name'] . "</br>");
+
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
-
+						$image_path="";
 						$this->load->library('upload', $config);
 						if (!$this->upload->do_upload('new_image2')) {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
+							echo $this->upload->display_errors();
+
 						} else {
 							$image = $this->upload->data();
 							$image_path = $image['file_name'];
-
-
 							$is_image = $image['is_image'];
 							if (!$is_image) {
 								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
 							}
 						}
-					} else {
-						$image_path2 = $ori_image2;
-					}
 
+						//update db
+						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){						
+						print_r("second ". $image_path2 ."</br>");					
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+						} else {
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+					}
+					} 
 
 					//Upload first image	
 					if (!empty($_FILES['new_image3']['name'])) {
-						print_r($_FILES['new_image3']['name']);
+						print_r("third file" . $_FILES['new_image3']['name'] . "</br>");
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
-
+						$image_path="";
 						$this->load->library('upload', $config);
-						if (!$this->upload->do_upload('new_image3')) {
+						if (!$this->upload->do_upload('new_image3')) {							
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
+							echo $this->upload->display_errors();
+
 						} else {
 							$image = $this->upload->data();
 							$image_path = $image['file_name'];
-
-
 							$is_image = $image['is_image'];
 							if (!$is_image) {
 								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
 							}
 						}
-					} else {
-						$image_path3 = $ori_image3;
-					}
 
-					//update db
-					if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){						
-						print_r($image_path);					
+						//UPDATE DB
+						if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){						
+						print_r("third ". $image_path3 ."</br>");					
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
+					} 
 
-					if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path2))){						
-						print_r($image_path2);					
-							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
-						} else {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
-					}
+					
 
-					if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path3))){						
-						print_r($image_path3);					
-							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
-						} else {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
-					}
+					
 				}///	
 
 
