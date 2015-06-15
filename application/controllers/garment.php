@@ -747,7 +747,7 @@ class Garment extends CI_Controller {
 					$image_no = $this->input->post('image_no', TRUE);	
 					$firstImageDD= $this->input->post ('firstImageDD', TRUE);
 					$SecondImageDD= $this->input->post ('SecondImageDD',TRUE);
-					$ThirdImageDD= $this->input->pos('ThirdImageDD', TRUE);
+					$ThirdImageDD= $this->input->post('ThirdImageDD', TRUE);
 					//Upload first image	
 					if (!empty($_FILES['new_image']['name'])) {
 						print_r("first file" . $_FILES['new_image']['name'] . "</br>");
