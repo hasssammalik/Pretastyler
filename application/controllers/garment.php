@@ -713,7 +713,8 @@ class Garment extends CI_Controller {
 	}
 
 
-		public function ImageEdit($slug = FALSE){
+<?php
+public function ImageEdit($slug = FALSE){
 		$this->load->library('user_check');
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
@@ -771,7 +772,7 @@ class Garment extends CI_Controller {
 					//update DB
 						if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){	
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
@@ -800,7 +801,7 @@ class Garment extends CI_Controller {
 						//update db
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
@@ -828,7 +829,7 @@ class Garment extends CI_Controller {
 						//UPDATE DB
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){	
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
@@ -843,41 +844,41 @@ class Garment extends CI_Controller {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));						
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));	
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));	
 					}elseif (strcmp($firstImageDD, "2")==0) {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
 						}
 		}elseif(strcmp($SecondImageDD, "0")!==0){
 					if(strcmp($SecondImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));						
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));	
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));	
 					}elseif (strcmp($SecondImageDD, "2")==0) {
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
 						}
 		}elseif(strcmp($ThirdImageDD, "0")!==0){
 					if(strcmp($ThirdImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));						
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));	
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));	
 					}elseif (strcmp($ThirdImageDD, "2")==0) {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));
 							$data['success_messages'] = array();
-							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
 						}
 		}					
 					
 	}///	
-		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
+		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['garment_id']);
 		$data['title'] = $data['garment']['name'];
 		$data['title_description'] = "update images for ".$data['garment']['name'];
 		//$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
@@ -885,7 +886,7 @@ class Garment extends CI_Controller {
 		$this->load->view('garment/edit_Images', $data);
 		$this->load->view('admin/footer', $data);
 
-	}	
+	}		
 
 
 }
