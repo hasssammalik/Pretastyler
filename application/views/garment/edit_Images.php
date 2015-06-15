@@ -56,7 +56,7 @@
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
-						<input type="hidden" name="image_no" value="1">
+						<input type="hidden" name="image_no" value="2">
 					</div>
 					<br/>
 					<div class="input-group">
@@ -86,7 +86,7 @@
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image2_path'] ?>">
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
-						<input type="hidden" name="image_no" value="1">
+						<input type="hidden" name="image_no" value="3">
 					</div>
 					<br/>
 					<div class="input-group">
