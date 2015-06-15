@@ -1,5 +1,5 @@
 <?php print_r($_FILES); ?>
-<?php print_r($_POST); ?>
+
 <!-- Main content -->
 
 <div class="row">
@@ -47,12 +47,12 @@
 			<!-- general form elements -->
 			<div class="box box-primary">
 				<div class="box-header">
-					<h3 class="box-title">Primary Image</h3>
+					<h3 class="box-title">Side Image</h3>
 				</div><!-- /.box-header -->
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
-						<label for="garment-image-path">Side Image</label>
+						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image1_path'] ?>">
