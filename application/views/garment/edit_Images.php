@@ -62,7 +62,7 @@
 					<br/>
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
-						<input type="file" name="new_image">
+						<input type="file" name="new_image2">
 						<p class="help-block">Upload first image.</p>
 					</div>
 				</div><!-- /.box-body -->
@@ -92,7 +92,7 @@
 					<br/>
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
-						<input type="file" name="new_image">
+						<input type="file" name="new_image3">
 						<p class="help-block">Upload first image.</p>
 					</div>
 				</div><!-- /.box-body -->
