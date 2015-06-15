@@ -831,13 +831,9 @@ class Garment extends CI_Controller {
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
-					} 
-
-			// Swap Images		
-
-			if($firstImageDD!='0'){
-					if($firstImageDD=="1"){
-							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image);
+					} 		
+			if($firstImageDD!="0"){
+					if($firstImageDD=="1"){							
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3);	
 					}elseif ($firstImageDD=="2") {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image);
