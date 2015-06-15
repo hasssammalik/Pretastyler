@@ -769,7 +769,7 @@ class Garment extends CI_Controller {
 									array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));		
 								}
 							}
-							 
+						print_r($image_path);	 
 						//update db
 						if (empty($data['error_messages'])){	
 						if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){
@@ -786,7 +786,7 @@ class Garment extends CI_Controller {
 					} elseif($image_no=="2"){
 
 
-						
+
 						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
 						
 							
