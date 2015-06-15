@@ -5,7 +5,7 @@
 
 <!-- Main content -->
 
-<div class="row" style="margin-right:0px">
+<div class="row" style="margin-right:0px;margin-left: 0px;">
 <div class="col-md-12">		
 			<div class="btn-group pull-right">
 				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
@@ -14,7 +14,7 @@
 </div>
 </div>
 
-<div class="row" style="margin-right:0px">
+<div class="row" style="margin-right:0px;margin-left: 0px;">
 		<!-- left column -->		
 		<div class="col-md-4">		
 			<!-- general form elements -->
