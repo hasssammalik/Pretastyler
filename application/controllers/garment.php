@@ -836,19 +836,13 @@ class Garment extends CI_Controller {
 			// Swap Images		
 
 			if($firstImageDD!='0'){
-					switch ($firstImageDD) {
-						case '1':{
+					if($firstImageDD=="1"){
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image);
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3);	
-							break;
-						}
-						case '2':{
+					}elseif ($firstImageDD=="2") {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image);
-							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2);	
-							break;
+							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2);
 						}
-					}
-
 			}		
 					
 	}///	
