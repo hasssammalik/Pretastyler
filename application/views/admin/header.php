@@ -221,7 +221,7 @@
 							<i class="fa fa-angle-left pull-right"></i>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="admin/notifications.html"><i class="fa fa-angle-double-right"></i> All Notifications</a></li>
+							<li><a href="/admin/notifications.html"><i class="fa fa-angle-double-right"></i> All Notifications</a></li>
 						</ul>
 					</li>
 
