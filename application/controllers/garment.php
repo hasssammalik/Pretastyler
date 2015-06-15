@@ -713,7 +713,7 @@ class Garment extends CI_Controller {
 	}
 
 
-	public function ImageEdit($slug = FALSE){
+		public function ImageEdit($slug = FALSE){
 		$this->load->library('user_check');
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
@@ -750,7 +750,7 @@ class Garment extends CI_Controller {
 					$ThirdImageDD= $this->input->post('ThirdImageDD', TRUE);
 					//Upload first image	
 					if (!empty($_FILES['new_image']['name'])) {
-						print_r("first file" . $_FILES['new_image']['name'] . "</br>");
+						
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
@@ -779,7 +779,7 @@ class Garment extends CI_Controller {
 
 					//Upload first image	
 					if (!empty($_FILES['new_image2']['name'])) {
-						print_r("second file" . $_FILES['new_image2']['name'] . "</br>");
+						
 
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
@@ -808,7 +808,7 @@ class Garment extends CI_Controller {
 
 					//Upload first image	
 					if (!empty($_FILES['new_image3']['name'])) {
-						print_r("third file" . $_FILES['new_image3']['name'] . "</br>");
+						
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
@@ -874,7 +874,6 @@ class Garment extends CI_Controller {
 		$this->load->view('admin/footer', $data);
 
 	}	
-
 
 
 }

@@ -1,6 +1,6 @@
 <?php echo form_open_multipart();?>
 
-<?php print_r($_POST); ?> </br>
+<!--<?php print_r($_POST); ?> </br> -->
 
 
 <!-- Main content -->
