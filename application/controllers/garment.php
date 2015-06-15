@@ -836,7 +836,7 @@ class Garment extends CI_Controller {
 
 
 		//SWAPS	
-		if(($firstImageDD!==0 && $SecondImageDD!==0) || ($firstImageDD!==0 && $ThirdImageDD!==0) || ($SecondImageDD!==0 && $ThirdImageDD!==0)){   			
+		if(($firstImageDD!="0" && $SecondImageDD!="0") || ($firstImageDD!="0" && $ThirdImageDD!="0") || ($SecondImageDD!="0" && $ThirdImageDD!="0")){   			
 			array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Can not swap two images at the same time!'));
 		}elseif(strcmp($firstImageDD, "0")!==0){
 					if(strcmp($firstImageDD, "1")==0){	
