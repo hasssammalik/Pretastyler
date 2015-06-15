@@ -49,7 +49,7 @@ class Mall extends CI_Controller {
 		$this->load->library('user_check');
 		$data = $this->data;
 		$data['title'] = "My Fashion Mall";
-		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.6"></script>';
+		$data['extraJS'] = '<script src="/js/mall.js?v=2.2.0.7"></script>';
 		
 		$data['extraJS'] .= '<script src="/js/jTour.min.js"></script>';
 		$data['extraJS'] .= '<script src="/js/mall.tour.js?v=2.2.0.4"></script>';
