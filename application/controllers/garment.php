@@ -883,7 +883,7 @@ public function ImageEdit($slug = FALSE){
 		$data['title_description'] = "update images for ".$data['garment']['name'];
 		//$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
 		$this->load->view('admin/header', $data);
-		$this->load->view('garment/edit_Images', $data);
+		$this->load->view('admin/garment/edit_Images', $data);
 		$this->load->view('admin/footer', $data);
 
 	}		
