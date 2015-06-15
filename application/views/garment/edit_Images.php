@@ -1,7 +1,7 @@
 <?php echo form_open_multipart();?>
 
-<?php print_r($_FILES); ?> </br>
 <?php print_r($_POST); ?> </br>
+<?php print_r($_REQUEST['firstImageDD']); ?></br>
 
 
 <!-- Main content -->
@@ -27,7 +27,7 @@
 				<div class="box-body">															
 					<div class="input-group">
 						<label>Swap Image: </label>
-							<select class="assessment-price-range">
+							<select name="firstImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
 								<option value="1" >Back Image</option>
 								<option value="2" >Side Image</option>
