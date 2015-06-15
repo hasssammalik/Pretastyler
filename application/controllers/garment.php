@@ -744,10 +744,7 @@ class Garment extends CI_Controller {
 					$ori_image = $this->input->post('ori_image', TRUE);
 					$ori_image2 = $this->input->post('ori_image2', TRUE);
 					$ori_image3 = $this->input->post('ori_image3', TRUE);
-					$image_no = $this->input->post('image_no', TRUE);
-					
-					
-					
+					$image_no = $this->input->post('image_no', TRUE);	
 					
 					//Upload first image	
 					if (!empty($_FILES['new_image']['name'])) {
@@ -758,8 +755,7 @@ class Garment extends CI_Controller {
 						$image_path="";	
 						$this->load->library('upload', $config);
 						if (!$this->upload->do_upload('new_image')) {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
-							echo $this->upload->display_errors();
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));						
 						} else {
 							$image = $this->upload->data();
 							$image_path = $image['file_name'];
@@ -771,8 +767,7 @@ class Garment extends CI_Controller {
 
 
 					//update DB
-						if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){						
-						print_r("first ". $image_path ."</br>");					
+						if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){	
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
@@ -790,9 +785,7 @@ class Garment extends CI_Controller {
 						$image_path="";
 						$this->load->library('upload', $config);
 						if (!$this->upload->do_upload('new_image2')) {
-							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
-							echo $this->upload->display_errors();
-
+							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));	
 						} else {
 							$image = $this->upload->data();
 							$image_path = $image['file_name'];
@@ -803,8 +796,7 @@ class Garment extends CI_Controller {
 						}
 
 						//update db
-						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){						
-						print_r("second ". $image_path2 ."</br>");					
+						if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
@@ -822,8 +814,6 @@ class Garment extends CI_Controller {
 						$this->load->library('upload', $config);
 						if (!$this->upload->do_upload('new_image3')) {							
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
-							echo $this->upload->display_errors();
-
 						} else {
 							$image = $this->upload->data();
 							$image_path = $image['file_name'];
@@ -834,8 +824,7 @@ class Garment extends CI_Controller {
 						}
 
 						//UPDATE DB
-						if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){						
-						print_r("third ". $image_path3 ."</br>");					
+						if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){	
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
@@ -847,12 +836,6 @@ class Garment extends CI_Controller {
 
 					
 				}///	
-
-
-
-
-
-		////	
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
 		$data['title'] = $data['garment']['name'];
 		$data['title_description'] = "update images for ".$data['garment']['name'];

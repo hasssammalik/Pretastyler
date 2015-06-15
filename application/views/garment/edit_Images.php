@@ -2,7 +2,7 @@
 
 <?php print_r($_FILES); ?> </br>
 <?php print_r($_POST); ?> </br>
-<?php print_r($error_messages); ?> </br>
+
 
 <!-- Main content -->
 
@@ -26,6 +26,12 @@
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
+						<label>Swap Image: </label>
+							<select class="assessment-price-range">
+								<option value="0">Please Select</option>
+								<option value="1" >Back Image</option>
+								<option value="2" >Side Image</option>
+							</select>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
