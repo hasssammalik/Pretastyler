@@ -750,9 +750,10 @@ class Garment extends CI_Controller {
 					$image_path3="";
 
 					
-					print_r($_FILE['new_image']['name']);
+					
 					//Upload first image	
-					if (!empty($_FILE['new_image']['name'])) {
+					if (!empty($_FILES['new_image']['name'])) {
+						print_r($_FILES['new_image']['name']);
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
@@ -776,7 +777,8 @@ class Garment extends CI_Controller {
 
 
 					//Upload first image	
-					if (!empty($_FILE['new_image2']['name'])) {
+					if (!empty($_FILES['new_image2']['name'])) {
+						print_r($_FILES['new_image2']['name']);
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
@@ -800,7 +802,8 @@ class Garment extends CI_Controller {
 
 
 					//Upload first image	
-					if (!empty($_FILE['new_image3']['name'])) {
+					if (!empty($_FILES['new_image3']['name'])) {
+						print_r($_FILES['new_image3']['name']);
 						$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
 						$config['allowed_types'] = 'jpg|png|tif';
 						$config['file_name'] = random_string('unique').'.jpg';
@@ -824,7 +827,7 @@ class Garment extends CI_Controller {
 
 					//update db
 					if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){						
-											
+						print_r($image_path);					
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
@@ -832,7 +835,7 @@ class Garment extends CI_Controller {
 					}
 
 					if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path2))){						
-											
+						print_r($image_path2);					
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
@@ -840,7 +843,7 @@ class Garment extends CI_Controller {
 					}
 
 					if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path3))){						
-											
+						print_r($image_path3);					
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						} else {
