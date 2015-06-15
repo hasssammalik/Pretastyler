@@ -8,8 +8,10 @@
 <div class="row" style="margin-right:0px;margin-left: 0px;">
 <div class="col-md-12">		
 			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
-				<input type="submit" class="btn btn-primary button-save" value="Save">				
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
+				<a href="javascript:history.go(0)" class="btn btn-warning">Refresh</a>				
+				<input type="submit" class="btn btn-primary button-save" value="Save">	
+				<a href="/admin/garment/delete/<?php print  $garment['garment_id'];?>.html" class="btn btn-danger">Delete</a>			
 			</div>
 </div>
 </div>
@@ -127,8 +129,10 @@
 <div class="row">
 <div class="col-md-12">		
 			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
-				<input type="submit" class="btn btn-primary button-save" value="Save">				
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
+				<a href="javascript:history.go(0)" class="btn btn-warning">Refresh</a>				
+				<input type="submit" class="btn btn-primary button-save" value="Save">	
+				<a href="/admin/garment/delete/<?php print  $garment['garment_id'];?>.html" class="btn btn-danger">Delete</a>			
 			</div>
 </div>
 </div>
