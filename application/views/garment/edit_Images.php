@@ -1,6 +1,7 @@
+<?php print_r($_FILES); ?>
 <?php print_r($_POST); ?>
 <!-- Main content -->
-<?php echo form_open_multipart();?>
+
 <div class="row">
 <div class="col-md-12">		
 			<div class="btn-group pull-right">
@@ -9,7 +10,7 @@
 			</div>
 </div>
 </div>
-
+<?php echo form_open_multipart();?>
 
 <div class="row">
 		<!-- left column -->		
@@ -51,7 +52,7 @@
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
-						<label for="garment-image-path">Image</label>
+						<label for="garment-image-path">Side Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image1_path'] ?>">
@@ -76,7 +77,7 @@
 			<!-- general form elements -->
 			<div class="box box-primary">
 				<div class="box-header">
-					<h3 class="box-title">Primary Image</h3>
+					<h3 class="box-title">Back Image</h3>
 				</div><!-- /.box-header -->
 				<!-- form start -->
 				<div class="box-body">															
