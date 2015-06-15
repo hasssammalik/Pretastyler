@@ -60,6 +60,13 @@
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
+					<label>Swap Image: </label>
+							<select name="SecondImageDD" class="assessment-price-range">
+								<option value="0">Please Select</option>
+								<option value="1" >Back Image</option>
+								<option value="2" >Primary Image</option>
+							</select>
+						<br/>	
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
@@ -89,6 +96,13 @@
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
+					<label>Swap Image: </label>
+							<select name="ThirdImageDD" class="assessment-price-range">
+								<option value="0">Please Select</option>
+								<option value="1" >Primary Image</option>
+								<option value="2" >Side Image</option>
+							</select>
+						<br/>	
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">

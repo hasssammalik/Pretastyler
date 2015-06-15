@@ -746,7 +746,8 @@ class Garment extends CI_Controller {
 					$ori_image3 = $this->input->post('ori_image3', TRUE);
 					$image_no = $this->input->post('image_no', TRUE);	
 					$firstImageDD= $this->input->post ('firstImageDD', TRUE);
-
+					$SecondImageDD= $this->input->post ('SecondImageDD',TRUE);
+					$ThirdImageDD= $this->input->pos('ThirdImageDD', TRUE);
 					//Upload first image	
 					if (!empty($_FILES['new_image']['name'])) {
 						print_r("first file" . $_FILES['new_image']['name'] . "</br>");
@@ -831,7 +832,8 @@ class Garment extends CI_Controller {
 						} else {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
-					} 		
+					} 	
+		//SWAPS				
 		if(strcmp($firstImageDD, "0")!==0){
 					if(strcmp($firstImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));						
@@ -840,7 +842,27 @@ class Garment extends CI_Controller {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
 						}
-			}			
+		}	
+
+		if(strcmp($SecondImageDD, "0")!==0){
+					if(strcmp($SecondImageDD, "1")==0){	
+							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));						
+							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));	
+					}elseif (strcmp($SecondImageDD, "2")==0) {
+							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
+							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
+						}
+		}	
+
+		if(strcmp($ThirdImageDD, "0")!==0){
+					if(strcmp($ThirdImageDD, "1")==0){	
+							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));						
+							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));	
+					}elseif (strcmp($ThirdImageDD, "2")==0) {
+							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
+							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));
+						}
+		}					
 					
 	}///	
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
