@@ -5,7 +5,7 @@
 
 <!-- Main content -->
 
-<div class="row">
+<div class="row" style="margin-right:0px">
 <div class="col-md-12">		
 			<div class="btn-group pull-right">
 				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
@@ -14,7 +14,7 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row" style="margin-right:0px">
 		<!-- left column -->		
 		<div class="col-md-4">		
 			<!-- general form elements -->
@@ -29,7 +29,7 @@
 							<select name="firstImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
 								<option value="1" >Back Image</option>
-								<option value="2" >Side Image</option>
+								<option value="2" >Board Image</option>
 							</select>
 						<br/>	
 						<label for="garment-image-path">Image</label>
@@ -64,7 +64,7 @@
 							<select name="ThirdImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
 								<option value="1" >Primary Image</option>
-								<option value="2" >Side Image</option>
+								<option value="2" >Board Image</option>
 							</select>
 						<br/>	
 						<label for="garment-image-path">Image</label>
