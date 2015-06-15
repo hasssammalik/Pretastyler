@@ -42,50 +42,14 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image">
-						<p class="help-block">Upload first image.</p>
+						<p class="help-block">Upload image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 		</div><!--/.col (left) -->
-			
+		
 
-		<!-- centre column -->
-				
-		<div class="col-md-4">		
-			<!-- general form elements -->
-			<div class="box box-primary">
-				<div class="box-header">
-					<h3 class="box-title">Side Image</h3>
-				</div><!-- /.box-header -->
-				<!-- form start -->
-				<div class="box-body">															
-					<div class="input-group">
-					<label>Swap Image: </label>
-							<select name="SecondImageDD" class="assessment-price-range">
-								<option value="0">Please Select</option>
-								<option value="1" >Back Image</option>
-								<option value="2" >Primary Image</option>
-							</select>
-						<br/>	
-						<label for="garment-image-path">Image</label>
-						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
-						<input type="hidden" name="has_new_image" value="1">
-						<input type="hidden" name="ori_image2" value="<?php print $garment['extra_image1_path'] ?>">
-						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
-					</div>
-					<br/>
-					<div class="input-group">
-						<label for="garment-new-image">New Image</label>
-						<input type="file" name="new_image2">
-						<p class="help-block">Upload first image.</p>
-					</div>
-				</div><!-- /.box-body -->
-			</div><!-- /.box -->
-		</div><!--/.col (left) -->
-			
-
-
-		<!-- right column -->
+		<!-- Centre column -->
 			
 		<div class="col-md-4">		
 			<!-- general form elements -->
@@ -113,11 +77,49 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image3">
-						<p class="help-block">Upload first image.</p>
+						<p class="help-block">Upload image.</p>
+					</div>
+				</div><!-- /.box-body -->
+			</div><!-- /.box -->
+		</div><!--/.col (left) -->	
+
+		<!-- centre column -->
+				
+		<div class="col-md-4">		
+			<!-- general form elements -->
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3 class="box-title">Board Image</h3>
+				</div><!-- /.box-header -->
+				<!-- form start -->
+				<div class="box-body">															
+					<div class="input-group">
+					<label>Swap Image: </label>
+							<select name="SecondImageDD" class="assessment-price-range">
+								<option value="0">Please Select</option>
+								<option value="1" >Back Image</option>
+								<option value="2" >Primary Image</option>
+							</select>
+						<br/>	
+						<label for="garment-image-path">Image</label>
+						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
+						<input type="hidden" name="has_new_image" value="1">
+						<input type="hidden" name="ori_image2" value="<?php print $garment['extra_image1_path'] ?>">
+						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
+					</div>
+					<br/>
+					<div class="input-group">
+						<label for="garment-new-image">New Image</label>
+						<input type="file" name="new_image2">
+						<p class="help-block">Upload image.</p>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 		</div><!--/.col (left) -->
+			
+
+
+		
 			
 
 </div>   <!-- /.row -->

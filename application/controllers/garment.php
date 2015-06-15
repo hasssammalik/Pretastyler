@@ -837,30 +837,42 @@ class Garment extends CI_Controller {
 		if(strcmp($firstImageDD, "0")!==0){
 					if(strcmp($firstImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));						
-							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));	
+							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));	
 					}elseif (strcmp($firstImageDD, "2")==0) {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						}
 		}	
 
 		if(strcmp($SecondImageDD, "0")!==0){
 					if(strcmp($SecondImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));						
-							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));	
+							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));	
 					}elseif (strcmp($SecondImageDD, "2")==0) {
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						}
 		}	
 
 		if(strcmp($ThirdImageDD, "0")!==0){
 					if(strcmp($ThirdImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));						
-							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));	
+							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));	
 					}elseif (strcmp($ThirdImageDD, "2")==0) {
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));
+							$data['success_messages'] = array();
+							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						}
 		}					
 					
