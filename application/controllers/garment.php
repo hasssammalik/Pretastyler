@@ -713,7 +713,7 @@ class Garment extends CI_Controller {
 	}
 
 
-<?php
+
 public function ImageEdit($slug = FALSE){
 		$this->load->library('user_check');
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
