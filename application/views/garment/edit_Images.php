@@ -1,7 +1,6 @@
 <?php echo form_open_multipart();?>
 
 <?php print_r($_POST); ?> </br>
-<?php print_r($_REQUEST['firstImageDD']); ?></br>
 
 
 <!-- Main content -->
@@ -32,6 +31,7 @@
 								<option value="1" >Back Image</option>
 								<option value="2" >Side Image</option>
 							</select>
+						<br/>	
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">

@@ -745,7 +745,8 @@ class Garment extends CI_Controller {
 					$ori_image2 = $this->input->post('ori_image2', TRUE);
 					$ori_image3 = $this->input->post('ori_image3', TRUE);
 					$image_no = $this->input->post('image_no', TRUE);	
-					
+					$firstImageDD= $this->input->post ('firstImageDD', TRUE);
+
 					//Upload first image	
 					if (!empty($_FILES['new_image']['name'])) {
 						print_r("first file" . $_FILES['new_image']['name'] . "</br>");
@@ -832,10 +833,23 @@ class Garment extends CI_Controller {
 					}
 					} 
 
-					
+			// Swap Images		
 
+			if($firstImageDD!='0'){
+					switch ($firstImageDD) {
+						case '1':
+							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image);
+							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3);	
+							break;
+						case '2':
+							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image);
+							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2);	
+							break;
+					}
+
+			}		
 					
-				}///	
+	}///	
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['category_id']);
 		$data['title'] = $data['garment']['name'];
 		$data['title_description'] = "update images for ".$data['garment']['name'];
