@@ -25,7 +25,7 @@
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
-						<label>Swap Image: </label>
+						<label>Swap this mage with: </label>
 							<select name="firstImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
 								<option value="1" >Back Image</option>
@@ -60,7 +60,7 @@
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
-					<label>Swap Image: </label>
+					<label>Swap this mage with: </label>
 							<select name="ThirdImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
 								<option value="1" >Primary Image</option>
@@ -94,7 +94,7 @@
 				<!-- form start -->
 				<div class="box-body">															
 					<div class="input-group">
-					<label>Swap Image: </label>
+					<label>Swap this mage with: </label>
 							<select name="SecondImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
 								<option value="1" >Back Image</option>

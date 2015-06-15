@@ -833,8 +833,12 @@ class Garment extends CI_Controller {
 							array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
 					}
 					} 	
-		//SWAPS				
-		if(strcmp($firstImageDD, "0")!==0){
+
+
+		//SWAPS	
+		if(($firstImageDD!==0 && $SecondImageDD!==0) || ($firstImageDD!==0 && $ThirdImageDD!==0) || ($SecondImageDD!==0 && $ThirdImageDD!==0)){   			
+			array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Can not swap two images at the same time!'));
+		}elseif(strcmp($firstImageDD, "0")!==0){
 					if(strcmp($firstImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));						
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));
@@ -846,9 +850,7 @@ class Garment extends CI_Controller {
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						}
-		}	
-
-		if(strcmp($SecondImageDD, "0")!==0){
+		}elseif(strcmp($SecondImageDD, "0")!==0){
 					if(strcmp($SecondImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));						
 							$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
@@ -860,9 +862,7 @@ class Garment extends CI_Controller {
 							$data['success_messages'] = array();
 							array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This category has been successfully updated!'));
 						}
-		}	
-
-		if(strcmp($ThirdImageDD, "0")!==0){
+		}elseif(strcmp($ThirdImageDD, "0")!==0){
 					if(strcmp($ThirdImageDD, "1")==0){	
 							$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));						
 							$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));
