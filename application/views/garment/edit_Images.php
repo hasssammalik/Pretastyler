@@ -1,5 +1,7 @@
-<?php print_r($_FILES); ?>
+<?php echo form_open_multipart();?>
 
+<?php print_r($_FILES); ?> </br>
+<?php print_r($_POST); ?>
 <!-- Main content -->
 
 <div class="row">
@@ -10,7 +12,6 @@
 			</div>
 </div>
 </div>
-<?php echo form_open_multipart();?>
 
 <div class="row">
 		<!-- left column -->		
@@ -27,8 +28,7 @@
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image" value="<?php print $garment['image_path'] ?>">
-						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
-						<input type="hidden" name="image_no" value="1">
+						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
 					</div>
 					<br/>
 					<div class="input-group">
@@ -55,9 +55,8 @@
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
-						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image1_path'] ?>">
-						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
-						<input type="hidden" name="image_no" value="2">
+						<input type="hidden" name="ori_image2" value="<?php print $garment['extra_image1_path'] ?>">
+						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
 					</div>
 					<br/>
 					<div class="input-group">
@@ -85,9 +84,8 @@
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
-						<input type="hidden" name="ori_image" value="<?php print $garment['extra_image2_path'] ?>">
-						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">
-						<input type="hidden" name="image_no" value="3">
+						<input type="hidden" name="ori_image3" value="<?php print $garment['extra_image2_path'] ?>">
+						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
 					</div>
 					<br/>
 					<div class="input-group">
