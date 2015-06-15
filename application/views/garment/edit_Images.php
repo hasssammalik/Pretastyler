@@ -1,5 +1,14 @@
 
 <!-- Main content -->
+<div class="row">
+<div class="col-md-12">		
+			<div class="btn-group pull-right">
+				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
+				<input type="submit" class="btn btn-primary button-save" value="Save">				
+			</div>
+</div>
+</div>
+
 
 <div class="row">
 		<!-- left column -->
@@ -40,19 +49,13 @@
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
-			<div class="col-md-12">		
-			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
-				<input type="submit" class="btn btn-primary button-save" value="Save">
-			</div>
-			<br/>
-		</div>
+			
 
 		</div><!--/.col (left) -->
-			<?php echo form_close(); ?>
+			
 
 		<!-- centre column -->
-				<?php echo form_open_multipart();?>
+				
 		<div class="col-md-4">
 		
 			<!-- general form elements -->
@@ -89,20 +92,14 @@
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
-			<div class="col-md-12">		
-			<div class="btn-group pull-right">
-				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
-				<input type="submit" class="btn btn-primary button-save" value="Save">
-			</div>
-			<br/>
-		</div>
+			
 
 		</div><!--/.col (left) -->
-			<?php echo form_close(); ?>
+			
 
 
 		<!-- right column -->
-			<?php echo form_open_multipart();?>
+			
 		<div class="col-md-4">
 		
 			<!-- general form elements -->
@@ -139,21 +136,20 @@
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
-			<div class="col-md-12">		
+	
+		</div><!--/.col (left) -->
+			
+
+</div>   <!-- /.row -->
+
+<div class="row">
+<div class="col-md-12">		
 			<div class="btn-group pull-right">
 				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>				
 				<input type="submit" class="btn btn-primary button-save" value="Save">				
 			</div>
-			<br/>
-		</div>
-
-		</div><!--/.col (left) -->
-			<?php echo form_close(); ?>
-
-</div>   <!-- /.row -->
-
-
-
-
+</div>
+</div>
 
 </section><!-- /.content -->
+<?php echo form_close(); ?>
