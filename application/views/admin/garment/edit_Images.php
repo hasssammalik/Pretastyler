@@ -126,7 +126,7 @@
 
 </div>   <!-- /.row -->
 
-<div class="row">
+<div class="row" style="margin-right:0px;margin-left: 0px;">
 <div class="col-md-12">		
 			<div class="btn-group pull-right">
 				<a href="/admin/garment/general.html" class="btn btn-danger">Back</a>
