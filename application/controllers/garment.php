@@ -713,8 +713,19 @@ class Garment extends CI_Controller {
 	}
 
 
-public function DeleteImage($slug = FALSE){
+public function DeleteImage($slug = FALSE, $param1 = FALSE){
 		$this->load->library('user_check');
+		$this->load->model('garment_model');
+
+		$slugs = explode("_", $slug);
+		$image_id = intval($slugs[0]);
+
+		$params = explode("_", $param1);
+		$garment_id = intval($params[0]);
+		
+		print_r($image_id);
+		print_r($garment_id);
+
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
 			return;
@@ -727,21 +738,16 @@ public function DeleteImage($slug = FALSE){
 		}	
 			
 			if ($this->input->post()){
-				//if this is a delete request.
+				$this->load->model('admin_model');
 				$data['error_messages'] = array();
-				$garment_id = $this->input->post('delete_id', TRUE);
-				if (empty($garment_id)){
+				$image = $this->input->post('delete_id', TRUE);
+				$garment = $this->input->post('garment_id', TRUE);
+
+				if (empty($image)){
 					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
 				}
 				if (empty($data['error_messages'])){
-					$result = $this->admin_model->delete_body_garment($garment_id);
-					$result = $this->admin_model->delete_garment_info($garment_id);
-					$result = $this->colour_model->delete_garment_colour($garment_id);
-					$result = $this->admin_model->delete_garment_criteria($garment_id);
-					$result = $this->occasion_model->delete_garment_occasion($garment_id);
-					$result = $this->size_model->delete_garment_size($garment_id);
-					$result = $this->admin_model->delete_garment_specs($garment_id);
-					$result = $this->admin_model->delete_user_garment($garment_id);
+					$result = $this->admin_model->delete_Image_garment($image,$garment);					
 					if ($result){
 						redirect('/admin/garment/general', 'refresh');
 					} else {
@@ -749,12 +755,12 @@ public function DeleteImage($slug = FALSE){
 					}
 				}
 			} 
-			//$name = $this->garment_model->get_garment_info($param1)['name'];
-			$name = 'board';
+			$name = $this->garment_model->get_garment_info($param1)['name'];
 			$data['delete_type'] = 'image';
-			$data['delete_id'] = $slug;
-			$data['title'] = "Delete garment - ".$name;
-			$data['title_description'] = "Delete garment - ".$name;
+			$data['garment_id'] = $garment_id;
+			$data['delete_id'] = $image_id;
+			$data['title'] = "Delete Image for garment- ".$name;
+			$data['title_description'] = "Delete Image related to garment- ".$name;
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/matrix/delete', $data);
 			$this->load->view('admin/footer', $data);

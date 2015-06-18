@@ -436,6 +436,13 @@ class Admin_model extends CI_Model{
 	 *
 	 * 
 	 */
+
+	public function delete_Image_garment($image_id,$garment_id){
+
+		$this->update_garment_image($garment_id, array($image_id => '');
+	}
+
+
 	public function delete_garment_info($garment_id) {
 		return $this->db->delete('garment', array('garment_id' => $garment_id));
 	}

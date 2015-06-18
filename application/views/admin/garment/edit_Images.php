@@ -34,6 +34,7 @@
 								<option value="2" >Board Image</option>
 							</select>
 						<br/>	
+						<a href="/garment/DeleteImage/image_path/<?php print  $garment['garment_id'];?>.html">Delete This Image</a>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
@@ -69,6 +70,7 @@
 								<option value="2" >Board Image</option>
 							</select>
 						<br/>	
+						<a href="/garment/DeleteImage/extra_image2_path.html/<?php print  $garment['garment_id'];?>.html">Delete This Image</a>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
@@ -103,6 +105,7 @@
 								<option value="2" >Primary Image</option>
 							</select>
 						<br/>	
+						<a href="/garment/DeleteImage/extra_image1_path/<?php print  $garment['garment_id'];?>.html">Delete This Image</a>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
@@ -114,8 +117,7 @@
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image2">
-						<p class="help-block">Upload image.</p>
-						<a href="/garment/DeleteImage/<?php print  $garment['extra_image1_path'];?>.html" class="btn btn-danger">Delete</a>
+						<p class="help-block">Upload image.</p>						
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
