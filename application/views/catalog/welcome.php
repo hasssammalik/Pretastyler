@@ -3,8 +3,8 @@
 	<div class="welcomebox">
 		<div>
 			<div class="welcome-body">
-				<h3>WELCOME <?php if ($this->flexi_auth->is_logged_in()){ print strtoupper($first_name); } else {echo ('USER'); } ?></h3>
-				
+				<h3 style="padding: 0 0 5px 0;">WELCOME <?php if ($this->flexi_auth->is_logged_in()){ print strtoupper($first_name); } else {echo ('USER'); } ?></h3>
+
 				We're thrilled to have you as part of our family of savvy fashion shoppers. <br><br> We've placed lots of cool features in your mall so don't forget to hover your mouse over tabs and icons to see what they do.
 				<p class="center">
 					<a class="bkpinkycolor" href="/mall.html">VISIT MALL</a>
