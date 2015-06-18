@@ -931,6 +931,7 @@ public function ImageEdit($slug = FALSE){
 						}
 		}					
 					
+	redirect(current_url());	
 	}///	
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['garment_id']);
 		$data['title'] = $data['garment']['name'];

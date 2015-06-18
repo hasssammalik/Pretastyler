@@ -35,6 +35,7 @@
 							</select>
 						<br/>	
 						<a href="/garment/DeleteImage/image_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<br/>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
@@ -71,6 +72,7 @@
 							</select>
 						<br/>	
 						<a href="/garment/DeleteImage/extra_image2_path.html/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<br/>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
@@ -106,6 +108,7 @@
 							</select>
 						<br/>	
 						<a href="/garment/DeleteImage/extra_image1_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<br/>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
