@@ -723,8 +723,7 @@ public function DeleteImage($slug = FALSE, $param1 = FALSE){
 		$params = explode("_", $param1);
 		$garment_id = intval($params[0]);
 		
-		print_r($image_id."</br>");
-		print_r($garment_id);
+		
 
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
@@ -742,6 +741,9 @@ public function DeleteImage($slug = FALSE, $param1 = FALSE){
 				$data['error_messages'] = array();
 				$image = $this->input->post('delete_id', TRUE);
 				$garment = $this->input->post('garment_id', TRUE);
+
+				print_r($image."</br>");
+				print_r($garment);
 
 				if (empty($image)){
 					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
