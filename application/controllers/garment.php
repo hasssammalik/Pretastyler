@@ -714,6 +714,17 @@ class Garment extends CI_Controller {
 
 
 public function DeleteImage($slug = FALSE){
+		$this->load->library('user_check');
+		if (!$slug || !$this->flexi_auth->is_logged_in()) {
+			$this->not_found();
+			return;
+		}
+		$user_id = $this->flexi_auth->get_user_id();
+		$data = $this->data;
+		if (!$this->flexi_auth->in_group('Administrators') && $data['garment']['import_user_id'] != $user_id) {
+			$this->general_error('Not Permitted', 'Sorry, it seems you don\'t have the permission to edit this garment.');
+			return;
+		}	
 			
 			if ($this->input->post()){
 				//if this is a delete request.
@@ -741,7 +752,7 @@ public function DeleteImage($slug = FALSE){
 			//$name = $this->garment_model->get_garment_info($param1)['name'];
 			$name = 'board';
 			$data['delete_type'] = 'image';
-			$data['delete_id'] = $param1;
+			$data['delete_id'] = $slug;
 			$data['title'] = "Delete garment - ".$name;
 			$data['title_description'] = "Delete garment - ".$name;
 			$this->load->view('admin/header', $data);
