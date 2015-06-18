@@ -110,6 +110,7 @@
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
 					</div>
 					<br/>
+					<a href="/garment/delete/<?php print  $garment['extra_image1_path'];?>.html" class="btn btn-danger">Delete</a>
 					<div class="input-group">
 						<label for="garment-new-image">New Image</label>
 						<input type="file" name="new_image2">

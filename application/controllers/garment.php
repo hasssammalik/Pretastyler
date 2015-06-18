@@ -713,6 +713,40 @@ class Garment extends CI_Controller {
 	}
 
 
+public function DeleteImage($slug = FALSE){
+			
+			if ($this->input->post()){
+				//if this is a delete request.
+				$data['error_messages'] = array();
+				$garment_id = $this->input->post('delete_id', TRUE);
+				if (empty($garment_id)){
+					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
+				}
+				if (empty($data['error_messages'])){
+					$result = $this->admin_model->delete_body_garment($garment_id);
+					$result = $this->admin_model->delete_garment_info($garment_id);
+					$result = $this->colour_model->delete_garment_colour($garment_id);
+					$result = $this->admin_model->delete_garment_criteria($garment_id);
+					$result = $this->occasion_model->delete_garment_occasion($garment_id);
+					$result = $this->size_model->delete_garment_size($garment_id);
+					$result = $this->admin_model->delete_garment_specs($garment_id);
+					$result = $this->admin_model->delete_user_garment($garment_id);
+					if ($result){
+						redirect('/admin/garment/general', 'refresh');
+					} else {
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00016 Something went error. Please contact programmer!'));
+					}
+				}
+			} 
+			//$name = $this->garment_model->get_garment_info($param1)['name'];
+			$data['delete_type'] = 'image';
+			$data['delete_id'] = $slug;
+			$data['title'] = "Delete garment Image ";
+			$data['title_description'] = "Delete image- ";
+			$this->load->view('admin/header', $data);
+			$this->load->view('admin/matrix/delete', $data);
+			$this->load->view('admin/footer', $data);
+}
 
 public function ImageEdit($slug = FALSE){
 		$this->load->library('user_check');
