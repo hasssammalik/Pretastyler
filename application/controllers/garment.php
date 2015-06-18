@@ -723,8 +723,7 @@ public function DeleteImage($slug = FALSE, $param1 = FALSE){
 		$params = explode("_", $param1);
 		$garment_id = intval($params[0]);
 		
-		print_r($image_id."</br>");
-		print_r($garment_id);
+		
 
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();
@@ -929,6 +928,7 @@ public function ImageEdit($slug = FALSE){
 						}
 		}					
 					
+	redirect(current_url());	
 	}///	
 		$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['garment_id']);
 		$data['title'] = $data['garment']['name'];
