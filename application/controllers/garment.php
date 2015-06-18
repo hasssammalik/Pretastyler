@@ -739,10 +739,11 @@ public function DeleteImage($slug = FALSE){
 				}
 			} 
 			//$name = $this->garment_model->get_garment_info($param1)['name'];
+			$name = 'board';
 			$data['delete_type'] = 'image';
-			$data['delete_id'] = $slug;
-			$data['title'] = "Delete garment Image ";
-			$data['title_description'] = "Delete image- ";
+			$data['delete_id'] = $param1;
+			$data['title'] = "Delete garment - ".$name;
+			$data['title_description'] = "Delete garment - ".$name;
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/matrix/delete', $data);
 			$this->load->view('admin/footer', $data);
