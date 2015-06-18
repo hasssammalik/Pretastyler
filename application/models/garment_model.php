@@ -251,7 +251,7 @@ class Garment_model extends CI_Model{
 		if ($price_range) {
 			if ($price_range[0] == 0.00) {
 				$low = 1;
-			} else if ($price_range[0] == 99.00) {
+			} else if ($price_range[0] == 100.00) {
 				$low = 2;
 			} else if ($price_range[0] == 199.00) {
 				$low = 3;
@@ -261,7 +261,7 @@ class Garment_model extends CI_Model{
 				$low = 5;
 			}
 			
-			if ($price_range[1] == 99.00) {
+			if ($price_range[1] == 100.00) {
 				$high = 1;
 			} else if ($price_range[1] == 199.00) {
 				$high = 2;
