@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="p:domain_verify" content="c1693c1744b344a64538be59ac310363"/> 
 <?php if (isset($extraMeta)) print $extraMeta ?>
 <title><?php print $title ?> - Prêt à Styler – Your Online Stylist and Personal Shopper</title>
 <link href="/css/vendors.css?v=2.2.0.0" rel="stylesheet">
