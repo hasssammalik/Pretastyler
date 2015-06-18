@@ -717,13 +717,13 @@ public function DeleteImage($slug = FALSE, $param1 = FALSE){
 		$this->load->library('user_check');
 		$this->load->model('garment_model');
 
-		$slugs = explode("_", $slug);
-		$image_id = intval($slugs[0]);
+		
+		$image_id = $slug;
 
 		$params = explode("_", $param1);
 		$garment_id = intval($params[0]);
 		
-		print_r($image_id);
+		print_r($image_id."</br>");
 		print_r($garment_id);
 
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
