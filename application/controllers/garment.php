@@ -742,9 +742,6 @@ public function DeleteImage($slug = FALSE, $param1 = FALSE){
 				$image = $this->input->post('delete_id', TRUE);
 				$garment = $this->input->post('garment_id', TRUE);
 
-				print_r($image."</br>");
-				print_r($garment);
-
 				if (empty($image)){
 					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
 				}
