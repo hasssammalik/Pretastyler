@@ -34,7 +34,7 @@
 								<option value="2" >Board Image</option>
 							</select>
 						<br/>	
-						<a href="/admin/garment/delete-image/image_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<a href="/admin/garment/delete_image/image_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
@@ -53,41 +53,6 @@
 		</div><!--/.col (left) -->
 		
 
-		<!-- Centre column -->
-			
-		<div class="col-md-4">		
-			<!-- general form elements -->
-			<div class="box box-primary">
-				<div class="box-header">
-					<h3 class="box-title">Back Image</h3>
-				</div><!-- /.box-header -->
-				<!-- form start -->
-				<div class="box-body">															
-					<div class="input-group">
-					<label>Swap this image with: </label>
-							<select name="ThirdImageDD" class="assessment-price-range">
-								<option value="0">Please Select</option>
-								<option value="1" >Primary Image</option>
-								<option value="2" >Board Image</option>
-							</select>
-						<br/>	
-						<a href="/admin/garment/delete-image/extra_image2_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
-						<br/>
-						<label for="garment-image-path">Image</label>
-						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
-						<input type="hidden" name="has_new_image" value="1">
-						<input type="hidden" name="ori_image3" value="<?php print $garment['extra_image1_path'] ?>">
-						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
-					</div>
-					<br/>
-					<div class="input-group">
-						<label for="garment-new-image">New Image</label>
-						<input type="file" name="new_image3">
-						<p class="help-block">Upload image.</p>
-					</div>
-				</div><!-- /.box-body -->
-			</div><!-- /.box -->
-		</div><!--/.col (left) -->	
 
 		<!-- centre column -->
 				
@@ -95,7 +60,7 @@
 			<!-- general form elements -->
 			<div class="box box-primary">
 				<div class="box-header">
-					<h3 class="box-title">Board Image</h3>
+					<h3 class="box-title">Back Image</h3>
 				</div><!-- /.box-header -->
 				<!-- form start -->
 				<div class="box-body">															
@@ -107,12 +72,12 @@
 								<option value="2" >Primary Image</option>
 							</select>
 						<br/>	
-						<a href="/admin/garment/delete-image/extra_image1_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<a href="/admin/garment/delete_image/extra_image1_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 						<label for="garment-image-path">Image</label>
-						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
+						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="has_new_image" value="1">
-						<input type="hidden" name="ori_image2" value="<?php print $garment['extra_image2_path'] ?>">
+						<input type="hidden" name="ori_image2" value="<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
 					</div>
 					<br/>
@@ -125,6 +90,45 @@
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 		</div><!--/.col (left) -->
+
+
+		<!-- Centre column -->
+			
+		<div class="col-md-4">		
+			<!-- general form elements -->
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3 class="box-title">Board Image</h3>
+				</div><!-- /.box-header -->
+				<!-- form start -->
+				<div class="box-body">															
+					<div class="input-group">
+					<label>Swap this image with: </label>
+							<select name="ThirdImageDD" class="assessment-price-range">
+								<option value="0">Please Select</option>
+								<option value="1" >Primary Image</option>
+								<option value="2" >Board Image</option>
+							</select>
+						<br/>	
+						<a href="/admin/garment/delete_image/extra_image2_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<br/>
+						<label for="garment-image-path">Image</label>
+						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
+						<input type="hidden" name="has_new_image" value="1">
+						<input type="hidden" name="ori_image3" value="<?php print $garment['extra_image2_path'] ?>">
+						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
+					</div>
+					<br/>
+					<div class="input-group">
+						<label for="garment-new-image">New Image</label>
+						<input type="file" name="new_image3">
+						<p class="help-block">Upload image.</p>
+					</div>
+				</div><!-- /.box-body -->
+			</div><!-- /.box -->
+		</div><!--/.col (left) -->	
+
+		
 			
 
 
