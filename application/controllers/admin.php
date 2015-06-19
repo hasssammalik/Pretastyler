@@ -550,7 +550,7 @@ class Admin extends CI_Controller {
 						
 		redirect(current_url());	
 		}///	
-			$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['garment_id']);
+			//$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['garment_id']);
 			$data['title'] = $data['garment']['name'];
 			$data['title_description'] = "update images for ".$data['garment']['name'];
 			//$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
@@ -561,6 +561,7 @@ class Admin extends CI_Controller {
 		} else if ($page == 'delete_image'){			
 		$image_id = $param1;
 		$params = explode("_", $param2);
+
 		$garment_id = intval($params[0]);
 		$data = $this->data;		
 			if ($this->input->post()){
@@ -580,7 +581,7 @@ class Admin extends CI_Controller {
 					}
 				}
 			} 
-			$name = $this->garment_model->get_garment_info($param1)['name'];
+			$name = $this->garment_model->get_garment_info($garment_id)['name'];
 			$data['delete_type'] = 'image';
 			$data['garment_id'] = $garment_id;
 			$data['delete_id'] = $image_id;
