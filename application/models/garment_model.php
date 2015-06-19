@@ -1136,7 +1136,7 @@ class Garment_model extends CI_Model{
 	 *
 	 * 
 	 */
-	public function insert_garment($user_id, $name, $brand, $store, $url, $image_url, $price_range, $category_id, $image_path, $extra_image1_path, $extra_image2_path, $description, $is_standard = FALSE, $is_pattern)
+	public function insert_garment($user_id, $name, $brand, $store, $url, $image_url, $price_range, $category_id, $image_path, $extra_image1_url, $extra_image2_url, $description, $is_standard = FALSE, $is_pattern)
 	{
 		$data = array(
 			'import_user_id' => $user_id,
@@ -1148,8 +1148,8 @@ class Garment_model extends CI_Model{
 			'price_range' => $price_range,
 			'category_id' => $category_id,
 			'image_path' => $image_path,
-			'extra_image1_path' => $extra_image1_path,
-			'extra_image2_path' => $extra_image2_path,
+			'extra_image1_url' => $extra_image1_url,
+			'extra_image2_url' => $extra_image2_url,
 			'date_created' => date('Y-m-d H:i:s'),
 			'new_system' => 1,
 			'description' => $description,

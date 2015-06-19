@@ -271,16 +271,17 @@ class Garment extends CI_Controller {
 		//save image
 		$image_path = $this->garment_model->insert_garment_image($image_url);
 		//save extra image
-		$extra_image1_path = NULL;
+		
+		/* $extra_image1_path = NULL;
 		$extra_image2_path = NULL;
 		if (!empty($extra_image1_url)) {
 			$extra_image1_path = $this->garment_model->insert_garment_image($extra_image1_url);
 		}
 		if (!empty($extra_image2_url)) {
 			$extra_image2_path = $this->garment_model->insert_garment_image($extra_image2_url);
-		}
+		} */
 		//insert garment
-		$garment_id = $this->garment_model->insert_garment($user_id, $name, $brand, $store, $url, $image_url, $price_range, $category_id, $image_path, $extra_image1_path, $extra_image2_path, $description, $is_standard, $is_pattern);
+		$garment_id = $this->garment_model->insert_garment($user_id, $name, $brand, $store, $url, $image_url, $price_range, $category_id, $image_path, $extra_image1_url, $extra_image2_url, $description, $is_standard, $is_pattern);
 		//insert occasions
 		$this->occasion_model->insert_garment_occasion($garment_id, $occasion_ids);
 		//insert colours
