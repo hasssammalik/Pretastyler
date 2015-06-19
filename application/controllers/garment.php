@@ -207,12 +207,14 @@ class Garment extends CI_Controller {
 						'is_pattern' => $is_pattern,
 						'date_modified' => date('Y-m-d H:i:s'),
 		);
+		$add_correction = FALSE;
 		if ($this->flexi_auth->is_logged_in()){
 			$garment = $this->garment_model->get_garment_info($garment_id);
 			$user_id = $this->flexi_auth->get_user_id();
 			if ($this->flexi_auth->in_group(array('Administrators')) || ($user_id == $garment['import_user_id'])) {
 				if ($this->flexi_auth->in_group(array('Administrators'))){
 					$garment_data['date_admin_modified'] = date('Y-m-d H:i:s');
+					$add_correction = TRUE;
 				}
 			} else {
 				return "You don't have the permission to change this garment.";
@@ -221,7 +223,7 @@ class Garment extends CI_Controller {
 			return "You're not logged in, please try again when you log in.";
 		}
 		//insert garment
-		$this->garment_model->update_garment_info($garment_id, $garment_data);
+		$this->garment_model->update_garment_info($garment_id, $garment_data, $add_correction);
 		//insert occasions
 		$this->occasion_model->delete_garment_occasion($garment_id);
 		$this->occasion_model->insert_garment_occasion($garment_id, $occasion_ids);
@@ -240,7 +242,7 @@ class Garment extends CI_Controller {
 	 */
 	public function garment_import_extra_images($garment_id)
 	{
-
+		return $this->garment_model->insert_extra_garment_image($garment_id);
 	}
 	/**
 	 * Garment Import Service for this controller.
@@ -480,12 +482,14 @@ class Garment extends CI_Controller {
 			$this->general_error('Not Permitted', 'Sorry, it seems you don\'t have the permission to edit this garment.');
 			return;
 		}
+		$add_correction = FALSE;
 		$date_update_array = array('date_modified' => date('Y-m-d H:i:s'));
 		if ($this->flexi_auth->in_group(array('Administrators'))){
 			$date_update_array['date_admin_modified'] = date('Y-m-d H:i:s');
+			$add_correction = TRUE;
 		}
 		//update modified info
-		$this->garment_model->update_garment_info($garment_id, $date_update_array);
+		$this->garment_model->update_garment_info($garment_id, $date_update_array, $add_correction);
 		//insert criteria info
 		$this->assessment_model->insert_garment_criteria( $garment_id, $criteria_ids);
 		//delete from dressing room and mark as expired(means need to update the score after they log in again)

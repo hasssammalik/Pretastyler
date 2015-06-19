@@ -1053,13 +1053,15 @@ class Garment_model extends CI_Model{
 	 *
 	 * @return 
 	 */
-	public function update_garment_info($garment_id, $data)
+	public function update_garment_info($garment_id, $data, $add_correction = FALSE)
 	{	
 
 		$this->db->where('garment_id', $garment_id)->update('garment', $data);
 
 		//----------HM------------// number of corrections
-		$this->db->where('garment_id', $garment_id)->set('corrections', 'corrections + 1', FALSE)->update('garment');
+		if ($add_correction){
+			$this->db->where('garment_id', $garment_id)->set('corrections', 'corrections + 1', FALSE)->update('garment');
+		}
 
 
 	}
@@ -1158,6 +1160,30 @@ class Garment_model extends CI_Model{
 		);
 		$this->db->insert('garment', $data);
 		return $this->db->insert_id();
+	}
+	/**
+	 * insert_extra_garment_image
+	 *
+	 * 
+	 */
+	public function insert_extra_garment_image($garment_id)
+	{
+		$query = $this->db->get_where('garment', array('garment_id' => $garment_id));
+		if ($query->num_rows() == 0){
+			return FALSE;
+		}
+		$garment = $query->row_array()
+		$extra_image1_path = NULL;
+		$extra_image2_path = NULL;
+		if (!empty($garment['extra_image1_url'])) {
+			$extra_image1_path = $this->insert_garment_image($garment['extra_image1_url']);
+		}
+		if (!empty($garment['extra_image2_url'])) {
+			$extra_image2_path = $this->insert_garment_image($garment['extra_image2_url']);
+		}
+		$update_data = array('extra_image1_path' => $extra_image1_path, 'extra_image2_path' => $extra_image2_path);
+		$this->update_garment_info($garment_id, $update_data);
+		return TRUE;
 	}
 	/**
 	 * insert_garment_image
