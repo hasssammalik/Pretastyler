@@ -406,7 +406,7 @@ class Admin extends CI_Controller {
 			$user_id = $this->flexi_auth->get_user_id();
 			$data = $this->data;
 			$data['garment'] = $this->garment_model->get_garment_info($garment_id, $user_id);
-			print_r($garment_id);			
+						
 			//if post
 				if ($this->input->post()){
 						//if this is a edit request.
