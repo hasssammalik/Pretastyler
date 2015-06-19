@@ -68,7 +68,7 @@
 					<label>Swap this image with: </label>
 							<select name="SecondImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
-								<option value="1" >Back Image</option>
+								<option value="1" >Board Image</option>
 								<option value="2" >Primary Image</option>
 							</select>
 						<br/>	
@@ -107,7 +107,7 @@
 							<select name="ThirdImageDD" class="assessment-price-range">
 								<option value="0">Please Select</option>
 								<option value="1" >Primary Image</option>
-								<option value="2" >Board Image</option>
+								<option value="2" >Back Image</option>
 							</select>
 						<br/>	
 						<a href="/admin/garment/delete_image/extra_image2_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
