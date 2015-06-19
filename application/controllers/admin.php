@@ -566,8 +566,6 @@ class Admin extends CI_Controller {
 
 		$data = $this->data;		
 			if ($this->input->post()){
-				print_r($_POST);
-				print_r($garment_id);
 				$data['error_messages'] = array();
 				$image = $this->input->post('delete_id', TRUE);
 				$garment = $this->input->post('garment_id', TRUE);
@@ -578,7 +576,7 @@ class Admin extends CI_Controller {
 				if (empty($data['error_messages'])){
 					$result = $this->admin_model->delete_Image_garment($image,$garment_id);					
 					if ($result){
-					//	redirect('/admin/garment/general', 'refresh');
+						redirect('/admin/garment/general', 'refresh');
 					} else {
 						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00016 Something went error. Please contact programmer!'));
 					}
