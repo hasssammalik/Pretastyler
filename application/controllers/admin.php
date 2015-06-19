@@ -403,6 +403,8 @@ class Admin extends CI_Controller {
 				return;
 			}
 			$garment_id = intval($slugs[0]);
+			$data = $this->data;
+			$data['garment'] = $this->garment_model->get_garment_info($garment_id, $user_id);
 			print_r($garment_id);			
 			//if post
 				if ($this->input->post()){
