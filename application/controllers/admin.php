@@ -567,6 +567,7 @@ class Admin extends CI_Controller {
 		$data = $this->data;		
 			if ($this->input->post()){
 				print_r($_POST);
+				print_r($garment_id);
 				$data['error_messages'] = array();
 				$image = $this->input->post('delete_id', TRUE);
 				$garment = $this->input->post('garment_id', TRUE);
