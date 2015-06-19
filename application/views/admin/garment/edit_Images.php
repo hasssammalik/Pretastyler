@@ -34,7 +34,7 @@
 								<option value="2" >Board Image</option>
 							</select>
 						<br/>	
-						<a href="/garment/DeleteImage/image_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<a href="/admin/garment/delete_image/image_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
