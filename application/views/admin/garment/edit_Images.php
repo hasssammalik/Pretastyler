@@ -37,10 +37,7 @@
 						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/PrimaryImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 						
-						<?php if ( $garment['image_path'] != 'null'){
-							print_r($garment['image_path']);
-							?>
-
+						<?php if ( $garment['image_path'] != 'null'){?>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
 						<?php } else {?>
@@ -82,8 +79,13 @@
 						<br/>	
 						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/BackImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
+
+						<?php if ( $garment['image_path'] != 'null'){?>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
+						<?php } else {?>
+						<label for="garment-image-path">No Image</label>
+						<?php } ?>
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image2" value="<?php print $garment['extra_image1_path'] ?>">
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
@@ -120,8 +122,12 @@
 						<br/>	
 						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/BoardImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
+						<<?php if ( $garment['image_path'] != 'null'){?>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
+						<?php } else {?>
+						<label for="garment-image-path">No Image</label>
+						<?php } ?>
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image3" value="<?php print $garment['extra_image2_path'] ?>">
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
