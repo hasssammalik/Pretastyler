@@ -33,7 +33,6 @@
 						<p>This action will DELETE this <?php print $delete_type.' '.$delete_id ?> FROM EVERYWHERE and NOT RECOVERABLE.</p>
 						<?php } ?>
 						<input type="hidden" name="delete_id" value="<?php print $delete_id ?>">
-						<input type="hidden" name="garment_id" value="<?php print $garment_id ?>">
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
