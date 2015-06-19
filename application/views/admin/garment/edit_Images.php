@@ -72,7 +72,7 @@
 								<option value="2" >Primary Image</option>
 							</select>
 						<br/>	
-						<a href="/admin/garment/delete_image/extra_image1_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/BackImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
@@ -110,7 +110,7 @@
 								<option value="2" >Back Image</option>
 							</select>
 						<br/>	
-						<a href="/admin/garment/delete_image/extra_image2_path/<?php print  $garment['garment_id'];?>.html" class="btn btn-warning">Delete This Image</a>
+						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/BoardImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">

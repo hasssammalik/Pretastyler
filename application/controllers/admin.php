@@ -575,7 +575,10 @@ class Admin extends CI_Controller {
 
 				if(strcmp($image, "PrimaryImage")==0)
 					$image="image_path";
-
+				if(strcmp($image, "BackImage")==0)
+					$image="extra_image1_path";
+				if(strcmp($image, "BoardImage")==0)
+					$image="extra_image2_path";
 
 				if (empty($image)){
 					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
