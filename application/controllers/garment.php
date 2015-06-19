@@ -491,6 +491,20 @@ class Garment extends CI_Controller {
 		}
 	}
 	/**
+	 * Check Garment Service for this controller.
+	 */
+	public function check_garment()
+	{
+		if (!$this->flexi_auth->is_logged_in()){
+			return "You didn't log in!";
+		}
+		$garment_id = $this->input->post( 'garment_id', TRUE );
+		$date_update_array['date_admin_modified'] = date('Y-m-d H:i:s');
+		//update modified info
+		$this->garment_model->update_garment_info($garment_id, $date_update_array);
+		print 1;
+	}
+	/**
 	 * Insert Garment Specs  Service for this controller.
 	 */
 	public function insert_specs()
