@@ -20,6 +20,9 @@
 				</ul>
 				<a href="/garment/edit-general/<?php print $garment['garment_id'].'-'.url_title($garment['name']).'.html' ?>" class="button">Edit General Information</a>
 				<a href="#" class="button" id="saveButton">Save Garment</a>
+				<?php if ($this->flexi_auth->in_group(array('Administrators'))){ ?>
+				<a href="#" class="button <?php if (empty($garment['date_admin_modified'])) print 'clickable'; ?> btn-check"><?php if (empty($garment['date_admin_modified'])) {print 'CHECK';} else {print 'CHECKED';} ?></a>
+				<?php }?>
 				<?php //for admin comments
 					if ($this->flexi_auth->in_group(array('Administrators'))){ ?>
 						<div>Uploaded by <?php print $user_name ?> (<a href="/admin/garment/user/<?php print $garment['import_user_id'] ?>.html" target="_blank">See Her Garments</a>, <a href="/admin/user/view/<?php print $garment['import_user_id'] ?>.html" target="_blank">See Her Info</a>)</div>
