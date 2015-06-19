@@ -402,7 +402,8 @@ class Admin extends CI_Controller {
 				$this->not_found();
 				return;
 			}
-			$garment_id = intval($slugs[0]);
+			$garment_id = intval($slugs[0]);	
+			$user_id = $this->flexi_auth->get_user_id();
 			$data = $this->data;
 			$data['garment'] = $this->garment_model->get_garment_info($garment_id, $user_id);
 			print_r($garment_id);			
