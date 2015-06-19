@@ -80,7 +80,7 @@
 						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/BackImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 
-						<?php if ( $garment['image_path'] != 'null'){?>
+						<?php if ( $garment['extra_image1_path'] != 'null'){?>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image1_path'] ?>">
 						<?php } else {?>
@@ -122,7 +122,7 @@
 						<br/>	
 						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/BoardImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
-						<<?php if ( $garment['image_path'] != 'null'){?>
+						<?php if ( $garment['extra_image2_path'] != 'null'){?>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['extra_image2_path'] ?>">
 						<?php } else {?>
