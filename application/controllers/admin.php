@@ -403,7 +403,7 @@ class Admin extends CI_Controller {
 				return;
 			}
 			$garment_id = intval($slugs[0]);
-			print_r($garment_id)			
+			print_r($garment_id);			
 			//if post
 				if ($this->input->post()){
 						//if this is a edit request.
