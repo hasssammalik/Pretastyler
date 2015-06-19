@@ -559,9 +559,12 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/footer', $data);
 
 		} else if ($page == 'delete_image'){			
-		$image_id = $param1;
-		$params = explode("_", $param2);
+			
+		$params2 = explode("_", $param2);
+		$image_id = $param2;
 
+
+		$params = explode("_", $param1);
 		$garment_id = intval($params[0]);
 
 		$data = $this->data;		
@@ -569,6 +572,10 @@ class Admin extends CI_Controller {
 				$data['error_messages'] = array();
 				$image = $this->input->post('delete_id', TRUE);
 				$garment = $this->input->post('garment_id', TRUE);
+
+				if(strcmp($image, "PrimaryImage")==0)
+					$image="image_path";
+
 
 				if (empty($image)){
 					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
