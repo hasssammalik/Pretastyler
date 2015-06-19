@@ -51,8 +51,8 @@ $(function(){
 		"ajax": {url: "/admin/question-comments.html", type: 'POST', data:{pas_secret_name:$("input[name=pas_secret_name]").val()}},
 		"columns": [
 			{ "data": "edit", "searchable": false , "sortable": false },
-			{ "data": "owner" },
 			{ "data": "garment_id" },
+			{ "data": "owner" },
 			{ "data": "name" },
 			{ "data": "date_created"},
 			{ "data": "email_sent"},
