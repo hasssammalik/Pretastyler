@@ -1207,7 +1207,7 @@ class Admin extends CI_Controller {
 	 */
 	public function question_comments(){
 		$this->login_check();
-		$this->datatables->select("pas_assessment_comment.garment_id, CONCAT(first_name, ' ' , last_name) AS owner, pas_garment.name, pas_assessment_comment.date_created, IF (email_sent = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS email_sent, email_date", FALSE)->from('assessment_comment')->join('garment', 'pas_garment.garment_id = pas_assessment_comment.garment_id', 'left')->join('user_info', 'user_info.user_id = garment.import_user_id');
+		$this->datatables->select("pas_assessment_comment.garment_id, CONCAT(first_name, ' ' , last_name) AS owner, pas_user_info.user_id, pas_garment.name, pas_assessment_comment.date_created, IF (email_sent = 1, 'fa fa-check-circle', 'glyphicon glyphicon-ban-circle') AS email_sent, email_date", FALSE)->from('assessment_comment')->join('garment', 'pas_garment.garment_id = pas_assessment_comment.garment_id', 'left')->join('user_info', 'user_info.user_id = garment.import_user_id');
 		$this->datatables->edit_column('owner', '$1 (<a href="/admin/user/view/$2.html">User</a>, <a href="/admin/garment/user/$2.html">Garment</a>)', 'owner, user_id,');
 		$this->datatables->edit_column('email_sent', '<i class="$1"></i>', 'email_sent');
 		$this->datatables->add_column('edit_basic', '<a href="/garment/edit-general/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');

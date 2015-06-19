@@ -10,7 +10,7 @@
 							<tr>
 								<th>Edit</th>
 								<th>Garment ID</th>
-								<th>Uploader Nmae</th>
+								<th>Uploader Name</th>
 								<th>Name</th>
 								<th>Date Created</th>
 								<th>Email Sent?</th>
@@ -25,7 +25,7 @@
 							<tr>
 								<th>Edit</th>
 								<th>Garment ID</th>
-								<th>Uploader Nmae</th>
+								<th>Uploader Name</th>
 								<th>Name</th>
 								<th>Date Created</th>
 								<th>Email Sent?</th>
