@@ -558,13 +558,39 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/garment/edit_Images', $data);
 			$this->load->view('admin/footer', $data);
 
-		} else if ($page == 'delete_image'){
-			$data['title'] = "Outdated Garments";
-			$data['title_description'] = "manage all outdated garments";
-			$data['filters'] = 'outdated: true, ';
+		} else if ($page == 'delete_image'){			
+		$image_id = $param1;
+		$params = explode("_", $param2);
+		$garment_id = intval($params[0]);
+		$data = $this->data;		
+			if ($this->input->post()){
+				$data['error_messages'] = array();
+				$image = $this->input->post('delete_id', TRUE);
+				$garment = $this->input->post('garment_id', TRUE);
+
+				if (empty($image)){
+					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
+				}
+				if (empty($data['error_messages'])){
+					$result = $this->admin_model->delete_Image_garment($image,$garment);					
+					if ($result){
+						redirect('/admin/garment/general', 'refresh');
+					} else {
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00016 Something went error. Please contact programmer!'));
+					}
+				}
+			} 
+			$name = $this->garment_model->get_garment_info($param1)['name'];
+			$data['delete_type'] = 'image';
+			$data['garment_id'] = $garment_id;
+			$data['delete_id'] = $image_id;
+			$data['title'] = "Delete Image for garment- ".$name;
+			$data['title_description'] = "Delete Image related to garment- ".$name;
 			$this->load->view('admin/header', $data);
-			$this->load->view('admin/garment/general', $data);
-			$this->load->view('admin/footer', $data);
+			$this->load->view('admin/matrix/delete', $data);
+			$this->load->view('admin/footer', $data);	
+
+
 		} else if ($page == 'delete'){
 			if ($this->input->post()){
 				//if this is a delete request.
