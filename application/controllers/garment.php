@@ -728,7 +728,7 @@ class Garment extends CI_Controller {
 	}
 
 
-public function DeleteImage($slug = FALSE, $param1 = FALSE){
+public function DeleteImageOLD($slug = FALSE, $param1 = FALSE){
 		$this->load->library('user_check');
 		$this->load->model('garment_model');
 
@@ -780,7 +780,7 @@ public function DeleteImage($slug = FALSE, $param1 = FALSE){
 			$this->load->view('admin/footer', $data);
 }
 
-public function ImageEdit($slug = FALSE){
+public function ImageEditOLD($slug = FALSE){
 		$this->load->library('user_check');
 		if (!$slug || !$this->flexi_auth->is_logged_in()) {
 			$this->not_found();

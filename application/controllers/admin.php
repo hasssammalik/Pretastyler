@@ -396,20 +396,202 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/header', $data);
 			$this->load->view('admin/garment/general', $data);
 			$this->load->view('admin/footer', $data);
-		} else if ($page == 'edit_images'){
-			$data['title'] = "Outdated Garments";
-			$data['title_description'] = "manage all outdated garments";
-			$data['filters'] = 'outdated: true, ';
+		} else if ($page == 'edit_images'){				
+			$slugs = explode("_", $param1);
+			if (!isset($slugs[0])) {
+				$this->not_found();
+				return;
+			}
+			$garment_id = intval($slugs[0]);	
+			$user_id = $this->flexi_auth->get_user_id();
+			$data = $this->data;
+			$data['garment'] = $this->garment_model->get_garment_info($garment_id, $user_id);
+						
+			//if post
+				if ($this->input->post()){
+						//if this is a edit request.
+						$data['error_messages'] = array();
+						$garment_id = $this->input->post('garment_id', TRUE);
+						$name = $this->input->post('name', TRUE);
+						$ori_image = $this->input->post('ori_image', TRUE);
+						$ori_image2 = $this->input->post('ori_image2', TRUE);
+						$ori_image3 = $this->input->post('ori_image3', TRUE);
+						$image_no = $this->input->post('image_no', TRUE);	
+						$firstImageDD= $this->input->post ('firstImageDD', TRUE);
+						$SecondImageDD= $this->input->post ('SecondImageDD',TRUE);
+						$ThirdImageDD= $this->input->post('ThirdImageDD', TRUE);
+						//Upload first image	
+						if (!empty($_FILES['new_image']['name'])) {
+							
+							$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
+							$config['allowed_types'] = 'jpg|png|tif';
+							$config['file_name'] = random_string('unique').'.jpg';
+							$image_path="";	
+							$this->load->library('upload', $config);
+							if (!$this->upload->do_upload('new_image')) {
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));						
+							} else {
+								$image = $this->upload->data();
+								$image_path = $image['file_name'];
+								$is_image = $image['is_image'];
+								if (!$is_image) {
+									array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
+								}
+							}
+
+
+						//update DB
+							if ($this->admin_model->update_garment_image($garment_id, array('image_path' => $image_path))){	
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
+							} else {
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+						}
+						} 
+
+						//Upload first image	
+						if (!empty($_FILES['new_image2']['name'])) {
+							
+
+							$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
+							$config['allowed_types'] = 'jpg|png|tif';
+							$config['file_name'] = random_string('unique').'.jpg';
+							$image_path="";
+							$this->load->library('upload', $config);
+							if (!$this->upload->do_upload('new_image2')) {
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));	
+							} else {
+								$image = $this->upload->data();
+								$image_path = $image['file_name'];
+								$is_image = $image['is_image'];
+								if (!$is_image) {
+									array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
+								}
+							}
+
+							//update db
+							if ($this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $image_path))){
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
+							} else {
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+						}
+						} 
+
+						//Upload first image	
+						if (!empty($_FILES['new_image3']['name'])) {
+							
+							$config['upload_path'] = $this->config->item('base_upload_path') . '/public_html/images/garment/';
+							$config['allowed_types'] = 'jpg|png|tif';
+							$config['file_name'] = random_string('unique').'.jpg';
+							$image_path="";
+							$this->load->library('upload', $config);
+							if (!$this->upload->do_upload('new_image3')) {							
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => $this->upload->display_errors()));
+							} else {
+								$image = $this->upload->data();
+								$image_path = $image['file_name'];
+								$is_image = $image['is_image'];
+								if (!$is_image) {
+									array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Your uploaded file is not an image!'));
+								}
+							}
+
+							//UPDATE DB
+							if ($this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $image_path))){	
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
+							} else {
+								array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00002 Something went error. Please contact programmer!'));
+						}
+						} 	
+
+
+			//SWAPS	
+			if(($firstImageDD!="0" && $SecondImageDD!="0") || ($firstImageDD!="0" && $ThirdImageDD!="0") || ($SecondImageDD!="0" && $ThirdImageDD!="0")){   			
+				array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Can not swap two images at the same time!'));
+			}elseif(strcmp($firstImageDD, "0")!==0){
+						if(strcmp($firstImageDD, "1")==0){	
+								$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));						
+								$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));	
+						}elseif (strcmp($firstImageDD, "2")==0) {
+								$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
+								$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
+							}
+			}elseif(strcmp($SecondImageDD, "0")!==0){
+						if(strcmp($SecondImageDD, "1")==0){	
+								$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));						
+								$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));	
+						}elseif (strcmp($SecondImageDD, "2")==0) {
+								$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image2));
+								$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image));
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
+							}
+			}elseif(strcmp($ThirdImageDD, "0")!==0){
+						if(strcmp($ThirdImageDD, "1")==0){	
+								$this->admin_model->update_garment_image($garment_id, array('image_path' => $ori_image3));						
+								$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image));
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));	
+						}elseif (strcmp($ThirdImageDD, "2")==0) {
+								$this->admin_model->update_garment_image($garment_id, array('extra_image1_path' => $ori_image3));
+								$this->admin_model->update_garment_image($garment_id, array('extra_image2_path' => $ori_image2));
+								$data['success_messages'] = array();
+								array_push($data['success_messages'], array('type' => 'Congratulations',  'content' => 'This garment has been successfully updated!'));
+							}
+			}					
+						
+		redirect(current_url());	
+		}///	
+			//$data['initial_data'] = $this->assessment_model->get_initial_field_criteria_for_edit($garment_id, $data['garment']['garment_id']);
+			$data['title'] = $data['garment']['name'];
+			$data['title_description'] = "update images for ".$data['garment']['name'];
+			//$data['extraJS'] = '<script src="/js/admin/AdminLTE/category.js?v=2.2.0.0" type="text/javascript"></script>';
 			$this->load->view('admin/header', $data);
-			$this->load->view('admin/garment/general', $data);
+			$this->load->view('admin/garment/edit_Images', $data);
 			$this->load->view('admin/footer', $data);
-		} else if ($page == 'delete_image'){
-			$data['title'] = "Outdated Garments";
-			$data['title_description'] = "manage all outdated garments";
-			$data['filters'] = 'outdated: true, ';
+
+		} else if ($page == 'delete_image'){			
+		$image_id = $param1;
+		$params = explode("_", $param2);
+
+		$garment_id = intval($params[0]);
+		$data = $this->data;		
+			if ($this->input->post()){
+				$data['error_messages'] = array();
+				$image = $this->input->post('delete_id', TRUE);
+				$garment = $this->input->post('garment_id', TRUE);
+
+				if (empty($image)){
+					array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00015 Something went error. Please contact programmer!'));
+				}
+				if (empty($data['error_messages'])){
+					$result = $this->admin_model->delete_Image_garment($image,$garment);					
+					if ($result){
+						redirect('/admin/garment/general', 'refresh');
+					} else {
+						array_push($data['error_messages'], array('type' => 'Error',  'content' => 'Code: 00016 Something went error. Please contact programmer!'));
+					}
+				}
+			} 
+			$name = $this->garment_model->get_garment_info($garment_id)['name'];
+			$data['delete_type'] = 'image';
+			$data['garment_id'] = $garment_id;
+			$data['delete_id'] = $image_id;
+			$data['title'] = "Delete Image for garment- ".$name;
+			$data['title_description'] = "Delete Image related to garment- ".$name;
 			$this->load->view('admin/header', $data);
-			$this->load->view('admin/garment/general', $data);
-			$this->load->view('admin/footer', $data);
+			$this->load->view('admin/matrix/delete', $data);
+			$this->load->view('admin/footer', $data);	
+
+
 		} else if ($page == 'delete'){
 			if ($this->input->post()){
 				//if this is a delete request.
