@@ -1172,7 +1172,7 @@ class Garment_model extends CI_Model{
 		if ($query->num_rows() == 0){
 			return FALSE;
 		}
-		$garment = $query->row_array()
+		$garment = $query->row_array();
 		$extra_image1_path = NULL;
 		$extra_image2_path = NULL;
 		if (!empty($garment['extra_image1_url'])) {
