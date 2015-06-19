@@ -37,7 +37,7 @@
 						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/PrimaryImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
 						
-						<?php if ( ! is_null($garment['image_path'])){
+						<?php if ( $garment['image_path'] != 'null'){
 							print_r($garment['image_path']);
 							?>
 
