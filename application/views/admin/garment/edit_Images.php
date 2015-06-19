@@ -36,8 +36,13 @@
 						<br/>	
 						<a href="/admin/garment/delete_image/<?php print  $garment['garment_id'];?>/PrimaryImage.html" class="btn btn-warning">Delete This Image</a>
 						<br/>
+						
+						<?php if (!empty($garment['image_path'])){?>
 						<label for="garment-image-path">Image</label>
 						<img src="/images/garment/<?php print $garment['image_path'] ?>">
+						<?php } else {?>
+						<label for="garment-image-path">No Image</label>
+						<?php } ?>
 						<input type="hidden" name="has_new_image" value="1">
 						<input type="hidden" name="ori_image" value="<?php print $garment['image_path'] ?>">
 						<input type="hidden" name="garment_id" value="<?php print $garment['garment_id']; ?>">						
