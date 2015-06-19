@@ -82,7 +82,7 @@ $(function(){
 			{ "data": "click_num"},
 			{ "data": "edit_basic", "searchable": false , "sortable": false },
 			{ "data": "edit", "searchable": false , "sortable": false },
-			{ "data": "images", "searchable": false , "sortable": false },
+			{ "data": "edit_images", "searchable": false , "sortable": false },
 			{ "data": "delete", "searchable": false , "sortable": false }
 		],
 		"order": [ 0, 'desc' ]

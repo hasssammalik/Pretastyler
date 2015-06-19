@@ -350,7 +350,7 @@ class Admin extends CI_Controller {
 	/**
 	 * User Page for this controller.
 	 */
-	public function garment($page = FALSE, $param1 = FALSE)
+	public function garment($page = FALSE, $param1 = FALSE, $param2 = FALSE)
 	{
 		$this->login_check();
 		$data = $this->data;
@@ -390,6 +390,20 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/garment/general', $data);
 			$this->load->view('admin/footer', $data);
 		} else if ($page == 'outdated'){
+			$data['title'] = "Outdated Garments";
+			$data['title_description'] = "manage all outdated garments";
+			$data['filters'] = 'outdated: true, ';
+			$this->load->view('admin/header', $data);
+			$this->load->view('admin/garment/general', $data);
+			$this->load->view('admin/footer', $data);
+		} else if ($page == 'edit_images'){
+			$data['title'] = "Outdated Garments";
+			$data['title_description'] = "manage all outdated garments";
+			$data['filters'] = 'outdated: true, ';
+			$this->load->view('admin/header', $data);
+			$this->load->view('admin/garment/general', $data);
+			$this->load->view('admin/footer', $data);
+		} else if ($page == 'delete_image'){
 			$data['title'] = "Outdated Garments";
 			$data['title_description'] = "manage all outdated garments";
 			$data['filters'] = 'outdated: true, ';
@@ -464,7 +478,7 @@ class Admin extends CI_Controller {
 		$this->datatables->edit_column('category', '$1 (<a href="/admin/matrix/category/$2.html">Matrix</a>, <a href="/admin/garment/category/$2.html">Garment</a>)', 'category, category_id');
 		$this->datatables->add_column('edit_basic', '<a href="/garment/edit-general/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
 		$this->datatables->add_column('edit', '<a href="/garment/edit/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
-		$this->datatables->add_column('images', '<a href="/garment/ImageEdit/$1.html" target="_blank"><i class="fa fa-edit"></i></a>', 'garment_id');
+		$this->datatables->add_column('edit_images', '<a href="/admin/garment/edit-images/$1.html"><i class="fa fa-edit"></i></a>', 'garment_id');
 		$this->datatables->add_column('delete', '<a href="/admin/garment/delete/$1.html"><i class="glyphicon glyphicon-remove"></i></a>', 'garment_id');
 		echo $this->datatables->generate();
 	}
