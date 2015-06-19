@@ -236,6 +236,13 @@ class Garment extends CI_Controller {
 		print '1';
 	}
 	/**
+	 * Garment Import Extra Images Service for this controller.
+	 */
+	public function garment_import_extra_images($garment_id)
+	{
+
+	}
+	/**
 	 * Garment Import Service for this controller.
 	 */
 	public function garment_import()
