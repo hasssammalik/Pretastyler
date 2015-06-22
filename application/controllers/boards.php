@@ -40,7 +40,7 @@
 			$data = $this->data;
 			$data['title'] = "Styleboards";
 			$data['extraCSS'] = '<link rel="stylesheet" href="/css/boards.css">';
-			$data['extraJS'] = implode( "\n", array(
+			/*$data['extraJS'] = implode( "\n", array(
 				'<script src="http://fb.me/react-with-addons-0.12.0.js"></script>',
 				'<script src="http://fb.me/JSXTransformer-0.12.0.js"></script>',
 
@@ -66,15 +66,15 @@
 				'<script type="text/javascript" src="/js/boards/canvas.js"></script>',
 				'<script type="text/jsx" src="/js/boards/toolbars.js"></script>',
 				'<script type="text/jsx" src="/js/boards/palette.js"></script>',
-			) );
+			) );*/
 
 			$data['colours'] = $this->colour_model->get_colour_map();
 			
-			$this->load->view('templates/header', $data);
+			/*$this->load->view('templates/header', $data);
 			$this->load->view('templates/menu', $data);
-			$this->load->view('templates/menu_mall', $data);
+			$this->load->view('templates/menu_mall', $data);*/
 			$this->load->view('boards/create', $data);
-			$this->load->view('templates/footer', $data);
+			/*$this->load->view('templates/footer', $data);*/
 		}
 
 		public function loved() {
