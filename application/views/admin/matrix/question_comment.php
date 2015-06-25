@@ -40,16 +40,21 @@
 					<h3 class="box-title">General Comments</h3>
 				</div><!-- /.box-header -->
 				<div class="box-body">
-					<label for="general-overall-comments">Name</label>
+					<?php $general_types = array('name', 'brand', 'store', 'price_range', 'sizes', 'occasion', 'colours');
+					foreach ($general_types as $type){
+						if (isset($admin_comment['general'][$type])){
+					?>
+					<label for="general-overall-comments"><?php print ucwords(str_replace('_', ' ', $type))?></label>
 					<div class="input-group">
-						<span class="input-group-addon">Old</span>
-						<input type="text" class="form-control" id="name" placeholder="Old Name" name="name" value="<?php print $admin_comment['general']['name']['old_value'];?>">
+						<span class="input-group-addon">OLD</span>
+						<input type="text" class="form-control" id="name" placeholder="Old <?php print ucwords(str_replace('_', ' ', $type))?>" name="<?php print $type?>" value="<?php print $admin_comment['general'][$type]['old_value'];?>" disabled>
 					</div>
 					<div class="input-group">
-						<span class="input-group-addon">New</span>
-						<input type="text" class="form-control" id="name" placeholder="New Name" name="name" value="<?php print $admin_comment['general']['name']['new_value'];?>">
+						<span class="input-group-addon">NEW</span>
+						<input type="text" class="form-control" id="name" placeholder="New <?php print ucwords(str_replace('_', ' ', $type))?>" name="<?php print $type?>" value="<?php print $admin_comment['general'][$type]['new_value'];?>" disabled>
 					</div>
 					<br/>
+					<?php }}?>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
 			<div class="box box-primary">
