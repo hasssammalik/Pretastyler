@@ -547,6 +547,18 @@ class Admin_model extends CI_Model{
 			return $a['position'] - $b['position'];
 		});
 		
+		//generate general comments
+		$decoded_general_comments = json_decode($result['general_comment']);
+		$detailed_comments['general'] = array();
+		foreach ($decoded_general_comments as $key=>$value) {
+			if ($value->type == "overall"){
+				$detailed_comments['general']['overall'] = $value->content;
+			} else {
+				$detailed_comments['general'][$value->type] = array();
+				$detailed_comments['general'][$value->type]['old_value'] = $value->old_value;
+				$detailed_comments['general'][$value->type]['new_value'] = $value->new_value;
+			}
+		}
 		return $detailed_comments;
 	}
 	/**

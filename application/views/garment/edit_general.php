@@ -69,7 +69,7 @@
 						<div class="col span_2">&nbsp;</div>
 						<div class="col span_11">
 							<div class="garmentOccasionFixer">
-								<label>Occassions (Multi Select): <span class="required">*</span></label>
+								<label>Occasion (Multi Select): <span class="required">*</span></label>
 								<fieldset class="checkboxes assessment-occasions otherSection" id="checkbox-search-occasion">
 									<?php foreach ($occasions as $row) { ?>
 									<label><input type="checkbox"
