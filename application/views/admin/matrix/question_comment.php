@@ -26,12 +26,12 @@
 					<br/>
 					<div class="form-group">
 						<label for="overall-comments">General Overall Comment</label>
-						<textarea class="form-control" rows="3" placeholder="Enter Overall Comments" name="overall-comments"><?php print $admin_comment['overall'] ?></textarea>
+						<textarea class="form-control" rows="3" placeholder="Enter Overall Comments" name="general-overall-comments"><?php print $admin_comment['general']['overall'] ?></textarea>
 					</div>
 					<br/>
 					<div class="form-group">
 						<label for="general-overall-comments">Detail Overall Comment</label>
-						<textarea class="form-control" rows="3" placeholder="Enter Overall Comments" name="general-overall-comments"><?php print $admin_comment['general']['overall'] ?></textarea>
+						<textarea class="form-control" rows="3" placeholder="Enter Overall Comments" name="overall-comments"><?php print $admin_comment['overall'] ?></textarea>
 					</div>
 				</div><!-- /.box-body -->
 			</div><!-- /.box -->
